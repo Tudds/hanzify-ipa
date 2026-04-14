@@ -1,0 +1,40 @@
+[
+  {
+    "character": "你",
+    "pinyin": "nǐ",
+    "pinyinNormalized": "ni",
+    "definition": "you",
+    "definitionVi": "bạn, anh, chị, em (ngôi thứ hai)",
+    "radical": "亻",
+    "level": 1,
+    "strokes": [
+      "M 340 700 Q 257 670 142 640 C 113 632 99 619 128 610 Q 167 600 228 620 L 280 638 L 278 453 L 186 466 C 154 471 149 463 152 443 Q 152 432 175 416 Q 207 393 236 413 L 280 428 L 280 387",
+      "M 340 700 Q 344 719 353 736 Q 365 753 357 768 Q 343 789 311 800 Q 287 806 276 797 Q 266 789 278 777 Q 307 760 318 735 Q 326 718 323 697",
+      "M 280 387 L 280 260 Q 280 244 292 235 Q 312 220 336 230 Q 370 246 370 270 L 370 387 L 370 428 L 370 638 L 370 700"
+    ]
+  },
+  {
+    "character": "好",
+    "pinyin": "hǎo",
+    "pinyinNormalized": "hao",
+    "definition": "good; well",
+    "definitionVi": "tốt, được, hay",
+    "radical": "女",
+    "level": 1,
+    "strokes": [
+      "M 244 579 Q 227 590 202 596 Q 190 599 184 593 Q 176 585 185 574 Q 217 547 226 498 L 236 441 L 201 404 Q 184 391 162 374 Q 148 363 152 352 Q 155 340 168 343 Q 195 349 243 390 L 270 416 L 270 513",
+      "M 270 416 L 283 416 Q 380 412 450 399 Q 464 397 468 407 Q 471 416 456 430 Q 424 456 373 449 Q 336 447 296 441",
+      "M 270 513 Q 247 559 244 579"
+    ]
+  },
+  {
+    "character": "学",
+    "pinyin": "xué",
+    "pinyinNormalized": "xue",
+    "definition": "study; learn",
+    "definitionVi": "học, nghiên cứu",
+    "radical": "子",
+    "level": 1,
+    "strokes": []
+  }
+]

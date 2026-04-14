@@ -1,0 +1,8942 @@
+[
+  {
+    "id": "hsk3_0000",
+    "hanzi": "爱情",
+    "pinyin": "ài qíng",
+    "pinyinNormalized": "aiqing",
+    "characters": [
+      "爱",
+      "情"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tình yêu",
+        "en": "love"
+      }
+    ],
+    "meaning": "n. tình yêu",
+    "exampleSentences": [
+      {
+        "cn": "我相信爱情是美好的。",
+        "pinyin": "Wǒ xiāngxìn àiqíng shì měihǎo de.",
+        "vi": "Tôi tin rằng tình yêu là điều tốt đẹp."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0001",
+    "hanzi": "安排",
+    "pinyin": "ān pái",
+    "pinyinNormalized": "anpai",
+    "characters": [
+      "安",
+      "排"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "sắp xếp",
+        "en": "to arrange"
+      },
+      {
+        "pos": "n",
+        "vi": "sự sắp xếp, kế hoạch",
+        "en": "arrangement"
+      }
+    ],
+    "meaning": "v. sắp xếp; n. sự sắp xếp, kế hoạch",
+    "exampleSentences": [
+      {
+        "cn": "经理安排了今天的会议。",
+        "pinyin": "Jīnglǐ ānpái le jīntiān de huìyì.",
+        "vi": "Giám đốc đã sắp xếp cuộc họp ngày hôm nay."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0002",
+    "hanzi": "安全",
+    "pinyin": "ān quán",
+    "pinyinNormalized": "anquan",
+    "characters": [
+      "安",
+      "全"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "an toàn",
+        "en": "safe"
+      },
+      {
+        "pos": "n",
+        "vi": "sự an toàn",
+        "en": "safety"
+      }
+    ],
+    "meaning": "adj. an toàn; n. sự an toàn",
+    "exampleSentences": [
+      {
+        "cn": "要注意交通安全。",
+        "pinyin": "Yào zhùyì jiāotōng ānquán.",
+        "vi": "Cần phải chú ý an toàn giao thông."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0003",
+    "hanzi": "按时",
+    "pinyin": "àn shí",
+    "pinyinNormalized": "anshi",
+    "characters": [
+      "按",
+      "时"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "đúng giờ, đúng hạn",
+        "en": "on time"
+      }
+    ],
+    "meaning": "adv. đúng giờ, đúng hạn",
+    "exampleSentences": [
+      {
+        "cn": "请按时完成作业。",
+        "pinyin": "Qǐng ànshí wánchéng zuòyè.",
+        "vi": "Hãy hoàn thành bài tập đúng hạn."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0004",
+    "hanzi": "按照",
+    "pinyin": "àn zhào",
+    "pinyinNormalized": "anzhao",
+    "characters": [
+      "按",
+      "照"
+    ],
+    "meanings": [
+      {
+        "pos": "prep",
+        "vi": "theo, dựa theo",
+        "en": "according to"
+      }
+    ],
+    "meaning": "prep. theo, dựa theo",
+    "exampleSentences": [
+      {
+        "cn": "请按照说明书进行操作。",
+        "pinyin": "Qǐng ànzhào shuōmíngshū jìnxíng cāozuò.",
+        "vi": "Vui lòng thao tác theo sách hướng dẫn."
+      }
+    ],
+    "level": 3,
+    "wordType": "prep",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0005",
+    "hanzi": "百",
+    "pinyin": "bǎi",
+    "pinyinNormalized": "bai",
+    "characters": [
+      "百"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "trăm",
+        "en": "hundred"
+      }
+    ],
+    "meaning": "num. trăm",
+    "exampleSentences": [
+      {
+        "cn": "这里有一百个人。",
+        "pinyin": "Zhèlǐ yǒu yìbǎi gè rén.",
+        "vi": "Ở đây có một trăm người."
+      }
+    ],
+    "level": 3,
+    "wordType": "num",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0006",
+    "hanzi": "棒",
+    "pinyin": "bàng",
+    "pinyinNormalized": "bang",
+    "characters": [
+      "棒"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "tuyệt, giỏi, cừ",
+        "en": "excellent, great"
+      }
+    ],
+    "meaning": "adj. tuyệt, giỏi, cừ",
+    "exampleSentences": [
+      {
+        "cn": "你的汉语真棒！",
+        "pinyin": "Nǐ de Hànyǔ zhēn bàng!",
+        "vi": "Tiếng Trung của bạn thật tuyệt!"
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0007",
+    "hanzi": "包括",
+    "pinyin": "bāo kuò",
+    "pinyinNormalized": "baokuo",
+    "characters": [
+      "包",
+      "括"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "bao gồm",
+        "en": "to include"
+      }
+    ],
+    "meaning": "v. bao gồm",
+    "exampleSentences": [
+      {
+        "cn": "一共十个人，包括我。",
+        "pinyin": "Yígòng shí gè rén, bāokuò wǒ.",
+        "vi": "Tổng cộng có mười người, bao gồm cả tôi."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0008",
+    "hanzi": "保护",
+    "pinyin": "bǎo hù",
+    "pinyinNormalized": "baohu",
+    "characters": [
+      "保",
+      "护"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "bảo vệ",
+        "en": "to protect"
+      }
+    ],
+    "meaning": "v. bảo vệ",
+    "exampleSentences": [
+      {
+        "cn": "我们要保护环境。",
+        "pinyin": "Wǒmen yào bǎohù huánjìng.",
+        "vi": "Chúng ta cần bảo vệ môi trường."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0009",
+    "hanzi": "保证",
+    "pinyin": "bǎo zhèng",
+    "pinyinNormalized": "baozheng",
+    "characters": [
+      "保",
+      "证"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đảm bảo, cam đoan",
+        "en": "to guarantee"
+      },
+      {
+        "pos": "n",
+        "vi": "sự bảo đảm",
+        "en": "guarantee"
+      }
+    ],
+    "meaning": "v. đảm bảo, cam đoan; n. sự bảo đảm",
+    "exampleSentences": [
+      {
+        "cn": "我保证不再迟到了。",
+        "pinyin": "Wǒ bǎozhèng bú zài chídào le.",
+        "vi": "Tôi cam đoan sẽ không đi muộn nữa."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0010",
+    "hanzi": "抱歉",
+    "pinyin": "bào qiàn",
+    "pinyinNormalized": "baoqian",
+    "characters": [
+      "抱",
+      "歉"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "xin lỗi, lấy làm tiếc",
+        "en": "to feel sorry, apologetic"
+      }
+    ],
+    "meaning": "adj. xin lỗi, lấy làm tiếc",
+    "exampleSentences": [
+      {
+        "cn": "非常抱歉，我忘了这件事。",
+        "pinyin": "Fēicháng bàoqiàn, wǒ wàngle zhè jiàn shì.",
+        "vi": "Rất xin lỗi, tôi đã quên mất việc này."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0011",
+    "hanzi": "倍",
+    "pinyin": "bèi",
+    "pinyinNormalized": "bei",
+    "characters": [
+      "倍"
+    ],
+    "meanings": [
+      {
+        "pos": "mw",
+        "vi": "lần (gấp bội)",
+        "en": "times, fold"
+      }
+    ],
+    "meaning": "mw. lần (gấp bội)",
+    "exampleSentences": [
+      {
+        "cn": "今年的收入增加了两倍。",
+        "pinyin": "Jīnnián de shōurù zēngjiā le liǎng bèi.",
+        "vi": "Thu nhập năm nay đã tăng lên gấp hai lần."
+      }
+    ],
+    "level": 3,
+    "wordType": "mw",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0012",
+    "hanzi": "本来",
+    "pinyin": "běn lái",
+    "pinyinNormalized": "benlai",
+    "characters": [
+      "本",
+      "来"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "vốn dĩ, lúc đầu",
+        "en": "originally, at first"
+      }
+    ],
+    "meaning": "adv. vốn dĩ, lúc đầu",
+    "exampleSentences": [
+      {
+        "cn": "我本来想去，但是没时间。",
+        "pinyin": "Wǒ běnlái xiǎng qù, dànshì méi shíjiān.",
+        "vi": "Vốn dĩ tôi muốn đi, nhưng lại không có thời gian."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0013",
+    "hanzi": "笔记本",
+    "pinyin": "bǐ jì běn",
+    "pinyinNormalized": "bijiben",
+    "characters": [
+      "笔",
+      "记",
+      "本"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "vở ghi chép, sổ tay",
+        "en": "notebook"
+      },
+      {
+        "pos": "n",
+        "vi": "máy tính xách tay",
+        "en": "laptop"
+      }
+    ],
+    "meaning": "n. vở ghi chép, sổ tay; n. máy tính xách tay",
+    "exampleSentences": [
+      {
+        "cn": "我用笔记本记笔记。",
+        "pinyin": "Wǒ yòng bǐjìběn jì bǐjì.",
+        "vi": "Tôi dùng sổ tay để ghi chép."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0014",
+    "hanzi": "毕业",
+    "pinyin": "bì yè",
+    "pinyinNormalized": "biye",
+    "characters": [
+      "毕",
+      "业"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tốt nghiệp",
+        "en": "to graduate"
+      }
+    ],
+    "meaning": "v. tốt nghiệp",
+    "exampleSentences": [
+      {
+        "cn": "他去年大学毕业了。",
+        "pinyin": "Tā qùnián dàxué bìyè le.",
+        "vi": "Anh ấy đã tốt nghiệp đại học vào năm ngoái."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0015",
+    "hanzi": "表示",
+    "pinyin": "biǎo shì",
+    "pinyinNormalized": "biaoshi",
+    "characters": [
+      "表",
+      "示"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "bày tỏ, biểu thị",
+        "en": "to express, to show"
+      },
+      {
+        "pos": "n",
+        "vi": "sự bày tỏ",
+        "en": "expression"
+      }
+    ],
+    "meaning": "v. bày tỏ, biểu thị; n. sự bày tỏ",
+    "exampleSentences": [
+      {
+        "cn": "他点头表示同意。",
+        "pinyin": "Tā diǎntóu biǎoshì tóngyì.",
+        "vi": "Anh ấy gật đầu biểu thị sự đồng ý."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0016",
+    "hanzi": "表演",
+    "pinyin": "biǎo yǎn",
+    "pinyinNormalized": "biaoyan",
+    "characters": [
+      "表",
+      "演"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "biểu diễn",
+        "en": "to perform"
+      },
+      {
+        "pos": "n",
+        "vi": "buổi biểu diễn",
+        "en": "performance"
+      }
+    ],
+    "meaning": "v. biểu diễn; n. buổi biểu diễn",
+    "exampleSentences": [
+      {
+        "cn": "他们正在表演舞蹈。",
+        "pinyin": "Tāmen zhèngzài biǎoyǎn wǔdǎo.",
+        "vi": "Họ đang biểu diễn múa."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0017",
+    "hanzi": "冰",
+    "pinyin": "bīng",
+    "pinyinNormalized": "bing",
+    "characters": [
+      "冰"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "băng, đá",
+        "en": "ice"
+      }
+    ],
+    "meaning": "n. băng, đá",
+    "exampleSentences": [
+      {
+        "cn": "请给我一些冰。",
+        "pinyin": "Qǐng gěi wǒ yìxiē bīng.",
+        "vi": "Cho tôi một ít đá."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0018",
+    "hanzi": "不得不",
+    "pinyin": "bù dé bù",
+    "pinyinNormalized": "budebu",
+    "characters": [
+      "不",
+      "得",
+      "不"
+    ],
+    "meanings": [
+      {
+        "pos": "aux",
+        "vi": "không thể không, buộc phải",
+        "en": "have to, cannot but"
+      }
+    ],
+    "meaning": "aux. không thể không, buộc phải",
+    "exampleSentences": [
+      {
+        "cn": "我不得不接受这个决定。",
+        "pinyin": "Wǒ bùdébù jiēshòu zhège juédìng.",
+        "vi": "Tôi buộc phải chấp nhận quyết định này."
+      }
+    ],
+    "level": 3,
+    "wordType": "aux",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0019",
+    "hanzi": "不管",
+    "pinyin": "bù guǎn",
+    "pinyinNormalized": "buguan",
+    "characters": [
+      "不",
+      "管"
+    ],
+    "meanings": [
+      {
+        "pos": "conj",
+        "vi": "bất kể, cho dù",
+        "en": "no matter, regardless of"
+      }
+    ],
+    "meaning": "conj. bất kể, cho dù",
+    "exampleSentences": [
+      {
+        "cn": "不管天气好坏，他都会去。",
+        "pinyin": "Bùguǎn tiānqì hǎo huài, tā dōu huì qù.",
+        "vi": "Bất kể thời tiết tốt hay xấu, anh ấy đều sẽ đi."
+      }
+    ],
+    "level": 3,
+    "wordType": "conj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0020",
+    "hanzi": "不过",
+    "pinyin": "bú guò",
+    "pinyinNormalized": "buguo",
+    "characters": [
+      "不",
+      "过"
+    ],
+    "meanings": [
+      {
+        "pos": "conj",
+        "vi": "nhưng, có điều",
+        "en": "but, however"
+      },
+      {
+        "pos": "adv",
+        "vi": "chỉ, chẳng qua",
+        "en": "only"
+      }
+    ],
+    "meaning": "conj. nhưng, có điều; adv. chỉ, chẳng qua",
+    "exampleSentences": [
+      {
+        "cn": "这件衣服很好，不过有点贵。",
+        "pinyin": "Zhè jiàn yīfu hěn hǎo, búguò yǒudiǎn guì.",
+        "vi": "Bộ đồ này rất đẹp, có điều hơi đắt."
+      }
+    ],
+    "level": 3,
+    "wordType": "conj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0021",
+    "hanzi": "不仅",
+    "pinyin": "bù jǐn",
+    "pinyinNormalized": "bujin",
+    "characters": [
+      "不",
+      "仅"
+    ],
+    "meanings": [
+      {
+        "pos": "conj",
+        "vi": "không những",
+        "en": "not only"
+      }
+    ],
+    "meaning": "conj. không những",
+    "exampleSentences": [
+      {
+        "cn": "他不仅聪明，而且很努力。",
+        "pinyin": "Tā bùjǐn cōngmíng, érqiě hěn nǔlì.",
+        "vi": "Anh ấy không những thông minh mà còn rất nỗ lực."
+      }
+    ],
+    "level": 3,
+    "wordType": "conj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0022",
+    "hanzi": "部分",
+    "pinyin": "bù fèn",
+    "pinyinNormalized": "bufen",
+    "characters": [
+      "部",
+      "分"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "bộ phận, phần",
+        "en": "part, portion"
+      }
+    ],
+    "meaning": "n. bộ phận, phần",
+    "exampleSentences": [
+      {
+        "cn": "这是文章的一部分。",
+        "pinyin": "Zhè shì wénzhāng de yí bùfèn.",
+        "vi": "Đây là một phần của bài văn."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0023",
+    "hanzi": "猜",
+    "pinyin": "cāi",
+    "pinyinNormalized": "cai",
+    "characters": [
+      "猜"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đoán",
+        "en": "to guess"
+      }
+    ],
+    "meaning": "v. đoán",
+    "exampleSentences": [
+      {
+        "cn": "你猜猜我在做什么？",
+        "pinyin": "Nǐ cāicāi wǒ zài zuò shénme?",
+        "vi": "Bạn đoán xem tôi đang làm gì?"
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0024",
+    "hanzi": "材料",
+    "pinyin": "cái liào",
+    "pinyinNormalized": "cailiao",
+    "characters": [
+      "材",
+      "料"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tài liệu, nguyên liệu",
+        "en": "material"
+      }
+    ],
+    "meaning": "n. tài liệu, nguyên liệu",
+    "exampleSentences": [
+      {
+        "cn": "准备考试的材料。",
+        "pinyin": "Zhǔnbèi kǎoshì de cáiliào.",
+        "vi": "Chuẩn bị tài liệu cho kỳ thi."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0025",
+    "hanzi": "菜单",
+    "pinyin": "cài dān",
+    "pinyinNormalized": "caidan",
+    "characters": [
+      "菜",
+      "单"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "thực đơn",
+        "en": "menu"
+      }
+    ],
+    "meaning": "n. thực đơn",
+    "exampleSentences": [
+      {
+        "cn": "请给我看一下菜单。",
+        "pinyin": "Qǐng gěi wǒ kàn yíxià càidān.",
+        "vi": "Vui lòng cho tôi xem thực đơn một chút."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0026",
+    "hanzi": "参观",
+    "pinyin": "cān guān",
+    "pinyinNormalized": "canguan",
+    "characters": [
+      "参",
+      "观"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tham quan",
+        "en": "to visit (a place)"
+      }
+    ],
+    "meaning": "v. tham quan",
+    "exampleSentences": [
+      {
+        "cn": "我们明天去参观博物馆。",
+        "pinyin": "Wǒmen míngtiān qù cānguān bówùguǎn.",
+        "vi": "Ngày mai chúng tôi đi tham quan bảo tàng."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0027",
+    "hanzi": "厕所",
+    "pinyin": "cè suǒ",
+    "pinyinNormalized": "cesuo",
+    "characters": [
+      "厕",
+      "所"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "nhà vệ sinh",
+        "en": "toilet, restroom"
+      }
+    ],
+    "meaning": "n. nhà vệ sinh",
+    "exampleSentences": [
+      {
+        "cn": "请问，厕所在哪里？",
+        "pinyin": "Qǐngwèn, cèsuǒ zài nǎlǐ?",
+        "vi": "Cho hỏi, nhà vệ sinh ở đâu?"
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0028",
+    "hanzi": "曾经",
+    "pinyin": "céng jīng",
+    "pinyinNormalized": "cengjing",
+    "characters": [
+      "曾",
+      "经"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "đã từng",
+        "en": "once, ever"
+      }
+    ],
+    "meaning": "adv. đã từng",
+    "exampleSentences": [
+      {
+        "cn": "我曾经去过北京。",
+        "pinyin": "Wǒ céngjīng qù guo Běijīng.",
+        "vi": "Tôi đã từng đi Bắc Kinh."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0029",
+    "hanzi": "叉子",
+    "pinyin": "chā zi",
+    "pinyinNormalized": "chazi",
+    "characters": [
+      "叉",
+      "子"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "cái nĩa/dĩa",
+        "en": "fork"
+      }
+    ],
+    "meaning": "n. cái nĩa/dĩa",
+    "exampleSentences": [
+      {
+        "cn": "请给我一把叉子。",
+        "pinyin": "Qǐng gěi wǒ yì bǎ chāzi.",
+        "vi": "Cho tôi xin một cái nĩa."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:02:53.000Z"
+  },
+  {
+    "id": "hsk3_0030",
+    "hanzi": "差不多",
+    "pinyin": "chà bu duō",
+    "pinyinNormalized": "chabuduo",
+    "characters": [
+      "差",
+      "不",
+      "多"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "xấp xỉ, gần như",
+        "en": "almost, nearly"
+      },
+      {
+        "pos": "adj",
+        "vi": "tương đương, gần giống nhau",
+        "en": "about the same"
+      }
+    ],
+    "meaning": "adv. xấp xỉ, gần như; adj. tương đương, gần giống nhau",
+    "exampleSentences": [
+      {
+        "cn": "我们差不多完成了任务。",
+        "pinyin": "Wǒmen chàbuduō wánchéngle rènwù.",
+        "vi": "Chúng tôi gần như đã hoàn thành xong nhiệm vụ."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0031",
+    "hanzi": "产品",
+    "pinyin": "chǎn pǐn",
+    "pinyinNormalized": "chanpin",
+    "characters": [
+      "产",
+      "品"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "sản phẩm",
+        "en": "product"
+      }
+    ],
+    "meaning": "n. sản phẩm",
+    "exampleSentences": [
+      {
+        "cn": "这家公司的产品质量很好。",
+        "pinyin": "Zhè jiā gōngsī de chǎnpǐn zhìliàng hěn hǎo.",
+        "vi": "Chất lượng sản phẩm của công ty này rất tốt."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0032",
+    "hanzi": "长途",
+    "pinyin": "cháng tú",
+    "pinyinNormalized": "changtu",
+    "characters": [
+      "长",
+      "途"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "đường dài",
+        "en": "long-distance"
+      },
+      {
+        "pos": "n",
+        "vi": "chuyến đi đường dài",
+        "en": "long journey"
+      }
+    ],
+    "meaning": "adj. đường dài; n. chuyến đi đường dài",
+    "exampleSentences": [
+      {
+        "cn": "他经常坐长途汽车。",
+        "pinyin": "Tā jīngcháng zuò chángtú qìchē.",
+        "vi": "Anh ấy thường xuyên đi xe khách đường dài."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0033",
+    "hanzi": "超过",
+    "pinyin": "chāo guò",
+    "pinyinNormalized": "chaoguo",
+    "characters": [
+      "超",
+      "过"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "vượt quá, vượt qua",
+        "en": "to exceed, to surpass"
+      }
+    ],
+    "meaning": "v. vượt quá, vượt qua",
+    "exampleSentences": [
+      {
+        "cn": "他的速度超过了所有人。",
+        "pinyin": "Tā de sùdù chāoguòle suǒyǒu rén.",
+        "vi": "Tốc độ của anh ấy đã vượt qua tất cả mọi người."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0034",
+    "hanzi": "成功",
+    "pinyin": "chéng gōng",
+    "pinyinNormalized": "chenggong",
+    "characters": [
+      "成",
+      "功"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "thành công",
+        "en": "to succeed"
+      },
+      {
+        "pos": "adj",
+        "vi": "thành công",
+        "en": "successful"
+      }
+    ],
+    "meaning": "v. thành công; adj. thành công",
+    "exampleSentences": [
+      {
+        "cn": "祝你取得成功！",
+        "pinyin": "Zhù nǐ qǔdé chénggōng!",
+        "vi": "Chúc bạn đạt được thành công!"
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0035",
+    "hanzi": "成为",
+    "pinyin": "chéng wéi",
+    "pinyinNormalized": "chengwei",
+    "characters": [
+      "成",
+      "为"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "trở thành",
+        "en": "to become"
+      }
+    ],
+    "meaning": "v. trở thành",
+    "exampleSentences": [
+      {
+        "cn": "他想成为一名优秀的医生。",
+        "pinyin": "Tā xiǎng chéngwéi yī míng yōuxiù de yīshēng.",
+        "vi": "Anh ấy muốn trở thành một bác sĩ ưu tú."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0036",
+    "hanzi": "乘坐",
+    "pinyin": "chéng zuò",
+    "pinyinNormalized": "chengzuo",
+    "characters": [
+      "乘",
+      "坐"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đi, ngồi (phương tiện)",
+        "en": "to ride, to take (a vehicle)"
+      }
+    ],
+    "meaning": "v. đi, ngồi (phương tiện)",
+    "exampleSentences": [
+      {
+        "cn": "请系好安全带，准备乘坐飞机。",
+        "pinyin": "Qǐng jì hǎo ānquándài, zhǔnbèi chéngzuò fēijī.",
+        "vi": "Vui lòng thắt dây an toàn, chuẩn bị lên máy bay."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0037",
+    "hanzi": "吃惊",
+    "pinyin": "chī jīng",
+    "pinyinNormalized": "chijing",
+    "characters": [
+      "吃",
+      "惊"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "giật mình, kinh ngạc",
+        "en": "to be surprised, to be shocked"
+      }
+    ],
+    "meaning": "v. giật mình, kinh ngạc",
+    "exampleSentences": [
+      {
+        "cn": "这个消息让我非常吃惊。",
+        "pinyin": "Zhège xiāoxi ràng wǒ fēicháng chījīng.",
+        "vi": "Tin tức này khiến tôi vô cùng kinh ngạc."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0038",
+    "hanzi": "重新",
+    "pinyin": "chóng xīn",
+    "pinyinNormalized": "chongxin",
+    "characters": [
+      "重",
+      "新"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "lại, một lần nữa",
+        "en": "again, anew"
+      }
+    ],
+    "meaning": "adv. lại, một lần nữa",
+    "exampleSentences": [
+      {
+        "cn": "请你重新写一遍。",
+        "pinyin": "Qǐng nǐ chóngxīn xiě yībiàn.",
+        "vi": "Mời bạn viết lại một lần nữa."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0039",
+    "hanzi": "出发",
+    "pinyin": "chū fā",
+    "pinyinNormalized": "chufa",
+    "characters": [
+      "出",
+      "发"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "xuất phát, lên đường",
+        "en": "to set out, to depart"
+      }
+    ],
+    "meaning": "v. xuất phát, lên đường",
+    "exampleSentences": [
+      {
+        "cn": "我们明天早上八点出发。",
+        "pinyin": "Wǒmen míngtiān zǎoshang bā diǎn chūfā.",
+        "vi": "Chúng tôi sẽ xuất phát vào 8 giờ sáng mai."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0040",
+    "hanzi": "出现",
+    "pinyin": "chū xiàn",
+    "pinyinNormalized": "chuxian",
+    "characters": [
+      "出",
+      "现"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "xuất hiện",
+        "en": "to appear, to emerge"
+      }
+    ],
+    "meaning": "v. xuất hiện",
+    "exampleSentences": [
+      {
+        "cn": "问题突然出现了。",
+        "pinyin": "Wèntí tūrán chūxiànle.",
+        "vi": "Vấn đề đột nhiên xuất hiện."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0041",
+    "hanzi": "厨房",
+    "pinyin": "chú fáng",
+    "pinyinNormalized": "chufang",
+    "characters": [
+      "厨",
+      "房"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "nhà bếp",
+        "en": "kitchen"
+      }
+    ],
+    "meaning": "n. nhà bếp",
+    "exampleSentences": [
+      {
+        "cn": "妈妈正在厨房里做饭。",
+        "pinyin": "Māma zhèngzài chúfáng lǐ zuò fàn.",
+        "vi": "Mẹ đang nấu cơm trong bếp."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0042",
+    "hanzi": "传统",
+    "pinyin": "chuán tǒng",
+    "pinyinNormalized": "chuantong",
+    "characters": [
+      "传",
+      "统"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "truyền thống",
+        "en": "tradition"
+      },
+      {
+        "pos": "adj",
+        "vi": "mang tính truyền thống",
+        "en": "traditional"
+      }
+    ],
+    "meaning": "n. truyền thống; adj. mang tính truyền thống",
+    "exampleSentences": [
+      {
+        "cn": "春节是中国人的传统节日。",
+        "pinyin": "Chūnjié shì Zhōngguórén de chuántǒng jiérì.",
+        "vi": "Tết Nguyên Đán là ngày lễ truyền thống của người Trung Quốc."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0043",
+    "hanzi": "窗户",
+    "pinyin": "chuāng hu",
+    "pinyinNormalized": "chuanghu",
+    "characters": [
+      "窗",
+      "户"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "cửa sổ",
+        "en": "window"
+      }
+    ],
+    "meaning": "n. cửa sổ",
+    "exampleSentences": [
+      {
+        "cn": "请把窗户关上。",
+        "pinyin": "Qǐng bǎ chuānghu guānshàng.",
+        "vi": "Vui lòng đóng cửa sổ lại."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0044",
+    "hanzi": "词语",
+    "pinyin": "cí yǔ",
+    "pinyinNormalized": "ciyu",
+    "characters": [
+      "词",
+      "语"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "từ ngữ",
+        "en": "words, vocabulary"
+      }
+    ],
+    "meaning": "n. từ ngữ",
+    "exampleSentences": [
+      {
+        "cn": "这篇文章用了很多新词语。",
+        "pinyin": "Zhè piān wénzhāng yòngle hěnduō xīn cíyǔ.",
+        "vi": "Bài viết này sử dụng rất nhiều từ ngữ mới."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0045",
+    "hanzi": "存在",
+    "pinyin": "cún zài",
+    "pinyinNormalized": "cunzai",
+    "characters": [
+      "存",
+      "在"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tồn tại",
+        "en": "to exist"
+      },
+      {
+        "pos": "n",
+        "vi": "sự tồn tại",
+        "en": "existence"
+      }
+    ],
+    "meaning": "v. tồn tại; n. sự tồn tại",
+    "exampleSentences": [
+      {
+        "cn": "这个问题依然存在。",
+        "pinyin": "Zhège wèntí yīrán cúnzài.",
+        "vi": "Vấn đề này vẫn còn tồn tại."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0046",
+    "hanzi": "打折",
+    "pinyin": "dǎ zhé",
+    "pinyinNormalized": "dazhe",
+    "characters": [
+      "打",
+      "折"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "giảm giá",
+        "en": "to give a discount"
+      }
+    ],
+    "meaning": "v. giảm giá",
+    "exampleSentences": [
+      {
+        "cn": "商场现在正在打折。",
+        "pinyin": "Shāngchǎng xiànzài zhèngzài dǎzhé.",
+        "vi": "Trung tâm thương mại hiện đang giảm giá."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0047",
+    "hanzi": "大概",
+    "pinyin": "dà gài",
+    "pinyinNormalized": "dagai",
+    "characters": [
+      "大",
+      "概"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "có lẽ, khoảng",
+        "en": "probably, roughly"
+      },
+      {
+        "pos": "adj",
+        "vi": "đại khái",
+        "en": "general"
+      }
+    ],
+    "meaning": "adv. có lẽ, khoảng; adj. đại khái",
+    "exampleSentences": [
+      {
+        "cn": "他大概明天会来。",
+        "pinyin": "Tā dàgài míngtiān huì lái.",
+        "vi": "Có lẽ ngày mai anh ấy sẽ đến."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0048",
+    "hanzi": "大使馆",
+    "pinyin": "dà shǐ guǎn",
+    "pinyinNormalized": "dashiguan",
+    "characters": [
+      "大",
+      "使",
+      "馆"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "đại sứ quán",
+        "en": "embassy"
+      }
+    ],
+    "meaning": "n. đại sứ quán",
+    "exampleSentences": [
+      {
+        "cn": "我要去大使馆办签证。",
+        "pinyin": "Wǒ yào qù dàshǐguǎn bàn qiānzhèng.",
+        "vi": "Tôi cần đến đại sứ quán để làm visa."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0049",
+    "hanzi": "大约",
+    "pinyin": "dà yuē",
+    "pinyinNormalized": "dayue",
+    "characters": [
+      "大",
+      "约"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "khoảng, xấp xỉ",
+        "en": "approximately, about"
+      }
+    ],
+    "meaning": "adv. khoảng, xấp xỉ",
+    "exampleSentences": [
+      {
+        "cn": "这里大约有五十个人。",
+        "pinyin": "Zhèlǐ dàyuē yǒu wǔshí gè rén.",
+        "vi": "Ở đây có khoảng 50 người."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0050",
+    "hanzi": "打印",
+    "pinyin": "dǎ yìn",
+    "pinyinNormalized": "dayin",
+    "characters": [
+      "打",
+      "印"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "in (tài liệu)",
+        "en": "to print"
+      }
+    ],
+    "meaning": "v. in (tài liệu)",
+    "exampleSentences": [
+      {
+        "cn": "请帮我打印这份文件。",
+        "pinyin": "Qǐng bāng wǒ dǎyìn zhè fèn wénjiàn.",
+        "vi": "Vui lòng giúp tôi in tài liệu này."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0051",
+    "hanzi": "代表",
+    "pinyin": "dài biǎo",
+    "pinyinNormalized": "daibiao",
+    "characters": [
+      "代",
+      "表"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đại diện",
+        "en": "to represent"
+      },
+      {
+        "pos": "n",
+        "vi": "đại biểu",
+        "en": "representative"
+      }
+    ],
+    "meaning": "v. đại diện; n. đại biểu",
+    "exampleSentences": [
+      {
+        "cn": "他代表公司参加会议。",
+        "pinyin": "Tā dàibiǎo gōngsī cānjiā huìyì.",
+        "vi": "Anh ấy đại diện công ty tham gia cuộc họp."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0052",
+    "hanzi": "单独",
+    "pinyin": "dān dú",
+    "pinyinNormalized": "dandu",
+    "characters": [
+      "单",
+      "独"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "một mình, đơn độc",
+        "en": "alone, separately"
+      }
+    ],
+    "meaning": "adv. một mình, đơn độc",
+    "exampleSentences": [
+      {
+        "cn": "他喜欢单独工作。",
+        "pinyin": "Tā xǐhuān dāndú gōngzuò.",
+        "vi": "Anh ấy thích làm việc một mình."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0053",
+    "hanzi": "当时",
+    "pinyin": "dāng shí",
+    "pinyinNormalized": "dangshi",
+    "characters": [
+      "当",
+      "时"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "lúc đó, khi ấy",
+        "en": "at that time"
+      }
+    ],
+    "meaning": "n. lúc đó, khi ấy",
+    "exampleSentences": [
+      {
+        "cn": "我当时不在家。",
+        "pinyin": "Wǒ dāngshí bù zàijiā.",
+        "vi": "Lúc đó tôi không có ở nhà."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0054",
+    "hanzi": "导游",
+    "pinyin": "dǎo yóu",
+    "pinyinNormalized": "daoyou",
+    "characters": [
+      "导",
+      "游"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "hướng dẫn viên",
+        "en": "tour guide"
+      }
+    ],
+    "meaning": "n. hướng dẫn viên",
+    "exampleSentences": [
+      {
+        "cn": "导游带我们参观博物馆。",
+        "pinyin": "Dǎoyóu dài wǒmen cānguān bówùguǎn.",
+        "vi": "Hướng dẫn viên dẫn chúng tôi đi tham quan bảo tàng."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0055",
+    "hanzi": "得到",
+    "pinyin": "dé dào",
+    "pinyinNormalized": "dedao",
+    "characters": [
+      "得",
+      "到"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đạt được, nhận được",
+        "en": "to get, to obtain"
+      }
+    ],
+    "meaning": "v. đạt được, nhận được",
+    "exampleSentences": [
+      {
+        "cn": "他得到了老师的表扬。",
+        "pinyin": "Tā dédàole lǎoshī de biǎoyáng.",
+        "vi": "Anh ấy đã nhận được lời khen ngợi của thầy giáo."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0056",
+    "hanzi": "灯",
+    "pinyin": "dēng",
+    "pinyinNormalized": "deng",
+    "characters": [
+      "灯"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "đèn",
+        "en": "lamp, light"
+      }
+    ],
+    "meaning": "n. đèn",
+    "exampleSentences": [
+      {
+        "cn": "请帮我开灯。",
+        "pinyin": "Qǐng bāng wǒ kāidēng.",
+        "vi": "Vui lòng giúp tôi bật đèn."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0057",
+    "hanzi": "等",
+    "pinyin": "děng",
+    "pinyinNormalized": "deng",
+    "characters": [
+      "等"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đợi, chờ",
+        "en": "to wait"
+      }
+    ],
+    "meaning": "v. đợi, chờ",
+    "exampleSentences": [
+      {
+        "cn": "请在这里等我一下。",
+        "pinyin": "Qǐng zài zhèlǐ děng wǒ yīxià.",
+        "vi": "Vui lòng đợi tôi ở đây một chút."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0058",
+    "hanzi": "低",
+    "pinyin": "dī",
+    "pinyinNormalized": "di",
+    "characters": [
+      "低"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "thấp",
+        "en": "low"
+      },
+      {
+        "pos": "v",
+        "vi": "cúi xuống",
+        "en": "to lower, to bow"
+      }
+    ],
+    "meaning": "adj. thấp; v. cúi xuống",
+    "exampleSentences": [
+      {
+        "cn": "他低下了头。",
+        "pinyin": "Tā dīxiàle tóu.",
+        "vi": "Anh ấy đã cúi đầu xuống."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0059",
+    "hanzi": "底",
+    "pinyin": "dǐ",
+    "pinyinNormalized": "di",
+    "characters": [
+      "底"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "đáy, cuối (thời gian)",
+        "en": "bottom, end"
+      }
+    ],
+    "meaning": "n. đáy, cuối (thời gian)",
+    "exampleSentences": [
+      {
+        "cn": "这个月月底我们要考试。",
+        "pinyin": "Zhège yuè yuèdǐ wǒmen yào kǎoshì.",
+        "vi": "Cuối tháng này chúng tôi sẽ thi."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:05:22.000Z"
+  },
+  {
+    "id": "hsk3_0060",
+    "hanzi": "点心",
+    "pinyin": "diǎn xīn",
+    "pinyinNormalized": "dianxin",
+    "characters": [
+      "点",
+      "心"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "điểm tâm, món ăn nhẹ",
+        "en": "dim sum, snack"
+      }
+    ],
+    "meaning": "n. điểm tâm, món ăn nhẹ",
+    "exampleSentences": [
+      {
+        "cn": "这种点心非常好吃。",
+        "pinyin": "Zhè zhǒng diǎnxīn fēicháng hǎochī.",
+        "vi": "Loại điểm tâm này rất ngon."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0061",
+    "hanzi": "掉",
+    "pinyin": "diào",
+    "pinyinNormalized": "diao",
+    "characters": [
+      "掉"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "rơi, mất, rớt",
+        "en": "to fall, to lose"
+      }
+    ],
+    "meaning": "v. rơi, mất, rớt",
+    "exampleSentences": [
+      {
+        "cn": "我的钥匙掉了。",
+        "pinyin": "Wǒ de yàoshi diào le.",
+        "vi": "Chìa khóa của tôi bị rơi mất rồi."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0062",
+    "hanzi": "定",
+    "pinyin": "dìng",
+    "pinyinNormalized": "ding",
+    "characters": [
+      "定"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đặt, quyết định, chốt",
+        "en": "to fix, to decide, to book"
+      },
+      {
+        "pos": "adj",
+        "vi": "cố định",
+        "en": "fixed"
+      }
+    ],
+    "meaning": "v. đặt, quyết định, chốt; adj. cố định",
+    "exampleSentences": [
+      {
+        "cn": "我们要定一个时间。",
+        "pinyin": "Wǒmen yào dìng yīgè shíjiān.",
+        "vi": "Chúng ta cần chốt một thời gian."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0063",
+    "hanzi": "丢",
+    "pinyin": "diū",
+    "pinyinNormalized": "diu",
+    "characters": [
+      "丢"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "mất, thất lạc, vứt",
+        "en": "to lose, to throw"
+      }
+    ],
+    "meaning": "v. mất, thất lạc, vứt",
+    "exampleSentences": [
+      {
+        "cn": "别把东西丢了。",
+        "pinyin": "Bié bǎ dōngxi diū le.",
+        "vi": "Đừng để mất đồ đấy."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0064",
+    "hanzi": "动作",
+    "pinyin": "dòng zuò",
+    "pinyinNormalized": "dongzuo",
+    "characters": [
+      "动",
+      "作"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "động tác, hành động",
+        "en": "action, movement"
+      }
+    ],
+    "meaning": "n. động tác, hành động",
+    "exampleSentences": [
+      {
+        "cn": "他的动作很快。",
+        "pinyin": "Tā de dòngzuò hěn kuài.",
+        "vi": "Động tác của anh ấy rất nhanh."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0065",
+    "hanzi": "肚子",
+    "pinyin": "dù zi",
+    "pinyinNormalized": "duzi",
+    "characters": [
+      "肚",
+      "子"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "bụng",
+        "en": "stomach, belly"
+      }
+    ],
+    "meaning": "n. bụng",
+    "exampleSentences": [
+      {
+        "cn": "我肚子饿了。",
+        "pinyin": "Wǒ dùzi è le.",
+        "vi": "Bụng tôi đói rồi."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0066",
+    "hanzi": "堆",
+    "pinyin": "duī",
+    "pinyinNormalized": "dui",
+    "characters": [
+      "堆"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "đống",
+        "en": "pile, heap"
+      },
+      {
+        "pos": "mw",
+        "vi": "đống (lượng từ)",
+        "en": "pile of"
+      },
+      {
+        "pos": "v",
+        "vi": "chất đống",
+        "en": "to pile up"
+      }
+    ],
+    "meaning": "n. đống; mw. đống (lượng từ); v. chất đống",
+    "exampleSentences": [
+      {
+        "cn": "桌上有一堆书。",
+        "pinyin": "Zhuō shàng yǒu yī duī shū.",
+        "vi": "Trên bàn có một đống sách."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0067",
+    "hanzi": "对面",
+    "pinyin": "duì miàn",
+    "pinyinNormalized": "duimian",
+    "characters": [
+      "对",
+      "面"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "đối diện, phía đối diện",
+        "en": "opposite side, facing"
+      }
+    ],
+    "meaning": "n. đối diện, phía đối diện",
+    "exampleSentences": [
+      {
+        "cn": "银行在超市对面。",
+        "pinyin": "Yínháng zài chāoshì duìmiàn.",
+        "vi": "Ngân hàng nằm ở phía đối diện siêu thị."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0068",
+    "hanzi": "而且",
+    "pinyin": "ér qiě",
+    "pinyinNormalized": "erqie",
+    "characters": [
+      "而",
+      "且"
+    ],
+    "meanings": [
+      {
+        "pos": "conj",
+        "vi": "hơn nữa, mà còn",
+        "en": "moreover, furthermore"
+      }
+    ],
+    "meaning": "conj. hơn nữa, mà còn",
+    "exampleSentences": [
+      {
+        "cn": "她很聪明，而且很努力。",
+        "pinyin": "Tā hěn cōngmíng, érqiě hěn nǔlì.",
+        "vi": "Cô ấy rất thông minh, hơn nữa còn rất nỗ lực."
+      }
+    ],
+    "level": 3,
+    "wordType": "conj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0069",
+    "hanzi": "发展",
+    "pinyin": "fā zhǎn",
+    "pinyinNormalized": "fazhan",
+    "characters": [
+      "发",
+      "展"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "phát triển",
+        "en": "to develop"
+      },
+      {
+        "pos": "n",
+        "vi": "sự phát triển",
+        "en": "development"
+      }
+    ],
+    "meaning": "v. phát triển; n. sự phát triển",
+    "exampleSentences": [
+      {
+        "cn": "这个城市发展很快。",
+        "pinyin": "Zhège chéngshì fāzhǎn hěn kuài.",
+        "vi": "Thành phố này phát triển rất nhanh."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0070",
+    "hanzi": "法律",
+    "pinyin": "fǎ lǜ",
+    "pinyinNormalized": "falv",
+    "characters": [
+      "法",
+      "律"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "pháp luật",
+        "en": "law"
+      }
+    ],
+    "meaning": "n. pháp luật",
+    "exampleSentences": [
+      {
+        "cn": "每个人都必须遵守法律。",
+        "pinyin": "Měi gèrén dōu bìxū zūnshǒu fǎlǜ.",
+        "vi": "Mọi người đều phải tuân thủ pháp luật."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0071",
+    "hanzi": "翻译",
+    "pinyin": "fān yì",
+    "pinyinNormalized": "fanyi",
+    "characters": [
+      "翻",
+      "译"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "dịch, phiên dịch",
+        "en": "to translate"
+      },
+      {
+        "pos": "n",
+        "vi": "biên dịch, phiên dịch",
+        "en": "translator, translation"
+      }
+    ],
+    "meaning": "v. dịch, phiên dịch; n. biên dịch, phiên dịch",
+    "exampleSentences": [
+      {
+        "cn": "请帮我翻译一下这段话。",
+        "pinyin": "Qǐng bāng wǒ fānyì yīxià zhè duàn huà.",
+        "vi": "Làm ơn giúp tôi dịch đoạn văn này một chút."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0072",
+    "hanzi": "方法",
+    "pinyin": "fāng fǎ",
+    "pinyinNormalized": "fangfa",
+    "characters": [
+      "方",
+      "法"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "phương pháp, cách thức",
+        "en": "method, way"
+      }
+    ],
+    "meaning": "n. phương pháp, cách thức",
+    "exampleSentences": [
+      {
+        "cn": "这是一个好方法。",
+        "pinyin": "Zhè shì yīgè hǎo fāngfǎ.",
+        "vi": "Đây là một phương pháp hay."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0073",
+    "hanzi": "方面",
+    "pinyin": "fāng miàn",
+    "pinyinNormalized": "fangmian",
+    "characters": [
+      "方",
+      "面"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "phương diện, khía cạnh",
+        "en": "aspect, side"
+      }
+    ],
+    "meaning": "n. phương diện, khía cạnh",
+    "exampleSentences": [
+      {
+        "cn": "他在很多方面都很优秀。",
+        "pinyin": "Tā zài hěnduō fāngmiàn dōu hěn yōuxiù.",
+        "vi": "Anh ấy rất ưu tú về nhiều phương diện."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0074",
+    "hanzi": "方向",
+    "pinyin": "fāng xiàng",
+    "pinyinNormalized": "fangxiang",
+    "characters": [
+      "方",
+      "向"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "phương hướng, hướng",
+        "en": "direction"
+      }
+    ],
+    "meaning": "n. phương hướng, hướng",
+    "exampleSentences": [
+      {
+        "cn": "你走错了方向。",
+        "pinyin": "Nǐ zǒu cuò le fāngxiàng.",
+        "vi": "Bạn đi sai hướng rồi."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0075",
+    "hanzi": "放弃",
+    "pinyin": "fàng qì",
+    "pinyinNormalized": "fangqi",
+    "characters": [
+      "放",
+      "弃"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "từ bỏ",
+        "en": "to give up, to abandon"
+      }
+    ],
+    "meaning": "v. từ bỏ",
+    "exampleSentences": [
+      {
+        "cn": "永远不要放弃梦想。",
+        "pinyin": "Yǒngyuǎn bùyào fàngqì mèngxiǎng.",
+        "vi": "Đừng bao giờ từ bỏ ước mơ."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0076",
+    "hanzi": "非常",
+    "pinyin": "fēi cháng",
+    "pinyinNormalized": "feichang",
+    "characters": [
+      "非",
+      "常"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "vô cùng, rất",
+        "en": "very, extremely"
+      }
+    ],
+    "meaning": "adv. vô cùng, rất",
+    "exampleSentences": [
+      {
+        "cn": "今天天气非常热。",
+        "pinyin": "Jīntiān tiānqì fēicháng rè.",
+        "vi": "Thời tiết hôm nay vô cùng nóng."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0077",
+    "hanzi": "分析",
+    "pinyin": "fēn xī",
+    "pinyinNormalized": "fenxi",
+    "characters": [
+      "分",
+      "析"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "phân tích",
+        "en": "to analyze"
+      },
+      {
+        "pos": "n",
+        "vi": "sự phân tích",
+        "en": "analysis"
+      }
+    ],
+    "meaning": "v. phân tích; n. sự phân tích",
+    "exampleSentences": [
+      {
+        "cn": "我们需要分析这个问题。",
+        "pinyin": "Wǒmen xūyào fēnxī zhège wèntí.",
+        "vi": "Chúng ta cần phân tích vấn đề này."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0078",
+    "hanzi": "风景",
+    "pinyin": "fēng jǐng",
+    "pinyinNormalized": "fengjing",
+    "characters": [
+      "风",
+      "景"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "phong cảnh, cảnh đẹp",
+        "en": "scenery, landscape"
+      }
+    ],
+    "meaning": "n. phong cảnh, cảnh đẹp",
+    "exampleSentences": [
+      {
+        "cn": "这里的风景很美。",
+        "pinyin": "Zhèlǐ de fēngjǐng hěn měi.",
+        "vi": "Phong cảnh ở đây rất đẹp."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0079",
+    "hanzi": "服务",
+    "pinyin": "fú wù",
+    "pinyinNormalized": "fuwu",
+    "characters": [
+      "服",
+      "务"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "phục vụ",
+        "en": "to serve"
+      },
+      {
+        "pos": "n",
+        "vi": "dịch vụ",
+        "en": "service"
+      }
+    ],
+    "meaning": "v. phục vụ; n. dịch vụ",
+    "exampleSentences": [
+      {
+        "cn": "这家饭馆的服务很好。",
+        "pinyin": "Zhè jiā fànguǎn de fúwù hěn hǎo.",
+        "vi": "Dịch vụ của nhà hàng này rất tốt."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0080",
+    "hanzi": "符合",
+    "pinyin": "fú hé",
+    "pinyinNormalized": "fuhe",
+    "characters": [
+      "符",
+      "合"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "phù hợp, khớp với",
+        "en": "to accord with, to tally with"
+      }
+    ],
+    "meaning": "v. phù hợp, khớp với",
+    "exampleSentences": [
+      {
+        "cn": "这不符合规定。",
+        "pinyin": "Zhè bù fúhé guīdìng.",
+        "vi": "Điều này không phù hợp với quy định."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0081",
+    "hanzi": "父母",
+    "pinyin": "fù mǔ",
+    "pinyinNormalized": "fumu",
+    "characters": [
+      "父",
+      "母"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "cha mẹ, phụ mẫu",
+        "en": "parents"
+      }
+    ],
+    "meaning": "n. cha mẹ, phụ mẫu",
+    "exampleSentences": [
+      {
+        "cn": "我爱我的父母。",
+        "pinyin": "Wǒ ài wǒ de fùmǔ.",
+        "vi": "Tôi yêu cha mẹ của mình."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0082",
+    "hanzi": "改变",
+    "pinyin": "gǎi biàn",
+    "pinyinNormalized": "gaibian",
+    "characters": [
+      "改",
+      "变"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "thay đổi",
+        "en": "to change"
+      },
+      {
+        "pos": "n",
+        "vi": "sự thay đổi",
+        "en": "change"
+      }
+    ],
+    "meaning": "v. thay đổi; n. sự thay đổi",
+    "exampleSentences": [
+      {
+        "cn": "我们要改变现状。",
+        "pinyin": "Wǒmen yào gǎibiàn xiànzhuàng.",
+        "vi": "Chúng ta cần thay đổi hiện trạng."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0083",
+    "hanzi": "感情",
+    "pinyin": "gǎn qíng",
+    "pinyinNormalized": "ganqing",
+    "characters": [
+      "感",
+      "情"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tình cảm",
+        "en": "emotion, feeling"
+      }
+    ],
+    "meaning": "n. tình cảm",
+    "exampleSentences": [
+      {
+        "cn": "他们俩感情很好。",
+        "pinyin": "Tāmen liǎ gǎnqíng hěn hǎo.",
+        "vi": "Tình cảm giữa hai người họ rất tốt."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0084",
+    "hanzi": "感兴趣",
+    "pinyin": "gǎn xìng qù",
+    "pinyinNormalized": "ganxingqu",
+    "characters": [
+      "感",
+      "兴",
+      "趣"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "có hứng thú, quan tâm",
+        "en": "to be interested in"
+      }
+    ],
+    "meaning": "v. có hứng thú, quan tâm",
+    "exampleSentences": [
+      {
+        "cn": "我对汉语很感兴趣。",
+        "pinyin": "Wǒ duì Hànyǔ hěn gǎn xìngqù.",
+        "vi": "Tôi rất có hứng thú với tiếng Trung."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0085",
+    "hanzi": "各",
+    "pinyin": "gè",
+    "pinyinNormalized": "ge",
+    "characters": [
+      "各"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "các, mỗi",
+        "en": "each, various"
+      }
+    ],
+    "meaning": "adj. các, mỗi",
+    "exampleSentences": [
+      {
+        "cn": "各国有不同的文化。",
+        "pinyin": "Gè guó yǒu bùtóng de wénhuà.",
+        "vi": "Mỗi quốc gia đều có nền văn hóa khác nhau."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0086",
+    "hanzi": "根据",
+    "pinyin": "gēn jù",
+    "pinyinNormalized": "genju",
+    "characters": [
+      "根",
+      "据"
+    ],
+    "meanings": [
+      {
+        "pos": "prep",
+        "vi": "căn cứ vào",
+        "en": "according to"
+      },
+      {
+        "pos": "n",
+        "vi": "căn cứ, cơ sở",
+        "en": "basis, grounds"
+      }
+    ],
+    "meaning": "prep. căn cứ vào; n. căn cứ, cơ sở",
+    "exampleSentences": [
+      {
+        "cn": "根据天气预报，明天有雨。",
+        "pinyin": "Gēnjù tiānqì yùbào, míngtiān yǒu yǔ.",
+        "vi": "Căn cứ vào dự báo thời tiết, ngày mai sẽ có mưa."
+      }
+    ],
+    "level": 3,
+    "wordType": "prep",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0087",
+    "hanzi": "跟",
+    "pinyin": "gēn",
+    "pinyinNormalized": "gen",
+    "characters": [
+      "跟"
+    ],
+    "meanings": [
+      {
+        "pos": "prep",
+        "vi": "cùng, với",
+        "en": "with"
+      },
+      {
+        "pos": "v",
+        "vi": "đi theo, theo",
+        "en": "to follow"
+      }
+    ],
+    "meaning": "prep. cùng, với; v. đi theo, theo",
+    "exampleSentences": [
+      {
+        "cn": "请跟我来。",
+        "pinyin": "Qǐng gēn wǒ lái.",
+        "vi": "Làm ơn đi theo tôi."
+      }
+    ],
+    "level": 3,
+    "wordType": "prep",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0088",
+    "hanzi": "工资",
+    "pinyin": "gōng zī",
+    "pinyinNormalized": "gongzi",
+    "characters": [
+      "工",
+      "资"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tiền lương",
+        "en": "salary, wages"
+      }
+    ],
+    "meaning": "n. tiền lương",
+    "exampleSentences": [
+      {
+        "cn": "他的工资很高。",
+        "pinyin": "Tā de gōngzī hěn gāo.",
+        "vi": "Lương của anh ấy rất cao."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0089",
+    "hanzi": "共同",
+    "pinyin": "gòng tóng",
+    "pinyinNormalized": "gongtong",
+    "characters": [
+      "共",
+      "同"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "chung, cùng",
+        "en": "common, joint"
+      }
+    ],
+    "meaning": "adj. chung, cùng",
+    "exampleSentences": [
+      {
+        "cn": "这是我们的共同目标。",
+        "pinyin": "Zhè shì wǒmen de gòngtóng mùbiāo.",
+        "vi": "Đây là mục tiêu chung của chúng ta."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:07:43.000Z"
+  },
+  {
+    "id": "hsk3_0090",
+    "hanzi": "鼓励",
+    "pinyin": "gǔ lì",
+    "pinyinNormalized": "guli",
+    "characters": [
+      "鼓",
+      "励"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "khuyến khích, cổ vũ",
+        "en": "to encourage"
+      }
+    ],
+    "meaning": "v. khuyến khích, cổ vũ",
+    "exampleSentences": [
+      {
+        "cn": "老师鼓励我们要努力学习。",
+        "pinyin": "Lǎoshī gǔlì wǒmen yào nǔlì xuéxí.",
+        "vi": "Thầy giáo khuyến khích chúng tôi phải nỗ lực học tập."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0091",
+    "hanzi": "顾客",
+    "pinyin": "gù kè",
+    "pinyinNormalized": "guke",
+    "characters": [
+      "顾",
+      "客"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "khách hàng",
+        "en": "customer"
+      }
+    ],
+    "meaning": "n. khách hàng",
+    "exampleSentences": [
+      {
+        "cn": "这家商店的顾客很多。",
+        "pinyin": "Zhè jiā shāngdiàn de gùkè hěnduō.",
+        "vi": "Cửa hàng này có rất nhiều khách hàng."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0092",
+    "hanzi": "挂",
+    "pinyin": "guà",
+    "pinyinNormalized": "gua",
+    "characters": [
+      "挂"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "treo, móc",
+        "en": "to hang"
+      }
+    ],
+    "meaning": "v. treo, móc",
+    "exampleSentences": [
+      {
+        "cn": "墙上挂着一张地图。",
+        "pinyin": "Qiáng shàng guàzhe yì zhāng dìtú.",
+        "vi": "Trên tường có treo một tấm bản đồ."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0093",
+    "hanzi": "管理",
+    "pinyin": "guǎn lǐ",
+    "pinyinNormalized": "guanli",
+    "characters": [
+      "管",
+      "理"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "quản lý",
+        "en": "to manage"
+      },
+      {
+        "pos": "n",
+        "vi": "sự quản lý",
+        "en": "management"
+      }
+    ],
+    "meaning": "v. quản lý; n. sự quản lý",
+    "exampleSentences": [
+      {
+        "cn": "他负责管理这个部门。",
+        "pinyin": "Tā fùzé guǎnlǐ zhège bùmén.",
+        "vi": "Anh ấy phụ trách quản lý bộ phận này."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0094",
+    "hanzi": "光",
+    "pinyin": "guāng",
+    "pinyinNormalized": "guang",
+    "characters": [
+      "光"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "ánh sáng",
+        "en": "light"
+      },
+      {
+        "pos": "adj",
+        "vi": "hết sạch, trống trơn",
+        "en": "empty, gone"
+      }
+    ],
+    "meaning": "n. ánh sáng; adj. hết sạch, trống trơn",
+    "exampleSentences": [
+      {
+        "cn": "阳光照进房间里。",
+        "pinyin": "Yángguāng zhào jìn fángjiān lǐ.",
+        "vi": "Ánh nắng chiếu vào trong phòng."
+      },
+      {
+        "cn": "钱都花光了。",
+        "pinyin": "Qián dōu huā guāng le.",
+        "vi": "Tiền đã tiêu hết sạch rồi."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0095",
+    "hanzi": "广告",
+    "pinyin": "guǎng gào",
+    "pinyinNormalized": "guanggao",
+    "characters": [
+      "广",
+      "告"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "quảng cáo",
+        "en": "advertisement"
+      }
+    ],
+    "meaning": "n. quảng cáo",
+    "exampleSentences": [
+      {
+        "cn": "我在电视上看到了这个广告。",
+        "pinyin": "Wǒ zài diànshì shàng kàndàole zhège guǎnggào.",
+        "vi": "Tôi đã thấy quảng cáo này trên tivi."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0096",
+    "hanzi": "规定",
+    "pinyin": "guī dìng",
+    "pinyinNormalized": "guiding",
+    "characters": [
+      "规",
+      "定"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "quy định",
+        "en": "to stipulate"
+      },
+      {
+        "pos": "n",
+        "vi": "quy định, điều lệ",
+        "en": "regulation"
+      }
+    ],
+    "meaning": "v. quy định; n. quy định, điều lệ",
+    "exampleSentences": [
+      {
+        "cn": "学校有严格的规定。",
+        "pinyin": "Xuéxiào yǒu yángé de guīdìng.",
+        "vi": "Nhà trường có những quy định nghiêm ngặt."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0097",
+    "hanzi": "国际",
+    "pinyin": "guó jì",
+    "pinyinNormalized": "guoji",
+    "characters": [
+      "国",
+      "际"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "quốc tế",
+        "en": "international"
+      }
+    ],
+    "meaning": "adj. quốc tế",
+    "exampleSentences": [
+      {
+        "cn": "这是一家国际公司。",
+        "pinyin": "Zhè shì yì jiā guójì gōngsī.",
+        "vi": "Đây là một công ty quốc tế."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0098",
+    "hanzi": "过程",
+    "pinyin": "guò chéng",
+    "pinyinNormalized": "guocheng",
+    "characters": [
+      "过",
+      "程"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "quá trình",
+        "en": "process"
+      }
+    ],
+    "meaning": "n. quá trình",
+    "exampleSentences": [
+      {
+        "cn": "学习是一个漫长的过程。",
+        "pinyin": "Xuéxí shì yígè màncháng de guòchéng.",
+        "vi": "Học tập là một quá trình lâu dài."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0099",
+    "hanzi": "海",
+    "pinyin": "hǎi",
+    "pinyinNormalized": "hai",
+    "characters": [
+      "海"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "biển",
+        "en": "sea, ocean"
+      }
+    ],
+    "meaning": "n. biển",
+    "exampleSentences": [
+      {
+        "cn": "我们去海边玩吧。",
+        "pinyin": "Wǒmen qù hǎibiān wán ba.",
+        "vi": "Chúng ta đi ra bờ biển chơi đi."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0100",
+    "hanzi": "喊",
+    "pinyin": "hǎn",
+    "pinyinNormalized": "han",
+    "characters": [
+      "喊"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "hét, gọi, kêu",
+        "en": "to shout, to yell"
+      }
+    ],
+    "meaning": "v. hét, gọi, kêu",
+    "exampleSentences": [
+      {
+        "cn": "请不要大声喊。",
+        "pinyin": "Qǐng búyào dàshēng hǎn.",
+        "vi": "Xin đừng hét lớn."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0101",
+    "hanzi": "行",
+    "pinyin": "háng",
+    "pinyinNormalized": "hang",
+    "characters": [
+      "行"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "hàng, ngành, nghề",
+        "en": "profession, line, row"
+      }
+    ],
+    "meaning": "n. hàng, ngành, nghề",
+    "exampleSentences": [
+      {
+        "cn": "他在银行工作。",
+        "pinyin": "Tā zài yínháng gōngzuò.",
+        "vi": "Anh ấy làm việc ở ngân hàng."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0102",
+    "hanzi": "好处",
+    "pinyin": "hǎo chù",
+    "pinyinNormalized": "haochu",
+    "characters": [
+      "好",
+      "处"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "lợi ích, ưu điểm",
+        "en": "benefit, advantage"
+      }
+    ],
+    "meaning": "n. lợi ích, ưu điểm",
+    "exampleSentences": [
+      {
+        "cn": "运动对身体有很多好处。",
+        "pinyin": "Yùndòng duì shēntǐ yǒu hěnduō hǎochù.",
+        "vi": "Vận động có rất nhiều lợi ích cho cơ thể."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0103",
+    "hanzi": "好看",
+    "pinyin": "hǎo kàn",
+    "pinyinNormalized": "haokan",
+    "characters": [
+      "好",
+      "看"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "đẹp, hay (xem)",
+        "en": "good-looking, good to watch"
+      }
+    ],
+    "meaning": "adj. đẹp, hay (xem)",
+    "exampleSentences": [
+      {
+        "cn": "这部电影很好看。",
+        "pinyin": "Zhè bù diànyǐng hěn hǎokàn.",
+        "vi": "Bộ phim này rất hay."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0104",
+    "hanzi": "合适",
+    "pinyin": "hé shì",
+    "pinyinNormalized": "heshi",
+    "characters": [
+      "合",
+      "适"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "phù hợp, thích hợp",
+        "en": "suitable, appropriate"
+      }
+    ],
+    "meaning": "adj. phù hợp, thích hợp",
+    "exampleSentences": [
+      {
+        "cn": "这件衣服不合适。",
+        "pinyin": "Zhè jiàn yīfu bù héshì.",
+        "vi": "Bộ quần áo này không phù hợp."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0105",
+    "hanzi": "互联网",
+    "pinyin": "hù lián wǎng",
+    "pinyinNormalized": "hulianwang",
+    "characters": [
+      "互",
+      "联",
+      "网"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "mạng internet",
+        "en": "internet"
+      }
+    ],
+    "meaning": "n. mạng internet",
+    "exampleSentences": [
+      {
+        "cn": "互联网改变了我们的生活。",
+        "pinyin": "Hùliánwǎng gǎibiànle wǒmen de shēnghuó.",
+        "vi": "Internet đã thay đổi cuộc sống của chúng ta."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0106",
+    "hanzi": "互相",
+    "pinyin": "hù xiāng",
+    "pinyinNormalized": "huxiang",
+    "characters": [
+      "互",
+      "相"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "lẫn nhau",
+        "en": "each other, mutually"
+      }
+    ],
+    "meaning": "adv. lẫn nhau",
+    "exampleSentences": [
+      {
+        "cn": "我们应该互相帮助。",
+        "pinyin": "Wǒmen yīnggāi hùxiāng bāngzhù.",
+        "vi": "Chúng ta nên giúp đỡ lẫn nhau."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0107",
+    "hanzi": "护照",
+    "pinyin": "hù zhào",
+    "pinyinNormalized": "huzhao",
+    "characters": [
+      "护",
+      "照"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "hộ chiếu",
+        "en": "passport"
+      }
+    ],
+    "meaning": "n. hộ chiếu",
+    "exampleSentences": [
+      {
+        "cn": "别忘了带护照。",
+        "pinyin": "Bié wàngle dài hùzhào.",
+        "vi": "Đừng quên mang theo hộ chiếu."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0108",
+    "hanzi": "化学",
+    "pinyin": "huà xué",
+    "pinyinNormalized": "huaxue",
+    "characters": [
+      "化",
+      "学"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "hóa học",
+        "en": "chemistry"
+      }
+    ],
+    "meaning": "n. hóa học",
+    "exampleSentences": [
+      {
+        "cn": "他很喜欢化学课。",
+        "pinyin": "Tā hěn xǐhuān huàxué kè.",
+        "vi": "Anh ấy rất thích tiết học hóa học."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0109",
+    "hanzi": "话题",
+    "pinyin": "huà tí",
+    "pinyinNormalized": "huati",
+    "characters": [
+      "话",
+      "题"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "chủ đề (nói chuyện)",
+        "en": "topic"
+      }
+    ],
+    "meaning": "n. chủ đề (nói chuyện)",
+    "exampleSentences": [
+      {
+        "cn": "这是一个有趣的话题。",
+        "pinyin": "Zhè shì yígè yǒuqù de huàtí.",
+        "vi": "Đây là một chủ đề thú vị."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0110",
+    "hanzi": "怀疑",
+    "pinyin": "huái yí",
+    "pinyinNormalized": "huaiyi",
+    "characters": [
+      "怀",
+      "疑"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "nghi ngờ",
+        "en": "to suspect, to doubt"
+      },
+      {
+        "pos": "n",
+        "vi": "sự nghi ngờ",
+        "en": "doubt"
+      }
+    ],
+    "meaning": "v. nghi ngờ; n. sự nghi ngờ",
+    "exampleSentences": [
+      {
+        "cn": "我怀疑他在说谎。",
+        "pinyin": "Wǒ huáiyí tā zài shuōhuǎng.",
+        "vi": "Tôi nghi ngờ anh ta đang nói dối."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0111",
+    "hanzi": "欢迎",
+    "pinyin": "huān yíng",
+    "pinyinNormalized": "huanying",
+    "characters": [
+      "欢",
+      "迎"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "hoan nghênh, chào đón",
+        "en": "to welcome"
+      }
+    ],
+    "meaning": "v. hoan nghênh, chào đón",
+    "exampleSentences": [
+      {
+        "cn": "欢迎来到中国。",
+        "pinyin": "Huānyíng lái dào Zhōngguó.",
+        "vi": "Chào mừng bạn đến với Trung Quốc."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0112",
+    "hanzi": "活动",
+    "pinyin": "huó dòng",
+    "pinyinNormalized": "huodong",
+    "characters": [
+      "活",
+      "动"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "hoạt động",
+        "en": "activity"
+      },
+      {
+        "pos": "v",
+        "vi": "hoạt động",
+        "en": "to move, to do activities"
+      }
+    ],
+    "meaning": "n. hoạt động; v. hoạt động",
+    "exampleSentences": [
+      {
+        "cn": "学校举办了许多课外活动。",
+        "pinyin": "Xuéxiào jǔbànle xǔduō kèwài huódòng.",
+        "vi": "Trường học đã tổ chức rất nhiều hoạt động ngoại khóa."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0113",
+    "hanzi": "活泼",
+    "pinyin": "huó pō",
+    "pinyinNormalized": "huopo",
+    "characters": [
+      "活",
+      "泼"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "hoạt bát, sinh động",
+        "en": "lively, vivacious"
+      }
+    ],
+    "meaning": "adj. hoạt bát, sinh động",
+    "exampleSentences": [
+      {
+        "cn": "这个孩子性格很活泼。",
+        "pinyin": "Zhège háizi xìnggé hěn huópō.",
+        "vi": "Đứa trẻ này tính cách rất hoạt bát."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0114",
+    "hanzi": "火",
+    "pinyin": "huǒ",
+    "pinyinNormalized": "huo",
+    "characters": [
+      "火"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "lửa",
+        "en": "fire"
+      },
+      {
+        "pos": "adj",
+        "vi": "nổi tiếng, hot",
+        "en": "popular, hot"
+      }
+    ],
+    "meaning": "n. lửa; adj. nổi tiếng, hot",
+    "exampleSentences": [
+      {
+        "cn": "这首歌最近很火。",
+        "pinyin": "Zhè shǒu gē zuìjìn hěn huǒ.",
+        "vi": "Bài hát này dạo này rất hot."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0115",
+    "hanzi": "几乎",
+    "pinyin": "jī hū",
+    "pinyinNormalized": "jihu",
+    "characters": [
+      "几",
+      "乎"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "hầu như, gần như",
+        "en": "almost"
+      }
+    ],
+    "meaning": "adv. hầu như, gần như",
+    "exampleSentences": [
+      {
+        "cn": "我几乎忘了这件事。",
+        "pinyin": "Wǒ jīhū wàngle zhè jiàn shì.",
+        "vi": "Tôi suýt nữa thì quên mất việc này."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0116",
+    "hanzi": "计划",
+    "pinyin": "jì huà",
+    "pinyinNormalized": "jihua",
+    "characters": [
+      "计",
+      "划"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "kế hoạch",
+        "en": "plan"
+      },
+      {
+        "pos": "v",
+        "vi": "lập kế hoạch",
+        "en": "to plan"
+      }
+    ],
+    "meaning": "n. kế hoạch; v. lập kế hoạch",
+    "exampleSentences": [
+      {
+        "cn": "我们有一个长远的计划。",
+        "pinyin": "Wǒmen yǒu yígè chángyuǎn de jìhuà.",
+        "vi": "Chúng tôi có một kế hoạch dài hạn."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0117",
+    "hanzi": "记者",
+    "pinyin": "jì zhě",
+    "pinyinNormalized": "jizhe",
+    "characters": [
+      "记",
+      "者"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "phóng viên, nhà báo",
+        "en": "reporter, journalist"
+      }
+    ],
+    "meaning": "n. phóng viên, nhà báo",
+    "exampleSentences": [
+      {
+        "cn": "记者正在采访那位明星。",
+        "pinyin": "Jìzhě zhèngzài cǎifǎng nà wèi míngxīng.",
+        "vi": "Phóng viên đang phỏng vấn ngôi sao đó."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0118",
+    "hanzi": "技术",
+    "pinyin": "jì shù",
+    "pinyinNormalized": "jishu",
+    "characters": [
+      "技",
+      "术"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "kỹ thuật, công nghệ",
+        "en": "technology, skill"
+      }
+    ],
+    "meaning": "n. kỹ thuật, công nghệ",
+    "exampleSentences": [
+      {
+        "cn": "他的技术非常高超。",
+        "pinyin": "Tā de jìshù fēicháng gāochāo.",
+        "vi": "Kỹ thuật của anh ấy vô cùng cao siêu."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0119",
+    "hanzi": "继续",
+    "pinyin": "jì xù",
+    "pinyinNormalized": "jixu",
+    "characters": [
+      "继",
+      "续"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tiếp tục",
+        "en": "to continue"
+      }
+    ],
+    "meaning": "v. tiếp tục",
+    "exampleSentences": [
+      {
+        "cn": "请继续说下去。",
+        "pinyin": "Qǐng jìxù shuō xiàqù.",
+        "vi": "Mời bạn nói tiếp đi."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:10:07.000Z"
+  },
+  {
+    "id": "hsk3_0120",
+    "hanzi": "假",
+    "pinyin": "jiǎ",
+    "pinyinNormalized": "jia",
+    "characters": [
+      "假"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "giả, không thật",
+        "en": "fake"
+      },
+      {
+        "pos": "n",
+        "vi": "ngày nghỉ",
+        "en": "holiday"
+      }
+    ],
+    "meaning": "adj. giả, không thật; n. ngày nghỉ",
+    "exampleSentences": [
+      {
+        "cn": "这是一张假钞。",
+        "pinyin": "Zhè shì yī zhāng jiǎchāo.",
+        "vi": "Đây là một tờ tiền giả."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0121",
+    "hanzi": "建立",
+    "pinyin": "jiàn lì",
+    "pinyinNormalized": "jianli",
+    "characters": [
+      "建",
+      "立"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "thiết lập, xây dựng",
+        "en": "to establish"
+      }
+    ],
+    "meaning": "v. thiết lập, xây dựng",
+    "exampleSentences": [
+      {
+        "cn": "我们要建立友谊。",
+        "pinyin": "Wǒmen yào jiànlì yǒuyì.",
+        "vi": "Chúng ta cần xây dựng tình hữu nghị."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0122",
+    "hanzi": "交",
+    "pinyin": "jiāo",
+    "pinyinNormalized": "jiao",
+    "characters": [
+      "交"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "kết giao, giao phó, nộp",
+        "en": "to make friends, to hand in"
+      }
+    ],
+    "meaning": "v. kết giao, giao phó, nộp",
+    "exampleSentences": [
+      {
+        "cn": "他交了很多新朋友。",
+        "pinyin": "Tā jiāole hěnduō xīn péngyǒu.",
+        "vi": "Anh ấy đã kết giao được rất nhiều bạn mới."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0123",
+    "hanzi": "交通",
+    "pinyin": "jiāo tōng",
+    "pinyinNormalized": "jiaotong",
+    "characters": [
+      "交",
+      "通"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "giao thông",
+        "en": "traffic"
+      }
+    ],
+    "meaning": "n. giao thông",
+    "exampleSentences": [
+      {
+        "cn": "这里的交通非常便利。",
+        "pinyin": "Zhèlǐ de jiāotōng fēicháng biànlì.",
+        "vi": "Giao thông ở đây rất thuận tiện."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0124",
+    "hanzi": "骄傲",
+    "pinyin": "jiāo ào",
+    "pinyinNormalized": "jiaoao",
+    "characters": [
+      "骄",
+      "傲"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "tự hào, kiêu ngạo",
+        "en": "proud, arrogant"
+      }
+    ],
+    "meaning": "adj. tự hào, kiêu ngạo",
+    "exampleSentences": [
+      {
+        "cn": "他为自己的成绩感到骄傲。",
+        "pinyin": "Tā wèi zìjǐ de chéngjī gǎndào jiāo'ào.",
+        "vi": "Anh ấy cảm thấy tự hào về thành tích của mình."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0125",
+    "hanzi": "节日",
+    "pinyin": "jié rì",
+    "pinyinNormalized": "jieri",
+    "characters": [
+      "节",
+      "日"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "ngày lễ, lễ hội",
+        "en": "festival, holiday"
+      }
+    ],
+    "meaning": "n. ngày lễ, lễ hội",
+    "exampleSentences": [
+      {
+        "cn": "春节是中国最重要的节日。",
+        "pinyin": "Chūnjié shì Zhōngguó zuì zhòngyào de jiérì.",
+        "vi": "Tết Nguyên Đán là ngày lễ quan trọng nhất của Trung Quốc."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0126",
+    "hanzi": "解决",
+    "pinyin": "jiě jué",
+    "pinyinNormalized": "jiejue",
+    "characters": [
+      "解",
+      "决"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "giải quyết",
+        "en": "to solve"
+      }
+    ],
+    "meaning": "v. giải quyết",
+    "exampleSentences": [
+      {
+        "cn": "我们需要解决这个问题。",
+        "pinyin": "Wǒmen xūyào jiějué zhège wèntí.",
+        "vi": "Chúng ta cần phải giải quyết vấn đề này."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0127",
+    "hanzi": "禁止",
+    "pinyin": "jìn zhǐ",
+    "pinyinNormalized": "jinzhi",
+    "characters": [
+      "禁",
+      "止"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "cấm, ngăn cấm",
+        "en": "to prohibit"
+      }
+    ],
+    "meaning": "v. cấm, ngăn cấm",
+    "exampleSentences": [
+      {
+        "cn": "这里禁止吸烟。",
+        "pinyin": "Zhèlǐ jìnzhǐ xīyān.",
+        "vi": "Ở đây cấm hút thuốc."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0128",
+    "hanzi": "经济",
+    "pinyin": "jīng jì",
+    "pinyinNormalized": "jingji",
+    "characters": [
+      "经",
+      "济"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "kinh tế",
+        "en": "economy"
+      },
+      {
+        "pos": "adj",
+        "vi": "tiết kiệm",
+        "en": "economical"
+      }
+    ],
+    "meaning": "n. kinh tế; adj. tiết kiệm",
+    "exampleSentences": [
+      {
+        "cn": "全球经济正在复苏。",
+        "pinyin": "Quánqiú jīngjì zhèngzài fùsū.",
+        "vi": "Kinh tế toàn cầu đang phục hồi."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0129",
+    "hanzi": "经验",
+    "pinyin": "jīng yàn",
+    "pinyinNormalized": "jingyan",
+    "characters": [
+      "经",
+      "验"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "kinh nghiệm",
+        "en": "experience"
+      }
+    ],
+    "meaning": "n. kinh nghiệm",
+    "exampleSentences": [
+      {
+        "cn": "他在工作中积累了很多经验。",
+        "pinyin": "Tā zài gōngzuò zhōng jīlěile hěnduō jīngyàn.",
+        "vi": "Anh ấy đã tích lũy được rất nhiều kinh nghiệm trong công việc."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0130",
+    "hanzi": "精彩",
+    "pinyin": "jīng cǎi",
+    "pinyinNormalized": "jingcai",
+    "characters": [
+      "精",
+      "彩"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "đặc sắc, tuyệt vời",
+        "en": "wonderful, brilliant"
+      }
+    ],
+    "meaning": "adj. đặc sắc, tuyệt vời",
+    "exampleSentences": [
+      {
+        "cn": "这场足球比赛非常精彩。",
+        "pinyin": "Zhè chǎng zúqiú bǐsài fēicháng jīngcǎi.",
+        "vi": "Trận đấu bóng đá này vô cùng đặc sắc."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0131",
+    "hanzi": "竟然",
+    "pinyin": "jìng rán",
+    "pinyinNormalized": "jingran",
+    "characters": [
+      "竟",
+      "然"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "vậy mà, hóa ra, lại",
+        "en": "unexpectedly, actually"
+      }
+    ],
+    "meaning": "adv. vậy mà, hóa ra, lại",
+    "exampleSentences": [
+      {
+        "cn": "他竟然忘了我的生日。",
+        "pinyin": "Tā jìngrán wàngle wǒ de shēngrì.",
+        "vi": "Anh ấy vậy mà lại quên sinh nhật của tôi."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0132",
+    "hanzi": "举办",
+    "pinyin": "jǔ bàn",
+    "pinyinNormalized": "juban",
+    "characters": [
+      "举",
+      "办"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tổ chức, cử hành",
+        "en": "to hold, to host"
+      }
+    ],
+    "meaning": "v. tổ chức, cử hành",
+    "exampleSentences": [
+      {
+        "cn": "学校将举办运动会。",
+        "pinyin": "Xuéxiào jiāng jǔbàn yùndònghuì.",
+        "vi": "Nhà trường sẽ tổ chức đại hội thể thao."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0133",
+    "hanzi": "举行",
+    "pinyin": "jǔ xíng",
+    "pinyinNormalized": "juxing",
+    "characters": [
+      "举",
+      "行"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tổ chức, cử hành",
+        "en": "to hold, to conduct"
+      }
+    ],
+    "meaning": "v. tổ chức, cử hành",
+    "exampleSentences": [
+      {
+        "cn": "会议将在明天举行。",
+        "pinyin": "Huìyì jiāng zài míngtiān jǔxíng.",
+        "vi": "Hội nghị sẽ được cử hành vào ngày mai."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0134",
+    "hanzi": "距离",
+    "pinyin": "jù lí",
+    "pinyinNormalized": "juli",
+    "characters": [
+      "距",
+      "离"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "khoảng cách",
+        "en": "distance"
+      },
+      {
+        "pos": "v",
+        "vi": "cách xa",
+        "en": "to be away from"
+      }
+    ],
+    "meaning": "n. khoảng cách; v. cách xa",
+    "exampleSentences": [
+      {
+        "cn": "我家离学校的距离很近。",
+        "pinyin": "Wǒ jiā lí xuéxiào de jùlí hěn jìn.",
+        "vi": "Khoảng cách từ nhà tôi đến trường rất gần."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0135",
+    "hanzi": "开心",
+    "pinyin": "kāi xīn",
+    "pinyinNormalized": "kaixin",
+    "characters": [
+      "开",
+      "心"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "vui vẻ, hạnh phúc",
+        "en": "happy"
+      }
+    ],
+    "meaning": "adj. vui vẻ, hạnh phúc",
+    "exampleSentences": [
+      {
+        "cn": "今天我过得很开心。",
+        "pinyin": "Jīntiān wǒ guò dé hěn kāixīn.",
+        "vi": "Hôm nay tôi đã trải qua một ngày rất vui vẻ."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0136",
+    "hanzi": "看来",
+    "pinyin": "kàn lái",
+    "pinyinNormalized": "kanlai",
+    "characters": [
+      "看",
+      "来"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "xem ra, có vẻ như",
+        "en": "it seems"
+      }
+    ],
+    "meaning": "adv. xem ra, có vẻ như",
+    "exampleSentences": [
+      {
+        "cn": "看来明天会下雨。",
+        "pinyin": "Kàn lái míngtiān huì xiàyǔ.",
+        "vi": "Xem ra ngày mai sẽ mưa."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0137",
+    "hanzi": "科学",
+    "pinyin": "kē xué",
+    "pinyinNormalized": "kexue",
+    "characters": [
+      "科",
+      "学"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "khoa học",
+        "en": "science"
+      }
+    ],
+    "meaning": "n. khoa học",
+    "exampleSentences": [
+      {
+        "cn": "科学技术改变了生活。",
+        "pinyin": "Kēxué jìshù gǎibiànle shēnghuó.",
+        "vi": "Khoa học kỹ thuật đã thay đổi cuộc sống."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0138",
+    "hanzi": "可爱",
+    "pinyin": "kě ài",
+    "pinyinNormalized": "keai",
+    "characters": [
+      "可",
+      "爱"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "đáng yêu, dễ thương",
+        "en": "cute, lovely"
+      }
+    ],
+    "meaning": "adj. đáng yêu, dễ thương",
+    "exampleSentences": [
+      {
+        "cn": "这个小猫真可爱。",
+        "pinyin": "Zhège xiǎomāo zhēn kě'ài.",
+        "vi": "Con mèo nhỏ này thật đáng yêu."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0139",
+    "hanzi": "客人",
+    "pinyin": "kè rén",
+    "pinyinNormalized": "keren",
+    "characters": [
+      "客",
+      "人"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "khách, khách khứa",
+        "en": "guest"
+      }
+    ],
+    "meaning": "n. khách, khách khứa",
+    "exampleSentences": [
+      {
+        "cn": "家里来了很多客人。",
+        "pinyin": "Jiālǐ láile hěnduō kèrén.",
+        "vi": "Trong nhà có rất nhiều khách đến chơi."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0140",
+    "hanzi": "困",
+    "pinyin": "kùn",
+    "pinyinNormalized": "kun",
+    "characters": [
+      "困"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "buồn ngủ",
+        "en": "sleepy"
+      }
+    ],
+    "meaning": "adj. buồn ngủ",
+    "exampleSentences": [
+      {
+        "cn": "我感到有点困。",
+        "pinyin": "Wǒ gǎndào yǒudiǎn kùn.",
+        "vi": "Tôi cảm thấy hơi buồn ngủ."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0141",
+    "hanzi": "困难",
+    "pinyin": "kùn nán",
+    "pinyinNormalized": "kunnan",
+    "characters": [
+      "困",
+      "难"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "khó khăn",
+        "en": "difficult"
+      },
+      {
+        "pos": "n",
+        "vi": "khó khăn, trở ngại",
+        "en": "difficulty"
+      }
+    ],
+    "meaning": "adj. khó khăn; n. khó khăn, trở ngại",
+    "exampleSentences": [
+      {
+        "cn": "学习汉语并不困难。",
+        "pinyin": "Xuéxí Hànyǔ bìng bù kùnnán.",
+        "vi": "Học tiếng Trung không hề khó khăn."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0142",
+    "hanzi": "拉",
+    "pinyin": "lā",
+    "pinyinNormalized": "la",
+    "characters": [
+      "拉"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "kéo, lôi",
+        "en": "to pull"
+      }
+    ],
+    "meaning": "v. kéo, lôi",
+    "exampleSentences": [
+      {
+        "cn": "请帮我拉一下门。",
+        "pinyin": "Qǐng bāng wǒ lā yīxià mén.",
+        "vi": "Làm ơn giúp tôi kéo cửa một chút."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0143",
+    "hanzi": "垃圾桶",
+    "pinyin": "lā jī tǒng",
+    "pinyinNormalized": "lajitong",
+    "characters": [
+      "垃",
+      "圾",
+      "桶"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "thùng rác",
+        "en": "trash can"
+      }
+    ],
+    "meaning": "n. thùng rác",
+    "exampleSentences": [
+      {
+        "cn": "请把纸丢进垃圾桶。",
+        "pinyin": "Qǐng bǎ zhǐ diū jìn lājītǒng.",
+        "vi": "Hãy vứt giấy vào thùng rác."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0144",
+    "hanzi": "来不及",
+    "pinyin": "lái bu jí",
+    "pinyinNormalized": "laibuji",
+    "characters": [
+      "来",
+      "不",
+      "及"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "không kịp",
+        "en": "not in time"
+      }
+    ],
+    "meaning": "v. không kịp",
+    "exampleSentences": [
+      {
+        "cn": "快点，不然来不及了。",
+        "pinyin": "Kuài diǎn, bùrán láibují le.",
+        "vi": "Nhanh lên, nếu không sẽ không kịp đâu."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0145",
+    "hanzi": "来得及",
+    "pinyin": "lái de jí",
+    "pinyinNormalized": "laideji",
+    "characters": [
+      "来",
+      "得",
+      "及"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "kịp, còn kịp",
+        "en": "in time"
+      }
+    ],
+    "meaning": "v. kịp, còn kịp",
+    "exampleSentences": [
+      {
+        "cn": "现在去还来得及。",
+        "pinyin": "Xiànzài qù hái láidejí.",
+        "vi": "Bây giờ đi vẫn còn kịp."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0146",
+    "hanzi": "来自",
+    "pinyin": "lái zì",
+    "pinyinNormalized": "laizi",
+    "characters": [
+      "来",
+      "自"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đến từ",
+        "en": "to come from"
+      }
+    ],
+    "meaning": "v. đến từ",
+    "exampleSentences": [
+      {
+        "cn": "我来自越南。",
+        "pinyin": "Wǒ láizì Yuènán.",
+        "vi": "Tôi đến từ Việt Nam."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0147",
+    "hanzi": "懒",
+    "pinyin": "lǎn",
+    "pinyinNormalized": "lan",
+    "characters": [
+      "懒"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "lười, lười biếng",
+        "en": "lazy"
+      }
+    ],
+    "meaning": "adj. lười, lười biếng",
+    "exampleSentences": [
+      {
+        "cn": "他是个很懒的人。",
+        "pinyin": "Tā shì gè hěn lǎn de rén.",
+        "vi": "Anh ấy là một người rất lười biếng."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0148",
+    "hanzi": "浪费",
+    "pinyin": "làng fèi",
+    "pinyinNormalized": "langfei",
+    "characters": [
+      "浪",
+      "费"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "lãng phí",
+        "en": "to waste"
+      }
+    ],
+    "meaning": "v. lãng phí",
+    "exampleSentences": [
+      {
+        "cn": "不要浪费时间。",
+        "pinyin": "Bùyào làngfèi shíjiān.",
+        "vi": "Đừng lãng phí thời gian."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0149",
+    "hanzi": "浪漫",
+    "pinyin": "làng màn",
+    "pinyinNormalized": "langman",
+    "characters": [
+      "浪",
+      "漫"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "lãng mạn",
+        "en": "romantic"
+      }
+    ],
+    "meaning": "adj. lãng mạn",
+    "exampleSentences": [
+      {
+        "cn": "他们的婚礼非常浪漫。",
+        "pinyin": "Tāmen de hūnlǐ fēicháng làngmàn.",
+        "vi": "Đám cưới của họ vô cùng lãng mạn."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:12:32.000Z"
+  },
+  {
+    "id": "hsk3_0150",
+    "hanzi": "老虎",
+    "pinyin": "lǎo hǔ",
+    "pinyinNormalized": "laohu",
+    "characters": [
+      "老",
+      "虎"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "con hổ",
+        "en": "tiger"
+      }
+    ],
+    "meaning": "n. con hổ",
+    "exampleSentences": [
+      {
+        "cn": "老虎是森林之王。",
+        "pinyin": "Lǎohǔ shì sēnlín zhī wáng.",
+        "vi": "Hổ là chúa tể rừng xanh."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0151",
+    "hanzi": "了解",
+    "pinyin": "liǎo jiě",
+    "pinyinNormalized": "liaojie",
+    "characters": [
+      "了",
+      "解"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "hiểu rõ, tìm hiểu",
+        "en": "to understand, to know well"
+      }
+    ],
+    "meaning": "v. hiểu rõ, tìm hiểu",
+    "exampleSentences": [
+      {
+        "cn": "我很了解他的性格。",
+        "pinyin": "Wǒ hěn liǎojiě tā de xìnggé.",
+        "vi": "Tôi rất hiểu tính cách của anh ấy."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0152",
+    "hanzi": "邻居",
+    "pinyin": "lín jū",
+    "pinyinNormalized": "linju",
+    "characters": [
+      "邻",
+      "居"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "hàng xóm",
+        "en": "neighbor"
+      }
+    ],
+    "meaning": "n. hàng xóm",
+    "exampleSentences": [
+      {
+        "cn": "我们的邻居人都很好。",
+        "pinyin": "Wǒmen de línjū rén dōu hěn hǎo.",
+        "vi": "Hàng xóm của chúng tôi đều rất tốt."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0153",
+    "hanzi": "龙",
+    "pinyin": "lóng",
+    "pinyinNormalized": "long",
+    "characters": [
+      "龙"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "con rồng",
+        "en": "dragon"
+      }
+    ],
+    "meaning": "n. con rồng",
+    "exampleSentences": [
+      {
+        "cn": "龙是中国文化的象征。",
+        "pinyin": "Lóng shì Zhōngguó wénhuà de xiàngzhēng.",
+        "vi": "Rồng là biểu tượng của văn hóa Trung Quốc."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0154",
+    "hanzi": "聊天",
+    "pinyin": "liáo tiān",
+    "pinyinNormalized": "liaotian",
+    "characters": [
+      "聊",
+      "天"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tán gẫu, nói chuyện phiếm",
+        "en": "to chat"
+      }
+    ],
+    "meaning": "v. tán gẫu, nói chuyện phiếm",
+    "exampleSentences": [
+      {
+        "cn": "他们正在咖啡馆聊天。",
+        "pinyin": "Tāmen zhèngzài kāfēiguǎn liáotiān.",
+        "vi": "Họ đang tán gẫu ở quán cà phê."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0155",
+    "hanzi": "麻烦",
+    "pinyin": "má fán",
+    "pinyinNormalized": "mafan",
+    "characters": [
+      "麻",
+      "烦"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "làm phiền",
+        "en": "to trouble someone"
+      },
+      {
+        "pos": "adj",
+        "vi": "phiền phức, rắc rối",
+        "en": "troublesome"
+      }
+    ],
+    "meaning": "v. làm phiền; adj. phiền phức, rắc rối",
+    "exampleSentences": [
+      {
+        "cn": "真麻烦！我的钥匙丢了。",
+        "pinyin": "Zhēn máfan! Wǒ de yàoshi diū le.",
+        "vi": "Thật là phiền phức! Chìa khóa của tôi mất rồi."
+      },
+      {
+        "cn": "麻烦你帮我一个忙。",
+        "pinyin": "Máfan nǐ bāng wǒ yīgè máng.",
+        "vi": "Làm phiền bạn giúp tôi một tay."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0156",
+    "hanzi": "目的",
+    "pinyin": "mù dì",
+    "pinyinNormalized": "mudi",
+    "characters": [
+      "目",
+      "的"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "mục đích",
+        "en": "purpose, goal"
+      }
+    ],
+    "meaning": "n. mục đích",
+    "exampleSentences": [
+      {
+        "cn": "你学习汉语的目的是什么？",
+        "pinyin": "Nǐ xuéxí Hànyǔ de mùdì shì shénme?",
+        "vi": "Mục đích học tiếng Trung của bạn là gì?"
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0157",
+    "hanzi": "秘书",
+    "pinyin": "mì shū",
+    "pinyinNormalized": "mishu",
+    "characters": [
+      "秘",
+      "书"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "thư ký",
+        "en": "secretary"
+      }
+    ],
+    "meaning": "n. thư ký",
+    "exampleSentences": [
+      {
+        "cn": "经理的秘书正在接电话。",
+        "pinyin": "Jīnglǐ de mìshū zhèngzài jiē diànhuà.",
+        "vi": "Thư ký của giám đốc đang nghe điện thoại."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0158",
+    "hanzi": "免费",
+    "pinyin": "miǎn fèi",
+    "pinyinNormalized": "mianfei",
+    "characters": [
+      "免",
+      "费"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "miễn phí",
+        "en": "free of charge"
+      }
+    ],
+    "meaning": "adj. miễn phí",
+    "exampleSentences": [
+      {
+        "cn": "这家饭店提供免费饮料。",
+        "pinyin": "Zhè jiā fàndiàn tígōng miǎnfèi yǐnliào.",
+        "vi": "Nhà hàng này cung cấp đồ uống miễn phí."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0159",
+    "hanzi": "哪怕",
+    "pinyin": "nǎ pà",
+    "pinyinNormalized": "napa",
+    "characters": [
+      "哪",
+      "怕"
+    ],
+    "meanings": [
+      {
+        "pos": "conj",
+        "vi": "cho dù, ngay cả",
+        "en": "even if"
+      }
+    ],
+    "meaning": "conj. cho dù, ngay cả",
+    "exampleSentences": [
+      {
+        "cn": "哪怕再难，我也要坚持下去。",
+        "pinyin": "Nǎpà zài nán, wǒ yě yào jiānchí xiàqù.",
+        "vi": "Cho dù khó khăn đến mấy, tôi cũng sẽ kiên trì."
+      }
+    ],
+    "level": 3,
+    "wordType": "conj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0160",
+    "hanzi": "耐心",
+    "pinyin": "nài xīn",
+    "pinyinNormalized": "naixin",
+    "characters": [
+      "耐",
+      "心"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "sự kiên nhẫn",
+        "en": "patience"
+      },
+      {
+        "pos": "adj",
+        "vi": "kiên nhẫn",
+        "en": "patient"
+      }
+    ],
+    "meaning": "n. sự kiên nhẫn; adj. kiên nhẫn",
+    "exampleSentences": [
+      {
+        "cn": "老师非常有耐心。",
+        "pinyin": "Lǎoshī fēicháng yǒu nàixīn.",
+        "vi": "Thầy giáo vô cùng kiên nhẫn."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0161",
+    "hanzi": "难道",
+    "pinyin": "nán dào",
+    "pinyinNormalized": "nandao",
+    "characters": [
+      "难",
+      "道"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "lẽ nào, chẳng lẽ",
+        "en": "do you mean, could it be that"
+      }
+    ],
+    "meaning": "adv. lẽ nào, chẳng lẽ",
+    "exampleSentences": [
+      {
+        "cn": "难道你忘了今天是什么日子吗？",
+        "pinyin": "Nándào nǐ wàngle jīntiān shì shénme rìzi ma?",
+        "vi": "Chẳng lẽ bạn quên hôm nay là ngày gì rồi sao?"
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0162",
+    "hanzi": "内容",
+    "pinyin": "nèi róng",
+    "pinyinNormalized": "neirong",
+    "characters": [
+      "内",
+      "容"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "nội dung",
+        "en": "content"
+      }
+    ],
+    "meaning": "n. nội dung",
+    "exampleSentences": [
+      {
+        "cn": "这本书的内容非常有趣。",
+        "pinyin": "Zhè běn shū de nèiróng fēicháng yǒuqù.",
+        "vi": "Nội dung của cuốn sách này rất thú vị."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0163",
+    "hanzi": "普通话",
+    "pinyin": "pǔ tōng huà",
+    "pinyinNormalized": "putonghua",
+    "characters": [
+      "普",
+      "通",
+      "话"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tiếng Phổ thông",
+        "en": "Mandarin Chinese"
+      }
+    ],
+    "meaning": "n. tiếng Phổ thông",
+    "exampleSentences": [
+      {
+        "cn": "他的普通话说得很标准。",
+        "pinyin": "Tā de pǔtōnghuà shuō de hěn biāozhǔn.",
+        "vi": "Anh ấy nói tiếng Phổ thông rất chuẩn."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0164",
+    "hanzi": "其实",
+    "pinyin": "qí shí",
+    "pinyinNormalized": "qishi",
+    "characters": [
+      "其",
+      "实"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "thực ra, thực tế là",
+        "en": "actually, in fact"
+      }
+    ],
+    "meaning": "adv. thực ra, thực tế là",
+    "exampleSentences": [
+      {
+        "cn": "其实，我并不认识他。",
+        "pinyin": "Qíshí, wǒ bìng bù rènshi tā.",
+        "vi": "Thực ra, tôi chẳng quen biết anh ta."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0165",
+    "hanzi": "其他",
+    "pinyin": "qí tā",
+    "pinyinNormalized": "qita",
+    "characters": [
+      "其",
+      "他"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "khác, cái khác",
+        "en": "other, else"
+      }
+    ],
+    "meaning": "pron. khác, cái khác",
+    "exampleSentences": [
+      {
+        "cn": "除了他，其他人都到了。",
+        "pinyin": "Chúle tā, qítā rén dōu dào le.",
+        "vi": "Ngoại trừ anh ấy, những người khác đều đã đến rồi."
+      }
+    ],
+    "level": 3,
+    "wordType": "pron",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0166",
+    "hanzi": "奇怪",
+    "pinyin": "qí guài",
+    "pinyinNormalized": "qiguai",
+    "characters": [
+      "奇",
+      "怪"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "kỳ lạ, lạ lùng",
+        "en": "strange, weird"
+      }
+    ],
+    "meaning": "adj. kỳ lạ, lạ lùng",
+    "exampleSentences": [
+      {
+        "cn": "这件事真的很奇怪。",
+        "pinyin": "Zhè jiàn shì zhēn de hěn qíguài.",
+        "vi": "Chuyện này thực sự rất kỳ lạ."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0167",
+    "hanzi": "亲戚",
+    "pinyin": "qīn qi",
+    "pinyinNormalized": "qinqi",
+    "characters": [
+      "亲",
+      "戚"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "họ hàng, thân thích",
+        "en": "relative"
+      }
+    ],
+    "meaning": "n. họ hàng, thân thích",
+    "exampleSentences": [
+      {
+        "cn": "过年的时候，他有很多亲戚来访。",
+        "pinyin": "Guònián de shíhou, tā yǒu hěnduō qīnqi láifǎng.",
+        "vi": "Vào dịp Tết, anh ấy có rất nhiều họ hàng đến thăm."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0168",
+    "hanzi": "情况",
+    "pinyin": "qíng kuàng",
+    "pinyinNormalized": "qingkuang",
+    "characters": [
+      "情",
+      "况"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tình hình, tình huống",
+        "en": "situation, condition"
+      }
+    ],
+    "meaning": "n. tình hình, tình huống",
+    "exampleSentences": [
+      {
+        "cn": "请告诉我目前的实际情况。",
+        "pinyin": "Qǐng gàosù wǒ mùqián de shíjì qíngkuàng.",
+        "vi": "Hãy cho tôi biết tình hình thực tế hiện tại."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0169",
+    "hanzi": "穷",
+    "pinyin": "qióng",
+    "pinyinNormalized": "qiong",
+    "characters": [
+      "穷"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "nghèo, thiếu thốn",
+        "en": "poor"
+      }
+    ],
+    "meaning": "adj. nghèo, thiếu thốn",
+    "exampleSentences": [
+      {
+        "cn": "他虽然穷，但是很快乐。",
+        "pinyin": "Tā suīrán qióng, dànshì hěn kuàilè.",
+        "vi": "Mặc dù anh ấy nghèo, nhưng anh ấy rất hạnh phúc."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0170",
+    "hanzi": "全部",
+    "pinyin": "quán bù",
+    "pinyinNormalized": "quanbu",
+    "characters": [
+      "全",
+      "部"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "toàn bộ",
+        "en": "whole, entire"
+      },
+      {
+        "pos": "pron",
+        "vi": "tất cả",
+        "en": "all"
+      }
+    ],
+    "meaning": "adj. toàn bộ; pron. tất cả",
+    "exampleSentences": [
+      {
+        "cn": "这是我全部的财产。",
+        "pinyin": "Zhè shì wǒ quánbù de cáichǎn.",
+        "vi": "Đây là toàn bộ tài sản của tôi."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0171",
+    "hanzi": "热情",
+    "pinyin": "rè qíng",
+    "pinyinNormalized": "reqing",
+    "characters": [
+      "热",
+      "情"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "nhiệt tình",
+        "en": "enthusiastic"
+      },
+      {
+        "pos": "n",
+        "vi": "lòng nhiệt tình",
+        "en": "enthusiasm"
+      }
+    ],
+    "meaning": "adj. nhiệt tình; n. lòng nhiệt tình",
+    "exampleSentences": [
+      {
+        "cn": "当地人对游客非常热情。",
+        "pinyin": "Dāngdì rén duì yóukè fēicháng rèqíng.",
+        "vi": "Người dân địa phương đối với du khách rất nhiệt tình."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0172",
+    "hanzi": "认为",
+    "pinyin": "rèn wéi",
+    "pinyinNormalized": "renwei",
+    "characters": [
+      "认",
+      "为"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "cho rằng, nghĩ rằng",
+        "en": "to think, to consider"
+      }
+    ],
+    "meaning": "v. cho rằng, nghĩ rằng",
+    "exampleSentences": [
+      {
+        "cn": "我并不认为这是个好主意。",
+        "pinyin": "Wǒ bìng bù rènwéi zhè shì gè hǎo zhǔyì.",
+        "vi": "Tôi không cho rằng đây là một ý kiến hay."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0173",
+    "hanzi": "认真",
+    "pinyin": "rèn zhēn",
+    "pinyinNormalized": "renzhen",
+    "characters": [
+      "认",
+      "真"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "nghiêm túc, chăm chỉ",
+        "en": "serious, earnest"
+      }
+    ],
+    "meaning": "adj. nghiêm túc, chăm chỉ",
+    "exampleSentences": [
+      {
+        "cn": "他做事一向很认真。",
+        "pinyin": "Tā zuòshì yīxiàng hěn rènzhēn.",
+        "vi": "Anh ấy làm việc lúc nào cũng rất nghiêm túc."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0174",
+    "hanzi": "任何",
+    "pinyin": "rèn hé",
+    "pinyinNormalized": "renhe",
+    "characters": [
+      "任",
+      "何"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "bất kỳ",
+        "en": "any"
+      }
+    ],
+    "meaning": "pron. bất kỳ",
+    "exampleSentences": [
+      {
+        "cn": "你有什么问题可以随时问我。",
+        "pinyin": "Nǐ yǒu rènhé wèntí kěyǐ suíshí wèn wǒ.",
+        "vi": "Bạn có bất kỳ câu hỏi nào đều có thể hỏi tôi bất cứ lúc nào."
+      }
+    ],
+    "level": 3,
+    "wordType": "pron",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0175",
+    "hanzi": "散步",
+    "pinyin": "sàn bù",
+    "pinyinNormalized": "sanbu",
+    "characters": [
+      "散",
+      "步"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đi dạo, tản bộ",
+        "en": "to take a walk"
+      }
+    ],
+    "meaning": "v. đi dạo, tản bộ",
+    "exampleSentences": [
+      {
+        "cn": "饭后我们经常去公园散步。",
+        "pinyin": "Fànhòu wǒmen jīngcháng qù gōngyuán sànbù.",
+        "vi": "Sau bữa ăn chúng tôi thường đi dạo ở công viên."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0176",
+    "hanzi": "上网",
+    "pinyin": "shàng wǎng",
+    "pinyinNormalized": "shangwang",
+    "characters": [
+      "上",
+      "网"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "lên mạng, truy cập internet",
+        "en": "to go online"
+      }
+    ],
+    "meaning": "v. lên mạng, truy cập internet",
+    "exampleSentences": [
+      {
+        "cn": "我喜欢在网上买东西。",
+        "pinyin": "Wǒ xǐhuān zài wǎngshàng mǎi dōngxi.",
+        "vi": "Tôi thích mua đồ trên mạng."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0177",
+    "hanzi": "社会",
+    "pinyin": "shè huì",
+    "pinyinNormalized": "shehui",
+    "characters": [
+      "社",
+      "会"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "xã hội",
+        "en": "society"
+      }
+    ],
+    "meaning": "n. xã hội",
+    "exampleSentences": [
+      {
+        "cn": "我们要学会如何适应社会。",
+        "pinyin": "Wǒmen yào xuéhuì rúhé shìyìng shèhuì.",
+        "vi": "Chúng ta cần học cách thích nghi với xã hội."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0178",
+    "hanzi": "申请",
+    "pinyin": "shēn qǐng",
+    "pinyinNormalized": "shenqing",
+    "characters": [
+      "申",
+      "请"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "xin, nộp đơn",
+        "en": "to apply for"
+      },
+      {
+        "pos": "n",
+        "vi": "đơn xin, sự xin phép",
+        "en": "application"
+      }
+    ],
+    "meaning": "v. xin, nộp đơn; n. đơn xin, sự xin phép",
+    "exampleSentences": [
+      {
+        "cn": "他正在申请奖学金。",
+        "pinyin": "Tā zhèngzài shēnqǐng jiǎngxuéjīn.",
+        "vi": "Anh ấy đang nộp đơn xin học bổng."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0179",
+    "hanzi": "甚至",
+    "pinyin": "shèn zhì",
+    "pinyinNormalized": "shenzhi",
+    "characters": [
+      "甚",
+      "至"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "thậm chí",
+        "en": "even"
+      }
+    ],
+    "meaning": "adv. thậm chí",
+    "exampleSentences": [
+      {
+        "cn": "他忙得甚至忘了吃饭。",
+        "pinyin": "Tā máng de shènzhì wàngle chīfàn.",
+        "vi": "Anh ấy bận đến mức thậm chí quên cả ăn cơm."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:14:46.000Z"
+  },
+  {
+    "id": "hsk3_0180",
+    "hanzi": "生活",
+    "pinyin": "shēng huó",
+    "pinyinNormalized": "shenghuo",
+    "characters": [
+      "生",
+      "活"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "cuộc sống, đời sống",
+        "en": "life"
+      },
+      {
+        "pos": "v",
+        "vi": "sinh sống, sống",
+        "en": "to live"
+      }
+    ],
+    "meaning": "n. cuộc sống, đời sống; v. sinh sống, sống",
+    "exampleSentences": [
+      {
+        "cn": "城市的生活很忙碌。",
+        "pinyin": "Chéngshì de shēnghuó hěn mánglù.",
+        "vi": "Cuộc sống ở thành phố rất bận rộn."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0181",
+    "hanzi": "失去",
+    "pinyin": "shī qù",
+    "pinyinNormalized": "shiqu",
+    "characters": [
+      "失",
+      "去"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "mất, đánh mất",
+        "en": "to lose"
+      }
+    ],
+    "meaning": "v. mất, đánh mất",
+    "exampleSentences": [
+      {
+        "cn": "他失去了这次机会。",
+        "pinyin": "Tā shīqùle zhè cì jīhuì.",
+        "vi": "Anh ấy đã đánh mất cơ hội lần này."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0182",
+    "hanzi": "食物",
+    "pinyin": "shí wù",
+    "pinyinNormalized": "shiwu",
+    "characters": [
+      "食",
+      "物"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "thức ăn, thực phẩm",
+        "en": "food"
+      }
+    ],
+    "meaning": "n. thức ăn, thực phẩm",
+    "exampleSentences": [
+      {
+        "cn": "健康的食物对身体有好处。",
+        "pinyin": "Jiànkāng de shíwù duì shēntǐ yǒu hǎochù.",
+        "vi": "Thực phẩm lành mạnh có lợi cho cơ thể."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0183",
+    "hanzi": "收入",
+    "pinyin": "shōu rù",
+    "pinyinNormalized": "shouru",
+    "characters": [
+      "收",
+      "入"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "thu nhập",
+        "en": "income"
+      },
+      {
+        "pos": "v",
+        "vi": "thu vào, thu nhận",
+        "en": "to receive/income"
+      }
+    ],
+    "meaning": "n. thu nhập; v. thu vào, thu nhận",
+    "exampleSentences": [
+      {
+        "cn": "他的月收入很高。",
+        "pinyin": "Tā de yuè shōurù hěn gāo.",
+        "vi": "Thu nhập hàng tháng của anh ấy rất cao."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0184",
+    "hanzi": "首先",
+    "pinyin": "shǒu xiān",
+    "pinyinNormalized": "shouxian",
+    "characters": [
+      "首",
+      "先"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "đầu tiên, trước hết",
+        "en": "first of all"
+      }
+    ],
+    "meaning": "adv. đầu tiên, trước hết",
+    "exampleSentences": [
+      {
+        "cn": "首先，我们要解决这个问题。",
+        "pinyin": "Shǒuxiān, wǒmen yào jiějué zhège wèntí.",
+        "vi": "Trước hết, chúng ta cần giải quyết vấn đề này."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0185",
+    "hanzi": "受到",
+    "pinyin": "shòu dào",
+    "pinyinNormalized": "shoudao",
+    "characters": [
+      "受",
+      "到"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "nhận được, chịu (ảnh hưởng/phản ứng)",
+        "en": "to receive/suffer"
+      }
+    ],
+    "meaning": "v. nhận được, chịu (ảnh hưởng/phản ứng)",
+    "exampleSentences": [
+      {
+        "cn": "他的建议受到了大家的欢迎。",
+        "pinyin": "Tā de jiànyì shòudàole dàjiā de huānyíng.",
+        "vi": "Đề xuất của anh ấy đã nhận được sự hoan nghênh của mọi người."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0186",
+    "hanzi": "暑假",
+    "pinyin": "shǔ jià",
+    "pinyinNormalized": "shujia",
+    "characters": [
+      "暑",
+      "假"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "kỳ nghỉ hè",
+        "en": "summer vacation"
+      }
+    ],
+    "meaning": "n. kỳ nghỉ hè",
+    "exampleSentences": [
+      {
+        "cn": "暑假你打算去哪儿旅游？",
+        "pinyin": "Shǔjià nǐ dǎsuàn qù nǎ'er lǚyóu?",
+        "vi": "Kỳ nghỉ hè bạn dự định đi đâu du lịch?"
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0187",
+    "hanzi": "数量",
+    "pinyin": "shù liàng",
+    "pinyinNormalized": "shuliang",
+    "characters": [
+      "数",
+      "量"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "số lượng",
+        "en": "quantity/amount"
+      }
+    ],
+    "meaning": "n. số lượng",
+    "exampleSentences": [
+      {
+        "cn": "这里的学生数量很多。",
+        "pinyin": "Zhèlǐ de xuéshēng shùliàng hěn duō.",
+        "vi": "Số lượng học sinh ở đây rất đông."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0188",
+    "hanzi": "说明",
+    "pinyin": "shuō míng",
+    "pinyinNormalized": "shuoming",
+    "characters": [
+      "说",
+      "明"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "giải thích, thuyết minh",
+        "en": "to explain"
+      },
+      {
+        "pos": "n",
+        "vi": "sự thuyết minh, lời giải thích",
+        "en": "explanation"
+      }
+    ],
+    "meaning": "v. giải thích, thuyết minh; n. sự thuyết minh, lời giải thích",
+    "exampleSentences": [
+      {
+        "cn": "请说明一下你的理由。",
+        "pinyin": "Qǐng shuōmíng yīxià nǐ de lǐyóu.",
+        "vi": "Hãy giải thích một chút về lý do của bạn."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0189",
+    "hanzi": "顺序",
+    "pinyin": "shùn xù",
+    "pinyinNormalized": "shunxu",
+    "characters": [
+      "顺",
+      "序"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "thứ tự",
+        "en": "order/sequence"
+      }
+    ],
+    "meaning": "n. thứ tự",
+    "exampleSentences": [
+      {
+        "cn": "请按顺序排队。",
+        "pinyin": "Qǐng àn shùnxù páiduì.",
+        "vi": "Vui lòng xếp hàng theo thứ tự."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0190",
+    "hanzi": "随便",
+    "pinyin": "suí biàn",
+    "pinyinNormalized": "suibian",
+    "characters": [
+      "随",
+      "便"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "tùy tiện, thoải mái",
+        "en": "casual/unrestrained"
+      },
+      {
+        "pos": "adv",
+        "vi": "tùy ý, tùy tiện",
+        "en": "as one pleases"
+      }
+    ],
+    "meaning": "adj. tùy tiện, thoải mái; adv. tùy ý, tùy tiện",
+    "exampleSentences": [
+      {
+        "cn": "请随便坐。",
+        "pinyin": "Qǐng suíbiàn zuò.",
+        "vi": "Mời ngồi tự nhiên/tùy ý."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0191",
+    "hanzi": "随着",
+    "pinyin": "suí zhe",
+    "pinyinNormalized": "suizhe",
+    "characters": [
+      "随",
+      "着"
+    ],
+    "meanings": [
+      {
+        "pos": "prep",
+        "vi": "theo, cùng với",
+        "en": "along with"
+      }
+    ],
+    "meaning": "prep. theo, cùng với",
+    "exampleSentences": [
+      {
+        "cn": "随着经济的发展，生活水平提高了。",
+        "pinyin": "Suízhe jīngjì de fāzhǎn, shēnghuó shuǐpíng tígāole.",
+        "vi": "Cùng với sự phát triển của kinh tế, mức sống đã được nâng cao."
+      }
+    ],
+    "level": 3,
+    "wordType": "prep",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0192",
+    "hanzi": "态度",
+    "pinyin": "tài du",
+    "pinyinNormalized": "taidu",
+    "characters": [
+      "态",
+      "度"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "thái độ",
+        "en": "attitude"
+      }
+    ],
+    "meaning": "n. thái độ",
+    "exampleSentences": [
+      {
+        "cn": "他的学习态度非常认真。",
+        "pinyin": "Tā de xuéxí tàidù fēicháng rènzhēn.",
+        "vi": "Thái độ học tập của anh ấy rất nghiêm túc."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0193",
+    "hanzi": "讨论",
+    "pinyin": "tǎo lùn",
+    "pinyinNormalized": "taolun",
+    "characters": [
+      "讨",
+      "论"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "thảo luận",
+        "en": "to discuss"
+      },
+      {
+        "pos": "n",
+        "vi": "sự thảo luận",
+        "en": "discussion"
+      }
+    ],
+    "meaning": "v. thảo luận; n. sự thảo luận",
+    "exampleSentences": [
+      {
+        "cn": "我们正在讨论这个问题。",
+        "pinyin": "Wǒmen zhèngzài tǎolùn zhège wèntí.",
+        "vi": "Chúng tôi đang thảo luận vấn đề này."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0194",
+    "hanzi": "讨厌",
+    "pinyin": "tǎo yàn",
+    "pinyinNormalized": "taoyan",
+    "characters": [
+      "讨",
+      "厌"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "đáng ghét",
+        "en": "annoying/dislikeable"
+      },
+      {
+        "pos": "v",
+        "vi": "ghét, ghét bỏ",
+        "en": "to hate/dislike"
+      }
+    ],
+    "meaning": "adj. đáng ghét; v. ghét, ghét bỏ",
+    "exampleSentences": [
+      {
+        "cn": "我真讨厌下雨天。",
+        "pinyin": "Wǒ zhēn tǎoyàn xiàyǔ tiān.",
+        "vi": "Tôi thật sự ghét những ngày mưa."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0195",
+    "hanzi": "提供",
+    "pinyin": "tí gōng",
+    "pinyinNormalized": "tigong",
+    "characters": [
+      "提",
+      "供"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "cung cấp",
+        "en": "to provide/supply"
+      }
+    ],
+    "meaning": "v. cung cấp",
+    "exampleSentences": [
+      {
+        "cn": "公司为员工提供免费午餐。",
+        "pinyin": "Gōngsī wèi yuángōng tígōng miǎnfèi wǔcān.",
+        "vi": "Công ty cung cấp bữa trưa miễn phí cho nhân viên."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0196",
+    "hanzi": "提前",
+    "pinyin": "tí qián",
+    "pinyinNormalized": "tiqian",
+    "characters": [
+      "提",
+      "前"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "trước, sớm hơn dự kiến",
+        "en": "in advance"
+      },
+      {
+        "pos": "v",
+        "vi": "làm sớm hơn, đẩy lên trước",
+        "en": "to advance/move forward"
+      }
+    ],
+    "meaning": "adv. trước, sớm hơn dự kiến; v. làm sớm hơn, đẩy lên trước",
+    "exampleSentences": [
+      {
+        "cn": "会议提前了十分钟开始。",
+        "pinyin": "Huìyì tíqiánle shí fēnzhōng kāishǐ.",
+        "vi": "Cuộc họp đã bắt đầu sớm hơn mười phút."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0197",
+    "hanzi": "提问",
+    "pinyin": "tí wèn",
+    "pinyinNormalized": "tiwen",
+    "characters": [
+      "提",
+      "问"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đặt câu hỏi, hỏi",
+        "en": "to ask questions"
+      }
+    ],
+    "meaning": "v. đặt câu hỏi, hỏi",
+    "exampleSentences": [
+      {
+        "cn": "老师向学生提问。",
+        "pinyin": "Lǎoshī xiàng xuéshēng tíwèn.",
+        "vi": "Thầy giáo đặt câu hỏi cho học sinh."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0198",
+    "hanzi": "体育",
+    "pinyin": "tǐ yù",
+    "pinyinNormalized": "tiyu",
+    "characters": [
+      "体",
+      "育"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "thể dục, thể thao",
+        "en": "physical education/sports"
+      }
+    ],
+    "meaning": "n. thể dục, thể thao",
+    "exampleSentences": [
+      {
+        "cn": "他很喜欢体育运动。",
+        "pinyin": "Tā hěn xǐhuān tǐyù yùndòng.",
+        "vi": "Anh ấy rất thích các môn vận động thể thao."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0199",
+    "hanzi": "通过",
+    "pinyin": "tōng guò",
+    "pinyinNormalized": "tongguo",
+    "characters": [
+      "通",
+      "过"
+    ],
+    "meanings": [
+      {
+        "pos": "prep",
+        "vi": "thông qua",
+        "en": "through/by means of"
+      },
+      {
+        "pos": "v",
+        "vi": "đi qua, vượt qua, thi đỗ",
+        "en": "to pass/go through"
+      }
+    ],
+    "meaning": "prep. thông qua; v. đi qua, vượt qua, thi đỗ",
+    "exampleSentences": [
+      {
+        "cn": "我通过了汉语考试。",
+        "pinyin": "Wǒ tōngguòle Hànyǔ kǎoshì.",
+        "vi": "Tôi đã vượt qua kỳ thi tiếng Trung."
+      }
+    ],
+    "level": 3,
+    "wordType": "prep",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0200",
+    "hanzi": "通知",
+    "pinyin": "tōng zhī",
+    "pinyinNormalized": "tongzhi",
+    "characters": [
+      "通",
+      "知"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "thông báo",
+        "en": "to notify"
+      },
+      {
+        "pos": "n",
+        "vi": "thông báo",
+        "en": "notice/announcement"
+      }
+    ],
+    "meaning": "v. thông báo; n. thông báo",
+    "exampleSentences": [
+      {
+        "cn": "请通知大家明天开会。",
+        "pinyin": "Qǐng tōngzhī dàjiā míngtiān kāihuì.",
+        "vi": "Hãy thông báo cho mọi người ngày mai họp."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0201",
+    "hanzi": "同情",
+    "pinyin": "tóng qíng",
+    "pinyinNormalized": "tongqing",
+    "characters": [
+      "同",
+      "情"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đồng cảm, thương hại",
+        "en": "to sympathize/pity"
+      }
+    ],
+    "meaning": "v. đồng cảm, thương hại",
+    "exampleSentences": [
+      {
+        "cn": "大家都非常同情这位老人。",
+        "pinyin": "Dàjiā dōu fēicháng tóngqíng zhè wèi lǎorén.",
+        "vi": "Mọi người đều rất đồng cảm với cụ già này."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0202",
+    "hanzi": "同时",
+    "pinyin": "tóng shí",
+    "pinyinNormalized": "tongshi",
+    "characters": [
+      "同",
+      "时"
+    ],
+    "meanings": [
+      {
+        "pos": "conj",
+        "vi": "đồng thời",
+        "en": "simultaneously/at the same time"
+      },
+      {
+        "pos": "n",
+        "vi": "cùng lúc",
+        "en": "same time"
+      }
+    ],
+    "meaning": "conj. đồng thời; n. cùng lúc",
+    "exampleSentences": [
+      {
+        "cn": "他很聪明，同时也很努力。",
+        "pinyin": "Tā hěn cōngmíng, tóngshí yě hěn nǔlì.",
+        "vi": "Anh ấy rất thông minh, đồng thời cũng rất nỗ lực."
+      }
+    ],
+    "level": 3,
+    "wordType": "conj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0203",
+    "hanzi": "头发",
+    "pinyin": "tóu fa",
+    "pinyinNormalized": "toufa",
+    "characters": [
+      "头",
+      "发"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tóc",
+        "en": "hair"
+      }
+    ],
+    "meaning": "n. tóc",
+    "exampleSentences": [
+      {
+        "cn": "她的头发很长很黑。",
+        "pinyin": "Tā de tóufa hěn cháng hěn hēi.",
+        "vi": "Tóc của cô ấy rất dài và đen."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0204",
+    "hanzi": "突然",
+    "pinyin": "tū rán",
+    "pinyinNormalized": "turan",
+    "characters": [
+      "突",
+      "然"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "đột ngột, bất ngờ",
+        "en": "sudden"
+      },
+      {
+        "pos": "adv",
+        "vi": "một cách đột ngột",
+        "en": "suddenly"
+      }
+    ],
+    "meaning": "adj. đột ngột, bất ngờ; adv. một cách đột ngột",
+    "exampleSentences": [
+      {
+        "cn": "天气突然变冷了。",
+        "pinyin": "Tiānqì tūrán biàn lěngle.",
+        "vi": "Thời tiết đột nhiên trở lạnh."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0205",
+    "hanzi": "网站",
+    "pinyin": "wǎng zhàn",
+    "pinyinNormalized": "wangzhan",
+    "characters": [
+      "网",
+      "站"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "trang web",
+        "en": "website"
+      }
+    ],
+    "meaning": "n. trang web",
+    "exampleSentences": [
+      {
+        "cn": "你可以访问我们的网站。",
+        "pinyin": "Nǐ kěyǐ fàngwèn wǒmen de wǎngzhàn.",
+        "vi": "Bạn có thể truy cập trang web của chúng tôi."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0206",
+    "hanzi": "卫生间",
+    "pinyin": "wèi shēng jiān",
+    "pinyinNormalized": "weishengjian",
+    "characters": [
+      "卫",
+      "生",
+      "间"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "nhà vệ sinh",
+        "en": "restroom/bathroom"
+      }
+    ],
+    "meaning": "n. nhà vệ sinh",
+    "exampleSentences": [
+      {
+        "cn": "请问，卫生间在哪里？",
+        "pinyin": "Qǐngwèn, wèishēngjiān zài nǎlǐ?",
+        "vi": "Cho hỏi, nhà vệ sinh ở đâu?"
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0207",
+    "hanzi": "温度",
+    "pinyin": "wēn dù",
+    "pinyinNormalized": "wendu",
+    "characters": [
+      "温",
+      "度"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "nhiệt độ",
+        "en": "temperature"
+      }
+    ],
+    "meaning": "n. nhiệt độ",
+    "exampleSentences": [
+      {
+        "cn": "今天的温度非常高。",
+        "pinyin": "Jīntiān de wēndù fēicháng gāo.",
+        "vi": "Nhiệt độ hôm nay rất cao."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0208",
+    "hanzi": "文化",
+    "pinyin": "wén huà",
+    "pinyinNormalized": "wenhua",
+    "characters": [
+      "文",
+      "化"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "văn hóa",
+        "en": "culture"
+      }
+    ],
+    "meaning": "n. văn hóa",
+    "exampleSentences": [
+      {
+        "cn": "中国文化非常丰富。",
+        "pinyin": "Zhōngguó wénhuà fēicháng fēngfù.",
+        "vi": "Văn hóa Trung Quốc rất phong phú."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0209",
+    "hanzi": "文章",
+    "pinyin": "wén zhāng",
+    "pinyinNormalized": "wenzhang",
+    "characters": [
+      "文",
+      "章"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "bài văn, bài báo",
+        "en": "article/essay"
+      }
+    ],
+    "meaning": "n. bài văn, bài báo",
+    "exampleSentences": [
+      {
+        "cn": "他在报纸上发表了一篇文章。",
+        "pinyin": "Tā zài bàozhǐ shàng fābiǎole yī piān wénzhāng.",
+        "vi": "Anh ấy đã đăng một bài báo trên báo."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:17:21.000Z"
+  },
+  {
+    "id": "hsk3_0210",
+    "hanzi": "污染",
+    "pinyin": "wū rǎn",
+    "pinyinNormalized": "wuran",
+    "characters": [
+      "污",
+      "染"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "làm ô nhiễm",
+        "en": "to pollute"
+      },
+      {
+        "pos": "n",
+        "vi": "sự ô nhiễm",
+        "en": "pollution"
+      }
+    ],
+    "meaning": "v. làm ô nhiễm; n. sự ô nhiễm",
+    "exampleSentences": [
+      {
+        "cn": "环境污染很严重。",
+        "pinyin": "Huánjìng wūrǎn hěn yánzhòng.",
+        "vi": "Ô nhiễm môi trường rất nghiêm trọng."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0211",
+    "hanzi": "无聊",
+    "pinyin": "wú liáo",
+    "pinyinNormalized": "wuliao",
+    "characters": [
+      "无",
+      "聊"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "nhàm chán, vô vị",
+        "en": "boring, bored"
+      }
+    ],
+    "meaning": "adj. nhàm chán, vô vị",
+    "exampleSentences": [
+      {
+        "cn": "这部电影很无聊。",
+        "pinyin": "Zhè bù diànyǐng hěn wúliáo.",
+        "vi": "Bộ phim này rất nhàm chán."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0212",
+    "hanzi": "无论",
+    "pinyin": "wú lùn",
+    "pinyinNormalized": "wulun",
+    "characters": [
+      "无",
+      "论"
+    ],
+    "meanings": [
+      {
+        "pos": "conj",
+        "vi": "cho dù, bất luận",
+        "en": "no matter, regardless of"
+      }
+    ],
+    "meaning": "conj. cho dù, bất luận",
+    "exampleSentences": [
+      {
+        "cn": "无论多忙，他都会锻炼。",
+        "pinyin": "Wúlùn duō máng, tā dūhuì duànliàn.",
+        "vi": "Cho dù bận rộn đến đâu, anh ấy cũng đều tập thể dục."
+      }
+    ],
+    "level": 3,
+    "wordType": "conj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0213",
+    "hanzi": "西红柿",
+    "pinyin": "xī hóng shì",
+    "pinyinNormalized": "xihongshi",
+    "characters": [
+      "西",
+      "红",
+      "柿"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "quả cà chua",
+        "en": "tomato"
+      }
+    ],
+    "meaning": "n. quả cà chua",
+    "exampleSentences": [
+      {
+        "cn": "我喜欢吃西红柿炒鸡蛋。",
+        "pinyin": "Wǒ xǐhuān chī xīhóngshì chǎo jīdàn.",
+        "vi": "Tôi thích ăn món trứng xào cà chua."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0214",
+    "hanzi": "习惯",
+    "pinyin": "xí guàn",
+    "pinyinNormalized": "xiguan",
+    "characters": [
+      "习",
+      "惯"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "quen với",
+        "en": "to be used to"
+      },
+      {
+        "pos": "n",
+        "vi": "thói quen",
+        "en": "habit"
+      }
+    ],
+    "meaning": "v. quen với; n. thói quen",
+    "exampleSentences": [
+      {
+        "cn": "我已经习惯这里的生活了。",
+        "pinyin": "Wǒ yǐjīng xíguàn zhèlǐ de shēnghuó le.",
+        "vi": "Tôi đã quen với cuộc sống ở đây rồi."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0215",
+    "hanzi": "下载",
+    "pinyin": "xià zài",
+    "pinyinNormalized": "xiazai",
+    "characters": [
+      "下",
+      "载"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tải về",
+        "en": "to download"
+      }
+    ],
+    "meaning": "v. tải về",
+    "exampleSentences": [
+      {
+        "cn": "我正在下载这个软件。",
+        "pinyin": "Wǒ zhèngzài xiàzài zhège ruǎnjiàn.",
+        "vi": "Tôi đang tải phần mềm này về."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0216",
+    "hanzi": "现代",
+    "pinyin": "xiàn dài",
+    "pinyinNormalized": "xiandai",
+    "characters": [
+      "现",
+      "代"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "thời hiện đại",
+        "en": "modern times"
+      },
+      {
+        "pos": "adj",
+        "vi": "hiện đại",
+        "en": "modern"
+      }
+    ],
+    "meaning": "n. thời hiện đại; adj. hiện đại",
+    "exampleSentences": [
+      {
+        "cn": "现代科技非常发达。",
+        "pinyin": "Xiàndài kējì fēicháng fādá.",
+        "vi": "Công nghệ hiện đại rất phát triển."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0217",
+    "hanzi": "相同",
+    "pinyin": "xiāng tóng",
+    "pinyinNormalized": "xiangtong",
+    "characters": [
+      "相",
+      "同"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "giống nhau",
+        "en": "same, identical"
+      }
+    ],
+    "meaning": "adj. giống nhau",
+    "exampleSentences": [
+      {
+        "cn": "我们有相同的兴趣。",
+        "pinyin": "Wǒmen yǒu xiāngtóng de xìngqù.",
+        "vi": "Chúng tôi có cùng sở thích."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0218",
+    "hanzi": "相信",
+    "pinyin": "xiāng xìn",
+    "pinyinNormalized": "xiangxin",
+    "characters": [
+      "相",
+      "信"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tin tưởng",
+        "en": "to believe"
+      }
+    ],
+    "meaning": "v. tin tưởng",
+    "exampleSentences": [
+      {
+        "cn": "我相信你会成功。",
+        "pinyin": "Wǒ xiāngxìn nǐ huì chénggōng.",
+        "vi": "Tôi tin rằng bạn sẽ thành công."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0219",
+    "hanzi": "详细",
+    "pinyin": "xiáng xì",
+    "pinyinNormalized": "xiangxi",
+    "characters": [
+      "详",
+      "细"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "chi tiết, tỉ mỉ",
+        "en": "detailed"
+      }
+    ],
+    "meaning": "adj. chi tiết, tỉ mỉ",
+    "exampleSentences": [
+      {
+        "cn": "请给我详细的说明。",
+        "pinyin": "Qǐng gěi wǒ xiángxì de shuōmíng.",
+        "vi": "Xin hãy cho tôi hướng dẫn chi tiết."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0220",
+    "hanzi": "消息",
+    "pinyin": "xiāo xi",
+    "pinyinNormalized": "xiaoxi",
+    "characters": [
+      "消",
+      "息"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tin tức, thông tin",
+        "en": "news, message"
+      }
+    ],
+    "meaning": "n. tin tức, thông tin",
+    "exampleSentences": [
+      {
+        "cn": "这是一个好消息。",
+        "pinyin": "Zhè shì yīgè hǎo xiāoxi.",
+        "vi": "Đây là một tin tốt."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0221",
+    "hanzi": "小吃",
+    "pinyin": "xiǎo chī",
+    "pinyinNormalized": "xiaochi",
+    "characters": [
+      "小",
+      "吃"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "món ăn nhẹ, quà vặt",
+        "en": "snack, street food"
+      }
+    ],
+    "meaning": "n. món ăn nhẹ, quà vặt",
+    "exampleSentences": [
+      {
+        "cn": "这里的特色小吃很多。",
+        "pinyin": "Zhèlǐ de tèsè xiǎochī hěnduō.",
+        "vi": "Đặc sản ăn vặt ở đây rất nhiều."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0222",
+    "hanzi": "效果",
+    "pinyin": "xiào guǒ",
+    "pinyinNormalized": "xiaoguo",
+    "characters": [
+      "效",
+      "果"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "hiệu quả, kết quả",
+        "en": "effect, result"
+      }
+    ],
+    "meaning": "n. hiệu quả, kết quả",
+    "exampleSentences": [
+      {
+        "cn": "这种药的效果很好。",
+        "pinyin": "Zhè zhǒng yào de xiàoguǒ hěn hǎo.",
+        "vi": "Hiệu quả của loại thuốc này rất tốt."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0223",
+    "hanzi": "心情",
+    "pinyin": "xīn qíng",
+    "pinyinNormalized": "xinqing",
+    "characters": [
+      "心",
+      "情"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tâm trạng",
+        "en": "mood"
+      }
+    ],
+    "meaning": "n. tâm trạng",
+    "exampleSentences": [
+      {
+        "cn": "今天我的心情很好。",
+        "pinyin": "Jīntiān wǒ de xīnqíng hěn hǎo.",
+        "vi": "Hôm nay tâm trạng của tôi rất tốt."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0224",
+    "hanzi": "辛苦",
+    "pinyin": "xīn kǔ",
+    "pinyinNormalized": "xinku",
+    "characters": [
+      "辛",
+      "苦"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "vất vả",
+        "en": "hard, laborious"
+      },
+      {
+        "pos": "v",
+        "vi": "làm việc vất vả",
+        "en": "to work hard"
+      }
+    ],
+    "meaning": "adj. vất vả; v. làm việc vất vả",
+    "exampleSentences": [
+      {
+        "cn": "爸爸工作很辛苦。",
+        "pinyin": "Bàba gōngzuò hěn xīnkǔ.",
+        "vi": "Bố làm việc rất vất vả."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0225",
+    "hanzi": "行为",
+    "pinyin": "xíng wéi",
+    "pinyinNormalized": "xingwei",
+    "characters": [
+      "行",
+      "为"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "hành vi, hành động",
+        "en": "behavior, conduct"
+      }
+    ],
+    "meaning": "n. hành vi, hành động",
+    "exampleSentences": [
+      {
+        "cn": "这种行为是不对的。",
+        "pinyin": "Zhè zhǒng xíngwéi shì bùduì de.",
+        "vi": "Hành vi này là không đúng."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0226",
+    "hanzi": "幸福",
+    "pinyin": "xìng fú",
+    "pinyinNormalized": "xingfu",
+    "characters": [
+      "幸",
+      "福"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "hạnh phúc",
+        "en": "happy"
+      },
+      {
+        "pos": "n",
+        "vi": "sự hạnh phúc",
+        "en": "happiness"
+      }
+    ],
+    "meaning": "adj. hạnh phúc; n. sự hạnh phúc",
+    "exampleSentences": [
+      {
+        "cn": "他们过着幸福的生活。",
+        "pinyin": "Tāmen guòzhe xìngfú de shēnghuó.",
+        "vi": "Họ đang sống một cuộc đời hạnh phúc."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0227",
+    "hanzi": "修",
+    "pinyin": "xiū",
+    "pinyinNormalized": "xiu",
+    "characters": [
+      "修"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "sửa chữa, tu bổ",
+        "en": "to repair, to mend"
+      }
+    ],
+    "meaning": "v. sửa chữa, tu bổ",
+    "exampleSentences": [
+      {
+        "cn": "我要去修我的手机。",
+        "pinyin": "Wǒ yào qù xiū wǒ de shǒujī.",
+        "vi": "Tôi phải đi sửa điện thoại của mình."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0228",
+    "hanzi": "许多",
+    "pinyin": "xǔ duō",
+    "pinyinNormalized": "xuduo",
+    "characters": [
+      "许",
+      "多"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "nhiều",
+        "en": "many, a lot of"
+      }
+    ],
+    "meaning": "adj. nhiều",
+    "exampleSentences": [
+      {
+        "cn": "许多人参加了会议。",
+        "pinyin": "Xǔduō rén cānjiāle huìyì.",
+        "vi": "Nhiều người đã tham gia cuộc họp."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0229",
+    "hanzi": "演出",
+    "pinyin": "yǎn chū",
+    "pinyinNormalized": "yanchu",
+    "characters": [
+      "演",
+      "出"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "biểu diễn",
+        "en": "to perform"
+      },
+      {
+        "pos": "n",
+        "vi": "buổi biểu diễn",
+        "en": "performance"
+      }
+    ],
+    "meaning": "v. biểu diễn; n. buổi biểu diễn",
+    "exampleSentences": [
+      {
+        "cn": "今晚有一场演出。",
+        "pinyin": "Jīnwǎn yǒu yī chǎng yǎnchū.",
+        "vi": "Tối nay có một buổi biểu diễn."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0230",
+    "hanzi": "养成",
+    "pinyin": "yǎng chéng",
+    "pinyinNormalized": "yangcheng",
+    "characters": [
+      "养",
+      "成"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "hình thành, nuôi dưỡng (thói quen)",
+        "en": "to cultivate, to develop"
+      }
+    ],
+    "meaning": "v. hình thành, nuôi dưỡng (thói quen)",
+    "exampleSentences": [
+      {
+        "cn": "要养成早睡早起的好习惯。",
+        "pinyin": "Yào yǎngchéng zǎoshuì zǎoqǐ de hǎo xíguàn.",
+        "vi": "Cần hình thành thói quen tốt là ngủ sớm dậy sớm."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0231",
+    "hanzi": "页",
+    "pinyin": "yè",
+    "pinyinNormalized": "ye",
+    "characters": [
+      "页"
+    ],
+    "meanings": [
+      {
+        "pos": "mw",
+        "vi": "trang, tờ",
+        "en": "page"
+      }
+    ],
+    "meaning": "mw. trang, tờ",
+    "exampleSentences": [
+      {
+        "cn": "请翻到第十页。",
+        "pinyin": "Qǐng fān dào dì shí yè.",
+        "vi": "Vui lòng lật đến trang thứ mười."
+      }
+    ],
+    "level": 3,
+    "wordType": "mw",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0232",
+    "hanzi": "以后",
+    "pinyin": "yǐ hòu",
+    "pinyinNormalized": "yihou",
+    "characters": [
+      "以",
+      "后"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "sau này, sau khi",
+        "en": "after, later"
+      }
+    ],
+    "meaning": "n. sau này, sau khi",
+    "exampleSentences": [
+      {
+        "cn": "下课以后我去书店。",
+        "pinyin": "Xiàkè yǐhòu wǒ qù shūdiàn.",
+        "vi": "Sau khi tan học tôi sẽ đi nhà sách."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0233",
+    "hanzi": "以前",
+    "pinyin": "yǐ qián",
+    "pinyinNormalized": "yiqian",
+    "characters": [
+      "以",
+      "前"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "trước đây, trước khi",
+        "en": "before, previously"
+      }
+    ],
+    "meaning": "n. trước đây, trước khi",
+    "exampleSentences": [
+      {
+        "cn": "以前我住在这里。",
+        "pinyin": "Yǐqián wǒ zhù zài zhèlǐ.",
+        "vi": "Trước đây tôi sống ở đây."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0234",
+    "hanzi": "以为",
+    "pinyin": "yǐ wéi",
+    "pinyinNormalized": "yiwei",
+    "characters": [
+      "以",
+      "为"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tưởng là, cho rằng (thường là nhầm lẫn)",
+        "en": "to think, to assume (mistakenly)"
+      }
+    ],
+    "meaning": "v. tưởng là, cho rằng (thường là nhầm lẫn)",
+    "exampleSentences": [
+      {
+        "cn": "我以为今天是星期一。",
+        "pinyin": "Wǒ yǐwéi jīntiān shì xīngqī yī.",
+        "vi": "Tôi cứ ngỡ hôm nay là thứ Hai."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0235",
+    "hanzi": "一般",
+    "pinyin": "yī bān",
+    "pinyinNormalized": "yiban",
+    "characters": [
+      "一",
+      "般"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "bình thường, thông thường",
+        "en": "common, ordinary"
+      },
+      {
+        "pos": "adv",
+        "vi": "thông thường, thường",
+        "en": "generally"
+      }
+    ],
+    "meaning": "adj. bình thường, thông thường; adv. thông thường, thường",
+    "exampleSentences": [
+      {
+        "cn": "他的汉语水平很一般。",
+        "pinyin": "Tā de Hànyǔ shuǐpíng hěn yībān.",
+        "vi": "Trình độ tiếng Trung của anh ấy rất bình thường."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0236",
+    "hanzi": "一边",
+    "pinyin": "yī biān",
+    "pinyinNormalized": "yibian",
+    "characters": [
+      "一",
+      "边"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "vừa... vừa...",
+        "en": "while, at the same time"
+      }
+    ],
+    "meaning": "adv. vừa... vừa...",
+    "exampleSentences": [
+      {
+        "cn": "他一边吃饭一边看电视。",
+        "pinyin": "Tā yībiān chīfàn yībiān kàn diànshì.",
+        "vi": "Anh ấy vừa ăn cơm vừa xem tivi."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0237",
+    "hanzi": "一会儿",
+    "pinyin": "yī huìr",
+    "pinyinNormalized": "yihuir",
+    "characters": [
+      "一",
+      "会",
+      "儿"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "một lát, một chốc",
+        "en": "a moment, a while"
+      }
+    ],
+    "meaning": "adv. một lát, một chốc",
+    "exampleSentences": [
+      {
+        "cn": "请等我一会儿。",
+        "pinyin": "Qǐng děng wǒ yīhuìr.",
+        "vi": "Xin hãy đợi tôi một lát."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0238",
+    "hanzi": "意见",
+    "pinyin": "yì jiàn",
+    "pinyinNormalized": "yijian",
+    "characters": [
+      "意",
+      "见"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "ý kiến",
+        "en": "opinion, suggestion"
+      }
+    ],
+    "meaning": "n. ý kiến",
+    "exampleSentences": [
+      {
+        "cn": "你有什么意见吗？",
+        "pinyin": "Nǐ yǒu shé me yìjiàn ma?",
+        "vi": "Bạn có ý kiến gì không?"
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0239",
+    "hanzi": "有趣",
+    "pinyin": "yǒu qù",
+    "pinyinNormalized": "youqu",
+    "characters": [
+      "有",
+      "趣"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "thú vị",
+        "en": "interesting"
+      }
+    ],
+    "meaning": "adj. thú vị",
+    "exampleSentences": [
+      {
+        "cn": "这是一个有趣的故事。",
+        "pinyin": "Zhè shì yīgè yǒuqù de gùshì.",
+        "vi": "Đây là một câu chuyện thú vị."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:19:48.000Z"
+  },
+  {
+    "id": "hsk3_0240",
+    "hanzi": "语言",
+    "pinyin": "yǔ yán",
+    "pinyinNormalized": "yuyan",
+    "characters": [
+      "语",
+      "言"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "ngôn ngữ",
+        "en": "language"
+      }
+    ],
+    "meaning": "n. ngôn ngữ",
+    "exampleSentences": [
+      {
+        "cn": "学习一门新的语言很有趣。",
+        "pinyin": "Xuéxí yī mén xīn de yǔyán hěn yǒuqù.",
+        "vi": "Học một ngôn ngữ mới rất thú vị."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0241",
+    "hanzi": "在乎",
+    "pinyin": "zài hu",
+    "pinyinNormalized": "zaihu",
+    "characters": [
+      "在",
+      "乎"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "để tâm, coi trọng",
+        "en": "to care about"
+      }
+    ],
+    "meaning": "v. để tâm, coi trọng",
+    "exampleSentences": [
+      {
+        "cn": "他并不在乎别人的看法。",
+        "pinyin": "Tā bìng bù zàihu biérén de kànfǎ.",
+        "vi": "Anh ấy chẳng hề để tâm đến cái nhìn của người khác."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0242",
+    "hanzi": "暂时",
+    "pinyin": "zàn shí",
+    "pinyinNormalized": "zanshi",
+    "characters": [
+      "暂",
+      "时"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "tạm thời",
+        "en": "temporarily"
+      },
+      {
+        "pos": "n",
+        "vi": "thời gian tạm thời",
+        "en": "temporary period"
+      }
+    ],
+    "meaning": "adv. tạm thời; n. thời gian tạm thời",
+    "exampleSentences": [
+      {
+        "cn": "这个问题暂时还没解决。",
+        "pinyin": "Zhège wèntí zànshí hái méi jiějué.",
+        "vi": "Vấn đề này tạm thời vẫn chưa được giải quyết."
+      }
+    ],
+    "level": 3,
+    "wordType": "adv",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0243",
+    "hanzi": "增加",
+    "pinyin": "zēng jiā",
+    "pinyinNormalized": "zengjia",
+    "characters": [
+      "增",
+      "加"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tăng thêm, gia tăng",
+        "en": "to increase, to add"
+      }
+    ],
+    "meaning": "v. tăng thêm, gia tăng",
+    "exampleSentences": [
+      {
+        "cn": "我们要增加收入。",
+        "pinyin": "Wǒmen yào zēngjiā shōurù.",
+        "vi": "Chúng ta cần phải tăng thêm thu nhập."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0244",
+    "hanzi": "占",
+    "pinyin": "zhàn",
+    "pinyinNormalized": "zhan",
+    "characters": [
+      "占"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "chiếm, chiếm giữ",
+        "en": "to occupy, to take up"
+      }
+    ],
+    "meaning": "v. chiếm, chiếm giữ",
+    "exampleSentences": [
+      {
+        "cn": "这部分占了总面积的一半。",
+        "pinyin": "Zhè bùfèn zhànle zǒng miànjī de yībàn.",
+        "vi": "Phần này chiếm một nửa tổng diện tích."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0245",
+    "hanzi": "长大",
+    "pinyin": "zhǎng dà",
+    "pinyinNormalized": "zhangda",
+    "characters": [
+      "长",
+      "大"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "trưởng thành, lớn lên",
+        "en": "to grow up"
+      }
+    ],
+    "meaning": "v. trưởng thành, lớn lên",
+    "exampleSentences": [
+      {
+        "cn": "小孩子长得很快。",
+        "pinyin": "Xiǎo háizi zhǎng de hěn kuài.",
+        "vi": "Trẻ con lớn rất nhanh."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0246",
+    "hanzi": "照顾",
+    "pinyin": "zhào gù",
+    "pinyinNormalized": "zhaogu",
+    "characters": [
+      "照",
+      "顾"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "chăm sóc",
+        "en": "to take care of"
+      }
+    ],
+    "meaning": "v. chăm sóc",
+    "exampleSentences": [
+      {
+        "cn": "请照顾好你自己。",
+        "pinyin": "Qǐng zhàogù hǎo nǐ zìjǐ.",
+        "vi": "Hãy chăm sóc tốt cho bản thân nhé."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0247",
+    "hanzi": "照片",
+    "pinyin": "zhào piàn",
+    "pinyinNormalized": "zhaopian",
+    "characters": [
+      "照",
+      "片"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "bức ảnh, tấm hình",
+        "en": "photograph"
+      }
+    ],
+    "meaning": "n. bức ảnh, tấm hình",
+    "exampleSentences": [
+      {
+        "cn": "这张照片很漂亮。",
+        "pinyin": "Zhè zhāng zhàopiàn hěn piàoliang.",
+        "vi": "Bức ảnh này rất đẹp."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0248",
+    "hanzi": "照相机",
+    "pinyin": "zhào xiàng jī",
+    "pinyinNormalized": "zhaoxiangji",
+    "characters": [
+      "照",
+      "相",
+      "机"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "máy ảnh",
+        "en": "camera"
+      }
+    ],
+    "meaning": "n. máy ảnh",
+    "exampleSentences": [
+      {
+        "cn": "他买了一台新照相机。",
+        "pinyin": "Tā mǎile yī tái xīn zhàoxiàngjī.",
+        "vi": "Anh ấy đã mua một chiếc máy ảnh mới."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0249",
+    "hanzi": "正确",
+    "pinyin": "zhèng què",
+    "pinyinNormalized": "zhengque",
+    "characters": [
+      "正",
+      "确"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "chính xác, đúng đắn",
+        "en": "correct, right"
+      }
+    ],
+    "meaning": "adj. chính xác, đúng đắn",
+    "exampleSentences": [
+      {
+        "cn": "你的答案是正确的。",
+        "pinyin": "Nǐ de dá'àn shì zhèngquè de.",
+        "vi": "Đáp án của bạn là chính xác."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0250",
+    "hanzi": "整理",
+    "pinyin": "zhěng lǐ",
+    "pinyinNormalized": "zhengli",
+    "characters": [
+      "整",
+      "理"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "sắp xếp, thu dọn, chỉnh lý",
+        "en": "to sort out, to tidy up"
+      }
+    ],
+    "meaning": "v. sắp xếp, thu dọn, chỉnh lý",
+    "exampleSentences": [
+      {
+        "cn": "我正在整理房间。",
+        "pinyin": "Wǒ zhèngzài zhěnglǐ fángjiān.",
+        "vi": "Tôi đang dọn dẹp phòng."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0251",
+    "hanzi": "证明",
+    "pinyin": "zhèng míng",
+    "pinyinNormalized": "zhengming",
+    "characters": [
+      "证",
+      "明"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "chứng minh",
+        "en": "to prove"
+      },
+      {
+        "pos": "n",
+        "vi": "bằng chứng, chứng minh",
+        "en": "proof"
+      }
+    ],
+    "meaning": "v. chứng minh; n. bằng chứng, chứng minh",
+    "exampleSentences": [
+      {
+        "cn": "事实证明他是对的。",
+        "pinyin": "Shìshí zhèngmíng tā shì duì de.",
+        "vi": "Sự thật chứng minh anh ấy đã đúng."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0252",
+    "hanzi": "只有",
+    "pinyin": "zhǐ yǒu",
+    "pinyinNormalized": "zhiyou",
+    "characters": [
+      "只",
+      "有"
+    ],
+    "meanings": [
+      {
+        "pos": "conj",
+        "vi": "chỉ có",
+        "en": "only if"
+      }
+    ],
+    "meaning": "conj. chỉ có",
+    "exampleSentences": [
+      {
+        "cn": "只有努力学习，才能取得好成绩。",
+        "pinyin": "Zhǐyǒu nǔlì xuéxí, cáinéng qǔdé hǎo chéngjī.",
+        "vi": "Chỉ có nỗ lực học tập mới có thể đạt được thành tích tốt."
+      }
+    ],
+    "level": 3,
+    "wordType": "conj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0253",
+    "hanzi": "质量",
+    "pinyin": "zhì liàng",
+    "pinyinNormalized": "zhiliang",
+    "characters": [
+      "质",
+      "量"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "chất lượng",
+        "en": "quality"
+      }
+    ],
+    "meaning": "n. chất lượng",
+    "exampleSentences": [
+      {
+        "cn": "这件产品的质量很好。",
+        "pinyin": "Zhè jiàn chǎnpǐn de zhìliàng hěn hǎo.",
+        "vi": "Chất lượng của sản phẩm này rất tốt."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0254",
+    "hanzi": "准备",
+    "pinyin": "zhǔn bèi",
+    "pinyinNormalized": "zhunbei",
+    "characters": [
+      "准",
+      "备"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "chuẩn bị",
+        "en": "to prepare"
+      },
+      {
+        "pos": "n",
+        "vi": "sự chuẩn bị",
+        "en": "preparation"
+      }
+    ],
+    "meaning": "v. chuẩn bị; n. sự chuẩn bị",
+    "exampleSentences": [
+      {
+        "cn": "你准备好了吗？",
+        "pinyin": "Nǐ zhǔnbèi hǎo le ma?",
+        "vi": "Bạn đã chuẩn bị xong chưa?"
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0255",
+    "hanzi": "准确",
+    "pinyin": "zhǔn què",
+    "pinyinNormalized": "zhunque",
+    "characters": [
+      "准",
+      "确"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "chính xác",
+        "en": "accurate, precise"
+      },
+      {
+        "pos": "adv",
+        "vi": "một cách chính xác",
+        "en": "accurately"
+      }
+    ],
+    "meaning": "adj. chính xác; adv. một cách chính xác",
+    "exampleSentences": [
+      {
+        "cn": "他的回答非常准确。",
+        "pinyin": "Tā de huídá fēicháng zhǔnquè.",
+        "vi": "Câu trả lời của anh ấy rất chính xác."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0256",
+    "hanzi": "仔细",
+    "pinyin": "zǐ xì",
+    "pinyinNormalized": "zixi",
+    "characters": [
+      "仔",
+      "细"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "tỉ mỉ, cẩn thận",
+        "en": "careful, attentive"
+      },
+      {
+        "pos": "adv",
+        "vi": "một cách tỉ mỉ",
+        "en": "carefully"
+      }
+    ],
+    "meaning": "adj. tỉ mỉ, cẩn thận; adv. một cách tỉ mỉ",
+    "exampleSentences": [
+      {
+        "cn": "请仔细检查一遍。",
+        "pinyin": "Qǐng zǐxì jiǎnchá yībiàn.",
+        "vi": "Xin hãy kiểm tra kỹ một lần."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0257",
+    "hanzi": "自然",
+    "pinyin": "zì rán",
+    "pinyinNormalized": "ziran",
+    "characters": [
+      "自",
+      "然"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tự nhiên (thiên nhiên)",
+        "en": "nature"
+      },
+      {
+        "pos": "adj",
+        "vi": "tự nhiên (không gượng ép)",
+        "en": "natural"
+      }
+    ],
+    "meaning": "n. tự nhiên (thiên nhiên); adj. tự nhiên (không gượng ép)",
+    "exampleSentences": [
+      {
+        "cn": "我们要保护自然环境。",
+        "pinyin": "Wǒmen yào bǎohù zìrán huánjìng.",
+        "vi": "Chúng ta cần phải bảo vệ môi trường tự nhiên."
+      }
+    ],
+    "level": 3,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0258",
+    "hanzi": "总结",
+    "pinyin": "zǒng jié",
+    "pinyinNormalized": "zongjie",
+    "characters": [
+      "总",
+      "结"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tổng kết",
+        "en": "to summarize"
+      },
+      {
+        "pos": "n",
+        "vi": "sự tổng kết",
+        "en": "summary"
+      }
+    ],
+    "meaning": "v. tổng kết; n. sự tổng kết",
+    "exampleSentences": [
+      {
+        "cn": "会议结束前要进行总结。",
+        "pinyin": "Huìyì jiéshù qián yào jìnxíng zǒngjié.",
+        "vi": "Trước khi kết thúc cuộc họp cần phải tiến hành tổng kết."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0259",
+    "hanzi": "租",
+    "pinyin": "zū",
+    "pinyinNormalized": "zu",
+    "characters": [
+      "租"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "thuê",
+        "en": "to rent"
+      }
+    ],
+    "meaning": "v. thuê",
+    "exampleSentences": [
+      {
+        "cn": "我想租一个房间。",
+        "pinyin": "Wǒ xiǎng zū yīgè fángjiān.",
+        "vi": "Tôi muốn thuê một căn phòng."
+      }
+    ],
+    "level": 3,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  },
+  {
+    "id": "hsk3_0260",
+    "hanzi": "最好",
+    "pinyin": "zuì hǎo",
+    "pinyinNormalized": "zuihao",
+    "characters": [
+      "最",
+      "好"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "tốt nhất",
+        "en": "best"
+      },
+      {
+        "pos": "adv",
+        "vi": "tốt nhất là (nên)",
+        "en": "had better"
+      }
+    ],
+    "meaning": "adj. tốt nhất; adv. tốt nhất là (nên)",
+    "exampleSentences": [
+      {
+        "cn": "你最好现在就出发。",
+        "pinyin": "Nǐ zuìhǎo xiànzài jiù chūfā.",
+        "vi": "Tốt nhất là bạn nên xuất phát ngay bây giờ."
+      }
+    ],
+    "level": 3,
+    "wordType": "adj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2026-04-14T08:21:37.000Z"
+  }
+]

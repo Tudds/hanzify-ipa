@@ -1,0 +1,108 @@
+{
+  "hsk1_001": {
+    "hanzi": "你好",
+    "pinyin": "nǐ hǎo",
+    "pinyinNormalized": "nihao",
+    "meanings": [
+      {"pos": "interj", "vi": "xin chào, chào hỏi"}
+    ],
+    "meaning": "thán. xin chào, chào hỏi",
+    "examples": [
+      {
+        "cn": "你好，我叫李明。",
+        "pinyin": "Nǐ hǎo, wǒ jiào Lǐ Míng.",
+        "vi": "Xin chào, tôi tên là Lý Minh."
+      }
+    ],
+    "characters": ["你", "好"],
+    "level": 1,
+    "wordType": "interj",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  "hsk1_002": {
+    "hanzi": "谢谢",
+    "pinyin": "xiè xiè",
+    "pinyinNormalized": "xiexie",
+    "meanings": [
+      {"pos": "v", "vi": "cảm ơn"}
+    ],
+    "meaning": "đt. cảm ơn",
+    "examples": [
+      {
+        "cn": "谢谢你的帮助。",
+        "pinyin": "Xiè xiè nǐ de bāngzhù.",
+        "vi": "Cảm ơn bạn đã giúp đỡ."
+      }
+    ],
+    "characters": ["谢", "谢"],
+    "level": 1,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  "hsk1_003": {
+    "hanzi": "老师",
+    "pinyin": "lǎo shī",
+    "pinyinNormalized": "laoshi",
+    "meanings": [
+      {"pos": "n", "vi": "giáo viên, thầy/cô giáo"}
+    ],
+    "meaning": "dt. giáo viên, thầy/cô giáo",
+    "examples": [
+      {
+        "cn": "我的老师很好。",
+        "pinyin": "Wǒ de lǎoshī hěn hǎo.",
+        "vi": "Giáo viên của tôi rất tốt."
+      }
+    ],
+    "characters": ["老", "师"],
+    "level": 1,
+    "wordType": "n",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  },
+  "hsk2_001": {
+    "hanzi": "学习",
+    "pinyin": "xué xí",
+    "pinyinNormalized": "xuexi",
+    "meanings": [
+      {"pos": "v", "vi": "học tập, học hỏi"},
+      {"pos": "n", "vi": "việc học tập"}
+    ],
+    "meaning": "đt. học tập, học hỏi; dt. việc học tập",
+    "examples": [
+      {
+        "cn": "我每天学习汉语。",
+        "pinyin": "Wǒ měitiān xuéxí Hànyǔ.",
+        "vi": "Tôi học tiếng Trung mỗi ngày."
+      },
+      {
+        "cn": "学习很重要。",
+        "pinyin": "Xuéxí hěn zhòngyào.",
+        "vi": "Việc học tập rất quan trọng."
+      }
+    ],
+    "characters": ["学", "习"],
+    "level": 2,
+    "wordType": "v",
+    "isBookmarked": false,
+    "isMastered": false,
+    "repetitions": 0,
+    "easeFactor": 2.5,
+    "interval": 0,
+    "nextReview": "2024-01-01T00:00:00.000Z"
+  }
+}

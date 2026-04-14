@@ -1,0 +1,57 @@
+# Kế hoạch chuyển đổi cơ sở dữ liệu (Isar → Drift)
+
+Kế hoạch này vạch ra các bước cụ thể để gỡ bỏ hoàn toàn `isar_community` và thiết lập hệ thống cơ sở dữ liệu Relation (SQL) bằng `drift` cho dự án Hanzify, đảm bảo tính bền vững và khả năng mở rộng lâu dài.
+
+## Giai đoạn 1: Thiết lập thư viện (Dependencies)
+*   **Xóa bỏ:** Các gói liên quan đến Isar (`isar_community`, `isar_community_flutter_libs`, `isar_community_generator`).
+*   **Thêm mới (Main):** `drift`, `sqlite3_flutter_libs` (nhân SQLite cho Mobile), `path_provider`, `path`.
+*   **Thêm mới (Dev):** `drift_dev` (thay thế isar_generator).
+
+## Giai đoạn 2: Khởi tạo Cấu trúc Bảng & Type Converters
+Do Drift sử dụng SQLite phẳng (Flat Table) thay vì Object NoSQL lồng nhau (Embedded), chúng ta cần viết các bộ chuyển đổi (Type Converters) để nén các danh sách lồng nhau thành chuỗi JSON.
+
+1.  **Tạo Type Converters:**
+    *   `StringListConverter`: Chuyển đổi `List<String>` (ví dụ: mảng chữ Hán).
+    *   `MeaningListConverter`: Chuyển đổi `List<Meaning>` thành JSON String.
+    *   `ExampleListConverter`: Chuyển đổi `List<ExampleSentence>` thành JSON String.
+
+2.  **Định nghĩa Bảng từ vựng (`VocabsTable`):**
+    *   Cột id (khóa chính nội bộ autoincrement).
+    *   Cột text id (ví dụ: `hsk1_001`).
+    *   Các cột thông tin tĩnh: `hanzi`, `pinyin`, `pinyinNormalized`, `meaning`, `level`, `wordType`.
+    *   Các cột SRS động: `isBookmarked`, `isMastered`, `repetitions`, `easeFactor`, `interval`, `nextReview`, `needsSync`.
+    *   Các cột gắn TypeConverter: `characters`, `meanings`, `exampleSentences`.
+
+3.  **Định nghĩa Bảng Hán tự (`CharactersTable`):**
+    *   Các thông tin tương tự `VocabsTable` (viết cấu trúc bảng tương đương `CharacterIsarModel`).
+
+4.  **Thiết lập `AppDatabase`:**
+    *   Tạo class `AppDatabase` kế thừa `_$AppDatabase`.
+    *   Xác định cấu hình khởi tạo (Đường dẫn DB trên ổ cứng).
+
+## Giai đoạn 3: Viết lại Logic Seeding dữ liệu (Migration)
+*   Chuyển logic đọc file `vocab_base.json`, `char_base.json` cũ từ `vocab_local_datasource_impl.dart` sang hàm `onCreate` của Drift `MigrationStrategy`.
+*   Khi ứng dụng được mở lần đầu và Drift tạo bảng rỗng thành công, nó sẽ tự động đọc Asset JSON và `insertAll` dữ liệu vào SQLite.
+
+## Giai đoạn 4: Viết lại Tầng Daos & Datasources
+1.  **Cập nhật Interface `VocabLocalDataSource`:**
+    *   Đổi kiểu trả về từ `VocabIsarModel` sang một DTO trung gian hoặc trả về trực tiếp `Vocab` (thực thể Domain) để làm sạch hoàn toàn Clean Architecture.
+2.  **Triển khai lại `VocabLocalDataSourceImpl` với Drift API:**
+    *   `getAll()`: Dùng `select(vocabs).get()`.
+    *   `getDue()`: Dùng `where((t) => t.nextReview.isSmallerThanValue(DateTime.now()))`.
+    *   `search()`: Chuyển các phép `startsWith` sang `LIKE '%keyword%'`. Với tính năng quét trong chuỗi JSON ý nghĩa, sẽ dùng SQLite string match.
+3.  **Tích hợp `AppDatabase` vào Riverpod Providers:**
+    *   Thay provider `isarDbProvider` bằng `appDatabaseProvider`.
+
+## Giai đoạn 5: Xóa Code Rác & Biên dịch (Cleanup)
+*   Xóa toàn bộ thư mục `lib/features/vocab/data/models/` (chứa các file Isar cũ).
+*   Chạy code generation của Drift: `dart run build_runner build --delete-conflicting-outputs`.
+*   Fix các lỗi typo hoặc type mismatch ở tầng Repositories do DTO thay đổi.
+
+---
+
+### Quản lý Rủi ro & Chú ý
+*   **Trạng thái Sync (Tiến độ học):** Toàn bộ dữ liệu bạn đã học trực tiếp trên máy giả lập Isar hiện tại sẽ bị xóa 100% trong quá trình đập xây lại này. (Do cấu trúc Database hoàn toàn khác nhau, việc viết tools chuyển đổi data từ Isar sang Drift trên app chưa lện production là không cần thiết, chúng ta chỉ cần seed lại JSON từ đầu).
+*   **Web Support:** Ở lần thực hiện này, mình sẽ dồn mọi tài nguyên để code bản Drift Native (Mobile/Desktop) chuẩn xác nhất. Sau khi Mobile Drift chạy ổn định 100%, nếu bạn có nhu cầu làm web, ta sẽ gắn thêm module Drift WebAssembly (chỉ cần thêm 1 file config).
+
+**Tiếp theo:** Bạn hãy xem qua các bước. Vui lòng cho mình biết nếu bạn muốn thêm/bớt hay điều chỉnh ưu tiên gì trước khi ra lệnh cho mình thực sự sửa Code nhé!
