@@ -24,15 +24,20 @@ jobs:
       - name: Get dependencies
         run: flutter pub get
 
-      - name: Build iOS IPA (No Signing)
+      - name: Generate code (build_runner)
+        run: dart run build_runner build --delete-conflicting-outputs
+
+      - name: Fix iOS Deployment Target in project.pbxproj
         run: |
-          flutter build ipa --no-codesign
-          
-      - name: Create Unsigned IPA (Workaround)
+          sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 13.0;/IPHONEOS_DEPLOYMENT_TARGET = 15.0;/g' ios/Runner.xcodeproj/project.pbxproj
+
+      - name: Build iOS IPA (No Signing)
+        run: flutter build ipa --no-codesign
+
+      - name: Create Unsigned IPA
         run: |
           mkdir -p build/ios/unsigned
           mkdir -p Payload
-          # Tìm file .app và copy vào thư mục Payload
           APP_PATH=$(find build/ios/archive -name "*.app" | head -n 1)
           cp -r "$APP_PATH" Payload/
           zip -r build/ios/unsigned/hanzify-unsigned.ipa Payload
