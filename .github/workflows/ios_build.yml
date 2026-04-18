@@ -33,11 +33,20 @@ jobs:
           key: pods-${{ hashFiles('ios/Podfile') }}
           restore-keys: pods-
 
-      - name: Build iOS IPA (No Signing)
-        run: flutter build ipa --no-codesign
+      - name: Build iOS (No Signing)
+        run: flutter build ios --no-codesign
+
+      - name: Package unsigned IPA
+        run: |
+          APP_PATH=$(find build/ios/Release-iphoneos -name "*.app" | head -n 1)
+          mkdir -p Payload
+          cp -r "$APP_PATH" Payload/
+          mkdir -p build/ios/unsigned
+          zip -r build/ios/unsigned/hanzify-unsigned.ipa Payload
+          rm -rf Payload
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: hanzify-unsigned-ipa
-          path: build/ios/ipa/*.ipa
+          path: build/ios/unsigned/hanzify-unsigned.ipa
