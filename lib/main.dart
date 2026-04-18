@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'core/theme/theme_state.dart';
 
 import 'core/theme/app_durations.dart';
 import 'core/widgets/bottom_tab_bar.dart';
 import 'core/providers/navigation_provider.dart';
 import 'core/providers/nav_visibility_provider.dart';
+import 'core/providers/auth_provider.dart';
 import 'core/navigation/app_routes.dart';
+import 'features/auth/presentation/screens/auth_screen.dart';
 
 // Conditional import: web → platform_web, native → platform_native
 // This ensures dart2js never sees dart:io / drift/native.dart / sqlite3 FFI.
@@ -59,6 +62,23 @@ class AppRoot extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // Auth gate: chưa đăng nhập → AuthScreen
+    final authAsync = ref.watch(authStateChangesProvider);
+    final hasSession = authAsync.whenOrNull(
+          data: (state) => state.session != null,
+        ) ??
+        (Supabase.instance.client.auth.currentSession != null);
+
+    if (!hasSession) {
+      return authAsync.when(
+        data: (_) => const AuthScreen(),
+        loading: () => const Scaffold(
+          body: Center(child: CircularProgressIndicator()),
+        ),
+        error: (_, _) => const AuthScreen(),
+      );
+    }
+
     final c = ref.watch(themeColorsProvider);
     final nav = ref.watch(navigationProvider);
     final isNavVisible = ref.watch(navVisibilityProvider);

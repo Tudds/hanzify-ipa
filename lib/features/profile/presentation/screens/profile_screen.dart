@@ -8,6 +8,8 @@ import 'package:hanzify/core/widgets/hanzify_section_header.dart';
 import 'package:hanzify/core/widgets/hanzify_stat_card.dart';
 import 'package:hanzify/core/widgets/hanzify_screen_header.dart';
 import 'package:hanzify/features/vocab/presentation/providers/vocab_state.dart';
+import 'package:hanzify/core/providers/auth_provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
@@ -34,7 +36,7 @@ class ProfileScreen extends ConsumerWidget {
             const SizedBox(height: AppSpacing.lg),
 
             // ── User Card ──────────────────────────────────────────────
-            _buildUserCard(c),
+            _buildUserCard(c, ref),
 
             const SizedBox(height: AppSpacing.xl),
 
@@ -118,7 +120,9 @@ class ProfileScreen extends ConsumerWidget {
                     titleColor: c.error,
                     iconColor: c.error,
                     showChevron: false,
-                    onTap: () {},
+                    onTap: () async {
+                      await Supabase.instance.client.auth.signOut();
+                    },
                   ),
                 ],
               ),
@@ -168,31 +172,53 @@ class ProfileScreen extends ConsumerWidget {
 
   // ── User Card ──────────────────────────────────────────────────────────────
 
-  Widget _buildUserCard(AppThemeColors c) {
+  Widget _buildUserCard(AppThemeColors c, WidgetRef ref) {
+    final user = ref.watch(currentUserProvider);
+    final displayName = user?.userMetadata?['name'] as String? ??
+        user?.email?.split('@').first ??
+        'Người dùng';
+    final email = user?.email ?? '';
+    final createdAt = user?.createdAt != null
+        ? DateTime.parse(user!.createdAt)
+        : null;
+    final joinLabel = createdAt != null
+        ? 'Tham gia từ T${createdAt.month}/${createdAt.year}'
+        : '';
+
     return HanzifyCard(
       child: Column(
         children: [
           CircleAvatar(
             radius: 44,
             backgroundColor: c.primaryContainer,
-            child: Icon(
-              Icons.person_rounded,
-              size: 44,
-              color: c.onPrimary,
+            child: Text(
+              displayName.isNotEmpty ? displayName[0].toUpperCase() : '?',
+              style: AppTypography.headline(
+                fontSize: AppFontSizes.headlineLg,
+                color: c.onPrimary,
+                fontWeight: FontWeight.w700,
+              ),
             ),
           ),
           const SizedBox(height: AppSpacing.md),
           Text(
-            'Stitch',
+            displayName,
             style: AppTypography.headline(
               fontSize: AppFontSizes.headlineMd,
               fontWeight: FontWeight.w700,
               color: c.text,
             ),
           ),
+          if (email.isNotEmpty) ...[
+            const SizedBox(height: 2),
+            Text(
+              email,
+              style: AppTypography.body(fontSize: AppFontSizes.bodySm, color: c.placeholder),
+            ),
+          ],
           const SizedBox(height: AppSpacing.xs),
           Text(
-            'Người học kiên trì • Tham gia từ T4/2023',
+            joinLabel,
             style: AppTypography.body(
               fontSize: AppFontSizes.bodySm,
               color: c.placeholder,
