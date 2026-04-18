@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"inverse-surface": "#06092f", "on-primary-container": "#001e5a", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#fe9cf4", "on-tertiary-fixed": "#480049", "surface-container": "#e7e6ff", "surface-tint": "#0050d4", "on-background": "#282b51", "on-error": "#ffefee", "primary-fixed-dim": "#658eff", "on-error-container": "#570008", "inverse-primary": "#608bff", "on-tertiary-container": "#671366", "on-secondary-fixed-variant": "#3c45ab", "surface-dim": "#cfd1ff", "error-dim": "#9f0519", "on-secondary-fixed": "#1c248e", "tertiary-container": "#fe9cf4", "on-secondary": "#f3f1ff", "secondary-fixed": "#cbceff", "secondary-dim": "#3b44aa", "tertiary-dim": "#802d7d", "secondary-fixed-dim": "#bbbfff", outline: "#71749e", "on-primary-fixed-variant": "#00266e", "surface-variant": "#d9daff", "secondary-container": "#cbceff", "tertiary-fixed-dim": "#ef8fe6", secondary: "#4750b7", "on-tertiary-fixed-variant": "#711f70", "outline-variant": "#a7aad7", "on-surface": "#282b51", error: "#b31b25", "on-tertiary": "#ffeef8", primary: "#0050d4", "surface-container-high": "#e0e0ff", "inverse-on-surface": "#979ac6", "error-container": "#fb5151", "on-secondary-container": "#323ba1", tertiary: "#8e3a8a", "surface-container-low": "#f1efff", "surface-container-highest": "#d9daff", "primary-fixed": "#7b9cff", "primary-dim": "#0046ba", "on-surface-variant": "#555881", "primary-container": "#7b9cff", "surface-bright": "#f8f5ff", "on-primary-fixed": "#000000", background: "#f8f5ff", "on-primary": "#f1f2ff", surface: "#f8f5ff"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, fontFamily: {headline: ["Manrope"], body: ["Inter"], label: ["Inter"], hanzi: ["Noto Serif SC", "serif"], display: "Manrope"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-[#f5f7f9]/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400 hover:opacity-80 transition-opacity cursor-pointer">menu</span>
+<h1 class="font-['Manrope'] font-bold text-2xl tracking-tight text-blue-600 dark:text-blue-400">Hanzify</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="portrait of a focused professional user in a minimalist studio setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhAT1SesdoGQktyFc0bm6hvKjsvXk66kehbmZMaFgVE0MGvFzWMdu40Hs4zNjLaQjEXUwEn9C2KivMuV3B8X6pGExv2ktblWXqXACWvafbox-YfvU0fIzbL-CLrU8g46Xx5uXfIedSiRM17uTZ1N9HZOH37AEt4m2krRZ9sZP5j59Pujw7S2oam81jXo0vF1C3mJBMnnyChkpXw8y5ErHELcgRDZhc4i_xlQuU939GZLx4l4a8_kRgmUzgbVGvCi6ojU_IuGzpfk4"/>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-6">
+<!-- Search Section -->
+<section class="mt-4 mb-8">
+<div class="relative group">
+<div class="absolute inset-y-0 left-6 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="w-full bg-surface-container-high border-none rounded-lg py-5 pl-16 pr-6 focus:ring-2 focus:ring-primary/20 focus:bg-secondary-container transition-all text-on-surface placeholder:text-outline-variant font-medium" placeholder="Tìm kiếm Hán tự, Pinyin, hoặc Tiếng Việt..." type="text"/>
+</div>
+</section>
+<!-- Filters -->
+<section class="mb-10 overflow-x-auto no-scrollbar flex items-center gap-3 py-2">
+<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-semibold text-sm whitespace-nowrap transition-transform active:scale-95 duration-200">
+                Tất cả
+            </button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-semibold text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors">
+                HSK 1
+            </button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-semibold text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors">
+                Danh từ
+            </button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-semibold text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors">
+                Động từ
+            </button>
+</section>
+<!-- Vocabulary List -->
+<div class="space-y-6">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest rounded-lg p-8 flex items-center gap-8 transition-transform duration-200 active:scale-[0.98]">
+<div class="w-24 h-24 flex items-center justify-center bg-surface-container-low rounded-lg transition-colors group-hover:bg-primary/5">
+<span class="text-6xl font-hanzi text-on-surface tracking-tighter">你</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="text-xl font-bold font-headline text-primary">nǐ</span>
+<span class="text-[10px] font-bold font-label uppercase tracking-widest text-outline px-2 py-1 bg-surface-container rounded-md">HSK 1</span>
+</div>
+<h3 class="text-2xl font-bold font-headline text-on-surface mb-2">Bạn, anh, chị</h3>
+<p class="text-sm text-on-surface-variant font-body">Đại từ dùng để chỉ người đối thoại.</p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">volume_up</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+<span class="material-symbols-outlined text-sm">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest rounded-lg p-8 flex items-center gap-8 transition-transform duration-200 active:scale-[0.98]">
+<div class="w-24 h-24 flex items-center justify-center bg-surface-container-low rounded-lg transition-colors group-hover:bg-primary/5">
+<span class="text-5xl font-hanzi text-on-surface tracking-tighter">学习</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="text-xl font-bold font-headline text-primary">xuéxí</span>
+<span class="text-[10px] font-bold font-label uppercase tracking-widest text-outline px-2 py-1 bg-surface-container rounded-md">HSK 1</span>
+</div>
+<h3 class="text-2xl font-bold font-headline text-on-surface mb-2">Học tập</h3>
+<p class="text-sm text-on-surface-variant font-body">Tiếp thu kiến thức hoặc kỹ năng mới thông qua nghiên cứu.</p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">volume_up</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+<span class="material-symbols-outlined text-sm">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Bento Card: Search Stats / Suggestion -->
+<div class="grid grid-cols-2 gap-6 pt-4">
+<div class="bg-primary-container rounded-lg p-8 flex flex-col justify-between aspect-square relative overflow-hidden">
+<span class="material-symbols-outlined text-4xl text-on-primary-container/20 absolute -right-2 -top-2 scale-150">auto_stories</span>
+<h4 class="font-headline font-bold text-lg text-on-primary-container leading-tight">Gợi ý từ vựng mới cho bạn</h4>
+<span class="font-label font-bold text-[10px] uppercase tracking-widest text-primary-dim">Khám phá ngay</span>
+</div>
+<div class="bg-tertiary-container rounded-lg p-8 flex flex-col justify-between aspect-square relative overflow-hidden">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-container/20 absolute -right-2 -top-2 scale-150">trending_up</span>
+<h4 class="font-headline font-bold text-lg text-on-tertiary-container leading-tight">Xu hướng tìm kiếm tuần này</h4>
+<span class="font-label font-bold text-[10px] uppercase tracking-widest text-tertiary-dim">Xem thêm</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-[3rem] bg-[#f5f7f9]/80 dark:bg-slate-900/80 backdrop-blur-[20px] shadow-[0_12px_40px_0_rgba(44,47,49,0.08)]">
+<div class="flex justify-around items-center pt-4 pb-8 px-8 w-full">
+<!-- Học Tập -->
+<a class="flex flex-col items-center justify-center text-slate-400/50 dark:text-slate-500 hover:text-blue-500 transition-colors active:scale-98 duration-200" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-['Inter'] font-semibold text-[11px] uppercase tracking-wider mt-1">Học Tập</span>
+</a>
+<!-- Từ Điển (Active) -->
+<a class="flex flex-col items-center justify-center text-blue-600 dark:text-blue-400 relative after:content-[''] after:w-1 after:h-1 after:bg-blue-600 after:rounded-full after:mt-1 active:scale-98 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dictionary</span>
+<span class="font-['Inter'] font-semibold text-[11px] uppercase tracking-wider mt-1">Từ Điển</span>
+</a>
+<!-- Ôn Tập -->
+<a class="flex flex-col items-center justify-center text-slate-400/50 dark:text-slate-500 hover:text-blue-500 transition-colors active:scale-98 duration-200" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-['Inter'] font-semibold text-[11px] uppercase tracking-wider mt-1">Ôn Tập</span>
+</a>
+<!-- Cá Nhân -->
+<a class="flex flex-col items-center justify-center text-slate-400/50 dark:text-slate-500 hover:text-blue-500 transition-colors active:scale-98 duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] font-semibold text-[11px] uppercase tracking-wider mt-1">Cá Nhân</span>
+</a>
+</div>
+</nav>
+</body></html>

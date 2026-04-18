@@ -70,11 +70,8 @@ class Vocab extends Equatable {
   /// Các chữ đơn tạo thành từ: "你好" → ["你", "好"]
   final List<String> characters;
 
-  /// Danh sách nghĩa + từ loại (thay thế String meaning cũ)
+  /// Danh sách nghĩa + từ loại
   final List<Meaning> meanings;
-
-  /// Chuỗi nghĩa phẳng (dùng cho hiển thị nhanh, derive từ meanings)
-  final String meaning;
 
   /// Câu ví dụ có cấu trúc
   final List<ExampleSentence> exampleSentences;
@@ -97,7 +94,6 @@ class Vocab extends Equatable {
     this.pinyinNormalized = '',
     this.characters = const [],
     this.meanings = const [],
-    this.meaning = '',
     this.exampleSentences = const [],
     required this.level,
     this.wordType = 'other',
@@ -112,9 +108,30 @@ class Vocab extends Equatable {
   @override
   List<Object?> get props => [
     id, hanzi, pinyin, pinyinNormalized, characters,
-    meanings, meaning, exampleSentences, level, wordType,
+    meanings, exampleSentences, level, wordType,
     isBookmarked, isMastered, repetitions, easeFactor, interval, nextReview,
   ];
+
+  /// Tạo Vocab từ Drift DbModel (thay thế _mapToDomain trong datasource).
+  factory Vocab.fromDbModel(dynamic model) {
+    return Vocab(
+      id: model.id as String,
+      hanzi: model.hanzi as String,
+      pinyin: model.pinyin as String,
+      pinyinNormalized: model.pinyinNormalized as String,
+      characters: List<String>.from(model.characters as List),
+      meanings: List<Meaning>.from(model.meanings as List),
+      exampleSentences: List<ExampleSentence>.from(model.exampleSentences as List),
+      level: model.level as int,
+      wordType: model.wordType as String,
+      isBookmarked: model.isBookmarked as bool,
+      isMastered: model.isMastered as bool,
+      repetitions: model.repetitions as int,
+      easeFactor: model.easeFactor as double,
+      interval: model.interval as int,
+      nextReview: (model.nextReview as DateTime).toLocal(),
+    );
+  }
 
   Vocab copyWith({
     int? repetitions,
@@ -124,7 +141,6 @@ class Vocab extends Equatable {
     bool? isBookmarked,
     bool? isMastered,
     List<Meaning>? meanings,
-    String? meaning,
     List<ExampleSentence>? exampleSentences,
     List<String>? characters,
     String? pinyinNormalized,
@@ -136,7 +152,6 @@ class Vocab extends Equatable {
       pinyinNormalized: pinyinNormalized ?? this.pinyinNormalized,
       characters: characters ?? this.characters,
       meanings: meanings ?? this.meanings,
-      meaning: meaning ?? this.meaning,
       exampleSentences: exampleSentences ?? this.exampleSentences,
       level: level,
       wordType: wordType,

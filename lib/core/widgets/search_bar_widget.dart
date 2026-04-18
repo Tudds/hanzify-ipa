@@ -25,14 +25,14 @@ class SearchBarWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(
         color: colors.surface,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(9999),
         boxShadow: [
           BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 4, offset: const Offset(0, 1)),
         ],
       ),
       child: Row(
         children: [
-          const Text('🔍', style: TextStyle(fontSize: 16)),
+          Icon(Icons.search_rounded, color: colors.placeholder, size: 20),
           const SizedBox(width: 8),
           Expanded(
             child: TextField(

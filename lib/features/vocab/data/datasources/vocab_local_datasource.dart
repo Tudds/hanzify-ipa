@@ -1,8 +1,8 @@
 import '../../domain/entities/vocab.dart';
 
 abstract class VocabLocalDataSource {
-  Future<List<Vocab>> getAll();
-  Future<List<Vocab>> getDue();
+  Future<List<Vocab>> getAll({int limit = 0, int offset = 0});
+  Future<List<Vocab>> getDue({int limit = 0, int offset = 0});
   Future<void> update(Vocab model);
   Future<void> insert(Vocab model);
 
@@ -11,10 +11,15 @@ abstract class VocabLocalDataSource {
     String query, {
     int? hskLevel,
     String? wordType,
+    int limit = 0,
+    int offset = 0,
   });
 
   /// Lấy danh sách vocab theo HSK level.
-  Future<List<Vocab>> getByLevel(int level);
+  Future<List<Vocab>> getByLevel(int level, {int limit = 0, int offset = 0});
+
+  /// Đếm tổng số vocab.
+  Future<int> count();
 
   /// Nạp lại dữ liệu từ JSON vào Database.
   Future<void> reseed();

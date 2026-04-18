@@ -1,10 +1,19 @@
-import 'dart:math';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:hanzify/core/theme/colors.dart';
 import 'package:hanzify/core/theme/typography.dart';
-import 'package:hanzify/features/vocab/presentation/providers/vocab_state.dart';
 import 'package:hanzify/core/theme/theme_state.dart';
+import 'package:hanzify/core/theme/app_theme_helper.dart';
+import 'package:hanzify/core/theme/app_durations.dart';
+import 'package:hanzify/core/navigation/app_routes.dart';
+import 'package:hanzify/core/providers/navigation_provider.dart';
+import 'package:hanzify/core/widgets/hanzify_stat_card.dart';
+import 'package:hanzify/core/widgets/hanzify_action_tile.dart';
+import 'package:hanzify/core/widgets/circular_progress_painter.dart';
+import 'package:hanzify/core/widgets/hanzify_screen_header.dart';
+import 'package:hanzify/core/utils/hanzify_haptic.dart';
+import 'package:hanzify/features/vocab/presentation/providers/vocab_state.dart';
 
 class ProgressScreen extends ConsumerStatefulWidget {
   const ProgressScreen({super.key});
@@ -22,7 +31,7 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
   void initState() {
     super.initState();
     _animCtrl = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 1500));
+        vsync: this, duration: AppDurations.counter);
     _progressAnim = Tween<double>(begin: 0, end: 1).animate(
         CurvedAnimation(parent: _animCtrl, curve: Curves.easeOutCubic));
     _animCtrl.forward();
@@ -36,8 +45,7 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
 
   @override
   Widget build(BuildContext context) {
-    final c = ref.watch(themeColorsProvider);
-    
+    final c = themeColorsOfRef(ref);
     final allVocabAsync = ref.watch(allVocabProvider);
     final dueVocabAsync = ref.watch(dueVocabProvider);
 
@@ -47,288 +55,337 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
         data: (allVocab) {
           final dueCount = dueVocabAsync.asData?.value.length ?? 0;
           final mastered = allVocab.where((v) => v.interval >= 7).length;
-          final learning = allVocab.where((v) => v.interval > 0 && v.interval < 7).length;
-          final newWords = allVocab.where((v) => v.interval == 0).length;
           final total = allVocab.length;
-          final progressPercent = total > 0 ? (mastered / total) : 0.0;
-          final progressPct = (progressPercent * 100).round();
+          final progress = total > 0 ? (dueCount / total).clamp(0.0, 1.0) : 0.0;
+          const streak = 15;
+          final easyToForget =
+              allVocab.where((v) => v.easeFactor < 2.0).length;
 
-          return SingleChildScrollView(
-            padding: const EdgeInsets.only(bottom: AppSpacing.xxl),
+          return CustomScrollView(
+            slivers: [
+              const HanzifyScreenHeader(
+                title: 'Ôn Tập',
+                subtitle: 'Hệ thống lặp lại ngắt quãng giúp bạn ghi nhớ lâu hơn.',
+              ),
+              SliverToBoxAdapter(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(
-                      AppSpacing.xl, AppSpacing.xxxl, AppSpacing.xl, AppSpacing.lg),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('PROGRESS',
-                            style: TextStyle(
-                                fontSize: AppFontSizes.labelSm,
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: 2,
-                                color: c.placeholder)),
-                        const SizedBox(height: AppSpacing.sm),
-                        Text('Mastery',
-                            style: TextStyle(
-                                fontSize: AppFontSizes.headlineLg,
-                                fontWeight: FontWeight.w800,
-                                color: c.text)),
-                        const SizedBox(height: 4),
-                        Text('Your journey through the path of silence and wisdom.',
-                            style: TextStyle(
-                                fontSize: AppFontSizes.bodyMd,
-                                color: c.onSurfaceVariant)),
-                      ]),
-                ),
-                
-                _buildAnimatedMasteryCard(c, progressPercent, progressPct),
-                
                 const SizedBox(height: AppSpacing.xl),
+
+                // ── Circular progress ───────────────────────────────
+                _buildCircularProgress(c, dueCount, progress),
+
+                const SizedBox(height: AppSpacing.xxl),
+
+                // ── Action buttons ──────────────────────────────────
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
-                  child: Text('Knowledge Sphere',
-                      style: TextStyle(
-                          fontSize: AppFontSizes.titleLg,
-                          fontWeight: FontWeight.w700,
-                          color: c.text)),
-                ),
-                const SizedBox(height: AppSpacing.md),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
-                  child: Wrap(
-                    spacing: AppSpacing.md,
-                    runSpacing: AppSpacing.md,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
+                  child: Column(
                     children: [
-                      _SphereCard(
-                          value: '$mastered',
-                          label: 'Mastered',
-                          valueColor: c.accent,
-                          colors: c),
-                      _SphereCard(
-                          value: '$learning',
-                          label: 'Learning',
-                          valueColor: c.secondary,
-                          colors: c),
-                      _SphereCard(
-                          value: '$newWords',
-                          label: 'New',
-                          valueColor: c.primary,
-                          colors: c),
-                      _SphereCard(
-                          value: '$dueCount',
-                          label: 'Due Today',
-                          valueColor: c.warning,
-                          colors: c),
+                      HanzifyActionTile.variantGradient(
+                        emoji: '🗂',
+                        title: 'BẮT ĐẦU FLASHCARD',
+                        subtitle: 'Lướt qua các từ cần ôn tập',
+                        colors: c,
+                        onTap: () {
+                          HanzifyHaptic.action();
+                          ref
+                              .read(navigationProvider.notifier)
+                              .navigate(AppRoutes.flashcard);
+                        },
+                      ),
+
+                      // Quiz button — outlined white
+                      HanzifyActionTile.variantOutlined(
+                        emoji: '🧠',
+                        title: 'KIỂM TRA QUIZ',
+                        subtitle: 'Kiểm tra kiến thức của bạn',
+                        colors: c,
+                        onTap: () {
+                          HanzifyHaptic.action();
+                          ref
+                              .read(navigationProvider.notifier)
+                              .navigate(AppRoutes.quiz);
+                        },
+                      ),
                     ],
                   ),
                 ),
+
                 const SizedBox(height: AppSpacing.xl),
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
-                  padding: const EdgeInsets.all(AppSpacing.lg),
-                  decoration: BoxDecoration(
-                      color: c.surfaceLow,
-                      borderRadius: BorderRadius.circular(AppRadii.lg)),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Daily Goal',
-                            style: TextStyle(
-                                fontSize: AppFontSizes.titleMd,
-                                fontWeight: FontWeight.w700,
-                                color: c.text)),
-                        const SizedBox(height: 4),
-                        Text(
-                            'Review $dueCount cards today to maintain your streak and keep knowledge fresh.',
-                            style: TextStyle(
-                                fontSize: AppFontSizes.bodyMd,
-                                color: c.onSurfaceVariant,
-                                height: 1.5)),
-                      ]),
+
+                // ── Stats grid ──────────────────────────────────────
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: HanzifyStatCard.vertical(
+                          value: '$streak',
+                          label: 'NGÀY LIÊN TIẾP',
+                          icon: Icons.local_fire_department_rounded,
+                          iconColor: c.warning,
+                          colors: c,
+                        ),
+                      ),
+                      const SizedBox(width: AppSpacing.md),
+                      Expanded(
+                        child: HanzifyStatCard.vertical(
+                          value: '$mastered',
+                          label: 'ĐÃ THUỘC LÒNG',
+                          icon: Icons.verified_rounded,
+                          iconColor: c.success,
+                          colors: c,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
+
+                const SizedBox(height: AppSpacing.lg),
+
+                // ── HSK mastery chart ───────────────────────────────
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
+                  child: _buildHskChart(c, allVocab),
+                )
+                    .animate()
+                    .fadeIn(duration: 400.ms)
+                    .slideY(begin: 0.12, end: 0, curve: Curves.easeOutCubic),
+
+                const SizedBox(height: AppSpacing.lg),
+
+                // ── Alert card ──────────────────────────────────────
+                if (easyToForget > 0)
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
+                    child: Container(
+                      padding: const EdgeInsets.all(AppSpacing.lg),
+                      decoration: BoxDecoration(
+                        color: c.error.withValues(alpha: 0.08),
+                        borderRadius: BorderRadius.circular(AppRadii.xxl),
+                        border: Border.all(
+                            color: c.error.withValues(alpha: 0.2), width: 1),
+                      ),
+                      child: Row(
+                        children: [
+                          Icon(Icons.warning_amber_rounded,
+                              color: c.error, size: 28),
+                          const SizedBox(width: AppSpacing.md),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'CẦN XEM LẠI',
+                                  style: AppTypography.headline(
+                                    fontSize: AppFontSizes.titleSm,
+                                    fontWeight: FontWeight.w800,
+                                    color: c.error,
+                                  ),
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  'Phát hiện $easyToForget từ dễ quên',
+                                  style: AppTypography.body(
+                                    fontSize: AppFontSizes.bodySm,
+                                    color: c.error.withValues(alpha: 0.8),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                const SizedBox(height: AppSpacing.scrollBottom),
               ],
             ),
+              ),
+            ],
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (err, st) => Center(child: Text('Lỗi: $err')),
+        error: (err, st) => Center(child: Text('Lỗi: $err', style: AppTypography.body(color: c.error))),
       ),
     );
   }
 
-  Widget _buildAnimatedMasteryCard(AppThemeColors c, double targetProgress, int targetPct) {
-    return AnimatedBuilder(
-      animation: _progressAnim,
-      builder: (context, child) {
-        final currentProgress = targetProgress * _progressAnim.value;
-        final currentPct = (targetPct * _progressAnim.value).round();
-        
-        return Container(
-          margin: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
-          padding: const EdgeInsets.all(AppSpacing.xl),
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [c.primaryContainer, c.primary.withValues(alpha: 0.85)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-            borderRadius: BorderRadius.circular(AppRadii.xxl),
-            boxShadow: [
-              BoxShadow(
-                color: c.primary.withValues(alpha: 0.3),
-                blurRadius: 20,
-                offset: const Offset(0, 8),
-              ),
-            ],
+  Widget _buildHskChart(AppThemeColors c, List<dynamic> allVocab) {
+    // Tính mastered / total theo mỗi HSK level
+    final levels = [1, 2, 3];
+    final data = levels.map((lvl) {
+      final lvlVocabs = allVocab.where((v) => v.level == lvl).toList();
+      final total = lvlVocabs.length;
+      final mastered = lvlVocabs.where((v) => v.interval >= 7).length;
+      return (lvl, total, mastered);
+    }).toList();
+
+    final maxY = data.map((d) => d.$2).fold<int>(0, (a, b) => a > b ? a : b).toDouble();
+
+    return Container(
+      padding: const EdgeInsets.all(AppSpacing.lg),
+      decoration: BoxDecoration(
+        color: c.surfaceLow,
+        borderRadius: BorderRadius.circular(AppRadii.xxl),
+        border: Border.all(color: c.outlineVariant.withValues(alpha: 0.3)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'TIẾN ĐỘ THEO CẤP HSK',
+            style: AppTypography.label(
+              fontSize: AppFontSizes.labelSm,
+              fontWeight: FontWeight.w700,
+              color: c.primary,
+            ).copyWith(letterSpacing: 1.5),
           ),
-          child: Column(
-            children: [
-              SizedBox(
-                width: 180,
-                height: 180,
-                child: CustomPaint(
-                  painter: CircularProgressPainter(
-                    progress: currentProgress,
-                    backgroundColor: Colors.white.withValues(alpha: 0.15),
-                    progressColor: Colors.white,
-                    strokeWidth: 16,
-                  ),
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const SizedBox(height: 10),
-                        Text(
-                          '$currentPct%',
-                          style: const TextStyle(
-                            fontSize: 52,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                            letterSpacing: -1,
+          const SizedBox(height: AppSpacing.md),
+          SizedBox(
+            height: 180,
+            child: BarChart(
+              BarChartData(
+                maxY: maxY == 0 ? 10 : maxY * 1.15,
+                alignment: BarChartAlignment.spaceAround,
+                gridData: const FlGridData(show: false),
+                borderData: FlBorderData(show: false),
+                titlesData: FlTitlesData(
+                  leftTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                  topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                  rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                  bottomTitles: AxisTitles(
+                    sideTitles: SideTitles(
+                      showTitles: true,
+                      reservedSize: 28,
+                      getTitlesWidget: (value, meta) {
+                        final lvl = value.toInt() + 1;
+                        return Padding(
+                          padding: const EdgeInsets.only(top: 4),
+                          child: Text(
+                            'HSK $lvl',
+                            style: AppTypography.label(
+                              fontSize: AppFontSizes.labelSm,
+                              fontWeight: FontWeight.w600,
+                              color: c.placeholder,
+                            ),
                           ),
-                        ),
-                        Text(
-                          'Mastered',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white.withValues(alpha: 0.8),
-                          ),
-                        ),
-                      ],
+                        );
+                      },
                     ),
                   ),
                 ),
+                barGroups: [
+                  for (int i = 0; i < data.length; i++)
+                    BarChartGroupData(
+                      x: i,
+                      barRods: [
+                        BarChartRodData(
+                          toY: data[i].$2.toDouble(),
+                          color: c.outlineVariant.withValues(alpha: 0.4),
+                          width: 22,
+                          borderRadius: BorderRadius.circular(AppRadii.sm),
+                          rodStackItems: [
+                            BarChartRodStackItem(
+                              0,
+                              data[i].$3.toDouble(),
+                              c.primary,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                ],
               ),
-              const SizedBox(height: AppSpacing.xl),
-              Text(
-                'Overall Progress Through The Path',
-                style: TextStyle(
-                  fontSize: 12, 
-                  fontWeight: FontWeight.w500,
-                  color: Colors.white.withValues(alpha: 0.9),
-                  letterSpacing: 0.5,
-                ),
-                textAlign: TextAlign.center,
-              ),
+            ),
+          ),
+          const SizedBox(height: AppSpacing.sm),
+          Row(
+            children: [
+              _legendDot(c.primary, 'Đã thuộc'),
+              const SizedBox(width: AppSpacing.md),
+              _legendDot(c.outlineVariant.withValues(alpha: 0.6), 'Tổng số'),
             ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _legendDot(Color color, String label) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+        ),
+        const SizedBox(width: 6),
+        Text(
+          label,
+          style: AppTypography.label(
+            fontSize: AppFontSizes.labelSm,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildCircularProgress(
+      AppThemeColors c, int dueCount, double progress) {
+    return AnimatedBuilder(
+      animation: _progressAnim,
+      builder: (context, child) {
+        final currentProgress = progress * _progressAnim.value;
+        final currentCount = (dueCount * _progressAnim.value).round();
+
+        return Center(
+          child: SizedBox(
+            width: AppSpacing.circularProgress,
+            height: AppSpacing.circularProgress,
+            child: CustomPaint(
+              painter: CircularProgressPainter(
+                progress: currentProgress,
+                backgroundColor: c.outlineVariant.withValues(alpha: 0.3),
+                progressColor: c.primary,
+                strokeWidth: 18,
+              ),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '$currentCount',
+                      style: AppTypography.headline(
+                        fontSize: AppFontSizes.displayMd,
+                        fontWeight: FontWeight.w800,
+                        color: c.text,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      'TỪ CẦN ÔN TẬP',
+                      style: AppTypography.label(
+                        fontSize: AppFontSizes.labelSm,
+                        fontWeight: FontWeight.w700,
+                        color: c.placeholder,
+                      ).copyWith(letterSpacing: 1.2),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         );
       },
     );
   }
 }
-
-class CircularProgressPainter extends CustomPainter {
-  final double progress;
-  final Color backgroundColor;
-  final Color progressColor;
-  final double strokeWidth;
-
-  CircularProgressPainter({
-    required this.progress,
-    required this.backgroundColor,
-    required this.progressColor,
-    required this.strokeWidth,
-  });
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final center = Offset(size.width / 2, size.height / 2);
-    final radius = (size.width - strokeWidth) / 2;
-
-    final bgPaint = Paint()
-      ..color = backgroundColor
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = strokeWidth
-      ..strokeCap = StrokeCap.round;
-    canvas.drawCircle(center, radius, bgPaint);
-
-    final progressPaint = Paint()
-      ..shader = LinearGradient(
-        colors: [progressColor, progressColor.withValues(alpha: 0.7)],
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-      ).createShader(Rect.fromCircle(center: center, radius: radius))
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = strokeWidth
-      ..strokeCap = StrokeCap.round;
-
-    final sweepAngle = 2 * pi * progress;
-    canvas.drawArc(
-      Rect.fromCircle(center: center, radius: radius),
-      -pi / 2, 
-      sweepAngle,
-      false,
-      progressPaint,
-    );
-  }
-
-  @override
-  bool shouldRepaint(CircularProgressPainter oldDelegate) =>
-      oldDelegate.progress != progress;
-}
-
-class _SphereCard extends StatelessWidget {
-  final String value;
-  final String label;
-  final Color valueColor;
-  final AppThemeColors colors;
-  const _SphereCard(
-      {required this.value,
-      required this.label,
-      required this.valueColor,
-      required this.colors});
-
-  @override
-  Widget build(BuildContext context) {
-    final w =
-        (MediaQuery.of(context).size.width - AppSpacing.xl * 2 - AppSpacing.md) /
-            2;
-    return Container(
-      width: w,
-      padding: const EdgeInsets.all(AppSpacing.lg),
-      decoration: BoxDecoration(
-          color: colors.surfaceLowest,
-          borderRadius: BorderRadius.circular(AppRadii.lg)),
-      child: Column(children: [
-        Text(value,
-            style: TextStyle(
-                fontSize: AppFontSizes.headlineMd,
-                fontWeight: FontWeight.w800,
-                color: valueColor)),
-        const SizedBox(height: 2),
-        Text(label,
-            style: TextStyle(
-                fontSize: AppFontSizes.labelMd,
-                fontWeight: FontWeight.w500,
-                color: colors.placeholder)),
-      ]),
-    );
-  }
-}
-
-

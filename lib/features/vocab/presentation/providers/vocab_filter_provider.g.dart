@@ -42,7 +42,7 @@ final class VocabFilterNotifierProvider
 }
 
 String _$vocabFilterNotifierHash() =>
-    r'7986c269eba55a12e63ef7a685c820a512e62921';
+    r'ab0f14cf008a4cdaa7037a4b201f647b2c4c8cc6';
 
 abstract class _$VocabFilterNotifier extends $Notifier<VocabFilter> {
   VocabFilter build();
@@ -61,6 +61,45 @@ abstract class _$VocabFilterNotifier extends $Notifier<VocabFilter> {
     element.handleCreate(ref, build);
   }
 }
+
+@ProviderFor(vocabSearch)
+final vocabSearchProvider = VocabSearchProvider._();
+
+final class VocabSearchProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<List<Vocab>>,
+          List<Vocab>,
+          FutureOr<List<Vocab>>
+        >
+    with $FutureModifier<List<Vocab>>, $FutureProvider<List<Vocab>> {
+  VocabSearchProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'vocabSearchProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$vocabSearchHash();
+
+  @$internal
+  @override
+  $FutureProviderElement<List<Vocab>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<List<Vocab>> create(Ref ref) {
+    return vocabSearch(ref);
+  }
+}
+
+String _$vocabSearchHash() => r'92f2fa946b297338d93653cbed34f76f310c7e40';
 
 @ProviderFor(filteredVocab)
 final filteredVocabProvider = FilteredVocabProvider._();
@@ -101,4 +140,4 @@ final class FilteredVocabProvider
   }
 }
 
-String _$filteredVocabHash() => r'607f2b8ed2a5eb9f4c2b9d3ebc3f92e0169dab58';
+String _$filteredVocabHash() => r'd41cdf756fa24177cc17ef71fe41ad8d4239e87c';

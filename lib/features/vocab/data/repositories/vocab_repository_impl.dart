@@ -1,7 +1,7 @@
 import '../../domain/entities/vocab.dart';
 import '../../domain/repositories/vocab_repository.dart';
+import '../../../../core/error/failures.dart';
 import '../datasources/vocab_local_datasource.dart';
-
 
 class VocabRepositoryImpl implements VocabRepository {
   final VocabLocalDataSource localDataSource;
@@ -9,27 +9,47 @@ class VocabRepositoryImpl implements VocabRepository {
 
   @override
   Future<List<Vocab>> getAll() async {
-    return await localDataSource.getAll();
+    try {
+      return await localDataSource.getAll();
+    } catch (e) {
+      throw DatabaseFailure('Failed to load vocab list: $e');
+    }
   }
 
   @override
   Future<List<Vocab>> getDue() async {
-    return await localDataSource.getDue();
+    try {
+      return await localDataSource.getDue();
+    } catch (e) {
+      throw DatabaseFailure('Failed to load due vocab: $e');
+    }
   }
 
   @override
   Future<List<Vocab>> getByLevel(int level) async {
-    return await localDataSource.getByLevel(level);
+    try {
+      return await localDataSource.getByLevel(level);
+    } catch (e) {
+      throw DatabaseFailure('Failed to load vocab by level: $e');
+    }
   }
 
   @override
   Future<void> update(Vocab vocab) async {
-    await localDataSource.update(vocab);
+    try {
+      await localDataSource.update(vocab);
+    } catch (e) {
+      throw DatabaseFailure('Failed to update vocab: $e');
+    }
   }
 
   @override
   Future<void> save(Vocab vocab) async {
-    await localDataSource.insert(vocab);
+    try {
+      await localDataSource.insert(vocab);
+    } catch (e) {
+      throw DatabaseFailure('Failed to save vocab: $e');
+    }
   }
 
   @override
@@ -38,15 +58,23 @@ class VocabRepositoryImpl implements VocabRepository {
     int? hskLevel,
     String? wordType,
   }) async {
-    return await localDataSource.search(
-      query,
-      hskLevel: hskLevel,
-      wordType: wordType,
-    );
+    try {
+      return await localDataSource.search(
+        query,
+        hskLevel: hskLevel,
+        wordType: wordType,
+      );
+    } catch (e) {
+      throw DatabaseFailure('Failed to search vocab: $e');
+    }
   }
 
   @override
   Future<void> reseed() async {
-    await localDataSource.reseed();
+    try {
+      await localDataSource.reseed();
+    } catch (e) {
+      throw DatabaseFailure('Failed to reseed vocab: $e');
+    }
   }
 }

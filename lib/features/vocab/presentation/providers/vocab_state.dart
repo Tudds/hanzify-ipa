@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../domain/entities/vocab.dart';
-import '../../domain/usecases/review_vocab.dart';
+import '../../domain/review_algorithm.dart';
 import 'vocab_providers.dart';
 
 part 'vocab_state.g.dart';
@@ -17,10 +17,10 @@ class DueVocabNotifier extends _$DueVocabNotifier {
   }
 
   Future<void> review(Vocab vocab, int quality) async {
-    state = const AsyncValue.loading();
+    // Không cần set loading trước — AsyncValue.guard() tự quản lý transitions
     state = await AsyncValue.guard(() async {
       final repository = ref.read(vocabRepositoryProvider);
-      final updatedVocab = ReviewVocab()(vocab, quality);
+      final updatedVocab = reviewVocab(vocab, quality);
       await repository.update(updatedVocab);
       ref.invalidate(allVocabProvider);
       return repository.getDue();
@@ -39,25 +39,27 @@ class AllVocabNotifier extends _$AllVocabNotifier {
     return repository.getAll();
   }
 
-
   /// Bookmark toggle
   Future<void> toggleBookmark(Vocab vocab) async {
     state = await AsyncValue.guard(() async {
+      final repository = ref.read(vocabRepositoryProvider); // đọc 1 lần duy nhất
       final updated = vocab.copyWith(isBookmarked: !vocab.isBookmarked);
-      await ref.read(vocabRepositoryProvider).update(updated);
-      return ref.read(vocabRepositoryProvider).getAll();
+      await repository.update(updated);
+      return repository.getAll();
     });
   }
 
   /// Mark mastered toggle
   Future<void> toggleMastered(Vocab vocab) async {
     state = await AsyncValue.guard(() async {
+      final repository = ref.read(vocabRepositoryProvider); // đọc 1 lần duy nhất
       final updated = vocab.copyWith(isMastered: !vocab.isMastered);
-      await ref.read(vocabRepositoryProvider).update(updated);
-      return ref.read(vocabRepositoryProvider).getAll();
+      await repository.update(updated);
+      return repository.getAll();
     });
   }
 }
+
 // ============================================================================
 // FlashcardSession — Logic lọc từ vựng để ôn tập
 // ============================================================================
@@ -75,47 +77,51 @@ class FlashcardSession extends _$FlashcardSession {
     bool onlyDue = true,
     int limit = 20,
   }) async {
-    state = const AsyncValue.loading();
+    // Không cần set loading trước — AsyncValue.guard() tự quản lý transitions
     state = await AsyncValue.guard(() async {
       final repository = ref.read(vocabRepositoryProvider);
-      List<Vocab> all;
-      
-      if (onlyDue) {
-        all = await repository.getDue();
-      } else {
-        all = await repository.getAll();
-      }
+      List<Vocab> cards;
 
-      // ── Auto-seed if empty ────────────────────────────────────────────────
-      // Nếu không tìm thấy từ nào (có thể do DB mới tạo chưa nạp JSON),
-      // tiến hành ép nạp (force seed) và thử lấy lại một lần nữa.
-      if (all.isEmpty) {
-        await repository.reseed();
-        if (onlyDue) {
-          all = await repository.getDue();
-        } else {
-          all = await repository.getAll();
+      // Ưu tiên lọc ở DB level:
+      // 1) onlyDue + hskLevel → search với hskLevel filter trên due items
+      // 2) onlyDue → getDue()
+      // 3) hskLevel → getByLevel()
+      // 4) tất cả → getAll()
+      if (onlyDue) {
+        // getDue() không hỗ trợ hskLevel filter → load due rồi filter
+        cards = await repository.getDue();
+        if (cards.isEmpty) {
+          // Auto-seed if empty
+          await repository.reseed();
+          cards = await repository.getDue();
+        }
+        if (hskLevel != null && hskLevel > 0) {
+          cards = cards.where((v) => v.level == hskLevel).toList();
+        }
+      } else if (hskLevel != null && hskLevel > 0) {
+        // Dùng DB query trực tiếp — không load all
+        cards = await repository.getByLevel(hskLevel);
+      } else {
+        cards = await repository.getAll();
+        if (cards.isEmpty) {
+          await repository.reseed();
+          cards = await repository.getAll();
         }
       }
 
-      // Lọc theo HSK
-      if (hskLevel != null && hskLevel > 0) {
-        all = all.where((v) => v.level == hskLevel).toList();
-      }
-
-      // Lọc theo Bookmark
+      // Bookmark filter vẫn phải ở client-side vì DB không có method riêng
       if (onlyBookmarked) {
-        all = all.where((v) => v.isBookmarked).toList();
+        cards = cards.where((v) => v.isBookmarked).toList();
       }
 
       // Xáo trộn ngẫu nhiên
-      all.shuffle();
+      cards.shuffle();
 
       // Giới hạn số lượng
       if (limit > 0) {
-        return all.take(limit).toList();
+        return cards.take(limit).toList();
       }
-      return all;
+      return cards;
     });
   }
 }

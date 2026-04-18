@@ -4,34 +4,11 @@ import '../../../../core/database/app_database.dart';
 import '../../domain/entities/vocab.dart';
 import 'vocab_local_datasource.dart';
 
-// Re-export for backward compatibility
-export 'pinyin_utils.dart' show normalizePinyin;
-import 'pinyin_utils.dart';
+import 'package:hanzify/core/utils/pinyin_utils.dart';
 
 class VocabLocalDataSourceImpl implements VocabLocalDataSource {
   final AppDatabase db;
   VocabLocalDataSourceImpl(this.db);
-
-  Vocab _mapToDomain(VocabDbModel model) {
-    return Vocab(
-      id: model.id,
-      hanzi: model.hanzi,
-      pinyin: model.pinyin,
-      pinyinNormalized: model.pinyinNormalized,
-      characters: model.characters,
-      meanings: model.meanings,
-      meaning: model.meaning,
-      exampleSentences: model.exampleSentences,
-      level: model.level,
-      wordType: model.wordType,
-      isBookmarked: model.isBookmarked,
-      isMastered: model.isMastered,
-      repetitions: model.repetitions,
-      easeFactor: model.easeFactor,
-      interval: model.interval,
-      nextReview: model.nextReview.toLocal(),
-    );
-  }
 
   VocabsTableCompanion _mapToCompanion(Vocab vocab) {
     return VocabsTableCompanion.insert(
@@ -41,7 +18,6 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
       pinyinNormalized: vocab.pinyinNormalized,
       characters: vocab.characters,
       meanings: vocab.meanings,
-      meaning: vocab.meaning,
       exampleSentences: vocab.exampleSentences,
       level: vocab.level,
       wordType: vocab.wordType,
@@ -55,35 +31,48 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
     );
   }
 
+  /// Apply limit & offset to a query. limit=0 means no limit.
+  SimpleSelectStatement<$VocabsTableTable, VocabDbModel> _applyPagination(
+    SimpleSelectStatement<$VocabsTableTable, VocabDbModel> query, {
+    int limit = 0,
+    int offset = 0,
+  }) {
+    if (limit > 0) query.limit(limit, offset: offset);
+    return query;
+  }
+
   @override
-  Future<List<Vocab>> getAll() async {
-    final query = db.select(db.vocabsTable)
+  Future<List<Vocab>> getAll({int limit = 0, int offset = 0}) async {
+    var query = db.select(db.vocabsTable)
       ..orderBy([
         (t) => OrderingTerm(expression: t.level, mode: OrderingMode.asc),
         (t) => OrderingTerm(expression: t.hanzi, mode: OrderingMode.asc),
       ]);
+    query = _applyPagination(query, limit: limit, offset: offset);
     final results = await query.get();
-    return results.map(_mapToDomain).toList();
+    return results.map(Vocab.fromDbModel).toList();
   }
 
   @override
-  Future<List<Vocab>> getDue() async {
+  Future<List<Vocab>> getDue({int limit = 0, int offset = 0}) async {
     final now = DateTime.now().toUtc();
-    final query = db.select(db.vocabsTable)
+    var query = db.select(db.vocabsTable)
       ..where((t) => t.nextReview.isSmallerThanValue(now));
+    query = _applyPagination(query, limit: limit, offset: offset);
     final results = await query.get();
-    return results.map(_mapToDomain).toList();
+    return results.map(Vocab.fromDbModel).toList();
   }
 
   @override
-  Future<List<Vocab>> getByLevel(int level) async {
-    final query = db.select(db.vocabsTable)
+  Future<List<Vocab>> getByLevel(int level, {int limit = 0, int offset = 0}) async {
+    var query = db.select(db.vocabsTable)
       ..where((t) => t.level.equals(level))
       ..orderBy([
         (t) => OrderingTerm(expression: t.hanzi, mode: OrderingMode.asc),
       ]);
+    query = _applyPagination(query, limit: limit, offset: offset);
     final results = await query.get();
-    return results.map(_mapToDomain).toList();
+    return results.map(Vocab.fromDbModel).toList();
   }
 
   @override
@@ -92,8 +81,12 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
   }
 
   @override
-  Future<void> insert(Vocab model) async {
-    await db.into(db.vocabsTable).insert(_mapToCompanion(model), mode: InsertMode.insertOrReplace);
+  Future<void> insert(Vocab model) => update(model);
+
+  @override
+  Future<int> count() async {
+    final countQuery = db.selectOnly(db.vocabsTable)..addColumns([db.vocabsTable.id.count()]);
+    return countQuery.map((row) => row.read(db.vocabsTable.id.count())).getSingle().then((v) => v ?? 0);
   }
 
   @override
@@ -101,33 +94,45 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
     String queryStr, {
     int? hskLevel,
     String? wordType,
+    int limit = 0,
+    int offset = 0,
   }) async {
     if (queryStr.trim().isEmpty) {
-      var q = db.select(db.vocabsTable)..orderBy([
-        (t) => OrderingTerm(expression: t.level, mode: OrderingMode.asc),
-        (t) => OrderingTerm(expression: t.hanzi, mode: OrderingMode.asc),
-      ]);
-      var results = await q.get();
-      return _applyFilters(results.map(_mapToDomain).toList(), hskLevel, wordType);
+      final all = await getAll(limit: limit, offset: offset);
+      return _applyFilters(all, hskLevel, wordType);
     }
 
     final normalizedQuery = normalizePinyin(queryStr.trim());
     final qRaw = queryStr.trim();
-    
-    final query = db.select(db.vocabsTable)
+
+    var query = db.select(db.vocabsTable)
       ..where((t) {
         return t.hanzi.like('%$qRaw%') |
             t.pinyinNormalized.like('%$normalizedQuery%') |
-            t.meaning.like('%$qRaw%') |
-            t.meanings.like('%$qRaw%'); 
+            t.meanings.like('%$qRaw%');
       })
       ..orderBy([
         (t) => OrderingTerm(expression: t.level, mode: OrderingMode.asc),
         (t) => OrderingTerm(expression: t.hanzi, mode: OrderingMode.asc),
       ]);
+    query = _applyPagination(query, limit: limit, offset: offset);
 
     final rawResults = await query.get();
-    return _applyFilters(rawResults.map(_mapToDomain).toList(), hskLevel, wordType);
+    var mapped = rawResults.map(Vocab.fromDbModel).toList();
+
+    // Post-filter: kiểm tra thêm trong meanings[].vi cho accuracy
+    final isHanziQuery = qRaw.runes.any((r) => r >= 0x4E00 && r <= 0x9FFF);
+    if (!isHanziQuery && normalizedQuery.isNotEmpty) {
+      mapped = mapped.where((v) {
+        if (v.hanzi.contains(qRaw)) return true;
+        if (v.pinyin.toLowerCase().contains(qRaw.toLowerCase())) return true;
+        if (v.pinyinNormalized.contains(normalizedQuery)) return true;
+        if (v.meanings.any((m) => m.vi.toLowerCase().contains(qRaw.toLowerCase()))) return true;
+        return false;
+      }).toList();
+    }
+
+    return _applyFilters(mapped, hskLevel, wordType);
   }
 
   List<Vocab> _applyFilters(

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .hanzi-text {
+            font-family: 'Noto Serif SC', serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dfe3e6;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {tertiary: "#8e3a8a", "tertiary-fixed": "#fe9cf4", "on-primary": "#f1f2ff", "inverse-on-surface": "#979ac6", "tertiary-dim": "#802d7d", "on-tertiary-fixed-variant": "#711f70", "surface-dim": "#cfd1ff", "surface-container-lowest": "#ffffff", "surface-container": "#e7e6ff", "surface-container-high": "#e0e0ff", "on-secondary-fixed-variant": "#3c45ab", "on-surface": "#282b51", "primary-container": "#7b9cff", "on-error": "#ffefee", "surface-tint": "#0050d4", "surface-container-low": "#f1efff", "on-tertiary-container": "#671366", "on-error-container": "#570008", "error-dim": "#9f0519", "error-container": "#fb5151", "on-secondary-container": "#323ba1", "primary-fixed": "#7b9cff", "on-tertiary-fixed": "#480049", "on-primary-fixed-variant": "#00266e", "on-tertiary": "#ffeef8", "on-background": "#282b51", "secondary-container": "#cbceff", secondary: "#4750b7", "inverse-surface": "#06092f", "secondary-fixed": "#cbceff", "tertiary-fixed-dim": "#ef8fe6", "primary-dim": "#0046ba", "on-primary-fixed": "#000000", "on-secondary-fixed": "#1c248e", "on-secondary": "#f3f1ff", outline: "#71749e", "inverse-primary": "#608bff", error: "#b31b25", "surface-container-highest": "#d9daff", surface: "#f8f5ff", "secondary-fixed-dim": "#bbbfff", "outline-variant": "#a7aad7", "on-primary-container": "#001e5a", background: "#f8f5ff", "on-surface-variant": "#555881", "surface-variant": "#d9daff", primary: "#0050d4", "tertiary-container": "#fe9cf4", "secondary-dim": "#3b44aa", "primary-fixed-dim": "#658eff", "surface-bright": "#f8f5ff"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, fontFamily: {headline: ["Manrope"], body: ["Inter"], label: ["Inter"], display: "Manrope"}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-50 bg-[#f5f7f9] dark:bg-[#0f172a]">
+<div class="flex items-center px-6 h-20 w-full max-w-screen-xl mx-auto gap-4">
+<button class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-slate-200/50 active:scale-95 transition-all text-on-surface">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline font-semibold text-2xl tracking-tight text-[#2c2f31] dark:text-slate-100 flex-1">
+                Hội thoại: Chào hỏi
+            </h1>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-6 pb-40 pt-4">
+<!-- Toggle Controls -->
+<section class="flex gap-3 mb-10 overflow-x-auto no-scrollbar">
+<button class="flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-primary-container font-medium text-sm transition-all active:scale-95 whitespace-nowrap shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="visibility" data-weight="fill" style="font-variation-settings: 'FILL' 1;">visibility</span>
+                Hiện Pinyin
+            </button>
+<button class="flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-primary-container font-medium text-sm transition-all active:scale-95 whitespace-nowrap shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="translate" data-weight="fill" style="font-variation-settings: 'FILL' 1;">translate</span>
+                Hiện Nghĩa
+            </button>
+<button class="flex items-center gap-2 px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm transition-all active:scale-95 whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]" data-icon="speed">speed</span>
+                Tốc độ
+            </button>
+</section>
+<!-- Chat Container -->
+<div class="space-y-12">
+<!-- User A (Left) -->
+<div class="flex items-start gap-4 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest border-2 border-white">
+<img alt="Avatar A" class="w-full h-full object-cover" data-alt="professional portrait of a young woman with a friendly smile, warm studio lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM6ME5c1KUvK6dmN3GuwlaNf-3IN_7qjNmWwJ9-q4OszVgaag2mk9w900i08q1bjzD4147HfM2Nl4dyMSnsDD8QaLfEapBWdjQ1HxiJEh4HVHaarilPG2gv9DjV-WDzeru0Os5nZQTbG9cRGOBts0im33Trlt-XA5QrmuWAcc83WJ8BXNeXqmiwap5YYwkBl_S6uZDK8tQjFly6s4kchmshd3uPnAs-cgf_STK4gEzz5UZIa09UOZYfdm2_TDjrZDz8AYMDsa4hGU"/>
+</div>
+<div class="flex flex-col gap-2 max-w-[85%]">
+<div class="bg-primary/5 p-8 rounded-xl rounded-tl-none shadow-[0_4px_24px_-8px_rgba(0,80,212,0.12)]">
+<div class="flex items-start justify-between gap-6">
+<span class="hanzi-text text-4xl leading-relaxed text-on-surface font-bold">你好！</span>
+<button class="text-primary hover:bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+</button>
+</div>
+<p class="text-on-surface-variant/70 font-medium text-lg mt-1">nǐ hǎo!</p>
+<div class="mt-4 pt-4 border-t border-primary/10">
+<p class="text-primary font-medium">Chào bạn!</p>
+</div>
+</div>
+</div>
+</div>
+<!-- User B (Right) -->
+<div class="flex items-start justify-end gap-4 group">
+<div class="flex flex-col gap-2 max-w-[85%] items-end">
+<div class="bg-white p-8 rounded-xl rounded-tr-none shadow-[0_4px_30px_rgba(44,47,49,0.04)]">
+<div class="flex items-start justify-end gap-6">
+<button class="text-on-surface-variant/50 hover:bg-surface-container-low w-10 h-10 rounded-full flex items-center justify-center transition-colors order-1 sm:order-none">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+</button>
+<span class="hanzi-text text-4xl leading-relaxed text-on-surface font-bold text-right">你好，你叫什么名字？</span>
+</div>
+<p class="text-on-surface-variant/70 font-medium text-lg mt-1 text-right">nǐ hǎo, nǐ jiào shénme míngzì?</p>
+<div class="mt-4 pt-4 border-t border-surface-container-low">
+<p class="text-on-surface-variant font-medium text-right">Chào bạn, bạn tên là gì?</p>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest border-2 border-white">
+<img alt="Avatar B" class="w-full h-full object-cover" data-alt="close-up portrait of a young man with glasses, soft natural daylight, minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASjqHOmDRB4jdpjhwvN2VrkR4km0HaPZn8cGMotfyTRQnYzzS-bFNyCEtgS5wZebrr8BwDsK0a_g5Q2IBE35D7VmBEN5dq-wGjBgqzMkGPyMHaRww2n601azYxSpNKjGmBJtASsYodHM1PLPcVnVIBPefX2I4RS6AcmONKZTVH3oKUAWZlE11x21ekwyFQP-pNqjRZRijlD-uvzmgnvd7iEaXrdxbxxJg9HPBB335R5Qr3VvZvvB_n7GL8RokmFs9_8JXHl0BYzUw"/>
+</div>
+</div>
+<!-- User A (Left) -->
+<div class="flex items-start gap-4 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest border-2 border-white">
+<img alt="Avatar A" class="w-full h-full object-cover" data-alt="professional portrait of a young woman with a friendly smile, warm studio lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXGDmw3Hv9xMS_P1P_Yd9Y59em_7aPfstkrR52ojo1xkF3JQYHjS1pc1toF5vM4H4evr0xIKGgB74_AmNBViSciwRkcdiKQxvTjXsNFogU7s0tELgrF14ozYTyJVj8KENS_ZhDPUphGHr9CTcHHeWzhYvvgoHXtpQT1af2ahqS7cfM7pY-FOGnqJCHiALqgIUpZac7_NXEDW033fjT6jVji325w0skCIUyj4QrEDxarTg-wnNAZLepdQCEbYxXodXuye2guvAKITY"/>
+</div>
+<div class="flex flex-col gap-2 max-w-[85%]">
+<div class="bg-primary/5 p-8 rounded-xl rounded-tl-none shadow-[0_4px_24px_-8px_rgba(0,80,212,0.12)]">
+<div class="flex items-start justify-between gap-6">
+<span class="hanzi-text text-4xl leading-relaxed text-on-surface font-bold">我叫 Stitch. <br/>很高兴认识你！</span>
+<button class="text-primary hover:bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+</button>
+</div>
+<p class="text-on-surface-variant/70 font-medium text-lg mt-1">wǒ jiào Stitch. hěn gāoxìng rènshí nǐ!</p>
+<div class="mt-4 pt-4 border-t border-primary/10">
+<p class="text-primary font-medium">Tôi tên là Stitch. Rất vui được gặp bạn!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Finish Button Container -->
+<div class="fixed bottom-28 left-0 right-0 px-6 flex justify-center z-40">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary w-full max-w-sm h-16 rounded-full font-bold shadow-[0_12px_32px_rgba(0,80,212,0.3)] active:scale-95 transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Hoàn thành bài học
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#f5f7f9]/80 backdrop-blur-xl shadow-[0_12px_40px_0_rgba(44,47,49,0.08)]">
+<div class="flex justify-around items-center px-8 pt-4 pb-8 w-full max-w-screen-xl mx-auto">
+<a class="flex flex-col items-center gap-1 text-[#0050d4] dark:text-[#7b9cff] after:content-[''] after:w-1 after:h-1 after:bg-[#0050d4] after:rounded-full transition-all duration-300 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="school" data-weight="fill" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Học Tập</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#2c2f31]/50 dark:text-slate-500 hover:text-[#0050d4] transition-colors active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="import_contacts">import_contacts</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Từ Điển</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#2c2f31]/50 dark:text-slate-500 hover:text-[#0050d4] transition-colors active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Ôn Tập</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#2c2f31]/50 dark:text-slate-500 hover:text-[#0050d4] transition-colors active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Cá Nhân</span>
+</a>
+</div>
+</nav>
+</body></html>

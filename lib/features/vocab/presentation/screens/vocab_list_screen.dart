@@ -1,12 +1,30 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:skeletonizer/skeletonizer.dart';
+import 'package:hanzify/core/utils/hanzify_haptic.dart';
+import 'package:hanzify/core/widgets/hanzify_screen_header.dart';
+import 'package:hanzify/core/widgets/hanzify_snack.dart';
+import 'package:hanzify/core/theme/colors.dart';
 import 'package:hanzify/core/theme/typography.dart';
-import 'package:hanzify/features/vocab/presentation/providers/vocab_state.dart';
-import 'package:hanzify/features/vocab/presentation/providers/vocab_filter_provider.dart';
-import 'package:hanzify/features/vocab/presentation/widgets/vocab_card.dart';
-import 'package:hanzify/core/widgets/search_bar_widget.dart';
 import 'package:hanzify/core/theme/theme_state.dart';
+import 'package:hanzify/core/theme/app_theme_helper.dart';
+
+
 import 'package:hanzify/core/providers/navigation_provider.dart';
+import 'package:hanzify/core/widgets/hanzify_card.dart';
+import 'package:hanzify/core/widgets/hanzify_badge.dart';
+import 'package:hanzify/core/widgets/hanzify_filter_chip.dart';
+import 'package:hanzify/core/widgets/search_bar_widget.dart';
+import 'package:hanzify/core/widgets/hanzify_empty_state.dart';
+import 'package:hanzify/core/utils/pos_labels.dart' show posLabelShort;
+import 'package:hanzify/core/utils/vocab_meaning_helper.dart';
+import 'package:hanzify/core/enums/filter_enums.dart';
+import 'package:hanzify/features/vocab/domain/entities/vocab.dart';
+import 'package:hanzify/features/vocab/presentation/providers/vocab_filter_provider.dart';
+import 'package:hanzify/features/vocab/presentation/providers/vocab_state.dart';
+import 'package:hanzify/features/vocab/presentation/screens/vocab_detail_screen.dart';
 
 class VocabListScreen extends ConsumerStatefulWidget {
   const VocabListScreen({super.key});
@@ -17,354 +35,329 @@ class VocabListScreen extends ConsumerStatefulWidget {
 
 class _VocabListScreenState extends ConsumerState<VocabListScreen> {
   late TextEditingController _searchController;
+  Timer? _debounceTimer;
 
-  static const _levels = [0, 1, 2, 3, 4, 5, 6];
+  static final List<Vocab> _skeletonVocabs = List.generate(
+    8,
+    (i) => Vocab(
+      id: 'skeleton_$i',
+      hanzi: '你好',
+      pinyin: 'nǐ hǎo',
+      meanings: const [Meaning(pos: 'other', vi: 'xin chào — đang tải dữ liệu')],
+      level: 1,
+      wordType: 'n',
+      nextReview: DateTime.now(),
+    ),
+  );
 
-  // Keys khớp với POS codes trong MeaningEmbedded.pos
-  static const _wordTypes = [
-    {'key': 'all', 'label': 'Tất cả', 'emoji': '📚'},
-    {'key': 'n', 'label': 'Danh từ', 'emoji': '📦'},
-    {'key': 'v', 'label': 'Động từ', 'emoji': '⚡'},
-    {'key': 'adj', 'label': 'Tính từ', 'emoji': '🎨'},
-    {'key': 'adv', 'label': 'Trạng từ', 'emoji': '🔄'},
-    {'key': 'mw', 'label': 'Lượng từ', 'emoji': '📏'},
-    {'key': 'aux', 'label': 'Trợ động', 'emoji': '✨'},
-    {'key': 'prep', 'label': 'Giới từ', 'emoji': '🔗'},
-    {'key': 'conj', 'label': 'Liên từ', 'emoji': '🔀'},
-    {'key': 'interj', 'label': 'Thán từ', 'emoji': '❗'},
-  ];
-
-  static const _statuses = [
-    {'key': 'all', 'label': 'Tất cả', 'emoji': '📋'},
-    {'key': 'bookmarked', 'label': 'Đã Lưu', 'emoji': '⭐'},
-    {'key': 'mastered', 'label': 'Đã Nhớ', 'emoji': '🏆'},
+  /// Merged filter chips: "Tat ca" + HSK levels + word types
+  /// Uses centralized posLabelShort() for Vietnamese POS labels
+  static const _filterChips = [
+    {'key': 'all', 'label': 'Tất cả', 'type': 'level', 'value': '0'},
+    {'key': 'hsk1', 'label': 'HSK 1', 'type': 'level', 'value': '1'},
+    {'key': 'hsk2', 'label': 'HSK 2', 'type': 'level', 'value': '2'},
+    {'key': 'hsk3', 'label': 'HSK 3', 'type': 'level', 'value': '3'},
+    {'key': 'n', 'label': 'Danh từ', 'type': 'wordType', 'value': 'n'},
+    {'key': 'v', 'label': 'Động từ', 'type': 'wordType', 'value': 'v'},
+    {'key': 'adj', 'label': 'Tính từ', 'type': 'wordType', 'value': 'adj'},
+    {'key': 'adv', 'label': 'Trạng từ', 'type': 'wordType', 'value': 'adv'},
   ];
 
   @override
   void initState() {
     super.initState();
     _searchController = TextEditingController();
+
+    // Kiểm tra xem có tham số HSK được truyền vào từ navigationProvider không
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      final arg = ref.read(navigationProvider).arg;
+      if (arg != null) {
+        final level = int.tryParse(arg);
+        if (level != null && level > 0) {
+          ref.read(vocabFilterProvider.notifier).setLevel(level);
+        }
+      }
+    });
   }
 
   @override
   void dispose() {
+    _debounceTimer?.cancel();
     _searchController.dispose();
     super.dispose();
   }
 
+  /// Debounced search — đợi 300ms sau khi user ngừng gõ mới trigger query.
+  void _onSearchChanged(String query) {
+    _debounceTimer?.cancel();
+    _debounceTimer = Timer(const Duration(milliseconds: 300), () {
+      if (mounted) {
+        ref.read(vocabFilterProvider.notifier).setQuery(query);
+      }
+    });
+  }
+
+  bool _isChipActive(Map<String, String> chip, VocabFilter filter) {
+    if (chip['key'] == 'all') {
+      return filter.level == 0 && filter.wordType == FilterWordType.all;
+    }
+    if (chip['type'] == 'level') {
+      return filter.level == int.parse(chip['value']!) && filter.wordType == FilterWordType.all;
+    }
+    return filter.wordType == posToFilterWordType(chip['value']!);
+  }
+
+  void _onChipTap(Map<String, String> chip) {
+    final notifier = ref.read(vocabFilterProvider.notifier);
+    if (chip['key'] == 'all') {
+      notifier.setLevel(0);
+      notifier.setWordType(FilterWordType.all);
+    } else if (chip['type'] == 'level') {
+      notifier.setLevel(int.parse(chip['value']!));
+      notifier.setWordType(FilterWordType.all);
+    } else {
+      notifier.setLevel(0);
+      notifier.setWordType(posToFilterWordType(chip['value']!));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    final c = ref.watch(themeColorsProvider);
+    final c = themeColorsOf(context);
     final filter = ref.watch(vocabFilterProvider);
-    final filteredVocabList = ref.watch(filteredVocabProvider);
-    final allVocabAsync = ref.watch(allVocabProvider);
+    // filteredVocabProvider đã watch vocabSearchProvider nội bộ
+    // → không cần watch vocabSearchProvider riêng, tránh double DB query.
+    final filteredList = ref.watch(filteredVocabProvider);
+    final isLoading = ref.watch(vocabSearchProvider).isLoading;
 
-    // Sync controller with state if cleared from elsewhere
     if (filter.query.isEmpty && _searchController.text.isNotEmpty) {
       _searchController.clear();
     }
 
     return Scaffold(
       backgroundColor: c.background,
-      body: Column(
-        children: [
-          // Title row
-          Padding(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.lg,
-              AppSpacing.sm,
-              AppSpacing.lg,
-              4,
-            ),
-            child: Row(
-              children: [
-                SizedBox(
-                  width: 60,
-                  child: GestureDetector(
-                    onTap: () =>
-                        ref.read(navigationProvider.notifier).navigate('home'),
-                    child: Text(
-                      '← Về',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: c.primary,
-                      ),
+      body: NestedScrollView(
+        headerSliverBuilder: (context, innerBoxIsScrolled) {
+          return [
+            const HanzifyScreenHeader(title: 'Từ Điển'),
+            SliverToBoxAdapter(
+              child: Column(
+                children: [
+                   // ── Search bar ──────────────────────────────────────────────────
+                  SearchBarWidget(
+                    value: filter.query,
+                    controller: _searchController,
+                    onChanged: _onSearchChanged,
+                    colors: c,
+                    placeholder: 'Tìm kiếm Hán tự, Pinyin, hoặc tiếng Việt...',
+                  ),
+
+                  // ── Filter chips (single row, horizontal scroll) ────────────────
+                  SizedBox(
+                    height: 48,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.xs),
+                      children: _filterChips.map((chip) {
+                        final active = _isChipActive(chip, filter);
+                        return HanzifyFilterChip(
+                          label: chip['label']!,
+                          isActive: active,
+                          onTap: () {
+                            HanzifyHaptic.select();
+                            _onChipTap(chip);
+                          },
+                        );
+                      }).toList(),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Text(
-                    'Từ Điển',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.w700,
-                      color: c.text,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 60),
-              ],
+                ],
+              ),
             ),
+          ];
+        },
+        body: Skeletonizer(
+          enabled: isLoading,
+          child: _buildBody(
+            isLoading && filteredList.isEmpty ? _skeletonVocabs : filteredList,
+            c,
           ),
-
-          // Search bar
-          SearchBarWidget(
-            value: filter.query,
-            controller: _searchController,
-            onChanged: (q) =>
-                ref.read(vocabFilterProvider.notifier).setQuery(q),
-            colors: c,
-            placeholder: 'Tìm hanzi, pinyin hoặc nghĩa...',
-          ),
-
-          // Level chips
-          SizedBox(
-            height: 44,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
-              children: _levels.map((level) {
-                final isActive = filter.level == level;
-                return GestureDetector(
-                  onTap: () =>
-                      ref.read(vocabFilterProvider.notifier).setLevel(level),
-                  child: Container(
-                    margin: const EdgeInsets.only(right: 8),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 14,
-                      vertical: 7,
-                    ),
-                    decoration: BoxDecoration(
-                      color: isActive ? c.primary : c.surface,
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: isActive
-                            ? c.primary
-                            : c.disabled.withValues(alpha: 0.6),
-                      ),
-                    ),
-                    child: Text(
-                      level == 0 ? 'Tất cả' : 'HSK $level',
-                      style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w600,
-                        color: isActive ? Colors.white : c.text,
-                      ),
-                    ),
-                  ),
-                );
-              }).toList(),
-            ),
-          ),
-
-          const SizedBox(height: 4),
-
-          // Word Type Filter Chips
-          SizedBox(
-            height: 44,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
-              children: _wordTypes.map((type) {
-                final isActive = filter.wordType == type['key'];
-                return GestureDetector(
-                  onTap: () => ref
-                      .read(vocabFilterProvider.notifier)
-                      .setWordType(type['key']!),
-                  child: Container(
-                    margin: const EdgeInsets.only(right: 8),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 6,
-                    ),
-                    decoration: BoxDecoration(
-                      color: isActive
-                          ? c.accent.withValues(alpha: 0.15)
-                          : c.surfaceLowest,
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: isActive
-                            ? c.accent
-                            : c.disabled.withValues(alpha: 0.3),
-                        width: isActive ? 1.5 : 1,
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          type['emoji']!,
-                          style: const TextStyle(fontSize: 14),
-                        ),
-                        const SizedBox(width: 4),
-                        Text(
-                          type['label']!,
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: isActive
-                                ? FontWeight.w700
-                                : FontWeight.w500,
-                            color: isActive ? c.accent : c.text,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              }).toList(),
-            ),
-          ),
-
-          const SizedBox(height: 4),
-
-          // Status Filter Chips
-          SizedBox(
-            height: 44,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
-              children: _statuses.map((status) {
-                final isActive = filter.status == status['key'];
-                return GestureDetector(
-                  onTap: () => ref
-                      .read(vocabFilterProvider.notifier)
-                      .setStatus(status['key']!),
-                  child: Container(
-                    margin: const EdgeInsets.only(right: 8),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 6,
-                    ),
-                    decoration: BoxDecoration(
-                      color: isActive
-                          ? c.success.withValues(alpha: 0.15)
-                          : c.surfaceLowest,
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: isActive
-                            ? c.success
-                            : c.disabled.withValues(alpha: 0.3),
-                        width: isActive ? 1.5 : 1,
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          status['emoji']!,
-                          style: const TextStyle(fontSize: 14),
-                        ),
-                        const SizedBox(width: 4),
-                        Text(
-                          status['label']!,
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: isActive
-                                ? FontWeight.w700
-                                : FontWeight.w500,
-                            color: isActive ? c.success : c.text,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              }).toList(),
-            ),
-          ),
-
-          // Count & Clear filters
-          Padding(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.lg,
-              10,
-              AppSpacing.lg,
-              4,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  allVocabAsync.when(
-                    data: (all) => '${filteredVocabList.length} từ vựng',
-                    loading: () => 'Đang tải...',
-                    error: (_, _) => 'Lỗi',
-                  ),
-                  style: TextStyle(fontSize: 13, color: c.placeholder),
-                ),
-                if (filter.level > 0 ||
-                    filter.wordType != 'all' ||
-                    filter.status != 'all' ||
-                    filter.query.isNotEmpty)
-                  GestureDetector(
-                    onTap: () {
-                      ref.read(vocabFilterProvider.notifier).clear();
-                      _searchController.clear();
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: c.primary.withValues(alpha: 0.1),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Icon(Icons.clear, size: 14, color: c.primary),
-                          const SizedBox(width: 4),
-                          Text(
-                            'Xóa bộ lọc',
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: c.primary,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-              ],
-            ),
-          ),
-
-          // Vocab list
-          Expanded(
-            child: allVocabAsync.when(
-              data: (all) {
-                if (filteredVocabList.isEmpty) {
-                  return Center(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const Text('📚', style: TextStyle(fontSize: 48)),
-                        const SizedBox(height: 12),
-                        Text(
-                          'Không tìm thấy từ vựng nào',
-                          style: TextStyle(fontSize: 16, color: c.placeholder),
-                        ),
-                      ],
-                    ),
-                  );
-                }
-                return ListView.builder(
-                  itemCount: filteredVocabList.length,
-                  padding: const EdgeInsets.only(bottom: 32),
-                  itemBuilder: (_, i) =>
-                      VocabCardWidget(item: filteredVocabList[i], colors: c),
-                );
-              },
-              loading: () => const Center(child: CircularProgressIndicator()),
-              error: (err, st) => Center(child: Text('Lỗi: $err')),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
+
+  Widget _buildBody(List<Vocab> filteredList, AppThemeColors c) {
+    if (filteredList.isEmpty) {
+      return const HanzifyEmptyState.noVocab();
+    }
+
+    return ListView.builder(
+      padding: const EdgeInsets.only(bottom: AppSpacing.xxl),
+      itemCount: filteredList.length,
+      itemBuilder: (context, index) {
+        return _buildVocabResultCard(filteredList[index], c);
+      },
+    );
+  }
+
+  Widget _buildVocabResultCard(Vocab vocab, AppThemeColors c) {
+    final displayMeaning = vocab.primaryMeaningVi;
+    final displayPos = vocab.primaryPos;
+
+    return Slidable(
+      key: ValueKey(vocab.id),
+      endActionPane: ActionPane(
+        motion: const BehindMotion(),
+        extentRatio: 0.5,
+        children: [
+          SlidableAction(
+            onPressed: (_) {
+              HanzifyHaptic.select();
+              ref.read(allVocabProvider.notifier).toggleBookmark(vocab);
+              HanzifySnack.success(
+                context,
+                vocab.isBookmarked ? 'Đã bỏ đánh dấu' : 'Đã đánh dấu',
+              );
+            },
+            backgroundColor: c.primary,
+            foregroundColor: Colors.white,
+            icon: vocab.isBookmarked ? Icons.bookmark_remove_rounded : Icons.bookmark_add_rounded,
+            label: vocab.isBookmarked ? 'Bỏ' : 'Lưu',
+            borderRadius: const BorderRadius.horizontal(right: Radius.circular(AppRadii.xxl)),
+          ),
+          SlidableAction(
+            onPressed: (_) {
+              HanzifyHaptic.select();
+              ref.read(allVocabProvider.notifier).toggleMastered(vocab);
+              HanzifySnack.success(
+                context,
+                vocab.isMastered ? 'Đã bỏ trạng thái thuộc' : 'Đã đánh dấu thuộc lòng',
+              );
+            },
+            backgroundColor: c.success,
+            foregroundColor: Colors.white,
+            icon: vocab.isMastered ? Icons.restart_alt_rounded : Icons.verified_rounded,
+            label: vocab.isMastered ? 'Chưa thuộc' : 'Thuộc',
+          ),
+        ],
+      ),
+      child: HanzifyCard(
+        margin: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.xs),
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl, vertical: AppSpacing.lg),
+        borderRadius: AppRadii.xxl,
+        border: Border.all(color: c.disabled.withValues(alpha: 0.1), width: 1),
+        onTap: () {
+          HanzifyHaptic.tap();
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => VocabDetailScreen(vocab: vocab),
+            ),
+          );
+        },
+        child: Row(
+          children: [
+            // ── Clean Hanzi (No Background Circle) ─────────────────────────
+            Hero(
+              tag: 'hanzi_${vocab.id}',
+              child: Text(
+                vocab.hanzi,
+                style: AppTypography.hanziUi(
+                  fontSize: AppFontSizes.displaySm,
+                  color: c.text,
+                ),
+              ),
+            ),
+            const SizedBox(width: AppSpacing.xl),
+
+            // ── Center info ─────────────────────────────────────────────────
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Pinyin + HSK badge
+                  Row(
+                    children: [
+                      Flexible(
+                        child: Text(
+                          vocab.pinyin,
+                          style: AppTypography.pinyin(
+                            fontSize: AppFontSizes.bodySm,
+                            color: c.primary,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: AppSpacing.sm),
+                      HanzifyBadge.hsk(
+                        level: vocab.level, 
+                        colors: c,
+                        filled: false, // Cleaner look
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 4),
+
+                  // Vietnamese meaning
+                  Text(
+                    displayMeaning,
+                    style: AppTypography.body(
+                      fontSize: AppFontSizes.titleMd,
+                      fontWeight: FontWeight.w800,
+                      color: c.text,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+
+                  // Description / POS
+                  if (displayPos != 'other')
+                    Padding(
+                      padding: const EdgeInsets.only(top: 4),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                        decoration: BoxDecoration(
+                          color: c.surfaceLow,
+                          borderRadius: BorderRadius.circular(AppRadii.sm),
+                        ),
+                        child: Text(
+                          _posLabel(displayPos),
+                          style: AppTypography.label(
+                            fontSize: AppFontSizes.labelSm,
+                            fontWeight: FontWeight.w600,
+                            color: c.placeholder,
+                          ),
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+            ),
+
+            // ── Right action icons ──────────────────────────────────────────
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    // Toggle bookmark
+                    ref.read(allVocabProvider.notifier).toggleBookmark(vocab);
+                  },
+                  child: Icon(
+                    vocab.isBookmarked ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
+                    size: 24,
+                    color: vocab.isBookmarked ? c.primary : c.disabled,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  String _posLabel(String pos) => posLabelShort(pos);
 }

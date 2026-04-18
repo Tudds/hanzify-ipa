@@ -10,8 +10,6 @@ jobs:
   build:
     name: Build iOS (Unsigned)
     runs-on: macos-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repository
@@ -26,37 +24,20 @@ jobs:
       - name: Get dependencies
         run: flutter pub get
 
-      - name: Generate code (build_runner)
-        run: dart run build_runner build --delete-conflicting-outputs
-
-      - name: Fix iOS Deployment Target
-        run: |
-          # 1. Sửa trong project file
-          sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 13.0;/IPHONEOS_DEPLOYMENT_TARGET = 15.0;/g' ios/Runner.xcodeproj/project.pbxproj
-          
-          # 2. Sinh ra Podfile chuẩn
-          flutter build ios --no-codesign --config-only
-          
-          # 3. Chèn cấu hình 15.0 vào trong khối post_install có sẵn
-          if [ -f ios/Podfile ]; then
-            sed -i '' '/flutter_additional_ios_build_settings(target)/a \
-                target.build_configurations.each { |config| config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "15.0" }' ios/Podfile
-          fi
+      - name: Cache CocoaPods
+        uses: actions/cache@v4
+        with:
+          path: |
+            ios/Pods
+            ~/.cocoapods
+          key: pods-${{ hashFiles('ios/Podfile') }}
+          restore-keys: pods-
 
       - name: Build iOS IPA (No Signing)
         run: flutter build ipa --no-codesign
-          
-      - name: Create Unsigned IPA
-        run: |
-          mkdir -p build/ios/unsigned
-          mkdir -p Payload
-          APP_PATH=$(find build/ios/archive -name "*.app" | head -n 1)
-          cp -r "$APP_PATH" Payload/
-          zip -r build/ios/unsigned/hanzify-unsigned.ipa Payload
-          rm -rf Payload
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: hanzify-unsigned-ipa
-          path: build/ios/unsigned/hanzify-unsigned.ipa
+          path: build/ios/ipa/*.ipa

@@ -1,8 +1,10 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import '../../domain/entities/vocab.dart';
 import 'vocab_local_datasource.dart';
-import 'pinyin_utils.dart';
+import 'package:hanzify/core/utils/pinyin_utils.dart' show normalizePinyin;
+import 'package:hanzify/core/utils/vocab_parser.dart' show VocabJsonParser;
 
 // ============================================================================
 // VocabWebDataSourceImpl — In-memory datasource cho nền tảng Web
@@ -21,27 +23,39 @@ class VocabWebDataSourceImpl implements VocabLocalDataSource {
   }
 
   // ── Basic CRUD ─────────────────────────────────────────────────────────────
+  
+  List<Vocab>? _sortedCache;
 
   @override
-  Future<List<Vocab>> getAll() async {
-    final sorted = List<Vocab>.from(_store);
-    sorted.sort((a, b) {
-      final lvl = a.level.compareTo(b.level);
-      return lvl != 0 ? lvl : a.hanzi.compareTo(b.hanzi);
-    });
-    return sorted;
+  Future<List<Vocab>> getAll({int limit = 0, int offset = 0}) async {
+    _sortedCache ??= List<Vocab>.from(_store)
+      ..sort((a, b) {
+        final lvl = a.level.compareTo(b.level);
+        return lvl != 0 ? lvl : a.hanzi.compareTo(b.hanzi);
+      });
+
+    var results = _sortedCache!;
+    if (offset > 0) results = results.skip(offset).toList();
+    if (limit > 0) results = results.take(limit).toList();
+    return results;
   }
 
   @override
-  Future<List<Vocab>> getDue() async {
+  Future<List<Vocab>> getDue({int limit = 0, int offset = 0}) async {
     final now = DateTime.now().toUtc();
-    return _store.where((v) => v.nextReview.isBefore(now)).toList();
+    var results = _store.where((v) => v.nextReview.isBefore(now)).toList();
+    if (offset > 0) results = results.skip(offset).toList();
+    if (limit > 0) results = results.take(limit).toList();
+    return results;
   }
 
   @override
-  Future<List<Vocab>> getByLevel(int level) async {
-    return _store.where((v) => v.level == level).toList()
+  Future<List<Vocab>> getByLevel(int level, {int limit = 0, int offset = 0}) async {
+    var results = _store.where((v) => v.level == level).toList()
       ..sort((a, b) => a.hanzi.compareTo(b.hanzi));
+    if (offset > 0) results = results.skip(offset).toList();
+    if (limit > 0) results = results.take(limit).toList();
+    return results;
   }
 
   @override
@@ -52,17 +66,11 @@ class VocabWebDataSourceImpl implements VocabLocalDataSource {
     } else {
       _store.add(model);
     }
+    _sortedCache = null; // Invalidate cache
   }
 
   @override
-  Future<void> insert(Vocab model) async {
-    final idx = _store.indexWhere((v) => v.id == model.id);
-    if (idx >= 0) {
-      _store[idx] = model;
-    } else {
-      _store.add(model);
-    }
-  }
+  Future<void> insert(Vocab model) => update(model);
 
   // ── Search ─────────────────────────────────────────────────────────────────
 
@@ -71,19 +79,26 @@ class VocabWebDataSourceImpl implements VocabLocalDataSource {
     String query, {
     int? hskLevel,
     String? wordType,
+    int limit = 0,
+    int offset = 0,
   }) async {
+    final qTrim = query.trim().toLowerCase();
+    
+    // Nếu query rỗng + no filter, dùng cache cho nhanh
+    if (qTrim.isEmpty && hskLevel == null && (wordType == null || wordType == 'all')) {
+      return getAll(limit: limit, offset: offset);
+    }
+
     var results = List<Vocab>.from(_store);
 
-    if (query.trim().isNotEmpty) {
-      final q = query.trim().toLowerCase();
-      final qNorm = normalizePinyin(q);
+    if (qTrim.isNotEmpty) {
+      final qNorm = normalizePinyin(qTrim);
 
       results = results.where((v) {
-        if (v.hanzi.contains(q)) return true;
-        if (v.pinyin.toLowerCase().contains(q)) return true;
+        if (v.hanzi.contains(qTrim)) return true;
+        if (v.pinyin.toLowerCase().contains(qTrim)) return true;
         if (v.pinyinNormalized.contains(qNorm)) return true;
-        if (v.meaning.toLowerCase().contains(q)) return true;
-        if (v.meanings.any((m) => m.vi.toLowerCase().contains(q))) return true;
+        if (v.meanings.any((m) => m.vi.toLowerCase().contains(qTrim))) return true;
         return false;
       }).toList();
     }
@@ -102,6 +117,10 @@ class VocabWebDataSourceImpl implements VocabLocalDataSource {
       final lvl = a.level.compareTo(b.level);
       return lvl != 0 ? lvl : a.hanzi.compareTo(b.hanzi);
     });
+    
+    if (offset > 0) results = results.skip(offset).toList();
+    if (limit > 0) results = results.take(limit).toList();
+    
     return results;
   }
 
@@ -109,105 +128,51 @@ class VocabWebDataSourceImpl implements VocabLocalDataSource {
 
   Future<void> _seedFromAssets() async {
     try {
+      final listFiles = ['hsk1.json', 'hsk2.json', 'hsk3.json'];
+      
+      // Parallelize asset loading
+      final contents = await Future.wait(
+        listFiles.map((f) => rootBundle.loadString('assets/data/$f'))
+      );
 
-      void addVocab(Map<String, dynamic> v, String id) {
-        final meaningsList = (v['meanings'] as List?)?.map((m) {
-              final map = m as Map<String, dynamic>;
-              return Meaning(
-                pos: map['pos'] as String? ?? 'other',
-                vi: map['vi'] as String? ?? '',
-                en: map['en'] as String? ?? '',
-              );
-            }).toList() ?? [];
-
-        final meaningFlat = v['meaning'] as String? ??
-            meaningsList.map((m) => '${m.pos}. ${m.vi}').join('; ');
-
-        final examplesList = (v['exampleSentences'] as List?)?.map((e) {
-              if (e is Map) {
-                final map = e as Map<String, dynamic>;
-                return ExampleSentence(
-                  cn: map['cn'] as String? ?? '',
-                  pinyin: map['pinyin'] as String? ?? '',
-                  vi: map['vi'] as String? ?? '',
-                );
-              }
-              return ExampleSentence(cn: e as String, pinyin: '', vi: '');
-            }).toList() ?? [];
-
-        final wordType = v['wordType'] as String? ??
-            (meaningsList.isNotEmpty ? meaningsList.first.pos : 'other');
-
-        final hanziStr = v['hanzi'] as String? ?? '';
-        final pinyinStr = v['pinyin'] as String? ?? '';
-
-        _store.add(Vocab(
-          id: id,
-          hanzi: hanziStr,
-          pinyin: pinyinStr,
-          pinyinNormalized: _normalizePinyinLocalWeb(v['pinyinNormalized'] as String? ?? pinyinStr),
-          characters: List<String>.from((v['characters'] as List?) ?? hanziStr.split('')),
-          meanings: meaningsList,
-          meaning: meaningFlat,
-          exampleSentences: examplesList,
-          level: v['level'] as int? ?? 1,
-          wordType: wordType,
-          isBookmarked: v['isBookmarked'] as bool? ?? false,
-          isMastered: v['isMastered'] as bool? ?? false,
-          repetitions: v['repetitions'] as int? ?? 0,
-          easeFactor: (v['easeFactor'] as num?)?.toDouble() ?? 2.5,
-          interval: v['interval'] as int? ?? v['srsInterval'] as int? ?? 0,
-          nextReview: DateTime.parse(v['nextReview'] as String? ?? DateTime.now().toUtc().toIso8601String()),
-        ));
-      }
-
-      final listFiles = ['hsk1.json', 'hsk2.json', 'hsk3.json', 'hsk4.json', 'hsk5.json', 'hsk6.json'];
-      for (final fileName in listFiles) {
+      for (final jsonStr in contents) {
         try {
-          final jsonStr = await rootBundle.loadString('assets/data/$fileName');
           final decoded = json.decode(jsonStr);
 
           if (decoded is List) {
             for (var v in decoded) {
               final map = v as Map<String, dynamic>;
               final id = map['id'] as String? ?? '${map['hanzi']}_${map['level']}';
-              addVocab(map, id);
+              _store.add(VocabJsonParser.parse(map, id: id));
             }
           } else if (decoded is Map) {
             for (var e in decoded.entries) {
-              addVocab(e.value as Map<String, dynamic>, e.key);
+              _store.add(VocabJsonParser.parse(
+                e.value as Map<String, dynamic>,
+                id: e.key,
+              ));
             }
           }
         } catch (e) {
-          // ignore: avoid_print
-          print('⚠️ [Web] Skipping $fileName: $e');
+          debugPrint('⚠️ [Web] Decoding error: $e');
         }
       }
 
-      // ignore: avoid_print
-      print('✅ [Web] Seeded ${_store.length} vocab items (in-memory)');
+      _sortedCache = null; // Ensure cache is refreshed
+      debugPrint('✅ [Web] Seeded ${_store.length} vocab items (in-memory)');
     } catch (e) {
-      // ignore: avoid_print
-      print('❌ [Web] Vocab seed error: $e');
+      debugPrint('❌ [Web] Vocab seed error: $e');
     }
-  }
-
-  static String _normalizePinyinLocalWeb(String pinyin) {
-    const toneMap = {
-      'ā': 'a', 'á': 'a', 'ǎ': 'a', 'à': 'a',
-      'ē': 'e', 'é': 'e', 'ě': 'e', 'è': 'e',
-      'ī': 'i', 'í': 'i', 'ǐ': 'i', 'ì': 'i',
-      'ō': 'o', 'ó': 'o', 'ǒ': 'o', 'ò': 'o',
-      'ū': 'u', 'ú': 'u', 'ǔ': 'u', 'ù': 'u',
-      'ǖ': 'v', 'ǘ': 'v', 'ǚ': 'v', 'ǜ': 'v', 'ü': 'v',
-    };
-    var result = pinyin.toLowerCase();
-    toneMap.forEach((t, p_) => result = result.replaceAll(t, p_));
-    return result.replaceAll(RegExp(r'[\s\d]'), '');
   }
 
   @override
   Future<void> reseed() async {
+    _store.clear();
+    _sortedCache = null;
     await _seedFromAssets();
   }
+
+  @override
+  Future<int> count() async => _store.length;
 }
+

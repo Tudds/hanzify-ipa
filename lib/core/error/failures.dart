@@ -6,7 +6,3 @@ abstract class Failure {
 class DatabaseFailure extends Failure {
   const DatabaseFailure(super.message);
 }
-
-class ServerFailure extends Failure {
-  const ServerFailure(super.message);
-}

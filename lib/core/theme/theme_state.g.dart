@@ -41,7 +41,7 @@ final class ThemeNotifierProvider
   }
 }
 
-String _$themeNotifierHash() => r'afc9bedf86e89cde7079851ea228566a78fd5b9a';
+String _$themeNotifierHash() => r'8844c5eba13c3e08054b7771066d3629b79ad31c';
 
 abstract class _$ThemeNotifier extends $Notifier<AppThemeMode> {
   AppThemeMode build();
@@ -100,4 +100,4 @@ final class ThemeColorsProvider
   }
 }
 
-String _$themeColorsHash() => r'66aaeef40238f2addb74dcb8a1e2c76bd56e40e4';
+String _$themeColorsHash() => r'a241f97389f8d8016134f8540c74e9256b2b996f';

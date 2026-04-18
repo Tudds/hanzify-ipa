@@ -33,7 +33,7 @@ final class DueVocabNotifierProvider
   DueVocabNotifier create() => DueVocabNotifier();
 }
 
-String _$dueVocabNotifierHash() => r'1e95e24d9c89eca5628099e008a129a1493c00d6';
+String _$dueVocabNotifierHash() => r'f90ebba54c7bc446cf5a401f7f16c5270f7d5ddb';
 
 abstract class _$DueVocabNotifier extends $AsyncNotifier<List<Vocab>> {
   FutureOr<List<Vocab>> build();
@@ -77,7 +77,7 @@ final class AllVocabNotifierProvider
   AllVocabNotifier create() => AllVocabNotifier();
 }
 
-String _$allVocabNotifierHash() => r'41bfd66163fd8f6562a7a07b85c8dc6be53f76a9';
+String _$allVocabNotifierHash() => r'eeea6682abcd98207b557da0ffd984da90f753c5';
 
 abstract class _$AllVocabNotifier extends $AsyncNotifier<List<Vocab>> {
   FutureOr<List<Vocab>> build();
@@ -121,7 +121,7 @@ final class FlashcardSessionProvider
   FlashcardSession create() => FlashcardSession();
 }
 
-String _$flashcardSessionHash() => r'bbe35bd064de1a8b7f71ff05c119b2638c1b4316';
+String _$flashcardSessionHash() => r'91e8c6fd9a369653c0588eb1053812e47a51da0b';
 
 abstract class _$FlashcardSession extends $AsyncNotifier<List<Vocab>?> {
   FutureOr<List<Vocab>?> build();

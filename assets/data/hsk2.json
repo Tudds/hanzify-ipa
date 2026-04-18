@@ -23,13 +23,7 @@
       }
     ],
     "level": 2,
-    "wordType": "interj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "interj"
   },
   {
     "id": "hsk2_0001",
@@ -56,13 +50,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0002",
@@ -88,13 +76,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0003",
@@ -126,13 +108,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0004",
@@ -159,13 +135,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0005",
@@ -196,13 +166,7 @@
       }
     ],
     "level": 2,
-    "wordType": "prep",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "prep"
   },
   {
     "id": "hsk2_0006",
@@ -228,13 +192,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0007",
@@ -260,13 +218,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0008",
@@ -292,13 +244,7 @@
       }
     ],
     "level": 2,
-    "wordType": "num",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "num"
   },
   {
     "id": "hsk2_0009",
@@ -330,13 +276,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0010",
@@ -367,13 +307,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0011",
@@ -399,13 +333,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0012",
@@ -432,13 +360,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0013",
@@ -464,13 +386,7 @@
       }
     ],
     "level": 2,
-    "wordType": "prep",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "prep"
   },
   {
     "id": "hsk2_0014",
@@ -497,13 +413,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0015",
@@ -534,13 +444,7 @@
       }
     ],
     "level": 2,
-    "wordType": "prep",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "prep"
   },
   {
     "id": "hsk2_0016",
@@ -572,13 +476,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0017",
@@ -610,13 +508,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0018",
@@ -643,13 +535,7 @@
       }
     ],
     "level": 2,
-    "wordType": "aux",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "aux"
   },
   {
     "id": "hsk2_0019",
@@ -681,13 +567,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0020",
@@ -718,13 +598,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0021",
@@ -751,13 +625,7 @@
       }
     ],
     "level": 2,
-    "wordType": "pron",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "pron"
   },
   {
     "id": "hsk2_0022",
@@ -784,13 +652,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0023",
@@ -817,13 +679,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0024",
@@ -850,13 +706,7 @@
       }
     ],
     "level": 2,
-    "wordType": "conj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "conj"
   },
   {
     "id": "hsk2_0025",
@@ -882,13 +732,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0026",
@@ -915,13 +759,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0027",
@@ -947,13 +785,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0028",
@@ -979,13 +811,7 @@
       }
     ],
     "level": 2,
-    "wordType": "mw",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "mw"
   },
   {
     "id": "hsk2_0029",
@@ -1011,13 +837,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:23.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0030",
@@ -1043,13 +863,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0031",
@@ -1076,13 +890,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0032",
@@ -1109,13 +917,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0033",
@@ -1142,13 +944,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0034",
@@ -1175,13 +971,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0035",
@@ -1208,13 +998,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0036",
@@ -1241,13 +1025,7 @@
       }
     ],
     "level": 2,
-    "wordType": "prep",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "prep"
   },
   {
     "id": "hsk2_0037",
@@ -1273,13 +1051,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0038",
@@ -1305,13 +1077,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0039",
@@ -1337,13 +1103,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0040",
@@ -1370,13 +1130,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0041",
@@ -1403,13 +1157,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0042",
@@ -1435,13 +1183,7 @@
       }
     ],
     "level": 2,
-    "wordType": "prep",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "prep"
   },
   {
     "id": "hsk2_0043",
@@ -1467,13 +1209,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0044",
@@ -1501,13 +1237,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0045",
@@ -1534,13 +1264,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0046",
@@ -1572,13 +1296,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0047",
@@ -1604,13 +1322,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0048",
@@ -1637,13 +1349,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0049",
@@ -1670,13 +1376,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0050",
@@ -1703,13 +1403,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0051",
@@ -1735,13 +1429,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0052",
@@ -1768,13 +1456,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0053",
@@ -1801,13 +1483,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0054",
@@ -1834,13 +1510,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0055",
@@ -1867,13 +1537,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0056",
@@ -1900,13 +1564,7 @@
       }
     ],
     "level": 2,
-    "wordType": "num",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "num"
   },
   {
     "id": "hsk2_0057",
@@ -1933,13 +1591,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0058",
@@ -1968,13 +1620,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0059",
@@ -2000,13 +1646,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:25.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0060",
@@ -2032,13 +1672,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0061",
@@ -2065,13 +1699,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0062",
@@ -2097,13 +1725,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0063",
@@ -2129,13 +1751,7 @@
       }
     ],
     "level": 2,
-    "wordType": "mw",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "mw"
   },
   {
     "id": "hsk2_0064",
@@ -2162,13 +1778,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0065",
@@ -2204,13 +1814,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0066",
@@ -2236,13 +1840,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0067",
@@ -2269,13 +1867,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0068",
@@ -2302,13 +1894,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0069",
@@ -2335,13 +1921,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0070",
@@ -2367,13 +1947,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0071",
@@ -2400,13 +1974,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0072",
@@ -2437,13 +2005,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0073",
@@ -2470,13 +2032,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0074",
@@ -2503,13 +2059,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0075",
@@ -2536,13 +2086,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0076",
@@ -2569,13 +2113,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0077",
@@ -2602,13 +2140,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0078",
@@ -2634,13 +2166,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0079",
@@ -2669,13 +2195,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0080",
@@ -2702,13 +2222,7 @@
       }
     ],
     "level": 2,
-    "wordType": "mw",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "mw"
   },
   {
     "id": "hsk2_0081",
@@ -2735,13 +2249,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0082",
@@ -2768,13 +2276,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0083",
@@ -2801,13 +2303,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0084",
@@ -2834,13 +2330,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0085",
@@ -2867,13 +2357,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0086",
@@ -2900,13 +2384,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0087",
@@ -2932,13 +2410,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0088",
@@ -2964,13 +2436,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0089",
@@ -3002,13 +2468,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:27.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0090",
@@ -3045,13 +2505,7 @@
       }
     ],
     "level": 2,
-    "wordType": "conj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "conj"
   },
   {
     "id": "hsk2_0091",
@@ -3078,13 +2532,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0092",
@@ -3116,13 +2564,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0093",
@@ -3149,13 +2591,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0094",
@@ -3182,13 +2618,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0095",
@@ -3224,13 +2654,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0096",
@@ -3266,13 +2690,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0097",
@@ -3298,13 +2716,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0098",
@@ -3331,13 +2743,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0099",
@@ -3363,13 +2769,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0100",
@@ -3401,13 +2801,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0101",
@@ -3435,13 +2829,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0102",
@@ -3468,13 +2856,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0103",
@@ -3501,13 +2883,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0104",
@@ -3534,13 +2910,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0105",
@@ -3567,13 +2937,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0106",
@@ -3600,13 +2964,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0107",
@@ -3633,13 +2991,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0108",
@@ -3666,13 +3018,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0109",
@@ -3699,13 +3045,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0110",
@@ -3737,13 +3077,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0111",
@@ -3769,13 +3103,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0112",
@@ -3801,13 +3129,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0113",
@@ -3833,13 +3155,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0114",
@@ -3865,13 +3181,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0115",
@@ -3898,13 +3208,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0116",
@@ -3931,13 +3235,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0117",
@@ -3964,13 +3262,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0118",
@@ -4002,13 +3294,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0119",
@@ -4034,13 +3320,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:28.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0120",
@@ -4066,13 +3346,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0121",
@@ -4098,13 +3372,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0122",
@@ -4131,13 +3399,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0123",
@@ -4163,13 +3425,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0124",
@@ -4195,13 +3451,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0125",
@@ -4227,13 +3477,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0126",
@@ -4260,13 +3504,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0127",
@@ -4293,13 +3531,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0128",
@@ -4331,13 +3563,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0129",
@@ -4369,13 +3595,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0130",
@@ -4401,13 +3621,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0131",
@@ -4439,13 +3653,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0132",
@@ -4472,13 +3680,7 @@
       }
     ],
     "level": 2,
-    "wordType": "aux",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "aux"
   },
   {
     "id": "hsk2_0133",
@@ -4504,13 +3706,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0134",
@@ -4537,13 +3733,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0135",
@@ -4574,13 +3764,7 @@
       }
     ],
     "level": 2,
-    "wordType": "mw",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "mw"
   },
   {
     "id": "hsk2_0136",
@@ -4606,13 +3790,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0137",
@@ -4639,13 +3817,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0138",
@@ -4672,13 +3844,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0139",
@@ -4704,13 +3870,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0140",
@@ -4736,13 +3896,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0141",
@@ -4768,13 +3922,7 @@
       }
     ],
     "level": 2,
-    "wordType": "prep",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "prep"
   },
   {
     "id": "hsk2_0142",
@@ -4801,13 +3949,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0143",
@@ -4834,13 +3976,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0144",
@@ -4866,13 +4002,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0145",
@@ -4904,13 +4034,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0146",
@@ -4936,13 +4060,7 @@
       }
     ],
     "level": 2,
-    "wordType": "num",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "num"
   },
   {
     "id": "hsk2_0147",
@@ -4968,13 +4086,7 @@
       }
     ],
     "level": 2,
-    "wordType": "num",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "num"
   },
   {
     "id": "hsk2_0148",
@@ -5001,13 +4113,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0149",
@@ -5033,13 +4139,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:30.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0150",
@@ -5065,13 +4165,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0151",
@@ -5103,13 +4197,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0152",
@@ -5135,13 +4223,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0153",
@@ -5167,13 +4249,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0154",
@@ -5200,13 +4276,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0155",
@@ -5233,13 +4303,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0156",
@@ -5266,13 +4330,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0157",
@@ -5298,13 +4356,7 @@
       }
     ],
     "level": 2,
-    "wordType": "pron",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "pron"
   },
   {
     "id": "hsk2_0158",
@@ -5331,13 +4383,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0159",
@@ -5363,13 +4409,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0160",
@@ -5396,13 +4436,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0161",
@@ -5429,13 +4463,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0162",
@@ -5467,13 +4495,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0163",
@@ -5499,13 +4521,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0164",
@@ -5532,13 +4548,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0165",
@@ -5564,13 +4574,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0166",
@@ -5596,13 +4600,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0167",
@@ -5629,13 +4627,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0168",
@@ -5662,13 +4654,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0169",
@@ -5695,13 +4681,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0170",
@@ -5733,13 +4713,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0171",
@@ -5766,13 +4740,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0172",
@@ -5799,13 +4767,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0173",
@@ -5832,13 +4794,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0174",
@@ -5865,13 +4821,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0175",
@@ -5898,13 +4848,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0176",
@@ -5931,13 +4875,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0177",
@@ -5964,13 +4902,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0178",
@@ -5996,13 +4928,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0179",
@@ -6029,13 +4955,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:31.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0180",
@@ -6062,13 +4982,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0181",
@@ -6095,13 +5009,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0182",
@@ -6128,13 +5036,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0183",
@@ -6161,13 +5063,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0184",
@@ -6193,13 +5089,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0185",
@@ -6226,13 +5116,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0186",
@@ -6259,13 +5143,7 @@
       }
     ],
     "level": 2,
-    "wordType": "conj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "conj"
   },
   {
     "id": "hsk2_0187",
@@ -6291,13 +5169,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0188",
@@ -6324,13 +5196,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0189",
@@ -6357,13 +5223,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0190",
@@ -6390,13 +5250,7 @@
       }
     ],
     "level": 2,
-    "wordType": "conj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "conj"
   },
   {
     "id": "hsk2_0191",
@@ -6423,13 +5277,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0192",
@@ -6456,13 +5304,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0193",
@@ -6494,13 +5336,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0194",
@@ -6527,13 +5363,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0195",
@@ -6560,13 +5390,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0196",
@@ -6593,13 +5417,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0197",
@@ -6626,13 +5444,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0198",
@@ -6659,13 +5471,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0199",
@@ -6691,13 +5497,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0200",
@@ -6724,13 +5524,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0201",
@@ -6756,13 +5550,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0202",
@@ -6788,13 +5576,7 @@
       }
     ],
     "level": 2,
-    "wordType": "mw",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "mw"
   },
   {
     "id": "hsk2_0203",
@@ -6821,13 +5603,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0204",
@@ -6853,13 +5629,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0205",
@@ -6886,13 +5656,7 @@
       }
     ],
     "level": 2,
-    "wordType": "conj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "conj"
   },
   {
     "id": "hsk2_0206",
@@ -6919,13 +5683,7 @@
       }
     ],
     "level": 2,
-    "wordType": "conj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "conj"
   },
   {
     "id": "hsk2_0207",
@@ -6951,13 +5709,7 @@
       }
     ],
     "level": 2,
-    "wordType": "pron",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "pron"
   },
   {
     "id": "hsk2_0208",
@@ -6994,13 +5746,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0209",
@@ -7026,13 +5772,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:33.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0210",
@@ -7063,13 +5803,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0211",
@@ -7095,13 +5829,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0212",
@@ -7127,13 +5855,7 @@
       }
     ],
     "level": 2,
-    "wordType": "mw",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "mw"
   },
   {
     "id": "hsk2_0213",
@@ -7160,13 +5882,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0214",
@@ -7192,13 +5908,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0215",
@@ -7226,13 +5936,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0216",
@@ -7258,13 +5962,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0217",
@@ -7290,13 +5988,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0218",
@@ -7322,13 +6014,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0219",
@@ -7354,13 +6040,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0220",
@@ -7387,13 +6067,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0221",
@@ -7419,13 +6093,7 @@
       }
     ],
     "level": 2,
-    "wordType": "prep",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "prep"
   },
   {
     "id": "hsk2_0222",
@@ -7452,13 +6120,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0223",
@@ -7485,13 +6147,7 @@
       }
     ],
     "level": 2,
-    "wordType": "prep",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "prep"
   },
   {
     "id": "hsk2_0224",
@@ -7519,13 +6175,7 @@
       }
     ],
     "level": 2,
-    "wordType": "pron",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "pron"
   },
   {
     "id": "hsk2_0225",
@@ -7552,13 +6202,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0226",
@@ -7584,13 +6228,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0227",
@@ -7622,13 +6260,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0228",
@@ -7654,13 +6286,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0229",
@@ -7688,13 +6314,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0230",
@@ -7721,13 +6341,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0231",
@@ -7753,13 +6367,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0232",
@@ -7785,13 +6393,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0233",
@@ -7817,13 +6419,7 @@
       }
     ],
     "level": 2,
-    "wordType": "prep",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "prep"
   },
   {
     "id": "hsk2_0234",
@@ -7849,13 +6445,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0235",
@@ -7882,13 +6472,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0236",
@@ -7914,13 +6498,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0237",
@@ -7946,13 +6524,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0238",
@@ -7979,13 +6551,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0239",
@@ -8012,13 +6578,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:34.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0240",
@@ -8054,13 +6614,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0241",
@@ -8087,13 +6641,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0242",
@@ -8121,13 +6669,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0243",
@@ -8154,13 +6696,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0244",
@@ -8192,13 +6728,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0245",
@@ -8230,13 +6760,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0246",
@@ -8263,13 +6787,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0247",
@@ -8296,13 +6814,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0248",
@@ -8334,13 +6846,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0249",
@@ -8367,13 +6873,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0250",
@@ -8405,13 +6905,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0251",
@@ -8438,13 +6932,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0252",
@@ -8471,13 +6959,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0253",
@@ -8504,13 +6986,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0254",
@@ -8537,13 +7013,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0255",
@@ -8570,13 +7040,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0256",
@@ -8613,13 +7077,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0257",
@@ -8646,13 +7104,7 @@
       }
     ],
     "level": 2,
-    "wordType": "conj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "conj"
   },
   {
     "id": "hsk2_0258",
@@ -8679,13 +7131,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0259",
@@ -8712,13 +7158,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0260",
@@ -8745,13 +7185,7 @@
       }
     ],
     "level": 2,
-    "wordType": "aux",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "aux"
   },
   {
     "id": "hsk2_0261",
@@ -8783,13 +7217,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0262",
@@ -8815,13 +7243,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0263",
@@ -8848,13 +7270,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0264",
@@ -8881,13 +7297,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0265",
@@ -8914,13 +7324,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0266",
@@ -8946,13 +7350,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0267",
@@ -8978,13 +7376,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0268",
@@ -9016,13 +7408,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0269",
@@ -9049,13 +7435,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:36.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0270",
@@ -9092,13 +7472,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0271",
@@ -9134,13 +7508,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0272",
@@ -9171,13 +7539,7 @@
       }
     ],
     "level": 2,
-    "wordType": "mw",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "mw"
   },
   {
     "id": "hsk2_0273",
@@ -9204,13 +7566,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0274",
@@ -9236,13 +7592,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0275",
@@ -9268,13 +7618,7 @@
       }
     ],
     "level": 2,
-    "wordType": "aux",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "aux"
   },
   {
     "id": "hsk2_0276",
@@ -9305,13 +7649,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0277",
@@ -9338,13 +7676,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0278",
@@ -9371,13 +7703,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0279",
@@ -9404,13 +7730,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0280",
@@ -9437,13 +7757,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0281",
@@ -9470,13 +7784,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0282",
@@ -9503,13 +7811,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0283",
@@ -9536,13 +7838,7 @@
       }
     ],
     "level": 2,
-    "wordType": "v",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "v"
   },
   {
     "id": "hsk2_0284",
@@ -9569,13 +7865,7 @@
       }
     ],
     "level": 2,
-    "wordType": "pron",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "pron"
   },
   {
     "id": "hsk2_0285",
@@ -9602,13 +7892,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0286",
@@ -9634,13 +7918,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0287",
@@ -9666,13 +7944,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adv",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "adv"
   },
   {
     "id": "hsk2_0288",
@@ -9704,13 +7976,7 @@
       }
     ],
     "level": 2,
-    "wordType": "adj",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "adj"
   },
   {
     "id": "hsk2_0289",
@@ -9742,13 +8008,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0290",
@@ -9775,13 +8035,7 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "n"
   },
   {
     "id": "hsk2_0291",
@@ -9808,12 +8062,6 @@
       }
     ],
     "level": 2,
-    "wordType": "n",
-    "isBookmarked": false,
-    "isMastered": false,
-    "repetitions": 0,
-    "easeFactor": 2.5,
-    "interval": 0,
-    "nextReview": "2026-04-14T08:00:37.000Z"
+    "wordType": "n"
   }
 ]

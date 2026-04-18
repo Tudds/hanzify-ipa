@@ -1,0 +1,1687 @@
+[
+  {
+    "id": "g_de_comp",
+    "title": "Bổ ngữ trình độ 得",
+    "structure": "V + 得 + 评价",
+    "explanation": "Bổ ngữ trình độ 用「得」连接动词和评价成分，用来描述动作的结果或质量。当我们要评价某人做某事的效果如何时，就需要用这个结构。「得」放在动词后面，评价部分可以是形容词或形容词短语。注意：如果动词有宾语，需要重复动词或把宾语提前。",
+    "level": 2,
+    "category": "complement",
+    "formulaParts": [
+      {
+        "text": "V",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "得",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "评价",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "📊",
+        "title": "Đánh giá trình độ",
+        "description": "Đánh giá kết quả hoặc trình độ của hành động, ví dụ như nói giỏi, chạy nhanh."
+      },
+      {
+        "icon": "🎯",
+        "title": "Mức độ hoàn thành",
+        "description": "Diễn tả mức độ hoàn thành của một hành động, ví dụ làm tốt, viết đẹp."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "他说中文说得很好。",
+        "pinyin": "Tā shuō Zhōngwén shuō de hěn hǎo.",
+        "vi": "Anh ấy nói tiếng Trung rất giỏi."
+      },
+      {
+        "zh": "她做饭做得特别好吃。",
+        "pinyin": "Tā zuò fàn zuò de tèbié hǎochī.",
+        "vi": "Cô ấy nấu ăn đặc biệt ngon."
+      },
+      {
+        "zh": "你游泳游得快不快？",
+        "pinyin": "Nǐ yóuyǒng yóu de kuài bu kuài?",
+        "vi": "Bạn bơi nhanh không?"
+      },
+      {
+        "zh": "那个孩子唱歌唱得很可爱。",
+        "pinyin": "Nàge háizi chànggē chàng de hěn kě'ài.",
+        "vi": "Đứa trẻ kia hát rất đáng yêu."
+      }
+    ],
+    "exampleTags": [
+      "ĐÁNH GIÁ",
+      "TRÌNH ĐỘ"
+    ],
+    "relatedGrammar": [
+      "g_de_attr",
+      "g_bi"
+    ]
+  },
+  {
+    "id": "g_bi",
+    "title": "Câu so sánh 比",
+    "structure": "A + 比 + B + Adj",
+    "explanation": "「比」用来比较两个人或事物的某种属性，表示A在某方面超过B。形容词前面不能加「很」，但可以加数量补语来说明差距大小，比如「大两岁」。这是中文中最基本、最常用的比较句式。",
+    "level": 2,
+    "category": "comparison",
+    "formulaParts": [
+      {
+        "text": "A",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "比",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "B",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "Adj",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "⚖️",
+        "title": "So sánh hơn",
+        "description": "So sánh hai đối tượng, chỉ ra cái nào hơn cái nào về một tính chất nào đó."
+      },
+      {
+        "icon": "📏",
+        "title": "So sánh với mức độ",
+        "description": "Có thể thêm số lượng để chỉ rõ mức độ chênh lệch, ví dụ: 高五厘米."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "今天比昨天冷。",
+        "pinyin": "Jīntiān bǐ zuótiān lěng.",
+        "vi": "Hôm nay lạnh hơn hôm qua."
+      },
+      {
+        "zh": "我比我哥哥矮三厘米。",
+        "pinyin": "Wǒ bǐ wǒ gēge ǎi sān límiǐ.",
+        "vi": "Tôi thấp hơn anh trai ba xen-ti-mét."
+      },
+      {
+        "zh": "这个手机比那个贵多了。",
+        "pinyin": "Zhège shǒujī bǐ nàge guì duō le.",
+        "vi": "Điện thoại này đắt hơn cái kia nhiều."
+      },
+      {
+        "zh": "她比我更喜欢看电影。",
+        "pinyin": "Tā bǐ wǒ gèng xǐhuan kàn diànyǐng.",
+        "vi": "Cô ấy thích xem phim hơn tôi."
+      }
+    ],
+    "exampleTags": [
+      "SO SÁNH",
+      "HƠN"
+    ],
+    "relatedGrammar": [
+      "g_de_comp",
+      "g_mei_you",
+      "g_geng",
+      "g_zui"
+    ]
+  },
+  {
+    "id": "g_guo",
+    "title": "Trợ từ động thái 过",
+    "structure": "V + 过",
+    "explanation": "「过」是 trợ từ động thái，放在动词后面表示曾经有过某种经历或体验。它强调的是过去的经验，而不是动作本身的结果。否定形式用「没（有）……过」。注意区分「过」和「了」：「过」侧重经历，「了」侧重完成。",
+    "level": 2,
+    "category": "aspect",
+    "formulaParts": [
+      {
+        "text": "V",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "过",
+        "isHighlighted": true
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🔄",
+        "title": "Kinh nghiệm trong quá khứ",
+        "description": "Diễn tả một trải nghiệm đã từng xảy ra trong quá khứ, không限定时间。"
+      },
+      {
+        "icon": "❌",
+        "title": "Phủ định kinh nghiệm",
+        "description": "Dùng「没(有)……过」để nói chưa từng có trải nghiệm đó."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "我去过中国。",
+        "pinyin": "Wǒ qù guo Zhōngguó.",
+        "vi": "Tôi đã từng đi Trung Quốc."
+      },
+      {
+        "zh": "你吃过越南菜吗？",
+        "pinyin": "Nǐ chī guo Yuènnán cài ma?",
+        "vi": "Bạn đã từng ăn món Việt chưa?"
+      },
+      {
+        "zh": "我没学过日语。",
+        "pinyin": "Wǒ méi xué guo Rìyǔ.",
+        "vi": "Tôi chưa từng học tiếng Nhật."
+      },
+      {
+        "zh": "他以前来过这里。",
+        "pinyin": "Tā yǐqián lái guo zhèlǐ.",
+        "vi": "Trước đây anh ấy đã từng đến đây."
+      }
+    ],
+    "exampleTags": [
+      "KINH NGHIỆM",
+      "QUÁ KHỨ"
+    ],
+    "relatedGrammar": [
+      "g_mei_le",
+      "g_yijing_le"
+    ]
+  },
+  {
+    "id": "g_mei_le",
+    "title": "Phủ định + thay đổi 没…了",
+    "structure": "S + 没 + V + 了",
+    "explanation": "「没……了」用来表示某种状态已经不再继续，或者某种情况发生了变化。它是「了」字句的否定形式，与「不……了」不同：「没」否定的是动作的发生，「不」否定的是意愿。这个结构常用来表达「不再做某事」或「某事没有发生」。",
+    "level": 2,
+    "category": "aspect",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "没",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "了",
+        "isHighlighted": true
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🚫",
+        "title": "Phủ định sự thay đổi",
+        "description": "Diễn tả một hành động không xảy ra hoặc một trạng thái không còn tiếp tục."
+      },
+      {
+        "icon": "⏳",
+        "title": "Trạng thái không còn",
+        "description": "Chỉ ra rằng tình trạng trước đây đã thay đổi, hiện tại không còn như vậy nữa."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "他没来了。",
+        "pinyin": "Tā méi lái le.",
+        "vi": "Anh ấy không đến nữa."
+      },
+      {
+        "zh": "我没买了。",
+        "pinyin": "Wǒ méi mǎi le.",
+        "vi": "Tôi không mua nữa."
+      },
+      {
+        "zh": "雨没下了。",
+        "pinyin": "Yǔ méi xià le.",
+        "vi": "Mưa không rơi nữa."
+      },
+      {
+        "zh": "她没吃了早饭就去上课了。",
+        "pinyin": "Tā méi chī le zǎofàn jiù qù shàngkè le.",
+        "vi": "Cô ấy đã không ăn sáng mà đi học luôn."
+      }
+    ],
+    "exampleTags": [
+      "PHỦ ĐỊNH",
+      "THAY ĐỔI"
+    ],
+    "relatedGrammar": [
+      "g_neg_mei",
+      "g_yijing_le",
+      "g_guo"
+    ]
+  },
+  {
+    "id": "g_yijing_le",
+    "title": "Đã…rồi 已经…了",
+    "structure": "S + 已经 + V + 了",
+    "explanation": "「已经……了」用来表示某个动作或状态在说话之前就已经完成或存在了。「已经」放在动词前面，「了」放在句末或动词后面，两者配合使用表示完成。这个结构强调动作完成的时间比预期的早，或者事情已经发生。",
+    "level": 2,
+    "category": "aspect",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "已经",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "了",
+        "isHighlighted": true
+      }
+    ],
+    "usages": [
+      {
+        "icon": "✅",
+        "title": "Hành động đã hoàn thành",
+        "description": "Diễn tả một hành động đã xong hoặc một trạng thái đã bắt đầu từ trước."
+      },
+      {
+        "icon": "⏰",
+        "title": "Sớm hơn dự kiến",
+        "description": "Nhấn mạnh rằng việc gì đó đã hoàn thành, thường sớm hơn mong đợi."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "他已经走了。",
+        "pinyin": "Tā yǐjīng zǒu le.",
+        "vi": "Anh ấy đã đi rồi."
+      },
+      {
+        "zh": "我们已经吃完饭了。",
+        "pinyin": "Wǒmen yǐjīng chī wán fàn le.",
+        "vi": "Chúng tôi đã ăn cơm xong rồi."
+      },
+      {
+        "zh": "这本书我已经看过了。",
+        "pinyin": "Zhè běn shū wǒ yǐjīng kàn guo le.",
+        "vi": "Quyển sách này tôi đã đọc rồi."
+      },
+      {
+        "zh": "现在已经十二点了。",
+        "pinyin": "Xiànzài yǐjīng shí'èr diǎn le.",
+        "vi": "Bây giờ đã mười hai giờ rồi."
+      }
+    ],
+    "exampleTags": [
+      "HOÀN THÀNH",
+      "THỜI GIAN"
+    ],
+    "relatedGrammar": [
+      "g_mei_le",
+      "g_guo",
+      "g_zai_V"
+    ]
+  },
+  {
+    "id": "g_zai_V",
+    "title": "Đang 在…",
+    "structure": "S + 正在 + V",
+    "explanation": "「正在」用来表示动作正在进行中，相当于越南语的「đang」。可以只用「在」或「正在」，语气从弱到强：「在」<「正在」<「正在……呢」。这个结构侧重于动作的进行状态，而不是动作的完成。",
+    "level": 2,
+    "category": "aspect",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "正在",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🎬",
+        "title": "Hành động đang diễn ra",
+        "description": "Chỉ ra rằng một hành động đang xảy ra ngay lúc nói."
+      },
+      {
+        "icon": "🔄",
+        "title": "Tiến hành tại thời điểm",
+        "description": "Nhấn mạnh việc gì đó đang được tiến hành, có thể thêm「呢」ở cuối câu."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "他正在吃饭。",
+        "pinyin": "Tā zhèngzài chīfàn.",
+        "vi": "Anh ấy đang ăn cơm."
+      },
+      {
+        "zh": "我们在学习中文呢。",
+        "pinyin": "Wǒmen zài xuéxí Zhōngwén ne.",
+        "vi": "Chúng tôi đang học tiếng Trung."
+      },
+      {
+        "zh": "妈妈正在做饭。",
+        "pinyin": "Māma zhèngzài zuò fàn.",
+        "vi": "Mẹ đang nấu cơm."
+      },
+      {
+        "zh": "你正在做什么？",
+        "pinyin": "Nǐ zhèngzài zuò shénme?",
+        "vi": "Bạn đang làm gì vậy?"
+      }
+    ],
+    "exampleTags": [
+      "ĐANG",
+      "TIẾN HÀNH"
+    ],
+    "relatedGrammar": [
+      "g_yijing_le",
+      "g_zhe"
+    ]
+  },
+  {
+    "id": "g_zhe",
+    "title": "Trạng thái V着",
+    "structure": "V + 着 + (O)",
+    "explanation": "「着」是 trợ từ động thái，放在动词后面表示动作产生的状态持续存在。与「正在」不同，「着」强调的是状态的延续而不是动作的进行。「着」常用于描述伴随状态，即一个动作伴随另一个动作同时存在。",
+    "level": 2,
+    "category": "aspect",
+    "formulaParts": [
+      {
+        "text": "V",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "着",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "(O)",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🔁",
+        "title": "Trạng thái tiếp diễn",
+        "description": "Diễn tả trạng thái do một hành động tạo ra đang tiếp tục tồn tại."
+      },
+      {
+        "icon": "👥",
+        "title": "Trạng thái đồng thời",
+        "description": "Mô tả hai hành động xảy ra đồng thời, một hành động làm nền cho hành động kia."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "门开着呢。",
+        "pinyin": "Mén kāi zhe ne.",
+        "vi": "Cửa đang mở."
+      },
+      {
+        "zh": "他笑着对我说谢谢。",
+        "pinyin": "Tā xiào zhe duì wǒ shuō xièxie.",
+        "vi": "Anh ấy cười nói với tôi cảm ơn."
+      },
+      {
+        "zh": "她穿着红色的衣服。",
+        "pinyin": "Tā chuān zhe hóngsè de yīfu.",
+        "vi": "Cô ấy mặc quần áo màu đỏ."
+      },
+      {
+        "zh": "桌子上放着一本书。",
+        "pinyin": "Zhuōzi shàng fàng zhe yì běn shū.",
+        "vi": "Trên bàn để một quyển sách."
+      }
+    ],
+    "exampleTags": [
+      "TRẠNG THÁI",
+      "TIẾP DIỄN"
+    ],
+    "relatedGrammar": [
+      "g_zai_V",
+      "g_de_attr"
+    ]
+  },
+  {
+    "id": "g_jiu",
+    "title": "Thì/就",
+    "structure": "S + 就 + V",
+    "explanation": "「就」是副词，放在动词前面，表示动作发生得快、早或者紧接在前一个动作之后。它也可以表示在某种条件下自然产生的结果，相当于越南语的「thì」或「liền」。在时间表达中，「就」暗示比预期早或快。",
+    "level": 2,
+    "category": "basic",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "就",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "⚡",
+        "title": "Nhanh chóng / Sớm",
+        "description": "Chỉ hành động diễn ra sớm hoặc nhanh hơn dự kiến."
+      },
+      {
+        "icon": "🔗",
+        "title": "Kết quả tự nhiên",
+        "description": "Diễn tả kết quả tất yếu hoặc hành động nối tiếp ngay sau."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "我吃完饭就去。",
+        "pinyin": "Wǒ chī wán fàn jiù qù.",
+        "vi": "Tôi ăn cơm xong thì đi."
+      },
+      {
+        "zh": "他八点就来了。",
+        "pinyin": "Tā bā diǎn jiù lái le.",
+        "vi": "Anh ấy tám giờ đã đến rồi (sớm hơn dự kiến)."
+      },
+      {
+        "zh": "你来了我就走。",
+        "pinyin": "Nǐ lái le wǒ jiù zǒu.",
+        "vi": "Bạn đến thì tôi đi."
+      },
+      {
+        "zh": "明天我就考试了。",
+        "pinyin": "Míngtiān wǒ jiù kǎoshì le.",
+        "vi": "Ngày mai tôi sẽ thi ngay."
+      }
+    ],
+    "exampleTags": [
+      "SỚM",
+      "KẾT QUẢ"
+    ],
+    "relatedGrammar": [
+      "g_cai",
+      "g_ruguo"
+    ]
+  },
+  {
+    "id": "g_cai",
+    "title": "Mới/才",
+    "structure": "S + 才 + V",
+    "explanation": "「才」是副词，放在动词前面，表示动作发生得晚或慢，与「就」正好相反。它也可以表示只有在某种条件下才会发生某事，相当于越南语的「mới」。在时间表达中，「才」暗示比预期晚或迟。",
+    "level": 2,
+    "category": "basic",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "才",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🐢",
+        "title": "Chậm trễ / Muộn",
+        "description": "Chỉ hành động diễn ra muộn hoặc chậm hơn dự kiến."
+      },
+      {
+        "icon": "🔒",
+        "title": "Điều kiện cần thiết",
+        "description": "Chỉ ra rằng chỉ khi có điều kiện nào đó thì hành động mới xảy ra."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "他十一点才来。",
+        "pinyin": "Tā shíyī diǎn cái lái.",
+        "vi": "Anh ấy mười một giờ mới đến (muộn hơn dự kiến)."
+      },
+      {
+        "zh": "我昨天晚上十二点才睡觉。",
+        "pinyin": "Wǒ zuótiān wǎnshang shí'èr diǎn cái shuìjiào.",
+        "vi": "Tối qua tôi đến mười hai giờ mới đi ngủ."
+      },
+      {
+        "zh": "你说了我才明白。",
+        "pinyin": "Nǐ shuō le wǒ cái míngbái.",
+        "vi": "Bạn nói rồi tôi mới hiểu."
+      },
+      {
+        "zh": "学了三年中文才说得这么好。",
+        "pinyin": "Xué le sān nián Zhōngwén cái shuō de zhème hǎo.",
+        "vi": "Học ba năm tiếng Trung mới nói giỏi như vậy."
+      }
+    ],
+    "exampleTags": [
+      "MUỘN",
+      "ĐIỀU KIỆN"
+    ],
+    "relatedGrammar": [
+      "g_jiu",
+      "g_zhi"
+    ]
+  },
+  {
+    "id": "g_yinwei_suoyi",
+    "title": "Vì…nên 因为…所以",
+    "structure": "因为 + S₁ + V₁，所以 + S₂ + V₂",
+    "explanation": "「因为……所以……」是用来表示因果关系的连词搭配，「因为」引出原因，「所以」引出结果。这是中文中最基本的因果表达方式。可以只说「因为」或只说「所以」，但两者一起用语气最完整。注意：中文因果关系是原因在前，结果在后。",
+    "level": 2,
+    "category": "conjunction",
+    "formulaParts": [
+      {
+        "text": "因为",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "原因",
+        "isHighlighted": false
+      },
+      {
+        "text": "，",
+        "isHighlighted": false
+      },
+      {
+        "text": "所以",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "结果",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🔗",
+        "title": "Nguyên nhân - Kết quả",
+        "description": "Nêu rõ nguyên nhân và kết quả, lý do và sự việc tương ứng."
+      },
+      {
+        "icon": "💡",
+        "title": "Giải thích lý do",
+        "description": "Dùng để giải thích vì sao một việc nào đó xảy ra hoặc được quyết định."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "因为下雨，所以我不去公园了。",
+        "pinyin": "Yīnwèi xià yǔ, suǒyǐ wǒ bú qù gōngyuán le.",
+        "vi": "Vì trời mưa nên tôi không đi công viên nữa."
+      },
+      {
+        "zh": "因为他生病了，所以没来上课。",
+        "pinyin": "Yīnwèi tā shēngbìng le, suǒyǐ méi lái shàngkè.",
+        "vi": "Vì anh ấy bị ốm nên không đến lớp."
+      },
+      {
+        "zh": "因为太累了，所以我早睡了。",
+        "pinyin": "Yīnwèi tài lèi le, suǒyǐ wǒ zǎo shuì le.",
+        "vi": "Vì quá mệt nên tôi đi ngủ sớm."
+      },
+      {
+        "zh": "因为今天是周末，所以商场里人很多。",
+        "pinyin": "Yīnwèi jīntiān shì zhōumò, suǒyǐ shāngchǎng lǐ rén hěn duō.",
+        "vi": "Vì hôm nay là cuối tuần nên trong siêu thị rất đông người."
+      }
+    ],
+    "exampleTags": [
+      "NGUYÊN NHÂN",
+      "KẾT QUẢ"
+    ],
+    "relatedGrammar": [
+      "g_ruguo",
+      "g_chu_le"
+    ]
+  },
+  {
+    "id": "g_ruguo",
+    "title": "Nếu…thì 如果…就",
+    "structure": "如果 + S₁ + V₁，S₂ + 就 + V₂",
+    "explanation": "「如果……就……」用来表示假设关系，「如果」引出假设条件，「就」引出在这种条件下会产生的结果。相当于越南语的「nếu…thì」。这个结构常用于谈论可能发生的情况或提出建议。可以省略「如果」，只用「就」也可以。",
+    "level": 2,
+    "category": "conjunction",
+    "formulaParts": [
+      {
+        "text": "如果",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "条件",
+        "isHighlighted": false
+      },
+      {
+        "text": "，",
+        "isHighlighted": false
+      },
+      {
+        "text": "就",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "结果",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🔮",
+        "title": "Giả định",
+        "description": "Đưa ra một tình huống giả định và kết quả tương ứng."
+      },
+      {
+        "icon": "💬",
+        "title": "Đưa ra建议",
+        "description": "Dùng cấu trúc này để đưa ra gợi ý hoặc lời khuyên."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "如果明天不下雨，我们就去爬山。",
+        "pinyin": "Rúguǒ míngtiān bù xià yǔ, wǒmen jiù qù páshān.",
+        "vi": "Nếu ngày mai không mưa, chúng tôi sẽ đi leo núi."
+      },
+      {
+        "zh": "如果你有时间，就来我家玩吧。",
+        "pinyin": "Rúguǒ nǐ yǒu shíjiān, jiù lái wǒ jiā wán ba.",
+        "vi": "Nếu bạn có thời gian, thì đến nhà tôi chơi nhé."
+      },
+      {
+        "zh": "如果太贵，我就不买了。",
+        "pinyin": "Rúguǒ tài guì, wǒ jiù bù mǎi le.",
+        "vi": "Nếu quá đắt, tôi thì không mua."
+      },
+      {
+        "zh": "如果不舒服，就去看医生。",
+        "pinyin": "Rúguǒ bù shūfu, jiù qù kàn yīshēng.",
+        "vi": "Nếu không khỏe, thì đi khám bác sĩ."
+      }
+    ],
+    "exampleTags": [
+      "GIẢ ĐỊNH",
+      "ĐIỀU KIỆN"
+    ],
+    "relatedGrammar": [
+      "g_yinwei_suoyi",
+      "g_jiu",
+      "g_cai"
+    ]
+  },
+  {
+    "id": "g_huozhe",
+    "title": "Hoặc 或者/还是",
+    "structure": "A + 或者/还是 + B",
+    "explanation": "「或者」和「还是」都表示选择，但用法不同。「或者」用于陈述句中表示「hoặc」，列举可能性；「还是」用于疑问句中表示「hay là」，询问对方的选择。简单记忆：陈述句用「或者」，疑问句用「还是」。",
+    "level": 2,
+    "category": "conjunction",
+    "formulaParts": [
+      {
+        "text": "A",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "或者/还是",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "B",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🔀",
+        "title": "Lựa chọn (trần thuật)",
+        "description": "Dùng「或者」trong câu trần thuật để liệt kê các lựa chọn."
+      },
+      {
+        "icon": "❓",
+        "title": "Lựa chọn (nghi vấn)",
+        "description": "Dùng「还是」trong câu hỏi để hỏi người nghe chọn cái nào."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "我们周末或者去公园或者去看电影。",
+        "pinyin": "Wǒmen zhōumò huòzhě qù gōngyuán huòzhě qù kàn diànyǐng.",
+        "vi": "Cuối tuần chúng tôi hoặc đi công viên hoặc đi xem phim."
+      },
+      {
+        "zh": "你喝茶还是喝咖啡？",
+        "pinyin": "Nǐ hē chá háishì hē kāfēi?",
+        "vi": "Bạn uống trà hay cà phê?"
+      },
+      {
+        "zh": "你明天来还是后天来？",
+        "pinyin": "Nǐ míngtiān lái háishì hòutiān lái?",
+        "vi": "Ngày mai bạn đến hay ngày kia đến?"
+      },
+      {
+        "zh": "他或者小王会去开会。",
+        "pinyin": "Tā huòzhě Xiǎo Wáng huì qù kāihuì.",
+        "vi": "Anh ấy hoặc Tiểu Vương sẽ đi họp."
+      }
+    ],
+    "exampleTags": [
+      "LỰA CHỌN",
+      "NGHI VẤN"
+    ],
+    "relatedGrammar": [
+      "g_haishi",
+      "g_gen"
+    ]
+  },
+  {
+    "id": "g_gen",
+    "title": "Cùng 跟",
+    "structure": "S + 跟 + O + V",
+    "explanation": "「跟」是介词，相当于越南语的「cùng (với)」，用来引出动作的共同参与者。它表示主语和「跟」后面的对象一起做某事。「跟」后面可以加人，也可以加事物，表示比较或关联的对象。",
+    "level": 2,
+    "category": "basic",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "跟",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "O",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🤝",
+        "title": "Cùng làm với ai",
+        "description": "Diễn tả việc cùng nhau thực hiện hành động với người khác."
+      },
+      {
+        "icon": "💬",
+        "title": "Tương tác với ai",
+        "description": "Chỉ ra đối tượng giao tiếp hoặc tương tác, như nói chuyện, hỏi, học."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "我跟我朋友一起去北京。",
+        "pinyin": "Wǒ gēn wǒ péngyou yìqǐ qù Běijīng.",
+        "vi": "Tôi cùng bạn tôi đi Bắc Kinh."
+      },
+      {
+        "zh": "你跟谁说话？",
+        "pinyin": "Nǐ gēn shéi shuōhuà?",
+        "vi": "Bạn đang nói chuyện với ai?"
+      },
+      {
+        "zh": "我跟老师学了两年中文。",
+        "pinyin": "Wǒ gēn lǎoshī xué le liǎng nián Zhōngwén.",
+        "vi": "Tôi học tiếng Trung với thầy giáo hai năm."
+      },
+      {
+        "zh": "这件事跟我没关系。",
+        "pinyin": "Zhè jiàn shì gēn wǒ méi guānxi.",
+        "vi": "Chuyện này không liên quan đến tôi."
+      }
+    ],
+    "exampleTags": [
+      "CÙNG",
+      "TƯƠNG TÁC"
+    ],
+    "relatedGrammar": [
+      "g_huozhe",
+      "g_bi"
+    ]
+  },
+  {
+    "id": "g_chu_le",
+    "title": "Ngoài…ra 除了…还",
+    "structure": "除了 + A + 还/也 + B",
+    "explanation": "「除了……还/也……」用来表示除A之外，还有B，相当于越南语的「ngoài…còn」。这个结构强调事物的补充和叠加，说明不仅有前面提到的情况，还有后面的情况。用「还」语气较强，用「也」语气较平。",
+    "level": 2,
+    "category": "conjunction",
+    "formulaParts": [
+      {
+        "text": "除了",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "A",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "还/也",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "B",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "➕",
+        "title": "Bổ sung thêm",
+        "description": "Nêu thêm một sự việc khác ngoài sự việc đã nhắc đến, tạo sự bổ sung."
+      },
+      {
+        "icon": "📋",
+        "title": "Liệt kê mở rộng",
+        "description": "Dùng để mở rộng phạm vi讨论, chỉ ra không chỉ A mà cả B đều đúng."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "除了中文，我还会说英语。",
+        "pinyin": "Chúle Zhōngwén, wǒ hái huì shuō Yīngyǔ.",
+        "vi": "Ngoài tiếng Trung, tôi còn biết nói tiếng Anh."
+      },
+      {
+        "zh": "除了苹果，他还买了香蕉。",
+        "pinyin": "Chúle píngguǒ, tā hái mǎi le xiāngjiāo.",
+        "vi": "Ngoài táo, anh ấy còn mua chuối."
+      },
+      {
+        "zh": "除了小王，我也去了。",
+        "pinyin": "Chúle Xiǎo Wáng, wǒ yě qù le.",
+        "vi": "Ngoài Tiểu Vương, tôi cũng đã đi."
+      },
+      {
+        "zh": "除了学习，她还喜欢运动。",
+        "pinyin": "Chúle xuéxí, tā hái xǐhuan yùndòng.",
+        "vi": "Ngoài việc học, cô ấy còn thích thể thao."
+      }
+    ],
+    "exampleTags": [
+      "BỔ SUNG",
+      "LIỆT KÊ"
+    ],
+    "relatedGrammar": [
+      "g_lian",
+      "g_yinwei_suoyi"
+    ]
+  },
+  {
+    "id": "g_lian",
+    "title": "Ngay cả 连…都",
+    "structure": "连 + O + 都/也 + V",
+    "explanation": "「连……都/也……」用来强调某种极端的情况，表示连最不可能的情况都发生了，更何况其他。相当于越南语的「ngay cả…cũng」。这个结构常用于表达惊讶、感叹或强调语气，突出事情的出人意料。",
+    "level": 2,
+    "category": "basic",
+    "formulaParts": [
+      {
+        "text": "连",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "O",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "都/也",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "😮",
+        "title": "Nhấn mạnh mức độ",
+        "description": "Dùng để nhấn mạnh mức độ phi thường hoặc ngoài dự kiến của sự việc."
+      },
+      {
+        "icon": "🔥",
+        "title": "Trường hợp cực đoan",
+        "description": "Nêu ra trường hợp cực đoan nhất để nói lên rằng tất cả các trường hợp khác cũng đúng."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "他连自己的名字都不会写。",
+        "pinyin": "Tā lián zìjǐ de míngzi dōu bú huì xiě.",
+        "vi": "Anh ấy ngay cả tên mình cũng không biết viết."
+      },
+      {
+        "zh": "今天连小孩子都去上学了。",
+        "pinyin": "Jīntiān lián xiǎoháizi dōu qù shàngxué le.",
+        "vi": "Hôm nay ngay cả trẻ con cũng đi học."
+      },
+      {
+        "zh": "我连早饭都没吃就来上班了。",
+        "pinyin": "Wǒ lián zǎofàn dōu méi chī jiù lái shàngbān le.",
+        "vi": "Tôi ngay cả sáng cũng chưa ăn đã đi làm."
+      },
+      {
+        "zh": "这个问题连老师都不知道。",
+        "pinyin": "Zhège wèntí lián lǎoshī dōu bù zhīdào.",
+        "vi": "Câu hỏi này ngay cả giáo viên cũng không biết."
+      }
+    ],
+    "exampleTags": [
+      "NHẤN MẠNH",
+      "CỰC ĐOAN"
+    ],
+    "relatedGrammar": [
+      "g_chu_le",
+      "g_zhi"
+    ]
+  },
+  {
+    "id": "g_yue_yue",
+    "title": "Càng…càng 越…越",
+    "structure": "越 + Adj/V + 越 + Adj",
+    "explanation": "「越……越……」用来表示两种情况按同比例增长，一个程度加深，另一个也跟着加深。相当于越南语的「càng…càng」。前面是条件，后面是结果，两者相互促进。两个「越」后面可以是相同的或不同的形容词/动词。",
+    "level": 2,
+    "category": "comparison",
+    "formulaParts": [
+      {
+        "text": "越",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "Adj/V",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "越",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "Adj",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "📈",
+        "title": "Tăng tiến đồng bộ",
+        "description": "Chỉ ra hai sự việc cùng tăng tiến theo cùng chiều hướng."
+      },
+      {
+        "icon": "🔄",
+        "title": "Quan hệ tỷ lệ thuận",
+        "description": "Diễn tả quan hệ tỷ lệ thuận: cái này tăng thì cái kia cũng tăng theo."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "越学越有意思。",
+        "pinyin": "Yuè xué yuè yǒu yìsi.",
+        "vi": "Càng học càng thú vị."
+      },
+      {
+        "zh": "天气越来越冷了。",
+        "pinyin": "Tiānqì yuè lái yuè lěng le.",
+        "vi": "Thời tiết càng ngày càng lạnh."
+      },
+      {
+        "zh": "他越跑越快。",
+        "pinyin": "Tā yuè pǎo yuè kuài.",
+        "vi": "Anh ấy càng chạy càng nhanh."
+      },
+      {
+        "zh": "这个电影越看越好看。",
+        "pinyin": "Zhège diànyǐng yuè kàn yuè hǎokàn.",
+        "vi": "Bộ phim này càng xem càng hay."
+      }
+    ],
+    "exampleTags": [
+      "TĂNG TIẾN",
+      "SO SÁNH"
+    ],
+    "relatedGrammar": [
+      "g_bi",
+      "g_geng",
+      "g_zui"
+    ]
+  },
+  {
+    "id": "g_you_you",
+    "title": "Vừa…vừa 又…又",
+    "structure": "又 + Adj + 又 + Adj",
+    "explanation": "「又……又……」用来同时描述两种特征或状态，表示两者同时存在。相当于越南语的「vừa…vừa」。两个「又」后面的成分结构应该对称，可以是形容词、动词或动词短语。这个结构强调两种性质的并存。",
+    "level": 2,
+    "category": "basic",
+    "formulaParts": [
+      {
+        "text": "又",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "Adj/V",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "又",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "Adj/V",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🎭",
+        "title": "Đặc điểm song song",
+        "description": "Diễn tả một sự vật đồng thời có hai đặc điểm hoặc tính chất."
+      },
+      {
+        "icon": "✨",
+        "title": "Miêu tả đa chiều",
+        "description": "Dùng để miêu tả phong phú hơn về một đối tượng, nhấn mạnh sự kết hợp."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "这个苹果又大又甜。",
+        "pinyin": "Zhège píngguǒ yòu dà yòu tián.",
+        "vi": "Quả táo này vừa to vừa ngọt."
+      },
+      {
+        "zh": "她又漂亮又聪明。",
+        "pinyin": "Tā yòu piàoliang yòu cōngming.",
+        "vi": "Cô ấy vừa xinh vừa thông minh."
+      },
+      {
+        "zh": "今天又刮风又下雨。",
+        "pinyin": "Jīntiān yòu guā fēng yòu xià yǔ.",
+        "vi": "Hôm nay vừa gió vừa mưa."
+      },
+      {
+        "zh": "这道菜又好吃又便宜。",
+        "pinyin": "Zhè dào cài yòu hǎochī yòu piányi.",
+        "vi": "Món ăn này vừa ngon vừa rẻ."
+      }
+    ],
+    "exampleTags": [
+      "SONG SONG",
+      "MIÊU TẢ"
+    ],
+    "relatedGrammar": [
+      "g_yue_yue",
+      "g_chu_le"
+    ]
+  },
+  {
+    "id": "g_haishi",
+    "title": "Hay là 还是",
+    "structure": "A + 还是 + B + ？",
+    "explanation": "「还是」用于疑问句中表示选择，相当于越南语的「hay là」。注意「还是」只能用在疑问句中（包括正反问句和选择问句），不能用于陈述句。在陈述句中要用「或者」来表示选择。这是初学者常犯的错误。",
+    "level": 2,
+    "category": "conjunction",
+    "formulaParts": [
+      {
+        "text": "A",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "还是",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "B",
+        "isHighlighted": false
+      },
+      {
+        "text": "？",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "❓",
+        "title": "Hỏi lựa chọn",
+        "description": "Dùng trong câu hỏi để yêu cầu người nghe chọn một trong các lựa chọn."
+      },
+      {
+        "icon": "🤔",
+        "title": "Hỏi ý kiến",
+        "description": "Hỏi ý kiến người khác về việc nên chọn cái nào."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "你是中国人还是越南人？",
+        "pinyin": "Nǐ shì Zhōngguó rén háishì Yuènnán rén?",
+        "vi": "Bạn là người Trung Quốc hay người Việt Nam?"
+      },
+      {
+        "zh": "我们去吃饭还是回家？",
+        "pinyin": "Wǒmen qù chīfàn háishì huí jiā?",
+        "vi": "Chúng ta đi ăn hay về nhà?"
+      },
+      {
+        "zh": "你喝热水还是凉水？",
+        "pinyin": "Nǐ hē rè shuǐ háishì liáng shuǐ?",
+        "vi": "Bạn uống nước nóng hay nước mát?"
+      },
+      {
+        "zh": "今天是星期六还是星期日？",
+        "pinyin": "Jīntiān shì xīngqīliù háishì xīngqīrì?",
+        "vi": "Hôm nay là thứ Bảy hay Chủ nhật?"
+      }
+    ],
+    "exampleTags": [
+      "NGHI VẤN",
+      "LỰA CHỌN"
+    ],
+    "relatedGrammar": [
+      "g_huozhe"
+    ]
+  },
+  {
+    "id": "g_zhi",
+    "title": "Chỉ 只",
+    "structure": "S + 只 + V + O",
+    "explanation": "「只」是副词，表示限定范围，相当于越南语的「chỉ」。它放在动词前面，限定动作的范围、数量，表示仅仅、唯一。用来强调数量少或范围小，含有排除其他的意味。",
+    "level": 2,
+    "category": "basic",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "只",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "O",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🎯",
+        "title": "Giới hạn phạm vi",
+        "description": "Giới hạn hành động trong một phạm vi nhỏ, không có gì khác ngoài điều đó."
+      },
+      {
+        "icon": "🔢",
+        "title": "Giới hạn số lượng",
+        "description": "Nhấn mạnh số lượng ít, chỉ có bấy nhiêu đó thôi."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "我只会说一点中文。",
+        "pinyin": "Wǒ zhǐ huì shuō yìdiǎn Zhōngwén.",
+        "vi": "Tôi chỉ biết nói một chút tiếng Trung."
+      },
+      {
+        "zh": "他只有一个哥哥。",
+        "pinyin": "Tā zhǐ yǒu yí ge gēge.",
+        "vi": "Anh ấy chỉ có một anh trai."
+      },
+      {
+        "zh": "我只想休息一下。",
+        "pinyin": "Wǒ zhǐ xiǎng xiūxi yíxià.",
+        "vi": "Tôi chỉ muốn nghỉ ngơi một chút."
+      },
+      {
+        "zh": "她只吃素不吃肉。",
+        "pinyin": "Tā zhǐ chī sù bù chī ròu.",
+        "vi": "Cô ấy chỉ ăn chay không ăn thịt."
+      }
+    ],
+    "exampleTags": [
+      "GIỚI HẠN",
+      "SỐ LƯỢNG"
+    ],
+    "relatedGrammar": [
+      "g_lian",
+      "g_cai",
+      "g_neg_bu"
+    ]
+  },
+  {
+    "id": "g_zui",
+    "title": "Nhất 最",
+    "structure": "S + 最 + Adj",
+    "explanation": "「最」是程度副词，表示在某个范围内程度达到最高，相当于越南语的「nhất」。它放在形容词前面，表示某个人或事物在某个方面超过所有其他的。可以用于比较三个人以上的情况，找出最突出的一个。",
+    "level": 2,
+    "category": "comparison",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "最",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "Adj",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🏆",
+        "title": "Cao nhất / Vượt trội nhất",
+        "description": "Chỉ ra mức độ cao nhất trong một nhóm hoặc phạm vi so sánh."
+      },
+      {
+        "icon": "⭐",
+        "title": "Ưu tiên số một",
+        "description": "Diễn tả sự vật hoặc người được yêu thích hoặc ưu tiên nhất."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "我最喜欢春天。",
+        "pinyin": "Wǒ zuì xǐhuan chūntiān.",
+        "vi": "Tôi thích mùa xuân nhất."
+      },
+      {
+        "zh": "他是我们班最高的学生。",
+        "pinyin": "Tā shì wǒmen bān zuì gāo de xuéshēng.",
+        "vi": "Anh ấy là học sinh cao nhất lớp chúng tôi."
+      },
+      {
+        "zh": "这家餐厅的菜最好吃。",
+        "pinyin": "Zhè jiā cāntīng de cài zuì hǎochī.",
+        "vi": "Món ăn của nhà hàng này ngon nhất."
+      },
+      {
+        "zh": "今天是最冷的一天。",
+        "pinyin": "Jīntiān shì zuì lěng de yì tiān.",
+        "vi": "Hôm nay là ngày lạnh nhất."
+      }
+    ],
+    "exampleTags": [
+      "SO SÁNH",
+      "CAO NHẤT"
+    ],
+    "relatedGrammar": [
+      "g_bi",
+      "g_geng",
+      "g_mei_you"
+    ]
+  },
+  {
+    "id": "g_geng",
+    "title": "Hơn 更",
+    "structure": "S + 更 + Adj",
+    "explanation": "「更」是程度副词，表示在原有基础上程度进一步加深，相当于越南语的「hơn」。与「最」不同，「更」不表示最高程度，而是表示「更加」。通常用于比较中，说明某个事物比另一个或比之前更进一步。",
+    "level": 2,
+    "category": "comparison",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "更",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "Adj",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "📈",
+        "title": "Tăng thêm mức độ",
+        "description": "Chỉ ra mức độ tăng lên so với trước đó hoặc so với đối tượng khác."
+      },
+      {
+        "icon": "⚖️",
+        "title": "So sánh hơn thêm",
+        "description": "Dùng trong so sánh để nhấn mạnh sự vượt trội thêm của một phía."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "今天比昨天更冷。",
+        "pinyin": "Jīntiān bǐ zuótiān gèng lěng.",
+        "vi": "Hôm nay lạnh hơn hôm qua."
+      },
+      {
+        "zh": "你应该更努力学习。",
+        "pinyin": "Nǐ yīnggāi gèng nǔlì xuéxí.",
+        "vi": "Bạn nên học chăm chỉ hơn."
+      },
+      {
+        "zh": "这个方法更好。",
+        "pinyin": "Zhège fāngfǎ gèng hǎo.",
+        "vi": "Phương pháp này tốt hơn."
+      },
+      {
+        "zh": "我想更了解中国文化。",
+        "pinyin": "Wǒ xiǎng gèng liǎojiě Zhōngguó wénhuà.",
+        "vi": "Tôi muốn hiểu hơn về văn hóa Trung Quốc."
+      }
+    ],
+    "exampleTags": [
+      "SO SÁNH",
+      "TĂNG MỨC"
+    ],
+    "relatedGrammar": [
+      "g_bi",
+      "g_zui",
+      "g_yue_yue"
+    ]
+  },
+  {
+    "id": "g_mei_you",
+    "title": "So sánh phủ định 没有",
+    "structure": "A + 没有 + B + Adj",
+    "explanation": "「没有」用于比较句中表示A不如B，相当于越南语的「không bằng」。这是「比」句的否定形式，但语气比「A不比B」更委婉。「没有」直接放在两个比较对象之间，结构比「比」句更简单。注意：「没有」比较句中形容词前不能加「很」。",
+    "level": 2,
+    "category": "comparison",
+    "formulaParts": [
+      {
+        "text": "A",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "没有",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "B",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "Adj",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "📉",
+        "title": "Không bằng",
+        "description": "Chỉ ra A không đạt mức độ của B về một tính chất nào đó."
+      },
+      {
+        "icon": "🔒",
+        "title": "Phủ định so sánh",
+        "description": "Dạng phủ định của câu so sánh, nói cái này không tốt/bằng cái kia."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "今天没有昨天冷。",
+        "pinyin": "Jīntiān méiyǒu zuótiān lěng.",
+        "vi": "Hôm nay không lạnh bằng hôm qua."
+      },
+      {
+        "zh": "他没有他哥哥高。",
+        "pinyin": "Tā méiyǒu tā gēge gāo.",
+        "vi": "Anh ấy không cao bằng anh trai."
+      },
+      {
+        "zh": "这个没有那个好看。",
+        "pinyin": "Zhège méiyǒu nàge hǎokàn.",
+        "vi": "Cái này không đẹp bằng cái kia."
+      },
+      {
+        "zh": "我的中文没有你的好。",
+        "pinyin": "Wǒ de Zhōngwén méiyǒu nǐ de hǎo.",
+        "vi": "Tiếng Trung của tôi không tốt bằng của bạn."
+      }
+    ],
+    "exampleTags": [
+      "SO SÁNH",
+      "PHỦ ĐỊNH"
+    ],
+    "relatedGrammar": [
+      "g_bi",
+      "g_geng",
+      "g_zui"
+    ]
+  }
+]

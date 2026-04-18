@@ -13,7 +13,7 @@ part of 'navigation_provider.dart';
 final navigationProvider = NavigationNotifierProvider._();
 
 final class NavigationNotifierProvider
-    extends $NotifierProvider<NavigationNotifier, String> {
+    extends $NotifierProvider<NavigationNotifier, NavState> {
   NavigationNotifierProvider._()
     : super(
         from: null,
@@ -33,28 +33,28 @@ final class NavigationNotifierProvider
   NavigationNotifier create() => NavigationNotifier();
 
   /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(String value) {
+  Override overrideWithValue(NavState value) {
     return $ProviderOverride(
       origin: this,
-      providerOverride: $SyncValueProvider<String>(value),
+      providerOverride: $SyncValueProvider<NavState>(value),
     );
   }
 }
 
 String _$navigationNotifierHash() =>
-    r'92d9101ebb6a31a4e31dc31be02f7c1dccdce9d4';
+    r'85b9828b08c7adfa18a8376034d1036ee742498e';
 
-abstract class _$NavigationNotifier extends $Notifier<String> {
-  String build();
+abstract class _$NavigationNotifier extends $Notifier<NavState> {
+  NavState build();
   @$mustCallSuper
   @override
   void runBuild() {
-    final ref = this.ref as $Ref<String, String>;
+    final ref = this.ref as $Ref<NavState, NavState>;
     final element =
         ref.element
             as $ClassProviderElement<
-              AnyNotifier<String, String>,
-              String,
+              AnyNotifier<NavState, NavState>,
+              NavState,
               Object?,
               Object?
             >;
