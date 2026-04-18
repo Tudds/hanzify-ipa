@@ -11,7 +11,7 @@ jobs:
     name: Build iOS (Unsigned)
     runs-on: macos-latest
     env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Loại bỏ cảnh báo Node.js 20
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repository
@@ -29,23 +29,18 @@ jobs:
       - name: Generate code (build_runner)
         run: dart run build_runner build --delete-conflicting-outputs
 
-      - name: Fix iOS Deployment Target (Pbxproj & Podfile)
+      - name: Fix iOS Deployment Target
         run: |
           # 1. Sửa trong project file
           sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = 13.0;/IPHONEOS_DEPLOYMENT_TARGET = 15.0;/g' ios/Runner.xcodeproj/project.pbxproj
           
-          # 2. Sinh ra Podfile chuẩn của Flutter
+          # 2. Sinh ra Podfile chuẩn
           flutter build ios --no-codesign --config-only
           
-          # 3. Ép toàn bộ Pods dùng iOS 15.0 để tránh lỗi NWPath
+          # 3. Chèn cấu hình 15.0 vào trong khối post_install có sẵn
           if [ -f ios/Podfile ]; then
-            echo "post_install do |installer|" >> ios/Podfile
-            echo "  installer.pods_project.targets.each do |target|" >> ios/Podfile
-            echo "    target.build_configurations.each do |config|" >> ios/Podfile
-            echo "      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'" >> ios/Podfile
-            echo "    end" >> ios/Podfile
-            echo "  end" >> ios/Podfile
-            echo "end" >> ios/Podfile
+            sed -i '' '/flutter_additional_ios_build_settings(target)/a \
+                target.build_configurations.each { |config| config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "15.0" }' ios/Podfile
           fi
 
       - name: Build iOS IPA (No Signing)
