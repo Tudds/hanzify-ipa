@@ -1,0 +1,45 @@
+name: iOS Build No Signing
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    name: Build iOS (Unsigned)
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Build iOS IPA (No Signing)
+        run: |
+          flutter build ipa --no-codesign
+          
+      - name: Create Unsigned IPA (Workaround)
+        run: |
+          mkdir -p build/ios/unsigned
+          mkdir -p Payload
+          # Tìm file .app và copy vào thư mục Payload
+          APP_PATH=$(find build/ios/archive -name "*.app" | head -n 1)
+          cp -r "$APP_PATH" Payload/
+          zip -r build/ios/unsigned/hanzify-unsigned.ipa Payload
+          rm -rf Payload
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: hanzify-unsigned-ipa
+          path: build/ios/unsigned/hanzify-unsigned.ipa
