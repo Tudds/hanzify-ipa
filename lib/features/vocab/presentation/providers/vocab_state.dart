@@ -1,6 +1,7 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../domain/entities/vocab.dart';
 import '../../domain/review_algorithm.dart';
+import '../../../../core/providers/sync_provider.dart';
 import 'vocab_providers.dart';
 
 part 'vocab_state.g.dart';
@@ -23,6 +24,7 @@ class DueVocabNotifier extends _$DueVocabNotifier {
       final updatedVocab = reviewVocab(vocab, quality);
       await repository.update(updatedVocab);
       ref.invalidate(allVocabProvider);
+      ref.read(syncProvider.notifier).push().ignore();
       return repository.getDue();
     });
   }
@@ -45,6 +47,7 @@ class AllVocabNotifier extends _$AllVocabNotifier {
       final repository = ref.read(vocabRepositoryProvider); // đọc 1 lần duy nhất
       final updated = vocab.copyWith(isBookmarked: !vocab.isBookmarked);
       await repository.update(updated);
+      ref.read(syncProvider.notifier).push().ignore();
       return repository.getAll();
     });
   }
@@ -55,6 +58,7 @@ class AllVocabNotifier extends _$AllVocabNotifier {
       final repository = ref.read(vocabRepositoryProvider); // đọc 1 lần duy nhất
       final updated = vocab.copyWith(isMastered: !vocab.isMastered);
       await repository.update(updated);
+      ref.read(syncProvider.notifier).push().ignore();
       return repository.getAll();
     });
   }

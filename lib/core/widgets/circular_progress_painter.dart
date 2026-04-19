@@ -7,6 +7,7 @@ class CircularProgressPainter extends CustomPainter {
   final double progress;
   final Color backgroundColor;
   final Color progressColor;
+  final Color? endColor;
   final double strokeWidth;
 
   CircularProgressPainter({
@@ -14,6 +15,7 @@ class CircularProgressPainter extends CustomPainter {
     required this.backgroundColor,
     required this.progressColor,
     required this.strokeWidth,
+    this.endColor,
   });
 
   @override
@@ -37,7 +39,7 @@ class CircularProgressPainter extends CustomPainter {
         endAngle: -pi / 2 + 2 * pi,
         colors: [
           progressColor,
-          progressColor.withValues(alpha: 0.6),
+          endColor ?? progressColor.withValues(alpha: 0.6),
           progressColor,
         ],
         stops: const [0.0, 0.5, 1.0],
@@ -53,5 +55,7 @@ class CircularProgressPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(CircularProgressPainter oldDelegate) =>
-      oldDelegate.progress != progress;
+      oldDelegate.progress != progress ||
+      oldDelegate.progressColor != progressColor ||
+      oldDelegate.endColor != endColor;
 }

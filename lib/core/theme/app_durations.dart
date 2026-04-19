@@ -28,4 +28,18 @@ class AppDurations {
 
   /// 1500ms — Counter/number animations
   static const Duration counter = Duration(milliseconds: 1500);
+
+  // ── Study-specific ───────────────────────────────────────────────────
+
+  /// 450ms — Flashcard reveal (AnimatedSwitcher fade+scale).
+  static const Duration flip = Duration(milliseconds: 450);
+
+  /// 800ms — Daily goal ring fill, progress bar.
+  static const Duration celebrate = Duration(milliseconds: 800);
+
+  /// 1200ms — Streak badge scale + particle burst.
+  static const Duration streak = Duration(milliseconds: 1200);
+
+  /// 2000ms — Character stroke-order animation (single stroke).
+  static const Duration stroke = Duration(milliseconds: 2000);
 }

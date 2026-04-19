@@ -9,7 +9,10 @@ import 'core/theme/app_durations.dart';
 import 'core/widgets/bottom_tab_bar.dart';
 import 'core/providers/navigation_provider.dart';
 import 'core/providers/nav_visibility_provider.dart';
+import 'core/providers/performance_provider.dart';
 import 'core/providers/auth_provider.dart';
+import 'core/providers/sync_provider.dart';
+import 'core/providers/guest_mode_provider.dart';
 import 'core/navigation/app_routes.dart';
 import 'features/auth/presentation/screens/auth_screen.dart';
 
@@ -62,14 +65,18 @@ class AppRoot extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // Auth gate: chưa đăng nhập → AuthScreen
+    // Auth gate: chưa đăng nhập & chưa bật guest mode → AuthScreen
+    // Eagerly init SyncNotifier so it listens to auth + connectivity events
+    ref.watch(syncProvider);
+
     final authAsync = ref.watch(authStateChangesProvider);
     final hasSession = authAsync.whenOrNull(
           data: (state) => state.session != null,
         ) ??
         (Supabase.instance.client.auth.currentSession != null);
+    final isGuest = ref.watch(guestModeProvider);
 
-    if (!hasSession) {
+    if (!hasSession && !isGuest) {
       return authAsync.when(
         data: (_) => const AuthScreen(),
         loading: () => const Scaffold(
@@ -82,6 +89,7 @@ class AppRoot extends ConsumerWidget {
     final c = ref.watch(themeColorsProvider);
     final nav = ref.watch(navigationProvider);
     final isNavVisible = ref.watch(navVisibilityProvider);
+    final isReduced = ref.watch(performanceProvider);
     final screen = nav.screen;
 
     Widget buildScreen() {
@@ -127,10 +135,13 @@ class AppRoot extends ConsumerWidget {
               children: [
                 Expanded(
                   child: AnimatedSwitcher(
-                    duration: AppDurations.slow,
+                    duration: isReduced ? AppDurations.fast : AppDurations.slow,
                     switchInCurve: Curves.easeOutCubic,
                     switchOutCurve: Curves.easeIn,
                     transitionBuilder: (child, animation) {
+                      if (isReduced) {
+                        return FadeTransition(opacity: animation, child: child);
+                      }
                       final scale = Tween<double>(begin: 0.97, end: 1.0).animate(
                         CurvedAnimation(
                           parent: animation,

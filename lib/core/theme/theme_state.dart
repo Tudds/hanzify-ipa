@@ -18,7 +18,7 @@ class ThemeNotifier extends _$ThemeNotifier with AsyncPrefsNotifier<AppThemeMode
   String get prefsKey => _prefKey;
 
   @override
-  AppThemeMode get defaultValue => AppThemeMode.light;
+  AppThemeMode get defaultValue => AppThemeMode.dark;
 
   @override
   AppThemeMode get currentValue => state;
@@ -32,7 +32,7 @@ class ThemeNotifier extends _$ThemeNotifier with AsyncPrefsNotifier<AppThemeMode
     if (savedMode != null) {
       return AppThemeMode.values.firstWhere(
         (e) => e.name == savedMode,
-        orElse: () => AppThemeMode.light,
+        orElse: () => AppThemeMode.dark,
       );
     }
     return AppThemeMode.light;
@@ -46,16 +46,16 @@ class ThemeNotifier extends _$ThemeNotifier with AsyncPrefsNotifier<AppThemeMode
   AppThemeMode build() {
     return initAsyncPrefs(
       key: _prefKey,
-      defaultVal: AppThemeMode.light,
+      defaultVal: AppThemeMode.dark,
       from: (prefs) {
         final savedMode = prefs.getString(_prefKey);
         if (savedMode != null) {
           return AppThemeMode.values.firstWhere(
             (e) => e.name == savedMode,
-            orElse: () => AppThemeMode.light,
+            orElse: () => AppThemeMode.dark,
           );
         }
-        return AppThemeMode.light;
+        return AppThemeMode.dark;
       },
       to: (prefs, value) => prefs.setString(_prefKey, value.name),
     );
@@ -82,17 +82,11 @@ class ThemeNotifier extends _$ThemeNotifier with AsyncPrefsNotifier<AppThemeMode
     final c = colors;
     final isDark = state == AppThemeMode.dark;
 
-    // Noto Sans SC handles Hanzi and Pinyin well together.
-    // Inter is used for general UI elements.
     final textTheme = GoogleFonts.interTextTheme(
-      ThemeData(
-        brightness: isDark ? Brightness.dark : Brightness.light,
-      ).textTheme,
+      ThemeData(brightness: isDark ? Brightness.dark : Brightness.light).textTheme,
     ).apply(
       bodyColor: c.text,
       displayColor: c.text,
-      // Noto Sans SC is great for Hanzi. Inter is great for English/UI.
-      // We can use Noto Sans SC as a fallback or primary for body.
       fontFamily: GoogleFonts.notoSansSc().fontFamily,
     );
 
@@ -104,13 +98,27 @@ class ThemeNotifier extends _$ThemeNotifier with AsyncPrefsNotifier<AppThemeMode
         brightness: isDark ? Brightness.dark : Brightness.light,
         primary: c.primary,
         secondary: c.secondary,
-        surface: c.surface,
+        surface: c.surfaceLowest,
         error: c.error,
       ),
       scaffoldBackgroundColor: c.background,
       textTheme: textTheme,
-      // Setting primary font family
       fontFamily: GoogleFonts.notoSansSc().fontFamily,
+      // No default card elevation — cards manage their own shadow
+      cardTheme: const CardThemeData(elevation: 0, margin: EdgeInsets.zero),
+      // Minimal dividers
+      dividerTheme: DividerThemeData(color: c.outlineVariant, thickness: 0.5),
+      // Cupertino-style slide transition for all routes
+      pageTransitionsTheme: const PageTransitionsTheme(
+        builders: {
+          TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.macOS: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.linux: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.windows: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.fuchsia: CupertinoPageTransitionsBuilder(),
+        },
+      ),
       extensions: [
         AppThemeExtension(colors: c),
       ],

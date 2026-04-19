@@ -244,10 +244,10 @@ class _VocabListScreenState extends ConsumerState<VocabListScreen> {
         ],
       ),
       child: HanzifyCard(
-        margin: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.xs),
-        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl, vertical: AppSpacing.lg),
+        variant: HanzifyCardVariant.solid,
+        margin: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: 5),
+        padding: EdgeInsets.zero,
         borderRadius: AppRadii.xxl,
-        border: Border.all(color: c.disabled.withValues(alpha: 0.1), width: 1),
         onTap: () {
           HanzifyHaptic.tap();
           Navigator.of(context).push(
@@ -256,108 +256,142 @@ class _VocabListScreenState extends ConsumerState<VocabListScreen> {
             ),
           );
         },
-        child: Row(
-          children: [
-            // ── Clean Hanzi (No Background Circle) ─────────────────────────
-            Hero(
-              tag: 'hanzi_${vocab.id}',
-              child: Text(
-                vocab.hanzi,
-                style: AppTypography.hanziUi(
-                  fontSize: AppFontSizes.displaySm,
-                  color: c.text,
+        child: IntrinsicHeight(
+          child: Row(
+            children: [
+              // Level color stripe
+              Container(
+                width: 4,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      _levelColor(c, vocab.level),
+                      _levelColor(c, vocab.level).withValues(alpha: 0.4),
+                    ],
+                  ),
+                  borderRadius: const BorderRadius.horizontal(left: Radius.circular(AppRadii.xxl)),
                 ),
               ),
-            ),
-            const SizedBox(width: AppSpacing.xl),
-
-            // ── Center info ─────────────────────────────────────────────────
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Pinyin + HSK badge
-                  Row(
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.lg),
+                  child: Row(
                     children: [
-                      Flexible(
-                        child: Text(
-                          vocab.pinyin,
-                          style: AppTypography.pinyin(
-                            fontSize: AppFontSizes.bodySm,
-                            color: c.primary,
-                            fontWeight: FontWeight.w600,
+                      Hero(
+                        tag: 'hanzi_${vocab.id}',
+                        child: ShaderMask(
+                          shaderCallback: (r) => LinearGradient(
+                            colors: [c.text, c.text.withValues(alpha: 0.85)],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                          ).createShader(r),
+                          child: Text(
+                            vocab.hanzi,
+                            style: AppTypography.hanziUi(
+                              fontSize: AppFontSizes.displaySm,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
-                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      const SizedBox(width: AppSpacing.sm),
-                      HanzifyBadge.hsk(
-                        level: vocab.level, 
-                        colors: c,
-                        filled: false, // Cleaner look
+                      const SizedBox(width: AppSpacing.lg),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Flexible(
+                                  child: Text(
+                                    vocab.pinyin,
+                                    style: AppTypography.pinyin(
+                                      fontSize: AppFontSizes.bodySm,
+                                      color: c.secondary,
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                                const SizedBox(width: AppSpacing.sm),
+                                HanzifyBadge.hsk(
+                                  level: vocab.level,
+                                  colors: c,
+                                  filled: false,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              displayMeaning,
+                              style: AppTypography.body(
+                                fontSize: AppFontSizes.titleMd,
+                                fontWeight: FontWeight.w800,
+                                color: c.text,
+                                letterSpacing: -0.2,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            if (displayPos != 'other')
+                              Padding(
+                                padding: const EdgeInsets.only(top: 6),
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                  decoration: BoxDecoration(
+                                    color: c.surfaceLow.withValues(alpha: 0.5),
+                                    borderRadius: BorderRadius.circular(AppRadii.full),
+                                    border: Border.all(color: c.glassBorder, width: 1),
+                                  ),
+                                  child: Text(
+                                    _posLabel(displayPos),
+                                    style: AppTypography.label(
+                                      fontSize: AppFontSizes.labelSm,
+                                      fontWeight: FontWeight.w700,
+                                      color: c.onSurfaceVariant,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                          ],
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          ref.read(allVocabProvider.notifier).toggleBookmark(vocab);
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color: vocab.isBookmarked
+                                ? c.primary.withValues(alpha: 0.12)
+                                : Colors.transparent,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Icon(
+                            vocab.isBookmarked ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
+                            size: 22,
+                            color: vocab.isBookmarked ? c.primary : c.placeholder,
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 4),
-
-                  // Vietnamese meaning
-                  Text(
-                    displayMeaning,
-                    style: AppTypography.body(
-                      fontSize: AppFontSizes.titleMd,
-                      fontWeight: FontWeight.w800,
-                      color: c.text,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-
-                  // Description / POS
-                  if (displayPos != 'other')
-                    Padding(
-                      padding: const EdgeInsets.only(top: 4),
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                        decoration: BoxDecoration(
-                          color: c.surfaceLow,
-                          borderRadius: BorderRadius.circular(AppRadii.sm),
-                        ),
-                        child: Text(
-                          _posLabel(displayPos),
-                          style: AppTypography.label(
-                            fontSize: AppFontSizes.labelSm,
-                            fontWeight: FontWeight.w600,
-                            color: c.placeholder,
-                          ),
-                        ),
-                      ),
-                    ),
-                ],
-              ),
-            ),
-
-            // ── Right action icons ──────────────────────────────────────────
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    // Toggle bookmark
-                    ref.read(allVocabProvider.notifier).toggleBookmark(vocab);
-                  },
-                  child: Icon(
-                    vocab.isBookmarked ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
-                    size: 24,
-                    color: vocab.isBookmarked ? c.primary : c.disabled,
-                  ),
                 ),
-              ],
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
   String _posLabel(String pos) => posLabelShort(pos);
+
+  Color _levelColor(AppThemeColors c, int level) {
+    if (level <= 0 || level > c.hskColors.length) return c.primary;
+    return c.hskColors[level - 1];
+  }
 }

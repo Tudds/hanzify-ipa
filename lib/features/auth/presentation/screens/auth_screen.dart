@@ -7,6 +7,7 @@ import '../../../../core/theme/typography.dart';
 import '../../../../core/theme/app_theme_helper.dart';
 import '../../../../core/widgets/hanzify_button.dart';
 import '../../../../core/widgets/hanzify_snack.dart';
+import '../../../../core/providers/guest_mode_provider.dart';
 
 class AuthScreen extends ConsumerStatefulWidget {
   const AuthScreen({super.key});
@@ -95,13 +96,17 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   // Logo
-                  Text(
-                    '汉字',
-                    textAlign: TextAlign.center,
-                    style: AppTypography.headline(
-                      fontSize: 56,
-                      color: c.primary,
-                      fontWeight: FontWeight.w700,
+                  ShaderMask(
+                    shaderCallback: (b) => c.accentGradient.createShader(b),
+                    blendMode: BlendMode.srcIn,
+                    child: Text(
+                      '汉字',
+                      textAlign: TextAlign.center,
+                      style: AppTypography.headline(
+                        fontSize: 56,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -219,6 +224,49 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
                       ),
                     ),
                   ],
+
+                  // Divider + guest mode
+                  const SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Expanded(child: Divider(color: c.outlineVariant)),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        child: Text(
+                          'hoặc',
+                          style: AppTypography.body(
+                            fontSize: AppFontSizes.bodySm,
+                            color: c.placeholder,
+                          ),
+                        ),
+                      ),
+                      Expanded(child: Divider(color: c.outlineVariant)),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  TextButton(
+                    onPressed: _loading
+                        ? null
+                        : () async {
+                            await ref.read(guestModeProvider.notifier).enable();
+                          },
+                    child: Text(
+                      'Dùng thử không đăng nhập',
+                      style: AppTypography.label(
+                        fontSize: AppFontSizes.labelMd,
+                        color: c.secondary,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    'Tiến trình sẽ lưu trên máy. Đăng nhập sau để đồng bộ.',
+                    textAlign: TextAlign.center,
+                    style: AppTypography.body(
+                      fontSize: AppFontSizes.labelSm,
+                      color: c.placeholder,
+                    ),
+                  ),
                 ],
               ),
             ),

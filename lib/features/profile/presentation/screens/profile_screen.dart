@@ -8,8 +8,11 @@ import 'package:hanzify/core/widgets/hanzify_section_header.dart';
 import 'package:hanzify/core/widgets/hanzify_stat_card.dart';
 import 'package:hanzify/core/widgets/hanzify_screen_header.dart';
 import 'package:hanzify/features/vocab/presentation/providers/vocab_state.dart';
+import 'package:hanzify/features/profile/presentation/providers/profile_stats_provider.dart';
 import 'package:hanzify/core/providers/auth_provider.dart';
+import 'package:hanzify/core/providers/guest_mode_provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:hanzify/core/providers/performance_provider.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
@@ -19,6 +22,7 @@ class ProfileScreen extends ConsumerWidget {
     final c = themeColorsOf(context);
     final themeMode = ref.watch(themeProvider);
     final allVocab = ref.watch(allVocabProvider);
+    final stats = ref.watch(profileStatsProvider);
 
     return Scaffold(
       backgroundColor: c.background,
@@ -62,7 +66,7 @@ class ProfileScreen extends ConsumerWidget {
             HanzifyStatCard.horizontal(
               colors: c,
               icon: Icons.local_fire_department_rounded,
-              value: '15',
+              value: stats.streakDays > 0 ? '${stats.streakDays}' : '0',
               label: 'NGÀY LIÊN TIẾP',
               iconColor: Colors.white,
               gradient: c.successGradient,
@@ -72,7 +76,7 @@ class ProfileScreen extends ConsumerWidget {
             HanzifyStatCard.horizontal(
               colors: c,
               icon: Icons.workspace_premium_rounded,
-              value: 'HSK 1',
+              value: stats.dominantHskLevel > 0 ? 'HSK ${stats.dominantHskLevel}' : '—',
               label: 'CẤP ĐỘ HSK',
               iconColor: c.primary,
             ),
@@ -106,6 +110,8 @@ class ProfileScreen extends ConsumerWidget {
                   Divider(height: 1, color: c.outlineVariant.withValues(alpha: 0.3)),
                   _buildThemeTile(c, themeMode, ref),
                   Divider(height: 1, color: c.outlineVariant.withValues(alpha: 0.3)),
+                  _buildPerformanceTile(c, ref),
+                  Divider(height: 1, color: c.outlineVariant.withValues(alpha: 0.3)),
                   _buildSettingsTile(
                     c: c,
                     icon: Icons.help_outline_rounded,
@@ -113,15 +119,33 @@ class ProfileScreen extends ConsumerWidget {
                     onTap: () {},
                   ),
                   Divider(height: 1, color: c.outlineVariant.withValues(alpha: 0.3)),
-                  _buildSettingsTile(
-                    c: c,
-                    icon: Icons.logout_rounded,
-                    title: 'Đăng xuất',
-                    titleColor: c.error,
-                    iconColor: c.error,
-                    showChevron: false,
-                    onTap: () async {
-                      await Supabase.instance.client.auth.signOut();
+                  Consumer(
+                    builder: (context, ref, _) {
+                      final isGuest = ref.watch(guestModeProvider);
+                      final user = ref.watch(currentUserProvider);
+                      if (user == null && isGuest) {
+                        return _buildSettingsTile(
+                          c: c,
+                          icon: Icons.login_rounded,
+                          title: 'Đăng nhập / Đăng ký',
+                          titleColor: c.primary,
+                          iconColor: c.primary,
+                          onTap: () async {
+                            await ref.read(guestModeProvider.notifier).disable();
+                          },
+                        );
+                      }
+                      return _buildSettingsTile(
+                        c: c,
+                        icon: Icons.logout_rounded,
+                        title: 'Đăng xuất',
+                        titleColor: c.error,
+                        iconColor: c.error,
+                        showChevron: false,
+                        onTap: () async {
+                          await Supabase.instance.client.auth.signOut();
+                        },
+                      );
                     },
                   ),
                 ],
@@ -174,16 +198,23 @@ class ProfileScreen extends ConsumerWidget {
 
   Widget _buildUserCard(AppThemeColors c, WidgetRef ref) {
     final user = ref.watch(currentUserProvider);
-    final displayName = user?.userMetadata?['name'] as String? ??
-        user?.email?.split('@').first ??
-        'Người dùng';
+    final isGuest = ref.watch(guestModeProvider);
+    final isGuestOnly = user == null && isGuest;
+
+    final displayName = isGuestOnly
+        ? 'Khách'
+        : (user?.userMetadata?['name'] as String? ??
+            user?.email?.split('@').first ??
+            'Người dùng');
     final email = user?.email ?? '';
     final createdAt = user?.createdAt != null
         ? DateTime.parse(user!.createdAt)
         : null;
-    final joinLabel = createdAt != null
-        ? 'Tham gia từ T${createdAt.month}/${createdAt.year}'
-        : '';
+    final joinLabel = isGuestOnly
+        ? 'Tiến trình chỉ lưu trên máy'
+        : (createdAt != null
+            ? 'Tham gia từ T${createdAt.month}/${createdAt.year}'
+            : '');
 
     return HanzifyCard(
       child: Column(
@@ -226,7 +257,11 @@ class ProfileScreen extends ConsumerWidget {
           ),
           const SizedBox(height: AppSpacing.lg),
           GestureDetector(
-            onTap: () {},
+            onTap: () async {
+              if (isGuestOnly) {
+                await ref.read(guestModeProvider.notifier).disable();
+              }
+            },
             child: Container(
               padding: const EdgeInsets.symmetric(
                 horizontal: AppSpacing.lg,
@@ -239,10 +274,14 @@ class ProfileScreen extends ConsumerWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.edit_rounded, size: 16, color: c.primary),
+                  Icon(
+                    isGuestOnly ? Icons.login_rounded : Icons.edit_rounded,
+                    size: 16,
+                    color: c.primary,
+                  ),
                   const SizedBox(width: AppSpacing.sm),
                   Text(
-                    'Chỉnh sửa hồ sơ',
+                    isGuestOnly ? 'Đăng nhập để đồng bộ' : 'Chỉnh sửa hồ sơ',
                     style: AppTypography.label(
                       fontSize: AppFontSizes.labelMd,
                       fontWeight: FontWeight.w600,
@@ -296,6 +335,53 @@ class ProfileScreen extends ConsumerWidget {
                 size: 20,
                 color: c.placeholder,
               ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPerformanceTile(AppThemeColors c, WidgetRef ref) {
+    final isReduced = ref.watch(performanceProvider);
+
+    return InkWell(
+      onTap: () => ref.read(performanceProvider.notifier).toggle(),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: AppSpacing.xl,
+          vertical: AppSpacing.lg,
+        ),
+        child: Row(
+          children: [
+            Icon(Icons.speed_rounded, size: 22, color: c.onSurfaceVariant),
+            const SizedBox(width: AppSpacing.lg),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Tối ưu hiệu năng',
+                    style: AppTypography.body(
+                      fontSize: AppFontSizes.bodyMd,
+                      fontWeight: FontWeight.w500,
+                      color: c.text,
+                    ),
+                  ),
+                  Text(
+                    isReduced ? 'Đã tắt bớt hiệu ứng' : 'Đang bật đầy đủ hiệu ứng',
+                    style: AppTypography.body(
+                      fontSize: AppFontSizes.bodySm,
+                      color: c.placeholder,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Switch(
+              value: isReduced,
+              activeTrackColor: c.primary,
+              onChanged: (_) => ref.read(performanceProvider.notifier).toggle(),
+            ),
           ],
         ),
       ),

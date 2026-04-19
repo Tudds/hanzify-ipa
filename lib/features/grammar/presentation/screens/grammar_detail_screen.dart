@@ -143,7 +143,7 @@ class GrammarDetailScreen extends ConsumerWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
           child: HanzifyCard(
-            color: c.surfaceLowest,
+            variant: HanzifyCardVariant.glass,
             child: Wrap(
               spacing: AppSpacing.sm,
               runSpacing: AppSpacing.sm,
@@ -235,7 +235,7 @@ class GrammarDetailScreen extends ConsumerWidget {
               padding: const EdgeInsets.symmetric(
                   horizontal: AppSpacing.xl, vertical: AppSpacing.xs),
               child: HanzifyCard(
-                color: c.surfaceLowest,
+                variant: HanzifyCardVariant.glass,
                 padding: const EdgeInsets.all(AppSpacing.lg),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -302,7 +302,7 @@ class GrammarDetailScreen extends ConsumerWidget {
             padding: const EdgeInsets.symmetric(
                 horizontal: AppSpacing.xl, vertical: AppSpacing.xs),
             child: HanzifyCard(
-              color: c.surfaceLowest,
+              variant: HanzifyCardVariant.glass,
               padding: const EdgeInsets.all(AppSpacing.lg),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -397,7 +397,7 @@ class GrammarDetailScreen extends ConsumerWidget {
             padding: const EdgeInsets.symmetric(
                 horizontal: AppSpacing.xl, vertical: AppSpacing.xs),
             child: HanzifyCard(
-              color: c.surfaceLowest,
+              variant: HanzifyCardVariant.glass,
               padding: const EdgeInsets.all(AppSpacing.lg),
               onTap: () {
                 HapticFeedback.lightImpact();

@@ -165,11 +165,16 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
                 tag: 'char_$char',
                 child: Material(
                   color: Colors.transparent,
-                  child: Text(
-                    char,
-                    style: AppTypography.hanziDisplay(
-                      fontSize: fontSize,
-                      color: c.text,
+                  child: ShaderMask(
+                    shaderCallback: (bounds) =>
+                        c.accentGradient.createShader(bounds),
+                    blendMode: BlendMode.srcIn,
+                    child: Text(
+                      char,
+                      style: AppTypography.hanziDisplay(
+                        fontSize: fontSize,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
@@ -181,7 +186,7 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
             '(${vocab.pinyin})',
             style: AppTypography.pinyin(
               fontSize: AppFontSizes.titleLg,
-              color: c.primary,
+              color: c.secondary,
             ),
           ),
         ],
@@ -306,6 +311,7 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
                   const SizedBox(height: AppSpacing.sm),
                   // Content card for this POS
                   HanzifyCard(
+                    variant: HanzifyCardVariant.glass,
                     padding: const EdgeInsets.all(AppSpacing.lg),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -370,6 +376,7 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
               horizontal: AppSpacing.xl,
             ).copyWith(bottom: AppSpacing.md),
             child: HanzifyCard(
+              variant: HanzifyCardVariant.glass,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -390,7 +397,7 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
                     highlight: vocab.pinyin,
                     baseStyle: AppTypography.pinyin(
                       fontSize: AppFontSizes.bodySm,
-                      color: c.primary,
+                      color: c.secondary,
                     ),
                     colors: c,
                   ),
@@ -461,6 +468,7 @@ class _CharacterStrokeCard extends ConsumerWidget {
         curve: Curves.easeOutQuart,
         width: isSelected ? 200 : 100,
         child: HanzifyCard(
+          variant: HanzifyCardVariant.glass,
           margin: EdgeInsets.zero,
           padding: const EdgeInsets.all(AppSpacing.md),
           child: Column(

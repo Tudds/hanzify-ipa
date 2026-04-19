@@ -183,8 +183,18 @@ class FlashcardSetupView extends ConsumerWidget {
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: isSelected ? c.primary : c.disabled.withValues(alpha: 0.1),
+                  gradient: isSelected ? c.accentGradient : null,
+                  color: isSelected ? null : c.glassSurface,
                   borderRadius: BorderRadius.circular(AppRadii.lg),
+                  boxShadow: isSelected
+                      ? [
+                          BoxShadow(
+                            color: c.primary.withValues(alpha: 0.35),
+                            blurRadius: 12,
+                            offset: const Offset(0, 3),
+                          ),
+                        ]
+                      : null,
                 ),
                 child: Icon(icon, color: isSelected ? Colors.white : c.placeholder, size: 24),
               ),
@@ -247,15 +257,29 @@ class FlashcardSetupView extends ConsumerWidget {
       child: SizedBox(
         width: double.infinity,
         height: 56,
-        child: ElevatedButton(
-          onPressed: onStart,
-          style: ElevatedButton.styleFrom(
-            backgroundColor: c.primary,
-            foregroundColor: Colors.white,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppRadii.xl)),
-            elevation: 4,
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            gradient: c.accentGradient,
+            borderRadius: BorderRadius.circular(AppRadii.xl),
+            boxShadow: [
+              BoxShadow(
+                color: c.primary.withValues(alpha: 0.35),
+                blurRadius: 20,
+                offset: const Offset(0, 6),
+              ),
+            ],
           ),
-          child: const Text('Bắt đầu học ngay', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+          child: ElevatedButton(
+            onPressed: onStart,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent,
+              foregroundColor: Colors.white,
+              shadowColor: Colors.transparent,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppRadii.xl)),
+              elevation: 0,
+            ),
+            child: const Text('Bắt đầu học ngay', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+          ),
         ),
       ),
     );

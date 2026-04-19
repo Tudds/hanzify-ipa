@@ -3,10 +3,10 @@
 class SupabaseConfig {
   static const url = String.fromEnvironment(
     'SUPABASE_URL',
-    defaultValue: 'https://YOUR_PROJECT.supabase.co',
+    defaultValue: 'https://zsdncaplvbgwbyckyfcv.supabase.co',
   );
   static const anonKey = String.fromEnvironment(
     'SUPABASE_ANON_KEY',
-    defaultValue: 'YOUR_ANON_KEY',
+    defaultValue: 'sb_publishable_m__u2rOK8SV6wyd8nUDmwg_8tzMzDOd',
   );
 }

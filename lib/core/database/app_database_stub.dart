@@ -14,6 +14,7 @@ class AppDatabase {
   // Dummy members to satisfy analyzer for platform-agnostic code
   dynamic select(dynamic table) => throw UnimplementedError();
   dynamic selectOnly(dynamic table) => throw UnimplementedError();
+  dynamic update(dynamic table) => throw UnimplementedError();
   dynamic batch(Function(dynamic) action) => throw UnimplementedError();
   dynamic get vocabsTable => throw UnimplementedError();
   dynamic get charactersTable => throw UnimplementedError();
@@ -90,6 +91,22 @@ class GrammarPointsTableCompanion {
 }
 
 class VocabsTableCompanion {
+  final dynamic needsSync;
+  final dynamic repetitions;
+  final dynamic easeFactor;
+  final dynamic interval;
+  final dynamic nextReview;
+  final dynamic isBookmarked;
+  final dynamic isMastered;
+  const VocabsTableCompanion({
+    this.needsSync,
+    this.repetitions,
+    this.easeFactor,
+    this.interval,
+    this.nextReview,
+    this.isBookmarked,
+    this.isMastered,
+  });
   static dynamic insert({
     required dynamic id,
     required dynamic hanzi,

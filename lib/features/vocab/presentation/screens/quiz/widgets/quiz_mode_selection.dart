@@ -70,6 +70,7 @@ class QuizModeSelection extends ConsumerWidget {
     return GestureDetector(
       onTap: () => ref.read(quizProvider.notifier).startQuiz(m),
       child: HanzifyCard(
+        variant: HanzifyCardVariant.glass,
         margin: const EdgeInsets.only(bottom: AppSpacing.md),
         padding: const EdgeInsets.all(AppSpacing.lg),
         child: Row(
@@ -78,8 +79,15 @@ class QuizModeSelection extends ConsumerWidget {
               width: 50,
               height: 50,
               decoration: BoxDecoration(
-                color: c.primary.withValues(alpha: 0.1),
+                gradient: c.accentGradient,
                 borderRadius: BorderRadius.circular(AppRadii.xl),
+                boxShadow: [
+                  BoxShadow(
+                    color: c.primary.withValues(alpha: 0.35),
+                    blurRadius: 16,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
               ),
               child: Center(
                 child: Text(emoji, style: const TextStyle(fontSize: 28)),
@@ -110,13 +118,14 @@ class QuizModeSelection extends ConsumerWidget {
               width: 32,
               height: 32,
               decoration: BoxDecoration(
-                color: c.primary.withValues(alpha: 0.1),
+                color: c.glassSurface,
                 shape: BoxShape.circle,
+                border: Border.all(color: c.glassBorder, width: 1),
               ),
               child: Icon(
                 Icons.arrow_forward_rounded,
                 size: 18,
-                color: c.primary,
+                color: c.secondary,
               ),
             ),
           ],

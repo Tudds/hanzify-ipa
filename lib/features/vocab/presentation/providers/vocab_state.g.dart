@@ -33,7 +33,7 @@ final class DueVocabNotifierProvider
   DueVocabNotifier create() => DueVocabNotifier();
 }
 
-String _$dueVocabNotifierHash() => r'f90ebba54c7bc446cf5a401f7f16c5270f7d5ddb';
+String _$dueVocabNotifierHash() => r'8c821977992250bc52adb3040a271f86b46c4f78';
 
 abstract class _$DueVocabNotifier extends $AsyncNotifier<List<Vocab>> {
   FutureOr<List<Vocab>> build();
@@ -77,7 +77,7 @@ final class AllVocabNotifierProvider
   AllVocabNotifier create() => AllVocabNotifier();
 }
 
-String _$allVocabNotifierHash() => r'eeea6682abcd98207b557da0ffd984da90f753c5';
+String _$allVocabNotifierHash() => r'98307910dee8e410f8e98b55ccdb3be39688be7a';
 
 abstract class _$AllVocabNotifier extends $AsyncNotifier<List<Vocab>> {
   FutureOr<List<Vocab>> build();

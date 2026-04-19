@@ -1,6 +1,5 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hanzify/core/theme/typography.dart';
 import 'package:hanzify/core/theme/theme_state.dart';
@@ -11,6 +10,7 @@ import 'package:hanzify/core/providers/navigation_provider.dart';
 import 'package:hanzify/core/widgets/hanzify_stat_card.dart';
 import 'package:hanzify/core/widgets/hanzify_action_tile.dart';
 import 'package:hanzify/core/widgets/circular_progress_painter.dart';
+import 'package:hanzify/core/widgets/hanzify_card.dart';
 import 'package:hanzify/core/widgets/hanzify_screen_header.dart';
 import 'package:hanzify/core/utils/hanzify_haptic.dart';
 import 'package:hanzify/features/vocab/presentation/providers/vocab_state.dart';
@@ -148,14 +148,22 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
                 const SizedBox(height: AppSpacing.lg),
 
                 // ── HSK mastery chart ───────────────────────────────
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
-                  child: _buildHskChart(c, allVocab),
-                )
-                    .animate()
-                    .fadeIn(duration: 400.ms)
-                    .slideY(begin: 0.12, end: 0, curve: Curves.easeOutCubic),
+                TweenAnimationBuilder<double>(
+                  tween: Tween(begin: 0, end: 1),
+                  duration: const Duration(milliseconds: 400),
+                  curve: Curves.easeOutCubic,
+                  builder: (context, t, child) => Opacity(
+                    opacity: t,
+                    child: Transform.translate(
+                      offset: Offset(0, 12 * (1 - t)),
+                      child: child,
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
+                    child: _buildHskChart(c, allVocab),
+                  ),
+                ),
 
                 const SizedBox(height: AppSpacing.lg),
 
@@ -164,14 +172,13 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
                   Padding(
                     padding:
                         const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
-                    child: Container(
+                    child: HanzifyCard(
+                      variant: HanzifyCardVariant.glass,
                       padding: const EdgeInsets.all(AppSpacing.lg),
-                      decoration: BoxDecoration(
-                        color: c.error.withValues(alpha: 0.08),
-                        borderRadius: BorderRadius.circular(AppRadii.xxl),
-                        border: Border.all(
-                            color: c.error.withValues(alpha: 0.2), width: 1),
-                      ),
+                      margin: EdgeInsets.zero,
+                      color: c.error.withValues(alpha: 0.10),
+                      border: Border.all(
+                          color: c.error.withValues(alpha: 0.35), width: 1),
                       child: Row(
                         children: [
                           Icon(Icons.warning_amber_rounded,
@@ -229,13 +236,10 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
 
     final maxY = data.map((d) => d.$2).fold<int>(0, (a, b) => a > b ? a : b).toDouble();
 
-    return Container(
+    return HanzifyCard(
+      variant: HanzifyCardVariant.glass,
       padding: const EdgeInsets.all(AppSpacing.lg),
-      decoration: BoxDecoration(
-        color: c.surfaceLow,
-        borderRadius: BorderRadius.circular(AppRadii.xxl),
-        border: Border.all(color: c.outlineVariant.withValues(alpha: 0.3)),
-      ),
+      margin: EdgeInsets.zero,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -348,14 +352,25 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
         final currentCount = (dueCount * _progressAnim.value).round();
 
         return Center(
-          child: SizedBox(
+          child: Container(
             width: AppSpacing.circularProgress,
             height: AppSpacing.circularProgress,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: c.primary.withValues(alpha: 0.28),
+                  blurRadius: 40,
+                  spreadRadius: 2,
+                ),
+              ],
+            ),
             child: CustomPaint(
               painter: CircularProgressPainter(
                 progress: currentProgress,
                 backgroundColor: c.outlineVariant.withValues(alpha: 0.3),
                 progressColor: c.primary,
+                endColor: c.secondary,
                 strokeWidth: 18,
               ),
               child: Center(

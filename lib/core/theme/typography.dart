@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppSpacing {
-  static const double xxxs = 2;
-  static const double xxs = 5;
+  // 4pt grid: xs=4, sm=8, md=12, lg=16, xl=24, xxl=32, xxxl=48
   static const double xs = 4;
   static const double sm = 8;
   static const double md = 12;
@@ -11,6 +10,9 @@ class AppSpacing {
   static const double xl = 24;
   static const double xxl = 32;
   static const double xxxl = 48;
+
+  // Legacy — non-4pt, kept for backward compat. Replace when rebuilding screens.
+  static const double xxs = 5;
 
   // ── Named semantic sizes ─────────────────────────────────────────────
   static const double iconSm = 20;
@@ -22,7 +24,7 @@ class AppSpacing {
   static const double tabHeight = 100;
   static const double circularProgress = 220;
 
-  /// Padding bottom chuẩn cho mọi scrollview có bottom nav + FAB che.
+  /// Bottom padding for scrollviews hidden by bottom nav + FAB.
   static const double scrollBottom = 120;
 }
 
@@ -31,11 +33,11 @@ class AppRadii {
   static const double sm = 4;
   static const double md = 8;
   static const double lg = 12;
-  static const double md2 = 10;
   static const double xl = 16;
   static const double xxl = 24;
   static const double xxxl = 32;
   static const double full = 9999;
+  static const double pill = full;
 }
 
 class AppFontSizes {
@@ -54,6 +56,13 @@ class AppFontSizes {
   static const double labelLg = 14;
   static const double labelMd = 12;
   static const double labelSm = 11;
+
+  // ── Hanzi-specific ───────────────────────────────────────────────────
+  /// Flashcard study card — full-screen Hanzi display.
+  static const double hanziStudy = 120;
+
+  /// Vocab list item and compact display.
+  static const double hanziCard = 64;
 }
 
 /// Centralized typography helpers using the design system fonts.

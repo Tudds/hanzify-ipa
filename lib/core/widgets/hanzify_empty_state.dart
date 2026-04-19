@@ -8,9 +8,12 @@
 //   - VocabListScreen: loading/error states
 //   - General use: any screen needing an empty placeholder
 // ============================================================================
+import 'dart:math' show sin, pi;
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hanzify/core/theme/typography.dart';
 import 'package:hanzify/core/theme/theme_state.dart';
+import 'package:hanzify/core/providers/performance_provider.dart';
 
 /// Empty state style variants
 enum HanzifyEmptyStateVariant {
@@ -31,7 +34,7 @@ enum HanzifyEmptyStateVariant {
   error,
 }
 
-class HanzifyEmptyState extends StatelessWidget {
+class HanzifyEmptyState extends ConsumerWidget {
   /// Style variant
   final HanzifyEmptyStateVariant variant;
 
@@ -157,9 +160,16 @@ class HanzifyEmptyState extends StatelessWidget {
         subtitleColor = null;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final c = Theme.of(context).extension<AppThemeExtension>()?.colors
         ?? AppThemeColors.light;
+    final reducedMotion = ref.watch(performanceProvider) ||
+        MediaQuery.disableAnimationsOf(context);
+
+    final leading = _buildLeading(c);
+    final shouldFloat = !reducedMotion &&
+        (variant == HanzifyEmptyStateVariant.standard ||
+            variant == HanzifyEmptyStateVariant.celebration);
 
     return Center(
       child: Padding(
@@ -171,7 +181,7 @@ class HanzifyEmptyState extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            _buildLeading(c),
+            shouldFloat ? _FloatingIcon(child: leading) : leading,
             const SizedBox(height: AppSpacing.lg),
             if (title != null)
               Text(
@@ -244,5 +254,46 @@ class HanzifyEmptyState extends StatelessWidget {
           style: const TextStyle(fontSize: 48),
         );
     }
+  }
+}
+
+/// Gentle Y-axis float animation (±4px sine, 2s loop) for empty state icons.
+class _FloatingIcon extends StatefulWidget {
+  final Widget child;
+  const _FloatingIcon({required this.child});
+
+  @override
+  State<_FloatingIcon> createState() => _FloatingIconState();
+}
+
+class _FloatingIconState extends State<_FloatingIcon>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2000),
+    )..repeat();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _controller,
+      child: widget.child,
+      builder: (_, child) {
+        final dy = sin(_controller.value * 2 * pi) * 4.0;
+        return Transform.translate(offset: Offset(0, dy), child: child);
+      },
+    );
   }
 }

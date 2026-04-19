@@ -81,6 +81,10 @@ class HanzifyAppBar extends StatelessWidget implements PreferredSizeWidget {
   /// Bottom widget area (e.g., search bar below header)
   final Widget? bottom;
 
+  /// Progress value 0.0–1.0. When set, renders a 2px LinearProgressIndicator
+  /// below the bar — used in quiz and flashcard views.
+  final double? progress;
+
   const HanzifyAppBar({
     super.key,
     this.variant = HanzifyAppBarVariant.standard,
@@ -98,34 +102,38 @@ class HanzifyAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.safeAreaBottom = false,
     this.elevation = 0,
     this.bottom,
+    this.progress,
   });
 
   @override
   Size get preferredSize {
     final bottomHeight = bottom != null ? 56.0 : 0.0;
-    return Size.fromHeight(56.0 + bottomHeight);
+    // Added padding for progress bar (6px height + 8px top + 8px bottom = 22px)
+    final progressHeight = progress != null ? 22.0 : 0.0;
+    return Size.fromHeight(56.0 + bottomHeight + progressHeight);
   }
 
   @override
   Widget build(BuildContext context) {
-
     // TitleOnly variant uses native AppBar
     if (variant == HanzifyAppBarVariant.titleOnly) {
       return AppBar(
         backgroundColor: backgroundColor ?? Colors.transparent,
         elevation: elevation,
         centerTitle: true,
-        title: title != null
-            ? Text(title!, style: titleStyle)
-            : null,
+        title: title != null ? Text(title!, style: titleStyle) : null,
         actions: trailing != null ? [trailing!] : null,
         bottom: bottom != null
-            ? PreferredSize(preferredSize: const Size.fromHeight(56), child: bottom!)
+            ? PreferredSize(
+                preferredSize: const Size.fromHeight(56),
+                child: bottom!,
+              )
             : null,
       );
     }
 
-    final defaultBackStyle = backStyle ??
+    final defaultBackStyle =
+        backStyle ??
         (variant == HanzifyAppBarVariant.backOnly
             ? HanzifyBackButtonStyle.pill
             : HanzifyBackButtonStyle.rounded);
@@ -147,7 +155,8 @@ class HanzifyAppBar extends StatelessWidget implements PreferredSizeWidget {
         break;
     }
 
-    final padding = this.padding ??
+    final padding =
+        this.padding ??
         EdgeInsets.fromLTRB(
           AppSpacing.lg,
           AppSpacing.sm,
@@ -155,21 +164,51 @@ class HanzifyAppBar extends StatelessWidget implements PreferredSizeWidget {
           AppSpacing.sm,
         );
 
-    return Container(
-      color: backgroundColor,
-      decoration: borderColor != null
-          ? BoxDecoration(
-              border: Border(
-                bottom: BorderSide(color: borderColor!, width: 0.5),
+    final c =
+        Theme.of(context).extension<AppThemeExtension>()?.colors ??
+        AppThemeColors.light;
+
+    return SafeArea(
+      top: safeAreaTop,
+      bottom: safeAreaBottom,
+      child: Container(
+        color: backgroundColor,
+        decoration: borderColor != null
+            ? BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(color: borderColor!, width: 0.5),
+                ),
+              )
+            : null,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Padding(padding: padding, child: content),
+            if (bottom != null) bottom!,
+            if (progress != null)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(
+                  AppSpacing.lg,
+                  AppSpacing.sm,
+                  AppSpacing.lg,
+                  AppSpacing.sm,
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(AppRadii.full),
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    height: 6,
+                    child: LinearProgressIndicator(
+                      value: progress,
+                      backgroundColor: c.outlineVariant.withValues(alpha: 0.3),
+                      valueColor: AlwaysStoppedAnimation<Color>(c.primary),
+                      minHeight: 6,
+                    ),
+                  ),
+                ),
               ),
-            )
-          : null,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Padding(padding: padding, child: content),
-          ?bottom,
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -188,11 +227,13 @@ class HanzifyAppBar extends StatelessWidget implements PreferredSizeWidget {
           Flexible(
             child: Text(
               title!,
-              style: titleStyle ??
+              style:
+                  titleStyle ??
                   AppTypography.label(
                     fontSize: AppFontSizes.labelMd,
-                    color: Theme.of(context)
-                        .extension<AppThemeExtension>()?.colors.primary,
+                    color: Theme.of(
+                      context,
+                    ).extension<AppThemeExtension>()?.colors.primary,
                   ),
               overflow: TextOverflow.ellipsis,
             ),
@@ -216,11 +257,13 @@ class HanzifyAppBar extends StatelessWidget implements PreferredSizeWidget {
         Expanded(
           child: Text(
             title ?? '',
-            style: titleStyle ??
+            style:
+                titleStyle ??
                 AppTypography.headline(
                   fontSize: AppFontSizes.titleLg,
-                  color: Theme.of(context)
-                      .extension<AppThemeExtension>()?.colors.text,
+                  color: Theme.of(
+                    context,
+                  ).extension<AppThemeExtension>()?.colors.text,
                 ),
             textAlign: TextAlign.center,
           ),

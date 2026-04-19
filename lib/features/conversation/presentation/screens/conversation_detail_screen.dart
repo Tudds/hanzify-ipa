@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:collection/collection.dart';
@@ -5,15 +6,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hanzify/core/theme/colors.dart';
 import 'package:hanzify/core/theme/typography.dart';
 import 'package:hanzify/core/theme/theme_state.dart';
+import 'package:hanzify/core/theme/app_curves.dart';
+import 'package:hanzify/core/theme/app_durations.dart';
 import 'package:hanzify/core/theme/app_theme_helper.dart';
 import 'package:hanzify/core/providers/user_preferences_provider.dart';
-import 'package:hanzify/core/widgets/hanzify_card.dart';
 import 'package:hanzify/core/widgets/hanzify_badge.dart';
 import 'package:hanzify/core/widgets/hanzify_section_header.dart';
 import 'package:hanzify/core/widgets/hanzify_app_bar.dart';
+import 'package:hanzify/core/widgets/hanzify_card.dart';
 import 'package:hanzify/features/conversation/domain/entities/conversation_context.dart';
 import 'package:hanzify/features/conversation/presentation/providers/conversation_providers.dart';
-
 import 'package:hanzify/features/grammar/presentation/providers/grammar_providers.dart';
 import 'package:hanzify/features/grammar/presentation/screens/grammar_detail_screen.dart';
 
@@ -29,14 +31,47 @@ class ConversationDetailScreen extends ConsumerStatefulWidget {
 
 class _ConversationDetailScreenState
     extends ConsumerState<ConversationDetailScreen> {
-  /// Chế độ hiển thị: đọc (full) hoặc luyện tập (hide Vietnamese)
   bool _isPracticeMode = false;
-
-  /// Chỉ số dòng hiện tại trong chế độ luyện tập
   int _practiceIndex = 0;
-
-  /// Có hiển thị dịch nghĩa ở dòng hiện tại không
   bool _showTranslation = false;
+
+  // Auto-play state
+  int? _playingIndex;
+  Timer? _playTimer;
+
+  // Per-bubble Vi toggle in read mode (Set of line indices with Vi shown)
+  final Set<int> _viShown = {};
+
+  final ScrollController _scrollController = ScrollController();
+
+  @override
+  void dispose() {
+    _playTimer?.cancel();
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  void _toggleAutoPlay(List<DialogueLine> lines) {
+    if (_playingIndex != null) {
+      _playTimer?.cancel();
+      setState(() => _playingIndex = null);
+      return;
+    }
+    _startAutoPlay(lines, 0);
+  }
+
+  void _startAutoPlay(List<DialogueLine> lines, int index) {
+    setState(() => _playingIndex = index);
+    _playTimer = Timer(const Duration(milliseconds: 2200), () {
+      if (!mounted) return;
+      final next = index + 1;
+      if (next < lines.length) {
+        _startAutoPlay(lines, next);
+      } else {
+        setState(() => _playingIndex = null);
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,62 +81,45 @@ class _ConversationDetailScreenState
 
     return Scaffold(
       backgroundColor: c.background,
-      body: Stack(
-        children: [
-          CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: SizedBox(
-                    height:
-                        MediaQuery.of(context).padding.top + AppSpacing.sm),
-              ),
-              // ── Header
-              SliverToBoxAdapter(child: _buildHeader(context, c)),
+      body: CustomScrollView(
+        controller: _scrollController,
+        slivers: [
+          SliverToBoxAdapter(
+            child: SizedBox(height: MediaQuery.paddingOf(context).top + AppSpacing.sm),
+          ),
+          SliverToBoxAdapter(child: _buildHeader(c)),
+          SliverToBoxAdapter(child: _buildHeroCard(c, conv)),
+          SliverToBoxAdapter(child: _buildModeToggle(c)),
 
-              // ── Hero card
-              SliverToBoxAdapter(child: _buildHeroCard(c, conv)),
+          if (_isPracticeMode)
+            SliverToBoxAdapter(child: _buildPracticeView(c, conv))
+          else
+            SliverToBoxAdapter(child: _buildDialogueView(c, conv, showPinyin)),
 
-              // ── Mode toggle
-              SliverToBoxAdapter(child: _buildModeToggle(c)),
+          if (conv.vocabulary.isNotEmpty)
+            SliverToBoxAdapter(child: _buildVocabulary(c, conv)),
 
-              // ── Dialogue lines
-              if (_isPracticeMode)
-                SliverToBoxAdapter(child: _buildPracticeView(c, conv))
-              else
-                SliverToBoxAdapter(
-                    child: _buildDialogueView(c, conv, showPinyin)),
+          if (conv.cultureTip.isNotEmpty)
+            SliverToBoxAdapter(child: _buildCultureTip(c, conv)),
 
-              // ── Vocabulary
-              if (conv.vocabulary.isNotEmpty)
-                SliverToBoxAdapter(child: _buildVocabulary(c, conv)),
+          if (conv.relatedGrammar.isNotEmpty)
+            SliverToBoxAdapter(child: _buildRelatedGrammar(c, context, conv)),
 
-              // ── Culture tip
-              if (conv.cultureTip.isNotEmpty)
-                SliverToBoxAdapter(child: _buildCultureTip(c, conv)),
+          SliverToBoxAdapter(child: _buildCTA(c)),
 
-              // ── Related Grammar
-              if (conv.relatedGrammar.isNotEmpty)
-                SliverToBoxAdapter(
-                    child: _buildRelatedGrammar(c, ref, context, conv)),
-
-              // ── Bottom CTA
-              SliverToBoxAdapter(child: _buildCTA(c)),
-
-              SliverToBoxAdapter(
-                child: SizedBox(
-                    height:
-                        MediaQuery.of(context).padding.bottom +
-                            AppSpacing.xxl),
-              ),
-            ],
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: MediaQuery.paddingOf(context).bottom + AppSpacing.xxl,
+            ),
           ),
         ],
       ),
     );
   }
 
-  // ── Header
-  Widget _buildHeader(BuildContext context, AppThemeColors c) {
+  // ── Header ───────────────────────────────────────────────────────────────────
+
+  Widget _buildHeader(AppThemeColors c) {
     return HanzifyAppBar(
       backStyle: HanzifyBackButtonStyle.rounded,
       backBoxShadow: c.cardShadow,
@@ -109,7 +127,8 @@ class _ConversationDetailScreenState
     );
   }
 
-  // ── Hero card
+  // ── Hero card ────────────────────────────────────────────────────────────────
+
   Widget _buildHeroCard(AppThemeColors c, ConversationContext conv) {
     return Padding(
       padding: const EdgeInsets.symmetric(
@@ -122,7 +141,7 @@ class _ConversationDetailScreenState
           borderRadius: BorderRadius.circular(AppRadii.xxxl),
           boxShadow: [
             BoxShadow(
-              color: c.primary.withValues(alpha: 0.3),
+              color: c.primary.withValues(alpha: 0.28),
               blurRadius: 20,
               offset: const Offset(0, 8),
             ),
@@ -151,9 +170,7 @@ class _ConversationDetailScreenState
             Text(
               conv.titlePinyin,
               style: AppTypography.pinyin(
-                fontSize: AppFontSizes.bodyMd,
-                color: c.onPrimarySoft,
-              ),
+                  fontSize: AppFontSizes.bodyMd, color: c.onPrimarySoft),
             ),
             const SizedBox(height: AppSpacing.md),
             Text(
@@ -172,7 +189,7 @@ class _ConversationDetailScreenState
               textAlign: TextAlign.center,
               style: AppTypography.body(
                 fontSize: AppFontSizes.bodyMd,
-                color: Colors.white.withValues(alpha: 0.7),
+                color: Colors.white.withValues(alpha: 0.70),
                 height: 1.4,
               ),
             ),
@@ -182,7 +199,8 @@ class _ConversationDetailScreenState
     );
   }
 
-  // ── Mode toggle
+  // ── Mode toggle ──────────────────────────────────────────────────────────────
+
   Widget _buildModeToggle(AppThemeColors c) {
     return Padding(
       padding: const EdgeInsets.symmetric(
@@ -195,61 +213,31 @@ class _ConversationDetailScreenState
         ),
         child: Row(
           children: [
-            Expanded(
-              child: GestureDetector(
-                onTap: () => setState(() {
-                  _isPracticeMode = false;
-                  _practiceIndex = 0;
-                  _showTranslation = false;
-                }),
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: AppSpacing.sm),
-                  decoration: BoxDecoration(
-                    color: !_isPracticeMode ? c.primary : Colors.transparent,
-                    borderRadius: BorderRadius.circular(AppRadii.full),
-                  ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Đọc hội thoại',
-                    style: AppTypography.label(
-                      fontSize: AppFontSizes.labelMd,
-                      fontWeight: FontWeight.w700,
-                      color: !_isPracticeMode
-                          ? Colors.white
-                          : c.placeholder,
-                    ),
-                  ),
-                ),
-              ),
+            _ModeTab(
+              label: 'Đọc hội thoại',
+              selected: !_isPracticeMode,
+              color: c.primary,
+              unselectedColor: c.onSurfaceVariant,
+              onTap: () => setState(() {
+                _isPracticeMode = false;
+                _practiceIndex = 0;
+                _showTranslation = false;
+                _playTimer?.cancel();
+                _playingIndex = null;
+              }),
             ),
-            Expanded(
-              child: GestureDetector(
-                onTap: () => setState(() {
-                  _isPracticeMode = true;
-                  _practiceIndex = 0;
-                  _showTranslation = false;
-                }),
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: AppSpacing.sm),
-                  decoration: BoxDecoration(
-                    color: _isPracticeMode ? c.primary : Colors.transparent,
-                    borderRadius: BorderRadius.circular(AppRadii.full),
-                  ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Luyện tập',
-                    style: AppTypography.label(
-                      fontSize: AppFontSizes.labelMd,
-                      fontWeight: FontWeight.w700,
-                      color: _isPracticeMode
-                          ? Colors.white
-                          : c.placeholder,
-                    ),
-                  ),
-                ),
-              ),
+            _ModeTab(
+              label: 'Luyện tập',
+              selected: _isPracticeMode,
+              color: c.primary,
+              unselectedColor: c.onSurfaceVariant,
+              onTap: () => setState(() {
+                _isPracticeMode = true;
+                _practiceIndex = 0;
+                _showTranslation = false;
+                _playTimer?.cancel();
+                _playingIndex = null;
+              }),
             ),
           ],
         ),
@@ -257,121 +245,72 @@ class _ConversationDetailScreenState
     );
   }
 
-  // ── Full dialogue view
+  // ── Dialogue view ────────────────────────────────────────────────────────────
+
   Widget _buildDialogueView(
       AppThemeColors c, ConversationContext conv, bool showPinyin) {
+    final isPlaying = _playingIndex != null;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: AppSpacing.lg),
-        HanzifySectionHeader(
-            title: 'Hội thoại', icon: Icons.chat_bubble_outline_rounded),
-        ...conv.lines.map((line) {
-          final speakerInfo = conv.speakers
-              .where((s) => s.code == line.speaker)
-              .firstOrNull;
-          final isSpeakerA = line.speaker == 'A';
+        // Section header + play button
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
+          child: Row(
+            children: [
+              Icon(Icons.chat_bubble_outline_rounded,
+                  size: 18, color: c.onSurfaceVariant),
+              const SizedBox(width: AppSpacing.sm),
+              Text(
+                'Hội thoại',
+                style: AppTypography.sectionTitle(),
+              ),
+              const Spacer(),
+              _PlayButton(
+                isPlaying: isPlaying,
+                onTap: () => _toggleAutoPlay(conv.lines),
+                color: c.primary,
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: AppSpacing.md),
+        ...conv.lines.mapIndexed((index, line) {
+          final speakerInfo =
+              conv.speakers.where((s) => s.code == line.speaker).firstOrNull;
+          final isA = line.speaker == 'A';
+          final isPlayingThis = _playingIndex == index;
 
           return Padding(
             padding: const EdgeInsets.symmetric(
-                horizontal: AppSpacing.xl, vertical: AppSpacing.xs),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                if (isSpeakerA)
-                  _buildSpeakerAvatar(c, speakerInfo, line.speaker),
-                if (isSpeakerA) const SizedBox(width: AppSpacing.md),
-                Expanded(
-                  child: Container(
-                    padding: const EdgeInsets.all(AppSpacing.lg),
-                    decoration: BoxDecoration(
-                      color: isSpeakerA
-                          ? c.surfaceLowest
-                          : c.primary.withValues(alpha: 0.06),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(
-                            isSpeakerA ? AppRadii.xs : AppRadii.xxl),
-                        topRight: Radius.circular(
-                            isSpeakerA ? AppRadii.xxl : AppRadii.xs),
-                        bottomLeft: const Radius.circular(AppRadii.xxl),
-                        bottomRight: const Radius.circular(AppRadii.xxl),
-                      ),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        // Speaker name
-                        Text(
-                          speakerInfo?.nameVi ?? 'Người ${line.speaker}',
-                          style: AppTypography.label(
-                            fontSize: AppFontSizes.labelSm,
-                            color: c.primary,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        const SizedBox(height: AppSpacing.xs),
-                        // Chinese
-                        Text(
-                          line.zh,
-                          style: AppTypography.hanziUi(
-                            fontSize: AppFontSizes.headlineSm,
-                            fontWeight: FontWeight.w600,
-                            color: c.text,
-                          ),
-                        ),
-                        if (showPinyin && line.pinyin.isNotEmpty) ...[
-                          const SizedBox(height: AppSpacing.xs),
-                          Text(
-                            line.pinyin,
-                            style: AppTypography.pinyin(
-                              fontSize: AppFontSizes.bodyMd,
-                              color: c.primary,
-                            ),
-                          ),
-                        ],
-                        const SizedBox(height: AppSpacing.sm),
-                        // Vietnamese
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: 3,
-                              height: 16,
-                              margin: const EdgeInsets.only(
-                                  right: AppSpacing.sm, top: 3),
-                              decoration: BoxDecoration(
-                                color: c.primary,
-                                borderRadius: BorderRadius.circular(2),
-                              ),
-                            ),
-                            Expanded(
-                              child: Text(
-                                line.vi,
-                                style: AppTypography.body(
-                                  fontSize: AppFontSizes.bodyMd,
-                                  color: c.onSurfaceVariant,
-                                  height: 1.4,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                if (!isSpeakerA) const SizedBox(width: AppSpacing.md),
-                if (!isSpeakerA)
-                  _buildSpeakerAvatar(c, speakerInfo, line.speaker),
-              ],
+                horizontal: AppSpacing.lg, vertical: AppSpacing.xs),
+            child: _ConversationBubble(
+              line: line,
+              speakerInfo: speakerInfo,
+              isA: isA,
+              showPinyin: showPinyin,
+              isPlaying: isPlayingThis,
+              viShown: _viShown.contains(index),
+              onToggleVi: () => setState(() {
+                if (_viShown.contains(index)) {
+                  _viShown.remove(index);
+                } else {
+                  _viShown.add(index);
+                }
+              }),
+              colors: c,
             ),
           );
         }),
+        const SizedBox(height: AppSpacing.lg),
       ],
     );
   }
 
-  // ── Practice view (line by line, hide translation by default)
+  // ── Practice view ────────────────────────────────────────────────────────────
+
   Widget _buildPracticeView(AppThemeColors c, ConversationContext conv) {
     if (conv.lines.isEmpty) return const SizedBox.shrink();
 
@@ -385,156 +324,70 @@ class _ConversationDetailScreenState
       children: [
         const SizedBox(height: AppSpacing.lg),
         HanzifySectionHeader(
-            title:
-                'Luyện tập (${_practiceIndex + 1}/${conv.lines.length})',
-            icon: Icons.school_outlined),
+          title: 'Luyện tập (${_practiceIndex + 1}/${conv.lines.length})',
+          icon: Icons.school_outlined,
+        ),
         const SizedBox(height: AppSpacing.lg),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(AppSpacing.xl),
-            decoration: BoxDecoration(
-              color: c.surfaceLowest,
-              borderRadius: BorderRadius.circular(AppRadii.xxl),
-              boxShadow: c.cardShadow,
+        // Practice card
+        AnimatedSwitcher(
+          duration: AppDurations.normal,
+          switchInCurve: AppCurves.enter,
+          transitionBuilder: (child, animation) => FadeTransition(
+            opacity: animation,
+            child: SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0.05, 0),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
             ),
-            child: Column(
-              children: [
-                // Speaker
-                Text(
-                  '${speakerInfo?.nameVi ?? 'Người ${line.speaker}'}${speakerInfo != null ? ' (${speakerInfo.role})' : ''}',
-                  style: AppTypography.label(
-                    fontSize: AppFontSizes.labelLg,
-                    color: c.primary,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                const SizedBox(height: AppSpacing.lg),
-                // Chinese
-                Text(
-                  line.zh,
-                  textAlign: TextAlign.center,
-                  style: AppTypography.hanziDisplay(
-                    fontSize: AppFontSizes.displayMd,
-                    fontWeight: FontWeight.w700,
-                    color: c.text,
-                  ),
-                ),
-                const SizedBox(height: AppSpacing.md),
-                // Pinyin (always shown in practice)
-                Text(
-                  line.pinyin,
-                  textAlign: TextAlign.center,
-                  style: AppTypography.pinyin(
-                    fontSize: AppFontSizes.bodyLg,
-                    color: c.primary,
-                  ),
-                ),
-                const SizedBox(height: AppSpacing.xl),
-                // Translation (show/hide)
-                GestureDetector(
-                  onTap: () =>
-                      setState(() => _showTranslation = !_showTranslation),
-                  child: Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(AppSpacing.lg),
-                    decoration: BoxDecoration(
-                      color: _showTranslation
-                          ? c.primary.withValues(alpha: 0.06)
-                          : c.surfaceLow,
-                      borderRadius: BorderRadius.circular(AppRadii.lg),
-                      border: Border.all(
-                        color: _showTranslation
-                            ? c.primary.withValues(alpha: 0.2)
-                            : c.disabled.withValues(alpha: 0.2),
-                      ),
-                    ),
-                    child: _showTranslation
-                        ? Text(
-                            line.vi,
-                            textAlign: TextAlign.center,
-                            style: AppTypography.body(
-                              fontSize: AppFontSizes.bodyLg,
-                              color: c.text,
-                              fontWeight: FontWeight.w600,
-                              height: 1.4,
-                            ),
-                          )
-                        : Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.visibility_outlined,
-                                  size: 18, color: c.placeholder),
-                              const SizedBox(width: AppSpacing.sm),
-                              Text(
-                                'Nhấn để xem dịch nghĩa',
-                                style: AppTypography.body(
-                                  fontSize: AppFontSizes.bodyMd,
-                                  color: c.placeholder,
-                                ),
-                              ),
-                            ],
-                          ),
-                  ),
-                ),
-              ],
-            ),
+          ),
+          child: _PracticeCard(
+            key: ValueKey(_practiceIndex),
+            line: line,
+            speakerInfo: speakerInfo,
+            showTranslation: _showTranslation,
+            onToggleTranslation: () =>
+                setState(() => _showTranslation = !_showTranslation),
+            colors: c,
           ),
         ),
         const SizedBox(height: AppSpacing.xl),
-        // Navigation buttons
+        // Navigation
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
           child: Row(
             children: [
-              if (_practiceIndex > 0)
+              if (_practiceIndex > 0) ...[
                 Expanded(
-                  child: GestureDetector(
+                  child: _NavButton(
+                    label: 'Trước',
+                    icon: Icons.arrow_back_rounded,
+                    isPrimary: false,
+                    colors: c,
                     onTap: () => setState(() {
                       _practiceIndex--;
                       _showTranslation = false;
                     }),
-                    child: Container(
-                      padding:
-                          const EdgeInsets.symmetric(vertical: AppSpacing.md),
-                      decoration: BoxDecoration(
-                        color: c.surfaceLow,
-                        borderRadius: BorderRadius.circular(AppRadii.xxl),
-                      ),
-                      alignment: Alignment.center,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.arrow_back_rounded,
-                              size: 18, color: c.text),
-                          const SizedBox(width: AppSpacing.xs),
-                          Text(
-                            'Trước',
-                            style: AppTypography.label(
-                              fontSize: AppFontSizes.labelLg,
-                              fontWeight: FontWeight.w700,
-                              color: c.text,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
                   ),
                 ),
-              if (_practiceIndex > 0) const SizedBox(width: AppSpacing.md),
+                const SizedBox(width: AppSpacing.md),
+              ],
               Expanded(
-                child: GestureDetector(
+                child: _NavButton(
+                  label: isLast ? 'Hoàn thành' : 'Tiếp theo',
+                  icon: isLast ? null : Icons.arrow_forward_rounded,
+                  isPrimary: true,
+                  colors: c,
                   onTap: () {
                     if (isLast) {
-                      // Mark as mastered
                       ref
                           .read(conversationListProvider.notifier)
                           .toggleMastered(widget.conversation);
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
-                              'Chúc mừng! Bạn đã hoàn thành bài hội thoại "${widget.conversation.title}"'),
+                              'Chúc mừng! Đã hoàn thành "${widget.conversation.title}"'),
                         ),
                       );
                     } else {
@@ -544,33 +397,6 @@ class _ConversationDetailScreenState
                       });
                     }
                   },
-                  child: Container(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: AppSpacing.md),
-                    decoration: BoxDecoration(
-                      gradient: c.primaryGradient,
-                      borderRadius: BorderRadius.circular(AppRadii.xxl),
-                    ),
-                    alignment: Alignment.center,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          isLast ? 'Hoàn thành' : 'Tiếp theo',
-                          style: AppTypography.label(
-                            fontSize: AppFontSizes.labelLg,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                        if (!isLast) ...[
-                          const SizedBox(width: AppSpacing.xs),
-                          Icon(Icons.arrow_forward_rounded,
-                              size: 18, color: Colors.white),
-                        ],
-                      ],
-                    ),
-                  ),
                 ),
               ),
             ],
@@ -580,41 +406,8 @@ class _ConversationDetailScreenState
     );
   }
 
-  // ── Speaker avatar
-  Widget _buildSpeakerAvatar(
-      AppThemeColors c, SpeakerInfo? speakerInfo, String code) {
-    final colorHex = speakerInfo?.avatarColor ?? '#6C63FF';
-    final color = _parseColor(colorHex);
+  // ── Vocabulary ────────────────────────────────────────────────────────────────
 
-    return Container(
-      width: 36,
-      height: 36,
-      decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.15),
-        shape: BoxShape.circle,
-      ),
-      alignment: Alignment.center,
-      child: Text(
-        code,
-        style: AppTypography.label(
-          fontSize: AppFontSizes.labelMd,
-          fontWeight: FontWeight.w800,
-          color: color,
-        ),
-      ),
-    );
-  }
-
-  Color _parseColor(String hex) {
-    try {
-      final hexStr = hex.replaceAll('#', '');
-      return Color(int.parse('FF$hexStr', radix: 16));
-    } catch (_) {
-      return const Color(0xFF6C63FF);
-    }
-  }
-
-  // ── Vocabulary section
   Widget _buildVocabulary(AppThemeColors c, ConversationContext conv) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -622,87 +415,81 @@ class _ConversationDetailScreenState
         const SizedBox(height: AppSpacing.lg),
         const HanzifySectionHeader(
             title: 'Từ vựng trong bài', icon: Icons.menu_book_rounded),
-        ...conv.vocabulary.map((vocab) => Padding(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: AppSpacing.xl, vertical: AppSpacing.xs),
-              child: HanzifyCard(
-                color: c.surfaceLowest,
-                padding: const EdgeInsets.all(AppSpacing.lg),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 44,
-                      height: 44,
-                      decoration: BoxDecoration(
-                        color: c.primary.withValues(alpha: 0.1),
-                        borderRadius: BorderRadius.circular(AppRadii.lg),
-                      ),
-                      alignment: Alignment.center,
-                      child: Text(
-                        vocab.zh,
-                        style: AppTypography.hanziUi(
-                          fontSize: AppFontSizes.headlineSm,
-                          fontWeight: FontWeight.w700,
-                          color: c.primary,
-                        ),
+        ...conv.vocabulary.map(
+          (vocab) => Padding(
+            padding: const EdgeInsets.symmetric(
+                horizontal: AppSpacing.xl, vertical: AppSpacing.xs),
+            child: HanzifyCard(
+              variant: HanzifyCardVariant.glass,
+              padding: const EdgeInsets.all(AppSpacing.lg),
+              child: Row(
+                children: [
+                  Container(
+                    width: 44,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      color: c.primary.withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(AppRadii.lg),
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      vocab.zh,
+                      style: AppTypography.hanziUi(
+                        fontSize: AppFontSizes.headlineSm,
+                        fontWeight: FontWeight.w700,
+                        color: c.primary,
                       ),
                     ),
-                    const SizedBox(width: AppSpacing.md),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Text(
-                                vocab.pinyin,
+                  ),
+                  const SizedBox(width: AppSpacing.md),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(vocab.pinyin,
                                 style: AppTypography.pinyin(
-                                  fontSize: AppFontSizes.bodySm,
-                                  color: c.primary,
-                                ),
-                              ),
+                                    fontSize: AppFontSizes.bodySm,
+                                    color: c.primary)),
+                            if (vocab.pos.isNotEmpty) ...[
                               const SizedBox(width: AppSpacing.sm),
-                              if (vocab.pos.isNotEmpty)
-                                Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: AppSpacing.sm,
-                                      vertical: 2),
-                                  decoration: BoxDecoration(
-                                    color: c.surfaceLow,
-                                    borderRadius:
-                                        BorderRadius.circular(AppRadii.full),
-                                  ),
-                                  child: Text(
-                                    vocab.pos,
-                                    style: AppTypography.label(
-                                      fontSize: AppFontSizes.labelSm,
-                                      color: c.placeholder,
-                                    ),
-                                  ),
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: AppSpacing.sm, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: c.surfaceLow,
+                                  borderRadius:
+                                      BorderRadius.circular(AppRadii.full),
                                 ),
+                                child: Text(vocab.pos,
+                                    style: AppTypography.label(
+                                        fontSize: AppFontSizes.labelSm,
+                                        color: c.placeholder)),
+                              ),
                             ],
-                          ),
-                          const SizedBox(height: AppSpacing.xs),
-                          Text(
-                            vocab.vi,
+                          ],
+                        ),
+                        const SizedBox(height: AppSpacing.xs),
+                        Text(vocab.vi,
                             style: AppTypography.body(
-                              fontSize: AppFontSizes.bodyMd,
-                              color: c.text,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
-                      ),
+                                fontSize: AppFontSizes.bodyMd,
+                                color: c.text,
+                                fontWeight: FontWeight.w600)),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            )),
+            ),
+          ),
+        ),
       ],
     );
   }
 
-  // ── Culture tip
+  // ── Culture tip ───────────────────────────────────────────────────────────────
+
   Widget _buildCultureTip(AppThemeColors c, ConversationContext conv) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -731,14 +518,11 @@ class _ConversationDetailScreenState
                 ),
                 const SizedBox(width: AppSpacing.md),
                 Expanded(
-                  child: Text(
-                    conv.cultureTip,
-                    style: AppTypography.body(
-                      fontSize: AppFontSizes.bodyMd,
-                      color: c.text,
-                      height: 1.6,
-                    ),
-                  ),
+                  child: Text(conv.cultureTip,
+                      style: AppTypography.body(
+                          fontSize: AppFontSizes.bodyMd,
+                          color: c.text,
+                          height: 1.6)),
                 ),
               ],
             ),
@@ -748,9 +532,10 @@ class _ConversationDetailScreenState
     );
   }
 
-  // ── Related Grammar
-  Widget _buildRelatedGrammar(AppThemeColors c, WidgetRef ref,
-      BuildContext context, ConversationContext conv) {
+  // ── Related grammar ───────────────────────────────────────────────────────────
+
+  Widget _buildRelatedGrammar(
+      AppThemeColors c, BuildContext context, ConversationContext conv) {
     final allGrammarAsync = ref.watch(grammarListProvider);
     final allGrammar = allGrammarAsync.asData?.value ?? [];
 
@@ -769,15 +554,13 @@ class _ConversationDetailScreenState
             padding: const EdgeInsets.symmetric(
                 horizontal: AppSpacing.xl, vertical: AppSpacing.xs),
             child: HanzifyCard(
-              color: c.surfaceLowest,
+              variant: HanzifyCardVariant.glass,
               padding: const EdgeInsets.all(AppSpacing.lg),
               onTap: () {
                 HapticFeedback.lightImpact();
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => GrammarDetailScreen(grammar: related),
-                  ),
-                );
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) =>
+                        GrammarDetailScreen(grammar: related)));
               },
               child: Row(
                 children: [
@@ -790,9 +573,9 @@ class _ConversationDetailScreenState
                     ),
                     alignment: Alignment.center,
                     child: Text(
-                      related.structure.length > 1
+                      related.structure.isNotEmpty
                           ? related.structure.substring(0, 1)
-                          : related.structure,
+                          : '文',
                       style: AppTypography.hanziUi(
                         fontSize: AppFontSizes.headlineSm,
                         fontWeight: FontWeight.w700,
@@ -805,22 +588,16 @@ class _ConversationDetailScreenState
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          related.title,
-                          style: AppTypography.label(
-                            fontSize: AppFontSizes.titleSm,
-                            fontWeight: FontWeight.w700,
-                            color: c.text,
-                          ),
-                        ),
+                        Text(related.title,
+                            style: AppTypography.label(
+                                fontSize: AppFontSizes.titleSm,
+                                fontWeight: FontWeight.w700,
+                                color: c.text)),
                         const SizedBox(height: 2),
-                        Text(
-                          related.structure,
-                          style: AppTypography.body(
-                            fontSize: AppFontSizes.bodySm,
-                            color: c.placeholder,
-                          ),
-                        ),
+                        Text(related.structure,
+                            style: AppTypography.body(
+                                fontSize: AppFontSizes.bodySm,
+                                color: c.placeholder)),
                       ],
                     ),
                   ),
@@ -835,7 +612,8 @@ class _ConversationDetailScreenState
     );
   }
 
-  // ── CTA button
+  // ── CTA ───────────────────────────────────────────────────────────────────────
+
   Widget _buildCTA(AppThemeColors c) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(
@@ -857,7 +635,7 @@ class _ConversationDetailScreenState
             borderRadius: BorderRadius.circular(AppRadii.xxxl),
             boxShadow: [
               BoxShadow(
-                color: c.primary.withValues(alpha: 0.3),
+                color: c.primary.withValues(alpha: 0.28),
                 blurRadius: 12,
                 offset: const Offset(0, 6),
               ),
@@ -877,6 +655,465 @@ class _ConversationDetailScreenState
                 ),
               ),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ── Chat bubble widget ────────────────────────────────────────────────────────
+
+class _ConversationBubble extends StatelessWidget {
+  final DialogueLine line;
+  final SpeakerInfo? speakerInfo;
+  final bool isA;
+  final bool showPinyin;
+  final bool isPlaying;
+  final bool viShown;
+  final VoidCallback onToggleVi;
+  final AppThemeColors colors;
+
+  const _ConversationBubble({
+    required this.line,
+    required this.speakerInfo,
+    required this.isA,
+    required this.showPinyin,
+    required this.isPlaying,
+    required this.viShown,
+    required this.onToggleVi,
+    required this.colors,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final c = colors;
+    final bubbleColor = isA ? c.primaryContainer : c.surfaceLow;
+    final speakerColor = _parseColor(speakerInfo?.avatarColor ?? '#6C63FF');
+
+    // Chat-like radius: pointed corner at speaker side bottom
+    final radius = BorderRadius.only(
+      topLeft: const Radius.circular(AppRadii.xxl),
+      topRight: const Radius.circular(AppRadii.xxl),
+      bottomLeft: Radius.circular(isA ? AppRadii.xs : AppRadii.xxl),
+      bottomRight: Radius.circular(isA ? AppRadii.xxl : AppRadii.xs),
+    );
+
+    final bubble = AnimatedContainer(
+      duration: AppDurations.normal,
+      curve: AppCurves.transform,
+      padding: const EdgeInsets.all(AppSpacing.md),
+      decoration: BoxDecoration(
+        color: bubbleColor,
+        borderRadius: radius,
+        border: isPlaying
+            ? Border.all(color: c.primary, width: 2)
+            : Border.all(color: Colors.transparent, width: 2),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Speaker name
+          Text(
+            speakerInfo?.nameVi ?? 'Người ${line.speaker}',
+            style: AppTypography.label(
+              fontSize: AppFontSizes.labelSm,
+              fontWeight: FontWeight.w700,
+              color: isA ? c.primary : c.onSurfaceVariant,
+            ),
+          ),
+          const SizedBox(height: AppSpacing.xs),
+          // Hanzi
+          Text(
+            line.zh,
+            style: AppTypography.hanziUi(
+              fontSize: AppFontSizes.headlineSm,
+              fontWeight: FontWeight.w600,
+              color: c.text,
+            ),
+          ),
+          if (showPinyin && line.pinyin.isNotEmpty) ...[
+            const SizedBox(height: 3),
+            Text(
+              line.pinyin,
+              style: AppTypography.pinyin(
+                fontSize: AppFontSizes.bodyMd,
+                color: c.primary,
+              ),
+            ),
+          ],
+          const SizedBox(height: AppSpacing.sm),
+          // Vi toggle
+          GestureDetector(
+            onTap: onToggleVi,
+            child: AnimatedCrossFade(
+              duration: AppDurations.fast,
+              crossFadeState: viShown
+                  ? CrossFadeState.showSecond
+                  : CrossFadeState.showFirst,
+              firstChild: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.translate_rounded,
+                      size: 14, color: c.placeholder),
+                  const SizedBox(width: 4),
+                  Text(
+                    'Nhấn để dịch',
+                    style: AppTypography.label(
+                      fontSize: AppFontSizes.labelSm,
+                      color: c.placeholder,
+                    ),
+                  ),
+                ],
+              ),
+              secondChild: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: 3,
+                    height: 16,
+                    margin: const EdgeInsets.only(right: AppSpacing.sm, top: 3),
+                    decoration: BoxDecoration(
+                      color: c.primary,
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      line.vi,
+                      style: AppTypography.body(
+                        fontSize: AppFontSizes.bodyMd,
+                        color: c.onSurfaceVariant,
+                        height: 1.4,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+
+    final avatar = _SpeakerAvatar(
+      code: line.speaker,
+      color: speakerColor,
+    );
+
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: isA
+          ? [
+              avatar,
+              const SizedBox(width: AppSpacing.sm),
+              Expanded(child: bubble),
+              const SizedBox(width: AppSpacing.xxxl),
+            ]
+          : [
+              const SizedBox(width: AppSpacing.xxxl),
+              Expanded(child: bubble),
+              const SizedBox(width: AppSpacing.sm),
+              avatar,
+            ],
+    );
+  }
+
+  static Color _parseColor(String hex) {
+    try {
+      return Color(int.parse('FF${hex.replaceAll('#', '')}', radix: 16));
+    } catch (_) {
+      return const Color(0xFF6C63FF);
+    }
+  }
+}
+
+class _SpeakerAvatar extends StatelessWidget {
+  final String code;
+  final Color color;
+
+  const _SpeakerAvatar({required this.code, required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 34,
+      height: 34,
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.15),
+        shape: BoxShape.circle,
+      ),
+      alignment: Alignment.center,
+      child: Text(
+        code,
+        style: AppTypography.label(
+          fontSize: AppFontSizes.labelMd,
+          fontWeight: FontWeight.w800,
+          color: color,
+        ),
+      ),
+    );
+  }
+}
+
+// ── Play button ───────────────────────────────────────────────────────────────
+
+class _PlayButton extends StatelessWidget {
+  final bool isPlaying;
+  final VoidCallback onTap;
+  final Color color;
+
+  const _PlayButton({
+    required this.isPlaying,
+    required this.onTap,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: AnimatedContainer(
+        duration: AppDurations.fast,
+        padding: const EdgeInsets.symmetric(
+            horizontal: AppSpacing.md, vertical: AppSpacing.xs),
+        decoration: BoxDecoration(
+          color: isPlaying
+              ? color.withValues(alpha: 0.12)
+              : Colors.transparent,
+          borderRadius: BorderRadius.circular(AppRadii.full),
+          border: Border.all(
+            color: isPlaying ? color : color.withValues(alpha: 0.3),
+          ),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              isPlaying ? Icons.stop_rounded : Icons.play_arrow_rounded,
+              size: 16,
+              color: color,
+            ),
+            const SizedBox(width: 4),
+            Text(
+              isPlaying ? 'Dừng' : 'Tự động',
+              style: AppTypography.label(
+                fontSize: AppFontSizes.labelSm,
+                fontWeight: FontWeight.w700,
+                color: color,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ── Practice card ─────────────────────────────────────────────────────────────
+
+class _PracticeCard extends StatelessWidget {
+  final DialogueLine line;
+  final SpeakerInfo? speakerInfo;
+  final bool showTranslation;
+  final VoidCallback onToggleTranslation;
+  final AppThemeColors colors;
+
+  const _PracticeCard({
+    super.key,
+    required this.line,
+    required this.speakerInfo,
+    required this.showTranslation,
+    required this.onToggleTranslation,
+    required this.colors,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final c = colors;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(AppSpacing.xl),
+        decoration: BoxDecoration(
+          color: c.surfaceLowest,
+          borderRadius: BorderRadius.circular(AppRadii.xxl),
+          boxShadow: c.cardShadow,
+        ),
+        child: Column(
+          children: [
+            Text(
+              '${speakerInfo?.nameVi ?? 'Người ${line.speaker}'}'
+              '${speakerInfo?.role.isNotEmpty == true ? ' (${speakerInfo!.role})' : ''}',
+              style: AppTypography.label(
+                fontSize: AppFontSizes.labelLg,
+                color: c.primary,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            const SizedBox(height: AppSpacing.lg),
+            Text(
+              line.zh,
+              textAlign: TextAlign.center,
+              style: AppTypography.hanziDisplay(
+                fontSize: AppFontSizes.displayMd,
+                fontWeight: FontWeight.w700,
+                color: c.text,
+              ),
+            ),
+            const SizedBox(height: AppSpacing.md),
+            Text(
+              line.pinyin,
+              textAlign: TextAlign.center,
+              style: AppTypography.pinyin(
+                  fontSize: AppFontSizes.bodyLg, color: c.primary),
+            ),
+            const SizedBox(height: AppSpacing.xl),
+            // Translation toggle
+            GestureDetector(
+              onTap: onToggleTranslation,
+              child: AnimatedContainer(
+                duration: AppDurations.fast,
+                width: double.infinity,
+                padding: const EdgeInsets.all(AppSpacing.lg),
+                decoration: BoxDecoration(
+                  color: showTranslation
+                      ? c.primary.withValues(alpha: 0.06)
+                      : c.surfaceLow,
+                  borderRadius: BorderRadius.circular(AppRadii.lg),
+                  border: Border.all(
+                    color: showTranslation
+                        ? c.primary.withValues(alpha: 0.2)
+                        : c.disabled.withValues(alpha: 0.2),
+                  ),
+                ),
+                child: showTranslation
+                    ? Text(
+                        line.vi,
+                        textAlign: TextAlign.center,
+                        style: AppTypography.body(
+                          fontSize: AppFontSizes.bodyLg,
+                          color: c.text,
+                          fontWeight: FontWeight.w600,
+                          height: 1.4,
+                        ),
+                      )
+                    : Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.visibility_outlined,
+                              size: 18, color: c.placeholder),
+                          const SizedBox(width: AppSpacing.sm),
+                          Text('Nhấn để xem dịch nghĩa',
+                              style: AppTypography.body(
+                                  fontSize: AppFontSizes.bodyMd,
+                                  color: c.placeholder)),
+                        ],
+                      ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ── Nav button ────────────────────────────────────────────────────────────────
+
+class _NavButton extends StatelessWidget {
+  final String label;
+  final IconData? icon;
+  final bool isPrimary;
+  final AppThemeColors colors;
+  final VoidCallback onTap;
+
+  const _NavButton({
+    required this.label,
+    required this.icon,
+    required this.isPrimary,
+    required this.colors,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final c = colors;
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: AppSpacing.md),
+        decoration: BoxDecoration(
+          gradient: isPrimary ? c.primaryGradient : null,
+          color: isPrimary ? null : c.surfaceLow,
+          borderRadius: BorderRadius.circular(AppRadii.xxl),
+        ),
+        alignment: Alignment.center,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (!isPrimary)
+              Icon(Icons.arrow_back_rounded,
+                  size: 18,
+                  color: isPrimary ? Colors.white : c.text),
+            if (!isPrimary) const SizedBox(width: AppSpacing.xs),
+            Text(
+              label,
+              style: AppTypography.label(
+                fontSize: AppFontSizes.labelLg,
+                fontWeight: FontWeight.w700,
+                color: isPrimary ? Colors.white : c.text,
+              ),
+            ),
+            if (isPrimary && icon != null) ...[
+              const SizedBox(width: AppSpacing.xs),
+              Icon(icon, size: 18, color: Colors.white),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ── Mode tab ──────────────────────────────────────────────────────────────────
+
+class _ModeTab extends StatelessWidget {
+  final String label;
+  final bool selected;
+  final Color color;
+  final Color unselectedColor;
+  final VoidCallback onTap;
+
+  const _ModeTab({
+    required this.label,
+    required this.selected,
+    required this.color,
+    required this.unselectedColor,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: GestureDetector(
+        onTap: onTap,
+        child: AnimatedContainer(
+          duration: AppDurations.fast,
+          padding: const EdgeInsets.symmetric(vertical: AppSpacing.sm),
+          decoration: BoxDecoration(
+            color: selected ? color : Colors.transparent,
+            borderRadius: BorderRadius.circular(AppRadii.full),
+          ),
+          alignment: Alignment.center,
+          child: Text(
+            label,
+            style: AppTypography.label(
+              fontSize: AppFontSizes.labelMd,
+              fontWeight: FontWeight.w700,
+              color: selected ? Colors.white : unselectedColor,
+            ),
           ),
         ),
       ),

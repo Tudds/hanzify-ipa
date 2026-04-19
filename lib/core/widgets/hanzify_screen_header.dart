@@ -8,6 +8,7 @@ import 'package:hanzify/core/theme/typography.dart';
 import 'package:hanzify/core/utils/hanzify_haptic.dart';
 import 'package:hanzify/core/widgets/hanzify_icon_avatar.dart';
 import 'package:hanzify/core/widgets/hanzify_theme_toggle.dart';
+import 'package:hanzify/core/providers/performance_provider.dart';
 
 /// Variant header đồng bộ cho mọi màn chính.
 enum HanzifyHeaderVariant {
@@ -53,13 +54,14 @@ class HanzifyScreenHeader extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final c = themeColorsOf(context);
     final isPrimary = variant == HanzifyHeaderVariant.primary;
+    final isReduced = ref.watch(performanceProvider);
     final double expanded = subtitle != null ? 140 : (isPrimary ? 120 : 88);
 
     return SliverAppBar(
       expandedHeight: expanded,
       pinned: true,
       floating: false,
-      backgroundColor: c.background.withValues(alpha: 0.98),
+      backgroundColor: isReduced ? c.background : c.background.withValues(alpha: 0.98),
       elevation: 0,
       scrolledUnderElevation: 0.5,
       automaticallyImplyLeading: false,

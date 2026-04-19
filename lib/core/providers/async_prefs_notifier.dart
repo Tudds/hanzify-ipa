@@ -2,7 +2,6 @@
 // Base notifier cho các setting lưu bằng SharedPreferences.
 // Loại bỏ code trùng lặp giữa ShowPinyin và ThemeNotifier.
 
-
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Base class cho các Riverpod Notifier cần persist state vào SharedPreferences.
@@ -54,12 +53,8 @@ mixin AsyncPrefsNotifier<T> {
   }) {
     Future.microtask(() async {
       final prefs = await _prefs;
-      final prefsValue = from(prefs);
-      // Chỉ update nếu user chưa thay đổi giá trị trong lúc chờ prefs load.
-      // Nếu currentValue khác defaultValue → user đã tương tác → skip.
-      if (currentValue == defaultVal) {
-        updateState(prefsValue);
-      }
+      // Note: this calls the notifier's setter which updates state
+      updateState(from(prefs));
     });
     return defaultVal;
   }

@@ -1,51 +1,51 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // Light theme
-  static const lightPrimary = Color(0xFF005236);
-  static const lightPrimaryContainer = Color(0xFF126c4a);
+  // ── Light (Minimal Blue) ───────────────────────────────────────────────────
+  static const lightPrimary = Color(0xFF4A90E2);
+  static const lightPrimaryContainer = Color(0xFFE8F1FC);
   static const lightOnPrimary = Colors.white;
-  static const lightSecondary = Color(0xFF006c48);
-  static const lightSecondaryContainer = Color(0xFF92f7c3);
-  static const lightBackground = Color(0xFFf4faff);
-  static const lightSurface = Color(0xFFf4faff);
-  static const lightSurfaceLowest = Color(0xFFffffff);
-  static const lightSurfaceLow = Color(0xFFe7f6ff);
-  static const lightText = Color(0xFF0e1d25);
-  static const lightOnSurfaceVariant = Color(0xFF404943);
-  static const lightPlaceholder = Color(0xFF707973);
-  static const lightDisabled = Color(0xFFbfc9c1);
-  static const lightAccent = Color(0xFF40916C);
-  static const lightError = Color(0xFFba1a1a);
-  static const lightSuccess = Color(0xFF10B981);
+  static const lightSecondary = Color(0xFF6366F1);
+  static const lightSecondaryContainer = Color(0xFFEEEEFF);
+  static const lightBackground = Color(0xFFF8F9FB);
+  static const lightSurface = Color(0xFFF0F2F5);
+  static const lightSurfaceLowest = Color(0xFFFFFFFF);
+  static const lightSurfaceLow = Color(0xFFE8EBF0);
+  static const lightText = Color(0xFF1A1A1A);
+  static const lightOnSurfaceVariant = Color(0xFF6B7280);
+  static const lightPlaceholder = Color(0xFF9CA3AF);
+  static const lightDisabled = Color(0xFFD1D5DB);
+  static const lightAccent = Color(0xFF4A90E2);
+  static const lightError = Color(0xFFEF4444);
+  static const lightSuccess = Color(0xFF22C55E);
   static const lightWarning = Color(0xFFF59E0B);
-  static const lightOutlineVariant = Color(0xFFbfc9c1);
+  static const lightOutlineVariant = Color(0xFFE5E7EB);
 
-  // Dark theme
-  static const darkPrimary = Color(0xFF6EE7B7);      // More vibrant mint
-  static const darkPrimaryContainer = Color(0xFF064E3B);
-  static const darkOnPrimary = Color(0xFF022C22);
-  static const darkSecondary = Color(0xFF34D399);
-  static const darkSecondaryContainer = Color(0xFF064E3B);
-  static const darkBackground = Color(0xFF020617); // Deepest
-  static const darkSurfaceLowest = Color(0xFF0F172A); // Card background
-  static const darkSurface = Color(0xFF1E293B);    // Panels / Navigation
-  static const darkSurfaceLow = Color(0xFF334155);    // Chips / Active states
-  static const darkText = Color(0xFFF8FAFC);         // Slate 50
-  static const darkOnSurfaceVariant = Color(0xFF94A3B8); // Slate 400
-  static const darkPlaceholder = Color(0xFF64748B);     // Slate 500
-  static const darkDisabled = Color(0xFF1E293B);
-  static const darkAccent = Color(0xFF10B981);
-  static const darkError = Color(0xFFFCA5A5);
-  static const darkSuccess = Color(0xFF34D399);
+  // ── Dark (Navy Blue) ───────────────────────────────────────────────────────
+  static const darkPrimary = Color(0xFF7CB9F5);
+  static const darkPrimaryContainer = Color(0xFF1E3A5F);
+  static const darkOnPrimary = Color(0xFF0D1B2E);
+  static const darkSecondary = Color(0xFF818CF8);
+  static const darkSecondaryContainer = Color(0xFF2D2F5E);
+  static const darkBackground = Color(0xFF0F1117);
+  static const darkSurfaceLowest = Color(0xFF1A1D27);
+  static const darkSurface = Color(0xFF22263A);
+  static const darkSurfaceLow = Color(0xFF2E3347);
+  static const darkText = Color(0xFFF0F2F5);
+  static const darkOnSurfaceVariant = Color(0xFF9CA3AF);
+  static const darkPlaceholder = Color(0xFF6B7280);
+  static const darkDisabled = Color(0xFF374151);
+  static const darkAccent = Color(0xFF7CB9F5);
+  static const darkError = Color(0xFFF87171);
+  static const darkSuccess = Color(0xFF4ADE80);
   static const darkWarning = Color(0xFFFBBF24);
-  static const darkOutlineVariant = Color(0xFF334155);
+  static const darkOutlineVariant = Color(0xFF2E3347);
 
-  // Sepia theme
+  // ── Sepia ──────────────────────────────────────────────────────────────────
   static const sepiaPrimary = Color(0xFF704214);
   static const sepiaPrimaryContainer = Color(0xFFf4ecd8);
   static const sepiaOnPrimary = Colors.white;
-  static const sepiaSecondary = Color(0xFF5d4037);
+  static const sepiaSecondary = Color(0xFF8D6E63);
   static const sepiaSecondaryContainer = Color(0xFFefebe9);
   static const sepiaBackground = Color(0xFFf4ecd8);
   static const sepiaSurface = Color(0xFFf4ecd8);
@@ -87,16 +87,29 @@ class AppThemeColors {
   final List<Color> hskColors;
   final Map<String, Color> posColors;
 
-  // Semantic opacity colors
-  final Color onPrimarySoft;       // Colors.white @ 0.85 — soft text on primary bg
-  final Color onPrimaryDivider;    // Colors.white @ 0.25 — divider on primary bg
-  final Color onPrimaryArrow;      // Colors.white @ 0.8 — arrow on primary bg
+  // ── Study semantic colors ─────────────────────────────────────────────
+  final Color studyCorrect;
+  final Color studyCorrectContainer;
+  final Color studyWrong;
+  final Color studyWrongContainer;
+  final Color studyDue;
+  final Color studyNew;
+  final Color studyMastered;
 
-  // UI Tokens
+  // Semantic opacity colors
+  final Color onPrimarySoft;
+  final Color onPrimaryDivider;
+  final Color onPrimaryArrow;
+
+  // ── Design tokens ────────────────────────────────────────────────────────
+  final Color glassSurface;
+  final Color glassBorder;
+  final Gradient accentGradient;
+  final List<BoxShadow> glowShadow;
+  final Gradient heroMesh;
   final Gradient primaryGradient;
   final Gradient successGradient;
   final List<BoxShadow> cardShadow;
-
 
   const AppThemeColors({
     required this.primary,
@@ -120,9 +133,21 @@ class AppThemeColors {
     required this.outlineVariant,
     required this.hskColors,
     required this.posColors,
+    required this.studyCorrect,
+    required this.studyCorrectContainer,
+    required this.studyWrong,
+    required this.studyWrongContainer,
+    required this.studyDue,
+    required this.studyNew,
+    required this.studyMastered,
     required this.onPrimarySoft,
     required this.onPrimaryDivider,
     required this.onPrimaryArrow,
+    required this.glassSurface,
+    required this.glassBorder,
+    required this.accentGradient,
+    required this.glowShadow,
+    required this.heroMesh,
     required this.primaryGradient,
     required this.successGradient,
     required this.cardShadow,
@@ -148,49 +173,65 @@ class AppThemeColors {
     warning: AppColors.lightWarning,
     danger: AppColors.lightError,
     outlineVariant: AppColors.lightOutlineVariant,
-    hskColors: [
-      Color(0xFF10B981), // HSK1
-      Color(0xFF3B82F6), // HSK2
-      Color(0xFFF59E0B), // HSK3
-      Color(0xFFEF4444), // HSK4
-      Color(0xFF8B5CF6), // HSK5
-      Color(0xFFEC4899), // HSK6
+    hskColors: const [
+      Color(0xFF22C55E), Color(0xFF4A90E2), Color(0xFFF59E0B),
+      Color(0xFFEF4444), Color(0xFF8B5CF6), Color(0xFFEC4899),
     ],
-    posColors: {
-      'v': Color(0xFF3B82F6),
-      'n': Color(0xFF10B981),
-      'adj': Color(0xFFF59E0B),
-      'adv': Color(0xFF8B5CF6),
-      'prep': Color(0xFFEF4444),
-      'conj': Color(0xFFEC4899),
-      'pron': Color(0xFF06B6D4),
-      'num': Color(0xFF84CC16),
-      'mw': Color(0xFF6366F1),
-      'aux': Color(0xFFF97316),
-      'interj': Color(0xFF14B8A6),
+    posColors: const {
+      'v': Color(0xFF4A90E2), 'n': Color(0xFF22C55E), 'adj': Color(0xFFF59E0B),
+      'adv': Color(0xFF8B5CF6), 'prep': Color(0xFFEF4444), 'conj': Color(0xFFEC4899),
+      'pron': Color(0xFF06B6D4), 'num': Color(0xFF84CC16), 'mw': Color(0xFF6366F1),
+      'aux': Color(0xFFF97316), 'interj': Color(0xFF14B8A6),
     },
-    onPrimarySoft: Colors.white.withValues(alpha: 0.85),
-    onPrimaryDivider: Colors.white.withValues(alpha: 0.25),
-    onPrimaryArrow: Colors.white.withValues(alpha: 0.8),
+    studyCorrect: Color(0xFF16A34A),
+    studyCorrectContainer: Color(0xFFDCFCE7),
+    studyWrong: Color(0xFFDC2626),
+    studyWrongContainer: Color(0xFFFEE2E2),
+    studyDue: Color(0xFFF59E0B),
+    studyNew: Color(0xFF4A90E2),
+    studyMastered: Color(0xFF22C55E),
+    onPrimarySoft: Colors.white.withValues(alpha: 0.90),
+    onPrimaryDivider: Colors.white.withValues(alpha: 0.30),
+    onPrimaryArrow: Colors.white.withValues(alpha: 0.85),
+    glassSurface: Colors.white.withValues(alpha: 0.80),
+    glassBorder: const Color(0xFFE5E7EB),
+    accentGradient: const LinearGradient(
+      colors: [Color(0xFF4A90E2), Color(0xFF6366F1)],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+    ),
+    glowShadow: [
+      BoxShadow(
+        color: const Color(0xFF4A90E2).withValues(alpha: 0.20),
+        blurRadius: 16,
+        spreadRadius: 0,
+        offset: const Offset(0, 4),
+      ),
+    ],
+    heroMesh: const LinearGradient(
+      colors: [Color(0xFFF0F6FF), Color(0xFFF5F3FF), Color(0xFFF8F9FB)],
+      stops: [0.0, 0.5, 1.0],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+    ),
     primaryGradient: const LinearGradient(
-      colors: [AppColors.lightPrimary, AppColors.lightAccent],
+      colors: [Color(0xFF4A90E2), Color(0xFF6366F1)],
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
     successGradient: const LinearGradient(
-      colors: [Color(0xFF10B981), Color(0xFF059669)],
+      colors: [Color(0xFF22C55E), Color(0xFF16A34A)],
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
     cardShadow: [
       BoxShadow(
-        color: Color(0x0D000000),
-        blurRadius: 40,
-        offset: const Offset(0, 12),
+        color: const Color(0xFF1A1A1A).withValues(alpha: 0.06),
+        blurRadius: 12,
+        offset: const Offset(0, 2),
       ),
     ],
   );
-
 
   static final dark = AppThemeColors(
     primary: AppColors.darkPrimary,
@@ -212,37 +253,52 @@ class AppThemeColors {
     warning: AppColors.darkWarning,
     danger: AppColors.darkError,
     outlineVariant: AppColors.darkOutlineVariant,
-    hskColors: [
-      Color(0xFF34D399), // HSK1 (lighter)
-      Color(0xFF60A5FA), // HSK2
-      Color(0xFFFBBF24), // HSK3
-      Color(0xFFF87171), // HSK4
-      Color(0xFFA78BFA), // HSK5
-      Color(0xFFF472B6), // HSK6
+    hskColors: const [
+      Color(0xFF4ADE80), Color(0xFF7CB9F5), Color(0xFFFBBF24),
+      Color(0xFFF87171), Color(0xFFA78BFA), Color(0xFFF472B6),
     ],
-    posColors: {
-      'v': Color(0xFF60A5FA),
-      'n': Color(0xFF34D399),
-      'adj': Color(0xFFFBBF24),
-      'adv': Color(0xFFA78BFA),
-      'prep': Color(0xFFF87171),
-      'conj': Color(0xFFF472B6),
-      'pron': Color(0xFF22D3EE),
-      'num': Color(0xFFA3E635),
-      'mw': Color(0xFF818CF8),
-      'aux': Color(0xFFFB923C),
-      'interj': Color(0xFF2DD4BF),
+    posColors: const {
+      'v': Color(0xFF7CB9F5), 'n': Color(0xFF4ADE80), 'adj': Color(0xFFFBBF24),
+      'adv': Color(0xFFA78BFA), 'prep': Color(0xFFF87171), 'conj': Color(0xFFF472B6),
+      'pron': Color(0xFF22D3EE), 'num': Color(0xFFA3E635), 'mw': Color(0xFF818CF8),
+      'aux': Color(0xFFFB923C), 'interj': Color(0xFF2DD4BF),
     },
-    onPrimarySoft: AppColors.darkOnPrimary.withValues(alpha: 0.75),
-    onPrimaryDivider: AppColors.darkOnPrimary.withValues(alpha: 0.15),
-    onPrimaryArrow: AppColors.darkOnPrimary.withValues(alpha: 0.6),
+    studyCorrect: Color(0xFF4ADE80),
+    studyCorrectContainer: Color(0xFF14532D),
+    studyWrong: Color(0xFFF87171),
+    studyWrongContainer: Color(0xFF7F1D1D),
+    studyDue: Color(0xFFFBBF24),
+    studyNew: Color(0xFF7CB9F5),
+    studyMastered: Color(0xFF4ADE80),
+    onPrimarySoft: AppColors.darkOnPrimary.withValues(alpha: 0.85),
+    onPrimaryDivider: AppColors.darkOnPrimary.withValues(alpha: 0.20),
+    onPrimaryArrow: AppColors.darkOnPrimary.withValues(alpha: 0.70),
+    glassSurface: Colors.white.withValues(alpha: 0.05),
+    glassBorder: Colors.white.withValues(alpha: 0.10),
+    accentGradient: const LinearGradient(
+      colors: [Color(0xFF7CB9F5), Color(0xFF818CF8)],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+    ),
+    glowShadow: [
+      BoxShadow(
+        color: const Color(0xFF7CB9F5).withValues(alpha: 0.18),
+        blurRadius: 20,
+        offset: const Offset(0, 6),
+      ),
+    ],
+    heroMesh: const LinearGradient(
+      colors: [Color(0xFF0F1827), Color(0xFF141828), Color(0xFF0F1117)],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+    ),
     primaryGradient: const LinearGradient(
-      colors: [AppColors.darkPrimary, Color(0xFF10B981)],
+      colors: [Color(0xFF7CB9F5), Color(0xFF818CF8)],
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
     successGradient: const LinearGradient(
-      colors: [Color(0xFF34D399), Color(0xFF059669)],
+      colors: [Color(0xFF4ADE80), Color(0xFF16A34A)],
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     ),
@@ -250,16 +306,10 @@ class AppThemeColors {
       BoxShadow(
         color: Colors.black.withValues(alpha: 0.35),
         blurRadius: 16,
-        offset: const Offset(0, 8),
-      ),
-      BoxShadow(
-        color: AppColors.darkPrimary.withValues(alpha: 0.05),
-        blurRadius: 2,
-        spreadRadius: 1,
+        offset: const Offset(0, 4),
       ),
     ],
   );
-
 
   static final sepia = AppThemeColors(
     primary: AppColors.sepiaPrimary,
@@ -281,30 +331,45 @@ class AppThemeColors {
     warning: AppColors.sepiaWarning,
     danger: AppColors.sepiaError,
     outlineVariant: AppColors.sepiaOutlineVariant,
-    hskColors: [
-      Color(0xFF2E7D32),
-      Color(0xFF1565C0),
-      Color(0xFFE65100),
-      Color(0xFFC62828),
-      Color(0xFF6A1B9A),
-      Color(0xFFAD1457),
+    hskColors: const [
+      Color(0xFF2E7D32), Color(0xFF1565C0), Color(0xFFE65100),
+      Color(0xFFC62828), Color(0xFF6A1B9A), Color(0xFFAD1457),
     ],
-    posColors: {
-      'v': Color(0xFF1565C0),
-      'n': Color(0xFF2E7D32),
-      'adj': Color(0xFFE65100),
-      'adv': Color(0xFF6A1B9A),
-      'prep': Color(0xFFC62828),
-      'conj': Color(0xFFAD1457),
-      'pron': Color(0xFF00838F),
-      'num': Color(0xFF558B2F),
-      'mw': Color(0xFF283593),
-      'aux': Color(0xFFEF6C00),
-      'interj': Color(0xFF00695C),
+    posColors: const {
+      'v': Color(0xFF1565C0), 'n': Color(0xFF2E7D32), 'adj': Color(0xFFE65100),
+      'adv': Color(0xFF6A1B9A), 'prep': Color(0xFFC62828), 'conj': Color(0xFFAD1457),
+      'pron': Color(0xFF00838F), 'num': Color(0xFF558B2F), 'mw': Color(0xFF283593),
+      'aux': Color(0xFFEF6C00), 'interj': Color(0xFF00695C),
     },
+    studyCorrect: Color(0xFF2E7D32),
+    studyCorrectContainer: Color(0xFFD7F0D8),
+    studyWrong: Color(0xFFC62828),
+    studyWrongContainer: Color(0xFFFDE8E8),
+    studyDue: Color(0xFFE65100),
+    studyNew: Color(0xFF1565C0),
+    studyMastered: Color(0xFF388E3C),
     onPrimarySoft: Colors.white.withValues(alpha: 0.85),
     onPrimaryDivider: Colors.white.withValues(alpha: 0.25),
     onPrimaryArrow: Colors.white.withValues(alpha: 0.8),
+    glassSurface: const Color(0xFFFFFBF0).withValues(alpha: 0.75),
+    glassBorder: const Color(0xFF704214).withValues(alpha: 0.15),
+    accentGradient: const LinearGradient(
+      colors: [Color(0xFF704214), Color(0xFF8D6E63)],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+    ),
+    glowShadow: [
+      BoxShadow(
+        color: const Color(0xFF704214).withValues(alpha: 0.12),
+        blurRadius: 12,
+        offset: const Offset(0, 4),
+      ),
+    ],
+    heroMesh: const LinearGradient(
+      colors: [Color(0xFFFFFBF0), Color(0xFFF4ECD8), Color(0xFFEDE4CE)],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+    ),
     primaryGradient: const LinearGradient(
       colors: [AppColors.sepiaPrimary, Color(0xFF8D6E63)],
       begin: Alignment.topLeft,
@@ -317,11 +382,10 @@ class AppThemeColors {
     ),
     cardShadow: [
       BoxShadow(
-        color: Color(0xFF5D4037).withValues(alpha: 0.1),
+        color: const Color(0xFF5D4037).withValues(alpha: 0.08),
         blurRadius: 8,
-        offset: const Offset(0, 3),
+        offset: const Offset(0, 2),
       ),
     ],
   );
-
 }

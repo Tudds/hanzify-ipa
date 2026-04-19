@@ -256,9 +256,9 @@ class _InfoSection extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
       padding: const EdgeInsets.all(AppSpacing.lg),
       decoration: BoxDecoration(
-        color: c.surfaceLowest,
+        color: c.glassSurface,
         borderRadius: BorderRadius.circular(AppRadii.xl),
-        border: Border.all(color: c.outlineVariant, width: 0.5),
+        border: Border.all(color: c.glassBorder, width: 1),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -270,9 +270,13 @@ class _InfoSection extends StatelessWidget {
                 tag: 'char_$char',
                 child: Material(
                   color: Colors.transparent,
-                  child: Text(
-                    char,
-                    style: AppTypography.hanziDisplay(fontSize: 72, color: c.text),
+                  child: ShaderMask(
+                    shaderCallback: (b) => c.accentGradient.createShader(b),
+                    blendMode: BlendMode.srcIn,
+                    child: Text(
+                      char,
+                      style: AppTypography.hanziDisplay(fontSize: 72, color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -286,7 +290,7 @@ class _InfoSection extends StatelessWidget {
                         pinyin!,
                         style: AppTypography.pinyin(
                           fontSize: AppFontSizes.headlineSm,
-                          color: c.primary,
+                          color: c.secondary,
                         ),
                       ),
                     if (hskLevel != null) ...[
@@ -379,12 +383,13 @@ class _StatTile extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(AppSpacing.md),
       decoration: BoxDecoration(
-        color: c.surfaceLow,
+        color: c.glassSurface,
         borderRadius: BorderRadius.circular(AppRadii.lg),
+        border: Border.all(color: c.glassBorder, width: 1),
       ),
       child: Row(
         children: [
-          Icon(icon, size: 18, color: c.primary),
+          Icon(icon, size: 18, color: c.secondary),
           const SizedBox(width: AppSpacing.sm),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -521,9 +526,9 @@ class _VocabRow extends ConsumerWidget {
           vertical: AppSpacing.md,
         ),
         decoration: BoxDecoration(
-          color: c.surfaceLowest,
+          color: c.glassSurface,
           borderRadius: BorderRadius.circular(AppRadii.lg),
-          border: Border.all(color: c.outlineVariant, width: 0.5),
+          border: Border.all(color: c.glassBorder, width: 1),
         ),
         child: Row(
           children: [
@@ -537,7 +542,7 @@ class _VocabRow extends ConsumerWidget {
                     vocab.pinyin,
                     style: AppTypography.pinyin(
                       fontSize: AppFontSizes.labelMd,
-                      color: c.primary,
+                      color: c.secondary,
                     ),
                   ),
                   if (meaning.isNotEmpty)

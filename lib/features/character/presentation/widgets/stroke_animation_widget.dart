@@ -46,9 +46,11 @@ class _StrokeAnimationWidgetState extends State<StrokeAnimationWidget>
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         if (_currentStrokeIndex < widget.svgStrokes.length - 1) {
-          setState(() {
-            _currentStrokeIndex++;
-          });
+          if (mounted) {
+            setState(() {
+              _currentStrokeIndex++;
+            });
+          }
           _controller.reset();
           if (_isPlaying) {
             _controller.forward();
@@ -65,9 +67,11 @@ class _StrokeAnimationWidgetState extends State<StrokeAnimationWidget>
               }
             });
           } else {
-            setState(() {
-              _isPlaying = false;
-            });
+            if (mounted) {
+              setState(() {
+                _isPlaying = false;
+              });
+            }
           }
         }
       }
@@ -88,45 +92,55 @@ class _StrokeAnimationWidgetState extends State<StrokeAnimationWidget>
   }
 
   void _startAnimation() {
-    setState(() {
-      _isPlaying = true;
-      if (_currentStrokeIndex >= widget.svgStrokes.length - 1) {
-        _currentStrokeIndex = 0;
-      }
-    });
+    if (mounted) {
+      setState(() {
+        _isPlaying = true;
+        if (_currentStrokeIndex >= widget.svgStrokes.length - 1) {
+          _currentStrokeIndex = 0;
+        }
+      });
+    }
     _controller.reset();
     _controller.forward();
   }
 
   void _pauseAnimation() {
-    setState(() {
-      _isPlaying = false;
-    });
+    if (mounted) {
+      setState(() {
+        _isPlaying = false;
+      });
+    }
     _controller.stop();
   }
 
   void _resetAnimation() {
-    setState(() {
-      _currentStrokeIndex = 0;
-      _isPlaying = false;
-    });
+    if (mounted) {
+      setState(() {
+        _currentStrokeIndex = 0;
+        _isPlaying = false;
+      });
+    }
     _controller.reset();
   }
 
   void _nextStroke() {
     if (_currentStrokeIndex < widget.svgStrokes.length - 1) {
-      setState(() {
-        _currentStrokeIndex++;
-      });
+      if (mounted) {
+        setState(() {
+          _currentStrokeIndex++;
+        });
+      }
       _controller.value = 1.0;
     }
   }
 
   void _prevStroke() {
     if (_currentStrokeIndex > 0) {
-      setState(() {
-        _currentStrokeIndex--;
-      });
+      if (mounted) {
+        setState(() {
+          _currentStrokeIndex--;
+        });
+      }
       _controller.value = 1.0;
     }
   }

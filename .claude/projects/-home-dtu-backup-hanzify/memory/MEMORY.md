@@ -1,0 +1,3 @@
+- [Pending DB tasks](project_pending_db_tasks.md) — ✅ meaning xóa xong (schema v8); còn FTS5 (v8→v9)
+- [Supabase plan & progress](project_supabase_plan.md) — 4 phases; Phase 1 Auth ✅ done (b7d2b2a); Phase 2-4 pending
+- [UI Redesign Plan](project_ui_redesign.md) — plan đầy đủ tại `docs/ui_redesign_plan.md`; Phase 1-3 chưa bắt đầu

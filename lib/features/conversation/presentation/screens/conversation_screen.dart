@@ -185,28 +185,38 @@ class _ConversationScreenState extends ConsumerState<ConversationScreen> {
         return Stack(
           fit: StackFit.expand,
           children: [
-            // Background with gradient
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
-                  colors: [
-                    c.primary.withValues(alpha: 0.8),
-                    c.primary,
-                  ],
+            Container(decoration: BoxDecoration(gradient: c.accentGradient)),
+            // Violet glow orb
+            Positioned(
+              right: -60,
+              top: -60,
+              child: Container(
+                width: 220,
+                height: 220,
+                decoration: BoxDecoration(
+                  gradient: RadialGradient(
+                    colors: [
+                      Colors.white.withValues(alpha: 0.25),
+                      Colors.white.withValues(alpha: 0.0),
+                    ],
+                  ),
+                  shape: BoxShape.circle,
                 ),
               ),
             ),
-            // Decorative shapes
             Positioned(
-              right: -50,
-              top: -50,
+              left: -40,
+              bottom: -40,
               child: Container(
-                width: 200,
-                height: 200,
+                width: 160,
+                height: 160,
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.1),
+                  gradient: RadialGradient(
+                    colors: [
+                      c.secondary.withValues(alpha: 0.35),
+                      c.secondary.withValues(alpha: 0.0),
+                    ],
+                  ),
                   shape: BoxShape.circle,
                 ),
               ),
@@ -312,9 +322,9 @@ class _ConversationScreenState extends ConsumerState<ConversationScreen> {
       padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
       child: Container(
         decoration: BoxDecoration(
-          color: c.surfaceLowest,
+          color: c.glassSurface,
           borderRadius: BorderRadius.circular(AppRadii.full),
-          border: Border.all(color: c.disabled.withValues(alpha: 0.3)),
+          border: Border.all(color: c.glassBorder),
         ),
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
         child: Row(
@@ -375,8 +385,8 @@ class _ConversationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HanzifyCard(
-      borderRadius: AppRadii.xxxl,
-      color: colors.surfaceLowest,
+      variant: HanzifyCardVariant.glass,
+      borderRadius: AppRadii.xxl,
       padding: const EdgeInsets.symmetric(
         horizontal: AppSpacing.lg,
         vertical: AppSpacing.md,

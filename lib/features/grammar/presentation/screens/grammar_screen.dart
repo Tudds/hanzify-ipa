@@ -134,9 +134,9 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
       padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
       child: Container(
         decoration: BoxDecoration(
-          color: c.surfaceLowest,
+          color: c.glassSurface,
           borderRadius: BorderRadius.circular(AppRadii.full),
-          border: Border.all(color: c.disabled.withValues(alpha: 0.3)),
+          border: Border.all(color: c.glassBorder),
         ),
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
         child: Row(
@@ -287,14 +287,13 @@ class _FeaturedGrammarCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HanzifyCard(
+      variant: HanzifyCardVariant.glass,
       borderRadius: AppRadii.xxxl,
-      color: colors.surfaceLowest,
       padding: const EdgeInsets.all(AppSpacing.xl),
       margin: const EdgeInsets.only(bottom: AppSpacing.md),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Large Hanzi structure
           Center(
             child: Container(
               padding: const EdgeInsets.symmetric(
@@ -302,15 +301,22 @@ class _FeaturedGrammarCard extends StatelessWidget {
                 vertical: AppSpacing.lg,
               ),
               decoration: BoxDecoration(
-                color: colors.primary.withValues(alpha: 0.08),
+                gradient: colors.accentGradient,
                 borderRadius: BorderRadius.circular(AppRadii.xxl),
+                boxShadow: [
+                  BoxShadow(
+                    color: colors.primary.withValues(alpha: 0.25),
+                    blurRadius: 20,
+                    offset: const Offset(0, 10),
+                  ),
+                ],
               ),
               child: Text(
                 grammar.structure,
                 style: AppTypography.hanziDisplay(
                   fontSize: AppFontSizes.displayMd,
-                  fontWeight: FontWeight.w700,
-                  color: colors.primary,
+                  fontWeight: FontWeight.w800,
+                  color: colors.onPrimary,
                 ),
               ),
             ),
@@ -383,8 +389,8 @@ class _CompactGrammarCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HanzifyCard(
-      borderRadius: AppRadii.xxxl,
-      color: colors.surfaceLowest,
+      variant: HanzifyCardVariant.glass,
+      borderRadius: AppRadii.xxl,
       padding: const EdgeInsets.symmetric(
         horizontal: AppSpacing.lg,
         vertical: AppSpacing.md,
@@ -392,21 +398,27 @@ class _CompactGrammarCard extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: AppSpacing.sm),
       child: Row(
         children: [
-          // Circular icon with Hanzi
           Container(
             width: 48,
             height: 48,
             decoration: BoxDecoration(
-              color: colors.primary.withValues(alpha: 0.1),
+              gradient: colors.accentGradient,
               shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: colors.primary.withValues(alpha: 0.25),
+                  blurRadius: 12,
+                  offset: const Offset(0, 4),
+                ),
+              ],
             ),
             alignment: Alignment.center,
             child: Text(
               _iconChar,
               style: AppTypography.hanziUi(
                 fontSize: AppFontSizes.headlineSm,
-                fontWeight: FontWeight.w700,
-                color: colors.primary,
+                fontWeight: FontWeight.w800,
+                color: colors.onPrimary,
               ),
             ),
           ),

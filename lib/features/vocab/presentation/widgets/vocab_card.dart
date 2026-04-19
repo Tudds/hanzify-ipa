@@ -72,7 +72,18 @@ class _VocabCardWidgetState extends State<VocabCardWidget>
     final c = themeColorsOf(context);
     final item = widget.item;
 
-    return ScaleTransition(
+    final semanticLabel = [
+      item.hanzi,
+      'phát âm: ${item.pinyin}',
+      item.meanings.take(3).map((m) => m.vi).join(', '),
+      'HSK ${item.level}',
+      if (item.isMastered) 'đã thuộc',
+    ].join('. ');
+
+    return Semantics(
+      button: true,
+      label: semanticLabel,
+      child: ScaleTransition(
       scale: _scale,
       child: GestureDetector(
         onTapDown: _onTapDown,
@@ -141,6 +152,7 @@ class _VocabCardWidgetState extends State<VocabCardWidget>
             ],
           ),
         ),
+      ),
       ),
     );
   }
@@ -362,30 +374,37 @@ class _VocabCardWidgetState extends State<VocabCardWidget>
       runSpacing: 8,
       children: chars
           .map(
-            (ch) => GestureDetector(
-              onTap: () => widget.onCharacterTap?.call(ch),
-              child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                decoration: BoxDecoration(
-                  color: c.primary.withValues(alpha: 0.08),
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: c.primary.withValues(alpha: 0.25)),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      ch,
-                      style: GoogleFonts.notoSansSc(
-                        fontSize: 22,
-                        fontWeight: FontWeight.w700,
-                        color: c.primary,
-                      ),
+            (ch) => Semantics(
+              button: true,
+              label: 'Xem chữ $ch',
+              child: GestureDetector(
+                onTap: () => widget.onCharacterTap?.call(ch),
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(minWidth: 44, minHeight: 44),
+                  child: Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    decoration: BoxDecoration(
+                      color: c.primary.withValues(alpha: 0.08),
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: c.primary.withValues(alpha: 0.25)),
                     ),
-                    const SizedBox(width: 4),
-                    Icon(Icons.edit_outlined, size: 12, color: c.primary.withValues(alpha: 0.5)),
-                  ],
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          ch,
+                          style: GoogleFonts.notoSansSc(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w700,
+                            color: c.primary,
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Icon(Icons.edit_outlined, size: 12, color: c.primary.withValues(alpha: 0.5)),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ),

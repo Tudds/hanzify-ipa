@@ -20,9 +20,8 @@ class FlashcardScreen extends ConsumerStatefulWidget {
   ConsumerState<FlashcardScreen> createState() => _FlashcardScreenState();
 }
 
-class _FlashcardScreenState extends ConsumerState<FlashcardScreen> with TickerProviderStateMixin {
+class _FlashcardScreenState extends ConsumerState<FlashcardScreen> {
   int _currentIndex = 0;
-  bool _isFlipped = false;
   int _reviewedCount = 0;
   bool _isFinished = false;
   bool? _scoreFeedback;
@@ -37,31 +36,17 @@ class _FlashcardScreenState extends ConsumerState<FlashcardScreen> with TickerPr
   final List<Vocab> _reviewedCardsList = [];
 
   late PageController _pageController;
-  late AnimationController _flipCtrl;
-  late Animation<double> _flipAnim;
 
   @override
   void initState() {
     super.initState();
-    _pageController = PageController(viewportFraction: 0.85);
-    _flipCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 400));
-    _flipAnim = Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(parent: _flipCtrl, curve: Curves.easeInOut));
+    _pageController = PageController();
   }
 
   @override
   void dispose() {
     _pageController.dispose();
-    _flipCtrl.dispose();
     super.dispose();
-  }
-
-  void _flipCard() {
-    if (_isFlipped) {
-      _flipCtrl.reverse();
-    } else {
-      _flipCtrl.forward();
-    }
-    setState(() => _isFlipped = !_isFlipped);
   }
 
   Future<void> _handleScore(int score) async {
@@ -82,18 +67,20 @@ class _FlashcardScreenState extends ConsumerState<FlashcardScreen> with TickerPr
       }
     });
 
-    Future.delayed(const Duration(milliseconds: 300), () {
+    Future.delayed(const Duration(milliseconds: 350), () {
       if (mounted) setState(() => _scoreFeedback = null);
     });
 
     if (_currentIndex + 1 >= _sessionCards!.length) {
-      await Future.delayed(const Duration(milliseconds: 400));
+      await Future.delayed(const Duration(milliseconds: 450));
       if (mounted) setState(() => _isFinished = true);
       return;
     }
 
-    if (_pageController.hasClients) {
-      _pageController.nextPage(duration: const Duration(milliseconds: 400), curve: Curves.easeInOut);
+    await Future.delayed(const Duration(milliseconds: 350));
+    if (mounted && _pageController.hasClients) {
+      _pageController.nextPage(
+          duration: const Duration(milliseconds: 350), curve: Curves.easeOutCubic);
     }
   }
 
@@ -154,29 +141,18 @@ class _FlashcardScreenState extends ConsumerState<FlashcardScreen> with TickerPr
         return FlashcardStudyView(
           cards: sessionCards,
           currentIndex: _currentIndex,
-          isFlipped: _isFlipped,
           scoreFeedback: _scoreFeedback,
-          onFlip: _flipCard,
           onScore: _handleScore,
           pageController: _pageController,
-          flipAnim: _flipAnim,
           header: _buildHeader(c, _currentIndex, sessionCards.length),
-          onPageChanged: (index) {
-            setState(() {
-              _currentIndex = index;
-              // Reset flip state khi vuốt sang card mới
-              if (_isFlipped) {
-                _flipCtrl.reverse();
-                _isFlipped = false;
-              }
-            });
-          },
+          onPageChanged: (index) => setState(() => _currentIndex = index),
         );
       },
     );
   }
 
   Widget _buildHeader(AppThemeColors c, int current, int total) {
+    final progress = total > 0 ? (current + 1) / total : 0.0;
     return HanzifyAppBar(
       backStyle: HanzifyBackButtonStyle.pill,
       backLabel: _isConfiguring ? '← Về' : '← Thoát',
@@ -188,8 +164,10 @@ class _FlashcardScreenState extends ConsumerState<FlashcardScreen> with TickerPr
         }
       },
       title: !_isConfiguring ? 'Thẻ ${current + 1} / $total' : null,
-      titleStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: c.placeholder),
+      titleStyle: TextStyle(
+          fontSize: 14, fontWeight: FontWeight.w600, color: c.placeholder),
       trailing: !_isConfiguring ? const SizedBox(width: 80) : null,
+      progress: !_isConfiguring ? progress : null,
     );
   }
 
