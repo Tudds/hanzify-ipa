@@ -12,8 +12,8 @@ import 'package:hanzify/core/theme/app_theme_helper.dart';
 import 'package:hanzify/core/providers/user_preferences_provider.dart';
 import 'package:hanzify/core/widgets/hanzify_badge.dart';
 import 'package:hanzify/core/widgets/hanzify_section_header.dart';
-import 'package:hanzify/core/widgets/hanzify_app_bar.dart';
 import 'package:hanzify/core/widgets/hanzify_card.dart';
+import 'package:hanzify/core/widgets/hanzify_detail_frame.dart';
 import 'package:hanzify/features/conversation/domain/entities/conversation_context.dart';
 import 'package:hanzify/features/conversation/presentation/providers/conversation_providers.dart';
 import 'package:hanzify/features/grammar/presentation/providers/grammar_providers.dart';
@@ -35,11 +35,9 @@ class _ConversationDetailScreenState
   int _practiceIndex = 0;
   bool _showTranslation = false;
 
-  // Auto-play state
   int? _playingIndex;
   Timer? _playTimer;
 
-  // Per-bubble Vi toggle in read mode (Set of line indices with Vi shown)
   final Set<int> _viShown = {};
 
   final ScrollController _scrollController = ScrollController();
@@ -79,56 +77,30 @@ class _ConversationDetailScreenState
     final showPinyin = ref.watch(showPinyinProvider);
     final conv = widget.conversation;
 
-    return Scaffold(
-      backgroundColor: c.background,
-      body: CustomScrollView(
-        controller: _scrollController,
-        slivers: [
-          SliverToBoxAdapter(
-            child: SizedBox(height: MediaQuery.paddingOf(context).top + AppSpacing.sm),
-          ),
-          SliverToBoxAdapter(child: _buildHeader(c)),
-          SliverToBoxAdapter(child: _buildHeroCard(c, conv)),
-          SliverToBoxAdapter(child: _buildModeToggle(c)),
-
-          if (_isPracticeMode)
-            SliverToBoxAdapter(child: _buildPracticeView(c, conv))
-          else
-            SliverToBoxAdapter(child: _buildDialogueView(c, conv, showPinyin)),
-
-          if (conv.vocabulary.isNotEmpty)
-            SliverToBoxAdapter(child: _buildVocabulary(c, conv)),
-
-          if (conv.cultureTip.isNotEmpty)
-            SliverToBoxAdapter(child: _buildCultureTip(c, conv)),
-
-          if (conv.relatedGrammar.isNotEmpty)
-            SliverToBoxAdapter(child: _buildRelatedGrammar(c, context, conv)),
-
-          SliverToBoxAdapter(child: _buildCTA(c)),
-
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: MediaQuery.paddingOf(context).bottom + AppSpacing.xxl,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ── Header ───────────────────────────────────────────────────────────────────
-
-  Widget _buildHeader(AppThemeColors c) {
-    return HanzifyAppBar(
-      backStyle: HanzifyBackButtonStyle.rounded,
-      backBoxShadow: c.cardShadow,
+    return HanzifyDetailFrame(
       title: 'Chi tiết hội thoại',
+      scrollController: _scrollController,
+      hero: _buildHeroCard(c, conv),
+      slivers: [
+        SliverToBoxAdapter(child: _buildModeToggle(c)),
+        if (_isPracticeMode)
+          SliverToBoxAdapter(child: _buildPracticeView(c, conv))
+        else
+          SliverToBoxAdapter(
+              child: _buildDialogueView(c, conv, showPinyin)),
+        if (conv.vocabulary.isNotEmpty)
+          SliverToBoxAdapter(child: _buildVocabulary(c, conv)),
+        if (conv.cultureTip.isNotEmpty)
+          SliverToBoxAdapter(child: _buildCultureTip(c, conv)),
+        if (conv.relatedGrammar.isNotEmpty)
+          SliverToBoxAdapter(
+              child: _buildRelatedGrammar(c, context, conv)),
+        SliverToBoxAdapter(child: _buildCTA(c)),
+      ],
     );
   }
 
   // ── Hero card ────────────────────────────────────────────────────────────────
-
   Widget _buildHeroCard(AppThemeColors c, ConversationContext conv) {
     return Padding(
       padding: const EdgeInsets.symmetric(
@@ -200,7 +172,6 @@ class _ConversationDetailScreenState
   }
 
   // ── Mode toggle ──────────────────────────────────────────────────────────────
-
   Widget _buildModeToggle(AppThemeColors c) {
     return Padding(
       padding: const EdgeInsets.symmetric(
@@ -246,7 +217,6 @@ class _ConversationDetailScreenState
   }
 
   // ── Dialogue view ────────────────────────────────────────────────────────────
-
   Widget _buildDialogueView(
       AppThemeColors c, ConversationContext conv, bool showPinyin) {
     final isPlaying = _playingIndex != null;
@@ -255,7 +225,6 @@ class _ConversationDetailScreenState
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: AppSpacing.lg),
-        // Section header + play button
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
           child: Row(
@@ -263,10 +232,7 @@ class _ConversationDetailScreenState
               Icon(Icons.chat_bubble_outline_rounded,
                   size: 18, color: c.onSurfaceVariant),
               const SizedBox(width: AppSpacing.sm),
-              Text(
-                'Hội thoại',
-                style: AppTypography.sectionTitle(),
-              ),
+              Text('Hội thoại', style: AppTypography.sectionTitle()),
               const Spacer(),
               _PlayButton(
                 isPlaying: isPlaying,
@@ -310,7 +276,6 @@ class _ConversationDetailScreenState
   }
 
   // ── Practice view ────────────────────────────────────────────────────────────
-
   Widget _buildPracticeView(AppThemeColors c, ConversationContext conv) {
     if (conv.lines.isEmpty) return const SizedBox.shrink();
 
@@ -328,7 +293,6 @@ class _ConversationDetailScreenState
           icon: Icons.school_outlined,
         ),
         const SizedBox(height: AppSpacing.lg),
-        // Practice card
         AnimatedSwitcher(
           duration: AppDurations.normal,
           switchInCurve: AppCurves.enter,
@@ -353,7 +317,6 @@ class _ConversationDetailScreenState
           ),
         ),
         const SizedBox(height: AppSpacing.xl),
-        // Navigation
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
           child: Row(
@@ -407,7 +370,6 @@ class _ConversationDetailScreenState
   }
 
   // ── Vocabulary ────────────────────────────────────────────────────────────────
-
   Widget _buildVocabulary(AppThemeColors c, ConversationContext conv) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -489,7 +451,6 @@ class _ConversationDetailScreenState
   }
 
   // ── Culture tip ───────────────────────────────────────────────────────────────
-
   Widget _buildCultureTip(AppThemeColors c, ConversationContext conv) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -533,7 +494,6 @@ class _ConversationDetailScreenState
   }
 
   // ── Related grammar ───────────────────────────────────────────────────────────
-
   Widget _buildRelatedGrammar(
       AppThemeColors c, BuildContext context, ConversationContext conv) {
     final allGrammarAsync = ref.watch(grammarListProvider);
@@ -613,7 +573,6 @@ class _ConversationDetailScreenState
   }
 
   // ── CTA ───────────────────────────────────────────────────────────────────────
-
   Widget _buildCTA(AppThemeColors c) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(
@@ -691,7 +650,6 @@ class _ConversationBubble extends StatelessWidget {
     final bubbleColor = isA ? c.primaryContainer : c.surfaceLow;
     final speakerColor = _parseColor(speakerInfo?.avatarColor ?? '#6C63FF');
 
-    // Chat-like radius: pointed corner at speaker side bottom
     final radius = BorderRadius.only(
       topLeft: const Radius.circular(AppRadii.xxl),
       topRight: const Radius.circular(AppRadii.xxl),
@@ -713,7 +671,6 @@ class _ConversationBubble extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Speaker name
           Text(
             speakerInfo?.nameVi ?? 'Người ${line.speaker}',
             style: AppTypography.label(
@@ -723,7 +680,6 @@ class _ConversationBubble extends StatelessWidget {
             ),
           ),
           const SizedBox(height: AppSpacing.xs),
-          // Hanzi
           Text(
             line.zh,
             style: AppTypography.hanziUi(
@@ -743,7 +699,6 @@ class _ConversationBubble extends StatelessWidget {
             ),
           ],
           const SizedBox(height: AppSpacing.sm),
-          // Vi toggle
           GestureDetector(
             onTap: onToggleVi,
             child: AnimatedCrossFade(
@@ -772,7 +727,8 @@ class _ConversationBubble extends StatelessWidget {
                   Container(
                     width: 3,
                     height: 16,
-                    margin: const EdgeInsets.only(right: AppSpacing.sm, top: 3),
+                    margin:
+                        const EdgeInsets.only(right: AppSpacing.sm, top: 3),
                     decoration: BoxDecoration(
                       color: c.primary,
                       borderRadius: BorderRadius.circular(2),
@@ -796,10 +752,7 @@ class _ConversationBubble extends StatelessWidget {
       ),
     );
 
-    final avatar = _SpeakerAvatar(
-      code: line.speaker,
-      color: speakerColor,
-    );
+    final avatar = _SpeakerAvatar(code: line.speaker, color: speakerColor);
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
@@ -970,7 +923,6 @@ class _PracticeCard extends StatelessWidget {
                   fontSize: AppFontSizes.bodyLg, color: c.primary),
             ),
             const SizedBox(height: AppSpacing.xl),
-            // Translation toggle
             GestureDetector(
               onTap: onToggleTranslation,
               child: AnimatedContainer(
@@ -1055,8 +1007,7 @@ class _NavButton extends StatelessWidget {
           children: [
             if (!isPrimary)
               Icon(Icons.arrow_back_rounded,
-                  size: 18,
-                  color: isPrimary ? Colors.white : c.text),
+                  size: 18, color: isPrimary ? Colors.white : c.text),
             if (!isPrimary) const SizedBox(width: AppSpacing.xs),
             Text(
               label,

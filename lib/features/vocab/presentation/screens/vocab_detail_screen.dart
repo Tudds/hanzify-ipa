@@ -12,15 +12,13 @@ import 'package:hanzify/core/widgets/hanzify_card.dart';
 import 'package:hanzify/core/widgets/hanzify_badge.dart';
 import 'package:hanzify/core/widgets/hanzify_section_header.dart';
 import 'package:hanzify/core/widgets/highlighted_text.dart';
-import 'package:hanzify/core/widgets/hanzify_app_bar.dart';
+import 'package:hanzify/core/widgets/hanzify_detail_frame.dart';
 import 'package:hanzify/core/utils/pos_labels.dart' show posLabelFull;
 import 'package:hanzify/core/utils/vocab_meaning_helper.dart';
 import 'package:hanzify/features/vocab/domain/entities/vocab.dart';
 import 'package:hanzify/features/vocab/presentation/providers/vocab_state.dart';
 import 'package:hanzify/features/character/presentation/providers/character_providers.dart';
 import 'package:hanzify/features/character/presentation/widgets/stroke_animation_widget.dart';
-
-// POS labels đã được tập trung trong core/utils/pos_labels.dart
 
 class VocabDetailScreen extends ConsumerStatefulWidget {
   final Vocab vocab;
@@ -39,119 +37,65 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
   @override
   Widget build(BuildContext context) {
     final c = themeColorsOf(context);
-    final vocab = widget.vocab;
     final showPinyin = ref.watch(showPinyinProvider);
 
-    return Scaffold(
-      backgroundColor: c.background,
-      body: Stack(
-        children: [
-          // Watermark hanzi at bottom right
-          Positioned(
-            bottom: -40,
-            right: -20,
-            child: Text(
-              vocab.hanzi,
-              style: AppTypography.hanziDisplay(
-                fontSize: 240,
-                color: c.text.withValues(alpha: 0.04),
-              ),
-            ),
-          ),
-          CustomScrollView(
-            slivers: [
-              // Safe area top padding
-              SliverToBoxAdapter(
-                child: SizedBox(
-                  height: MediaQuery.of(context).padding.top + AppSpacing.sm,
-                ),
-              ),
-
-              // ── Header ──────────────────────────────────────────────
-              SliverToBoxAdapter(child: _buildHeader(context, ref, c)),
-
-              // ── Hero Section ────────────────────────────────────────
-              SliverToBoxAdapter(
-                child: _buildHeroSection(context, ref, c, showPinyin),
-              ),
-
-              // ── Writing Guide ───────────────────────────────────────
-              SliverToBoxAdapter(child: _buildWritingGuide(context, ref, c)),
-
-              // ── Meanings & POS ──────────────────────────────────────
-              SliverToBoxAdapter(child: _buildMeanings(c)),
-
-              // ── Examples ────────────────────────────────────────────
-              SliverToBoxAdapter(child: _buildExamples(c, showPinyin)),
-
-              // Bottom spacing
-              SliverToBoxAdapter(
-                child: SizedBox(
-                  height:
-                      MediaQuery.of(context).padding.bottom + AppSpacing.xxxl,
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
+    return HanzifyDetailFrame(
+      watermarkHanzi: vocab.hanzi,
+      appBarTrailing: _buildBookmarkButton(c),
+      hero: _buildHero(c, showPinyin),
+      slivers: [
+        SliverToBoxAdapter(child: _buildWritingGuide(context, ref, c)),
+        SliverToBoxAdapter(child: _buildMeanings(c)),
+        SliverToBoxAdapter(child: _buildExamples(c, showPinyin)),
+      ],
     );
   }
 
-  // ── Header ──────────────────────────────────────────────────────────────────
-  Widget _buildHeader(BuildContext context, WidgetRef ref, AppThemeColors c) {
-    return HanzifyAppBar(
-      backStyle: HanzifyBackButtonStyle.rounded,
-      backBoxShadow: c.cardShadow,
-      trailing: GestureDetector(
-        onTap: () {
-          HapticFeedback.lightImpact();
-          ref.read(allVocabProvider.notifier).toggleBookmark(vocab);
-        },
-        child: Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.lg,
-            vertical: AppSpacing.sm,
-          ),
-          decoration: BoxDecoration(
-            color: vocab.isBookmarked
-                ? c.primary.withValues(alpha: 0.12)
-                : c.surfaceLowest,
-            borderRadius: BorderRadius.circular(AppRadii.full),
-            boxShadow: c.cardShadow,
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(
-                vocab.isBookmarked
-                    ? Icons.bookmark_rounded
-                    : Icons.bookmark_border_rounded,
+  // ── Bookmark button ──────────────────────────────────────────────────────────
+  Widget _buildBookmarkButton(AppThemeColors c) {
+    return GestureDetector(
+      onTap: () {
+        HapticFeedback.lightImpact();
+        ref.read(allVocabProvider.notifier).toggleBookmark(vocab);
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: AppSpacing.lg,
+          vertical: AppSpacing.sm,
+        ),
+        decoration: BoxDecoration(
+          color: vocab.isBookmarked
+              ? c.primary.withValues(alpha: 0.12)
+              : c.surfaceLowest,
+          borderRadius: BorderRadius.circular(AppRadii.full),
+          boxShadow: c.cardShadow,
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              vocab.isBookmarked
+                  ? Icons.bookmark_rounded
+                  : Icons.bookmark_border_rounded,
+              color: vocab.isBookmarked ? c.primary : c.placeholder,
+              size: 20,
+            ),
+            const SizedBox(width: AppSpacing.xs),
+            Text(
+              'Lưu',
+              style: AppTypography.label(
                 color: vocab.isBookmarked ? c.primary : c.placeholder,
-                size: 20,
+                fontWeight: FontWeight.w700,
               ),
-              const SizedBox(width: AppSpacing.xs),
-              Text(
-                'Lưu',
-                style: AppTypography.label(
-                  color: vocab.isBookmarked ? c.primary : c.placeholder,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
   }
 
-  // ── Hero Section ────────────────────────────────────────────────────────────
-  Widget _buildHeroSection(
-    BuildContext context,
-    WidgetRef ref,
-    AppThemeColors c,
-    bool showPinyin,
-  ) {
+  // ── Hero ─────────────────────────────────────────────────────────────────────
+  Widget _buildHero(AppThemeColors c, bool showPinyin) {
     final fontSize = vocab.hanzi.length > 3 ? 80.0 : 120.0;
 
     return Padding(
@@ -194,12 +138,8 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
     );
   }
 
-  // ── Writing Guide ───────────────────────────────────────────────────────────
-  Widget _buildWritingGuide(
-    BuildContext context,
-    WidgetRef ref,
-    AppThemeColors c,
-  ) {
+  // ── Writing Guide ────────────────────────────────────────────────────────────
+  Widget _buildWritingGuide(BuildContext context, WidgetRef ref, AppThemeColors c) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -223,11 +163,8 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
                   onTap: () {
                     HapticFeedback.mediumImpact();
                     setState(() {
-                      if (_activeCharIndex == index) {
-                        _activeCharIndex = null;
-                      } else {
-                        _activeCharIndex = index;
-                      }
+                      _activeCharIndex =
+                          _activeCharIndex == index ? null : index;
                     });
                   },
                 );
@@ -239,9 +176,8 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
     );
   }
 
-  // ── Meanings & POS ──────────────────────────────────────────────────────────
+  // ── Meanings & POS ───────────────────────────────────────────────────────────
   Widget _buildMeanings(AppThemeColors c) {
-    // Use centralized VocabMeaningHelper extension for grouping
     final groupedMeanings = vocab.groupedByPos;
     final posKeys = groupedMeanings.keys.toList();
 
@@ -252,14 +188,11 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
           title: 'Nghĩa & từ loại',
           icon: Icons.menu_book_rounded,
         ),
-        // HSK badge exclusively at top
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
           child: HanzifyBadge.hsk(level: vocab.level, colors: c),
         ),
         const SizedBox(height: AppSpacing.md),
-
-        // Meanings grouped by POS
         if (vocab.meanings.isNotEmpty)
           ...posKeys.map((pos) {
             final meanings = groupedMeanings[pos]!;
@@ -274,7 +207,6 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // POS Badge as header
                   Row(
                     children: [
                       Container(
@@ -309,7 +241,6 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
                     ],
                   ),
                   const SizedBox(height: AppSpacing.sm),
-                  // Content card for this POS
                   HanzifyCard(
                     variant: HanzifyCardVariant.glass,
                     padding: const EdgeInsets.all(AppSpacing.lg),
@@ -334,7 +265,6 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
 
   Widget _buildMeaningRow(Meaning m, AppThemeColors c) {
     final posColor = c.posColors[m.pos] ?? c.primary;
-
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -359,7 +289,7 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
     );
   }
 
-  // ── Examples ────────────────────────────────────────────────────────────────
+  // ── Examples ─────────────────────────────────────────────────────────────────
   Widget _buildExamples(AppThemeColors c, bool showPinyin) {
     if (vocab.exampleSentences.isEmpty) return const SizedBox.shrink();
 
@@ -380,7 +310,6 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Chinese text
                   HanzifyHighlightedText(
                     text: ex.cn,
                     highlight: vocab.hanzi,
@@ -390,7 +319,6 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
                     ),
                     colors: c,
                   ),
-                  // Pinyin
                   const SizedBox(height: AppSpacing.xs),
                   HanzifyHighlightedText(
                     text: ex.pinyin,
@@ -402,7 +330,6 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
                     colors: c,
                   ),
                   const SizedBox(height: AppSpacing.sm),
-                  // Vietnamese with left border accent
                   Container(
                     padding: const EdgeInsets.only(
                       left: AppSpacing.md,
@@ -464,11 +391,12 @@ class _CharacterStrokeCard extends ConsumerWidget {
             .navigate(AppRoutes.charDetail, arg: char);
       },
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 350),
-        curve: Curves.easeOutQuart,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeOut,
         width: isSelected ? 200 : 100,
         child: HanzifyCard(
-          variant: HanzifyCardVariant.glass,
+          variant: isSelected ? HanzifyCardVariant.solid : HanzifyCardVariant.glass,
+          color: isSelected ? c.surfaceLowest : null,
           margin: EdgeInsets.zero,
           padding: const EdgeInsets.all(AppSpacing.md),
           child: Column(
@@ -501,9 +429,8 @@ class _CharacterStrokeCard extends ConsumerWidget {
                 ),
               ] else
                 charAsync.when(
-                  loading: () => Center(
-                    child: CircularProgressIndicator(color: c.primary),
-                  ),
+                  loading: () =>
+                      Center(child: CircularProgressIndicator(color: c.primary)),
                   error: (e, _) => Center(
                     child: Text(
                       char,

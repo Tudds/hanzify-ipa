@@ -10,7 +10,7 @@ import 'package:hanzify/core/providers/user_preferences_provider.dart';
 import 'package:hanzify/core/widgets/hanzify_card.dart';
 import 'package:hanzify/core/widgets/hanzify_badge.dart';
 import 'package:hanzify/core/widgets/hanzify_section_header.dart';
-import 'package:hanzify/core/widgets/hanzify_app_bar.dart';
+import 'package:hanzify/core/widgets/hanzify_detail_frame.dart';
 import 'package:hanzify/features/grammar/domain/entities/grammar_point.dart';
 import 'package:hanzify/features/grammar/presentation/providers/grammar_providers.dart';
 
@@ -24,59 +24,20 @@ class GrammarDetailScreen extends ConsumerWidget {
     final c = themeColorsOf(context);
     final showPinyin = ref.watch(showPinyinProvider);
 
-    return Scaffold(
-      backgroundColor: c.background,
-      body: Stack(
-        children: [
-          CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: SizedBox(
-                    height: MediaQuery.of(context).padding.top + AppSpacing.sm),
-              ),
-              // ── Header ─────────────────────────────────────────────────
-              SliverToBoxAdapter(child: _buildHeader(context, c)),
-
-              // ── Hero card ──────────────────────────────────────────────
-              SliverToBoxAdapter(child: _buildHeroCard(c)),
-
-              // ── Công thức ──────────────────────────────────────────────
-              if (grammar.formulaParts.isNotEmpty)
-                SliverToBoxAdapter(child: _buildFormula(c)),
-
-              // ── Cách dùng ──────────────────────────────────────────────
-              if (grammar.usages.isNotEmpty)
-                SliverToBoxAdapter(child: _buildUsages(c)),
-
-              // ── Ví dụ minh họa ─────────────────────────────────────────
-              SliverToBoxAdapter(
-                  child: _buildExamples(c, showPinyin)),
-
-              // ── Ngữ pháp liên quan ─────────────────────────────────────
-              if (grammar.relatedGrammar.isNotEmpty)
-                SliverToBoxAdapter(child: _buildRelatedGrammar(c, ref, context)),
-
-              // ── Bottom CTA ─────────────────────────────────────────────
-              SliverToBoxAdapter(child: _buildCTA(c)),
-
-              SliverToBoxAdapter(
-                child: SizedBox(
-                    height:
-                        MediaQuery.of(context).padding.bottom + AppSpacing.xxl),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ── Header ──────────────────────────────────────────────────────────────────
-  Widget _buildHeader(BuildContext context, AppThemeColors c) {
-    return HanzifyAppBar(
-      backStyle: HanzifyBackButtonStyle.rounded,
-      backBoxShadow: c.cardShadow,
+    return HanzifyDetailFrame(
       title: 'Chi tiết ngữ pháp',
+      hero: _buildHeroCard(c),
+      slivers: [
+        if (grammar.formulaParts.isNotEmpty)
+          SliverToBoxAdapter(child: _buildFormula(c)),
+        if (grammar.usages.isNotEmpty)
+          SliverToBoxAdapter(child: _buildUsages(c)),
+        SliverToBoxAdapter(child: _buildExamples(c, showPinyin)),
+        if (grammar.relatedGrammar.isNotEmpty)
+          SliverToBoxAdapter(
+              child: _buildRelatedGrammar(c, ref, context)),
+        SliverToBoxAdapter(child: _buildCTA(c)),
+      ],
     );
   }
 
@@ -178,7 +139,6 @@ class GrammarDetailScreen extends ConsumerWidget {
                     ),
                   );
                 }
-                // Regular label
                 final isBracketed =
                     part.text.startsWith('[') && part.text.endsWith(']');
                 if (isBracketed) {
@@ -284,7 +244,7 @@ class GrammarDetailScreen extends ConsumerWidget {
     );
   }
 
-  // ── Ví dụ minh họa ──────────────────────────────────────────────────────────
+  // ── Ví dụ minh họa ───────────────────────────────────────────────────────────
   Widget _buildExamples(AppThemeColors c, bool showPinyin) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -316,7 +276,6 @@ class GrammarDetailScreen extends ConsumerWidget {
                         fontSize: AppFontSizes.labelSm,
                       ),
                     ),
-                  // Chinese sentence
                   Text(
                     ex.zh,
                     style: AppTypography.hanziUi(
@@ -362,7 +321,6 @@ class GrammarDetailScreen extends ConsumerWidget {
                       ],
                     ),
                   ],
-                  // Speaker icon
                   const SizedBox(height: AppSpacing.sm),
                   Align(
                     alignment: Alignment.centerRight,
@@ -378,8 +336,9 @@ class GrammarDetailScreen extends ConsumerWidget {
     );
   }
 
-  // ── Ngữ pháp liên quan ────────────────────────────────────────────────────
-  Widget _buildRelatedGrammar(AppThemeColors c, WidgetRef ref, BuildContext context) {
+  // ── Ngữ pháp liên quan ───────────────────────────────────────────────────────
+  Widget _buildRelatedGrammar(
+      AppThemeColors c, WidgetRef ref, BuildContext context) {
     final allGrammarAsync = ref.watch(grammarListProvider);
     final allGrammar = allGrammarAsync.asData?.value ?? [];
 
@@ -390,7 +349,8 @@ class GrammarDetailScreen extends ConsumerWidget {
         const HanzifySectionHeader(
             title: 'Ngữ pháp liên quan', icon: Icons.link_rounded),
         ...grammar.relatedGrammar.map((relatedId) {
-          final related = allGrammar.where((g) => g.id == relatedId).firstOrNull;
+          final related =
+              allGrammar.where((g) => g.id == relatedId).firstOrNull;
           if (related == null) return const SizedBox.shrink();
 
           return Padding(
@@ -452,7 +412,8 @@ class GrammarDetailScreen extends ConsumerWidget {
                       ],
                     ),
                   ),
-                  Icon(Icons.chevron_right_rounded, size: 20, color: c.disabled),
+                  Icon(Icons.chevron_right_rounded,
+                      size: 20, color: c.disabled),
                 ],
               ),
             ),
@@ -462,7 +423,7 @@ class GrammarDetailScreen extends ConsumerWidget {
     );
   }
 
-  // ── CTA button ──────────────────────────────────────────────────────────────
+  // ── CTA ──────────────────────────────────────────────────────────────────────
   Widget _buildCTA(AppThemeColors c) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(

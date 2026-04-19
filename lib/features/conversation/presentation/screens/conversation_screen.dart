@@ -12,7 +12,6 @@ import 'package:hanzify/core/widgets/hanzify_card.dart';
 import 'package:hanzify/core/widgets/hanzify_empty_state.dart';
 import 'package:hanzify/core/widgets/hanzify_icon_avatar.dart';
 import 'package:hanzify/features/conversation/domain/entities/conversation_context.dart';
-import 'package:hanzify/core/enums/filter_enums.dart';
 import 'package:hanzify/features/conversation/presentation/providers/conversation_providers.dart';
 import 'conversation_detail_screen.dart';
 
@@ -30,7 +29,7 @@ class ConversationScreen extends ConsumerStatefulWidget {
 
 class _ConversationScreenState extends ConsumerState<ConversationScreen> {
   final _searchController = TextEditingController();
-  final FilterConversationCategory _selectedCategory = FilterConversationCategory.all;
+  int _selectedLevel = 1;
   late PageController _heroPageController;
   Timer? _heroTimer;
   int _currentHeroPage = 0;
@@ -48,7 +47,7 @@ class _ConversationScreenState extends ConsumerState<ConversationScreen> {
       if (_heroPageController.hasClients) {
         _currentHeroPage++;
         _heroPageController.animateToPage(
-          _currentHeroPage % 3, // Assuming 3 items as per _buildHeroSlide
+          _currentHeroPage % 3,
           duration: const Duration(milliseconds: 800),
           curve: Curves.easeInOutCubic,
         );
@@ -64,108 +63,235 @@ class _ConversationScreenState extends ConsumerState<ConversationScreen> {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     final c = themeColorsOfRef(ref);
     final conversationListAsync = ref.watch(conversationListProvider);
+    final isSearching = ref.watch(conversationSearchQueryProvider).isNotEmpty;
 
-    // DB search: conversationListProvider tự rebuild khi search query thay đổi
-    final conversationList = conversationListAsync.when(
+    final allConversations = conversationListAsync.maybeWhen(
       data: (list) => list,
-      loading: () => <ConversationContext>[],
-      error: (err, stack) => <ConversationContext>[],
+      orElse: () => <ConversationContext>[],
     );
 
-    // Apply category filter
-    final filteredList = _selectedCategory == FilterConversationCategory.all
-        ? conversationList
-        : conversationList
-            .where((conv) => conv.category == _selectedCategory.value)
-            .toList();
+    final filteredList = isSearching
+        ? allConversations
+        : allConversations.where((conv) {
+            if (_selectedLevel == 3) return conv.level >= 3;
+            return conv.level == _selectedLevel;
+          }).toList();
 
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        backgroundColor: c.background,
-        body: NestedScrollView(
-          headerSliverBuilder: (context, innerBoxIsScrolled) {
-            return [
-              SliverAppBar(
-                expandedHeight: 280,
-                floating: false,
-                pinned: true,
-                backgroundColor: c.background,
-                elevation: 0,
-                leading: IconButton(
-                  icon: Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: c.surfaceLowest.withValues(alpha: 0.8),
-                      shape: BoxShape.circle,
-                    ),
-                    child: Icon(Icons.arrow_back_ios_new_rounded, size: 18, color: c.text),
+    return Scaffold(
+      backgroundColor: c.background,
+      body: NestedScrollView(
+        headerSliverBuilder: (context, innerBoxIsScrolled) {
+          return [
+            SliverAppBar(
+              expandedHeight: 280,
+              floating: false,
+              pinned: true,
+              backgroundColor: c.background,
+              elevation: 0,
+              leading: IconButton(
+                icon: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: c.glassSurface,
+                    shape: BoxShape.circle,
                   ),
-                  onPressed: () => ref.read(navigationProvider.notifier).navigate(AppRoutes.home),
+                  child: Icon(Icons.arrow_back_ios_new_rounded,
+                      size: 18, color: c.text),
                 ),
-                flexibleSpace: FlexibleSpaceBar(
-                  background: _buildHeroSlide(c, filteredList),
-                ),
+                onPressed: () => ref
+                    .read(navigationProvider.notifier)
+                    .navigate(AppRoutes.home),
               ),
-              SliverAppBar(
-                pinned: true,
-                backgroundColor: c.surface,
-                elevation: 0,
-                toolbarHeight: 0,
-                automaticallyImplyLeading: false,
-                bottom: PreferredSize(
-                  preferredSize: const Size.fromHeight(130),
-                  child: Container(
-                    color: c.surface,
-                    padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        _buildSearchBar(c),
-                        const SizedBox(height: AppSpacing.sm),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
-                          child: TabBar(
-                            isScrollable: false,
-                            labelColor: c.primary,
-                            unselectedLabelColor: c.placeholder,
-                            labelStyle: AppTypography.label(fontSize: AppFontSizes.labelMd, fontWeight: FontWeight.w700),
-                            unselectedLabelStyle: AppTypography.label(fontSize: AppFontSizes.labelMd, fontWeight: FontWeight.w500),
-                            indicatorColor: c.primary,
-                            indicatorWeight: 3,
-                            indicatorSize: TabBarIndicatorSize.label,
-                            dividerColor: Colors.transparent,
-                            indicator: UnderlineTabIndicator(
-                              borderSide: BorderSide(width: 3.0, color: c.primary),
-                              insets: const EdgeInsets.symmetric(horizontal: 16.0),
-                            ),
-                            tabs: const [
-                              Tab(text: 'HSK 1'),
-                              Tab(text: 'HSK 2'),
-                              Tab(text: 'HSK 3'),
-                            ],
-                          ),
+              flexibleSpace: FlexibleSpaceBar(
+                titlePadding: const EdgeInsets.symmetric(
+                    horizontal: AppSpacing.lg, vertical: AppSpacing.md),
+                centerTitle: false,
+                title: innerBoxIsScrolled
+                    ? Text(
+                        'Hội thoại',
+                        style: AppTypography.headline(
+                          fontSize: AppFontSizes.headlineSm,
+                          fontWeight: FontWeight.w800,
+                          color: c.text,
                         ),
+                      )
+                    : null,
+                background: _buildHeroSlide(c, allConversations),
+              ),
+            ),
+            SliverAppBar(
+              pinned: true,
+              backgroundColor: c.background,
+              elevation: 0,
+              toolbarHeight: 0,
+              automaticallyImplyLeading: false,
+              bottom: PreferredSize(
+                preferredSize: Size.fromHeight(isSearching ? 90 : 156),
+                child: Container(
+                  color: c.background,
+                  padding: const EdgeInsets.only(bottom: AppSpacing.md),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      _buildSearchBar(c),
+                      if (!isSearching) ...[
+                        const SizedBox(height: AppSpacing.md),
+                        _buildHskTabs(c),
                       ],
-                    ),
+                    ],
                   ),
                 ),
               ),
-            ];
+            ),
+          ];
+        },
+        body: conversationListAsync.isLoading && allConversations.isEmpty
+            ? const Center(child: CircularProgressIndicator())
+            : CustomScrollView(
+                slivers: [
+                  if (filteredList.isEmpty && isSearching)
+                    const SliverFillRemaining(
+                      child: HanzifyEmptyState.searchNoResults(),
+                    )
+                  else if (filteredList.isEmpty)
+                    SliverFillRemaining(
+                      child: _buildNoDataState(c),
+                    )
+                  else
+                    SliverPadding(
+                      padding: const EdgeInsets.only(top: AppSpacing.sm),
+                      sliver: SliverList(
+                        delegate: SliverChildListDelegate(
+                          _buildConversationList(c, filteredList),
+                        ),
+                      ),
+                    ),
+                  const SliverToBoxAdapter(
+                    child: SizedBox(height: AppSpacing.scrollBottom),
+                  ),
+                ],
+              ),
+      ),
+    );
+  }
+
+  // ── Tabs ────────────────────────────────────────────────────────────────
+
+  Widget _buildHskTabs(AppThemeColors c) {
+    final tabs = [
+      (1, 'HSK 1', 'C\u0103n b\u1EA3n'),
+      (2, 'HSK 2', 'Trung c\u1EA5p'),
+      (3, 'HSK 3+', 'N\u00E2ng cao'),
+    ];
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+      child: Row(
+        children: tabs.map((t) {
+          final isSelected = _selectedLevel == t.$1;
+          return Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(
+                right: t.$1 == 3 ? 0 : AppSpacing.sm,
+              ),
+              child: GestureDetector(
+                onTap: () {
+                  HanzifyHaptic.select();
+                  setState(() => _selectedLevel = t.$1);
+                },
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 250),
+                  padding: const EdgeInsets.symmetric(vertical: AppSpacing.md),
+                  decoration: BoxDecoration(
+                    color: isSelected ? c.primary : c.glassSurface,
+                    borderRadius: BorderRadius.circular(AppRadii.xl),
+                    border: Border.all(
+                      color: isSelected ? c.primary : c.glassBorder,
+                    ),
+                    boxShadow: isSelected
+                        ? [
+                            BoxShadow(
+                              color: c.primary.withValues(alpha: 0.15),
+                              blurRadius: 8,
+                              offset: const Offset(0, 2),
+                            )
+                          ]
+                        : null,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        t.$2,
+                        style: AppTypography.label(
+                          fontSize: AppFontSizes.labelMd,
+                          fontWeight: FontWeight.w800,
+                          color: isSelected ? c.onPrimary : c.text,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        t.$3,
+                        style: AppTypography.label(
+                          fontSize: 9,
+                          fontWeight: FontWeight.w500,
+                          color: isSelected
+                              ? c.onPrimary.withValues(alpha: 0.8)
+                              : c.placeholder,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          );
+        }).toList(),
+      ),
+    );
+  }
+
+  // ── Conversation List ───────────────────────────────────────────────────
+
+  List<Widget> _buildConversationList(
+    AppThemeColors c,
+    List<ConversationContext> conversations,
+  ) {
+    return conversations.map((conv) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+        child: _ConversationCard(
+          conversation: conv,
+          colors: c,
+          onTap: () {
+            HanzifyHaptic.tap();
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => ConversationDetailScreen(conversation: conv),
+              ),
+            );
           },
-          body: TabBarView(
-            children: [
-              _buildTabList(c, filteredList, 1),
-              _buildTabList(c, filteredList, 2),
-              _buildTabList(c, filteredList, 3),
-            ],
-          ),
         ),
+      );
+    }).toList();
+  }
+
+  Widget _buildNoDataState(AppThemeColors c) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(Icons.chat_bubble_outline_rounded,
+              size: 64, color: c.placeholder.withValues(alpha: 0.3)),
+          const SizedBox(height: AppSpacing.md),
+          Text(
+            'Ch\u01B0a c\u00F3 b\u00E0i h\u1ED9i tho\u1EA1i cho c\u1EA5p \u0111\u1ED9 n\u00E0y',
+            style: AppTypography.body(color: c.placeholder),
+          ),
+        ],
       ),
     );
   }
@@ -188,18 +314,13 @@ class _ConversationScreenState extends ConsumerState<ConversationScreen> {
             Container(decoration: BoxDecoration(gradient: c.accentGradient)),
             // Violet glow orb
             Positioned(
-              right: -60,
-              top: -60,
+              right: -40,
+              top: -40,
               child: Container(
-                width: 220,
-                height: 220,
+                width: 180,
+                height: 180,
                 decoration: BoxDecoration(
-                  gradient: RadialGradient(
-                    colors: [
-                      Colors.white.withValues(alpha: 0.25),
-                      Colors.white.withValues(alpha: 0.0),
-                    ],
-                  ),
+                  color: Colors.white.withValues(alpha: 0.08),
                   shape: BoxShape.circle,
                 ),
               ),
@@ -281,33 +402,6 @@ class _ConversationScreenState extends ConsumerState<ConversationScreen> {
               ),
             ),
           ],
-        );
-      },
-    );
-  }
-
-  Widget _buildTabList(AppThemeColors c, List<ConversationContext> conversations, int level) {
-    final list = conversations.where((conv) => (level == 3 ? conv.level >= 3 : conv.level == level)).toList();
-    
-    if (list.isEmpty) {
-      return const Center(child: HanzifyEmptyState.searchNoResults());
-    }
-
-    return ListView.builder(
-      padding: const EdgeInsets.all(AppSpacing.lg),
-      itemCount: list.length,
-      itemBuilder: (context, index) {
-        return _ConversationCard(
-          conversation: list[index],
-          colors: c,
-          onTap: () {
-            HanzifyHaptic.tap();
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => ConversationDetailScreen(conversation: list[index]),
-              ),
-            );
-          },
         );
       },
     );

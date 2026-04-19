@@ -104,6 +104,7 @@ class AppTypography {
     Color? color,
     double? height,
     double? letterSpacing,
+    FontStyle? fontStyle,
   }) {
     return GoogleFonts.inter(
       fontSize: fontSize,
@@ -111,6 +112,7 @@ class AppTypography {
       color: color,
       height: height,
       letterSpacing: letterSpacing,
+      fontStyle: fontStyle,
     );
   }
 
@@ -118,11 +120,15 @@ class AppTypography {
     double fontSize = AppFontSizes.labelMd,
     FontWeight fontWeight = FontWeight.w600,
     Color? color,
+    double? letterSpacing,
+    double? height,
   }) {
     return GoogleFonts.inter(
       fontSize: fontSize,
       fontWeight: fontWeight,
       color: color,
+      letterSpacing: letterSpacing,
+      height: height,
     );
   }
 

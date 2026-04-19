@@ -64,7 +64,11 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
   }
 
   @override
-  Future<List<Vocab>> getByLevel(int level, {int limit = 0, int offset = 0}) async {
+  Future<List<Vocab>> getByLevel(
+    int level, {
+    int limit = 0,
+    int offset = 0,
+  }) async {
     var query = db.select(db.vocabsTable)
       ..where((t) => t.level.equals(level))
       ..orderBy([
@@ -77,7 +81,9 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
 
   @override
   Future<void> update(Vocab model) async {
-    await db.into(db.vocabsTable).insert(_mapToCompanion(model), mode: InsertMode.insertOrReplace);
+    await db
+        .into(db.vocabsTable)
+        .insert(_mapToCompanion(model), mode: InsertMode.insertOrReplace);
   }
 
   @override
@@ -85,8 +91,12 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
 
   @override
   Future<int> count() async {
-    final countQuery = db.selectOnly(db.vocabsTable)..addColumns([db.vocabsTable.id.count()]);
-    return countQuery.map((row) => row.read(db.vocabsTable.id.count())).getSingle().then((v) => v ?? 0);
+    final countQuery = db.selectOnly(db.vocabsTable)
+      ..addColumns([db.vocabsTable.id.count()]);
+    return countQuery
+        .map((row) => row.read(db.vocabsTable.id.count()))
+        .getSingle()
+        .then((v) => v ?? 0);
   }
 
   @override
@@ -127,7 +137,10 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
         if (v.hanzi.contains(qRaw)) return true;
         if (v.pinyin.toLowerCase().contains(qRaw.toLowerCase())) return true;
         if (v.pinyinNormalized.contains(normalizedQuery)) return true;
-        if (v.meanings.any((m) => m.vi.toLowerCase().contains(qRaw.toLowerCase()))) return true;
+        if (v.meanings.any(
+          (m) => m.vi.toLowerCase().contains(qRaw.toLowerCase()),
+        ))
+          return true;
         return false;
       }).toList();
     }
@@ -135,11 +148,7 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
     return _applyFilters(mapped, hskLevel, wordType);
   }
 
-  List<Vocab> _applyFilters(
-    List<Vocab> list,
-    int? hskLevel,
-    String? wordType,
-  ) {
+  List<Vocab> _applyFilters(List<Vocab> list, int? hskLevel, String? wordType) {
     var result = list;
     if (hskLevel != null && hskLevel > 0) {
       result = result.where((v) => v.level == hskLevel).toList();

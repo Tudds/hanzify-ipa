@@ -31,9 +31,13 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
   void initState() {
     super.initState();
     _animCtrl = AnimationController(
-        vsync: this, duration: AppDurations.counter);
-    _progressAnim = Tween<double>(begin: 0, end: 1).animate(
-        CurvedAnimation(parent: _animCtrl, curve: Curves.easeOutCubic));
+      vsync: this,
+      duration: AppDurations.counter,
+    );
+    _progressAnim = Tween<double>(
+      begin: 0,
+      end: 1,
+    ).animate(CurvedAnimation(parent: _animCtrl, curve: Curves.easeOutCubic));
     _animCtrl.forward();
   }
 
@@ -58,168 +62,180 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
           final total = allVocab.length;
           final progress = total > 0 ? (dueCount / total).clamp(0.0, 1.0) : 0.0;
           const streak = 15;
-          final easyToForget =
-              allVocab.where((v) => v.easeFactor < 2.0).length;
+          final easyToForget = allVocab.where((v) => v.easeFactor < 2.0).length;
 
           return CustomScrollView(
             slivers: [
               const HanzifyScreenHeader(
                 title: 'Ôn Tập',
-                subtitle: 'Hệ thống lặp lại ngắt quãng giúp bạn ghi nhớ lâu hơn.',
+                subtitle:
+                    'Hệ thống lặp lại ngắt quãng giúp bạn ghi nhớ lâu hơn.',
               ),
               SliverToBoxAdapter(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: AppSpacing.xl),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: AppSpacing.xl),
 
-                // ── Circular progress ───────────────────────────────
-                _buildCircularProgress(c, dueCount, progress),
+                    // ── Circular progress ───────────────────────────────
+                    _buildCircularProgress(c, dueCount, progress),
 
-                const SizedBox(height: AppSpacing.xxl),
+                    const SizedBox(height: AppSpacing.xxl),
 
-                // ── Action buttons ──────────────────────────────────
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
-                  child: Column(
-                    children: [
-                      HanzifyActionTile.variantGradient(
-                        emoji: '🗂',
-                        title: 'BẮT ĐẦU FLASHCARD',
-                        subtitle: 'Lướt qua các từ cần ôn tập',
-                        colors: c,
-                        onTap: () {
-                          HanzifyHaptic.action();
-                          ref
-                              .read(navigationProvider.notifier)
-                              .navigate(AppRoutes.flashcard);
-                        },
+                    // ── Action buttons ──────────────────────────────────
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: AppSpacing.xl,
                       ),
+                      child: Column(
+                        children: [
+                          HanzifyActionTile.variantGradient(
+                            emoji: '🗂',
+                            title: 'BẮT ĐẦU FLASHCARD',
+                            subtitle: 'Lướt qua các từ cần ôn tập',
+                            colors: c,
+                            onTap: () {
+                              HanzifyHaptic.action();
+                              ref
+                                  .read(navigationProvider.notifier)
+                                  .navigate(AppRoutes.flashcard);
+                            },
+                          ),
 
-                      // Quiz button — outlined white
-                      HanzifyActionTile.variantOutlined(
-                        emoji: '🧠',
-                        title: 'KIỂM TRA QUIZ',
-                        subtitle: 'Kiểm tra kiến thức của bạn',
-                        colors: c,
-                        onTap: () {
-                          HanzifyHaptic.action();
-                          ref
-                              .read(navigationProvider.notifier)
-                              .navigate(AppRoutes.quiz);
-                        },
+                          // Quiz button — outlined white
+                          HanzifyActionTile.variantOutlined(
+                            emoji: '🧠',
+                            title: 'KIỂM TRA QUIZ',
+                            subtitle: 'Kiểm tra kiến thức của bạn',
+                            colors: c,
+                            onTap: () {
+                              HanzifyHaptic.action();
+                              ref
+                                  .read(navigationProvider.notifier)
+                                  .navigate(AppRoutes.quiz);
+                            },
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-
-                const SizedBox(height: AppSpacing.xl),
-
-                // ── Stats grid ──────────────────────────────────────
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: HanzifyStatCard.vertical(
-                          value: '$streak',
-                          label: 'NGÀY LIÊN TIẾP',
-                          icon: Icons.local_fire_department_rounded,
-                          iconColor: c.warning,
-                          colors: c,
-                        ),
-                      ),
-                      const SizedBox(width: AppSpacing.md),
-                      Expanded(
-                        child: HanzifyStatCard.vertical(
-                          value: '$mastered',
-                          label: 'ĐÃ THUỘC LÒNG',
-                          icon: Icons.verified_rounded,
-                          iconColor: c.success,
-                          colors: c,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                const SizedBox(height: AppSpacing.lg),
-
-                // ── HSK mastery chart ───────────────────────────────
-                TweenAnimationBuilder<double>(
-                  tween: Tween(begin: 0, end: 1),
-                  duration: const Duration(milliseconds: 400),
-                  curve: Curves.easeOutCubic,
-                  builder: (context, t, child) => Opacity(
-                    opacity: t,
-                    child: Transform.translate(
-                      offset: Offset(0, 12 * (1 - t)),
-                      child: child,
                     ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
-                    child: _buildHskChart(c, allVocab),
-                  ),
-                ),
 
-                const SizedBox(height: AppSpacing.lg),
+                    const SizedBox(height: AppSpacing.xl),
 
-                // ── Alert card ──────────────────────────────────────
-                if (easyToForget > 0)
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
-                    child: HanzifyCard(
-                      variant: HanzifyCardVariant.glass,
-                      padding: const EdgeInsets.all(AppSpacing.lg),
-                      margin: EdgeInsets.zero,
-                      color: c.error.withValues(alpha: 0.10),
-                      border: Border.all(
-                          color: c.error.withValues(alpha: 0.35), width: 1),
+                    // ── Stats grid ──────────────────────────────────────
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: AppSpacing.xl,
+                      ),
                       child: Row(
                         children: [
-                          Icon(Icons.warning_amber_rounded,
-                              color: c.error, size: 28),
+                          Expanded(
+                            child: HanzifyStatCard.vertical(
+                              value: '$streak',
+                              label: 'NGÀY LIÊN TIẾP',
+                              icon: Icons.local_fire_department_rounded,
+                              iconColor: c.warning,
+                              colors: c,
+                            ),
+                          ),
                           const SizedBox(width: AppSpacing.md),
                           Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'CẦN XEM LẠI',
-                                  style: AppTypography.headline(
-                                    fontSize: AppFontSizes.titleSm,
-                                    fontWeight: FontWeight.w800,
-                                    color: c.error,
-                                  ),
-                                ),
-                                const SizedBox(height: 2),
-                                Text(
-                                  'Phát hiện $easyToForget từ dễ quên',
-                                  style: AppTypography.body(
-                                    fontSize: AppFontSizes.bodySm,
-                                    color: c.error.withValues(alpha: 0.8),
-                                  ),
-                                ),
-                              ],
+                            child: HanzifyStatCard.vertical(
+                              value: '$mastered',
+                              label: 'ĐÃ THUỘC LÒNG',
+                              icon: Icons.verified_rounded,
+                              iconColor: c.success,
+                              colors: c,
                             ),
                           ),
                         ],
                       ),
                     ),
-                  ),
-                const SizedBox(height: AppSpacing.scrollBottom),
-              ],
-            ),
+
+                    const SizedBox(height: AppSpacing.lg),
+
+                    // ── HSK mastery chart ───────────────────────────────
+                    TweenAnimationBuilder<double>(
+                      tween: Tween(begin: 0, end: 1),
+                      duration: const Duration(milliseconds: 400),
+                      curve: Curves.easeOutCubic,
+                      builder: (context, t, child) => Opacity(
+                        opacity: t,
+                        child: Transform.translate(
+                          offset: Offset(0, 12 * (1 - t)),
+                          child: child,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: AppSpacing.xl,
+                        ),
+                        child: _buildHskChart(c, allVocab),
+                      ),
+                    ),
+
+                    const SizedBox(height: AppSpacing.lg),
+
+                    // ── Alert card ──────────────────────────────────────
+                    if (easyToForget > 0)
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: AppSpacing.xl,
+                        ),
+                        child: HanzifyCard(
+                          variant: HanzifyCardVariant.glass,
+                          padding: const EdgeInsets.all(AppSpacing.lg),
+                          margin: EdgeInsets.zero,
+                          color: c.error.withValues(alpha: 0.10),
+                          border: Border.all(
+                            color: c.error.withValues(alpha: 0.35),
+                            width: 1,
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.warning_amber_rounded,
+                                color: c.error,
+                                size: 28,
+                              ),
+                              const SizedBox(width: AppSpacing.md),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'CẦN XEM LẠI',
+                                      style: AppTypography.headline(
+                                        fontSize: AppFontSizes.titleSm,
+                                        fontWeight: FontWeight.w800,
+                                        color: c.error,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 2),
+                                    Text(
+                                      'Phát hiện $easyToForget từ dễ quên',
+                                      style: AppTypography.body(
+                                        fontSize: AppFontSizes.bodySm,
+                                        color: c.error.withValues(alpha: 0.8),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    const SizedBox(height: AppSpacing.scrollBottom),
+                  ],
+                ),
               ),
             ],
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (err, st) => Center(child: Text('Lỗi: $err', style: AppTypography.body(color: c.error))),
+        error: (err, st) => Center(
+          child: Text('Lỗi: $err', style: AppTypography.body(color: c.error)),
+        ),
       ),
     );
   }
@@ -234,7 +250,10 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
       return (lvl, total, mastered);
     }).toList();
 
-    final maxY = data.map((d) => d.$2).fold<int>(0, (a, b) => a > b ? a : b).toDouble();
+    final maxY = data
+        .map((d) => d.$2)
+        .fold<int>(0, (a, b) => a > b ? a : b)
+        .toDouble();
 
     return HanzifyCard(
       variant: HanzifyCardVariant.glass,
@@ -261,9 +280,15 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
                 gridData: const FlGridData(show: false),
                 borderData: FlBorderData(show: false),
                 titlesData: FlTitlesData(
-                  leftTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-                  topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-                  rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                  leftTitles: const AxisTitles(
+                    sideTitles: SideTitles(showTitles: false),
+                  ),
+                  topTitles: const AxisTitles(
+                    sideTitles: SideTitles(showTitles: false),
+                  ),
+                  rightTitles: const AxisTitles(
+                    sideTitles: SideTitles(showTitles: false),
+                  ),
                   bottomTitles: AxisTitles(
                     sideTitles: SideTitles(
                       showTitles: true,
@@ -344,7 +369,10 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen>
   }
 
   Widget _buildCircularProgress(
-      AppThemeColors c, int dueCount, double progress) {
+    AppThemeColors c,
+    int dueCount,
+    double progress,
+  ) {
     return AnimatedBuilder(
       animation: _progressAnim,
       builder: (context, child) {

@@ -40,6 +40,7 @@ class StringListConverter extends TypeConverter<List<String>, String> {
     if (list == null) return [];
     return list.map((e) => e?.toString() ?? '').toList();
   }
+
   @override
   String toSql(List<String> value) => json.encode(value);
 }
@@ -50,95 +51,134 @@ class MeaningListConverter extends TypeConverter<List<Meaning>, String> {
   List<Meaning> fromSql(String fromDb) {
     final list = _safeDecodeList(fromDb);
     if (list == null) return [];
-    return list.map((e) => Meaning.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => Meaning.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
+
   @override
-  String toSql(List<Meaning> value) => json.encode(value.map((e) => e.toJson()).toList());
+  String toSql(List<Meaning> value) =>
+      json.encode(value.map((e) => e.toJson()).toList());
 }
 
-class ExampleListConverter extends TypeConverter<List<ExampleSentence>, String> {
+class ExampleListConverter
+    extends TypeConverter<List<ExampleSentence>, String> {
   const ExampleListConverter();
   @override
   List<ExampleSentence> fromSql(String fromDb) {
     final list = _safeDecodeList(fromDb);
     if (list == null) return [];
-    return list.map((e) => ExampleSentence.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => ExampleSentence.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
+
   @override
-  String toSql(List<ExampleSentence> value) => json.encode(value.map((e) => e.toJson()).toList());
+  String toSql(List<ExampleSentence> value) =>
+      json.encode(value.map((e) => e.toJson()).toList());
 }
 
-class GrammarExampleListConverter extends TypeConverter<List<GrammarExample>, String> {
+class GrammarExampleListConverter
+    extends TypeConverter<List<GrammarExample>, String> {
   const GrammarExampleListConverter();
   @override
   List<GrammarExample> fromSql(String fromDb) {
     final list = _safeDecodeList(fromDb);
     if (list == null) return [];
-    return list.map((e) => GrammarExample.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => GrammarExample.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
+
   @override
-  String toSql(List<GrammarExample> value) => json.encode(value.map((e) => e.toJson()).toList());
+  String toSql(List<GrammarExample> value) =>
+      json.encode(value.map((e) => e.toJson()).toList());
 }
 
-class FormulaPartListConverter extends TypeConverter<List<FormulaPart>, String> {
+class FormulaPartListConverter
+    extends TypeConverter<List<FormulaPart>, String> {
   const FormulaPartListConverter();
   @override
   List<FormulaPart> fromSql(String fromDb) {
     final list = _safeDecodeList(fromDb);
     if (list == null) return [];
-    return list.map((e) => FormulaPart.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => FormulaPart.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
+
   @override
-  String toSql(List<FormulaPart> value) => json.encode(value.map((e) => e.toJson()).toList());
+  String toSql(List<FormulaPart> value) =>
+      json.encode(value.map((e) => e.toJson()).toList());
 }
 
-class GrammarUsageListConverter extends TypeConverter<List<GrammarUsage>, String> {
+class GrammarUsageListConverter
+    extends TypeConverter<List<GrammarUsage>, String> {
   const GrammarUsageListConverter();
   @override
   List<GrammarUsage> fromSql(String fromDb) {
     final list = _safeDecodeList(fromDb);
     if (list == null) return [];
-    return list.map((e) => GrammarUsage.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => GrammarUsage.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
+
   @override
-  String toSql(List<GrammarUsage> value) => json.encode(value.map((e) => e.toJson()).toList());
+  String toSql(List<GrammarUsage> value) =>
+      json.encode(value.map((e) => e.toJson()).toList());
 }
 
-class DialogueLineListConverter extends TypeConverter<List<DialogueLine>, String> {
+class DialogueLineListConverter
+    extends TypeConverter<List<DialogueLine>, String> {
   const DialogueLineListConverter();
   @override
   List<DialogueLine> fromSql(String fromDb) {
     final list = _safeDecodeList(fromDb);
     if (list == null) return [];
-    return list.map((e) => DialogueLine.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => DialogueLine.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
+
   @override
-  String toSql(List<DialogueLine> value) => json.encode(value.map((e) => e.toJson()).toList());
+  String toSql(List<DialogueLine> value) =>
+      json.encode(value.map((e) => e.toJson()).toList());
 }
 
-class VocabInContextListConverter extends TypeConverter<List<VocabInContext>, String> {
+class VocabInContextListConverter
+    extends TypeConverter<List<VocabInContext>, String> {
   const VocabInContextListConverter();
   @override
   List<VocabInContext> fromSql(String fromDb) {
     final list = _safeDecodeList(fromDb);
     if (list == null) return [];
-    return list.map((e) => VocabInContext.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => VocabInContext.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
+
   @override
-  String toSql(List<VocabInContext> value) => json.encode(value.map((e) => e.toJson()).toList());
+  String toSql(List<VocabInContext> value) =>
+      json.encode(value.map((e) => e.toJson()).toList());
 }
 
-class SpeakerInfoListConverter extends TypeConverter<List<SpeakerInfo>, String> {
+class SpeakerInfoListConverter
+    extends TypeConverter<List<SpeakerInfo>, String> {
   const SpeakerInfoListConverter();
   @override
   List<SpeakerInfo> fromSql(String fromDb) {
     final list = _safeDecodeList(fromDb);
     if (list == null) return [];
-    return list.map((e) => SpeakerInfo.fromJson(e as Map<String, dynamic>)).toList();
+    return list
+        .map((e) => SpeakerInfo.fromJson(e as Map<String, dynamic>))
+        .toList();
   }
+
   @override
-  String toSql(List<SpeakerInfo> value) => json.encode(value.map((e) => e.toJson()).toList());
-  }
+  String toSql(List<SpeakerInfo> value) =>
+      json.encode(value.map((e) => e.toJson()).toList());
+}
 
 // ============================================================================
 // Tables Schema
@@ -214,7 +254,8 @@ class ConversationsTable extends Table {
   TextColumn get category => text()();
   TextColumn get icon => text()();
   TextColumn get lines => text().map(const DialogueLineListConverter())();
-  TextColumn get vocabulary => text().map(const VocabInContextListConverter())();
+  TextColumn get vocabulary =>
+      text().map(const VocabInContextListConverter())();
   TextColumn get speakers => text().map(const SpeakerInfoListConverter())();
   TextColumn get relatedGrammar => text().map(const StringListConverter())();
   TextColumn get cultureTip => text()();
@@ -241,7 +282,14 @@ LazyDatabase _openConnection() {
 // AppDatabase
 // ============================================================================
 
-@DriftDatabase(tables: [VocabsTable, CharactersTable, GrammarPointsTable, ConversationsTable])
+@DriftDatabase(
+  tables: [
+    VocabsTable,
+    CharactersTable,
+    GrammarPointsTable,
+    ConversationsTable,
+  ],
+)
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
@@ -275,12 +323,16 @@ class AppDatabase extends _$AppDatabase {
           await m.createTable(conversationsTable);
           await _createConversationIndexes(this);
           await DatabaseSeedService(this).seedConversations();
-          debugPrint('[Migration] v5→v6: Added ConversationsTable + seeded data');
+          debugPrint(
+            '[Migration] v5→v6: Added ConversationsTable + seeded data',
+          );
         }
         if (from < 7) {
           // Version 6→7: Thêm index còn thiếu cho vocab.hanzi và character.pinyin_normalized
           await _createExtraIndexes(this);
-          debugPrint('[Migration] v6→v7: Added hanzi + char pinyin_normalized indexes');
+          debugPrint(
+            '[Migration] v6→v7: Added hanzi + char pinyin_normalized indexes',
+          );
         }
         if (from < 8) {
           // Version 7→8: Xóa column meaning thừa (derive được từ meanings[0].vi)
@@ -299,21 +351,43 @@ class AppDatabase extends _$AppDatabase {
     final g = db.grammarPointsTable.actualTableName;
 
     // Vocab indexes
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_vocab_level ON $v (level)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_vocab_next_review ON $v (next_review)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_vocab_bookmarked ON $v (is_bookmarked)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_vocab_mastered ON $v (is_mastered)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_vocab_word_type ON $v (word_type)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_vocab_pinyin_normalized ON $v (pinyin_normalized)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_vocab_hanzi ON $v (hanzi)');
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_vocab_level ON $v (level)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_vocab_next_review ON $v (next_review)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_vocab_bookmarked ON $v (is_bookmarked)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_vocab_mastered ON $v (is_mastered)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_vocab_word_type ON $v (word_type)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_vocab_pinyin_normalized ON $v (pinyin_normalized)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_vocab_hanzi ON $v (hanzi)',
+    );
 
     // Character indexes
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_char_hsk_level ON $c (hsk_level)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_char_pinyin_normalized ON $c (pinyin_normalized)');
-    
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_char_hsk_level ON $c (hsk_level)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_char_pinyin_normalized ON $c (pinyin_normalized)',
+    );
+
     // Grammar indexes
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_grammar_level ON $g (level)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_grammar_category ON $g (category)');
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_grammar_level ON $g (level)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_grammar_category ON $g (category)',
+    );
   }
 
   /// Tạo tất cả indexes (gồm cả Conversation).
@@ -328,17 +402,29 @@ class AppDatabase extends _$AppDatabase {
   static Future<void> _createExtraIndexes(AppDatabase db) async {
     final v = db.vocabsTable.actualTableName;
     final c = db.charactersTable.actualTableName;
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_vocab_hanzi ON $v (hanzi)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_char_pinyin_normalized ON $c (pinyin_normalized)');
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_vocab_hanzi ON $v (hanzi)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_char_pinyin_normalized ON $c (pinyin_normalized)',
+    );
   }
 
   /// Tạo indexes riêng cho ConversationsTable.
   static Future<void> _createConversationIndexes(AppDatabase db) async {
     final cv = db.conversationsTable.actualTableName;
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_conversation_level ON $cv (level)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_conversation_category ON $cv (category)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_conversation_bookmarked ON $cv (is_bookmarked)');
-    await db.customStatement('CREATE INDEX IF NOT EXISTS idx_conversation_mastered ON $cv (is_mastered)');
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_conversation_level ON $cv (level)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_conversation_category ON $cv (category)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_conversation_bookmarked ON $cv (is_bookmarked)',
+    );
+    await db.customStatement(
+      'CREATE INDEX IF NOT EXISTS idx_conversation_mastered ON $cv (is_mastered)',
+    );
   }
 
   /// Public API cho force reseed (giữ lại cho backward compatibility).
@@ -371,7 +457,8 @@ class DatabaseSeedService {
 
       final listFiles = ['hsk1.json', 'hsk2.json', 'hsk3.json'];
       for (final fileName in listFiles) {
-        final inferredLevel = int.tryParse(fileName.replaceAll(RegExp(r'[^0-9]'), '')) ?? 1;
+        final inferredLevel =
+            int.tryParse(fileName.replaceAll(RegExp(r'[^0-9]'), '')) ?? 1;
         try {
           final jsonStr = await rootBundle.loadString('assets/data/$fileName');
           final decoded = json.decode(jsonStr);
@@ -379,9 +466,19 @@ class DatabaseSeedService {
           if (decoded is List) {
             for (var v in decoded) {
               final map = v as Map<String, dynamic>;
-              final id = map['id'] as String? ?? '${map['hanzi']}_$inferredLevel';
-              final vocab = VocabJsonParser.parse(map, id: id, defaultLevel: inferredLevel);
-              inserts.add(_vocabToCompanion(vocab, needsSync: map['needsSync'] as bool? ?? false));
+              final id =
+                  map['id'] as String? ?? '${map['hanzi']}_$inferredLevel';
+              final vocab = VocabJsonParser.parse(
+                map,
+                id: id,
+                defaultLevel: inferredLevel,
+              );
+              inserts.add(
+                _vocabToCompanion(
+                  vocab,
+                  needsSync: map['needsSync'] as bool? ?? false,
+                ),
+              );
             }
           }
         } catch (e) {
@@ -391,7 +488,11 @@ class DatabaseSeedService {
 
       if (inserts.isNotEmpty) {
         await db.batch((batch) {
-          batch.insertAll(db.vocabsTable, inserts, mode: InsertMode.insertOrReplace);
+          batch.insertAll(
+            db.vocabsTable,
+            inserts,
+            mode: InsertMode.insertOrReplace,
+          );
         });
         debugPrint('[Seed] Seeded ${inserts.length} vocab items');
       }
@@ -408,37 +509,52 @@ class DatabaseSeedService {
 
       final charFiles = ['char_hsk1.json', 'char_hsk2.json', 'char_hsk3.json'];
       for (final fileName in charFiles) {
-        final inferredLevel = int.tryParse(fileName.replaceAll(RegExp(r'[^0-9]'), '')) ?? 1;
+        final inferredLevel =
+            int.tryParse(fileName.replaceAll(RegExp(r'[^0-9]'), '')) ?? 1;
         try {
           final jsonStr = await rootBundle.loadString('assets/data/$fileName');
           final decoded = json.decode(jsonStr);
           if (decoded is List) {
             for (var cRaw in decoded) {
               final c = cRaw as Map<String, dynamic>;
-              final charVal = c['char'] as String? ?? c['character'] as String? ?? '';
+              final charVal =
+                  c['char'] as String? ?? c['character'] as String? ?? '';
               if (charVal.isEmpty) continue;
 
               final rawStrokes = c['strokes'] as List? ?? [];
-              final strokesList = rawStrokes.map((s) {
-                if (s is String) return s;
-                if (s is Map) return s['path'] as String? ?? '';
-                return '';
-              }).where((s) => s.isNotEmpty).toList();
+              final strokesList = rawStrokes
+                  .map((s) {
+                    if (s is String) return s;
+                    if (s is Map) return s['path'] as String? ?? '';
+                    return '';
+                  })
+                  .where((s) => s.isNotEmpty)
+                  .toList();
 
               final pinyinVal = c['pinyin'] as String?;
 
-              inserts.add(CharactersTableCompanion.insert(
-                char: charVal,
-                strokes: strokesList,
-                hskLevel: Value(c['hskLevel'] as int? ?? c['level'] as int? ?? inferredLevel),
-                radical: Value(c['radical'] as String?),
-                strokeCount: Value(c['strokeCount'] as int? ?? strokesList.length),
-                pinyin: Value(pinyinVal),
-                pinyinNormalized: Value(
-                    c['pinyinNormalized'] as String? ?? (pinyinVal != null ? normalizePinyin(pinyinVal) : null)),
-                definition: Value(c['definition'] as String?),
-                definitionVi: Value(c['definitionVi'] as String?),
-              ));
+              inserts.add(
+                CharactersTableCompanion.insert(
+                  char: charVal,
+                  strokes: strokesList,
+                  hskLevel: Value(
+                    c['hskLevel'] as int? ??
+                        c['level'] as int? ??
+                        inferredLevel,
+                  ),
+                  radical: Value(c['radical'] as String?),
+                  strokeCount: Value(
+                    c['strokeCount'] as int? ?? strokesList.length,
+                  ),
+                  pinyin: Value(pinyinVal),
+                  pinyinNormalized: Value(
+                    c['pinyinNormalized'] as String? ??
+                        (pinyinVal != null ? normalizePinyin(pinyinVal) : null),
+                  ),
+                  definition: Value(c['definition'] as String?),
+                  definitionVi: Value(c['definitionVi'] as String?),
+                ),
+              );
             }
           }
         } catch (e) {
@@ -448,7 +564,11 @@ class DatabaseSeedService {
 
       if (inserts.isNotEmpty) {
         await db.batch((batch) {
-          batch.insertAll(db.charactersTable, inserts, mode: InsertMode.insertOrReplace);
+          batch.insertAll(
+            db.charactersTable,
+            inserts,
+            mode: InsertMode.insertOrReplace,
+          );
         });
         debugPrint('[Seed] Seeded ${inserts.length} character items');
       }
@@ -498,9 +618,15 @@ class DatabaseSeedService {
       }).toList();
 
       await db.batch((batch) {
-        batch.insertAll(db.grammarPointsTable, inserts, mode: InsertMode.insertOrReplace);
+        batch.insertAll(
+          db.grammarPointsTable,
+          inserts,
+          mode: InsertMode.insertOrReplace,
+        );
       });
-      debugPrint('[Seed] Seeded ${inserts.length} grammar points (preserved ${userState.length} user states)');
+      debugPrint(
+        '[Seed] Seeded ${inserts.length} grammar points (preserved ${userState.length} user states)',
+      );
     } catch (e) {
       debugPrint('[Seed] Grammar seed error: $e');
     }
@@ -521,11 +647,13 @@ class DatabaseSeedService {
       try {
         final jsonStr = await rootBundle.loadString(path);
         final decoded = json.decode(jsonStr) as List;
-        results.addAll(decoded.map((e) {
-          final map = e as Map<String, dynamic>;
-          final id = map['id'] as String? ?? '';
-          return GrammarPoint.fromJson(id, map);
-        }));
+        results.addAll(
+          decoded.map((e) {
+            final map = e as Map<String, dynamic>;
+            final id = map['id'] as String? ?? '';
+            return GrammarPoint.fromJson(id, map);
+          }),
+        );
       } catch (e) {
         debugPrint('[Seed] Failed to load $path: $e');
       }
@@ -576,9 +704,15 @@ class DatabaseSeedService {
       }).toList();
 
       await db.batch((batch) {
-        batch.insertAll(db.conversationsTable, inserts, mode: InsertMode.insertOrReplace);
+        batch.insertAll(
+          db.conversationsTable,
+          inserts,
+          mode: InsertMode.insertOrReplace,
+        );
       });
-      debugPrint('[Seed] Seeded ${inserts.length} conversations (preserved ${userState.length} user states)');
+      debugPrint(
+        '[Seed] Seeded ${inserts.length} conversations (preserved ${userState.length} user states)',
+      );
     } catch (e) {
       debugPrint('[Seed] Conversation seed error: $e');
     }
@@ -587,7 +721,9 @@ class DatabaseSeedService {
   /// Nạp conversation từ JSON asset (`assets/data/conversation.json`).
   Future<List<ConversationContext>> _loadConversationsFromAssets() async {
     try {
-      final jsonStr = await rootBundle.loadString('assets/data/conversation.json');
+      final jsonStr = await rootBundle.loadString(
+        'assets/data/conversation.json',
+      );
       final decoded = json.decode(jsonStr) as List;
       return decoded.map((e) {
         final map = e as Map<String, dynamic>;

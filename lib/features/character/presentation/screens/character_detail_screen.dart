@@ -1,4 +1,3 @@
-// lib/features/character/presentation/screens/character_detail_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -9,16 +8,13 @@ import 'package:hanzify/core/theme/app_theme_helper.dart';
 import 'package:hanzify/features/vocab/domain/entities/vocab.dart';
 import 'package:hanzify/core/providers/navigation_provider.dart';
 import 'package:hanzify/features/vocab/presentation/screens/vocab_detail_screen.dart';
-import 'package:hanzify/core/widgets/hanzify_app_bar.dart';
+import 'package:hanzify/core/widgets/hanzify_detail_frame.dart';
 import 'package:hanzify/core/widgets/hanzify_empty_state.dart';
+import 'package:hanzify/core/widgets/hanzify_section_header.dart';
 import 'package:hanzify/core/utils/vocab_meaning_helper.dart';
 import '../providers/character_providers.dart';
 import '../widgets/stroke_animation_widget.dart';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// CharacterDetailScreen
-// Nhận [char] — ký tự đơn cần xem chi tiết
-// ─────────────────────────────────────────────────────────────────────────────
 class CharacterDetailScreen extends ConsumerWidget {
   final String char;
 
@@ -30,118 +26,75 @@ class CharacterDetailScreen extends ConsumerWidget {
     final charAsync = ref.watch(characterDetailProvider(char));
     final vocabAsync = ref.watch(vocabContainingCharProvider(char));
 
-    return Scaffold(
-      backgroundColor: c.background,
-      body: Column(
-        children: [
-          _Header(char: char, colors: c),
-
-          // ── Content ────────────────────────────────────────────────────────
-          Expanded(
-            child: charAsync.when(
-              loading: () =>
-                  Center(child: CircularProgressIndicator(color: c.primary)),
-              error: (e, _) => HanzifyEmptyState.errorState(errorText: 'Lỗi tải dữ liệu "$char"'),
-              data: (character) {
-                if (character == null) {
-                  return HanzifyEmptyState.noCharacterData(character: char);
-                }
-                return CustomScrollView(
-                  physics: const BouncingScrollPhysics(),
-                  slivers: [
-                    // Stroke animation section
-                    SliverToBoxAdapter(
-                      child: _StrokeSection(
-                        strokes: character.strokes,
-                        colors: c,
-                      ),
-                    ),
-
-                    // Info section
-                    SliverToBoxAdapter(
-                      child: _InfoSection(
-                        char: char,
-                        pinyin: character.pinyin,
-                        radical: character.radical,
-                        strokeCount: character.strokeCount,
-                        hskLevel: character.hskLevel,
-                        definitionVi: character.definitionVi,
-                        colors: c,
-                      ),
-                    ),
-
-                    // Words containing this character
-                    SliverToBoxAdapter(
-                      child: vocabAsync.when(
-                        loading: () => const SizedBox.shrink(),
-                        error: (e, _) => const SizedBox.shrink(),
-                        data: (vocabList) => vocabList.isEmpty
-                            ? const SizedBox.shrink()
-                            : _VocabSection(
-                                char: char,
-                                vocabList: vocabList,
-                                colors: c,
-                              ),
-                      ),
-                    ),
-
-                    const SliverToBoxAdapter(child: SizedBox(height: AppSpacing.xxl)),
-                  ],
-                );
-              },
-            ),
+    return charAsync.when(
+      loading: () => HanzifyDetailFrame(
+        title: 'Chi tiết chữ',
+        watermarkHanzi: char,
+        hero: _buildLoadingHero(c),
+        slivers: const [],
+      ),
+      error: (e, _) => HanzifyDetailFrame(
+        title: 'Chi tiết chữ',
+        hero: const SizedBox.shrink(),
+        slivers: [
+          SliverFillRemaining(
+            child: HanzifyEmptyState.errorState(
+                errorText: 'Lỗi tải dữ liệu "$char"'),
           ),
         ],
       ),
-    );
-  }
-}
+      data: (character) {
+        if (character == null) {
+          return HanzifyDetailFrame(
+            title: 'Chi tiết chữ',
+            hero: const SizedBox.shrink(),
+            slivers: [
+              SliverFillRemaining(
+                child: HanzifyEmptyState.noCharacterData(character: char),
+              ),
+            ],
+          );
+        }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Header
-// ─────────────────────────────────────────────────────────────────────────────
-class _Header extends ConsumerWidget {
-  final String char;
-  final AppThemeColors colors;
-
-  const _Header({required this.char, required this.colors});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final c = colors;
-    return Container(
-      padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + AppSpacing.sm), // Safe area
-      decoration: BoxDecoration(
-        color: c.surface,
-        border: Border(bottom: BorderSide(color: c.outlineVariant, width: 0.5)),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(
-          AppSpacing.sm,
-          AppSpacing.sm,
-          AppSpacing.lg,
-          AppSpacing.sm,
-        ),
-        child: Row(
-          children: [
-            HanzifyBackButton(
-              style: HanzifyBackButtonStyle.iconOnly,
-              onTap: () => ref.read(navigationProvider.notifier).goBack(),
-            ),
-            Expanded(
-              child: Text(
-                'Chi tiết chữ',
-                style: AppTypography.headline(
-                  fontSize: AppFontSizes.titleLg,
-                  color: c.text,
-                ),
-                textAlign: TextAlign.center,
+        return HanzifyDetailFrame(
+          title: 'Chi tiết chữ',
+          watermarkHanzi: char,
+          onBack: () => ref.read(navigationProvider.notifier).goBack(),
+          hero: _StrokeSection(strokes: character.strokes, colors: c),
+          slivers: [
+            SliverToBoxAdapter(
+              child: _InfoSection(
+                char: char,
+                pinyin: character.pinyin,
+                radical: character.radical,
+                strokeCount: character.strokeCount,
+                hskLevel: character.hskLevel,
+                definitionVi: character.definitionVi,
+                colors: c,
               ),
             ),
-            const SizedBox(width: AppSpacing.iconMd), // Equalizer for center alignment
+            SliverToBoxAdapter(
+              child: vocabAsync.maybeWhen(
+                data: (vocabList) => vocabList.isEmpty
+                    ? const SizedBox.shrink()
+                    : _VocabSection(
+                        char: char,
+                        vocabList: vocabList,
+                        colors: c,
+                      ),
+                orElse: () => const SizedBox.shrink(),
+              ),
+            ),
           ],
-        ),
-      ),
+        );
+      },
+    );
+  }
+
+  Widget _buildLoadingHero(AppThemeColors c) {
+    return SizedBox(
+      height: 320,
+      child: Center(child: CircularProgressIndicator(color: c.primary)),
     );
   }
 }
@@ -158,23 +111,15 @@ class _StrokeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = colors;
-    return Container(
+    return Padding(
       padding: const EdgeInsets.all(AppSpacing.xl),
       child: Column(
         children: [
-          // Section label
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              '✍️ Thứ tự nét',
-              style: AppTypography.headline(
-                fontSize: AppFontSizes.titleMd,
-                color: c.text,
-              ),
-            ),
+          HanzifySectionHeader(
+            title: 'Thứ tự nét',
+            icon: Icons.draw_rounded,
           ),
           const SizedBox(height: AppSpacing.lg),
-          // Animation widget — centered
           Center(
             child: strokes.isEmpty
                 ? _NoStrokeData(colors: c)
@@ -248,117 +193,116 @@ class _InfoSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = colors;
-    // Sử dụng theme hskColors thay vì hardcode local
     final hskColor = hskLevel != null && hskLevel! > 0
         ? c.hskColors[(hskLevel! - 1).clamp(0, c.hskColors.length - 1)]
         : c.primary;
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
-      padding: const EdgeInsets.all(AppSpacing.lg),
-      decoration: BoxDecoration(
-        color: c.glassSurface,
-        borderRadius: BorderRadius.circular(AppRadii.xl),
-        border: Border.all(color: c.glassBorder, width: 1),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Hero(
-                tag: 'char_$char',
-                child: Material(
-                  color: Colors.transparent,
-                  child: ShaderMask(
-                    shaderCallback: (b) => c.accentGradient.createShader(b),
-                    blendMode: BlendMode.srcIn,
-                    child: Text(
-                      char,
-                      style: AppTypography.hanziDisplay(fontSize: 72, color: Colors.white),
+
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(
+          AppSpacing.xl, 0, AppSpacing.xl, AppSpacing.lg),
+      child: Container(
+        padding: const EdgeInsets.all(AppSpacing.lg),
+        decoration: BoxDecoration(
+          color: c.glassSurface,
+          borderRadius: BorderRadius.circular(AppRadii.xl),
+          border: Border.all(color: c.glassBorder, width: 1),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Hero(
+                  tag: 'char_$char',
+                  child: Material(
+                    color: Colors.transparent,
+                    child: ShaderMask(
+                      shaderCallback: (b) => c.accentGradient.createShader(b),
+                      blendMode: BlendMode.srcIn,
+                      child: Text(
+                        char,
+                        style: AppTypography.hanziDisplay(
+                            fontSize: 72, color: Colors.white),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(width: AppSpacing.xl),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    if (pinyin != null && pinyin!.isNotEmpty)
-                      Text(
-                        pinyin!,
-                        style: AppTypography.pinyin(
-                          fontSize: AppFontSizes.headlineSm,
-                          color: c.secondary,
-                        ),
-                      ),
-                    if (hskLevel != null) ...[
-                      const SizedBox(height: 6),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: AppSpacing.sm,
-                          vertical: 3,
-                        ),
-                        decoration: BoxDecoration(
-                          color: hskColor
-                              .withValues(alpha: 0.15),
-                          borderRadius: BorderRadius.circular(AppRadii.full),
-                        ),
-                        child: Text(
-                          'HSK $hskLevel',
-                          style: TextStyle(
-                            fontSize: AppFontSizes.labelSm,
-                            fontWeight: FontWeight.w700,
-                            color: hskColor,
+                const SizedBox(width: AppSpacing.xl),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      if (pinyin != null && pinyin!.isNotEmpty)
+                        Text(
+                          pinyin!,
+                          style: AppTypography.pinyin(
+                            fontSize: AppFontSizes.headlineSm,
+                            color: c.secondary,
                           ),
                         ),
-                      ),
+                      if (hskLevel != null) ...[
+                        const SizedBox(height: 6),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSpacing.sm,
+                            vertical: 3,
+                          ),
+                          decoration: BoxDecoration(
+                            color: hskColor.withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(AppRadii.full),
+                          ),
+                          child: Text(
+                            'HSK $hskLevel',
+                            style: TextStyle(
+                              fontSize: AppFontSizes.labelSm,
+                              fontWeight: FontWeight.w700,
+                              color: hskColor,
+                            ),
+                          ),
+                        ),
+                      ],
                     ],
-                  ],
+                  ),
+                ),
+              ],
+            ),
+            if (definitionVi != null && definitionVi!.isNotEmpty) ...[
+              const SizedBox(height: AppSpacing.md),
+              Text(
+                definitionVi!,
+                style: AppTypography.body(
+                  fontSize: AppFontSizes.bodyLg,
+                  color: c.onSurfaceVariant,
                 ),
               ),
             ],
-          ),
-
-          if (definitionVi != null && definitionVi!.isNotEmpty) ...[
-            const SizedBox(height: AppSpacing.md),
-            Text(
-              definitionVi!,
-              style: AppTypography.body(
-                fontSize: AppFontSizes.bodyLg,
-                color: c.onSurfaceVariant,
-              ),
+            const SizedBox(height: AppSpacing.lg),
+            const Divider(height: 1),
+            const SizedBox(height: AppSpacing.lg),
+            Row(
+              children: [
+                Expanded(
+                  child: _StatTile(
+                    label: 'Số nét',
+                    value: '$strokeCount',
+                    icon: Icons.edit_outlined,
+                    colors: c,
+                  ),
+                ),
+                const SizedBox(width: AppSpacing.md),
+                Expanded(
+                  child: _StatTile(
+                    label: 'Bộ thủ',
+                    value: radical ?? '—',
+                    icon: Icons.category_outlined,
+                    colors: c,
+                  ),
+                ),
+              ],
             ),
           ],
-
-          const SizedBox(height: AppSpacing.lg),
-          const Divider(height: 1),
-          const SizedBox(height: AppSpacing.lg),
-
-          // Stats grid
-          Row(
-            children: [
-              Expanded(
-                child: _StatTile(
-                  label: 'Số nét',
-                  value: '$strokeCount',
-                  icon: Icons.edit_outlined,
-                  colors: c,
-                ),
-              ),
-              const SizedBox(width: AppSpacing.md),
-              Expanded(
-                child: _StatTile(
-                  label: 'Bộ thủ',
-                  value: radical ?? '—',
-                  icon: Icons.category_outlined,
-                  colors: c,
-                ),
-              ),
-            ],
-          ),
-        ],
+        ),
       ),
     );
   }
@@ -418,7 +362,7 @@ class _StatTile extends StatelessWidget {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Vocab Section — danh sách từ chứa chữ này
+// Vocab Section
 // ─────────────────────────────────────────────────────────────────────────────
 class _VocabSection extends StatelessWidget {
   final String char;
@@ -438,42 +382,34 @@ class _VocabSection extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(
-        AppSpacing.lg,
-        AppSpacing.lg,
-        AppSpacing.lg,
+        AppSpacing.xl,
         0,
+        AppSpacing.xl,
+        AppSpacing.lg,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Text(
-                '📖 Từ chứa "$char"',
-                style: AppTypography.headline(
-                  fontSize: AppFontSizes.titleMd,
-                  color: c.text,
+          HanzifySectionHeader(
+            title: 'Từ chứa "$char"',
+            icon: Icons.menu_book_rounded,
+            trailing: Container(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+              decoration: BoxDecoration(
+                color: c.primary.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(AppRadii.full),
+              ),
+              child: Text(
+                '${vocabList.length}',
+                style: TextStyle(
+                  fontSize: AppFontSizes.labelSm,
+                  fontWeight: FontWeight.w700,
+                  color: c.primary,
                 ),
               ),
-              const SizedBox(width: AppSpacing.sm),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                decoration: BoxDecoration(
-                  color: c.primary.withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(AppRadii.full),
-                ),
-                child: Text(
-                  '${vocabList.length}',
-                  style: TextStyle(
-                    fontSize: AppFontSizes.labelSm,
-                    fontWeight: FontWeight.w700,
-                    color: c.primary,
-                  ),
-                ),
-              ),
-            ],
+            ),
           ),
-          const SizedBox(height: AppSpacing.md),
           ...display.map((v) => _VocabRow(vocab: v, char: char, colors: c)),
           if (vocabList.length > 10) ...[
             const SizedBox(height: AppSpacing.sm),
@@ -559,7 +495,8 @@ class _VocabRow extends ConsumerWidget {
               ),
             ),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
               decoration: BoxDecoration(
                 color: c.surfaceLow,
                 borderRadius: BorderRadius.circular(AppRadii.sm),
@@ -608,5 +545,3 @@ class _HighlightedHanzi extends StatelessWidget {
     return RichText(text: TextSpan(children: spans));
   }
 }
-
-

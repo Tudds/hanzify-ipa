@@ -9,26 +9,99 @@
     "category": "greeting",
     "icon": "👋",
     "lines": [
-      {"speaker": "A", "zh": "你好！", "pinyin": "Nǐ hǎo!", "vi": "Xin chào!"},
-      {"speaker": "B", "zh": "你好！我叫李明，你叫什么名字？", "pinyin": "Nǐ hǎo! Wǒ jiào Lǐ Míng, nǐ jiào shénme míngzi?", "vi": "Chào! Tôi tên Lý Minh, bạn tên gì?"},
-      {"speaker": "A", "zh": "我叫王芳。你是哪国人？", "pinyin": "Wǒ jiào Wáng Fāng. Nǐ shì nǎ guó rén?", "vi": "Tôi tên Vương Phương. Bạn là người nước nào?"},
-      {"speaker": "B", "zh": "我是中国人。你呢？", "pinyin": "Wǒ shì Zhōngguó rén. Nǐ ne?", "vi": "Tôi là người Trung Quốc. Còn bạn?"},
-      {"speaker": "A", "zh": "我是越南人。很高兴认识你！", "pinyin": "Wǒ shì Yuènán rén. Hěn gāoxìng rènshi nǐ!", "vi": "Tôi là người Việt Nam. Rất vui được gặp bạn!"},
-      {"speaker": "B", "zh": "我也很高兴认识你！", "pinyin": "Wǒ yě hěn gāoxìng rènshi nǐ!", "vi": "Tôi cũng rất vui được gặp bạn!"}
+      {
+        "speaker": "A",
+        "zh": "你好！",
+        "pinyin": "Nǐ hǎo!",
+        "vi": "Xin chào!"
+      },
+      {
+        "speaker": "B",
+        "zh": "你好！我叫李明，你叫什么名字？",
+        "pinyin": "Nǐ hǎo! Wǒ jiào Lǐ Míng, nǐ jiào shénme míngzi?",
+        "vi": "Chào! Tôi tên Lý Minh, bạn tên gì?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我叫王芳。你是哪国人？",
+        "pinyin": "Wǒ jiào Wáng Fāng. Nǐ shì nǎ guó rén?",
+        "vi": "Tôi tên Vương Phương. Bạn là người nước nào?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我是中国人。你呢？",
+        "pinyin": "Wǒ shì Zhōngguó rén. Nǐ ne?",
+        "vi": "Tôi là người Trung Quốc. Còn bạn?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我是越南人。很高兴认识你！",
+        "pinyin": "Wǒ shì Yuènán rén. Hěn gāoxìng rènshi nǐ!",
+        "vi": "Tôi là người Việt Nam. Rất vui được gặp bạn!"
+      },
+      {
+        "speaker": "B",
+        "zh": "我也很高兴认识你！",
+        "pinyin": "Wǒ yě hěn gāoxìng rènshi nǐ!",
+        "vi": "Tôi cũng rất vui được gặp bạn!"
+      }
     ],
     "vocabulary": [
-      {"zh": "你好", "pinyin": "nǐ hǎo", "vi": "xin chào", "pos": "thành ngữ"},
-      {"zh": "叫", "pinyin": "jiào", "vi": "gọi, tên là", "pos": "động từ"},
-      {"zh": "名字", "pinyin": "míngzi", "vi": "tên", "pos": "danh từ"},
-      {"zh": "哪国人", "pinyin": "nǎ guó rén", "vi": "người nước nào", "pos": "thành ngữ"},
-      {"zh": "认识", "pinyin": "rènshi", "vi": "biết, quen biết", "pos": "động từ"},
-      {"zh": "高兴", "pinyin": "gāoxìng", "vi": "vui, cao hứng", "pos": "tính từ"}
+      {
+        "zh": "你好",
+        "pinyin": "nǐ hǎo",
+        "vi": "xin chào",
+        "pos": "thành ngữ"
+      },
+      {
+        "zh": "叫",
+        "pinyin": "jiào",
+        "vi": "gọi, tên là",
+        "pos": "động từ"
+      },
+      {
+        "zh": "名字",
+        "pinyin": "míngzi",
+        "vi": "tên",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "哪国人",
+        "pinyin": "nǎ guó rén",
+        "vi": "người nước nào",
+        "pos": "thành ngữ"
+      },
+      {
+        "zh": "认识",
+        "pinyin": "rènshi",
+        "vi": "biết, quen biết",
+        "pos": "động từ"
+      },
+      {
+        "zh": "高兴",
+        "pinyin": "gāoxìng",
+        "vi": "vui, cao hứng",
+        "pos": "tính từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Phương", "role": "Người Việt Nam", "avatarColor": "#6C63FF"},
-      {"code": "B", "nameVi": "Minh", "role": "Người Trung Quốc", "avatarColor": "#FF6B6B"}
+      {
+        "code": "A",
+        "nameVi": "Phương",
+        "role": "Người Việt Nam",
+        "avatarColor": "#6C63FF"
+      },
+      {
+        "code": "B",
+        "nameVi": "Minh",
+        "role": "Người Trung Quốc",
+        "avatarColor": "#FF6B6B"
+      }
     ],
-    "relatedGrammar": ["g_shi", "g_wh_question"],
+    "relatedGrammar": [
+      "g_shi",
+      "g_wh_question"
+    ],
     "cultureTip": "Khi gặp nhau lần đầu, người Trung Quốc thường hỏi quốc tịch và tên đầy đủ. Việc hỏi '你是哪国人?' rất phổ biến và lịch sự.",
     "isBookmarked": false,
     "isMastered": false
@@ -43,25 +116,94 @@
     "category": "greeting",
     "icon": "🎂",
     "lines": [
-      {"speaker": "A", "zh": "你今年多大？", "pinyin": "Nǐ jīnnián duō dà?", "vi": "Năm nay bạn bao nhiêu tuổi?"},
-      {"speaker": "B", "zh": "我今年二十岁。你呢？", "pinyin": "Wǒ jīnnián èrshí suì. Nǐ ne?", "vi": "Năm nay tôi hai mươi tuổi. Còn bạn?"},
-      {"speaker": "A", "zh": "我二十二岁。你是学生吗？", "pinyin": "Wǒ èrshí'èr suì. Nǐ shì xuésheng ma?", "vi": "Tôi hai mươi hai tuổi. Bạn là sinh viên phải không?"},
-      {"speaker": "B", "zh": "是的，我是大学生。你呢？", "pinyin": "Shìde, wǒ shì dàxuésheng. Nǐ ne?", "vi": "Đúng vậy, tôi là sinh viên đại học. Còn bạn?"},
-      {"speaker": "A", "zh": "我也是。我们是一起的同学！", "pinyin": "Wǒ yě shì. Wǒmen shì yìqǐ de tóngxué!", "vi": "Tôi cũng vậy. Chúng ta là bạn học cùng khóa!"}
+      {
+        "speaker": "A",
+        "zh": "你今年多大？",
+        "pinyin": "Nǐ jīnnián duō dà?",
+        "vi": "Năm nay bạn bao nhiêu tuổi?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我今年二十岁。你呢？",
+        "pinyin": "Wǒ jīnnián èrshí suì. Nǐ ne?",
+        "vi": "Năm nay tôi hai mươi tuổi. Còn bạn?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我二十二岁。你是学生吗？",
+        "pinyin": "Wǒ èrshí'èr suì. Nǐ shì xuésheng ma?",
+        "vi": "Tôi hai mươi hai tuổi. Bạn là sinh viên phải không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "是的，我是大学生。你呢？",
+        "pinyin": "Shìde, wǒ shì dàxuésheng. Nǐ ne?",
+        "vi": "Đúng vậy, tôi là sinh viên đại học. Còn bạn?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我也是。我们是一起的同学！",
+        "pinyin": "Wǒ yě shì. Wǒmen shì yìqǐ de tóngxué!",
+        "vi": "Tôi cũng vậy. Chúng ta là bạn học cùng khóa!"
+      }
     ],
     "vocabulary": [
-      {"zh": "今年", "pinyin": "jīnnián", "vi": "năm nay", "pos": "danh từ thời gian"},
-      {"zh": "多大", "pinyin": "duō dà", "vi": "bao nhiêu tuổi", "pos": "thành ngữ"},
-      {"zh": "岁", "pinyin": "suì", "vi": "tuổi", "pos": "lượng từ"},
-      {"zh": "学生", "pinyin": "xuésheng", "vi": "học sinh, sinh viên", "pos": "danh từ"},
-      {"zh": "大学", "pinyin": "dàxué", "vi": "đại học", "pos": "danh từ"},
-      {"zh": "同学", "pinyin": "tóngxué", "vi": "bạn học", "pos": "danh từ"}
+      {
+        "zh": "今年",
+        "pinyin": "jīnnián",
+        "vi": "năm nay",
+        "pos": "danh từ thời gian"
+      },
+      {
+        "zh": "多大",
+        "pinyin": "duō dà",
+        "vi": "bao nhiêu tuổi",
+        "pos": "thành ngữ"
+      },
+      {
+        "zh": "岁",
+        "pinyin": "suì",
+        "vi": "tuổi",
+        "pos": "lượng từ"
+      },
+      {
+        "zh": "学生",
+        "pinyin": "xuésheng",
+        "vi": "học sinh, sinh viên",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "大学",
+        "pinyin": "dàxué",
+        "vi": "đại học",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "同学",
+        "pinyin": "tóngxué",
+        "vi": "bạn học",
+        "pos": "danh từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Lan", "role": "Sinh viên", "avatarColor": "#4ECDC4"},
-      {"code": "B", "nameVi": "Hoa", "role": "Sinh viên", "avatarColor": "#FF8A65"}
+      {
+        "code": "A",
+        "nameVi": "Lan",
+        "role": "Sinh viên",
+        "avatarColor": "#4ECDC4"
+      },
+      {
+        "code": "B",
+        "nameVi": "Hoa",
+        "role": "Sinh viên",
+        "avatarColor": "#FF8A65"
+      }
     ],
-    "relatedGrammar": ["g_shi", "g_ma_question", "g_num"],
+    "relatedGrammar": [
+      "g_shi",
+      "g_ma",
+      "g_numbers"
+    ],
     "cultureTip": "Trong văn hóa Trung Quốc, hỏi tuổi rất phổ biến để xác định cách xưng hô. Người lớn tuổi hơn gọi là '哥哥' (anh) hoặc '姐姐' (chị).",
     "isBookmarked": false,
     "isMastered": false
@@ -76,28 +218,112 @@
     "category": "greeting",
     "icon": "👨‍👩‍👧‍👦",
     "lines": [
-      {"speaker": "A", "zh": "你家有几个人？", "pinyin": "Nǐ jiā yǒu jǐ ge rén?", "vi": "Nhà bạn có mấy người?"},
-      {"speaker": "B", "zh": "我家有四口人：爸爸、妈妈、哥哥和我。", "pinyin": "Wǒ jiā yǒu sì kǒu rén: bàba, māma, gēge hé wǒ.", "vi": "Nhà tôi có bốn người: bố, mẹ, anh trai và tôi."},
-      {"speaker": "A", "zh": "你爸爸做什么工作？", "pinyin": "Nǐ bàba zuò shénme gōngzuò?", "vi": "Bố bạn làm nghề gì?"},
-      {"speaker": "B", "zh": "我爸爸是老师。我妈妈是医生。", "pinyin": "Wǒ bàba shì lǎoshī. Wǒ māma shì yīshēng.", "vi": "Bố tôi là giáo viên. Mẹ tôi là bác sĩ."},
-      {"speaker": "A", "zh": "你哥哥呢？", "pinyin": "Nǐ gēge ne?", "vi": "Anh trai bạn thì sao?"},
-      {"speaker": "B", "zh": "我哥哥在公司上班。", "pinyin": "Wǒ gēge zài gōngsī shàngbān.", "vi": "Anh trai tôi làm việc ở công ty."}
+      {
+        "speaker": "A",
+        "zh": "你家有几个人？",
+        "pinyin": "Nǐ jiā yǒu jǐ ge rén?",
+        "vi": "Nhà bạn có mấy người?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我家有四口人：爸爸、妈妈、哥哥和我。",
+        "pinyin": "Wǒ jiā yǒu sì kǒu rén: bàba, māma, gēge hé wǒ.",
+        "vi": "Nhà tôi có bốn người: bố, mẹ, anh trai và tôi."
+      },
+      {
+        "speaker": "A",
+        "zh": "你爸爸做什么工作？",
+        "pinyin": "Nǐ bàba zuò shénme gōngzuò?",
+        "vi": "Bố bạn làm nghề gì?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我爸爸是老师。我妈妈是医生。",
+        "pinyin": "Wǒ bàba shì lǎoshī. Wǒ māma shì yīshēng.",
+        "vi": "Bố tôi là giáo viên. Mẹ tôi là bác sĩ."
+      },
+      {
+        "speaker": "A",
+        "zh": "你哥哥呢？",
+        "pinyin": "Nǐ gēge ne?",
+        "vi": "Anh trai bạn thì sao?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我哥哥在公司上班。",
+        "pinyin": "Wǒ gēge zài gōngsī shàngbān.",
+        "vi": "Anh trai tôi làm việc ở công ty."
+      }
     ],
     "vocabulary": [
-      {"zh": "家", "pinyin": "jiā", "vi": "nhà, gia đình", "pos": "danh từ"},
-      {"zh": "口", "pinyin": "kǒu", "vi": "lượng từ cho người (trong gia đình)", "pos": "lượng từ"},
-      {"zh": "爸爸", "pinyin": "bàba", "vi": "bố", "pos": "danh từ"},
-      {"zh": "妈妈", "pinyin": "māma", "vi": "mẹ", "pos": "danh từ"},
-      {"zh": "哥哥", "pinyin": "gēge", "vi": "anh trai", "pos": "danh từ"},
-      {"zh": "老师", "pinyin": "lǎoshī", "vi": "giáo viên", "pos": "danh từ"},
-      {"zh": "医生", "pinyin": "yīshēng", "vi": "bác sĩ", "pos": "danh từ"},
-      {"zh": "上班", "pinyin": "shàngbān", "vi": "đi làm", "pos": "động từ"}
+      {
+        "zh": "家",
+        "pinyin": "jiā",
+        "vi": "nhà, gia đình",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "口",
+        "pinyin": "kǒu",
+        "vi": "lượng từ cho người (trong gia đình)",
+        "pos": "lượng từ"
+      },
+      {
+        "zh": "爸爸",
+        "pinyin": "bàba",
+        "vi": "bố",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "妈妈",
+        "pinyin": "māma",
+        "vi": "mẹ",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "哥哥",
+        "pinyin": "gēge",
+        "vi": "anh trai",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "老师",
+        "pinyin": "lǎoshī",
+        "vi": "giáo viên",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "医生",
+        "pinyin": "yīshēng",
+        "vi": "bác sĩ",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "上班",
+        "pinyin": "shàngbān",
+        "vi": "đi làm",
+        "pos": "động từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Hùng", "role": "Bạn học", "avatarColor": "#7C4DFF"},
-      {"code": "B", "nameVi": "Mai", "role": "Bạn học", "avatarColor": "#E91E63"}
+      {
+        "code": "A",
+        "nameVi": "Hùng",
+        "role": "Bạn học",
+        "avatarColor": "#7C4DFF"
+      },
+      {
+        "code": "B",
+        "nameVi": "Mai",
+        "role": "Bạn học",
+        "avatarColor": "#E91E63"
+      }
     ],
-    "relatedGrammar": ["g_you", "g_shi", "g_zai_location"],
+    "relatedGrammar": [
+      "g_you",
+      "g_shi",
+      "g_zai"
+    ],
     "cultureTip": "Người Trung Quốc dùng '口' thay cho '个' khi đếm số người trong gia đình, ví dụ '四口人' thay vì '四个人'. Đây là cách nói tự nhiên hơn.",
     "isBookmarked": false,
     "isMastered": false
@@ -112,26 +338,100 @@
     "category": "shopping",
     "icon": "🛒",
     "lines": [
-      {"speaker": "A", "zh": "这个多少钱？", "pinyin": "Zhège duōshao qián?", "vi": "Cái này bao nhiêu tiền?"},
-      {"speaker": "B", "zh": "这个二十五块。", "pinyin": "Zhège èrshíwǔ kuài.", "vi": "Cái này hai mươi lăm đồng."},
-      {"speaker": "A", "zh": "太贵了！便宜一点儿，可以吗？", "pinyin": "Tài guì le! Piányi yìdiǎnr, kěyǐ ma?", "vi": "Đắt quá! Rẻ một chút được không?"},
-      {"speaker": "B", "zh": "那二十块吧。", "pinyin": "Nà èrshí kuài ba.", "vi": "Vậy hai mươi đồng đi."},
-      {"speaker": "A", "zh": "好，我要了。给你钱。", "pinyin": "Hǎo, wǒ yào le. Gěi nǐ qián.", "vi": "Được, tôi lấy. Đây là tiền."},
-      {"speaker": "B", "zh": "谢谢！欢迎下次再来。", "pinyin": "Xièxie! Huānyíng xiàcì zàilái.", "vi": "Cảm ơn! Mong lần sau lại đến."}
+      {
+        "speaker": "A",
+        "zh": "这个多少钱？",
+        "pinyin": "Zhège duōshao qián?",
+        "vi": "Cái này bao nhiêu tiền?"
+      },
+      {
+        "speaker": "B",
+        "zh": "这个二十五块。",
+        "pinyin": "Zhège èrshíwǔ kuài.",
+        "vi": "Cái này hai mươi lăm đồng."
+      },
+      {
+        "speaker": "A",
+        "zh": "太贵了！便宜一点儿，可以吗？",
+        "pinyin": "Tài guì le! Piányi yìdiǎnr, kěyǐ ma?",
+        "vi": "Đắt quá! Rẻ một chút được không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "那二十块吧。",
+        "pinyin": "Nà èrshí kuài ba.",
+        "vi": "Vậy hai mươi đồng đi."
+      },
+      {
+        "speaker": "A",
+        "zh": "好，我要了。给你钱。",
+        "pinyin": "Hǎo, wǒ yào le. Gěi nǐ qián.",
+        "vi": "Được, tôi lấy. Đây là tiền."
+      },
+      {
+        "speaker": "B",
+        "zh": "谢谢！欢迎下次再来。",
+        "pinyin": "Xièxie! Huānyíng xiàcì zàilái.",
+        "vi": "Cảm ơn! Mong lần sau lại đến."
+      }
     ],
     "vocabulary": [
-      {"zh": "多少钱", "pinyin": "duōshao qián", "vi": "bao nhiêu tiền", "pos": "thành ngữ"},
-      {"zh": "块", "pinyin": "kuài", "vi": "đồng (lượng từ tiền)", "pos": "lượng từ"},
-      {"zh": "贵", "pinyin": "guì", "vi": "đắt", "pos": "tính từ"},
-      {"zh": "便宜", "pinyin": "piányi", "vi": "rẻ", "pos": "tính từ"},
-      {"zh": "一点儿", "pinyin": "yìdiǎnr", "vi": "một chút", "pos": "phó từ"},
-      {"zh": "要", "pinyin": "yào", "vi": "muốn, lấy", "pos": "động từ"}
+      {
+        "zh": "多少钱",
+        "pinyin": "duōshao qián",
+        "vi": "bao nhiêu tiền",
+        "pos": "thành ngữ"
+      },
+      {
+        "zh": "块",
+        "pinyin": "kuài",
+        "vi": "đồng (lượng từ tiền)",
+        "pos": "lượng từ"
+      },
+      {
+        "zh": "贵",
+        "pinyin": "guì",
+        "vi": "đắt",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "便宜",
+        "pinyin": "piányi",
+        "vi": "rẻ",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "一点儿",
+        "pinyin": "yìdiǎnr",
+        "vi": "một chút",
+        "pos": "phó từ"
+      },
+      {
+        "zh": "要",
+        "pinyin": "yào",
+        "vi": "muốn, lấy",
+        "pos": "động từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Khách hàng", "role": "Người mua", "avatarColor": "#6C63FF"},
-      {"code": "B", "nameVi": "Chủ quán", "role": "Người bán", "avatarColor": "#FF9800"}
+      {
+        "code": "A",
+        "nameVi": "Khách hàng",
+        "role": "Người mua",
+        "avatarColor": "#6C63FF"
+      },
+      {
+        "code": "B",
+        "nameVi": "Chủ quán",
+        "role": "Người bán",
+        "avatarColor": "#FF9800"
+      }
     ],
-    "relatedGrammar": ["g_degree_taile", "g_yidianr", "g_ma_question"],
+    "relatedGrammar": [
+      "g_tai_le",
+      "g_yidianr",
+      "g_ma"
+    ],
     "cultureTip": "Mặc cả là văn hóa phổ biến ở chợ Trung Quốc. Đừng ngại trả giá thấp hơn, thường từ 30-50% giá ban đầu. Nhưng ở cửa hàng lớn, giá thường cố định.",
     "isBookmarked": false,
     "isMastered": false
@@ -146,26 +446,100 @@
     "category": "shopping",
     "icon": "👗",
     "lines": [
-      {"speaker": "A", "zh": "请问，有红色的裙子吗？", "pinyin": "Qǐngwèn, yǒu hóngsè de qúnzi ma?", "vi": "Xin hỏi, có váy màu đỏ không?"},
-      {"speaker": "B", "zh": "有，你要多大号的？", "pinyin": "Yǒu, nǐ yào duō dà hào de?", "vi": "Có, bạn cần size bao nhiêu?"},
-      {"speaker": "A", "zh": "中号的。可以试试吗？", "pinyin": "Zhōng hào de. Kěyǐ shìshi ma?", "vi": "Size trung. Thử được không?"},
-      {"speaker": "B", "zh": "当然可以。试衣间在那边。", "pinyin": "Dāngrán kěyǐ. Shìyījiān zài nàbian.", "vi": "Đương nhiên được. Phòng thử đồ ở đằng kia."},
-      {"speaker": "A", "zh": "这条裙子很漂亮，我买了。", "pinyin": "Zhè tiáo qúnzi hěn piàoliang, wǒ mǎi le.", "vi": "Chiếc váy này rất đẹp, tôi mua."},
-      {"speaker": "B", "zh": "好的，一百二十块。可以微信支付吗？", "pinyin": "Hǎo de, yìbǎi èrshí kuài. Kěyǐ Wēixìn zhīfù ma?", "vi": "Vâng, một trăm hai mươi đồng. Thanh toán WeChat được không?"}
+      {
+        "speaker": "A",
+        "zh": "请问，有红色的裙子吗？",
+        "pinyin": "Qǐngwèn, yǒu hóngsè de qúnzi ma?",
+        "vi": "Xin hỏi, có váy màu đỏ không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "有，你要多大号的？",
+        "pinyin": "Yǒu, nǐ yào duō dà hào de?",
+        "vi": "Có, bạn cần size bao nhiêu?"
+      },
+      {
+        "speaker": "A",
+        "zh": "中号的。可以试试吗？",
+        "pinyin": "Zhōng hào de. Kěyǐ shìshi ma?",
+        "vi": "Size trung. Thử được không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "当然可以。试衣间在那边。",
+        "pinyin": "Dāngrán kěyǐ. Shìyījiān zài nàbian.",
+        "vi": "Đương nhiên được. Phòng thử đồ ở đằng kia."
+      },
+      {
+        "speaker": "A",
+        "zh": "这条裙子很漂亮，我买了。",
+        "pinyin": "Zhè tiáo qúnzi hěn piàoliang, wǒ mǎi le.",
+        "vi": "Chiếc váy này rất đẹp, tôi mua."
+      },
+      {
+        "speaker": "B",
+        "zh": "好的，一百二十块。可以微信支付吗？",
+        "pinyin": "Hǎo de, yìbǎi èrshí kuài. Kěyǐ Wēixìn zhīfù ma?",
+        "vi": "Vâng, một trăm hai mươi đồng. Thanh toán WeChat được không?"
+      }
     ],
     "vocabulary": [
-      {"zh": "红色", "pinyin": "hóngsè", "vi": "màu đỏ", "pos": "tính từ"},
-      {"zh": "裙子", "pinyin": "qúnzi", "vi": "váy", "pos": "danh từ"},
-      {"zh": "号", "pinyin": "hào", "vi": "kích cỡ", "pos": "danh từ"},
-      {"zh": "试", "pinyin": "shì", "vi": "thử", "pos": "động từ"},
-      {"zh": "漂亮", "pinyin": "piàoliang", "vi": "đẹp", "pos": "tính từ"},
-      {"zh": "支付", "pinyin": "zhīfù", "vi": "thanh toán", "pos": "động từ"}
+      {
+        "zh": "红色",
+        "pinyin": "hóngsè",
+        "vi": "màu đỏ",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "裙子",
+        "pinyin": "qúnzi",
+        "vi": "váy",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "号",
+        "pinyin": "hào",
+        "vi": "kích cỡ",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "试",
+        "pinyin": "shì",
+        "vi": "thử",
+        "pos": "động từ"
+      },
+      {
+        "zh": "漂亮",
+        "pinyin": "piàoliang",
+        "vi": "đẹp",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "支付",
+        "pinyin": "zhīfù",
+        "vi": "thanh toán",
+        "pos": "động từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Khách hàng", "role": "Người mua", "avatarColor": "#E91E63"},
-      {"code": "B", "nameVi": "Nhân viên", "role": "Nhân viên bán hàng", "avatarColor": "#4CAF50"}
+      {
+        "code": "A",
+        "nameVi": "Khách hàng",
+        "role": "Người mua",
+        "avatarColor": "#E91E63"
+      },
+      {
+        "code": "B",
+        "nameVi": "Nhân viên",
+        "role": "Nhân viên bán hàng",
+        "avatarColor": "#4CAF50"
+      }
     ],
-    "relatedGrammar": ["g_you", "g_de_modifier", "g_ma_question"],
+    "relatedGrammar": [
+      "g_you",
+      "g_de_attr",
+      "g_ma"
+    ],
     "cultureTip": "Ở Trung Quốc, thanh toán qua điện thoại (WeChat Pay, Alipay) rất phổ biến, nhiều nơi không nhận tiền mặt. Nên cài WeChat Pay khi đi mua sắm.",
     "isBookmarked": false,
     "isMastered": false
@@ -180,26 +554,100 @@
     "category": "restaurant",
     "icon": "🍜",
     "lines": [
-      {"speaker": "A", "zh": "服务员，请给我菜单。", "pinyin": "Fúwùyuán, qǐng gěi wǒ càidān.", "vi": "Nhân viên, cho tôi thực đơn."},
-      {"speaker": "B", "zh": "好的，这是菜单。你想吃什么？", "pinyin": "Hǎo de, zhè shì càidān. Nǐ xiǎng chī shénme?", "vi": "Vâng, đây là thực đơn. Bạn muốn ăn gì?"},
-      {"speaker": "A", "zh": "我要一个宫保鸡丁和一碗米饭。", "pinyin": "Wǒ yào yí ge Gōngbǎo jīdīng hé yì wǎn mǐfàn.", "vi": "Tôi muốn một phần Cung Bảo Kỷ Đinh và một bát cơm."},
-      {"speaker": "B", "zh": "要不要喝什么？我们有茶和果汁。", "pinyin": "Yào bú yào hē shénme? Wǒmen yǒu chá hé guǒzhī.", "vi": "Có muốn uống gì không? Chúng tôi có trà và nước ép."},
-      {"speaker": "A", "zh": "来一杯茶吧。一共多少钱？", "pinyin": "Lái yì bēi chá ba. Yígòng duōshao qián?", "vi": "Cho tôi một tách trà. Tất cả bao nhiêu tiền?"},
-      {"speaker": "B", "zh": "一共四十五块。请稍等。", "pinyin": "Yígòng sìshíwǔ kuài. Qǐng shāo děng.", "vi": "Tất cả bốn mươi lăm đồng. Xin chờ một lát."}
+      {
+        "speaker": "A",
+        "zh": "服务员，请给我菜单。",
+        "pinyin": "Fúwùyuán, qǐng gěi wǒ càidān.",
+        "vi": "Nhân viên, cho tôi thực đơn."
+      },
+      {
+        "speaker": "B",
+        "zh": "好的，这是菜单。你想吃什么？",
+        "pinyin": "Hǎo de, zhè shì càidān. Nǐ xiǎng chī shénme?",
+        "vi": "Vâng, đây là thực đơn. Bạn muốn ăn gì?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我要一个宫保鸡丁和一碗米饭。",
+        "pinyin": "Wǒ yào yí ge Gōngbǎo jīdīng hé yì wǎn mǐfàn.",
+        "vi": "Tôi muốn một phần Cung Bảo Kỷ Đinh và một bát cơm."
+      },
+      {
+        "speaker": "B",
+        "zh": "要不要喝什么？我们有茶和果汁。",
+        "pinyin": "Yào bú yào hē shénme? Wǒmen yǒu chá hé guǒzhī.",
+        "vi": "Có muốn uống gì không? Chúng tôi có trà và nước ép."
+      },
+      {
+        "speaker": "A",
+        "zh": "来一杯茶吧。一共多少钱？",
+        "pinyin": "Lái yì bēi chá ba. Yígòng duōshao qián?",
+        "vi": "Cho tôi một tách trà. Tất cả bao nhiêu tiền?"
+      },
+      {
+        "speaker": "B",
+        "zh": "一共四十五块。请稍等。",
+        "pinyin": "Yígòng sìshíwǔ kuài. Qǐng shāo děng.",
+        "vi": "Tất cả bốn mươi lăm đồng. Xin chờ một lát."
+      }
     ],
     "vocabulary": [
-      {"zh": "服务员", "pinyin": "fúwùyuán", "vi": "nhân viên phục vụ", "pos": "danh từ"},
-      {"zh": "菜单", "pinyin": "càidān", "vi": "thực đơn", "pos": "danh từ"},
-      {"zh": "吃", "pinyin": "chī", "vi": "ăn", "pos": "động từ"},
-      {"zh": "碗", "pinyin": "wǎn", "vi": "bát", "pos": "lượng từ"},
-      {"zh": "米饭", "pinyin": "mǐfàn", "vi": "cơm", "pos": "danh từ"},
-      {"zh": "一共", "pinyin": "yígòng", "vi": "tổng cộng", "pos": "phó từ"}
+      {
+        "zh": "服务员",
+        "pinyin": "fúwùyuán",
+        "vi": "nhân viên phục vụ",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "菜单",
+        "pinyin": "càidān",
+        "vi": "thực đơn",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "吃",
+        "pinyin": "chī",
+        "vi": "ăn",
+        "pos": "động từ"
+      },
+      {
+        "zh": "碗",
+        "pinyin": "wǎn",
+        "vi": "bát",
+        "pos": "lượng từ"
+      },
+      {
+        "zh": "米饭",
+        "pinyin": "mǐfàn",
+        "vi": "cơm",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "一共",
+        "pinyin": "yígòng",
+        "vi": "tổng cộng",
+        "pos": "phó từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Khách", "role": "Người gọi món", "avatarColor": "#FF5722"},
-      {"code": "B", "nameVi": "Phục vụ", "role": "Nhân viên nhà hàng", "avatarColor": "#8BC34A"}
+      {
+        "code": "A",
+        "nameVi": "Khách",
+        "role": "Người gọi món",
+        "avatarColor": "#FF5722"
+      },
+      {
+        "code": "B",
+        "nameVi": "Phục vụ",
+        "role": "Nhân viên nhà hàng",
+        "avatarColor": "#8BC34A"
+      }
     ],
-    "relatedGrammar": ["g_yao", "g_he_conjunction", "g_num"],
+    "relatedGrammar": [
+      "g_yao",
+      "g_he_conjunction",
+      "g_numbers"
+    ],
     "cultureTip": "Khi gọi món ở nhà hàng Trung Quốc, gọi '服务员' (nhân viên phục vụ) để gọi phục vụ bàn. Không nên vẫy tay hay huýt sáo - điều đó bị coi là bất lịch sự.",
     "isBookmarked": false,
     "isMastered": false
@@ -214,25 +662,94 @@
     "category": "restaurant",
     "icon": "🌶️",
     "lines": [
-      {"speaker": "A", "zh": "这个菜怎么样？", "pinyin": "Zhège cài zěnmeyàng?", "vi": "Món này thế nào?"},
-      {"speaker": "B", "zh": "很好吃！但是有点儿辣。", "pinyin": "Hěn hǎochī! Dànshì yǒudiǎnr là.", "vi": "Rất ngon! Nhưng hơi cay."},
-      {"speaker": "A", "zh": "我不太能吃辣。有没有不辣的菜？", "pinyin": "Wǒ bú tài néng chī là. Yǒu méiyǒu bú là de cài?", "vi": "Tôi không ăn cay được lắm. Có món không cay không?"},
-      {"speaker": "B", "zh": "有，糖醋排骨不辣，也很好吃。", "pinyin": "Yǒu, Tángcù páigǔ bú là, yě hěn hǎochī.", "vi": "Có, sườn chua ngọt không cay, cũng rất ngon."},
-      {"speaker": "A", "zh": "好的，那我要一份糖醋排骨。", "pinyin": "Hǎo de, nà wǒ yào yí fèn Tángcù páigǔ.", "vi": "Được, vậy tôi muốn một phần sườn chua ngọt."}
+      {
+        "speaker": "A",
+        "zh": "这个菜怎么样？",
+        "pinyin": "Zhège cài zěnmeyàng?",
+        "vi": "Món này thế nào?"
+      },
+      {
+        "speaker": "B",
+        "zh": "很好吃！但是有点儿辣。",
+        "pinyin": "Hěn hǎochī! Dànshì yǒudiǎnr là.",
+        "vi": "Rất ngon! Nhưng hơi cay."
+      },
+      {
+        "speaker": "A",
+        "zh": "我不太能吃辣。有没有不辣的菜？",
+        "pinyin": "Wǒ bú tài néng chī là. Yǒu méiyǒu bú là de cài?",
+        "vi": "Tôi không ăn cay được lắm. Có món không cay không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "有，糖醋排骨不辣，也很好吃。",
+        "pinyin": "Yǒu, Tángcù páigǔ bú là, yě hěn hǎochī.",
+        "vi": "Có, sườn chua ngọt không cay, cũng rất ngon."
+      },
+      {
+        "speaker": "A",
+        "zh": "好的，那我要一份糖醋排骨。",
+        "pinyin": "Hǎo de, nà wǒ yào yí fèn Tángcù páigǔ.",
+        "vi": "Được, vậy tôi muốn một phần sườn chua ngọt."
+      }
     ],
     "vocabulary": [
-      {"zh": "怎么样", "pinyin": "zěnmeyàng", "vi": "thế nào", "pos": "đại từ"},
-      {"zh": "好吃", "pinyin": "hǎochī", "vi": "ngon", "pos": "tính từ"},
-      {"zh": "辣", "pinyin": "là", "vi": "cay", "pos": "tính từ"},
-      {"zh": "但是", "pinyin": "dànshì", "vi": "nhưng", "pos": "liên từ"},
-      {"zh": "糖醋", "pinyin": "tángcù", "vi": "chua ngọt", "pos": "tính từ"},
-      {"zh": "份", "pinyin": "fèn", "vi": "phần (lượng từ)", "pos": "lượng từ"}
+      {
+        "zh": "怎么样",
+        "pinyin": "zěnmeyàng",
+        "vi": "thế nào",
+        "pos": "đại từ"
+      },
+      {
+        "zh": "好吃",
+        "pinyin": "hǎochī",
+        "vi": "ngon",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "辣",
+        "pinyin": "là",
+        "vi": "cay",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "但是",
+        "pinyin": "dànshì",
+        "vi": "nhưng",
+        "pos": "liên từ"
+      },
+      {
+        "zh": "糖醋",
+        "pinyin": "tángcù",
+        "vi": "chua ngọt",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "份",
+        "pinyin": "fèn",
+        "vi": "phần (lượng từ)",
+        "pos": "lượng từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Tuấn", "role": "Thực khách", "avatarColor": "#9C27B0"},
-      {"code": "B", "nameVi": "Linh", "role": "Bạn ăn cùng", "avatarColor": "#00BCD4"}
+      {
+        "code": "A",
+        "nameVi": "Tuấn",
+        "role": "Thực khách",
+        "avatarColor": "#9C27B0"
+      },
+      {
+        "code": "B",
+        "nameVi": "Linh",
+        "role": "Bạn ăn cùng",
+        "avatarColor": "#00BCD4"
+      }
     ],
-    "relatedGrammar": ["g_youdianr", "g_bu_negation", "g_de_modifier"],
+    "relatedGrammar": [
+      "g_youdianr",
+      "g_neg_bu",
+      "g_de_attr"
+    ],
     "cultureTip": "Ẩm thực Trung Quốc rất đa dạng vị: cay (川菜 - Tứ Xuyên), ngọt (粤菜 - Quảng Đông), mặn (鲁菜 - Sơn Đông), chua (湘菜 - Hồ Nam). Hãy hỏi '辣不辣?' trước khi gọi món.",
     "isBookmarked": false,
     "isMastered": false
@@ -247,26 +764,100 @@
     "category": "transport",
     "icon": "🗺️",
     "lines": [
-      {"speaker": "A", "zh": "请问，火车站怎么走？", "pinyin": "Qǐngwèn, huǒchēzhàn zěnme zǒu?", "vi": "Xin hỏi, nhà ga đi thế nào?"},
-      {"speaker": "B", "zh": "往前走，然后左转。", "pinyin": "Wǎng qián zǒu, ránhòu zuǒ zhuǎn.", "vi": "Đi thẳng, sau đó rẽ trái."},
-      {"speaker": "A", "zh": "远不远？", "pinyin": "Yuǎn bu yuǎn?", "vi": "Có xa không?"},
-      {"speaker": "B", "zh": "不太远，走路十分钟。", "pinyin": "Bú tài yuǎn, zǒulù shí fēnzhōng.", "vi": "Không quá xa, đi bộ mười phút."},
-      {"speaker": "A", "zh": "可以坐公共汽车吗？", "pinyin": "Kěyǐ zuò gōnggòng qìchē ma?", "vi": "Có thể đi xe buýt được không?"},
-      {"speaker": "B", "zh": "可以，坐5路公共汽车，三站就到了。", "pinyin": "Kěyǐ, zuò wǔ lù gōnggòng qìchē, sān zhàn jiù dào le.", "vi": "Được, đi xe buýt số 5, ba trạm là đến."}
+      {
+        "speaker": "A",
+        "zh": "请问，火车站怎么走？",
+        "pinyin": "Qǐngwèn, huǒchēzhàn zěnme zǒu?",
+        "vi": "Xin hỏi, nhà ga đi thế nào?"
+      },
+      {
+        "speaker": "B",
+        "zh": "往前走，然后左转。",
+        "pinyin": "Wǎng qián zǒu, ránhòu zuǒ zhuǎn.",
+        "vi": "Đi thẳng, sau đó rẽ trái."
+      },
+      {
+        "speaker": "A",
+        "zh": "远不远？",
+        "pinyin": "Yuǎn bu yuǎn?",
+        "vi": "Có xa không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "不太远，走路十分钟。",
+        "pinyin": "Bú tài yuǎn, zǒulù shí fēnzhōng.",
+        "vi": "Không quá xa, đi bộ mười phút."
+      },
+      {
+        "speaker": "A",
+        "zh": "可以坐公共汽车吗？",
+        "pinyin": "Kěyǐ zuò gōnggòng qìchē ma?",
+        "vi": "Có thể đi xe buýt được không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "可以，坐5路公共汽车，三站就到了。",
+        "pinyin": "Kěyǐ, zuò wǔ lù gōnggòng qìchē, sān zhàn jiù dào le.",
+        "vi": "Được, đi xe buýt số 5, ba trạm là đến."
+      }
     ],
     "vocabulary": [
-      {"zh": "火车站", "pinyin": "huǒchēzhàn", "vi": "nhà ga", "pos": "danh từ"},
-      {"zh": "怎么走", "pinyin": "zěnme zǒu", "vi": "đi thế nào", "pos": "thành ngữ"},
-      {"zh": "往前", "pinyin": "wǎng qián", "vi": "về phía trước", "pos": "phó từ"},
-      {"zh": "左转", "pinyin": "zuǒ zhuǎn", "vi": "rẽ trái", "pos": "động từ"},
-      {"zh": "远", "pinyin": "yuǎn", "vi": "xa", "pos": "tính từ"},
-      {"zh": "站", "pinyin": "zhàn", "vi": "trạm", "pos": "lượng từ"}
+      {
+        "zh": "火车站",
+        "pinyin": "huǒchēzhàn",
+        "vi": "nhà ga",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "怎么走",
+        "pinyin": "zěnme zǒu",
+        "vi": "đi thế nào",
+        "pos": "thành ngữ"
+      },
+      {
+        "zh": "往前",
+        "pinyin": "wǎng qián",
+        "vi": "về phía trước",
+        "pos": "phó từ"
+      },
+      {
+        "zh": "左转",
+        "pinyin": "zuǒ zhuǎn",
+        "vi": "rẽ trái",
+        "pos": "động từ"
+      },
+      {
+        "zh": "远",
+        "pinyin": "yuǎn",
+        "vi": "xa",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "站",
+        "pinyin": "zhàn",
+        "vi": "trạm",
+        "pos": "lượng từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Du khách", "role": "Người hỏi đường", "avatarColor": "#2196F3"},
-      {"code": "B", "nameVi": "Người địa phương", "role": "Người chỉ đường", "avatarColor": "#4CAF50"}
+      {
+        "code": "A",
+        "nameVi": "Du khách",
+        "role": "Người hỏi đường",
+        "avatarColor": "#2196F3"
+      },
+      {
+        "code": "B",
+        "nameVi": "Người địa phương",
+        "role": "Người chỉ đường",
+        "avatarColor": "#4CAF50"
+      }
     ],
-    "relatedGrammar": ["g_zenme", "g_jiu", "g_bu_negation"],
+    "relatedGrammar": [
+      "g_zenme",
+      "g_jiu",
+      "g_neg_bu"
+    ],
     "cultureTip": "Khi hỏi đường ở Trung Quốc, bắt đầu bằng '请问' (xin hỏi) để thể hiện sự lịch sự. Người Trung Quốc rất nhiệt tình chỉ đường, nhưng có thể dùng phương ngữ địa phương.",
     "isBookmarked": false,
     "isMastered": false
@@ -281,26 +872,100 @@
     "category": "transport",
     "icon": "🚄",
     "lines": [
-      {"speaker": "A", "zh": "我要买一张去北京的火车票。", "pinyin": "Wǒ yào mǎi yì zhāng qù Běijīng de huǒchē piào.", "vi": "Tôi muốn mua một vé tàu đi Bắc Kinh."},
-      {"speaker": "B", "zh": "你要几点的？高铁还是普通列车？", "pinyin": "Nǐ yào jǐ diǎn de? Gāotiě háishì pǔtōng lièchē?", "vi": "Bạn muốn mấy giờ? Tàu cao tốc hay tàu thường?"},
-      {"speaker": "A", "zh": "高铁，上午的。", "pinyin": "Gāotiě, shàngwǔ de.", "vi": "Tàu cao tốc, buổi sáng."},
-      {"speaker": "B", "zh": "上午有九点和十点两班。你要哪一班？", "pinyin": "Shàngwǔ yǒu jiǔ diǎn hé shí diǎn liǎng bān. Nǐ yào nǎ yì bān?", "vi": "Buổi sáng có hai chuyến lúc 9 giờ và 10 giờ. Bạn muốn chuyến nào?"},
-      {"speaker": "A", "zh": "九点的吧。多少钱？", "pinyin": "Jiǔ diǎn de ba. Duōshao qián?", "vi": "Chuyến 9 giờ đi. Bao nhiêu tiền?"},
-      {"speaker": "B", "zh": "五百五十块。给你票，请拿好。", "pinyin": "Wǔbǎi wǔshí kuài. Gěi nǐ piào, qǐng ná hǎo.", "vi": "Năm trăm năm mươi đồng. Đây là vé, cầm kỹ nhé."}
+      {
+        "speaker": "A",
+        "zh": "我要买一张去北京的火车票。",
+        "pinyin": "Wǒ yào mǎi yì zhāng qù Běijīng de huǒchē piào.",
+        "vi": "Tôi muốn mua một vé tàu đi Bắc Kinh."
+      },
+      {
+        "speaker": "B",
+        "zh": "你要几点的？高铁还是普通列车？",
+        "pinyin": "Nǐ yào jǐ diǎn de? Gāotiě háishì pǔtōng lièchē?",
+        "vi": "Bạn muốn mấy giờ? Tàu cao tốc hay tàu thường?"
+      },
+      {
+        "speaker": "A",
+        "zh": "高铁，上午的。",
+        "pinyin": "Gāotiě, shàngwǔ de.",
+        "vi": "Tàu cao tốc, buổi sáng."
+      },
+      {
+        "speaker": "B",
+        "zh": "上午有九点和十点两班。你要哪一班？",
+        "pinyin": "Shàngwǔ yǒu jiǔ diǎn hé shí diǎn liǎng bān. Nǐ yào nǎ yì bān?",
+        "vi": "Buổi sáng có hai chuyến lúc 9 giờ và 10 giờ. Bạn muốn chuyến nào?"
+      },
+      {
+        "speaker": "A",
+        "zh": "九点的吧。多少钱？",
+        "pinyin": "Jiǔ diǎn de ba. Duōshao qián?",
+        "vi": "Chuyến 9 giờ đi. Bao nhiêu tiền?"
+      },
+      {
+        "speaker": "B",
+        "zh": "五百五十块。给你票，请拿好。",
+        "pinyin": "Wǔbǎi wǔshí kuài. Gěi nǐ piào, qǐng ná hǎo.",
+        "vi": "Năm trăm năm mươi đồng. Đây là vé, cầm kỹ nhé."
+      }
     ],
     "vocabulary": [
-      {"zh": "票", "pinyin": "piào", "vi": "vé", "pos": "danh từ"},
-      {"zh": "高铁", "pinyin": "gāotiě", "vi": "tàu cao tốc", "pos": "danh từ"},
-      {"zh": "普通", "pinyin": "pǔtōng", "vi": "thường", "pos": "tính từ"},
-      {"zh": "班", "pinyin": "bān", "vi": "chuyến", "pos": "lượng từ"},
-      {"zh": "上午", "pinyin": "shàngwǔ", "vi": "buổi sáng", "pos": "danh từ thời gian"},
-      {"zh": "拿好", "pinyin": "ná hǎo", "vi": "cầm kỹ", "pos": "động từ"}
+      {
+        "zh": "票",
+        "pinyin": "piào",
+        "vi": "vé",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "高铁",
+        "pinyin": "gāotiě",
+        "vi": "tàu cao tốc",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "普通",
+        "pinyin": "pǔtōng",
+        "vi": "thường",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "班",
+        "pinyin": "bān",
+        "vi": "chuyến",
+        "pos": "lượng từ"
+      },
+      {
+        "zh": "上午",
+        "pinyin": "shàngwǔ",
+        "vi": "buổi sáng",
+        "pos": "danh từ thời gian"
+      },
+      {
+        "zh": "拿好",
+        "pinyin": "ná hǎo",
+        "vi": "cầm kỹ",
+        "pos": "động từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Hành khách", "role": "Người mua vé", "avatarColor": "#3F51B5"},
-      {"code": "B", "nameVi": "Nhân viên", "role": "Nhân viên bán vé", "avatarColor": "#FF9800"}
+      {
+        "code": "A",
+        "nameVi": "Hành khách",
+        "role": "Người mua vé",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Nhân viên",
+        "role": "Nhân viên bán vé",
+        "avatarColor": "#FF9800"
+      }
     ],
-    "relatedGrammar": ["g_yao", "g_huanshi", "g_de_modifier"],
+    "relatedGrammar": [
+      "g_yao",
+      "g_haishi",
+      "g_de_attr"
+    ],
     "cultureTip": "Tàu cao tốc (高铁) ở Trung Quốc rất phổ biến và tiện lợi. Đặt vé sớm để có giá tốt. Bạn có thể đặt vé qua app 12306 (app đặt vé tàu chính thức).",
     "isBookmarked": false,
     "isMastered": false
@@ -315,27 +980,106 @@
     "category": "daily",
     "icon": "⏰",
     "lines": [
-      {"speaker": "A", "zh": "你每天几点起床？", "pinyin": "Nǐ měi tiān jǐ diǎn qǐchuáng?", "vi": "Mỗi ngày bạn mấy giờ dậy?"},
-      {"speaker": "B", "zh": "我每天七点起床。你呢？", "pinyin": "Wǒ měi tiān qī diǎn qǐchuáng. Nǐ ne?", "vi": "Mỗi ngày tôi bảy giờ dậy. Còn bạn?"},
-      {"speaker": "A", "zh": "我六点半起床，然后吃早饭。", "pinyin": "Wǒ liù diǎn bàn qǐchuáng, ránhòu chī zǎofàn.", "vi": "Tôi sáu giờ rưỡi dậy, sau đó ăn sáng."},
-      {"speaker": "B", "zh": "你上午做什么？", "pinyin": "Nǐ shàngwǔ zuò shénme?", "vi": "Buổi sáng bạn làm gì?"},
-      {"speaker": "A", "zh": "我上午上课。下午去图书馆看书。", "pinyin": "Wǒ shàngwǔ shàngkè. Xiàwǔ qù túshūguǎn kàn shū.", "vi": "Buổi sáng tôi đi học. Buổi chiều đi thư viện đọc sách."},
-      {"speaker": "B", "zh": "晚上呢？", "pinyin": "Wǎnshang ne?", "vi": "Buổi tối thì sao?"},
-      {"speaker": "A", "zh": "晚上我做作业，十一点睡觉。", "pinyin": "Wǎnshang wǒ zuò zuòyè, shíyī diǎn shuìjiào.", "vi": "Buổi tối tôi làm bài tập, mười một giờ đi ngủ."}
+      {
+        "speaker": "A",
+        "zh": "你每天几点起床？",
+        "pinyin": "Nǐ měi tiān jǐ diǎn qǐchuáng?",
+        "vi": "Mỗi ngày bạn mấy giờ dậy?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我每天七点起床。你呢？",
+        "pinyin": "Wǒ měi tiān qī diǎn qǐchuáng. Nǐ ne?",
+        "vi": "Mỗi ngày tôi bảy giờ dậy. Còn bạn?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我六点半起床，然后吃早饭。",
+        "pinyin": "Wǒ liù diǎn bàn qǐchuáng, ránhòu chī zǎofàn.",
+        "vi": "Tôi sáu giờ rưỡi dậy, sau đó ăn sáng."
+      },
+      {
+        "speaker": "B",
+        "zh": "你上午做什么？",
+        "pinyin": "Nǐ shàngwǔ zuò shénme?",
+        "vi": "Buổi sáng bạn làm gì?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我上午上课。下午去图书馆看书。",
+        "pinyin": "Wǒ shàngwǔ shàngkè. Xiàwǔ qù túshūguǎn kàn shū.",
+        "vi": "Buổi sáng tôi đi học. Buổi chiều đi thư viện đọc sách."
+      },
+      {
+        "speaker": "B",
+        "zh": "晚上呢？",
+        "pinyin": "Wǎnshang ne?",
+        "vi": "Buổi tối thì sao?"
+      },
+      {
+        "speaker": "A",
+        "zh": "晚上我做作业，十一点睡觉。",
+        "pinyin": "Wǎnshang wǒ zuò zuòyè, shíyī diǎn shuìjiào.",
+        "vi": "Buổi tối tôi làm bài tập, mười một giờ đi ngủ."
+      }
     ],
     "vocabulary": [
-      {"zh": "起床", "pinyin": "qǐchuáng", "vi": "dậy", "pos": "động từ"},
-      {"zh": "早饭", "pinyin": "zǎofàn", "vi": "bữa sáng", "pos": "danh từ"},
-      {"zh": "上课", "pinyin": "shàngkè", "vi": "đi học", "pos": "động từ"},
-      {"zh": "图书馆", "pinyin": "túshūguǎn", "vi": "thư viện", "pos": "danh từ"},
-      {"zh": "作业", "pinyin": "zuòyè", "vi": "bài tập", "pos": "danh từ"},
-      {"zh": "睡觉", "pinyin": "shuìjiào", "vi": "đi ngủ", "pos": "động từ"}
+      {
+        "zh": "起床",
+        "pinyin": "qǐchuáng",
+        "vi": "dậy",
+        "pos": "động từ"
+      },
+      {
+        "zh": "早饭",
+        "pinyin": "zǎofàn",
+        "vi": "bữa sáng",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "上课",
+        "pinyin": "shàngkè",
+        "vi": "đi học",
+        "pos": "động từ"
+      },
+      {
+        "zh": "图书馆",
+        "pinyin": "túshūguǎn",
+        "vi": "thư viện",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "作业",
+        "pinyin": "zuòyè",
+        "vi": "bài tập",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "睡觉",
+        "pinyin": "shuìjiào",
+        "vi": "đi ngủ",
+        "pos": "động từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Hải", "role": "Sinh viên", "avatarColor": "#009688"},
-      {"code": "B", "nameVi": "Nam", "role": "Bạn cùng phòng", "avatarColor": "#795548"}
+      {
+        "code": "A",
+        "nameVi": "Hải",
+        "role": "Sinh viên",
+        "avatarColor": "#009688"
+      },
+      {
+        "code": "B",
+        "nameVi": "Nam",
+        "role": "Bạn cùng phòng",
+        "avatarColor": "#795548"
+      }
     ],
-    "relatedGrammar": ["g_time_when", "g_ránhòu", "g_num"],
+    "relatedGrammar": [
+      "g_time_word",
+      "g_ránhòu",
+      "g_numbers"
+    ],
     "cultureTip": "Sinh viên Trung Quốc thường có lịch trình bận rộn. '做作业' (làm bài tập) chiếm nhiều thời gian buổi tối. Thư viện đại học thường mở đến khuya.",
     "isBookmarked": false,
     "isMastered": false
@@ -350,26 +1094,100 @@
     "category": "daily",
     "icon": "🌤️",
     "lines": [
-      {"speaker": "A", "zh": "今天天气怎么样？", "pinyin": "Jīntiān tiānqì zěnmeyàng?", "vi": "Hôm nay thời tiết thế nào?"},
-      {"speaker": "B", "zh": "今天天气很好，晴朗，不太热。", "pinyin": "Jīntiān tiānqì hěn hǎo, qínglǎng, bú tài rè.", "vi": "Hôm nay thời tiết rất tốt, quang mây, không quá nóng."},
-      {"speaker": "A", "zh": "明天呢？会下雨吗？", "pinyin": "Míngtiān ne? Huì xiàyǔ ma?", "vi": "Ngày mai thì sao? Sẽ mưa không?"},
-      {"speaker": "B", "zh": "天气预报说明天有小雨。", "pinyin": "Tiānqì yùbào shuō míngtiān yǒu xiǎoyǔ.", "vi": "Dự báo thời tiết nói ngày mai có mưa nhỏ."},
-      {"speaker": "A", "zh": "那我们今天去公园吧！", "pinyin": "Nà wǒmen jīntiān qù gōngyuán ba!", "vi": "Vậy hôm nay chúng ta đi công viên đi!"},
-      {"speaker": "B", "zh": "好主意！下午两点怎么样？", "pinyin": "Hǎo zhǔyì! Xiàwǔ liǎng diǎn zěnmeyàng?", "vi": "Ý hay! Chiều hai giờ thế nào?"}
+      {
+        "speaker": "A",
+        "zh": "今天天气怎么样？",
+        "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+        "vi": "Hôm nay thời tiết thế nào?"
+      },
+      {
+        "speaker": "B",
+        "zh": "今天天气很好，晴朗，不太热。",
+        "pinyin": "Jīntiān tiānqì hěn hǎo, qínglǎng, bú tài rè.",
+        "vi": "Hôm nay thời tiết rất tốt, quang mây, không quá nóng."
+      },
+      {
+        "speaker": "A",
+        "zh": "明天呢？会下雨吗？",
+        "pinyin": "Míngtiān ne? Huì xiàyǔ ma?",
+        "vi": "Ngày mai thì sao? Sẽ mưa không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "天气预报说明天有小雨。",
+        "pinyin": "Tiānqì yùbào shuō míngtiān yǒu xiǎoyǔ.",
+        "vi": "Dự báo thời tiết nói ngày mai có mưa nhỏ."
+      },
+      {
+        "speaker": "A",
+        "zh": "那我们今天去公园吧！",
+        "pinyin": "Nà wǒmen jīntiān qù gōngyuán ba!",
+        "vi": "Vậy hôm nay chúng ta đi công viên đi!"
+      },
+      {
+        "speaker": "B",
+        "zh": "好主意！下午两点怎么样？",
+        "pinyin": "Hǎo zhǔyì! Xiàwǔ liǎng diǎn zěnmeyàng?",
+        "vi": "Ý hay! Chiều hai giờ thế nào?"
+      }
     ],
     "vocabulary": [
-      {"zh": "天气", "pinyin": "tiānqì", "vi": "thời tiết", "pos": "danh từ"},
-      {"zh": "晴朗", "pinyin": "qínglǎng", "vi": "quang mây", "pos": "tính từ"},
-      {"zh": "热", "pinyin": "rè", "vi": "nóng", "pos": "tính từ"},
-      {"zh": "下雨", "pinyin": "xiàyǔ", "vi": "mưa", "pos": "động từ"},
-      {"zh": "预报", "pinyin": "yùbào", "vi": "dự báo", "pos": "danh từ/động từ"},
-      {"zh": "主意", "pinyin": "zhǔyì", "vi": "ý kiến", "pos": "danh từ"}
+      {
+        "zh": "天气",
+        "pinyin": "tiānqì",
+        "vi": "thời tiết",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "晴朗",
+        "pinyin": "qínglǎng",
+        "vi": "quang mây",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "热",
+        "pinyin": "rè",
+        "vi": "nóng",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "下雨",
+        "pinyin": "xiàyǔ",
+        "vi": "mưa",
+        "pos": "động từ"
+      },
+      {
+        "zh": "预报",
+        "pinyin": "yùbào",
+        "vi": "dự báo",
+        "pos": "danh từ/động từ"
+      },
+      {
+        "zh": "主意",
+        "pinyin": "zhǔyì",
+        "vi": "ý kiến",
+        "pos": "danh từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Thảo", "role": "Bạn", "avatarColor": "#E91E63"},
-      {"code": "B", "nameVi": "Dũng", "role": "Bạn", "avatarColor": "#3F51B5"}
+      {
+        "code": "A",
+        "nameVi": "Thảo",
+        "role": "Bạn",
+        "avatarColor": "#E91E63"
+      },
+      {
+        "code": "B",
+        "nameVi": "Dũng",
+        "role": "Bạn",
+        "avatarColor": "#3F51B5"
+      }
     ],
-    "relatedGrammar": ["g_zěnmeyàng", "g_hui_future", "g_say_transfer"],
+    "relatedGrammar": [
+      "g_zěnmeyàng",
+      "g_hui_future",
+      "g_say_transfer"
+    ],
     "cultureTip": "Người Trung Quốc thường xem '天气预报' (dự báo thời tiết) mỗi sáng. Ở miền Bắc (Bắc Kinh), mùa đông rất lạnh; miền Nam (Quảng Châu) nóng ẩm quanh năm.",
     "isBookmarked": false,
     "isMastered": false
@@ -384,26 +1202,100 @@
     "category": "school",
     "icon": "📚",
     "lines": [
-      {"speaker": "A", "zh": "你学了多长时间中文？", "pinyin": "Nǐ xué le duō cháng shíjiān Zhōngwén?", "vi": "Bạn học tiếng Trung bao lâu rồi?"},
-      {"speaker": "B", "zh": "我学了一年多了。但是说得还不太好。", "pinyin": "Wǒ xué le yì nián duō le. Dànshì shuō de hái bú tài hǎo.", "vi": "Tôi học hơn một năm rồi. Nhưng nói vẫn chưa tốt lắm."},
-      {"speaker": "A", "zh": "没关系，多练习就会好的。", "pinyin": "Méi guānxi, duō liànxí jiù huì hǎo de.", "vi": "Không sao, tập nhiều thì sẽ tốt thôi."},
-      {"speaker": "B", "zh": "你觉得学中文最难的是什么？", "pinyin": "Nǐ juéde xué Zhōngwén zuì nán de shì shénme?", "vi": "Bạn thấy học tiếng Trung khó nhất là gì?"},
-      {"speaker": "A", "zh": "我觉得汉字很难写，但是语法不太难。", "pinyin": "Wǒ juéde Hànzì hěn nán xiě, dànshì yǔfǎ bú tài nán.", "vi": "Tôi thấy chữ Hán khó viết, nhưng ngữ pháp không quá khó."},
-      {"speaker": "B", "zh": "对，我每天都练习写汉字。", "pinyin": "Duì, wǒ měi tiān dōu liànxí xiě Hànzì.", "vi": "Đúng, mỗi ngày tôi đều luyện tập viết chữ Hán."}
+      {
+        "speaker": "A",
+        "zh": "你学了多长时间中文？",
+        "pinyin": "Nǐ xué le duō cháng shíjiān Zhōngwén?",
+        "vi": "Bạn học tiếng Trung bao lâu rồi?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我学了一年多了。但是说得还不太好。",
+        "pinyin": "Wǒ xué le yì nián duō le. Dànshì shuō de hái bú tài hǎo.",
+        "vi": "Tôi học hơn một năm rồi. Nhưng nói vẫn chưa tốt lắm."
+      },
+      {
+        "speaker": "A",
+        "zh": "没关系，多练习就会好的。",
+        "pinyin": "Méi guānxi, duō liànxí jiù huì hǎo de.",
+        "vi": "Không sao, tập nhiều thì sẽ tốt thôi."
+      },
+      {
+        "speaker": "B",
+        "zh": "你觉得学中文最难的是什么？",
+        "pinyin": "Nǐ juéde xué Zhōngwén zuì nán de shì shénme?",
+        "vi": "Bạn thấy học tiếng Trung khó nhất là gì?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我觉得汉字很难写，但是语法不太难。",
+        "pinyin": "Wǒ juéde Hànzì hěn nán xiě, dànshì yǔfǎ bú tài nán.",
+        "vi": "Tôi thấy chữ Hán khó viết, nhưng ngữ pháp không quá khó."
+      },
+      {
+        "speaker": "B",
+        "zh": "对，我每天都练习写汉字。",
+        "pinyin": "Duì, wǒ měi tiān dōu liànxí xiě Hànzì.",
+        "vi": "Đúng, mỗi ngày tôi đều luyện tập viết chữ Hán."
+      }
     ],
     "vocabulary": [
-      {"zh": "学", "pinyin": "xué", "vi": "học", "pos": "động từ"},
-      {"zh": "中文", "pinyin": "Zhōngwén", "vi": "tiếng Trung", "pos": "danh từ"},
-      {"zh": "练习", "pinyin": "liànxí", "vi": "luyện tập", "pos": "động từ"},
-      {"zh": "难", "pinyin": "nán", "vi": "khó", "pos": "tính từ"},
-      {"zh": "汉字", "pinyin": "Hànzì", "vi": "chữ Hán", "pos": "danh từ"},
-      {"zh": "语法", "pinyin": "yǔfǎ", "vi": "ngữ pháp", "pos": "danh từ"}
+      {
+        "zh": "学",
+        "pinyin": "xué",
+        "vi": "học",
+        "pos": "động từ"
+      },
+      {
+        "zh": "中文",
+        "pinyin": "Zhōngwén",
+        "vi": "tiếng Trung",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "练习",
+        "pinyin": "liànxí",
+        "vi": "luyện tập",
+        "pos": "động từ"
+      },
+      {
+        "zh": "难",
+        "pinyin": "nán",
+        "vi": "khó",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "汉字",
+        "pinyin": "Hànzì",
+        "vi": "chữ Hán",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "语法",
+        "pinyin": "yǔfǎ",
+        "vi": "ngữ pháp",
+        "pos": "danh từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Minh", "role": "Bạn học tiếng Trung", "avatarColor": "#6C63FF"},
-      {"code": "B", "nameVi": "Lan", "role": "Bạn học tiếng Trung", "avatarColor": "#FF6B6B"}
+      {
+        "code": "A",
+        "nameVi": "Minh",
+        "role": "Bạn học tiếng Trung",
+        "avatarColor": "#6C63FF"
+      },
+      {
+        "code": "B",
+        "nameVi": "Lan",
+        "role": "Bạn học tiếng Trung",
+        "avatarColor": "#FF6B6B"
+      }
     ],
-    "relatedGrammar": ["g_le_duration", "g_de_complement", "g_jiu"],
+    "relatedGrammar": [
+      "g_le_duration",
+      "g_de_comp",
+      "g_jiu"
+    ],
     "cultureTip": "Học tiếng Trung cần kiên nhẫn. Người Trung Quốc có câu '只要功夫深，铁杵磨成针' — 'Chỉ cần công phu sâu, chầy sắt mài thành kim', ý nói kiên trì sẽ thành công.",
     "isBookmarked": false,
     "isMastered": false
@@ -418,26 +1310,100 @@
     "category": "school",
     "icon": "🏫",
     "lines": [
-      {"speaker": "A", "zh": "老师，这个字怎么读？", "pinyin": "Lǎoshī, zhège zì zěnme dú?", "vi": "Thầy ơi, chữ này đọc thế nào?"},
-      {"speaker": "B", "zh": "这个字读'好'，hǎo，第三声。", "pinyin": "Zhège zì dú 'hǎo', hǎo, dì sān shēng.", "vi": "Chữ này đọc 'hảo', hǎo, thanh thứ ba."},
-      {"speaker": "A", "zh": "是什么意思？", "pinyin": "Shì shénme yìsi?", "vi": "Nghĩa là gì?"},
-      {"speaker": "B", "zh": "好的意思很多，可以表示'好'、'行'、'同意'。", "pinyin": "Hǎo de yìsi hěn duō, kěyǐ biǎoshì 'hǎo', 'xíng', 'tóngyì'.", "vi": "Nghĩa của 'hảo' rất nhiều, có thể biểu thị 'tốt', 'được', 'đồng ý'."},
-      {"speaker": "A", "zh": "谢谢老师！我明白了。", "pinyin": "Xièxie lǎoshī! Wǒ míngbai le.", "vi": "Cảm ơn thầy! Tôi hiểu rồi."},
-      {"speaker": "B", "zh": "不客气。大家还有什么问题吗？", "pinyin": "Bú kèqi. Dàjiā hái yǒu shénme wèntí ma?", "vi": "Không có chi. Các bạn còn câu hỏi gì nữa không?"}
+      {
+        "speaker": "A",
+        "zh": "老师，这个字怎么读？",
+        "pinyin": "Lǎoshī, zhège zì zěnme dú?",
+        "vi": "Thầy ơi, chữ này đọc thế nào?"
+      },
+      {
+        "speaker": "B",
+        "zh": "这个字读'好'，hǎo，第三声。",
+        "pinyin": "Zhège zì dú 'hǎo', hǎo, dì sān shēng.",
+        "vi": "Chữ này đọc 'hảo', hǎo, thanh thứ ba."
+      },
+      {
+        "speaker": "A",
+        "zh": "是什么意思？",
+        "pinyin": "Shì shénme yìsi?",
+        "vi": "Nghĩa là gì?"
+      },
+      {
+        "speaker": "B",
+        "zh": "好的意思很多，可以表示'好'、'行'、'同意'。",
+        "pinyin": "Hǎo de yìsi hěn duō, kěyǐ biǎoshì 'hǎo', 'xíng', 'tóngyì'.",
+        "vi": "Nghĩa của 'hảo' rất nhiều, có thể biểu thị 'tốt', 'được', 'đồng ý'."
+      },
+      {
+        "speaker": "A",
+        "zh": "谢谢老师！我明白了。",
+        "pinyin": "Xièxie lǎoshī! Wǒ míngbai le.",
+        "vi": "Cảm ơn thầy! Tôi hiểu rồi."
+      },
+      {
+        "speaker": "B",
+        "zh": "不客气。大家还有什么问题吗？",
+        "pinyin": "Bú kèqi. Dàjiā hái yǒu shénme wèntí ma?",
+        "vi": "Không có chi. Các bạn còn câu hỏi gì nữa không?"
+      }
     ],
     "vocabulary": [
-      {"zh": "字", "pinyin": "zì", "vi": "chữ", "pos": "danh từ"},
-      {"zh": "读", "pinyin": "dú", "vi": "đọc", "pos": "động từ"},
-      {"zh": "声", "pinyin": "shēng", "vi": "thanh điệu", "pos": "danh từ"},
-      {"zh": "意思", "pinyin": "yìsi", "vi": "nghĩa", "pos": "danh từ"},
-      {"zh": "明白", "pinyin": "míngbai", "vi": "hiểu", "pos": "động từ"},
-      {"zh": "问题", "pinyin": "wèntí", "vi": "câu hỏi, vấn đề", "pos": "danh từ"}
+      {
+        "zh": "字",
+        "pinyin": "zì",
+        "vi": "chữ",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "读",
+        "pinyin": "dú",
+        "vi": "đọc",
+        "pos": "động từ"
+      },
+      {
+        "zh": "声",
+        "pinyin": "shēng",
+        "vi": "thanh điệu",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "意思",
+        "pinyin": "yìsi",
+        "vi": "nghĩa",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "明白",
+        "pinyin": "míngbai",
+        "vi": "hiểu",
+        "pos": "động từ"
+      },
+      {
+        "zh": "问题",
+        "pinyin": "wèntí",
+        "vi": "câu hỏi, vấn đề",
+        "pos": "danh từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Học viên", "role": "Học sinh", "avatarColor": "#4ECDC4"},
-      {"code": "B", "nameVi": "Giáo viên", "role": "Thầy giáo", "avatarColor": "#FF9800"}
+      {
+        "code": "A",
+        "nameVi": "Học viên",
+        "role": "Học sinh",
+        "avatarColor": "#4ECDC4"
+      },
+      {
+        "code": "B",
+        "nameVi": "Giáo viên",
+        "role": "Thầy giáo",
+        "avatarColor": "#FF9800"
+      }
     ],
-    "relatedGrammar": ["g_zěnme", "g_shi_equation", "g_le_change"],
+    "relatedGrammar": [
+      "g_zenme",
+      "g_shi",
+      "g_le2"
+    ],
     "cultureTip": "Trong lớp học tiếng Trung, gọi giáo viên là '老师' (lǎoshī) thay vì gọi tên. Đây là cách thể hiện sự tôn trọng trong văn hóa Trung Quốc.",
     "isBookmarked": false,
     "isMastered": false
@@ -452,27 +1418,106 @@
     "category": "travel",
     "icon": "🏨",
     "lines": [
-      {"speaker": "A", "zh": "你好，我预订了一个房间。", "pinyin": "Nǐ hǎo, wǒ yùdìng le yí ge fángjiān.", "vi": "Xin chào, tôi đã đặt một phòng."},
-      {"speaker": "B", "zh": "请出示您的护照。", "pinyin": "Qǐng chūshì nín de hùzhào.", "vi": "Xin xuất trình hộ chiếu của ngài."},
-      {"speaker": "A", "zh": "好的，给你。住几天？", "pinyin": "Hǎo de, gěi nǐ. Zhù jǐ tiān?", "vi": "Vâng, đây là. Ở mấy ngày?"},
-      {"speaker": "B", "zh": "住三天。早餐是几点到几点？", "pinyin": "Zhù sān tiān. Zǎocān shì jǐ diǎn dào jǐ diǎn?", "vi": "Ở ba ngày. Bữa sáng từ mấy giờ đến mấy giờ?"},
-      {"speaker": "A", "zh": "早餐七点到九点，在一楼餐厅。", "pinyin": "Zǎocān qī diǎn dào jiǔ diǎn, zài yì lóu cāntīng.", "vi": "Bữa sáng từ 7 giờ đến 9 giờ, ở nhà ăn tầng một."},
-      {"speaker": "B", "zh": "好的，谢谢！房间在几楼？", "pinyin": "Hǎo de, xièxie! Fángjiān zài jǐ lóu?", "vi": "Được, cảm ơn! Phòng ở tầng mấy?"},
-      {"speaker": "A", "zh": "您的房间在五楼，508号。这是房卡。", "pinyin": "Nín de fángjiān zài wǔ lóu, wǔlíngbā hào. Zhè shì fángkǎ.", "vi": "Phòng của ngài ở tầng năm, số 508. Đây là thẻ phòng."}
+      {
+        "speaker": "A",
+        "zh": "你好，我预订了一个房间。",
+        "pinyin": "Nǐ hǎo, wǒ yùdìng le yí ge fángjiān.",
+        "vi": "Xin chào, tôi đã đặt một phòng."
+      },
+      {
+        "speaker": "B",
+        "zh": "请出示您的护照。",
+        "pinyin": "Qǐng chūshì nín de hùzhào.",
+        "vi": "Xin xuất trình hộ chiếu của ngài."
+      },
+      {
+        "speaker": "A",
+        "zh": "好的，给你。住几天？",
+        "pinyin": "Hǎo de, gěi nǐ. Zhù jǐ tiān?",
+        "vi": "Vâng, đây là. Ở mấy ngày?"
+      },
+      {
+        "speaker": "B",
+        "zh": "住三天。早餐是几点到几点？",
+        "pinyin": "Zhù sān tiān. Zǎocān shì jǐ diǎn dào jǐ diǎn?",
+        "vi": "Ở ba ngày. Bữa sáng từ mấy giờ đến mấy giờ?"
+      },
+      {
+        "speaker": "A",
+        "zh": "早餐七点到九点，在一楼餐厅。",
+        "pinyin": "Zǎocān qī diǎn dào jiǔ diǎn, zài yì lóu cāntīng.",
+        "vi": "Bữa sáng từ 7 giờ đến 9 giờ, ở nhà ăn tầng một."
+      },
+      {
+        "speaker": "B",
+        "zh": "好的，谢谢！房间在几楼？",
+        "pinyin": "Hǎo de, xièxie! Fángjiān zài jǐ lóu?",
+        "vi": "Được, cảm ơn! Phòng ở tầng mấy?"
+      },
+      {
+        "speaker": "A",
+        "zh": "您的房间在五楼，508号。这是房卡。",
+        "pinyin": "Nín de fángjiān zài wǔ lóu, wǔlíngbā hào. Zhè shì fángkǎ.",
+        "vi": "Phòng của ngài ở tầng năm, số 508. Đây là thẻ phòng."
+      }
     ],
     "vocabulary": [
-      {"zh": "预订", "pinyin": "yùdìng", "vi": "đặt trước", "pos": "động từ"},
-      {"zh": "房间", "pinyin": "fángjiān", "vi": "phòng", "pos": "danh từ"},
-      {"zh": "护照", "pinyin": "hùzhào", "vi": "hộ chiếu", "pos": "danh từ"},
-      {"zh": "早餐", "pinyin": "zǎocān", "vi": "bữa sáng", "pos": "danh từ"},
-      {"zh": "楼", "pinyin": "lóu", "vi": "tầng", "pos": "lượng từ"},
-      {"zh": "房卡", "pinyin": "fángkǎ", "vi": "thẻ phòng", "pos": "danh từ"}
+      {
+        "zh": "预订",
+        "pinyin": "yùdìng",
+        "vi": "đặt trước",
+        "pos": "động từ"
+      },
+      {
+        "zh": "房间",
+        "pinyin": "fángjiān",
+        "vi": "phòng",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "护照",
+        "pinyin": "hùzhào",
+        "vi": "hộ chiếu",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "早餐",
+        "pinyin": "zǎocān",
+        "vi": "bữa sáng",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "楼",
+        "pinyin": "lóu",
+        "vi": "tầng",
+        "pos": "lượng từ"
+      },
+      {
+        "zh": "房卡",
+        "pinyin": "fángkǎ",
+        "vi": "thẻ phòng",
+        "pos": "danh từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Nhân viên", "role": "Lễ tân", "avatarColor": "#2196F3"},
-      {"code": "B", "nameVi": "Khách", "role": "Khách du lịch", "avatarColor": "#E91E63"}
+      {
+        "code": "A",
+        "nameVi": "Nhân viên",
+        "role": "Lễ tân",
+        "avatarColor": "#2196F3"
+      },
+      {
+        "code": "B",
+        "nameVi": "Khách",
+        "role": "Khách du lịch",
+        "avatarColor": "#E91E63"
+      }
     ],
-    "relatedGrammar": ["g_le_completion", "g_zai_location", "g_num"],
+    "relatedGrammar": [
+      "g_le1",
+      "g_zai",
+      "g_numbers"
+    ],
     "cultureTip": "Khi ở khách sạn Trung Quốc, cần xuất trình hộ chiếu khi nhận phòng. Phí trả trước (押金) thường cần thanh toán bằng WeChat hoặc Alipay.",
     "isBookmarked": false,
     "isMastered": false
@@ -487,26 +1532,100 @@
     "category": "travel",
     "icon": "🏛️",
     "lines": [
-      {"speaker": "A", "zh": "长城真壮观啊！", "pinyin": "Chángchéng zhēn zhuàngguān a!", "vi": "Vạn Lý Trường Thành thật tráng lệ!"},
-      {"speaker": "B", "zh": "是啊，据说长城有两千多年的历史了。", "pinyin": "Shì a, jùshuō Chángchéng yǒu liǎng qiān duō nián de lìshǐ le.", "vi": "Đúng vậy,据说 Trường Thành có hơn hai nghìn năm lịch sử."},
-      {"speaker": "A", "zh": "我们爬到顶上去看看吧！", "pinyin": "Wǒmen pá dào dǐng shàng qù kànkan ba!", "vi": "Chúng ta leo lên đỉnh xem đi!"},
-      {"speaker": "B", "zh": "好，不过要注意安全。台阶很陡。", "pinyin": "Hǎo, búguò yào zhùyì ānquán. Táijiē hěn dǒu.", "vi": "Được, nhưng phải chú ý an toàn. Bậc thang rất dốc."},
-      {"speaker": "A", "zh": "别担心，我会小心的。这儿风景太美了！", "pinyin": "Bié dānxīn, wǒ huì xiǎoxīn de. Zhèr fēngjǐng tài měi le!", "vi": "Đừng lo, tôi sẽ cẩn thận. Phong cảnh ở đây quá đẹp!"},
-      {"speaker": "B", "zh": "来，我们在这儿拍张照吧！", "pinyin": "Lái, wǒmen zài zhèr pāi zhāng zhào ba!", "vi": "Lại đây, chúng ta chụp một tấm ảnh ở đây đi!"}
+      {
+        "speaker": "A",
+        "zh": "长城真壮观啊！",
+        "pinyin": "Chángchéng zhēn zhuàngguān a!",
+        "vi": "Vạn Lý Trường Thành thật tráng lệ!"
+      },
+      {
+        "speaker": "B",
+        "zh": "是啊，据说长城有两千多年的历史了。",
+        "pinyin": "Shì a, jùshuō Chángchéng yǒu liǎng qiān duō nián de lìshǐ le.",
+        "vi": "Đúng vậy,据说 Trường Thành có hơn hai nghìn năm lịch sử."
+      },
+      {
+        "speaker": "A",
+        "zh": "我们爬到顶上去看看吧！",
+        "pinyin": "Wǒmen pá dào dǐng shàng qù kànkan ba!",
+        "vi": "Chúng ta leo lên đỉnh xem đi!"
+      },
+      {
+        "speaker": "B",
+        "zh": "好，不过要注意安全。台阶很陡。",
+        "pinyin": "Hǎo, búguò yào zhùyì ānquán. Táijiē hěn dǒu.",
+        "vi": "Được, nhưng phải chú ý an toàn. Bậc thang rất dốc."
+      },
+      {
+        "speaker": "A",
+        "zh": "别担心，我会小心的。这儿风景太美了！",
+        "pinyin": "Bié dānxīn, wǒ huì xiǎoxīn de. Zhèr fēngjǐng tài měi le!",
+        "vi": "Đừng lo, tôi sẽ cẩn thận. Phong cảnh ở đây quá đẹp!"
+      },
+      {
+        "speaker": "B",
+        "zh": "来，我们在这儿拍张照吧！",
+        "pinyin": "Lái, wǒmen zài zhèr pāi zhāng zhào ba!",
+        "vi": "Lại đây, chúng ta chụp một tấm ảnh ở đây đi!"
+      }
     ],
     "vocabulary": [
-      {"zh": "长城", "pinyin": "Chángchéng", "vi": "Vạn Lý Trường Thành", "pos": "danh từ riêng"},
-      {"zh": "壮观", "pinyin": "zhuàngguān", "vi": "tráng lệ", "pos": "tính từ"},
-      {"zh": "历史", "pinyin": "lìshǐ", "vi": "lịch sử", "pos": "danh từ"},
-      {"zh": "安全", "pinyin": "ānquán", "vi": "an toàn", "pos": "tính từ"},
-      {"zh": "风景", "pinyin": "fēngjǐng", "vi": "phong cảnh", "pos": "danh từ"},
-      {"zh": "拍照", "pinyin": "pāizhào", "vi": "chụp ảnh", "pos": "động từ"}
+      {
+        "zh": "长城",
+        "pinyin": "Chángchéng",
+        "vi": "Vạn Lý Trường Thành",
+        "pos": "danh từ riêng"
+      },
+      {
+        "zh": "壮观",
+        "pinyin": "zhuàngguān",
+        "vi": "tráng lệ",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "历史",
+        "pinyin": "lìshǐ",
+        "vi": "lịch sử",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "安全",
+        "pinyin": "ānquán",
+        "vi": "an toàn",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "风景",
+        "pinyin": "fēngjǐng",
+        "vi": "phong cảnh",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "拍照",
+        "pinyin": "pāizhào",
+        "vi": "chụp ảnh",
+        "pos": "động từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "An", "role": "Du khách", "avatarColor": "#FF5722"},
-      {"code": "B", "nameVi": "Bình", "role": "Bạn đồng hành", "avatarColor": "#009688"}
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Du khách",
+        "avatarColor": "#FF5722"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Bạn đồng hành",
+        "avatarColor": "#009688"
+      }
     ],
-    "relatedGrammar": ["g_degree_taile", "g_bie_negation", "g_de_complement"],
+    "relatedGrammar": [
+      "g_tai_le",
+      "g_bie_negation",
+      "g_de_comp"
+    ],
     "cultureTip": "Vạn Lý Trường Thành (长城) là biểu tượng của Trung Quốc. Câu nói nổi tiếng '不到长城非好汉' nghĩa là 'Chưa đến Trường Thành chưa phải hảo hán' — khuyên người ta nên đến thăm ít nhất một lần.",
     "isBookmarked": false,
     "isMastered": false
@@ -521,26 +1640,100 @@
     "category": "phone",
     "icon": "📱",
     "lines": [
-      {"speaker": "A", "zh": "喂，你好！请问王老师在吗？", "pinyin": "Wéi, nǐ hǎo! Qǐngwèn Wáng lǎoshī zài ma?", "vi": "A-lô, xin chào! Xin hỏi thầy Vương có ở không?"},
-      {"speaker": "B", "zh": "他不在，您找他有什么事？", "pinyin": "Tā bú zài, nín zhǎo tā yǒu shénme shì?", "vi": "Ông ấy không có, ngài tìm ông ấy có việc gì?"},
-      {"speaker": "A", "zh": "我是他的学生，想问一下作业的事。", "pinyin": "Wǒ shì tā de xuésheng, xiǎng wèn yíxià zuòyè de shì.", "vi": "Tôi là học sinh của thầy, muốn hỏi về bài tập."},
-      {"speaker": "B", "zh": "他大概三点回来。你可以一会儿再打来。", "pinyin": "Tā dàgài sān diǎn huílái. Nǐ kěyǐ yíhuìr zài dǎ lái.", "vi": "Ông ấy khoảng ba giờ trở về. Bạn có thể gọi lại sau."},
-      {"speaker": "A", "zh": "好的，我三点以后再打来。谢谢！", "pinyin": "Hǎo de, wǒ sān diǎn yǐhòu zài dǎ lái. Xièxie!", "vi": "Được, tôi sẽ gọi lại sau ba giờ. Cảm ơn!"},
-      {"speaker": "B", "zh": "不客气，再见！", "pinyin": "Bú kèqi, zàijiàn!", "vi": "Không có chi, tạm biệt!"}
+      {
+        "speaker": "A",
+        "zh": "喂，你好！请问王老师在吗？",
+        "pinyin": "Wéi, nǐ hǎo! Qǐngwèn Wáng lǎoshī zài ma?",
+        "vi": "A-lô, xin chào! Xin hỏi thầy Vương có ở không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "他不在，您找他有什么事？",
+        "pinyin": "Tā bú zài, nín zhǎo tā yǒu shénme shì?",
+        "vi": "Ông ấy không có, ngài tìm ông ấy có việc gì?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我是他的学生，想问一下作业的事。",
+        "pinyin": "Wǒ shì tā de xuésheng, xiǎng wèn yíxià zuòyè de shì.",
+        "vi": "Tôi là học sinh của thầy, muốn hỏi về bài tập."
+      },
+      {
+        "speaker": "B",
+        "zh": "他大概三点回来。你可以一会儿再打来。",
+        "pinyin": "Tā dàgài sān diǎn huílái. Nǐ kěyǐ yíhuìr zài dǎ lái.",
+        "vi": "Ông ấy khoảng ba giờ trở về. Bạn có thể gọi lại sau."
+      },
+      {
+        "speaker": "A",
+        "zh": "好的，我三点以后再打来。谢谢！",
+        "pinyin": "Hǎo de, wǒ sān diǎn yǐhòu zài dǎ lái. Xièxie!",
+        "vi": "Được, tôi sẽ gọi lại sau ba giờ. Cảm ơn!"
+      },
+      {
+        "speaker": "B",
+        "zh": "不客气，再见！",
+        "pinyin": "Bú kèqi, zàijiàn!",
+        "vi": "Không có chi, tạm biệt!"
+      }
     ],
     "vocabulary": [
-      {"zh": "喂", "pinyin": "wéi", "vi": "alô", "pos": "thán từ"},
-      {"zh": "打电话", "pinyin": "dǎ diànhuà", "vi": "gọi điện thoại", "pos": "động từ"},
-      {"zh": "在", "pinyin": "zài", "vi": "có mặt", "pos": "động từ"},
-      {"zh": "大概", "pinyin": "dàgài", "vi": "khoảng, chừng", "pos": "phó từ"},
-      {"zh": "回来", "pinyin": "huílái", "vi": "trở về", "pos": "động từ"},
-      {"zh": "以后", "pinyin": "yǐhòu", "vi": "sau đó", "pos": "danh từ thời gian"}
+      {
+        "zh": "喂",
+        "pinyin": "wéi",
+        "vi": "alô",
+        "pos": "thán từ"
+      },
+      {
+        "zh": "打电话",
+        "pinyin": "dǎ diànhuà",
+        "vi": "gọi điện thoại",
+        "pos": "động từ"
+      },
+      {
+        "zh": "在",
+        "pinyin": "zài",
+        "vi": "có mặt",
+        "pos": "động từ"
+      },
+      {
+        "zh": "大概",
+        "pinyin": "dàgài",
+        "vi": "khoảng, chừng",
+        "pos": "phó từ"
+      },
+      {
+        "zh": "回来",
+        "pinyin": "huílái",
+        "vi": "trở về",
+        "pos": "động từ"
+      },
+      {
+        "zh": "以后",
+        "pinyin": "yǐhòu",
+        "vi": "sau đó",
+        "pos": "danh từ thời gian"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Học sinh", "role": "Người gọi", "avatarColor": "#6C63FF"},
-      {"code": "B", "nameVi": "Người nghe", "role": "Người nhận", "avatarColor": "#FF6B6B"}
+      {
+        "code": "A",
+        "nameVi": "Học sinh",
+        "role": "Người gọi",
+        "avatarColor": "#6C63FF"
+      },
+      {
+        "code": "B",
+        "nameVi": "Người nghe",
+        "role": "Người nhận",
+        "avatarColor": "#FF6B6B"
+      }
     ],
-    "relatedGrammar": ["g_zai_location", "g_yixia", "g_zai_repeat"],
+    "relatedGrammar": [
+      "g_zai",
+      "g_yixia",
+      "g_zai_repeat"
+    ],
     "cultureTip": "Khi gọi điện thoại Trung Quốc, bắt đầu bằng '喂' (wéi - alô). Hỏi '请问...在吗?' (xin hỏi... có ở không?) là cách lịch sự nhất. Không bao giờ bắt đầu thẳng vào vấn đề.",
     "isBookmarked": false,
     "isMastered": false
@@ -555,26 +1748,100 @@
     "category": "workplace",
     "icon": "💼",
     "lines": [
-      {"speaker": "A", "zh": "请坐。你为什么想来我们公司工作？", "pinyin": "Qǐng zuò. Nǐ wèishénme xiǎng lái wǒmen gōngsī gōngzuò?", "vi": "Xin ngồi. Tại sao bạn muốn đến công ty chúng tôi làm việc?"},
-      {"speaker": "B", "zh": "因为贵公司在行业内很有名，而且发展机会多。", "pinyin": "Yīnwèi guì gōngsī zài hángyè nèi hěn yǒumíng, érqiě fāzhǎn jīhuì duō.", "vi": "Vì quý công ty rất nổi tiếng trong ngành, và cơ hội phát triển nhiều."},
-      {"speaker": "A", "zh": "你有什么工作经验？", "pinyin": "Nǐ yǒu shénme gōngzuò jīngyàn?", "vi": "Bạn có kinh nghiệm làm việc gì?"},
-      {"speaker": "B", "zh": "我之前在一家外贸公司做了两年翻译。", "pinyin": "Wǒ zhīqián zài yì jiā wàimào gōngsī zuò le liǎng nián fānyì.", "vi": "Trước đây tôi làm thông dịch viên ở một công ty ngoại thương hai năm."},
-      {"speaker": "A", "zh": "你的中文水平怎么样？", "pinyin": "Nǐ de Zhōngwén shuǐpíng zěnmeyàng?", "vi": "Trình độ tiếng Trung của bạn thế nào?"},
-      {"speaker": "B", "zh": "我通过了HSK五级，口语流利，也能处理商务文件。", "pinyin": "Wǒ tōngguò le HSK wǔ jí, kǒuyǔ liúlì, yě néng chǔlǐ shāngwù wénjiàn.", "vi": "Tôi đã đậu HSK cấp 5, nói lưu loát, cũng có thể xử lý tài liệu thương mại."}
+      {
+        "speaker": "A",
+        "zh": "请坐。你为什么想来我们公司工作？",
+        "pinyin": "Qǐng zuò. Nǐ wèishénme xiǎng lái wǒmen gōngsī gōngzuò?",
+        "vi": "Xin ngồi. Tại sao bạn muốn đến công ty chúng tôi làm việc?"
+      },
+      {
+        "speaker": "B",
+        "zh": "因为贵公司在行业内很有名，而且发展机会多。",
+        "pinyin": "Yīnwèi guì gōngsī zài hángyè nèi hěn yǒumíng, érqiě fāzhǎn jīhuì duō.",
+        "vi": "Vì quý công ty rất nổi tiếng trong ngành, và cơ hội phát triển nhiều."
+      },
+      {
+        "speaker": "A",
+        "zh": "你有什么工作经验？",
+        "pinyin": "Nǐ yǒu shénme gōngzuò jīngyàn?",
+        "vi": "Bạn có kinh nghiệm làm việc gì?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我之前在一家外贸公司做了两年翻译。",
+        "pinyin": "Wǒ zhīqián zài yì jiā wàimào gōngsī zuò le liǎng nián fānyì.",
+        "vi": "Trước đây tôi làm thông dịch viên ở một công ty ngoại thương hai năm."
+      },
+      {
+        "speaker": "A",
+        "zh": "你的中文水平怎么样？",
+        "pinyin": "Nǐ de Zhōngwén shuǐpíng zěnmeyàng?",
+        "vi": "Trình độ tiếng Trung của bạn thế nào?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我通过了HSK五级，口语流利，也能处理商务文件。",
+        "pinyin": "Wǒ tōngguò le HSK wǔ jí, kǒuyǔ liúlì, yě néng chǔlǐ shāngwù wénjiàn.",
+        "vi": "Tôi đã đậu HSK cấp 5, nói lưu loát, cũng có thể xử lý tài liệu thương mại."
+      }
     ],
     "vocabulary": [
-      {"zh": "面试", "pinyin": "miànshì", "vi": "phỏng vấn", "pos": "động từ/danh từ"},
-      {"zh": "公司", "pinyin": "gōngsī", "vi": "công ty", "pos": "danh từ"},
-      {"zh": "因为", "pinyin": "yīnwèi", "vi": "bởi vì", "pos": "liên từ"},
-      {"zh": "经验", "pinyin": "jīngyàn", "vi": "kinh nghiệm", "pos": "danh từ"},
-      {"zh": "翻译", "pinyin": "fānyì", "vi": "thông dịch", "pos": "danh từ/động từ"},
-      {"zh": "流利", "pinyin": "liúlì", "vi": "lưu loát", "pos": "tính từ"}
+      {
+        "zh": "面试",
+        "pinyin": "miànshì",
+        "vi": "phỏng vấn",
+        "pos": "động từ/danh từ"
+      },
+      {
+        "zh": "公司",
+        "pinyin": "gōngsī",
+        "vi": "công ty",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "因为",
+        "pinyin": "yīnwèi",
+        "vi": "bởi vì",
+        "pos": "liên từ"
+      },
+      {
+        "zh": "经验",
+        "pinyin": "jīngyàn",
+        "vi": "kinh nghiệm",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "翻译",
+        "pinyin": "fānyì",
+        "vi": "thông dịch",
+        "pos": "danh từ/động từ"
+      },
+      {
+        "zh": "流利",
+        "pinyin": "liúlì",
+        "vi": "lưu loát",
+        "pos": "tính từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Quản lý", "role": "Người phỏng vấn", "avatarColor": "#3F51B5"},
-      {"code": "B", "nameVi": "Ứng viên", "role": "Người xin việc", "avatarColor": "#4CAF50"}
+      {
+        "code": "A",
+        "nameVi": "Quản lý",
+        "role": "Người phỏng vấn",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Ứng viên",
+        "role": "Người xin việc",
+        "avatarColor": "#4CAF50"
+      }
     ],
-    "relatedGrammar": ["g_yīnwèi_suǒyǐ", "g_le_duration", "g_de_modifier"],
+    "relatedGrammar": [
+      "g_yinwei_suoyi",
+      "g_le_duration",
+      "g_de_attr"
+    ],
     "cultureTip": "Trong phỏng vấn Trung Quốc, hãy dùng '贵公司' (quý công ty) thay vì '你们公司' để thể hiện sự tôn trọng. Trang phục lịch sự và đúng giờ rất quan trọng.",
     "isBookmarked": false,
     "isMastered": false
@@ -589,26 +1856,100 @@
     "category": "workplace",
     "icon": "📊",
     "lines": [
-      {"speaker": "A", "zh": "今天我们讨论一下下个月的计划。", "pinyin": "Jīntiān wǒmen tǎolùn yíxià xià ge yuè de jìhuà.", "vi": "Hôm nay chúng ta thảo luận về kế hoạch tháng tới."},
-      {"speaker": "B", "zh": "好的，我觉得我们应该扩大市场。", "pinyin": "Hǎo de, wǒ juéde wǒmen yīnggāi kuòdà shìchǎng.", "vi": "Được, tôi nghĩ chúng ta nên mở rộng thị trường."},
-      {"speaker": "A", "zh": "具体来说，你有什么建议？", "pinyin": "Jùtǐ lái shuō, nǐ yǒu shénme jiànyì?", "vi": "Cụ thể而言, bạn có đề xuất gì?"},
-      {"speaker": "B", "zh": "我建议先在南方市场做推广活动。", "pinyin": "Wǒ jiànyì xiān zài nánfāng shìchǎng zuò tuīguǎng huódòng.", "vi": "Tôi đề xuất trước tiên làm hoạt động quảng bá ở thị trường miền Nam."},
-      {"speaker": "A", "zh": "这个想法不错。需要多少预算？", "pinyin": "Zhège xiǎngfǎ búcuò. Xūyào duōshao yùsuàn?", "vi": "Ý tưởng này không tồi. Cần bao nhiêu ngân sách?"},
-      {"speaker": "B", "zh": "大概需要五十万左右。", "pinyin": "Dàgài xūyào wǔshí wàn zuǒyòu.", "vi": "Khoảng cần năm trăm nghìn tệ."}
+      {
+        "speaker": "A",
+        "zh": "今天我们讨论一下下个月的计划。",
+        "pinyin": "Jīntiān wǒmen tǎolùn yíxià xià ge yuè de jìhuà.",
+        "vi": "Hôm nay chúng ta thảo luận về kế hoạch tháng tới."
+      },
+      {
+        "speaker": "B",
+        "zh": "好的，我觉得我们应该扩大市场。",
+        "pinyin": "Hǎo de, wǒ juéde wǒmen yīnggāi kuòdà shìchǎng.",
+        "vi": "Được, tôi nghĩ chúng ta nên mở rộng thị trường."
+      },
+      {
+        "speaker": "A",
+        "zh": "具体来说，你有什么建议？",
+        "pinyin": "Jùtǐ lái shuō, nǐ yǒu shénme jiànyì?",
+        "vi": "Cụ thể而言, bạn có đề xuất gì?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我建议先在南方市场做推广活动。",
+        "pinyin": "Wǒ jiànyì xiān zài nánfāng shìchǎng zuò tuīguǎng huódòng.",
+        "vi": "Tôi đề xuất trước tiên làm hoạt động quảng bá ở thị trường miền Nam."
+      },
+      {
+        "speaker": "A",
+        "zh": "这个想法不错。需要多少预算？",
+        "pinyin": "Zhège xiǎngfǎ búcuò. Xūyào duōshao yùsuàn?",
+        "vi": "Ý tưởng này không tồi. Cần bao nhiêu ngân sách?"
+      },
+      {
+        "speaker": "B",
+        "zh": "大概需要五十万左右。",
+        "pinyin": "Dàgài xūyào wǔshí wàn zuǒyòu.",
+        "vi": "Khoảng cần năm trăm nghìn tệ."
+      }
     ],
     "vocabulary": [
-      {"zh": "讨论", "pinyin": "tǎolùn", "vi": "thảo luận", "pos": "động từ"},
-      {"zh": "计划", "pinyin": "jìhuà", "vi": "kế hoạch", "pos": "danh từ"},
-      {"zh": "扩大", "pinyin": "kuòdà", "vi": "mở rộng", "pos": "động từ"},
-      {"zh": "市场", "pinyin": "shìchǎng", "vi": "thị trường", "pos": "danh từ"},
-      {"zh": "建议", "pinyin": "jiànyì", "vi": "đề xuất", "pos": "động từ/danh từ"},
-      {"zh": "预算", "pinyin": "yùsuàn", "vi": "ngân sách", "pos": "danh từ"}
+      {
+        "zh": "讨论",
+        "pinyin": "tǎolùn",
+        "vi": "thảo luận",
+        "pos": "động từ"
+      },
+      {
+        "zh": "计划",
+        "pinyin": "jìhuà",
+        "vi": "kế hoạch",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "扩大",
+        "pinyin": "kuòdà",
+        "vi": "mở rộng",
+        "pos": "động từ"
+      },
+      {
+        "zh": "市场",
+        "pinyin": "shìchǎng",
+        "vi": "thị trường",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "建议",
+        "pinyin": "jiànyì",
+        "vi": "đề xuất",
+        "pos": "động từ/danh từ"
+      },
+      {
+        "zh": "预算",
+        "pinyin": "yùsuàn",
+        "vi": "ngân sách",
+        "pos": "danh từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Giám đốc", "role": "Người chủ trì", "avatarColor": "#9C27B0"},
-      {"code": "B", "nameVi": "Trưởng phòng", "role": "Người tham gia", "avatarColor": "#00BCD4"}
+      {
+        "code": "A",
+        "nameVi": "Giám đốc",
+        "role": "Người chủ trì",
+        "avatarColor": "#9C27B0"
+      },
+      {
+        "code": "B",
+        "nameVi": "Trưởng phòng",
+        "role": "Người tham gia",
+        "avatarColor": "#00BCD4"
+      }
     ],
-    "relatedGrammar": ["g_yixia", "g_de_modifier", "g_xian_ránhòu"],
+    "relatedGrammar": [
+      "g_yixia",
+      "g_de_attr",
+      "g_xian_ránhòu"
+    ],
     "cultureTip": "Trong họp công ty Trung Quốc, người trẻ không nên ngắt lời người lớn tuổi hoặc cấp trên. Sử dụng '我觉得' (tôi nghĩ) hoặc '我建议' (tôi đề xuất) để đưa ý kiến một cách lịch sự.",
     "isBookmarked": false,
     "isMastered": false
@@ -623,26 +1964,100 @@
     "category": "daily",
     "icon": "🏥",
     "lines": [
-      {"speaker": "A", "zh": "你怎么了？脸色不太好。", "pinyin": "Nǐ zěnme le? Liǎnsè bú tài hǎo.", "vi": "Bạn sao vậy? Mặt không được tốt lắm."},
-      {"speaker": "B", "zh": "我头疼，还有点儿发烧。", "pinyin": "Wǒ tóuténg, hái yǒudiǎnr fāshāo.", "vi": "Tôi đau đầu, còn hơi sốt."},
-      {"speaker": "A", "zh": "你应该去医院看看。", "pinyin": "Nǐ yīnggāi qù yīyuàn kànkan.", "vi": "Bạn nên đi bệnh viện khám."},
-      {"speaker": "B", "zh": "我已经挂了号，等着叫我的名字。", "pinyin": "Wǒ yǐjīng guà le hào, děngzhe jiào wǒ de míngzi.", "vi": "Tôi đã lấy số, đang chờ gọi tên."},
-      {"speaker": "A", "zh": "医生怎么说？", "pinyin": "Yīshēng zěnme shuō?", "vi": "Bác sĩ nói sao?"},
-      {"speaker": "B", "zh": "医生说感冒了，让我多喝水，好好休息。", "pinyin": "Yīshēng shuō gǎnmào le, ràng wǒ duō hē shuǐ, hǎohāo xiūxi.", "vi": "Bác sĩ nói bị cảm, bảo tôi uống nhiều nước, nghỉ ngơi cho tốt."}
+      {
+        "speaker": "A",
+        "zh": "你怎么了？脸色不太好。",
+        "pinyin": "Nǐ zěnme le? Liǎnsè bú tài hǎo.",
+        "vi": "Bạn sao vậy? Mặt không được tốt lắm."
+      },
+      {
+        "speaker": "B",
+        "zh": "我头疼，还有点儿发烧。",
+        "pinyin": "Wǒ tóuténg, hái yǒudiǎnr fāshāo.",
+        "vi": "Tôi đau đầu, còn hơi sốt."
+      },
+      {
+        "speaker": "A",
+        "zh": "你应该去医院看看。",
+        "pinyin": "Nǐ yīnggāi qù yīyuàn kànkan.",
+        "vi": "Bạn nên đi bệnh viện khám."
+      },
+      {
+        "speaker": "B",
+        "zh": "我已经挂了号，等着叫我的名字。",
+        "pinyin": "Wǒ yǐjīng guà le hào, děngzhe jiào wǒ de míngzi.",
+        "vi": "Tôi đã lấy số, đang chờ gọi tên."
+      },
+      {
+        "speaker": "A",
+        "zh": "医生怎么说？",
+        "pinyin": "Yīshēng zěnme shuō?",
+        "vi": "Bác sĩ nói sao?"
+      },
+      {
+        "speaker": "B",
+        "zh": "医生说感冒了，让我多喝水，好好休息。",
+        "pinyin": "Yīshēng shuō gǎnmào le, ràng wǒ duō hē shuǐ, hǎohāo xiūxi.",
+        "vi": "Bác sĩ nói bị cảm, bảo tôi uống nhiều nước, nghỉ ngơi cho tốt."
+      }
     ],
     "vocabulary": [
-      {"zh": "头疼", "pinyin": "tóuténg", "vi": "đau đầu", "pos": "động từ/tính từ"},
-      {"zh": "发烧", "pinyin": "fāshāo", "vi": "sốt", "pos": "động từ"},
-      {"zh": "医院", "pinyin": "yīyuàn", "vi": "bệnh viện", "pos": "danh từ"},
-      {"zh": "挂号", "pinyin": "guàhào", "vi": "lấy số, đăng ký khám", "pos": "động từ"},
-      {"zh": "感冒", "pinyin": "gǎnmào", "vi": "cảm", "pos": "động từ/danh từ"},
-      {"zh": "休息", "pinyin": "xiūxi", "vi": "nghỉ ngơi", "pos": "động từ"}
+      {
+        "zh": "头疼",
+        "pinyin": "tóuténg",
+        "vi": "đau đầu",
+        "pos": "động từ/tính từ"
+      },
+      {
+        "zh": "发烧",
+        "pinyin": "fāshāo",
+        "vi": "sốt",
+        "pos": "động từ"
+      },
+      {
+        "zh": "医院",
+        "pinyin": "yīyuàn",
+        "vi": "bệnh viện",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "挂号",
+        "pinyin": "guàhào",
+        "vi": "lấy số, đăng ký khám",
+        "pos": "động từ"
+      },
+      {
+        "zh": "感冒",
+        "pinyin": "gǎnmào",
+        "vi": "cảm",
+        "pos": "động từ/danh từ"
+      },
+      {
+        "zh": "休息",
+        "pinyin": "xiūxi",
+        "vi": "nghỉ ngơi",
+        "pos": "động từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Thắng", "role": "Bạn", "avatarColor": "#4CAF50"},
-      {"code": "B", "nameVi": "Dương", "role": "Người bệnh", "avatarColor": "#F44336"}
+      {
+        "code": "A",
+        "nameVi": "Thắng",
+        "role": "Bạn",
+        "avatarColor": "#4CAF50"
+      },
+      {
+        "code": "B",
+        "nameVi": "Dương",
+        "role": "Người bệnh",
+        "avatarColor": "#F44336"
+      }
     ],
-    "relatedGrammar": ["g_zěnme", "g_youdianr", "g_le_change"],
+    "relatedGrammar": [
+      "g_zenme",
+      "g_youdianr",
+      "g_le2"
+    ],
     "cultureTip": "Ở bệnh viện Trung Quốc, phải '挂号' (lấy số khám) trước. Bệnh viện lớn thường rất đông, nên đến sớm. Có thể đặt lịch qua app bệnh viện.",
     "isBookmarked": false,
     "isMastered": false
@@ -657,26 +2072,100 @@
     "category": "greeting",
     "icon": "🤝",
     "lines": [
-      {"speaker": "A", "zh": "时间不早了，我该走了。", "pinyin": "Shíjiān bù zǎo le, wǒ gāi zǒu le.", "vi": "Không còn sớm nữa, tôi phải đi rồi."},
-      {"speaker": "B", "zh": "再坐一会儿吧！", "pinyin": "Zài zuò yíhuìr ba!", "vi": "Ngồi thêm một lát đi!"},
-      {"speaker": "A", "zh": "不了，明天还要早起。谢谢你今天的招待。", "pinyin": "Bù le, míngtiān hái yào zǎoqǐ. Xièxie nǐ jīntiān de zhāodài.", "vi": "Thôi, ngày mai còn phải dậy sớm. Cảm ơn sự tiếp đãi của bạn hôm nay."},
-      {"speaker": "B", "zh": "别客气！下次再来玩。", "pinyin": "Bié kèqi! Xiàcì zài lái wán.", "vi": "Đừng khách sáo! Lần sau lại đến chơi."},
-      {"speaker": "A", "zh": "好的，下次见！路上小心。", "pinyin": "Hǎo de, xiàcì jiàn! Lùshang xiǎoxīn.", "vi": "Được, hẹn gặp lại! Trên đường cẩn thận."},
-      {"speaker": "B", "zh": "再见！到家了给我发个消息。", "pinyin": "Zàijiàn! Dào jiā le gěi wǒ fā ge xiāoxi.", "vi": "Tạm biệt! Về đến nhà thì gửi tin nhắn cho tôi."}
+      {
+        "speaker": "A",
+        "zh": "时间不早了，我该走了。",
+        "pinyin": "Shíjiān bù zǎo le, wǒ gāi zǒu le.",
+        "vi": "Không còn sớm nữa, tôi phải đi rồi."
+      },
+      {
+        "speaker": "B",
+        "zh": "再坐一会儿吧！",
+        "pinyin": "Zài zuò yíhuìr ba!",
+        "vi": "Ngồi thêm một lát đi!"
+      },
+      {
+        "speaker": "A",
+        "zh": "不了，明天还要早起。谢谢你今天的招待。",
+        "pinyin": "Bù le, míngtiān hái yào zǎoqǐ. Xièxie nǐ jīntiān de zhāodài.",
+        "vi": "Thôi, ngày mai còn phải dậy sớm. Cảm ơn sự tiếp đãi của bạn hôm nay."
+      },
+      {
+        "speaker": "B",
+        "zh": "别客气！下次再来玩。",
+        "pinyin": "Bié kèqi! Xiàcì zài lái wán.",
+        "vi": "Đừng khách sáo! Lần sau lại đến chơi."
+      },
+      {
+        "speaker": "A",
+        "zh": "好的，下次见！路上小心。",
+        "pinyin": "Hǎo de, xiàcì jiàn! Lùshang xiǎoxīn.",
+        "vi": "Được, hẹn gặp lại! Trên đường cẩn thận."
+      },
+      {
+        "speaker": "B",
+        "zh": "再见！到家了给我发个消息。",
+        "pinyin": "Zàijiàn! Dào jiā le gěi wǒ fā ge xiāoxi.",
+        "vi": "Tạm biệt! Về đến nhà thì gửi tin nhắn cho tôi."
+      }
     ],
     "vocabulary": [
-      {"zh": "该", "pinyin": "gāi", "vi": "nên, phải", "pos": "trợ động từ"},
-      {"zh": "走", "pinyin": "zǒu", "vi": "đi, rời đi", "pos": "động từ"},
-      {"zh": "招待", "pinyin": "zhāodài", "vi": "tiếp đãi", "pos": "động từ/danh từ"},
-      {"zh": "客气", "pinyin": "kèqi", "vi": "khách sáo", "pos": "tính từ"},
-      {"zh": "小心", "pinyin": "xiǎoxīn", "vi": "cẩn thận", "pos": "tính từ/động từ"},
-      {"zh": "消息", "pinyin": "xiāoxi", "vi": "tin nhắn", "pos": "danh từ"}
+      {
+        "zh": "该",
+        "pinyin": "gāi",
+        "vi": "nên, phải",
+        "pos": "trợ động từ"
+      },
+      {
+        "zh": "走",
+        "pinyin": "zǒu",
+        "vi": "đi, rời đi",
+        "pos": "động từ"
+      },
+      {
+        "zh": "招待",
+        "pinyin": "zhāodài",
+        "vi": "tiếp đãi",
+        "pos": "động từ/danh từ"
+      },
+      {
+        "zh": "客气",
+        "pinyin": "kèqi",
+        "vi": "khách sáo",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "小心",
+        "pinyin": "xiǎoxīn",
+        "vi": "cẩn thận",
+        "pos": "tính từ/động từ"
+      },
+      {
+        "zh": "消息",
+        "pinyin": "xiāoxi",
+        "vi": "tin nhắn",
+        "pos": "danh từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Khách", "role": "Người về", "avatarColor": "#FF5722"},
-      {"code": "B", "nameVi": "Chủ nhà", "role": "Người tiễn", "avatarColor": "#2196F3"}
+      {
+        "code": "A",
+        "nameVi": "Khách",
+        "role": "Người về",
+        "avatarColor": "#FF5722"
+      },
+      {
+        "code": "B",
+        "nameVi": "Chủ nhà",
+        "role": "Người tiễn",
+        "avatarColor": "#2196F3"
+      }
     ],
-    "relatedGrammar": ["g_le_change", "g_hai_yao", "g_bie_negation"],
+    "relatedGrammar": [
+      "g_le2",
+      "g_hai_yao",
+      "g_bie_negation"
+    ],
     "cultureTip": "Khi chia tay, người Trung Quốc thường nói '路上小心' (trên đường cẩn thận) hoặc '到家给我发消息' (về đến nhà gửi tin nhắn cho tôi) để thể hiện sự quan tâm.",
     "isBookmarked": false,
     "isMastered": false
@@ -691,26 +2180,100 @@
     "category": "shopping",
     "icon": "🛍️",
     "lines": [
-      {"speaker": "A", "zh": "请问，水果在哪儿？", "pinyin": "Qǐngwèn, shuǐguǒ zài nǎr?", "vi": "Xin hỏi, trái cây ở đâu?"},
-      {"speaker": "B", "zh": "在二楼，左边就是。", "pinyin": "Zài èr lóu, zuǒbian jiù shì.", "vi": "Ở tầng hai, bên trái chính là."},
-      {"speaker": "A", "zh": "这个苹果多少钱一斤？", "pinyin": "Zhège píngguǒ duōshao qián yì jīn?", "vi": "Táo này bao nhiêu tiền một cân?"},
-      {"speaker": "B", "zh": "八块钱一斤。很新鲜的。", "pinyin": "Bā kuài qián yì jīn. Hěn xīnxiān de.", "vi": "Tám đồng một cân. Rất tươi."},
-      {"speaker": "A", "zh": "好的，给我来两斤。还要一箱牛奶。", "pinyin": "Hǎo de, gěi wǒ lái liǎng jīn. Hái yào yì xiāng niúnǎi.", "vi": "Được, cho tôi hai cân. Còn muốn một thùng sữa."},
-      {"speaker": "B", "zh": "好的，一共四十三块。在这儿付款。", "pinyin": "Hǎo de, yígòng sìshísān kuài. Zài zhèr fùkuǎn.", "vi": "Vâng, tất cả bốn mươi ba đồng. Thanh toán ở đây."}
+      {
+        "speaker": "A",
+        "zh": "请问，水果在哪儿？",
+        "pinyin": "Qǐngwèn, shuǐguǒ zài nǎr?",
+        "vi": "Xin hỏi, trái cây ở đâu?"
+      },
+      {
+        "speaker": "B",
+        "zh": "在二楼，左边就是。",
+        "pinyin": "Zài èr lóu, zuǒbian jiù shì.",
+        "vi": "Ở tầng hai, bên trái chính là."
+      },
+      {
+        "speaker": "A",
+        "zh": "这个苹果多少钱一斤？",
+        "pinyin": "Zhège píngguǒ duōshao qián yì jīn?",
+        "vi": "Táo này bao nhiêu tiền một cân?"
+      },
+      {
+        "speaker": "B",
+        "zh": "八块钱一斤。很新鲜的。",
+        "pinyin": "Bā kuài qián yì jīn. Hěn xīnxiān de.",
+        "vi": "Tám đồng một cân. Rất tươi."
+      },
+      {
+        "speaker": "A",
+        "zh": "好的，给我来两斤。还要一箱牛奶。",
+        "pinyin": "Hǎo de, gěi wǒ lái liǎng jīn. Hái yào yì xiāng niúnǎi.",
+        "vi": "Được, cho tôi hai cân. Còn muốn một thùng sữa."
+      },
+      {
+        "speaker": "B",
+        "zh": "好的，一共四十三块。在这儿付款。",
+        "pinyin": "Hǎo de, yígòng sìshísān kuài. Zài zhèr fùkuǎn.",
+        "vi": "Vâng, tất cả bốn mươi ba đồng. Thanh toán ở đây."
+      }
     ],
     "vocabulary": [
-      {"zh": "水果", "pinyin": "shuǐguǒ", "vi": "trái cây", "pos": "danh từ"},
-      {"zh": "苹果", "pinyin": "píngguǒ", "vi": "táo", "pos": "danh từ"},
-      {"zh": "斤", "pinyin": "jīn", "vi": "cân (0.5kg)", "pos": "lượng từ"},
-      {"zh": "新鲜", "pinyin": "xīnxiān", "vi": "tươi", "pos": "tính từ"},
-      {"zh": "牛奶", "pinyin": "niúnǎi", "vi": "sữa", "pos": "danh từ"},
-      {"zh": "付款", "pinyin": "fùkuǎn", "vi": "thanh toán", "pos": "động từ"}
+      {
+        "zh": "水果",
+        "pinyin": "shuǐguǒ",
+        "vi": "trái cây",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "苹果",
+        "pinyin": "píngguǒ",
+        "vi": "táo",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "斤",
+        "pinyin": "jīn",
+        "vi": "cân (0.5kg)",
+        "pos": "lượng từ"
+      },
+      {
+        "zh": "新鲜",
+        "pinyin": "xīnxiān",
+        "vi": "tươi",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "牛奶",
+        "pinyin": "niúnǎi",
+        "vi": "sữa",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "付款",
+        "pinyin": "fùkuǎn",
+        "vi": "thanh toán",
+        "pos": "động từ"
+      }
     ],
     "speakers": [
-      {"code": "A", "nameVi": "Khách hàng", "role": "Người mua", "avatarColor": "#E91E63"},
-      {"code": "B", "nameVi": "Nhân viên", "role": "Nhân viên siêu thị", "avatarColor": "#8BC34A"}
+      {
+        "code": "A",
+        "nameVi": "Khách hàng",
+        "role": "Người mua",
+        "avatarColor": "#E91E63"
+      },
+      {
+        "code": "B",
+        "nameVi": "Nhân viên",
+        "role": "Nhân viên siêu thị",
+        "avatarColor": "#8BC34A"
+      }
     ],
-    "relatedGrammar": ["g_zai_location", "g_num", "g_hai_yao"],
+    "relatedGrammar": [
+      "g_zai",
+      "g_numbers",
+      "g_hai_yao"
+    ],
     "cultureTip": "Ở Trung Quốc, '斤' (jīn) là đơn vị đo trọng lượng phổ biến, bằng 0.5 kg. Khi mua thực phẩm, người bán thường hỏi '要几斤?' (cần bao nhiêu cân).",
     "isBookmarked": false,
     "isMastered": false
