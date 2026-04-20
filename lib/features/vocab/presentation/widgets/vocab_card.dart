@@ -46,7 +46,7 @@ class _VocabCardWidgetState extends ConsumerState<VocabCardWidget> {
     final item = widget.item;
 
     return HanzifyCard(
-      variant: HanzifyCardVariant.glass,
+      variant: HanzifyCardVariant.solid,
       borderRadius: _expanded ? AppRadii.xxxl : AppRadii.xxl,
       margin: const EdgeInsets.symmetric(
         horizontal: AppSpacing.lg,

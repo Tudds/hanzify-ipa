@@ -294,7 +294,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 8;
+  int get schemaVersion => 10;
 
   @override
   MigrationStrategy get migration {
@@ -338,6 +338,22 @@ class AppDatabase extends _$AppDatabase {
           // Version 7→8: Xóa column meaning thừa (derive được từ meanings[0].vi)
           await m.alterTable(TableMigration(vocabsTable));
           debugPrint('[Migration] v7→v8: Dropped meaning column from vocabs');
+        }
+        if (from < 9) {
+          // Version 8→9: Phase B/C data — HSK1-4 vocab đầy đủ + grammar HSK4 + conversation HSK4
+          await DatabaseSeedService(this).seedVocabs();
+          await DatabaseSeedService(this).seedGrammar();
+          await DatabaseSeedService(this).seedConversations();
+          debugPrint(
+            '[Migration] v8→v9: Seeded HSK1-4 full vocab + grammar HSK4 + conversation HSK4',
+          );
+        }
+        if (from < 10) {
+          // Version 9→10: Add char_hsk4.json character data
+          await DatabaseSeedService(this).seedCharacters();
+          debugPrint(
+            '[Migration] v9→v10: Re-seeded characters with HSK4 data',
+          );
         }
       },
     );
@@ -455,7 +471,7 @@ class DatabaseSeedService {
     try {
       final List<VocabsTableCompanion> inserts = [];
 
-      final listFiles = ['hsk1.json', 'hsk2.json', 'hsk3.json'];
+      final listFiles = ['hsk1.json', 'hsk2.json', 'hsk3.json', 'hsk4.json'];
       for (final fileName in listFiles) {
         final inferredLevel =
             int.tryParse(fileName.replaceAll(RegExp(r'[^0-9]'), '')) ?? 1;
@@ -507,7 +523,7 @@ class DatabaseSeedService {
     try {
       final List<CharactersTableCompanion> inserts = [];
 
-      final charFiles = ['char_hsk1.json', 'char_hsk2.json', 'char_hsk3.json'];
+      final charFiles = ['char_hsk1.json', 'char_hsk2.json', 'char_hsk3.json', 'char_hsk4.json'];
       for (final fileName in charFiles) {
         final inferredLevel =
             int.tryParse(fileName.replaceAll(RegExp(r'[^0-9]'), '')) ?? 1;
@@ -641,6 +657,7 @@ class DatabaseSeedService {
       'assets/data/grammar_hsk1.json',
       'assets/data/grammar_hsk2.json',
       'assets/data/grammar_hsk3.json',
+      'assets/data/grammar_hsk4.json',
     ];
     final results = <GrammarPoint>[];
     for (final path in files) {

@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:hanzify/core/theme/colors.dart';
 
 class HanzifyHighlightedText extends StatelessWidget {
   final String text;
   final String highlight;
   final TextStyle baseStyle;
-  final AppThemeColors colors;
+  final Color? highlightColor;
 
   const HanzifyHighlightedText({
     super.key,
     required this.text,
     required this.highlight,
     required this.baseStyle,
-    required this.colors,
+    this.highlightColor,
+    @Deprecated('Use highlightColor or theme instead') dynamic colors,
   });
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
+    final color = highlightColor ?? cs.primary;
+
     if (highlight.isEmpty || !text.contains(highlight)) {
       return Text(text, style: baseStyle);
     }
@@ -26,16 +30,14 @@ class HanzifyHighlightedText extends StatelessWidget {
     int indexOfHighlight;
 
     while ((indexOfHighlight = text.indexOf(highlight, start)) != -1) {
-      // Normal part before highlight
       if (indexOfHighlight > start) {
         spans.add(TextSpan(text: text.substring(start, indexOfHighlight)));
       }
-      // Highlighted part
       spans.add(
         TextSpan(
           text: highlight,
           style: baseStyle.copyWith(
-            color: colors.primary,
+            color: color,
             fontWeight: FontWeight.w900,
           ),
         ),
@@ -43,7 +45,6 @@ class HanzifyHighlightedText extends StatelessWidget {
       start = indexOfHighlight + highlight.length;
     }
 
-    // Remaining part after last highlight
     if (start < text.length) {
       spans.add(TextSpan(text: text.substring(start)));
     }

@@ -18,6 +18,10 @@ import 'package:hanzify/features/conversation/domain/entities/conversation_conte
 import 'package:hanzify/features/conversation/presentation/providers/conversation_providers.dart';
 import 'package:hanzify/features/grammar/presentation/providers/grammar_providers.dart';
 import 'package:hanzify/features/grammar/presentation/screens/grammar_detail_screen.dart';
+import 'package:hanzify/features/vocab/domain/entities/vocab.dart';
+import 'package:hanzify/features/vocab/presentation/screens/vocab_detail_screen.dart';
+import 'package:hanzify/features/grammar/domain/entities/grammar_point.dart';
+import 'package:hanzify/core/graph/graph_providers.dart';
 
 class ConversationDetailScreen extends ConsumerStatefulWidget {
   final ConversationContext conversation;
@@ -88,13 +92,10 @@ class _ConversationDetailScreenState
         else
           SliverToBoxAdapter(
               child: _buildDialogueView(c, conv, showPinyin)),
-        if (conv.vocabulary.isNotEmpty)
-          SliverToBoxAdapter(child: _buildVocabulary(c, conv)),
+        SliverToBoxAdapter(child: _buildContextVocabs(c, conv)),
         if (conv.cultureTip.isNotEmpty)
           SliverToBoxAdapter(child: _buildCultureTip(c, conv)),
-        if (conv.relatedGrammar.isNotEmpty)
-          SliverToBoxAdapter(
-              child: _buildRelatedGrammar(c, context, conv)),
+        SliverToBoxAdapter(child: _buildContextGrammars(c, context, conv)),
         SliverToBoxAdapter(child: _buildCTA(c)),
       ],
     );
@@ -369,84 +370,75 @@ class _ConversationDetailScreenState
     );
   }
 
-  // ── Vocabulary ────────────────────────────────────────────────────────────────
-  Widget _buildVocabulary(AppThemeColors c, ConversationContext conv) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const SizedBox(height: AppSpacing.lg),
-        const HanzifySectionHeader(
-            title: 'Từ vựng trong bài', icon: Icons.menu_book_rounded),
-        ...conv.vocabulary.map(
-          (vocab) => Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: AppSpacing.xl, vertical: AppSpacing.xs),
-            child: HanzifyCard(
-              variant: HanzifyCardVariant.glass,
-              padding: const EdgeInsets.all(AppSpacing.lg),
-              child: Row(
-                children: [
-                  Container(
-                    width: 44,
-                    height: 44,
-                    decoration: BoxDecoration(
-                      color: c.primary.withValues(alpha: 0.1),
-                      borderRadius: BorderRadius.circular(AppRadii.lg),
-                    ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      vocab.zh,
-                      style: AppTypography.hanziUi(
-                        fontSize: AppFontSizes.headlineSm,
-                        fontWeight: FontWeight.w700,
-                        color: c.primary,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: AppSpacing.md),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Text(vocab.pinyin,
-                                style: AppTypography.pinyin(
-                                    fontSize: AppFontSizes.bodySm,
-                                    color: c.primary)),
-                            if (vocab.pos.isNotEmpty) ...[
-                              const SizedBox(width: AppSpacing.sm),
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: AppSpacing.sm, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: c.surfaceLow,
-                                  borderRadius:
-                                      BorderRadius.circular(AppRadii.full),
-                                ),
-                                child: Text(vocab.pos,
-                                    style: AppTypography.label(
-                                        fontSize: AppFontSizes.labelSm,
-                                        color: c.placeholder)),
-                              ),
-                            ],
-                          ],
-                        ),
-                        const SizedBox(height: AppSpacing.xs),
-                        Text(vocab.vi,
-                            style: AppTypography.body(
-                                fontSize: AppFontSizes.bodyMd,
-                                color: c.text,
-                                fontWeight: FontWeight.w600)),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+  // ── Context Vocabs (graph-powered, fallback sang inline) ──────────────────────
+  Widget _buildContextVocabs(AppThemeColors c, ConversationContext conv) {
+    final graphAsync = ref.watch(conversationContextVocabsProvider(conv.id));
+
+    Widget buildContent(List<Widget> children) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
+        child: Theme(
+          data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+          child: Card.filled(
+            color: c.surfaceLow,
+            margin: EdgeInsets.zero,
+            child: ExpansionTile(
+              title: const Text('Từ vựng trong bài', style: TextStyle(fontWeight: FontWeight.bold)),
+              leading: const Icon(Icons.menu_book_rounded),
+              childrenPadding: const EdgeInsets.only(bottom: AppSpacing.md),
+              children: children,
             ),
           ),
         ),
-      ],
+      );
+    }
+
+    Widget buildFallback() {
+      if (conv.vocabulary.isEmpty) return const SizedBox.shrink();
+      final children = conv.vocabulary.map((v) => _InlineVocabCard(vocab: v, colors: c)).toList();
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: AppSpacing.lg),
+          buildContent(children),
+        ],
+      );
+    }
+
+    return graphAsync.when(
+      data: (vocabs) {
+        if (vocabs.isEmpty && conv.vocabulary.isEmpty) return const SizedBox.shrink();
+        if (vocabs.isEmpty) return buildFallback();
+        
+        final children = vocabs.map((v) => _VocabContextCard(vocab: v, colors: c)).toList();
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: AppSpacing.lg),
+            buildContent(children),
+          ],
+        );
+      },
+      loading: buildFallback,
+      error: (_, _) => buildFallback(),
+    );
+  }
+
+  // ── Context Grammars (graph-powered, fallback sang relatedGrammar) ─────────────
+  Widget _buildContextGrammars(
+      AppThemeColors c, BuildContext context, ConversationContext conv) {
+    final graphAsync = ref.watch(conversationContextGrammarsProvider(conv.id));
+
+    return graphAsync.when(
+      data: (grammars) {
+        if (grammars.isEmpty && conv.relatedGrammar.isEmpty) {
+          return const SizedBox.shrink();
+        }
+        final items = grammars.isNotEmpty ? grammars : null;
+        return _buildGrammarSection(c, context, conv, items);
+      },
+      loading: () => _buildRelatedGrammar(c, context, conv),
+      error: (_, _) => _buildRelatedGrammar(c, context, conv),
     );
   }
 
@@ -493,9 +485,27 @@ class _ConversationDetailScreenState
     );
   }
 
-  // ── Related grammar ───────────────────────────────────────────────────────────
+  // ── Grammar section — graph-powered ──────────────────────────────────────────
+  Widget _buildGrammarSection(AppThemeColors c, BuildContext context,
+      ConversationContext conv, List<GrammarPoint>? grammars) {
+    if (grammars != null && grammars.isNotEmpty) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: AppSpacing.lg),
+          const HanzifySectionHeader(
+              title: 'Ngữ pháp liên quan', icon: Icons.link_rounded),
+          ...grammars.map((g) => _GrammarCard(grammar: g, colors: c, context: context)),
+        ],
+      );
+    }
+    return _buildRelatedGrammar(c, context, conv);
+  }
+
+  // ── Related grammar — fallback (dùng grammarListProvider) ─────────────────────
   Widget _buildRelatedGrammar(
       AppThemeColors c, BuildContext context, ConversationContext conv) {
+    if (conv.relatedGrammar.isEmpty) return const SizedBox.shrink();
     final allGrammarAsync = ref.watch(grammarListProvider);
     final allGrammar = allGrammarAsync.asData?.value ?? [];
 
@@ -615,6 +625,243 @@ class _ConversationDetailScreenState
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+// ── Vocab card — graph Vocab entity ──────────────────────────────────────────
+
+class _VocabContextCard extends StatelessWidget {
+  final Vocab vocab;
+  final AppThemeColors colors;
+
+  const _VocabContextCard({required this.vocab, required this.colors});
+
+  @override
+  Widget build(BuildContext context) {
+    final c = colors;
+    final vi = vocab.meanings.isNotEmpty ? vocab.meanings.first.vi : '';
+    final pos = vocab.meanings.isNotEmpty ? vocab.meanings.first.pos : '';
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+          horizontal: AppSpacing.xl, vertical: AppSpacing.xs),
+      child: HanzifyCard(
+        variant: HanzifyCardVariant.glass,
+        padding: const EdgeInsets.all(AppSpacing.lg),
+        onTap: () {
+          HapticFeedback.lightImpact();
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (_) => VocabDetailScreen(vocab: vocab)));
+        },
+        child: Row(
+          children: [
+            Container(
+              width: 44,
+              height: 44,
+              decoration: BoxDecoration(
+                color: c.primary.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(AppRadii.lg),
+              ),
+              alignment: Alignment.center,
+              child: Text(
+                vocab.hanzi,
+                style: AppTypography.hanziUi(
+                  fontSize: AppFontSizes.headlineSm,
+                  fontWeight: FontWeight.w700,
+                  color: c.primary,
+                ),
+              ),
+            ),
+            const SizedBox(width: AppSpacing.md),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text(vocab.pinyin,
+                          style: AppTypography.pinyin(
+                              fontSize: AppFontSizes.bodySm, color: c.primary)),
+                      if (pos.isNotEmpty) ...[
+                        const SizedBox(width: AppSpacing.sm),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: AppSpacing.sm, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: c.surfaceLow,
+                            borderRadius: BorderRadius.circular(AppRadii.full),
+                          ),
+                          child: Text(pos,
+                              style: AppTypography.label(
+                                  fontSize: AppFontSizes.labelSm,
+                                  color: c.placeholder)),
+                        ),
+                      ],
+                    ],
+                  ),
+                  const SizedBox(height: AppSpacing.xs),
+                  Text(vi,
+                      style: AppTypography.body(
+                          fontSize: AppFontSizes.bodyMd,
+                          color: c.text,
+                          fontWeight: FontWeight.w600)),
+                ],
+              ),
+            ),
+            Icon(Icons.chevron_right_rounded, size: 18, color: c.disabled),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ── Vocab card — inline (từ conversation.vocabulary) ─────────────────────────
+
+class _InlineVocabCard extends StatelessWidget {
+  final dynamic vocab; // VocabularyEntry from ConversationContext
+  final AppThemeColors colors;
+
+  const _InlineVocabCard({required this.vocab, required this.colors});
+
+  @override
+  Widget build(BuildContext context) {
+    final c = colors;
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+          horizontal: AppSpacing.xl, vertical: AppSpacing.xs),
+      child: HanzifyCard(
+        variant: HanzifyCardVariant.glass,
+        padding: const EdgeInsets.all(AppSpacing.lg),
+        child: Row(
+          children: [
+            Container(
+              width: 44,
+              height: 44,
+              decoration: BoxDecoration(
+                color: c.primary.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(AppRadii.lg),
+              ),
+              alignment: Alignment.center,
+              child: Text(
+                vocab.zh as String,
+                style: AppTypography.hanziUi(
+                  fontSize: AppFontSizes.headlineSm,
+                  fontWeight: FontWeight.w700,
+                  color: c.primary,
+                ),
+              ),
+            ),
+            const SizedBox(width: AppSpacing.md),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text(vocab.pinyin as String,
+                          style: AppTypography.pinyin(
+                              fontSize: AppFontSizes.bodySm, color: c.primary)),
+                      if ((vocab.pos as String).isNotEmpty) ...[
+                        const SizedBox(width: AppSpacing.sm),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: AppSpacing.sm, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: c.surfaceLow,
+                            borderRadius: BorderRadius.circular(AppRadii.full),
+                          ),
+                          child: Text(vocab.pos as String,
+                              style: AppTypography.label(
+                                  fontSize: AppFontSizes.labelSm,
+                                  color: c.placeholder)),
+                        ),
+                      ],
+                    ],
+                  ),
+                  const SizedBox(height: AppSpacing.xs),
+                  Text(vocab.vi as String,
+                      style: AppTypography.body(
+                          fontSize: AppFontSizes.bodyMd,
+                          color: c.text,
+                          fontWeight: FontWeight.w600)),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ── Grammar card ──────────────────────────────────────────────────────────────
+
+class _GrammarCard extends StatelessWidget {
+  final GrammarPoint grammar;
+  final AppThemeColors colors;
+  final BuildContext context;
+
+  const _GrammarCard(
+      {required this.grammar, required this.colors, required this.context});
+
+  @override
+  Widget build(BuildContext ctx) {
+    final c = colors;
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+          horizontal: AppSpacing.xl, vertical: AppSpacing.xs),
+      child: HanzifyCard(
+        variant: HanzifyCardVariant.glass,
+        padding: const EdgeInsets.all(AppSpacing.lg),
+        onTap: () {
+          HapticFeedback.lightImpact();
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => GrammarDetailScreen(grammar: grammar)));
+        },
+        child: Row(
+          children: [
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                color: c.primary.withValues(alpha: 0.1),
+                shape: BoxShape.circle,
+              ),
+              alignment: Alignment.center,
+              child: Text(
+                grammar.structure.isNotEmpty
+                    ? grammar.structure.substring(0, 1)
+                    : '文',
+                style: AppTypography.hanziUi(
+                  fontSize: AppFontSizes.headlineSm,
+                  fontWeight: FontWeight.w700,
+                  color: c.primary,
+                ),
+              ),
+            ),
+            const SizedBox(width: AppSpacing.md),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(grammar.title,
+                      style: AppTypography.label(
+                          fontSize: AppFontSizes.titleSm,
+                          fontWeight: FontWeight.w700,
+                          color: c.text)),
+                  const SizedBox(height: 2),
+                  Text(grammar.structure,
+                      style: AppTypography.body(
+                          fontSize: AppFontSizes.bodySm,
+                          color: c.placeholder)),
+                ],
+              ),
+            ),
+            Icon(Icons.chevron_right_rounded, size: 20, color: c.disabled),
+          ],
         ),
       ),
     );

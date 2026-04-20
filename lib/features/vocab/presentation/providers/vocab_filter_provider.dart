@@ -7,12 +7,9 @@ import 'vocab_providers.dart';
 
 part 'vocab_filter_provider.g.dart';
 
-// ============================================================================
-// VocabFilter state — dùng enum thay vì raw strings
-// ============================================================================
 class VocabFilter extends Equatable {
   final String query;
-  final int level; // 0 = all
+  final int level;
   final FilterWordType wordType;
   final FilterStatus status;
 
@@ -40,9 +37,6 @@ class VocabFilter extends Equatable {
       );
 }
 
-// ============================================================================
-// VocabFilterNotifier
-// ============================================================================
 @riverpod
 class VocabFilterNotifier extends _$VocabFilterNotifier {
   @override
@@ -55,13 +49,6 @@ class VocabFilterNotifier extends _$VocabFilterNotifier {
   void clear() => state = const VocabFilter();
 }
 
-// ============================================================================
-// vocabSearchProvider — DB search cho text query
-// Khi query rỗng → trả về tất cả vocab (same as allVocabProvider).
-// Khi query không rỗng → gọi repository.search() với DB LIKE query.
-// Lưu ý: VocabListScreen dùng filteredVocabProvider (provider này)
-// chứ không watch allVocabProvider riêng → tránh double DB query.
-// ============================================================================
 @riverpod
 Future<List<Vocab>> vocabSearch(Ref ref) async {
   final filter = ref.watch(vocabFilterProvider);
@@ -80,25 +67,17 @@ Future<List<Vocab>> vocabSearch(Ref ref) async {
   return repository.search(q, hskLevel: hskLevel, wordType: wordType);
 }
 
-// ============================================================================
-// filteredVocabProvider — derived list dùng cho UI
-// Kết hợp DB search (text query) + client-side filter (status/bookmark).
-// ============================================================================
 @riverpod
-List<Vocab> filteredVocab(Ref ref) {
-  final searchAsync = ref.watch(vocabSearchProvider);
+Future<List<Vocab>> filteredVocabList(Ref ref) async {
+  final searchList = await ref.watch(vocabSearchProvider.future);
   final filter = ref.watch(vocabFilterProvider);
 
-  final all = searchAsync.value ?? [];
-
-  // DB search đã xử lý: text query + level + wordType
-  // Client-side chỉ cần filter status (mastered/bookmarked)
   if (filter.status == FilterStatus.mastered) {
-    return all.where((v) => v.isMastered).toList();
+    return searchList.where((v) => v.isMastered).toList();
   }
   if (filter.status == FilterStatus.bookmarked) {
-    return all.where((v) => v.isBookmarked).toList();
+    return searchList.where((v) => v.isBookmarked).toList();
   }
 
-  return all;
+  return searchList;
 }

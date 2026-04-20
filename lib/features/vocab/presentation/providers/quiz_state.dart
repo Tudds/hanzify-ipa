@@ -5,7 +5,6 @@ import 'package:hanzify/features/vocab/domain/entities/vocab.dart';
 import 'package:hanzify/features/vocab/presentation/providers/vocab_state.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:hanzify/core/theme/app_durations.dart';
-import 'package:hanzify/core/utils/vocab_meaning_helper.dart';
 
 part 'quiz_state.g.dart';
 

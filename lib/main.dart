@@ -14,6 +14,7 @@ import 'core/providers/auth_provider.dart';
 import 'core/providers/sync_provider.dart';
 import 'core/providers/guest_mode_provider.dart';
 import 'core/navigation/app_routes.dart';
+import 'core/providers/user_preferences_provider.dart';
 import 'features/auth/presentation/screens/auth_screen.dart';
 
 // Conditional import: web → platform_web, native → platform_native
@@ -31,6 +32,7 @@ import 'features/grammar/presentation/screens/grammar_screen.dart';
 import 'features/conversation/presentation/screens/conversation_screen.dart';
 import 'features/profile/presentation/screens/profile_screen.dart';
 import 'features/character/presentation/screens/character_detail_screen.dart';
+import 'features/onboarding/presentation/screens/onboarding_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -77,6 +79,13 @@ class AppRoot extends ConsumerWidget {
     final isGuest = ref.watch(guestModeProvider);
 
     if (!hasSession && !isGuest) {
+      final showOnboarding = ref.watch(showOnboardingProvider);
+      if (showOnboarding) {
+        return OnboardingScreen(
+          onFinish: () => ref.read(showOnboardingProvider.notifier).complete(),
+        );
+      }
+
       return authAsync.when(
         data: (_) => const AuthScreen(),
         loading: () => const Scaffold(

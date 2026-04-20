@@ -5,18 +5,12 @@ import 'package:hanzify/core/theme/colors.dart';
 import 'package:hanzify/core/theme/typography.dart';
 import 'package:hanzify/core/theme/theme_state.dart';
 import 'package:hanzify/core/theme/app_theme_helper.dart';
-import 'package:hanzify/core/navigation/app_routes.dart';
-import 'package:hanzify/core/providers/navigation_provider.dart';
-import 'package:hanzify/core/widgets/hanzify_card.dart';
 import 'package:hanzify/core/widgets/hanzify_empty_state.dart';
 import 'package:hanzify/core/utils/hanzify_haptic.dart';
 import 'package:hanzify/features/grammar/domain/entities/grammar_point.dart';
 import 'package:hanzify/features/grammar/presentation/providers/grammar_providers.dart';
+import 'package:hanzify/core/providers/navigation_provider.dart';
 import 'package:hanzify/features/grammar/presentation/screens/grammar_detail_screen.dart';
-
-// ---------------------------------------------------------------------------
-// Screen
-// ---------------------------------------------------------------------------
 
 class GrammarScreen extends ConsumerStatefulWidget {
   const GrammarScreen({super.key});
@@ -55,7 +49,8 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final c = themeColorsOfRef(ref);
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
     final grammarListAsync = ref.watch(grammarListProvider);
     final isSearching = ref.watch(grammarSearchQueryProvider).isNotEmpty;
 
@@ -72,91 +67,78 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
           }).toList();
 
     return Scaffold(
-      backgroundColor: c.background,
+      backgroundColor: cs.surface,
       body: NestedScrollView(
         headerSliverBuilder: (context, innerBoxIsScrolled) {
           return [
             SliverAppBar(
-              expandedHeight: 180,
-              floating: false,
+              title: const Text('Ngữ pháp', style: TextStyle(fontWeight: FontWeight.bold)),
               pinned: true,
-              backgroundColor: c.background,
-              elevation: 0,
+              floating: true,
+              scrolledUnderElevation: 2,
+              backgroundColor: cs.surface,
               leading: IconButton(
-                icon: Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: c.glassSurface,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Icon(Icons.arrow_back_ios_new_rounded,
-                      size: 18, color: c.text),
-                ),
-                onPressed: () => ref
-                    .read(navigationProvider.notifier)
-                    .navigate(AppRoutes.home),
-              ),
-              flexibleSpace: FlexibleSpaceBar(
-                titlePadding: const EdgeInsets.symmetric(
-                    horizontal: AppSpacing.lg, vertical: AppSpacing.md),
-                centerTitle: false,
-                title: Text(
-                  'Ngữ pháp',
-                  style: AppTypography.headline(
-                    fontSize: AppFontSizes.headlineSm,
-                    fontWeight: FontWeight.w800,
-                    color: c.text,
-                  ),
-                ),
-                background: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        c.primary.withValues(alpha: 0.1),
-                        c.background,
-                      ],
-                    ),
-                  ),
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        right: -20,
-                        top: 40,
-                        child: Icon(
-                          Icons.menu_book_rounded,
-                          size: 180,
-                          color: c.primary.withValues(alpha: 0.05),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                icon: const Icon(Icons.arrow_back_rounded),
+                onPressed: () => ref.read(navigationProvider.notifier).goBack(),
               ),
             ),
-            SliverAppBar(
-              pinned: true,
-              backgroundColor: c.background,
-              elevation: 0,
-              toolbarHeight: 0,
-              automaticallyImplyLeading: false,
-              bottom: PreferredSize(
-                preferredSize: Size.fromHeight(isSearching ? 90 : 156),
-                child: Container(
-                  color: c.background,
-                  padding: const EdgeInsets.only(bottom: AppSpacing.md),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      _buildSearchBar(c),
-                      if (!isSearching) ...[
-                        const SizedBox(height: AppSpacing.md),
-                        _buildHskTabs(c),
+            SliverToBoxAdapter(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+                    child: SearchBar(
+                      controller: _searchController,
+                      hintText: 'Tìm kiếm điểm ngữ pháp...',
+                      onChanged: _onSearchChanged,
+                      leading: const Icon(Icons.search),
+                      trailing: [
+                        if (_searchController.text.isNotEmpty)
+                          IconButton(
+                            icon: const Icon(Icons.clear),
+                            onPressed: () {
+                              _searchController.clear();
+                              _onSearchChanged('');
+                            },
+                          ),
                       ],
-                    ],
+                      elevation: WidgetStateProperty.all(0),
+                      backgroundColor: WidgetStateProperty.all(cs.surfaceContainerHighest),
+                      padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 16)),
+                    ),
                   ),
-                ),
+                  if (!isSearching)
+                    SizedBox(
+                      height: 56,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                        children: [
+                          (1, 'HSK 1', 'Căn bản'),
+                          (2, 'HSK 2', 'Trung cấp'),
+                          (3, 'HSK 3', 'Trung cấp'),
+                          (4, 'HSK 4', 'Nâng cao'),
+                        ].map((t) {
+                          final isSelected = _selectedLevel == t.$1;
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: FilterChip(
+                              label: Text(t.$2),
+                              selected: isSelected,
+                              onSelected: (_) {
+                                HanzifyHaptic.select();
+                                setState(() {
+                                  _selectedLevel = t.$1;
+                                  _expandedId = null;
+                                });
+                              },
+                              showCheckmark: false,
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                ],
               ),
             ),
           ];
@@ -166,7 +148,7 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
                 enabled: true,
                 child: ListView(
                   padding: EdgeInsets.zero,
-                  children: _buildGrammarList(c, _skeletonGrammar),
+                  children: _buildGrammarList(themeColorsOfRef(ref), _skeletonGrammar),
                 ),
               )
             : CustomScrollView(
@@ -177,19 +159,19 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
                     )
                   else if (filteredList.isEmpty)
                     SliverFillRemaining(
-                      child: _buildNoDataState(c),
+                      child: _buildNoDataState(themeColorsOfRef(ref)),
                     )
                   else
                     SliverPadding(
-                      padding: const EdgeInsets.only(top: AppSpacing.sm),
+                      padding: const EdgeInsets.only(top: 8),
                       sliver: SliverList(
                         delegate: SliverChildListDelegate(
-                          _buildGrammarList(c, filteredList),
+                          _buildGrammarList(themeColorsOfRef(ref), filteredList),
                         ),
                       ),
                     ),
                   const SliverToBoxAdapter(
-                    child: SizedBox(height: AppSpacing.scrollBottom),
+                    child: SizedBox(height: 80),
                   ),
                 ],
               ),
@@ -197,151 +179,13 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
     );
   }
 
-  // ── Search ──────────────────────────────────────────────────────────────
-
-  Widget _buildSearchBar(AppThemeColors c) {
-    final query = ref.watch(grammarSearchQueryProvider);
-
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
-      child: Container(
-        decoration: BoxDecoration(
-          color: c.glassSurface,
-          borderRadius: BorderRadius.circular(AppRadii.full),
-          border: Border.all(color: c.glassBorder),
-        ),
-        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
-        child: Row(
-          children: [
-            Icon(Icons.search_rounded, size: 20, color: c.placeholder),
-            const SizedBox(width: AppSpacing.sm),
-            Expanded(
-              child: TextField(
-                controller: _searchController,
-                onChanged: _onSearchChanged,
-                style: AppTypography.body(
-                  fontSize: AppFontSizes.bodyMd,
-                  color: c.text,
-                ),
-                decoration: InputDecoration(
-                  hintText:
-                      'T\u00ECm ki\u1EBFm \u0111i\u1EC3m ng\u1EEF ph\u00E1p',
-                  hintStyle: AppTypography.body(
-                    fontSize: AppFontSizes.bodyMd,
-                    color: c.placeholder,
-                  ),
-                  border: InputBorder.none,
-                  contentPadding: const EdgeInsets.symmetric(
-                    vertical: AppSpacing.md,
-                  ),
-                ),
-              ),
-            ),
-            if (query.isNotEmpty)
-              GestureDetector(
-                onTap: () {
-                  _searchController.clear();
-                  ref.read(grammarSearchQueryProvider.notifier).set('');
-                },
-                child: Icon(
-                  Icons.close_rounded,
-                  size: 18,
-                  color: c.placeholder,
-                ),
-              ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  // ── Tabs ────────────────────────────────────────────────────────────────
-
-  Widget _buildHskTabs(AppThemeColors c) {
-    final tabs = [
-      (1, 'HSK 1', 'C\u0103n b\u1EA3n'),
-      (2, 'HSK 2', 'Trung c\u1EA5p'),
-      (3, 'HSK 3+', 'N\u00E2ng cao'),
-    ];
-
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
-      child: Row(
-        children: tabs.map((t) {
-          final isSelected = _selectedLevel == t.$1;
-          return Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(
-                right: t.$1 == 3 ? 0 : AppSpacing.sm,
-              ),
-              child: GestureDetector(
-                onTap: () {
-                  HanzifyHaptic.select();
-                  setState(() {
-                    _selectedLevel = t.$1;
-                    _expandedId = null;
-                  });
-                },
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 250),
-                  padding: const EdgeInsets.symmetric(vertical: AppSpacing.md),
-                  decoration: BoxDecoration(
-                    color: isSelected ? c.primary : c.glassSurface,
-                    borderRadius: BorderRadius.circular(AppRadii.xl),
-                    border: Border.all(
-                      color: isSelected ? c.primary : c.glassBorder,
-                    ),
-                    boxShadow: isSelected
-                        ? [
-                            BoxShadow(
-                              color: c.primary.withValues(alpha: 0.15),
-                              blurRadius: 8,
-                              offset: const Offset(0, 2),
-                            )
-                          ]
-                        : null,
-                  ),
-                  child: Column(
-                    children: [
-                      Text(
-                        t.$2,
-                        style: AppTypography.label(
-                          fontSize: AppFontSizes.labelMd,
-                          fontWeight: FontWeight.w800,
-                          color: isSelected ? c.onPrimary : c.text,
-                        ),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        t.$3,
-                        style: AppTypography.label(
-                          fontSize: 9,
-                          fontWeight: FontWeight.w500,
-                          color: isSelected
-                              ? c.onPrimary.withValues(alpha: 0.8)
-                              : c.placeholder,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          );
-        }).toList(),
-      ),
-    );
-  }
-
-  // ── Grammar List ────────────────────────────────────────────────────────
-
   List<Widget> _buildGrammarList(
     AppThemeColors c,
     List<GrammarPoint> points,
   ) {
     return points.map((gp) {
       return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: _GrammarCard(
           grammar: gp,
           colors: c,
@@ -358,26 +202,12 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
   }
 
   Widget _buildNoDataState(AppThemeColors c) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(Icons.auto_awesome_motion_rounded,
-              size: 64, color: c.placeholder.withValues(alpha: 0.3)),
-          const SizedBox(height: AppSpacing.md),
-          Text(
-            'Ch\u01B0a c\u00F3 d\u1EEF li\u1EC7u cho c\u1EA5p \u0111\u1ED9 n\u00E0y',
-            style: AppTypography.body(color: c.placeholder),
-          ),
-        ],
-      ),
+    return const HanzifyEmptyState(
+      icon: Icons.auto_awesome_motion_rounded,
+      title: 'Chưa có dữ liệu cho cấp độ này',
     );
   }
 }
-
-// ---------------------------------------------------------------------------
-// Premium Expandable Grammar Card
-// ---------------------------------------------------------------------------
 
 class _GrammarCard extends StatelessWidget {
   final GrammarPoint grammar;
@@ -392,7 +222,6 @@ class _GrammarCard extends StatelessWidget {
     required this.onTap,
   });
 
-  /// Extract the core Hanzi character(s) from the structure for the icon.
   String get _iconChar {
     final s = grammar.structure;
     for (final c in s.runes) {
@@ -403,97 +232,77 @@ class _GrammarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final c = colors;
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
 
     return AnimatedSize(
-      duration: const Duration(milliseconds: 350),
+      duration: const Duration(milliseconds: 300),
       curve: Curves.easeOutQuart,
       alignment: Alignment.topCenter,
-      child: Container(
-        margin: const EdgeInsets.only(bottom: AppSpacing.sm),
-        child: HanzifyCard(
-          variant: HanzifyCardVariant.glass,
-          borderRadius: isSelected ? AppRadii.xxxl : AppRadii.xxl,
-          padding: EdgeInsets.zero,
-          child: InkWell(
-            onTap: onTap,
-            borderRadius: BorderRadius.circular(
-              isSelected ? AppRadii.xxxl : AppRadii.xxl,
-            ),
-            child: Padding(
-              padding: isSelected
-                  ? const EdgeInsets.all(AppSpacing.xl)
-                  : const EdgeInsets.symmetric(
-                      horizontal: AppSpacing.lg,
-                      vertical: AppSpacing.md,
-                    ),
-              child: isSelected ? _buildExpanded(context, c) : _buildCompact(c),
-            ),
+      child: Card.filled(
+        color: isSelected ? cs.surfaceContainerHigh : cs.surfaceContainerLow,
+        margin: const EdgeInsets.only(bottom: 8),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(isSelected ? 24 : 16),
+        ),
+        clipBehavior: Clip.antiAlias,
+        child: InkWell(
+          onTap: onTap,
+          child: Padding(
+            padding: EdgeInsets.all(isSelected ? 20 : 12),
+            child: isSelected ? _buildExpanded(context, theme, cs) : _buildCompact(theme, cs),
           ),
         ),
       ),
     );
   }
 
-  Widget _buildCompact(AppThemeColors c) {
+  Widget _buildCompact(ThemeData theme, ColorScheme cs) {
     return Row(
       children: [
         Container(
           width: 48,
           height: 48,
           decoration: BoxDecoration(
-            gradient: c.accentGradient,
+            color: cs.primaryContainer,
             shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(
-                color: c.primary.withValues(alpha: 0.15),
-                blurRadius: 8,
-                offset: const Offset(0, 2),
-              ),
-            ],
           ),
           alignment: Alignment.center,
           child: Text(
             _iconChar,
             style: AppTypography.hanziUi(
-              fontSize: AppFontSizes.headlineSm,
-              fontWeight: FontWeight.w800,
-              color: c.onPrimary,
+              fontSize: 24,
+              fontWeight: FontWeight.w900,
+              color: cs.onPrimaryContainer,
             ),
           ),
         ),
-        const SizedBox(width: AppSpacing.md),
+        const SizedBox(width: 16),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 grammar.title,
-                style: AppTypography.label(
-                  fontSize: AppFontSizes.titleSm,
-                  fontWeight: FontWeight.w700,
-                  color: c.text,
-                ),
+                style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 2),
               Text(
                 grammar.explanation,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: AppTypography.body(
-                  fontSize: AppFontSizes.bodySm,
-                  color: c.placeholder,
-                ),
+                style: theme.textTheme.bodySmall?.copyWith(color: cs.onSurfaceVariant),
               ),
             ],
           ),
         ),
-        Icon(Icons.arrow_drop_down_rounded, size: 24, color: c.disabled),
+        Icon(isSelected ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down, 
+            size: 20, color: cs.onSurfaceVariant),
       ],
     );
   }
 
-  Widget _buildExpanded(BuildContext context, AppThemeColors c) {
+  Widget _buildExpanded(BuildContext context, ThemeData theme, ColorScheme cs) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -501,100 +310,66 @@ class _GrammarCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'C\u1EA4U TR\u00DAC NG\u1EEE PH\u00C1P',
-              style: AppTypography.label(
-                fontSize: AppFontSizes.labelSm,
-                fontWeight: FontWeight.w800,
-                color: c.secondary,
+              'CẤU TRÚC NGỮ PHÁP',
+              style: theme.textTheme.labelSmall?.copyWith(
+                fontWeight: FontWeight.w900,
+                color: cs.secondary,
                 letterSpacing: 1.2,
               ),
             ),
-            Icon(Icons.arrow_drop_up_rounded, color: c.placeholder, size: 24),
+            Icon(Icons.keyboard_arrow_up, color: cs.onSurfaceVariant, size: 20),
           ],
         ),
-        const SizedBox(height: AppSpacing.lg),
+        const SizedBox(height: 16),
         Center(
           child: Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppSpacing.xl,
-              vertical: AppSpacing.lg,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
             decoration: BoxDecoration(
-              gradient: c.accentGradient,
-              borderRadius: BorderRadius.circular(AppRadii.xxl),
-              boxShadow: [
-                BoxShadow(
-                  color: c.primary.withValues(alpha: 0.25),
-                  blurRadius: 20,
-                  offset: const Offset(0, 10),
-                ),
-              ],
+              gradient: colors.primaryGradient,
+              borderRadius: BorderRadius.circular(16),
             ),
             child: Text(
               grammar.structure,
               style: AppTypography.hanziDisplay(
-                fontSize: AppFontSizes.displayMd,
-                fontWeight: FontWeight.w800,
-                color: c.onPrimary,
+                fontSize: 36,
+                fontWeight: FontWeight.w900,
+                color: cs.onPrimary,
               ),
             ),
           ),
         ),
-        const SizedBox(height: AppSpacing.xl),
+        const SizedBox(height: 20),
         Text(
           grammar.title,
-          style: AppTypography.headline(
-            fontSize: AppFontSizes.titleLg,
-            fontWeight: FontWeight.w700,
-            color: c.text,
-          ),
+          style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
         ),
-        const SizedBox(height: AppSpacing.xs),
+        const SizedBox(height: 4),
         Text(
           grammar.explanation,
-          style: AppTypography.body(
-            fontSize: AppFontSizes.bodyMd,
-            color: c.placeholder,
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: cs.onSurfaceVariant,
             height: 1.5,
           ),
         ),
-        const SizedBox(height: AppSpacing.xl),
-        // "Học ngay" button
-        InkWell(
-          onTap: () {
+        const SizedBox(height: 24),
+        FilledButton.tonal(
+          onPressed: () {
             HanzifyHaptic.tap();
             Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => GrammarDetailScreen(grammar: grammar),
-              ),
+              MaterialPageRoute(builder: (_) => GrammarDetailScreen(grammar: grammar)),
             );
           },
-          borderRadius: BorderRadius.circular(AppRadii.xl),
-          child: Container(
-            padding: const EdgeInsets.symmetric(
-              vertical: AppSpacing.md,
-              horizontal: AppSpacing.lg,
-            ),
-            decoration: BoxDecoration(
-              color: c.primary.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(AppRadii.xl),
-              border: Border.all(color: c.primary.withValues(alpha: 0.2)),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'H\u1ECDc ngay',
-                  style: AppTypography.label(
-                    fontSize: AppFontSizes.labelLg,
-                    fontWeight: FontWeight.w700,
-                    color: c.primary,
-                  ),
-                ),
-                const SizedBox(width: AppSpacing.sm),
-                Icon(Icons.arrow_forward_rounded, size: 18, color: c.primary),
-              ],
-            ),
+          style: FilledButton.styleFrom(
+            minimumSize: const Size.fromHeight(48),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          ),
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Học ngay', style: TextStyle(fontWeight: FontWeight.bold)),
+              SizedBox(width: 8),
+              Icon(Icons.arrow_forward, size: 18),
+            ],
           ),
         ),
       ],

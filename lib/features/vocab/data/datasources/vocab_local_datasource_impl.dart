@@ -57,7 +57,16 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
   Future<List<Vocab>> getDue({int limit = 0, int offset = 0}) async {
     final now = DateTime.now().toUtc();
     var query = db.select(db.vocabsTable)
-      ..where((t) => t.nextReview.isSmallerThanValue(now));
+      ..where((t) =>
+          t.nextReview.isSmallerThanValue(now) & t.interval.isBiggerThanValue(0));
+    query = _applyPagination(query, limit: limit, offset: offset);
+    final results = await query.get();
+    return results.map(Vocab.fromDbModel).toList();
+  }
+
+  @override
+  Future<List<Vocab>> getNew({int limit = 0, int offset = 0}) async {
+    var query = db.select(db.vocabsTable)..where((t) => t.interval.equals(0));
     query = _applyPagination(query, limit: limit, offset: offset);
     final results = await query.get();
     return results.map(Vocab.fromDbModel).toList();
@@ -139,8 +148,9 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
         if (v.pinyinNormalized.contains(normalizedQuery)) return true;
         if (v.meanings.any(
           (m) => m.vi.toLowerCase().contains(qRaw.toLowerCase()),
-        ))
+        )) {
           return true;
+        }
         return false;
       }).toList();
     }

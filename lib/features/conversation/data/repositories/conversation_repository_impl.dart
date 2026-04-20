@@ -53,6 +53,16 @@ class ConversationRepositoryImpl implements ConversationRepository {
   }
 
   @override
+  Future<List<ConversationContext>> getByIds(List<String> ids) async {
+    try {
+      final idSet = ids.toSet();
+      return (await localDataSource.getAll()).where((c) => idSet.contains(c.id)).toList();
+    } catch (e) {
+      throw DatabaseFailure('Failed to load conversations by ids: $e');
+    }
+  }
+
+  @override
   Future<void> update(ConversationContext conversation) async {
     try {
       await localDataSource.update(conversation);

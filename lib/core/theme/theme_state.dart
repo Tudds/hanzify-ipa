@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'colors.dart';
 export 'colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hanzify/core/providers/async_prefs_notifier.dart';
 
 part 'theme_state.g.dart';
@@ -79,49 +79,22 @@ class ThemeNotifier extends _$ThemeNotifier with AsyncPrefsNotifier<AppThemeMode
   }
 
   ThemeData get themeData {
-    final c = colors;
-    final isDark = state == AppThemeMode.dark;
-
-    final textTheme = GoogleFonts.interTextTheme(
-      ThemeData(brightness: isDark ? Brightness.dark : Brightness.light).textTheme,
-    ).apply(
-      bodyColor: c.text,
-      displayColor: c.text,
-      fontFamily: GoogleFonts.notoSansSc().fontFamily,
-    );
+    final cs = switch (state) {
+      AppThemeMode.dark => ColorScheme.fromSeed(seedColor: AppColors.darkPrimary, brightness: Brightness.dark),
+      AppThemeMode.sepia => ColorScheme.fromSeed(seedColor: AppColors.sepiaPrimary, brightness: Brightness.light),
+      AppThemeMode.light => ColorScheme.fromSeed(seedColor: AppColors.lightPrimary, brightness: Brightness.light),
+    };
 
     return ThemeData(
       useMaterial3: true,
-      brightness: isDark ? Brightness.dark : Brightness.light,
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: c.primary,
-        brightness: isDark ? Brightness.dark : Brightness.light,
-        primary: c.primary,
-        secondary: c.secondary,
-        surface: c.surfaceLowest,
-        error: c.error,
+      colorScheme: cs,
+      textTheme: GoogleFonts.interTextTheme(ThemeData(brightness: cs.brightness).textTheme),
+      extensions: [AppThemeExtension(colors: colors)],
+      appBarTheme: const AppBarTheme(centerTitle: true),
+      cardTheme: CardThemeData(
+        elevation: 0,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
-      scaffoldBackgroundColor: c.background,
-      textTheme: textTheme,
-      fontFamily: GoogleFonts.notoSansSc().fontFamily,
-      // No default card elevation — cards manage their own shadow
-      cardTheme: const CardThemeData(elevation: 0, margin: EdgeInsets.zero),
-      // Minimal dividers
-      dividerTheme: DividerThemeData(color: c.outlineVariant, thickness: 0.5),
-      // Cupertino-style slide transition for all routes
-      pageTransitionsTheme: const PageTransitionsTheme(
-        builders: {
-          TargetPlatform.android: CupertinoPageTransitionsBuilder(),
-          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-          TargetPlatform.macOS: CupertinoPageTransitionsBuilder(),
-          TargetPlatform.linux: CupertinoPageTransitionsBuilder(),
-          TargetPlatform.windows: CupertinoPageTransitionsBuilder(),
-          TargetPlatform.fuchsia: CupertinoPageTransitionsBuilder(),
-        },
-      ),
-      extensions: [
-        AppThemeExtension(colors: c),
-      ],
     );
   }
 }
@@ -146,9 +119,7 @@ class AppThemeExtension extends ThemeExtension<AppThemeExtension> {
   }
 }
 
-// Provider này giúp UI chỉ rebuild khi màu thực sự thay đổi
 @riverpod
 AppThemeColors themeColors(Ref ref) {
-  // Watch notifier để rebuild đúng khi state thay đổi
   return ref.watch(themeProvider.notifier).colors;
 }

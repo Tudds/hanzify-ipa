@@ -38,7 +38,7 @@
     "pinyin": "ā",
     "pinyinNormalized": "a",
     "definition": null,
-    "definitionVi": "an initial particle"
+    "definitionVi": "trợ từ đầu câu"
   },
   {
     "char": "姨",
@@ -59,7 +59,7 @@
     "pinyin": "yí",
     "pinyinNormalized": "yi",
     "definition": null,
-    "definitionVi": "aunt"
+    "definitionVi": "dì, cô, thím"
   },
   {
     "char": "矮",
@@ -142,7 +142,7 @@
     "pinyin": "ān",
     "pinyinNormalized": "an",
     "definition": null,
-    "definitionVi": "peaceful"
+    "definitionVi": "bình an, yên bình"
   },
   {
     "char": "静",
@@ -168,7 +168,7 @@
     "pinyin": "jìng",
     "pinyinNormalized": "jing",
     "definition": null,
-    "definitionVi": "still"
+    "definitionVi": "tĩnh, yên tĩnh"
   },
   {
     "char": "把",
@@ -187,7 +187,7 @@
     "pinyin": "bǎ",
     "pinyinNormalized": "ba",
     "definition": null,
-    "definitionVi": "đem, lấy (dùng trong cấu trúc câu chữ 把)"
+    "definitionVi": "đem, lấy"
   },
   {
     "char": "班",
@@ -234,7 +234,7 @@
     "pinyin": "bān",
     "pinyinNormalized": "ban",
     "definition": null,
-    "definitionVi": "dời, chuyển (đồ đạc, nhà cửa)"
+    "definitionVi": "dời, chuyển"
   },
   {
     "char": "半",
@@ -272,7 +272,7 @@
     "pinyin": "bāng",
     "pinyinNormalized": "bang",
     "definition": null,
-    "definitionVi": "to help"
+    "definitionVi": "giúp, giúp đỡ"
   },
   {
     "char": "助",
@@ -291,7 +291,7 @@
     "pinyin": "zhù",
     "pinyinNormalized": "zhu",
     "definition": null,
-    "definitionVi": "to help"
+    "definitionVi": "giúp, trợ giúp"
   },
   {
     "char": "包",
@@ -345,7 +345,7 @@
     "pinyin": "běi",
     "pinyinNormalized": "bei",
     "definition": null,
-    "definitionVi": "north"
+    "definitionVi": "bắc, phía bắc"
   },
   {
     "char": "方",
@@ -361,7 +361,7 @@
     "pinyin": "fāng",
     "pinyinNormalized": "fang",
     "definition": null,
-    "definitionVi": "square"
+    "definitionVi": "vuông, phương hướng"
   },
   {
     "char": "被",
@@ -383,7 +383,7 @@
     "pinyin": "bèi",
     "pinyinNormalized": "bei",
     "definition": null,
-    "definitionVi": "bị, được (dùng trong câu bị động)"
+    "definitionVi": "bị, được"
   },
   {
     "char": "鼻",
@@ -409,7 +409,7 @@
     "pinyin": "bí",
     "pinyinNormalized": "bi",
     "definition": null,
-    "definitionVi": "nose"
+    "definitionVi": "mũi"
   },
   {
     "char": "子",
@@ -424,7 +424,7 @@
     "pinyin": "zi",
     "pinyinNormalized": "zi",
     "definition": null,
-    "definitionVi": "son"
+    "definitionVi": "con trai, hạt"
   },
   {
     "char": "比",
@@ -462,7 +462,7 @@
     "pinyin": "jiào",
     "pinyinNormalized": "jiao",
     "definition": null,
-    "definitionVi": "to compare"
+    "definitionVi": "so sánh, tương đối"
   },
   {
     "char": "赛",
@@ -488,7 +488,7 @@
     "pinyin": "sài",
     "pinyinNormalized": "sai",
     "definition": null,
-    "definitionVi": "to compete"
+    "definitionVi": "thi đấu, cuộc thi"
   },
   {
     "char": "必",
@@ -505,7 +505,7 @@
     "pinyin": "bì",
     "pinyinNormalized": "bi",
     "definition": null,
-    "definitionVi": "surely"
+    "definitionVi": "nhất định, ắt hẳn"
   },
   {
     "char": "须",
@@ -526,7 +526,7 @@
     "pinyin": "xū",
     "pinyinNormalized": "xu",
     "definition": null,
-    "definitionVi": "beard"
+    "definitionVi": "râu, cần phải"
   },
   {
     "char": "变",
@@ -546,7 +546,7 @@
     "pinyin": "biàn",
     "pinyinNormalized": "bian",
     "definition": null,
-    "definitionVi": "to change"
+    "definitionVi": "biến đổi, thay đổi"
   },
   {
     "char": "化",
@@ -562,7 +562,7 @@
     "pinyin": "huà",
     "pinyinNormalized": "hua",
     "definition": null,
-    "definitionVi": "to change"
+    "definitionVi": "hóa, biến hóa"
   },
   {
     "char": "别",
@@ -617,7 +617,7 @@
     "pinyin": "bīn",
     "pinyinNormalized": "bin",
     "definition": null,
-    "definitionVi": "guest"
+    "definitionVi": "khách"
   },
   {
     "char": "馆",
@@ -640,7 +640,7 @@
     "pinyin": "guǎn",
     "pinyinNormalized": "guan",
     "definition": null,
-    "definitionVi": "public building"
+    "definitionVi": "quán, nhà công cộng"
   },
   {
     "char": "冰",
@@ -685,7 +685,7 @@
     "pinyin": "xiāng",
     "pinyinNormalized": "xiang",
     "definition": null,
-    "definitionVi": "box"
+    "definitionVi": "hộp, thùng"
   },
   {
     "char": "不",
@@ -720,7 +720,7 @@
     "pinyin": "dàn",
     "pinyinNormalized": "dan",
     "definition": null,
-    "definitionVi": "only"
+    "definitionVi": "nhưng, chỉ"
   },
   {
     "char": "才",
@@ -755,7 +755,7 @@
     "pinyin": "cān",
     "pinyinNormalized": "can",
     "definition": null,
-    "definitionVi": "to take part in"
+    "definitionVi": "tham gia, tham dự"
   },
   {
     "char": "加",
@@ -772,7 +772,7 @@
     "pinyin": "jiā",
     "pinyinNormalized": "jia",
     "definition": null,
-    "definitionVi": "to add to"
+    "definitionVi": "thêm vào, cộng thêm"
   },
   {
     "char": "草",
@@ -872,7 +872,7 @@
     "pinyin": "chàng",
     "pinyinNormalized": "chang",
     "definition": null,
-    "definitionVi": "to sing"
+    "definitionVi": "hát"
   },
   {
     "char": "歌",
@@ -898,7 +898,7 @@
     "pinyin": "gē",
     "pinyinNormalized": "ge",
     "definition": null,
-    "definitionVi": "song"
+    "definitionVi": "bài hát"
   },
   {
     "char": "超",
@@ -922,7 +922,7 @@
     "pinyin": "chāo",
     "pinyinNormalized": "chao",
     "definition": null,
-    "definitionVi": "to jump over"
+    "definitionVi": "nhảy qua"
   },
   {
     "char": "市",
@@ -939,7 +939,7 @@
     "pinyin": "shì",
     "pinyinNormalized": "shi",
     "definition": null,
-    "definitionVi": "city"
+    "definitionVi": "thành phố"
   },
   {
     "char": "衬",
@@ -959,7 +959,7 @@
     "pinyin": "chèn",
     "pinyinNormalized": "chen",
     "definition": null,
-    "definitionVi": "underwear"
+    "definitionVi": "đồ lót"
   },
   {
     "char": "衫",
@@ -979,7 +979,7 @@
     "pinyin": "shān",
     "pinyinNormalized": "shan",
     "definition": null,
-    "definitionVi": "shirt"
+    "definitionVi": "áo sơ mi"
   },
   {
     "char": "城",
@@ -1000,7 +1000,7 @@
     "pinyin": "chéng",
     "pinyinNormalized": "cheng",
     "definition": null,
-    "definitionVi": "castle"
+    "definitionVi": "lâu đài"
   },
   {
     "char": "迟",
@@ -1019,7 +1019,7 @@
     "pinyin": "chí",
     "pinyinNormalized": "chi",
     "definition": null,
-    "definitionVi": "tardy"
+    "definitionVi": "muộn"
   },
   {
     "char": "到",
@@ -1039,7 +1039,7 @@
     "pinyin": "dào",
     "pinyinNormalized": "dao",
     "definition": null,
-    "definitionVi": "to go to"
+    "definitionVi": "đến"
   },
   {
     "char": "除",
@@ -1060,7 +1060,7 @@
     "pinyin": "chú",
     "pinyinNormalized": "chu",
     "definition": null,
-    "definitionVi": "to eliminate"
+    "definitionVi": "loại bỏ"
   },
   {
     "char": "了",
@@ -1074,7 +1074,7 @@
     "pinyin": "le",
     "pinyinNormalized": "le",
     "definition": null,
-    "definitionVi": "rồi (trợ từ biểu thị sự thay đổi hoặc hoàn thành)"
+    "definitionVi": "rồi"
   },
   {
     "char": "穿",
@@ -1095,7 +1095,7 @@
     "pinyin": "chuān",
     "pinyinNormalized": "chuan",
     "definition": null,
-    "definitionVi": "mặc, đi (giày, tất)"
+    "definitionVi": "mặc, đi"
   },
   {
     "char": "船",
@@ -1158,7 +1158,7 @@
     "pinyin": "cí",
     "pinyinNormalized": "ci",
     "definition": null,
-    "definitionVi": "phrase"
+    "definitionVi": "cụm từ"
   },
   {
     "char": "典",
@@ -1178,7 +1178,7 @@
     "pinyin": "diǎn",
     "pinyinNormalized": "dian",
     "definition": null,
-    "definitionVi": "law"
+    "definitionVi": "luật"
   },
   {
     "char": "聪",
@@ -1205,7 +1205,7 @@
     "pinyin": "cōng",
     "pinyinNormalized": "cong",
     "definition": null,
-    "definitionVi": "sharp (of sight and hearing)"
+    "definitionVi": "sắc bén"
   },
   {
     "char": "明",
@@ -1225,7 +1225,7 @@
     "pinyin": "míng",
     "pinyinNormalized": "ming",
     "definition": null,
-    "definitionVi": "bright"
+    "definitionVi": "sáng"
   },
   {
     "char": "从",
@@ -1283,7 +1283,7 @@
     "pinyin": "dǎ",
     "pinyinNormalized": "da",
     "definition": null,
-    "definitionVi": "to attack"
+    "definitionVi": "đánh"
   },
   {
     "char": "篮",
@@ -1311,7 +1311,7 @@
     "pinyin": "lán",
     "pinyinNormalized": "lan",
     "definition": null,
-    "definitionVi": "basket"
+    "definitionVi": "cái rổ"
   },
   {
     "char": "球",
@@ -1334,7 +1334,7 @@
     "pinyin": "qiú",
     "pinyinNormalized": "qiu",
     "definition": null,
-    "definitionVi": "ball"
+    "definitionVi": "quả bóng"
   },
   {
     "char": "扫",
@@ -1352,7 +1352,7 @@
     "pinyin": "sǎo",
     "pinyinNormalized": "sao",
     "definition": null,
-    "definitionVi": "to clean"
+    "definitionVi": "quét dọn"
   },
   {
     "char": "算",
@@ -1378,7 +1378,7 @@
     "pinyin": "suàn",
     "pinyinNormalized": "suan",
     "definition": null,
-    "definitionVi": "to calculate"
+    "definitionVi": "tính toán"
   },
   {
     "char": "带",
@@ -1419,7 +1419,7 @@
     "pinyin": "dān",
     "pinyinNormalized": "dan",
     "definition": null,
-    "definitionVi": "to bear"
+    "definitionVi": "gánh vác"
   },
   {
     "char": "心",
@@ -1435,7 +1435,7 @@
     "pinyin": "xīn",
     "pinyinNormalized": "xin",
     "definition": null,
-    "definitionVi": "heart"
+    "definitionVi": "trái tim"
   },
   {
     "char": "蛋",
@@ -1458,7 +1458,7 @@
     "pinyin": "dàn",
     "pinyinNormalized": "dan",
     "definition": null,
-    "definitionVi": "egg"
+    "definitionVi": "trứng"
   },
   {
     "char": "糕",
@@ -1486,7 +1486,7 @@
     "pinyin": "gāo",
     "pinyinNormalized": "gao",
     "definition": null,
-    "definitionVi": "cake"
+    "definitionVi": "bánh ngọt"
   },
   {
     "char": "当",
@@ -1504,7 +1504,7 @@
     "pinyin": "dāng",
     "pinyinNormalized": "dang",
     "definition": null,
-    "definitionVi": "appropriate"
+    "definitionVi": "thích hợp"
   },
   {
     "char": "然",
@@ -1528,7 +1528,7 @@
     "pinyin": "rán",
     "pinyinNormalized": "ran",
     "definition": null,
-    "definitionVi": "certainly"
+    "definitionVi": "chắc chắn"
   },
   {
     "char": "地",
@@ -1568,7 +1568,7 @@
     "pinyin": "tiě",
     "pinyinNormalized": "tie",
     "definition": null,
-    "definitionVi": "iron"
+    "definitionVi": "sắt"
   },
   {
     "char": "图",
@@ -1588,7 +1588,7 @@
     "pinyin": "tú",
     "pinyinNormalized": "tu",
     "definition": null,
-    "definitionVi": "diagram"
+    "definitionVi": "biểu đồ"
   },
   {
     "char": "弟",
@@ -1607,7 +1607,7 @@
     "pinyin": "dì",
     "pinyinNormalized": "di",
     "definition": null,
-    "definitionVi": "young brother"
+    "definitionVi": "em trai"
   },
   {
     "char": "第",
@@ -1630,7 +1630,7 @@
     "pinyin": "dì",
     "pinyinNormalized": "di",
     "definition": null,
-    "definitionVi": "sequence"
+    "definitionVi": "thứ tự"
   },
   {
     "char": "一",
@@ -1660,7 +1660,7 @@
     "pinyin": "diàn",
     "pinyinNormalized": "dian",
     "definition": null,
-    "definitionVi": "electricity"
+    "definitionVi": "điện"
   },
   {
     "char": "梯",
@@ -1683,7 +1683,7 @@
     "pinyin": "tī",
     "pinyinNormalized": "ti",
     "definition": null,
-    "definitionVi": "ladder"
+    "definitionVi": "cái thang"
   },
   {
     "char": "邮",
@@ -1702,7 +1702,7 @@
     "pinyin": "yóu",
     "pinyinNormalized": "you",
     "definition": null,
-    "definitionVi": "mail"
+    "definitionVi": "thư"
   },
   {
     "char": "件",
@@ -1720,7 +1720,7 @@
     "pinyin": "jiàn",
     "pinyinNormalized": "jian",
     "definition": null,
-    "definitionVi": "item"
+    "definitionVi": "món"
   },
   {
     "char": "东",
@@ -1772,7 +1772,7 @@
     "pinyin": "dòng",
     "pinyinNormalized": "dong",
     "definition": null,
-    "definitionVi": "to move"
+    "definitionVi": "di chuyển"
   },
   {
     "char": "物",
@@ -1792,7 +1792,7 @@
     "pinyin": "wù",
     "pinyinNormalized": "wu",
     "definition": null,
-    "definitionVi": "thing"
+    "definitionVi": "vật"
   },
   {
     "char": "短",
@@ -1863,7 +1863,7 @@
     "pinyin": "duàn",
     "pinyinNormalized": "duan",
     "definition": null,
-    "definitionVi": "to temper"
+    "definitionVi": "rèn"
   },
   {
     "char": "炼",
@@ -1884,7 +1884,7 @@
     "pinyin": "liàn",
     "pinyinNormalized": "lian",
     "definition": null,
-    "definitionVi": "to smelt"
+    "definitionVi": "luyện"
   },
   {
     "char": "对",
@@ -1941,7 +1941,7 @@
     "pinyin": "ěr",
     "pinyinNormalized": "er",
     "definition": null,
-    "definitionVi": "ear"
+    "definitionVi": "tai"
   },
   {
     "char": "朵",
@@ -1959,7 +1959,7 @@
     "pinyin": "duǒ",
     "pinyinNormalized": "duo",
     "definition": null,
-    "definitionVi": "cluster of flowers"
+    "definitionVi": "đóa, chùm"
   },
   {
     "char": "发",
@@ -1976,7 +1976,7 @@
     "pinyin": "fā",
     "pinyinNormalized": "fa",
     "definition": null,
-    "definitionVi": "to issue"
+    "definitionVi": "phát ra"
   },
   {
     "char": "现",
@@ -1996,7 +1996,7 @@
     "pinyin": "xiàn",
     "pinyinNormalized": "xian",
     "definition": null,
-    "definitionVi": "to appear"
+    "definitionVi": "xuất hiện"
   },
   {
     "char": "便",
@@ -2017,7 +2017,7 @@
     "pinyin": "biàn",
     "pinyinNormalized": "bian",
     "definition": null,
-    "definitionVi": "easy"
+    "definitionVi": "tiện, dễ"
   },
   {
     "char": "放",
@@ -2072,7 +2072,7 @@
     "pinyin": "fù",
     "pinyinNormalized": "fu",
     "definition": null,
-    "definitionVi": "nearby"
+    "definitionVi": "kèm theo"
   },
   {
     "char": "近",
@@ -2112,7 +2112,7 @@
     "pinyin": "fù",
     "pinyinNormalized": "fu",
     "definition": null,
-    "definitionVi": "again"
+    "definitionVi": "lại, phục hồi"
   },
   {
     "char": "习",
@@ -2127,7 +2127,7 @@
     "pinyin": "xí",
     "pinyinNormalized": "xi",
     "definition": null,
-    "definitionVi": "to study"
+    "definitionVi": "học, tập"
   },
   {
     "char": "干",
@@ -2142,7 +2142,7 @@
     "pinyin": "gàn",
     "pinyinNormalized": "gan",
     "definition": null,
-    "definitionVi": "arid"
+    "definitionVi": "khô, làm khô"
   },
   {
     "char": "净",
@@ -2162,7 +2162,7 @@
     "pinyin": "jìng",
     "pinyinNormalized": "jing",
     "definition": null,
-    "definitionVi": "clean"
+    "definitionVi": "sạch, trong sạch"
   },
   {
     "char": "感",
@@ -2187,7 +2187,7 @@
     "pinyin": "gǎn",
     "pinyinNormalized": "gan",
     "definition": null,
-    "definitionVi": "to affect"
+    "definitionVi": "cảm, cảm động"
   },
   {
     "char": "谢",
@@ -2211,7 +2211,7 @@
     "pinyin": "xiè",
     "pinyinNormalized": "xie",
     "definition": null,
-    "definitionVi": "to thank"
+    "definitionVi": "cảm ơn, tạ ơn"
   },
   {
     "char": "刚",
@@ -2229,7 +2229,7 @@
     "pinyin": "gāng",
     "pinyinNormalized": "gang",
     "definition": null,
-    "definitionVi": "hard"
+    "definitionVi": "cứng, vừa mới"
   },
   {
     "char": "更",
@@ -2264,7 +2264,7 @@
     "pinyin": "gōng",
     "pinyinNormalized": "gong",
     "definition": null,
-    "definitionVi": "fair"
+    "definitionVi": "công bằng"
   },
   {
     "char": "共",
@@ -2282,7 +2282,7 @@
     "pinyin": "gòng",
     "pinyinNormalized": "gong",
     "definition": null,
-    "definitionVi": "all"
+    "definitionVi": "cùng, chung"
   },
   {
     "char": "汽",
@@ -2301,7 +2301,7 @@
     "pinyin": "qì",
     "pinyinNormalized": "qi",
     "definition": null,
-    "definitionVi": "gasoline"
+    "definitionVi": "hơi nước, xăng"
   },
   {
     "char": "车",
@@ -2317,7 +2317,7 @@
     "pinyin": "chē",
     "pinyinNormalized": "che",
     "definition": null,
-    "definitionVi": "cart"
+    "definitionVi": "xe, cộ"
   },
   {
     "char": "斤",
@@ -2333,7 +2333,7 @@
     "pinyin": "jīn",
     "pinyinNormalized": "jin",
     "definition": null,
-    "definitionVi": "a catty (about 500 grams)"
+    "definitionVi": "cân (500g)"
   },
   {
     "char": "司",
@@ -2350,7 +2350,7 @@
     "pinyin": "sī",
     "pinyinNormalized": "si",
     "definition": null,
-    "definitionVi": "to take charge of"
+    "definitionVi": "quản lý, phụ trách"
   },
   {
     "char": "园",
@@ -2369,7 +2369,7 @@
     "pinyin": "yuán",
     "pinyinNormalized": "yuan",
     "definition": null,
-    "definitionVi": "garden"
+    "definitionVi": "vườn"
   },
   {
     "char": "故",
@@ -2390,7 +2390,7 @@
     "pinyin": "gù",
     "pinyinNormalized": "gu",
     "definition": null,
-    "definitionVi": "reason"
+    "definitionVi": "lý do, cũ"
   },
   {
     "char": "事",
@@ -2410,7 +2410,7 @@
     "pinyin": "shì",
     "pinyinNormalized": "shi",
     "definition": null,
-    "definitionVi": "affair"
+    "definitionVi": "việc, sự việc"
   },
   {
     "char": "刮",
@@ -2430,7 +2430,7 @@
     "pinyin": "guā",
     "pinyinNormalized": "gua",
     "definition": null,
-    "definitionVi": "to shave"
+    "definitionVi": "cạo, gọt"
   },
   {
     "char": "风",
@@ -2446,7 +2446,7 @@
     "pinyin": "fēng",
     "pinyinNormalized": "feng",
     "definition": null,
-    "definitionVi": "wind"
+    "definitionVi": "gió"
   },
   {
     "char": "关",
@@ -2464,7 +2464,7 @@
     "pinyin": "guān",
     "pinyinNormalized": "guan",
     "definition": null,
-    "definitionVi": "frontier pass"
+    "definitionVi": "đóng, cửa ải"
   },
   {
     "char": "系",
@@ -2483,7 +2483,7 @@
     "pinyin": "xì",
     "pinyinNormalized": "xi",
     "definition": null,
-    "definitionVi": "system"
+    "definitionVi": "hệ thống, liên hệ"
   },
   {
     "char": "贵",
@@ -2558,7 +2558,7 @@
     "pinyin": "hái",
     "pinyinNormalized": "hai",
     "definition": null,
-    "definitionVi": "also"
+    "definitionVi": "cũng"
   },
   {
     "char": "是",
@@ -2601,7 +2601,7 @@
     "pinyin": "hài",
     "pinyinNormalized": "hai",
     "definition": null,
-    "definitionVi": "to injure"
+    "definitionVi": "làm hại"
   },
   {
     "char": "怕",
@@ -2621,7 +2621,7 @@
     "pinyin": "pà",
     "pinyinNormalized": "pa",
     "definition": null,
-    "definitionVi": "to fear"
+    "definitionVi": "sợ, sợ hãi"
   },
   {
     "char": "像",
@@ -2663,7 +2663,7 @@
     "pinyin": "hào",
     "pinyinNormalized": "hao",
     "definition": null,
-    "definitionVi": "ngày (trong ngày tháng), số, số hiệu"
+    "definitionVi": "ngày, số hiệu"
   },
   {
     "char": "码",
@@ -2683,7 +2683,7 @@
     "pinyin": "mǎ",
     "pinyinNormalized": "ma",
     "definition": null,
-    "definitionVi": "number"
+    "definitionVi": "số"
   },
   {
     "char": "黑",
@@ -2707,7 +2707,7 @@
     "pinyin": "hēi",
     "pinyinNormalized": "hei",
     "definition": null,
-    "definitionVi": "black"
+    "definitionVi": "đen"
   },
   {
     "char": "板",
@@ -2727,7 +2727,7 @@
     "pinyin": "bǎn",
     "pinyinNormalized": "ban",
     "definition": null,
-    "definitionVi": "board"
+    "definitionVi": "tấm ván, bảng"
   },
   {
     "char": "花",
@@ -2766,7 +2766,7 @@
     "pinyin": "huà",
     "pinyinNormalized": "hua",
     "definition": null,
-    "definitionVi": "bức tranh, họa"
+    "definitionVi": "bức tranh, vẽ"
   },
   {
     "char": "坏",
@@ -2785,7 +2785,7 @@
     "pinyin": "huài",
     "pinyinNormalized": "huai",
     "definition": null,
-    "definitionVi": "hỏng, xấu, tồi"
+    "definitionVi": "hỏng, xấu"
   },
   {
     "char": "环",
@@ -2805,7 +2805,7 @@
     "pinyin": "huán",
     "pinyinNormalized": "huan",
     "definition": null,
-    "definitionVi": "bracelet"
+    "definitionVi": "vòng, vòng tay"
   },
   {
     "char": "境",
@@ -2831,7 +2831,7 @@
     "pinyin": "jìng",
     "pinyinNormalized": "jing",
     "definition": null,
-    "definitionVi": "boundary"
+    "definitionVi": "biên giới, cảnh giới"
   },
   {
     "char": "换",
@@ -2895,7 +2895,7 @@
     "pinyin": "dá",
     "pinyinNormalized": "da",
     "definition": null,
-    "definitionVi": "answer"
+    "definitionVi": "trả lời"
   },
   {
     "char": "火",
@@ -2951,7 +2951,7 @@
     "pinyin": "jī",
     "pinyinNormalized": "ji",
     "definition": null,
-    "definitionVi": "desk"
+    "definitionVi": "máy, bàn"
   },
   {
     "char": "场",
@@ -2969,7 +2969,7 @@
     "pinyin": "chǎng",
     "pinyinNormalized": "chang",
     "definition": null,
-    "definitionVi": "field"
+    "definitionVi": "sân, trường"
   },
   {
     "char": "鸡",
@@ -2988,7 +2988,7 @@
     "pinyin": "jī",
     "pinyinNormalized": "ji",
     "definition": null,
-    "definitionVi": "chicken"
+    "definitionVi": "gà"
   },
   {
     "char": "会",
@@ -3006,7 +3006,7 @@
     "pinyin": "huì",
     "pinyinNormalized": "hui",
     "definition": null,
-    "definitionVi": "biết (thông qua học tập), sẽ"
+    "definitionVi": "biết, sẽ"
   },
   {
     "char": "季",
@@ -3026,7 +3026,7 @@
     "pinyin": "jì",
     "pinyinNormalized": "ji",
     "definition": null,
-    "definitionVi": "a quarter-year"
+    "definitionVi": "mùa, quý"
   },
   {
     "char": "节",
@@ -3043,7 +3043,7 @@
     "pinyin": "jié",
     "pinyinNormalized": "jie",
     "definition": null,
-    "definitionVi": "festival"
+    "definitionVi": "lễ hội, tiết"
   },
   {
     "char": "记",
@@ -3060,7 +3060,7 @@
     "pinyin": "jì",
     "pinyinNormalized": "ji",
     "definition": null,
-    "definitionVi": "mark"
+    "definitionVi": "ghi nhớ, dấu"
   },
   {
     "char": "得",
@@ -3083,7 +3083,7 @@
     "pinyin": "dé",
     "pinyinNormalized": "de",
     "definition": null,
-    "definitionVi": "to obtain"
+    "definitionVi": "được, đạt được"
   },
   {
     "char": "检",
@@ -3106,7 +3106,7 @@
     "pinyin": "jiǎn",
     "pinyinNormalized": "jian",
     "definition": null,
-    "definitionVi": "to check"
+    "definitionVi": "kiểm tra"
   },
   {
     "char": "查",
@@ -3127,7 +3127,7 @@
     "pinyin": "chá",
     "pinyinNormalized": "cha",
     "definition": null,
-    "definitionVi": "to investigate"
+    "definitionVi": "điều tra, kiểm tra"
   },
   {
     "char": "简",
@@ -3152,7 +3152,7 @@
     "pinyin": "jiǎn",
     "pinyinNormalized": "jian",
     "definition": null,
-    "definitionVi": "simple"
+    "definitionVi": "đơn giản"
   },
   {
     "char": "单",
@@ -3172,7 +3172,7 @@
     "pinyin": "dān",
     "pinyinNormalized": "dan",
     "definition": null,
-    "definitionVi": "single"
+    "definitionVi": "đơn, một"
   },
   {
     "char": "见",
@@ -3188,7 +3188,7 @@
     "pinyin": "jiàn",
     "pinyinNormalized": "jian",
     "definition": null,
-    "definitionVi": "to see"
+    "definitionVi": "thấy, gặp"
   },
   {
     "char": "面",
@@ -3209,7 +3209,7 @@
     "pinyin": "miàn",
     "pinyinNormalized": "mian",
     "definition": null,
-    "definitionVi": "face"
+    "definitionVi": "mặt"
   },
   {
     "char": "健",
@@ -3231,7 +3231,7 @@
     "pinyin": "jiàn",
     "pinyinNormalized": "jian",
     "definition": null,
-    "definitionVi": "strong"
+    "definitionVi": "khỏe mạnh"
   },
   {
     "char": "康",
@@ -3254,7 +3254,7 @@
     "pinyin": "kāng",
     "pinyinNormalized": "kang",
     "definition": null,
-    "definitionVi": "health"
+    "definitionVi": "khỏe mạnh, an khang"
   },
   {
     "char": "讲",
@@ -3272,7 +3272,7 @@
     "pinyin": "jiǎng",
     "pinyinNormalized": "jiang",
     "definition": null,
-    "definitionVi": "nói, kể, giảng"
+    "definitionVi": "nói, giảng"
   },
   {
     "char": "教",
@@ -3295,7 +3295,7 @@
     "pinyin": "jiāo",
     "pinyinNormalized": "jiao",
     "definition": null,
-    "definitionVi": "dạy, dạy học"
+    "definitionVi": "dạy, giáo dục"
   },
   {
     "char": "脚",
@@ -3341,7 +3341,7 @@
     "pinyin": "jiē",
     "pinyinNormalized": "jie",
     "definition": null,
-    "definitionVi": "đón, nhận, tiếp nhận"
+    "definitionVi": "đón, nhận"
   },
   {
     "char": "结",
@@ -3362,7 +3362,7 @@
     "pinyin": "jié",
     "pinyinNormalized": "jie",
     "definition": null,
-    "definitionVi": "knot"
+    "definitionVi": "nút thắt"
   },
   {
     "char": "婚",
@@ -3385,7 +3385,7 @@
     "pinyin": "hūn",
     "pinyinNormalized": "hun",
     "definition": null,
-    "definitionVi": "to get married"
+    "definitionVi": "kết hôn"
   },
   {
     "char": "束",
@@ -3404,7 +3404,7 @@
     "pinyin": "shù",
     "pinyinNormalized": "shu",
     "definition": null,
-    "definitionVi": "to bind"
+    "definitionVi": "buộc, bó"
   },
   {
     "char": "姐",
@@ -3424,7 +3424,7 @@
     "pinyin": "jiě",
     "pinyinNormalized": "jie",
     "definition": null,
-    "definitionVi": "elder sister"
+    "definitionVi": "chị gái"
   },
   {
     "char": "介",
@@ -3440,7 +3440,7 @@
     "pinyin": "jiè",
     "pinyinNormalized": "jie",
     "definition": null,
-    "definitionVi": "agent"
+    "definitionVi": "môi giới"
   },
   {
     "char": "绍",
@@ -3460,7 +3460,7 @@
     "pinyin": "shào",
     "pinyinNormalized": "shao",
     "definition": null,
-    "definitionVi": "to connect"
+    "definitionVi": "kết nối"
   },
   {
     "char": "借",
@@ -3521,7 +3521,7 @@
     "pinyin": "jīng",
     "pinyinNormalized": "jing",
     "definition": null,
-    "definitionVi": "the classics"
+    "definitionVi": "kinh điển"
   },
   {
     "char": "常",
@@ -3544,7 +3544,7 @@
     "pinyin": "cháng",
     "pinyinNormalized": "chang",
     "definition": null,
-    "definitionVi": "common"
+    "definitionVi": "thông thường"
   },
   {
     "char": "久",
@@ -3621,7 +3621,7 @@
     "pinyin": "jué",
     "pinyinNormalized": "jue",
     "definition": null,
-    "definitionVi": "conscious"
+    "definitionVi": "ý thức"
   },
   {
     "char": "咖",
@@ -3641,7 +3641,7 @@
     "pinyin": "kā",
     "pinyinNormalized": "ka",
     "definition": null,
-    "definitionVi": "coffee"
+    "definitionVi": "cà phê"
   },
   {
     "char": "啡",
@@ -3664,7 +3664,7 @@
     "pinyin": "fēi",
     "pinyinNormalized": "fei",
     "definition": null,
-    "definitionVi": "coffee"
+    "definitionVi": "cà phê"
   },
   {
     "char": "开",
@@ -3680,7 +3680,7 @@
     "pinyin": "kāi",
     "pinyinNormalized": "kai",
     "definition": null,
-    "definitionVi": "mở, lái (xe)"
+    "definitionVi": "mở, lái xe"
   },
   {
     "char": "始",
@@ -3700,7 +3700,7 @@
     "pinyin": "shǐ",
     "pinyinNormalized": "shi",
     "definition": null,
-    "definitionVi": "to begin"
+    "definitionVi": "bắt đầu"
   },
   {
     "char": "考",
@@ -3718,7 +3718,7 @@
     "pinyin": "kǎo",
     "pinyinNormalized": "kao",
     "definition": null,
-    "definitionVi": "to test"
+    "definitionVi": "kiểm tra"
   },
   {
     "char": "试",
@@ -3738,7 +3738,7 @@
     "pinyin": "shì",
     "pinyinNormalized": "shi",
     "definition": null,
-    "definitionVi": "to try"
+    "definitionVi": "thử"
   },
   {
     "char": "渴",
@@ -3779,7 +3779,7 @@
     "pinyin": "kě",
     "pinyinNormalized": "ke",
     "definition": null,
-    "definitionVi": "may"
+    "definitionVi": "có thể"
   },
   {
     "char": "能",
@@ -3817,7 +3817,7 @@
     "pinyin": "yǐ",
     "pinyinNormalized": "yi",
     "definition": null,
-    "definitionVi": "according to"
+    "definitionVi": "theo, dựa theo"
   },
   {
     "char": "课",
@@ -3859,7 +3859,7 @@
     "pinyin": "kōng",
     "pinyinNormalized": "kong",
     "definition": null,
-    "definitionVi": "hollow"
+    "definitionVi": "rỗng"
   },
   {
     "char": "调",
@@ -3881,7 +3881,7 @@
     "pinyin": "diào",
     "pinyinNormalized": "diao",
     "definition": null,
-    "definitionVi": "tune"
+    "definitionVi": "điều chỉnh"
   },
   {
     "char": "口",
@@ -3896,7 +3896,7 @@
     "pinyin": "kǒu",
     "pinyinNormalized": "kou",
     "definition": null,
-    "definitionVi": "lượng từ (chỉ nhân khẩu)"
+    "definitionVi": "miệng, nhân khẩu"
   },
   {
     "char": "哭",
@@ -3942,7 +3942,7 @@
     "pinyin": "kù",
     "pinyinNormalized": "ku",
     "definition": null,
-    "definitionVi": "pants"
+    "definitionVi": "quần"
   },
   {
     "char": "筷",
@@ -3967,7 +3967,7 @@
     "pinyin": "kuài",
     "pinyinNormalized": "kuai",
     "definition": null,
-    "definitionVi": "chopsticks"
+    "definitionVi": "đũa"
   },
   {
     "char": "蓝",
@@ -4049,7 +4049,7 @@
     "pinyin": "lǐ",
     "pinyinNormalized": "li",
     "definition": null,
-    "definitionVi": "courtesy"
+    "definitionVi": "lễ phép"
   },
   {
     "char": "历",
@@ -4065,7 +4065,7 @@
     "pinyin": "lì",
     "pinyinNormalized": "li",
     "definition": null,
-    "definitionVi": "history"
+    "definitionVi": "lịch sử"
   },
   {
     "char": "史",
@@ -4082,7 +4082,7 @@
     "pinyin": "shǐ",
     "pinyinNormalized": "shi",
     "definition": null,
-    "definitionVi": "history"
+    "definitionVi": "lịch sử"
   },
   {
     "char": "脸",
@@ -4125,7 +4125,7 @@
     "pinyin": "liàn",
     "pinyinNormalized": "lian",
     "definition": null,
-    "definitionVi": "to drill"
+    "definitionVi": "luyện tập"
   },
   {
     "char": "两",
@@ -4191,7 +4191,7 @@
     "pinyin": "liú",
     "pinyinNormalized": "liu",
     "definition": null,
-    "definitionVi": "to stay"
+    "definitionVi": "ở lại"
   },
   {
     "char": "学",
@@ -4211,7 +4211,7 @@
     "pinyin": "xué",
     "pinyinNormalized": "xue",
     "definition": null,
-    "definitionVi": "learning"
+    "definitionVi": "học tập"
   },
   {
     "char": "楼",
@@ -4283,7 +4283,7 @@
     "pinyin": "lǚ",
     "pinyinNormalized": "lu",
     "definition": null,
-    "definitionVi": "journey"
+    "definitionVi": "chuyến đi"
   },
   {
     "char": "游",
@@ -4307,7 +4307,7 @@
     "pinyin": "yóu",
     "pinyinNormalized": "you",
     "definition": null,
-    "definitionVi": "to wander"
+    "definitionVi": "du ngoạn"
   },
   {
     "char": "绿",
@@ -4385,7 +4385,7 @@
     "pinyin": "mǎn",
     "pinyinNormalized": "man",
     "definition": null,
-    "definitionVi": "to fill"
+    "definitionVi": "lấp đầy"
   },
   {
     "char": "意",
@@ -4410,7 +4410,7 @@
     "pinyin": "yì",
     "pinyinNormalized": "yi",
     "definition": null,
-    "definitionVi": "thought"
+    "definitionVi": "ý nghĩ"
   },
   {
     "char": "帽",
@@ -4434,7 +4434,7 @@
     "pinyin": "mào",
     "pinyinNormalized": "mao",
     "definition": null,
-    "definitionVi": "hat"
+    "definitionVi": "mũ"
   },
   {
     "char": "每",
@@ -4473,7 +4473,7 @@
     "pinyin": "mèi",
     "pinyinNormalized": "mei",
     "definition": null,
-    "definitionVi": "younger sister"
+    "definitionVi": "em gái"
   },
   {
     "char": "门",
@@ -4507,7 +4507,7 @@
     "pinyin": "tiáo",
     "pinyinNormalized": "tiao",
     "definition": null,
-    "definitionVi": "con, chiếc, cái (lượng từ cho vật dài)"
+    "definitionVi": "lượng từ"
   },
   {
     "char": "白",
@@ -4524,7 +4524,7 @@
     "pinyin": "bái",
     "pinyinNormalized": "bai",
     "definition": null,
-    "definitionVi": "white"
+    "definitionVi": "màu trắng"
   },
   {
     "char": "拿",
@@ -4563,7 +4563,7 @@
     "pinyin": "nǎi",
     "pinyinNormalized": "nai",
     "definition": null,
-    "definitionVi": "milk"
+    "definitionVi": "sữa"
   },
   {
     "char": "南",
@@ -4642,7 +4642,7 @@
     "pinyin": "jí",
     "pinyinNormalized": "ji",
     "definition": null,
-    "definitionVi": "level"
+    "definitionVi": "cấp độ"
   },
   {
     "char": "轻",
@@ -4663,7 +4663,7 @@
     "pinyin": "qīng",
     "pinyinNormalized": "qing",
     "definition": null,
-    "definitionVi": "light"
+    "definitionVi": "nhẹ"
   },
   {
     "char": "努",
@@ -4682,7 +4682,7 @@
     "pinyin": "nǔ",
     "pinyinNormalized": "nu",
     "definition": null,
-    "definitionVi": "to exert"
+    "definitionVi": "cố gắng"
   },
   {
     "char": "力",
@@ -4696,7 +4696,7 @@
     "pinyin": "lì",
     "pinyinNormalized": "li",
     "definition": null,
-    "definitionVi": "strength"
+    "definitionVi": "sức lực"
   },
   {
     "char": "爬",
@@ -4716,7 +4716,7 @@
     "pinyin": "pá",
     "pinyinNormalized": "pa",
     "definition": null,
-    "definitionVi": "to climb"
+    "definitionVi": "leo trèo"
   },
   {
     "char": "山",
@@ -4731,7 +4731,7 @@
     "pinyin": "shān",
     "pinyinNormalized": "shan",
     "definition": null,
-    "definitionVi": "mountain"
+    "definitionVi": "núi"
   },
   {
     "char": "盘",
@@ -4754,7 +4754,7 @@
     "pinyin": "pán",
     "pinyinNormalized": "pan",
     "definition": null,
-    "definitionVi": "tray"
+    "definitionVi": "cái đĩa"
   },
   {
     "char": "旁",
@@ -4776,7 +4776,7 @@
     "pinyin": "páng",
     "pinyinNormalized": "pang",
     "definition": null,
-    "definitionVi": "side"
+    "definitionVi": "bên cạnh"
   },
   {
     "char": "边",
@@ -4793,7 +4793,7 @@
     "pinyin": "biān",
     "pinyinNormalized": "bian",
     "definition": null,
-    "definitionVi": "border"
+    "definitionVi": "biên giới"
   },
   {
     "char": "跑",
@@ -4817,7 +4817,7 @@
     "pinyin": "pǎo",
     "pinyinNormalized": "pao",
     "definition": null,
-    "definitionVi": "to run"
+    "definitionVi": "chạy"
   },
   {
     "char": "步",
@@ -4836,7 +4836,7 @@
     "pinyin": "bù",
     "pinyinNormalized": "bu",
     "definition": null,
-    "definitionVi": "walk"
+    "definitionVi": "đi bộ"
   },
   {
     "char": "皮",
@@ -4853,7 +4853,7 @@
     "pinyin": "pí",
     "pinyinNormalized": "pi",
     "definition": null,
-    "definitionVi": "skin"
+    "definitionVi": "da"
   },
   {
     "char": "鞋",
@@ -4880,7 +4880,7 @@
     "pinyin": "xié",
     "pinyinNormalized": "xie",
     "definition": null,
-    "definitionVi": "shoes"
+    "definitionVi": "giày"
   },
   {
     "char": "啤",
@@ -4903,7 +4903,7 @@
     "pinyin": "pí",
     "pinyinNormalized": "pi",
     "definition": null,
-    "definitionVi": "beer"
+    "definitionVi": "bia"
   },
   {
     "char": "酒",
@@ -4925,7 +4925,7 @@
     "pinyin": "jiǔ",
     "pinyinNormalized": "jiu",
     "definition": null,
-    "definitionVi": "wine"
+    "definitionVi": "rượu"
   },
   {
     "char": "宜",
@@ -4945,7 +4945,7 @@
     "pinyin": "yí",
     "pinyinNormalized": "yi",
     "definition": null,
-    "definitionVi": "fitting"
+    "definitionVi": "phù hợp"
   },
   {
     "char": "票",
@@ -4988,7 +4988,7 @@
     "pinyin": "qī",
     "pinyinNormalized": "qi",
     "definition": null,
-    "definitionVi": "wife"
+    "definitionVi": "vợ"
   },
   {
     "char": "起",
@@ -5010,7 +5010,7 @@
     "pinyin": "qǐ",
     "pinyinNormalized": "qi",
     "definition": null,
-    "definitionVi": "to begin"
+    "definitionVi": "bắt đầu"
   },
   {
     "char": "床",
@@ -5029,7 +5029,7 @@
     "pinyin": "chuáng",
     "pinyinNormalized": "chuang",
     "definition": null,
-    "definitionVi": "bed"
+    "definitionVi": "giường"
   },
   {
     "char": "来",
@@ -5070,7 +5070,7 @@
     "pinyin": "qiān",
     "pinyinNormalized": "qian",
     "definition": null,
-    "definitionVi": "lead"
+    "definitionVi": "chì"
   },
   {
     "char": "笔",
@@ -5092,7 +5092,7 @@
     "pinyin": "bǐ",
     "pinyinNormalized": "bi",
     "definition": null,
-    "definitionVi": "pen"
+    "definitionVi": "bút"
   },
   {
     "char": "清",
@@ -5115,7 +5115,7 @@
     "pinyin": "qīng",
     "pinyinNormalized": "qing",
     "definition": null,
-    "definitionVi": "clean"
+    "definitionVi": "sạch"
   },
   {
     "char": "楚",
@@ -5140,7 +5140,7 @@
     "pinyin": "chǔ",
     "pinyinNormalized": "chu",
     "definition": null,
-    "definitionVi": "clear"
+    "definitionVi": "rõ ràng"
   },
   {
     "char": "秋",
@@ -5185,7 +5185,7 @@
     "pinyin": "qún",
     "pinyinNormalized": "qun",
     "definition": null,
-    "definitionVi": "skirt"
+    "definitionVi": "váy"
   },
   {
     "char": "后",
@@ -5203,7 +5203,7 @@
     "pinyin": "hòu",
     "pinyinNormalized": "hou",
     "definition": null,
-    "definitionVi": "after"
+    "definitionVi": "sau"
   },
   {
     "char": "让",
@@ -5220,7 +5220,7 @@
     "pinyin": "ràng",
     "pinyinNormalized": "rang",
     "definition": null,
-    "definitionVi": "cho phép, bảo, nhường"
+    "definitionVi": "cho phép, nhường"
   },
   {
     "char": "日",
@@ -5258,7 +5258,7 @@
     "pinyin": "róng",
     "pinyinNormalized": "rong",
     "definition": null,
-    "definitionVi": "appearance"
+    "definitionVi": "dung mạo"
   },
   {
     "char": "易",
@@ -5278,7 +5278,7 @@
     "pinyin": "yì",
     "pinyinNormalized": "yi",
     "definition": null,
-    "definitionVi": "to change"
+    "definitionVi": "thay đổi"
   },
   {
     "char": "如",
@@ -5296,7 +5296,7 @@
     "pinyin": "rú",
     "pinyinNormalized": "ru",
     "definition": null,
-    "definitionVi": "as"
+    "definitionVi": "như"
   },
   {
     "char": "果",
@@ -5316,7 +5316,7 @@
     "pinyin": "guǒ",
     "pinyinNormalized": "guo",
     "definition": null,
-    "definitionVi": "fruit"
+    "definitionVi": "quả"
   },
   {
     "char": "生",
@@ -5333,7 +5333,7 @@
     "pinyin": "shēng",
     "pinyinNormalized": "sheng",
     "definition": null,
-    "definitionVi": "life"
+    "definitionVi": "sống, sinh"
   },
   {
     "char": "病",
@@ -5355,7 +5355,7 @@
     "pinyin": "bìng",
     "pinyinNormalized": "bing",
     "definition": null,
-    "definitionVi": "sickness"
+    "definitionVi": "bệnh tật"
   },
   {
     "char": "气",
@@ -5371,7 +5371,7 @@
     "pinyin": "qì",
     "pinyinNormalized": "qi",
     "definition": null,
-    "definitionVi": "air"
+    "definitionVi": "khí"
   },
   {
     "char": "声",
@@ -5390,7 +5390,7 @@
     "pinyin": "shēng",
     "pinyinNormalized": "sheng",
     "definition": null,
-    "definitionVi": "sound"
+    "definitionVi": "âm thanh"
   },
   {
     "char": "音",
@@ -5411,7 +5411,7 @@
     "pinyin": "yīn",
     "pinyinNormalized": "yin",
     "definition": null,
-    "definitionVi": "sound"
+    "definitionVi": "âm thanh"
   },
   {
     "char": "时",
@@ -5430,7 +5430,7 @@
     "pinyin": "shí",
     "pinyinNormalized": "shi",
     "definition": null,
-    "definitionVi": "time"
+    "definitionVi": "thời gian"
   },
   {
     "char": "间",
@@ -5449,7 +5449,7 @@
     "pinyin": "jiān",
     "pinyinNormalized": "jian",
     "definition": null,
-    "definitionVi": "between"
+    "definitionVi": "giữa"
   },
   {
     "char": "情",
@@ -5472,7 +5472,7 @@
     "pinyin": "qíng",
     "pinyinNormalized": "qing",
     "definition": null,
-    "definitionVi": "emotion"
+    "definitionVi": "tình cảm"
   },
   {
     "char": "手",
@@ -5488,7 +5488,7 @@
     "pinyin": "shǒu",
     "pinyinNormalized": "shou",
     "definition": null,
-    "definitionVi": "hand"
+    "definitionVi": "tay"
   },
   {
     "char": "表",
@@ -5508,7 +5508,7 @@
     "pinyin": "biǎo",
     "pinyinNormalized": "biao",
     "definition": null,
-    "definitionVi": "to show"
+    "definitionVi": "biểu thị, thể hiện"
   },
   {
     "char": "瘦",
@@ -5534,7 +5534,7 @@
     "pinyin": "shòu",
     "pinyinNormalized": "shou",
     "definition": null,
-    "definitionVi": "gầy, mảnh khảnh"
+    "definitionVi": "gầy"
   },
   {
     "char": "叔",
@@ -5554,7 +5554,7 @@
     "pinyin": "shū",
     "pinyinNormalized": "shu",
     "definition": null,
-    "definitionVi": "uncle"
+    "definitionVi": "chú"
   },
   {
     "char": "树",
@@ -5633,7 +5633,7 @@
     "pinyin": "suī",
     "pinyinNormalized": "sui",
     "definition": null,
-    "definitionVi": "although"
+    "definitionVi": "mặc dù"
   },
   {
     "char": "所",
@@ -5653,7 +5653,7 @@
     "pinyin": "suǒ",
     "pinyinNormalized": "suo",
     "definition": null,
-    "definitionVi": "place"
+    "definitionVi": "nơi chốn"
   },
   {
     "char": "它",
@@ -5670,7 +5670,7 @@
     "pinyin": "tā",
     "pinyinNormalized": "ta",
     "definition": null,
-    "definitionVi": "nó (chỉ đồ vật, con vật)"
+    "definitionVi": "nó (vật, con vật)"
   },
   {
     "char": "特",
@@ -5692,7 +5692,7 @@
     "pinyin": "tè",
     "pinyinNormalized": "te",
     "definition": null,
-    "definitionVi": "special"
+    "definitionVi": "đặc biệt"
   },
   {
     "char": "疼",
@@ -5789,7 +5789,7 @@
     "pinyin": "tiào",
     "pinyinNormalized": "tiao",
     "definition": null,
-    "definitionVi": "to hop"
+    "definitionVi": "nhảy"
   },
   {
     "char": "舞",
@@ -5815,7 +5815,7 @@
     "pinyin": "wǔ",
     "pinyinNormalized": "wu",
     "definition": null,
-    "definitionVi": "to dance"
+    "definitionVi": "nhảy múa"
   },
   {
     "char": "停",
@@ -5896,7 +5896,7 @@
     "pinyin": "wài",
     "pinyinNormalized": "wai",
     "definition": null,
-    "definitionVi": "bên ngoài, ngoại"
+    "definitionVi": "bên ngoài"
   },
   {
     "char": "完",
@@ -5915,7 +5915,7 @@
     "pinyin": "wán",
     "pinyinNormalized": "wan",
     "definition": null,
-    "definitionVi": "xong, kết thúc"
+    "definitionVi": "hoàn thành"
   },
   {
     "char": "玩",
@@ -5935,7 +5935,7 @@
     "pinyin": "wán",
     "pinyinNormalized": "wan",
     "definition": null,
-    "definitionVi": "chơi, giải trí"
+    "definitionVi": "chơi"
   },
   {
     "char": "晚",
@@ -5958,7 +5958,7 @@
     "pinyin": "wǎn",
     "pinyinNormalized": "wan",
     "definition": null,
-    "definitionVi": "night"
+    "definitionVi": "đêm"
   },
   {
     "char": "往",
@@ -5978,7 +5978,7 @@
     "pinyin": "wǎng",
     "pinyinNormalized": "wang",
     "definition": null,
-    "definitionVi": "hướng về, về phía"
+    "definitionVi": "hướng về"
   },
   {
     "char": "忘",
@@ -5997,7 +5997,7 @@
     "pinyin": "wàng",
     "pinyinNormalized": "wang",
     "definition": null,
-    "definitionVi": "to forget"
+    "definitionVi": "quên"
   },
   {
     "char": "为",
@@ -6013,7 +6013,7 @@
     "pinyin": "wèi",
     "pinyinNormalized": "wei",
     "definition": null,
-    "definitionVi": "to do"
+    "definitionVi": "làm, vì"
   },
   {
     "char": "什",
@@ -6029,7 +6029,7 @@
     "pinyin": "shén",
     "pinyinNormalized": "shen",
     "definition": null,
-    "definitionVi": "what? mixed"
+    "definitionVi": "gì"
   },
   {
     "char": "么",
@@ -6044,7 +6044,7 @@
     "pinyin": "me",
     "pinyinNormalized": "me",
     "definition": null,
-    "definitionVi": "interrogative particle"
+    "definitionVi": "trợ từ nghi vấn"
   },
   {
     "char": "问",
@@ -6062,7 +6062,7 @@
     "pinyin": "wèn",
     "pinyinNormalized": "wen",
     "definition": null,
-    "definitionVi": "to ask about"
+    "definitionVi": "hỏi"
   },
   {
     "char": "西",
@@ -6099,7 +6099,7 @@
     "pinyin": "xī",
     "pinyinNormalized": "xi",
     "definition": null,
-    "definitionVi": "rare"
+    "definitionVi": "hy vọng"
   },
   {
     "char": "望",
@@ -6122,7 +6122,7 @@
     "pinyin": "wàng",
     "pinyinNormalized": "wang",
     "definition": null,
-    "definitionVi": "to expect"
+    "definitionVi": "mong đợi"
   },
   {
     "char": "洗",
@@ -6143,7 +6143,7 @@
     "pinyin": "xǐ",
     "pinyinNormalized": "xi",
     "definition": null,
-    "definitionVi": "rửa, giặt"
+    "definitionVi": "rửa"
   },
   {
     "char": "澡",
@@ -6171,7 +6171,7 @@
     "pinyin": "zǎo",
     "pinyinNormalized": "zao",
     "definition": null,
-    "definitionVi": "to wash"
+    "definitionVi": "tắm"
   },
   {
     "char": "夏",
@@ -6229,7 +6229,7 @@
     "pinyin": "xiàng",
     "pinyinNormalized": "xiang",
     "definition": null,
-    "definitionVi": "về phía, hướng về"
+    "definitionVi": "về phía"
   },
   {
     "char": "小",
@@ -6244,7 +6244,7 @@
     "pinyin": "xiǎo",
     "pinyinNormalized": "xiao",
     "definition": null,
-    "definitionVi": "nhỏ, bé"
+    "definitionVi": "nhỏ"
   },
   {
     "char": "笑",
@@ -6312,7 +6312,7 @@
     "pinyin": "wén",
     "pinyinNormalized": "wen",
     "definition": null,
-    "definitionVi": "news"
+    "definitionVi": "tin tức"
   },
   {
     "char": "鲜",
@@ -6338,7 +6338,7 @@
     "pinyin": "xiān",
     "pinyinNormalized": "xian",
     "definition": null,
-    "definitionVi": "fresh"
+    "definitionVi": "tươi"
   },
   {
     "char": "信",
@@ -6377,7 +6377,7 @@
     "pinyin": "xìng",
     "pinyinNormalized": "xing",
     "definition": null,
-    "definitionVi": "to thrive"
+    "definitionVi": "hưng thịnh"
   },
   {
     "char": "趣",
@@ -6404,7 +6404,7 @@
     "pinyin": "qù",
     "pinyinNormalized": "qu",
     "definition": null,
-    "definitionVi": "interest"
+    "definitionVi": "hứng thú"
   },
   {
     "char": "行",
@@ -6422,7 +6422,7 @@
     "pinyin": "háng",
     "pinyinNormalized": "hang",
     "definition": null,
-    "definitionVi": "hàng, ngành, nghề"
+    "definitionVi": "đi, hàng"
   },
   {
     "char": "李",
@@ -6441,7 +6441,7 @@
     "pinyin": "lǐ",
     "pinyinNormalized": "li",
     "definition": null,
-    "definitionVi": "plum"
+    "definitionVi": "quả mận"
   },
   {
     "char": "熊",
@@ -6467,7 +6467,7 @@
     "pinyin": "xióng",
     "pinyinNormalized": "xiong",
     "definition": null,
-    "definitionVi": "a bear"
+    "definitionVi": "con gấu"
   },
   {
     "char": "猫",
@@ -6516,7 +6516,7 @@
     "pinyin": "xū",
     "pinyinNormalized": "xu",
     "definition": null,
-    "definitionVi": "to need"
+    "definitionVi": "cần"
   },
   {
     "char": "要",
@@ -6537,7 +6537,7 @@
     "pinyin": "yào",
     "pinyinNormalized": "yao",
     "definition": null,
-    "definitionVi": "essential"
+    "definitionVi": "cần"
   },
   {
     "char": "选",
@@ -6558,7 +6558,7 @@
     "pinyin": "xuǎn",
     "pinyinNormalized": "xuan",
     "definition": null,
-    "definitionVi": "to select"
+    "definitionVi": "chọn"
   },
   {
     "char": "择",
@@ -6578,7 +6578,7 @@
     "pinyin": "zé",
     "pinyinNormalized": "ze",
     "definition": null,
-    "definitionVi": "to select"
+    "definitionVi": "chọn"
   },
   {
     "char": "颜",
@@ -6605,7 +6605,7 @@
     "pinyin": "yán",
     "pinyinNormalized": "yan",
     "definition": null,
-    "definitionVi": "face"
+    "definitionVi": "mặt"
   },
   {
     "char": "色",
@@ -6623,7 +6623,7 @@
     "pinyin": "sè",
     "pinyinNormalized": "se",
     "definition": null,
-    "definitionVi": "color"
+    "definitionVi": "màu"
   },
   {
     "char": "眼",
@@ -6646,7 +6646,7 @@
     "pinyin": "yǎn",
     "pinyinNormalized": "yan",
     "definition": null,
-    "definitionVi": "eyelet"
+    "definitionVi": "mắt"
   },
   {
     "char": "睛",
@@ -6671,7 +6671,7 @@
     "pinyin": "jīng",
     "pinyinNormalized": "jing",
     "definition": null,
-    "definitionVi": "eyeball"
+    "definitionVi": "mắt"
   },
   {
     "char": "求",
@@ -6690,7 +6690,7 @@
     "pinyin": "qiú",
     "pinyinNormalized": "qiu",
     "definition": null,
-    "definitionVi": "to seek"
+    "definitionVi": "cầu, tìm"
   },
   {
     "char": "爷",
@@ -6708,7 +6708,7 @@
     "pinyin": "yé",
     "pinyinNormalized": "ye",
     "definition": null,
-    "definitionVi": "grandfather"
+    "definitionVi": "ông nội"
   },
   {
     "char": "定",
@@ -6728,7 +6728,7 @@
     "pinyin": "dìng",
     "pinyinNormalized": "ding",
     "definition": null,
-    "definitionVi": "đặt, quyết định, chốt"
+    "definitionVi": "đặt, quyết định"
   },
   {
     "char": "样",
@@ -6750,7 +6750,7 @@
     "pinyin": "yàng",
     "pinyinNormalized": "yang",
     "definition": null,
-    "definitionVi": "form"
+    "definitionVi": "hình thức, kiểu"
   },
   {
     "char": "已",
@@ -6765,7 +6765,7 @@
     "pinyin": "yǐ",
     "pinyinNormalized": "yi",
     "definition": null,
-    "definitionVi": "already"
+    "definitionVi": "đã, rồi"
   },
   {
     "char": "思",
@@ -6786,7 +6786,7 @@
     "pinyin": "sī",
     "pinyinNormalized": "si",
     "definition": null,
-    "definitionVi": "to think"
+    "definitionVi": "suy nghĩ"
   },
   {
     "char": "因",
@@ -6804,7 +6804,7 @@
     "pinyin": "yīn",
     "pinyinNormalized": "yin",
     "definition": null,
-    "definitionVi": "cause"
+    "definitionVi": "nguyên nhân"
   },
   {
     "char": "乐",
@@ -6821,7 +6821,7 @@
     "pinyin": "lè",
     "pinyinNormalized": "le",
     "definition": null,
-    "definitionVi": "cheerful"
+    "definitionVi": "vui vẻ, vui tươi"
   },
   {
     "char": "银",
@@ -6844,7 +6844,7 @@
     "pinyin": "yín",
     "pinyinNormalized": "yin",
     "definition": null,
-    "definitionVi": "silver"
+    "definitionVi": "bạc"
   },
   {
     "char": "应",
@@ -6863,7 +6863,7 @@
     "pinyin": "yīng",
     "pinyinNormalized": "ying",
     "definition": null,
-    "definitionVi": "should"
+    "definitionVi": "nên, phải"
   },
   {
     "char": "该",
@@ -6883,7 +6883,7 @@
     "pinyin": "gāi",
     "pinyinNormalized": "gai",
     "definition": null,
-    "definitionVi": "should"
+    "definitionVi": "nên, phải"
   },
   {
     "char": "影",
@@ -6910,7 +6910,7 @@
     "pinyin": "yǐng",
     "pinyinNormalized": "ying",
     "definition": null,
-    "definitionVi": "shadow"
+    "definitionVi": "bóng, bóng tối"
   },
   {
     "char": "响",
@@ -6931,7 +6931,7 @@
     "pinyin": "xiǎng",
     "pinyinNormalized": "xiang",
     "definition": null,
-    "definitionVi": "to make noise"
+    "definitionVi": "gây tiếng ồn"
   },
   {
     "char": "用",
@@ -6968,7 +6968,7 @@
     "pinyin": "yǒng",
     "pinyinNormalized": "yong",
     "definition": null,
-    "definitionVi": "to swim"
+    "definitionVi": "bơi, bơi lội"
   },
   {
     "char": "有",
@@ -7004,7 +7004,7 @@
     "pinyin": "míng",
     "pinyinNormalized": "ming",
     "definition": null,
-    "definitionVi": "name"
+    "definitionVi": "tên, danh tiếng"
   },
   {
     "char": "右",
@@ -7021,7 +7021,7 @@
     "pinyin": "yòu",
     "pinyinNormalized": "you",
     "definition": null,
-    "definitionVi": "right"
+    "definitionVi": "phải"
   },
   {
     "char": "鱼",
@@ -7079,7 +7079,7 @@
     "pinyin": "yuán",
     "pinyinNormalized": "yuan",
     "definition": null,
-    "definitionVi": "source"
+    "definitionVi": "nguồn gốc"
   },
   {
     "char": "愿",
@@ -7105,7 +7105,7 @@
     "pinyin": "yuàn",
     "pinyinNormalized": "yuan",
     "definition": null,
-    "definitionVi": "desire"
+    "definitionVi": "mong muốn"
   },
   {
     "char": "运",
@@ -7124,7 +7124,7 @@
     "pinyin": "yùn",
     "pinyinNormalized": "yun",
     "definition": null,
-    "definitionVi": "to run"
+    "definitionVi": "vận hành"
   },
   {
     "char": "张",
@@ -7143,7 +7143,7 @@
     "pinyin": "zhāng",
     "pinyinNormalized": "zhang",
     "definition": null,
-    "definitionVi": "tờ, tấm, chiếc (lượng từ cho vật phẳng)"
+    "definitionVi": "tờ, tấm"
   },
   {
     "char": "找",
@@ -7162,7 +7162,7 @@
     "pinyin": "zhǎo",
     "pinyinNormalized": "zhao",
     "definition": null,
-    "definitionVi": "tìm, tìm kiếm"
+    "definitionVi": "tìm"
   },
   {
     "char": "着",
@@ -7185,7 +7185,7 @@
     "pinyin": "zhe",
     "pinyinNormalized": "zhe",
     "definition": null,
-    "definitionVi": "(trợ từ biểu thị trạng thái đang tiếp diễn)"
+    "definitionVi": "trợ từ tiếp diễn"
   },
   {
     "char": "真",
@@ -7207,7 +7207,7 @@
     "pinyin": "zhēn",
     "pinyinNormalized": "zhen",
     "definition": null,
-    "definitionVi": "thật, thật là"
+    "definitionVi": "thật"
   },
   {
     "char": "正",
@@ -7224,7 +7224,7 @@
     "pinyin": "zhèng",
     "pinyinNormalized": "zheng",
     "definition": null,
-    "definitionVi": "straight"
+    "definitionVi": "thẳng, chính xác"
   },
   {
     "char": "在",
@@ -7262,7 +7262,7 @@
     "pinyin": "zhī",
     "pinyinNormalized": "zhi",
     "definition": null,
-    "definitionVi": "to know"
+    "definitionVi": "biết"
   },
   {
     "char": "道",
@@ -7286,7 +7286,7 @@
     "pinyin": "dào",
     "pinyinNormalized": "dao",
     "definition": null,
-    "definitionVi": "method"
+    "definitionVi": "phương pháp, cách"
   },
   {
     "char": "中",
@@ -7302,7 +7302,7 @@
     "pinyin": "zhōng",
     "pinyinNormalized": "zhong",
     "definition": null,
-    "definitionVi": "central"
+    "definitionVi": "trung tâm, giữa"
   },
   {
     "char": "文",
@@ -7318,7 +7318,7 @@
     "pinyin": "wén",
     "pinyinNormalized": "wen",
     "definition": null,
-    "definitionVi": "culture"
+    "definitionVi": "văn hóa"
   },
   {
     "char": "重",
@@ -7339,7 +7339,7 @@
     "pinyin": "zhòng",
     "pinyinNormalized": "zhong",
     "definition": null,
-    "definitionVi": "heavy"
+    "definitionVi": "nặng"
   },
   {
     "char": "周",
@@ -7359,7 +7359,7 @@
     "pinyin": "zhōu",
     "pinyinNormalized": "zhou",
     "definition": null,
-    "definitionVi": "Zhou dynasty"
+    "definitionVi": "nhà Chu"
   },
   {
     "char": "末",
@@ -7376,7 +7376,7 @@
     "pinyin": "mò",
     "pinyinNormalized": "mo",
     "definition": null,
-    "definitionVi": "end"
+    "definitionVi": "cuối, kết thúc"
   },
   {
     "char": "注",
@@ -7396,7 +7396,7 @@
     "pinyin": "zhù",
     "pinyinNormalized": "zhu",
     "definition": null,
-    "definitionVi": "to concentrate"
+    "definitionVi": "tập trung"
   },
   {
     "char": "自",
@@ -7414,7 +7414,7 @@
     "pinyin": "zì",
     "pinyinNormalized": "zi",
     "definition": null,
-    "definitionVi": "self"
+    "definitionVi": "tự, bản thân"
   },
   {
     "char": "己",
@@ -7429,7 +7429,7 @@
     "pinyin": "jǐ",
     "pinyinNormalized": "ji",
     "definition": null,
-    "definitionVi": "self"
+    "definitionVi": "bản thân, mình"
   },
   {
     "char": "总",
@@ -7450,7 +7450,7 @@
     "pinyin": "zǒng",
     "pinyinNormalized": "zong",
     "definition": null,
-    "definitionVi": "to gather"
+    "definitionVi": "tập hợp, tổng hợp"
   },
   {
     "char": "嘴",
@@ -7519,7 +7519,7 @@
     "pinyin": "zuǒ",
     "pinyinNormalized": "zuo",
     "definition": null,
-    "definitionVi": "left"
+    "definitionVi": "trái"
   },
   {
     "char": "作",
@@ -7538,7 +7538,7 @@
     "pinyin": "zuò",
     "pinyinNormalized": "zuo",
     "definition": null,
-    "definitionVi": "to make"
+    "definitionVi": "làm, tạo ra"
   },
   {
     "char": "业",
@@ -7555,6 +7555,6 @@
     "pinyin": "yè",
     "pinyinNormalized": "ye",
     "definition": null,
-    "definitionVi": "business"
+    "definitionVi": "sự nghiệp"
   }
 ]

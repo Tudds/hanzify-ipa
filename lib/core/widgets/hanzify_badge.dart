@@ -1,15 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hanzify/core/theme/colors.dart';
-import 'package:hanzify/core/theme/typography.dart';
 
-/// Pill-shaped badge for HSK levels, POS tags, or generic labels.
-///
-/// Usage:
-/// ```dart
-/// HanzifyBadge.hsk(level: 1, colors: c)
-/// HanzifyBadge.pos(posKey: 'v', label: 'Dong tu', colors: c)
-/// HanzifyBadge(label: 'Custom', color: Colors.purple)
-/// ```
 class HanzifyBadge extends StatelessWidget {
   final String label;
   final Color color;
@@ -24,11 +15,10 @@ class HanzifyBadge extends StatelessWidget {
     required this.color,
     this.textColor,
     this.filled = false,
-    this.fontSize = AppFontSizes.labelSm,
+    this.fontSize = 11,
     this.padding,
   });
 
-  /// HSK level badge — uses `hskColors` from the theme.
   factory HanzifyBadge.hsk({
     Key? key,
     required int level,
@@ -44,14 +34,13 @@ class HanzifyBadge extends StatelessWidget {
     );
   }
 
-  /// Part-of-speech badge — uses `posColors` from the theme.
   factory HanzifyBadge.pos({
     Key? key,
     required String posKey,
     required String label,
     required AppThemeColors colors,
   }) {
-    final color = colors.posColors[posKey] ?? colors.placeholder;
+    final color = colors.posColors[posKey] ?? csPlaceholder(colors);
     return HanzifyBadge(
       key: key,
       label: label.toUpperCase(),
@@ -59,22 +48,24 @@ class HanzifyBadge extends StatelessWidget {
     );
   }
 
+  static Color csPlaceholder(AppThemeColors colors) => colors.onSurfaceVariant.withValues(alpha: 0.6);
+
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Container(
-      padding: padding ??
-          const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-      decoration: ShapeDecoration(
+      padding: padding ?? const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+      decoration: BoxDecoration(
         color: filled ? color : color.withValues(alpha: 0.12),
-        shape: const StadiumBorder(),
+        borderRadius: BorderRadius.circular(6),
       ),
       child: Text(
         label,
-        style: AppTypography.label(
+        style: theme.textTheme.labelSmall?.copyWith(
           fontSize: fontSize,
-          fontWeight: FontWeight.w700,
-          color: textColor ?? 
-              (filled ? (color.computeLuminance() > 0.6 ? Colors.black : Colors.white) : color),
+          fontWeight: FontWeight.bold,
+          color: textColor ?? (filled ? Colors.white : color),
         ),
       ),
     );

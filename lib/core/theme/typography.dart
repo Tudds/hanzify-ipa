@@ -14,6 +14,16 @@ class AppSpacing {
   // Legacy — non-4pt, kept for backward compat. Replace when rebuilding screens.
   static const double xxs = 5;
 
+  // ── Semantic section spacing ─────────────────────────────────────────
+  /// Gap between major content sections (e.g., between "Bài học" and "Ôn tập")
+  static const double sectionGap = 40;
+  /// Gap between sub-sections within a section
+  static const double subsectionGap = 24;
+  /// Gap between cards in a vertical list
+  static const double cardListGap = 12;
+  /// Gap between inline elements (tags, badges)
+  static const double inlineGap = 8;
+
   // ── Named semantic sizes ─────────────────────────────────────────────
   static const double iconSm = 20;
   static const double iconMd = 28;
@@ -138,7 +148,7 @@ class AppTypography {
     FontWeight fontWeight = FontWeight.w700,
     Color? color,
   }) {
-    return GoogleFonts.notoSerifSc(
+    return GoogleFonts.notoSansSc(
       fontSize: fontSize,
       fontWeight: fontWeight,
       color: color,

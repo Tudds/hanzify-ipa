@@ -13,6 +13,8 @@ import 'package:hanzify/core/widgets/hanzify_section_header.dart';
 import 'package:hanzify/core/widgets/hanzify_detail_frame.dart';
 import 'package:hanzify/features/grammar/domain/entities/grammar_point.dart';
 import 'package:hanzify/features/grammar/presentation/providers/grammar_providers.dart';
+import 'package:hanzify/core/graph/graph_providers.dart';
+import 'package:hanzify/features/conversation/presentation/providers/conversation_providers.dart';
 
 class GrammarDetailScreen extends ConsumerWidget {
   final GrammarPoint grammar;
@@ -33,6 +35,7 @@ class GrammarDetailScreen extends ConsumerWidget {
         if (grammar.usages.isNotEmpty)
           SliverToBoxAdapter(child: _buildUsages(c)),
         SliverToBoxAdapter(child: _buildExamples(c, showPinyin)),
+        SliverToBoxAdapter(child: _buildConvSentences(c, ref, showPinyin, context)),
         if (grammar.relatedGrammar.isNotEmpty)
           SliverToBoxAdapter(
               child: _buildRelatedGrammar(c, ref, context)),
@@ -333,6 +336,110 @@ class GrammarDetailScreen extends ConsumerWidget {
           );
         }),
       ],
+    );
+  }
+
+  // ── Câu minh hoạ từ hội thoại (P2.5) ────────────────────────────────────────
+  Widget _buildConvSentences(AppThemeColors c, WidgetRef ref, bool showPinyin, BuildContext context) {
+    final sentIdsAsync = ref.watch(grammarSentenceRefsProvider(grammar.id));
+    final allConvs = ref.watch(conversationListProvider).asData?.value ?? [];
+
+    return sentIdsAsync.when(
+      data: (sentIds) {
+        if (sentIds.isEmpty) return const SizedBox.shrink();
+
+        // Parse sentenceId → {zh, pinyin, vi}
+        final sentences = sentIds
+            .map((sid) {
+              final parts = sid.split('#L');
+              if (parts.length != 2) return null;
+              final convId = parts[0];
+              final lineIdx = int.tryParse(parts[1]);
+              if (lineIdx == null) return null;
+              final conv =
+                  allConvs.where((c) => c.id == convId).firstOrNull;
+              if (conv == null || lineIdx >= conv.lines.length) return null;
+              return (convId: convId, line: conv.lines[lineIdx], conv: conv);
+            })
+            .whereType<({String convId, dynamic line, dynamic conv})>()
+            .toList();
+
+        if (sentences.isEmpty) return const SizedBox.shrink();
+
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
+          child: Theme(
+            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+            child: Card.filled(
+              color: c.surfaceLow,
+              margin: EdgeInsets.zero,
+              child: ExpansionTile(
+                title: const Text('Câu minh hoạ thực tế', style: TextStyle(fontWeight: FontWeight.bold)),
+                leading: const Icon(Icons.chat_bubble_outline_rounded),
+                childrenPadding: const EdgeInsets.only(bottom: AppSpacing.md),
+                children: sentences.map((s) => Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: AppSpacing.md, vertical: AppSpacing.xs),
+                  child: HanzifyCard(
+                    variant: HanzifyCardVariant.glass,
+                    padding: const EdgeInsets.all(AppSpacing.lg),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(children: [
+                          Text(s.conv.icon as String,
+                              style: const TextStyle(fontSize: 14)),
+                          const SizedBox(width: AppSpacing.xs),
+                          Text(s.conv.title as String,
+                              style: AppTypography.label(
+                                  fontSize: AppFontSizes.labelSm,
+                                  color: c.placeholder)),
+                        ]),
+                        const SizedBox(height: AppSpacing.sm),
+                        Text(s.line.zh as String,
+                            style: AppTypography.hanziUi(
+                                fontSize: AppFontSizes.headlineSm,
+                                fontWeight: FontWeight.w600,
+                                color: c.text)),
+                        if (showPinyin && (s.line.pinyin as String).isNotEmpty) ...[
+                          const SizedBox(height: AppSpacing.xs),
+                          Text(s.line.pinyin as String,
+                              style: AppTypography.pinyin(
+                                  fontSize: AppFontSizes.bodyMd,
+                                  color: c.primary)),
+                        ],
+                        const SizedBox(height: AppSpacing.sm),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: 3,
+                              height: 20,
+                              margin: const EdgeInsets.only(right: AppSpacing.sm),
+                              decoration: BoxDecoration(
+                                  color: c.primary,
+                                  borderRadius: BorderRadius.circular(2)),
+                            ),
+                            Expanded(
+                              child: Text(s.line.vi as String,
+                                  style: AppTypography.body(
+                                      fontSize: AppFontSizes.bodyMd,
+                                      color: c.onSurfaceVariant,
+                                      height: 1.4)),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                )).toList(),
+              ),
+            ),
+          ),
+        );
+      },
+      loading: () => const SizedBox.shrink(),
+      error: (_, _) => const SizedBox.shrink(),
     );
   }
 

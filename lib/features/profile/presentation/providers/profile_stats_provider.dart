@@ -17,7 +17,7 @@ ProfileStats profileStats(Ref ref) {
 
 ProfileStats _compute(List<Vocab> vocabs) {
   final mastered = vocabs.where((v) => v.isMastered).toList();
-  final reviewed = vocabs.where((v) => v.repetitions > 0).toList();
+  final reviewed = vocabs.where((v) => v.interval > 0).toList();
 
   // ── Dominant HSK level ────────────────────────────────────────────────────
   // Ưu tiên: level có nhiều mastered nhất; fallback: level có nhiều reviewed nhất

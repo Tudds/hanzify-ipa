@@ -96,6 +96,7 @@ class GrammarWebDataSourceImpl implements GrammarLocalDataSource {
       'assets/data/grammar_hsk1.json',
       'assets/data/grammar_hsk2.json',
       'assets/data/grammar_hsk3.json',
+      'assets/data/grammar_hsk4.json',
     ];
     for (final path in files) {
       try {

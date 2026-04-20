@@ -6,7 +6,6 @@ import 'package:hanzify/core/theme/app_theme_helper.dart';
 import 'package:hanzify/core/theme/colors.dart';
 import 'package:hanzify/core/theme/typography.dart';
 import 'package:hanzify/core/utils/pos_labels.dart';
-import 'package:hanzify/core/utils/vocab_meaning_helper.dart';
 import 'package:hanzify/core/widgets/feedback_border_widget.dart';
 import 'package:hanzify/core/widgets/flashcard_flip_widget.dart';
 import 'package:hanzify/core/widgets/highlighted_text.dart';

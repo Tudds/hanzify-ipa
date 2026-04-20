@@ -43,7 +43,17 @@ class VocabWebDataSourceImpl implements VocabLocalDataSource {
   @override
   Future<List<Vocab>> getDue({int limit = 0, int offset = 0}) async {
     final now = DateTime.now().toUtc();
-    var results = _store.where((v) => v.nextReview.isBefore(now)).toList();
+    var results = _store
+        .where((v) => v.nextReview.isBefore(now) && v.interval > 0)
+        .toList();
+    if (offset > 0) results = results.skip(offset).toList();
+    if (limit > 0) results = results.take(limit).toList();
+    return results;
+  }
+
+  @override
+  Future<List<Vocab>> getNew({int limit = 0, int offset = 0}) async {
+    var results = _store.where((v) => v.interval == 0).toList();
     if (offset > 0) results = results.skip(offset).toList();
     if (limit > 0) results = results.take(limit).toList();
     return results;
@@ -128,7 +138,7 @@ class VocabWebDataSourceImpl implements VocabLocalDataSource {
 
   Future<void> _seedFromAssets() async {
     try {
-      final listFiles = ['hsk1.json', 'hsk2.json', 'hsk3.json'];
+      final listFiles = ['hsk1.json', 'hsk2.json', 'hsk3.json', 'hsk4.json'];
       
       // Parallelize asset loading
       final contents = await Future.wait(

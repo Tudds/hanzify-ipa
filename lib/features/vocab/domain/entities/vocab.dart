@@ -105,6 +105,16 @@ class Vocab extends Equatable {
     required this.nextReview,
   });
 
+  String get primaryMeaningVi => meanings.isNotEmpty ? meanings.first.vi : '';
+
+  Map<String, List<Meaning>> get groupedByPos {
+    final map = <String, List<Meaning>>{};
+    for (final m in meanings) {
+      map.putIfAbsent(m.pos, () => []).add(m);
+    }
+    return map;
+  }
+
   @override
   List<Object?> get props => [
     id, hanzi, pinyin, pinyinNormalized, characters,

@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hanzify/core/theme/theme_state.dart';
-import 'package:hanzify/core/theme/typography.dart';
 
-/// Reusable section header: Icon + UPPERCASE title + optional trailing widget.
-///
-/// Matches the design system pattern used across Home, Detail, Dictionary screens.
-/// Example: `[icon] BÀI HỌC                              Xem tất cả >`
 class HanzifySectionHeader extends StatelessWidget {
   final String title;
   final String? emoji;
@@ -25,25 +19,26 @@ class HanzifySectionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final c = theme.extension<AppThemeExtension>()?.colors ?? AppThemeColors.light;
+    final cs = theme.colorScheme;
 
     return Padding(
-      padding: padding ?? const EdgeInsets.symmetric(
-        horizontal: AppSpacing.xl,
-        vertical: AppSpacing.md,
-      ),
+      padding: padding ?? const EdgeInsets.fromLTRB(16, 32, 16, 16),
       child: Row(
         children: [
           if (emoji != null) ...[
             Text(emoji!, style: const TextStyle(fontSize: 18)),
-            const SizedBox(width: AppSpacing.sm),
+            const SizedBox(width: 8),
           ] else if (icon != null) ...[
-            Icon(icon, size: 18, color: c.primary),
-            const SizedBox(width: AppSpacing.sm),
+            Icon(icon, size: 18, color: cs.primary),
+            const SizedBox(width: 8),
           ],
           Text(
             title.toUpperCase(),
-            style: AppTypography.sectionTitle(color: c.text),
+            style: theme.textTheme.labelMedium?.copyWith(
+              fontWeight: FontWeight.w900,
+              color: cs.onSurfaceVariant,
+              letterSpacing: 1.1,
+            ),
           ),
           if (trailing != null) ...[
             const Spacer(),

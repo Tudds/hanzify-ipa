@@ -53,6 +53,16 @@ class GrammarRepositoryImpl implements GrammarRepository {
   }
 
   @override
+  Future<List<GrammarPoint>> getByIds(List<String> ids) async {
+    try {
+      final idSet = ids.toSet();
+      return (await localDataSource.getAll()).where((g) => idSet.contains(g.id)).toList();
+    } catch (e) {
+      throw DatabaseFailure('Failed to load grammar by ids: $e');
+    }
+  }
+
+  @override
   Future<void> update(GrammarPoint grammar) async {
     try {
       await localDataSource.update(grammar);

@@ -92,13 +92,23 @@ class FlashcardSession extends _$FlashcardSession {
       // 3) hskLevel → getByLevel()
       // 4) tất cả → getAll()
       if (onlyDue) {
-        // getDue() không hỗ trợ hskLevel filter → load due rồi filter
-        cards = await repository.getDue();
-        if (cards.isEmpty) {
-          // Auto-seed if empty
-          await repository.reseed();
-          cards = await repository.getDue();
+        // 1. Lấy từ cần ôn (Review)
+        final dueCards = await repository.getDue();
+        
+        // 2. Nếu không có từ cần ôn, lấy từ mới (New)
+        if (dueCards.isEmpty) {
+          cards = await repository.getNew();
+          
+          // 3. Nếu vẫn không có từ nào (DB rỗng), mới reseed
+          if (cards.isEmpty) {
+            await repository.reseed();
+            cards = await repository.getNew();
+          }
+        } else {
+          cards = dueCards;
         }
+
+        // Lọc theo HSK Level nếu có
         if (hskLevel != null && hskLevel > 0) {
           cards = cards.where((v) => v.level == hskLevel).toList();
         }

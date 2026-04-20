@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hanzify/core/theme/theme_state.dart';
-import 'package:hanzify/core/theme/typography.dart';
 
 enum HanzifyTextFieldVariant { filled, outlined, search }
 
-/// Standardized text field with consistent focus/error/disabled states.
 class HanzifyTextField extends StatelessWidget {
   final TextEditingController? controller;
   final String? hint;
@@ -43,52 +40,26 @@ class HanzifyTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final c = Theme.of(context).extension<AppThemeExtension>()?.colors
-        ?? AppThemeColors.light;
-
-    final radius = BorderRadius.circular(AppRadii.lg);
-    final borderColor = errorText != null ? c.error : c.outlineVariant;
-    final focusColor = errorText != null ? c.error : c.primary;
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
+    final radius = BorderRadius.circular(16);
 
     InputDecoration decoration;
     switch (variant) {
-      case HanzifyTextFieldVariant.filled:
+      case HanzifyTextFieldVariant.search:
         decoration = InputDecoration(
-          hintText: hint,
-          labelText: label,
-          errorText: errorText,
-          prefixIcon: prefixIcon,
+          hintText: hint ?? 'Tìm kiếm...',
+          prefixIcon: prefixIcon ?? Icon(Icons.search, color: cs.onSurfaceVariant, size: 20),
           suffixIcon: suffixIcon,
           filled: true,
-          fillColor: c.surfaceLowest,
-          contentPadding: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.lg,
-            vertical: AppSpacing.md,
-          ),
+          fillColor: cs.surfaceContainerHigh,
+          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           border: OutlineInputBorder(borderRadius: radius, borderSide: BorderSide.none),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: radius,
-            borderSide: BorderSide(color: borderColor, width: 1),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: radius,
-            borderSide: BorderSide(color: focusColor, width: 1.5),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderRadius: radius,
-            borderSide: BorderSide(color: c.error, width: 1.5),
-          ),
-          focusedErrorBorder: OutlineInputBorder(
-            borderRadius: radius,
-            borderSide: BorderSide(color: c.error, width: 1.5),
-          ),
-          hintStyle: AppTypography.body(color: c.placeholder),
-          labelStyle: AppTypography.body(color: c.onSurfaceVariant),
-          errorStyle: AppTypography.body(
-            fontSize: AppFontSizes.bodySm,
-            color: c.error,
-          ),
+          enabledBorder: OutlineInputBorder(borderRadius: radius, borderSide: BorderSide.none),
+          focusedBorder: OutlineInputBorder(borderRadius: radius, borderSide: BorderSide(color: cs.primary, width: 2)),
+          hintStyle: theme.textTheme.bodyMedium?.copyWith(color: cs.onSurfaceVariant),
         );
+        break;
       case HanzifyTextFieldVariant.outlined:
         decoration = InputDecoration(
           hintText: hint,
@@ -97,52 +68,33 @@ class HanzifyTextField extends StatelessWidget {
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
           filled: false,
-          contentPadding: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.lg,
-            vertical: AppSpacing.md,
-          ),
-          border: OutlineInputBorder(
-            borderRadius: radius,
-            borderSide: BorderSide(color: borderColor),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: radius,
-            borderSide: BorderSide(color: borderColor),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: radius,
-            borderSide: BorderSide(color: focusColor, width: 1.5),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderRadius: radius,
-            borderSide: BorderSide(color: c.error, width: 1.5),
-          ),
-          focusedErrorBorder: OutlineInputBorder(
-            borderRadius: radius,
-            borderSide: BorderSide(color: c.error, width: 1.5),
-          ),
-          hintStyle: AppTypography.body(color: c.placeholder),
-          labelStyle: AppTypography.body(color: c.onSurfaceVariant),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          border: OutlineInputBorder(borderRadius: radius),
+          enabledBorder: OutlineInputBorder(borderRadius: radius, borderSide: BorderSide(color: cs.outline)),
+          focusedBorder: OutlineInputBorder(borderRadius: radius, borderSide: BorderSide(color: cs.primary, width: 2)),
+          errorBorder: OutlineInputBorder(borderRadius: radius, borderSide: BorderSide(color: cs.error, width: 2)),
+          hintStyle: theme.textTheme.bodyMedium?.copyWith(color: cs.onSurfaceVariant),
+          labelStyle: theme.textTheme.bodyMedium?.copyWith(color: cs.onSurfaceVariant),
         );
-      case HanzifyTextFieldVariant.search:
+        break;
+      case HanzifyTextFieldVariant.filled:
         decoration = InputDecoration(
-          hintText: hint ?? 'Tìm kiếm...',
-          prefixIcon: prefixIcon ?? Icon(Icons.search, color: c.placeholder, size: 20),
+          hintText: hint,
+          labelText: label,
+          errorText: errorText,
+          prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
           filled: true,
-          fillColor: c.surface,
-          contentPadding: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.lg,
-            vertical: AppSpacing.sm,
-          ),
-          border: OutlineInputBorder(borderRadius: radius, borderSide: BorderSide.none),
-          enabledBorder: OutlineInputBorder(borderRadius: radius, borderSide: BorderSide.none),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: radius,
-            borderSide: BorderSide(color: c.primary, width: 1.5),
-          ),
-          hintStyle: AppTypography.body(color: c.placeholder),
+          fillColor: cs.surfaceContainerLowest,
+          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          border: UnderlineInputBorder(borderRadius: radius.copyWith(bottomLeft: Radius.zero, bottomRight: Radius.zero)),
+          enabledBorder: UnderlineInputBorder(borderRadius: radius.copyWith(bottomLeft: Radius.zero, bottomRight: Radius.zero), borderSide: BorderSide(color: cs.outlineVariant)),
+          focusedBorder: UnderlineInputBorder(borderRadius: radius.copyWith(bottomLeft: Radius.zero, bottomRight: Radius.zero), borderSide: BorderSide(color: cs.primary, width: 2)),
+          errorBorder: UnderlineInputBorder(borderRadius: radius.copyWith(bottomLeft: Radius.zero, bottomRight: Radius.zero), borderSide: BorderSide(color: cs.error, width: 2)),
+          hintStyle: theme.textTheme.bodyMedium?.copyWith(color: cs.onSurfaceVariant),
+          labelStyle: theme.textTheme.bodyMedium?.copyWith(color: cs.onSurfaceVariant),
         );
+        break;
     }
 
     return TextField(
@@ -155,7 +107,7 @@ class HanzifyTextField extends StatelessWidget {
       onChanged: onChanged,
       onSubmitted: onSubmitted,
       maxLines: maxLines,
-      style: AppTypography.body(color: c.text),
+      style: theme.textTheme.bodyLarge,
       decoration: decoration,
     );
   }

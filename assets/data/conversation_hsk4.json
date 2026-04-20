@@ -1,0 +1,514 @@
+[
+  {
+    "id": "conv_workplace_04",
+    "title": "Báo cáo tiến độ dự án",
+    "titleZh": "汇报项目进度",
+    "titlePinyin": "Huìbào xiàngmù jìndù",
+    "description": "Trao đổi giữa nhân viên và quản lý về tiến độ và kế hoạch dự án.",
+    "level": 4,
+    "category": "workplace",
+    "icon": "📊",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "王经理，关于这次项目，我来汇报一下进度。",
+        "pinyin": "Wáng jīnglǐ, guānyú zhè cì xiàngmù, wǒ lái huìbào yīxià jìndù.",
+        "vi": "Thưa Giám đốc Vương, tôi xin báo cáo về tiến độ dự án lần này."
+      },
+      {
+        "speaker": "B",
+        "zh": "好，目前完成了多少？",
+        "pinyin": "Hǎo, mùqián wánchéng le duōshǎo?",
+        "vi": "Được, hiện tại đã hoàn thành được bao nhiêu rồi?"
+      },
+      {
+        "speaker": "A",
+        "zh": "基本上完成了百分之七十，剩下的部分预计下周完成。",
+        "pinyin": "Jīběnshàng wánchéng le bǎifēnzhī qīshí, shèngxia de bùfen yùjì xià zhōu wánchéng.",
+        "vi": "Về cơ bản đã hoàn thành 70%, phần còn lại dự kiến sẽ xong trong tuần tới."
+      },
+      {
+        "speaker": "B",
+        "zh": "有什么困难吗？需要我帮忙协调资源吗？",
+        "pinyin": "Yǒu shénme kùnnan ma? Xūyào wǒ bāngmáng xiétiáo zīyuán ma?",
+        "vi": "Có khó khăn gì không? Cần tôi hỗ trợ điều phối nguồn lực không?"
+      },
+      {
+        "speaker": "A",
+        "zh": "目前最大的问题是人手不足，如果能再安排两个人，进度会更快。",
+        "pinyin": "Mùqián zuì dà de wèntí shì rénshǒu bùzú, rúguǒ néng zài ānpái liǎng gè rén, jìndù huì gèng kuài.",
+        "vi": "Vấn đề lớn nhất hiện tại là thiếu nhân lực, nếu có thể bố trí thêm hai người, tiến độ sẽ nhanh hơn."
+      },
+      {
+        "speaker": "B",
+        "zh": "我来协调一下，尽量在本周内给你答复。",
+        "pinyin": "Wǒ lái xiétiáo yīxià, jǐnliàng zài běn zhōu nèi gěi nǐ dáfù.",
+        "vi": "Tôi sẽ điều phối, cố gắng phản hồi cho bạn trong tuần này."
+      },
+      {
+        "speaker": "A",
+        "zh": "谢谢经理，有您的支持，我们一定能按时完成。",
+        "pinyin": "Xièxie jīnglǐ, yǒu nín de zhīchí, wǒmen yīdìng néng ànshí wánchéng.",
+        "vi": "Cảm ơn giám đốc, có sự hỗ trợ của anh, chúng tôi nhất định sẽ hoàn thành đúng hạn."
+      }
+    ],
+    "vocabulary": [
+      {"zh": "汇报", "pinyin": "huìbào", "vi": "báo cáo", "pos": "động từ"},
+      {"zh": "进度", "pinyin": "jìndù", "vi": "tiến độ", "pos": "danh từ"},
+      {"zh": "预计", "pinyin": "yùjì", "vi": "dự kiến", "pos": "động từ"},
+      {"zh": "协调", "pinyin": "xiétiáo", "vi": "điều phối, phối hợp", "pos": "động từ"},
+      {"zh": "资源", "pinyin": "zīyuán", "vi": "nguồn lực, tài nguyên", "pos": "danh từ"},
+      {"zh": "人手", "pinyin": "rénshǒu", "vi": "nhân lực, người làm", "pos": "danh từ"},
+      {"zh": "按时", "pinyin": "ànshí", "vi": "đúng hạn, đúng giờ", "pos": "phó từ"}
+    ],
+    "relatedGrammar": ["g4_guanyu", "g4_fen", "g_ruguo", "g4_biran"]
+  },
+  {
+    "id": "conv_health_01",
+    "title": "Khám bệnh tại bệnh viện",
+    "titleZh": "去医院看病",
+    "titlePinyin": "Qù yīyuàn kàn bìng",
+    "description": "Hội thoại giữa bệnh nhân và bác sĩ khi đến khám bệnh.",
+    "level": 4,
+    "category": "health",
+    "icon": "🏥",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "医生，我最近总是头疼，而且睡眠也不好。",
+        "pinyin": "Yīshēng, wǒ zuìjìn zǒngshì tóuténg, érqiě shuìmián yě bù hǎo.",
+        "vi": "Bác sĩ ơi, gần đây tôi hay bị đau đầu, và ngủ cũng không ngon."
+      },
+      {
+        "speaker": "B",
+        "zh": "从什么时候开始的？有多久了？",
+        "pinyin": "Cóng shénme shíhòu kāishǐ de? Yǒu duō jiǔ le?",
+        "vi": "Bắt đầu từ khi nào vậy? Đã bao lâu rồi?"
+      },
+      {
+        "speaker": "A",
+        "zh": "大概两个星期以来，我一直感觉很累，工作压力比较大。",
+        "pinyin": "Dàgài liǎng gè xīngqī yǐlái, wǒ yīzhí gǎnjué hěn lèi, gōngzuò yālì bǐjiào dà.",
+        "vi": "Khoảng hai tuần nay tôi luôn cảm thấy mệt, áp lực công việc khá lớn."
+      },
+      {
+        "speaker": "B",
+        "zh": "我先给你量一下血压。嗯，血压有点高，需要注意休息。",
+        "pinyin": "Wǒ xiān gěi nǐ liáng yīxià xuèyā. Ń, xuèyā yǒudiǎn gāo, xūyào zhùyì xiūxi.",
+        "vi": "Để tôi đo huyết áp cho bạn trước. Ừm, huyết áp hơi cao, cần chú ý nghỉ ngơi."
+      },
+      {
+        "speaker": "A",
+        "zh": "需要吃药吗？",
+        "pinyin": "Xūyào chī yào ma?",
+        "vi": "Có cần uống thuốc không ạ?"
+      },
+      {
+        "speaker": "B",
+        "zh": "暂时不用。我建议你减少工作时间，保证每天睡够八小时，多喝水，少喝咖啡。",
+        "pinyin": "Zànshí bùyòng. Wǒ jiànyì nǐ jiǎnshǎo gōngzuò shíjiān, bǎozhèng měi tiān shuì gòu bā xiǎoshí, duō hē shuǐ, shǎo hē kāfēi.",
+        "vi": "Tạm thời chưa cần. Tôi khuyên bạn giảm giờ làm, đảm bảo ngủ đủ 8 tiếng mỗi ngày, uống nhiều nước, ít uống cà phê."
+      },
+      {
+        "speaker": "A",
+        "zh": "好的，我会注意的。万一情况没有好转，我再来复诊。",
+        "pinyin": "Hǎo de, wǒ huì zhùyì de. Wànyī qíngkuàng méiyǒu hǎozhuǎn, wǒ zài lái fùzhěn.",
+        "vi": "Được ạ, tôi sẽ chú ý. Lỡ tình trạng không cải thiện, tôi sẽ quay lại tái khám."
+      }
+    ],
+    "vocabulary": [
+      {"zh": "头疼", "pinyin": "tóuténg", "vi": "đau đầu", "pos": "động từ/tính từ"},
+      {"zh": "睡眠", "pinyin": "shuìmián", "vi": "giấc ngủ", "pos": "danh từ"},
+      {"zh": "压力", "pinyin": "yālì", "vi": "áp lực", "pos": "danh từ"},
+      {"zh": "血压", "pinyin": "xuèyā", "vi": "huyết áp", "pos": "danh từ"},
+      {"zh": "建议", "pinyin": "jiànyì", "vi": "khuyến nghị, đề xuất", "pos": "động từ/danh từ"},
+      {"zh": "保证", "pinyin": "bǎozhèng", "vi": "đảm bảo", "pos": "động từ"},
+      {"zh": "复诊", "pinyin": "fùzhěn", "vi": "tái khám", "pos": "động từ"}
+    ],
+    "relatedGrammar": ["g4_yi_lai", "g4_ruguo_maning", "g4_keneng", "g_yinggai"]
+  },
+  {
+    "id": "conv_education_01",
+    "title": "Tư vấn chọn trường đại học",
+    "titleZh": "咨询选择大学",
+    "titlePinyin": "Zīxún xuǎnzé dàxué",
+    "description": "Học sinh trao đổi với giáo viên về việc chọn trường đại học.",
+    "level": 4,
+    "category": "education",
+    "icon": "🎓",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "老师，我想向您请教一下，关于报考大学的事。",
+        "pinyin": "Lǎoshī, wǒ xiǎng xiàng nín qǐngjiào yīxià, guānyú bàokǎo dàxué de shì.",
+        "vi": "Thưa thầy, em muốn xin ý kiến thầy về việc đăng ký thi đại học ạ."
+      },
+      {
+        "speaker": "B",
+        "zh": "当然，你想报哪所学校？有什么想法吗？",
+        "pinyin": "Dāngrán, nǐ xiǎng bào nǎ suǒ xuéxiào? Yǒu shénme xiǎngfǎ ma?",
+        "vi": "Tất nhiên rồi, em muốn đăng ký trường nào? Em có suy nghĩ gì chưa?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我对计算机专业很感兴趣，但不确定是选北京的学校还是上海的。",
+        "pinyin": "Wǒ duì jìsuànjī zhuānyè hěn gǎn xìngqù, dàn bù quèdìng shì xuǎn Běijīng de xuéxiào háishi Shànghǎi de.",
+        "vi": "Em rất hứng thú với chuyên ngành máy tính, nhưng chưa chắc nên chọn trường ở Bắc Kinh hay Thượng Hải."
+      },
+      {
+        "speaker": "B",
+        "zh": "对于这个问题，你需要考虑几个方面：学校的排名、专业水平，还有生活费用。",
+        "pinyin": "Duìyú zhège wèntí, nǐ xūyào kǎolǜ jǐ gè fāngmiàn: xuéxiào de páimíng, zhuānyè shuǐpíng, háiyǒu shēnghuó fèiyòng.",
+        "vi": "Đối với vấn đề này, em cần xem xét vài khía cạnh: xếp hạng trường, trình độ chuyên ngành và chi phí sinh hoạt."
+      },
+      {
+        "speaker": "A",
+        "zh": "我的成绩还可以，但家里经济条件一般，所以费用方面也很重要。",
+        "pinyin": "Wǒ de chéngjì hái kěyǐ, dàn jiālǐ jīngjì tiáojiàn yībān, suǒyǐ fèiyòng fāngmiàn yě hěn zhòngyào.",
+        "vi": "Thành tích của em cũng tạm ổn, nhưng điều kiện kinh tế gia đình bình thường, nên chi phí cũng rất quan trọng."
+      },
+      {
+        "speaker": "B",
+        "zh": "那你可以申请奖学金，无论哪所学校，好学生都有机会获得奖助。",
+        "pinyin": "Nà nǐ kěyǐ shēnqǐng jiǎngxuéjīn, wúlùn nǎ suǒ xuéxiào, hǎo xuésheng dōu yǒu jīhuì huòdé jiǎngzhù.",
+        "vi": "Vậy em có thể xin học bổng, dù là trường nào, học sinh giỏi đều có cơ hội nhận trợ cấp."
+      },
+      {
+        "speaker": "A",
+        "zh": "谢谢老师，我会认真考虑您的建议，尽快做出决定。",
+        "pinyin": "Xièxie lǎoshī, wǒ huì rènzhēn kǎolǜ nín de jiànyì, jǐnkuài zuòchū juédìng.",
+        "vi": "Cảm ơn thầy, em sẽ cân nhắc kỹ lời khuyên của thầy và sớm đưa ra quyết định."
+      }
+    ],
+    "vocabulary": [
+      {"zh": "请教", "pinyin": "qǐngjiào", "vi": "xin ý kiến, học hỏi", "pos": "động từ"},
+      {"zh": "报考", "pinyin": "bàokǎo", "vi": "đăng ký thi", "pos": "động từ"},
+      {"zh": "专业", "pinyin": "zhuānyè", "vi": "chuyên ngành", "pos": "danh từ"},
+      {"zh": "排名", "pinyin": "páimíng", "vi": "xếp hạng", "pos": "danh từ/động từ"},
+      {"zh": "奖学金", "pinyin": "jiǎngxuéjīn", "vi": "học bổng", "pos": "danh từ"},
+      {"zh": "申请", "pinyin": "shēnqǐng", "vi": "xin, đăng ký, nộp đơn", "pos": "động từ"},
+      {"zh": "决定", "pinyin": "juédìng", "vi": "quyết định", "pos": "động từ/danh từ"}
+    ],
+    "relatedGrammar": ["g4_guanyu", "g4_duiyu", "g4_wulun", "g_haishi"]
+  },
+  {
+    "id": "conv_travel_03",
+    "title": "Đặt phòng khách sạn",
+    "titleZh": "预订酒店房间",
+    "titlePinyin": "Yùdìng jiǔdiàn fángjiān",
+    "description": "Gọi điện đặt phòng khách sạn và hỏi về các dịch vụ.",
+    "level": 4,
+    "category": "travel",
+    "icon": "🏨",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你好，我想预订一间标准间，从下周五到下周日，两晚。",
+        "pinyin": "Nǐ hǎo, wǒ xiǎng yùdìng yī jiān biāozhǔnjiān, cóng xià zhōu wǔ dào xià zhōu rì, liǎng wǎn.",
+        "vi": "Xin chào, tôi muốn đặt một phòng đôi tiêu chuẩn, từ thứ Sáu đến Chủ nhật tuần tới, hai đêm."
+      },
+      {
+        "speaker": "B",
+        "zh": "好的，请问您需要大床房还是双床房？",
+        "pinyin": "Hǎo de, qǐngwèn nín xūyào dàchuáng fáng háishi shuāngchuáng fáng?",
+        "vi": "Vâng, xin hỏi quý khách cần phòng giường đôi hay phòng hai giường?"
+      },
+      {
+        "speaker": "A",
+        "zh": "大床房就可以。请问房费是多少？包含早餐吗？",
+        "pinyin": "Dàchuáng fáng jiù kěyǐ. Qǐngwèn fáng fèi shì duōshǎo? Bāohán zǎocān ma?",
+        "vi": "Phòng giường đôi là được. Xin hỏi giá phòng là bao nhiêu? Có bao gồm bữa sáng không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "标准大床房每晚四百八十元，不含早餐。如果需要早餐，每位每天加六十元。",
+        "pinyin": "Biāozhǔn dàchuáng fáng měi wǎn sìbǎi bāshí yuán, bù hán zǎocān. Rúguǒ xūyào zǎocān, měi wèi měi tiān jiā liùshí yuán.",
+        "vi": "Phòng giường đôi tiêu chuẩn là 480 tệ mỗi đêm, chưa bao gồm bữa sáng. Nếu cần bữa sáng thì mỗi người thêm 60 tệ mỗi ngày."
+      },
+      {
+        "speaker": "A",
+        "zh": "好，我们两个人都要早餐。请问有停车场吗？",
+        "pinyin": "Hǎo, wǒmen liǎng gè rén dōu yào zǎocān. Qǐngwèn yǒu tíngchēchǎng ma?",
+        "vi": "Được, cả hai chúng tôi đều muốn bữa sáng. Xin hỏi có bãi đỗ xe không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "有的，地下停车场免费提供给住店客人。请提供您的姓名和联系方式。",
+        "pinyin": "Yǒu de, dìxià tíngchēchǎng miǎnfèi tígōng gěi zhùdiàn kèrén. Qǐng tígōng nín de xìngmíng hé liánxì fāngshì.",
+        "vi": "Có ạ, bãi đỗ xe dưới hầm miễn phí cho khách lưu trú. Xin quý khách cung cấp họ tên và thông tin liên hệ."
+      },
+      {
+        "speaker": "A",
+        "zh": "我叫李明，手机号是一三八零一二三四五六七。",
+        "pinyin": "Wǒ jiào Lǐ Míng, shǒujī hào shì yī sān bā líng yī èr sān sì wǔ liù qī.",
+        "vi": "Tôi tên Lý Minh, số điện thoại là 138-0123-4567."
+      },
+      {
+        "speaker": "B",
+        "zh": "好的，已为您预订成功。期待您的光临，如有需要随时联系我们。",
+        "pinyin": "Hǎo de, yǐ wèi nín yùdìng chénggōng. Qīdài nín de guānglín, rú yǒu xūyào suíshí liánxì wǒmen.",
+        "vi": "Vâng, đã đặt phòng thành công cho quý khách. Mong được đón tiếp quý khách, nếu cần gì cứ liên hệ chúng tôi bất cứ lúc nào."
+      }
+    ],
+    "vocabulary": [
+      {"zh": "预订", "pinyin": "yùdìng", "vi": "đặt trước, đặt chỗ", "pos": "động từ"},
+      {"zh": "标准间", "pinyin": "biāozhǔnjiān", "vi": "phòng tiêu chuẩn", "pos": "danh từ"},
+      {"zh": "大床房", "pinyin": "dàchuáng fáng", "vi": "phòng giường đôi", "pos": "danh từ"},
+      {"zh": "包含", "pinyin": "bāohán", "vi": "bao gồm", "pos": "động từ"},
+      {"zh": "停车场", "pinyin": "tíngchēchǎng", "vi": "bãi đỗ xe", "pos": "danh từ"},
+      {"zh": "免费", "pinyin": "miǎnfèi", "vi": "miễn phí", "pos": "tính từ/phó từ"},
+      {"zh": "联系", "pinyin": "liánxì", "vi": "liên hệ, liên lạc", "pos": "động từ"}
+    ],
+    "relatedGrammar": ["g4_fen", "g_ruguo", "g_numbers", "g_haishi"]
+  },
+  {
+    "id": "conv_social_hsk4_01",
+    "title": "Thảo luận về kế hoạch tương lai",
+    "titleZh": "讨论未来计划",
+    "titlePinyin": "Tǎolùn wèilái jìhuà",
+    "description": "Hai người bạn trao đổi về dự định và kế hoạch sau khi tốt nghiệp.",
+    "level": 4,
+    "category": "daily",
+    "icon": "🔮",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你毕业以后打算做什么？有没有具体计划？",
+        "pinyin": "Nǐ bìyè yǐhòu dǎsuàn zuò shénme? Yǒu méiyǒu jùtǐ jìhuà?",
+        "vi": "Sau khi tốt nghiệp bạn định làm gì? Có kế hoạch cụ thể chưa?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我想先工作两三年积累经验，然后再考虑是否去读研究生。",
+        "pinyin": "Wǒ xiǎng xiān gōngzuò liǎng sān nián jīlěi jīngyàn, ránhòu zài kǎolǜ shìfǒu qù dú yánjiūshēng.",
+        "vi": "Tôi muốn làm việc hai ba năm trước để tích lũy kinh nghiệm, rồi mới cân nhắc có nên học thạc sĩ không."
+      },
+      {
+        "speaker": "A",
+        "zh": "听起来不错。对于工作地点，你有什么想法？",
+        "pinyin": "Tīng qǐlái bùcuò. Duìyú gōngzuò dìdiǎn, nǐ yǒu shénme xiǎngfǎ?",
+        "vi": "Nghe hay đó. Còn về địa điểm làm việc, bạn có suy nghĩ gì không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我尤其想去上海或者深圳，因为那里的机会更多，薪资也更高。",
+        "pinyin": "Wǒ yóuqí xiǎng qù Shànghǎi huòzhě Shēnzhèn, yīnwèi nàlǐ de jīhuì gèng duō, xīnzī yě gèng gāo.",
+        "vi": "Tôi đặc biệt muốn đến Thượng Hải hoặc Thâm Quyến, vì ở đó cơ hội nhiều hơn và lương cũng cao hơn."
+      },
+      {
+        "speaker": "A",
+        "zh": "那你有没有担心离家太远，不方便照顾父母？",
+        "pinyin": "Nà nǐ yǒu méiyǒu dānxīn lí jiā tài yuǎn, bù fāngbiàn zhàogù fùmǔ?",
+        "vi": "Vậy bạn có lo ngại gì về việc ở xa nhà, không tiện chăm sóc bố mẹ không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "有时候会担心，但父母依然支持我追求自己的梦想。他们说只要我过得好，他们就放心了。",
+        "pinyin": "Yǒushíhòu huì dānxīn, dàn fùmǔ yīrán zhīchí wǒ zhuīqiú zìjǐ de mèngxiǎng. Tāmen shuō zhǐyào wǒ guò de hǎo, tāmen jiù fàngxīn le.",
+        "vi": "Đôi lúc cũng lo, nhưng bố mẹ vẫn ủng hộ tôi theo đuổi ước mơ của mình. Họ bảo chỉ cần tôi sống tốt là họ yên tâm rồi."
+      },
+      {
+        "speaker": "A",
+        "zh": "你父母真的很开明。我也要向他们学习这种态度。",
+        "pinyin": "Nǐ fùmǔ zhēn de hěn kāimíng. Wǒ yě yào xiàng tāmen xuéxí zhè zhǒng tàidù.",
+        "vi": "Bố mẹ bạn thực sự rất cởi mở. Tôi cũng phải học thái độ đó từ họ."
+      }
+    ],
+    "vocabulary": [
+      {"zh": "积累", "pinyin": "jīlěi", "vi": "tích lũy", "pos": "động từ"},
+      {"zh": "研究生", "pinyin": "yánjiūshēng", "vi": "học viên cao học, thạc sĩ", "pos": "danh từ"},
+      {"zh": "薪资", "pinyin": "xīnzī", "vi": "lương, tiền lương", "pos": "danh từ"},
+      {"zh": "追求", "pinyin": "zhuīqiú", "vi": "theo đuổi", "pos": "động từ"},
+      {"zh": "梦想", "pinyin": "mèngxiǎng", "vi": "ước mơ", "pos": "danh từ"},
+      {"zh": "开明", "pinyin": "kāimíng", "vi": "cởi mở, tiến bộ", "pos": "tính từ"},
+      {"zh": "态度", "pinyin": "tàidù", "vi": "thái độ", "pos": "danh từ"}
+    ],
+    "relatedGrammar": ["g4_duiyu", "g4_youqi", "g4_yiran", "g_zhiyao_jiu", "g4_zhaoji"]
+  },
+  {
+    "id": "conv_complaint_01",
+    "title": "Phản ánh sự cố dịch vụ",
+    "titleZh": "反映服务问题",
+    "titlePinyin": "Fǎnyìng fúwù wèntí",
+    "description": "Khách hàng phản ánh sự cố với nhân viên chăm sóc khách hàng.",
+    "level": 4,
+    "category": "daily",
+    "icon": "📞",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你好，我想反映一个问题。我上周在你们网站订了一台冰箱，但到现在还没收到货。",
+        "pinyin": "Nǐ hǎo, wǒ xiǎng fǎnyìng yī gè wèntí. Wǒ shàng zhōu zài nǐmen wǎngzhàn dìng le yī tái bīngxiāng, dàn dào xiànzài hái méi shōudào huò.",
+        "vi": "Xin chào, tôi muốn phản ánh một vấn đề. Tuần trước tôi đặt một chiếc tủ lạnh trên website của các bạn, nhưng đến giờ vẫn chưa nhận được hàng."
+      },
+      {
+        "speaker": "B",
+        "zh": "非常抱歉给您造成了不便。请问您的订单号是多少？",
+        "pinyin": "Fēicháng bàoqiàn gěi nín zàochéng le bùbiàn. Qǐngwèn nín de dìngdān hào shì duōshǎo?",
+        "vi": "Xin lỗi đã gây bất tiện cho quý khách. Xin hỏi mã đơn hàng của quý khách là bao nhiêu?"
+      },
+      {
+        "speaker": "A",
+        "zh": "订单号是二零二五一一零八八。我已经等了整整一周了。",
+        "pinyin": "Dìngdān hào shì èr líng èr wǔ yī yī líng bā bā. Wǒ yǐjīng děng le zhěngzhěng yī zhōu le.",
+        "vi": "Mã đơn hàng là 202511088. Tôi đã đợi đúng một tuần rồi."
+      },
+      {
+        "speaker": "B",
+        "zh": "我马上帮您查一下。...对不起，系统显示您的订单因为仓库问题被延误了。",
+        "pinyin": "Wǒ mǎshàng bāng nín chá yīxià. ...Duìbuqǐ, xìtǒng xiǎnshì nín de dìngdān yīnwèi cāngkù wèntí bèi yánwù le.",
+        "vi": "Tôi kiểm tra ngay cho quý khách. ...Xin lỗi, hệ thống hiển thị đơn hàng của quý khách bị trễ do sự cố kho hàng."
+      },
+      {
+        "speaker": "A",
+        "zh": "难道这种事情你们事先都不通知客户吗？我等了这么久！",
+        "pinyin": "Nándào zhè zhǒng shìqíng nǐmen shìxiān dōu bù tōngzhī kèhù ma? Wǒ děng le zhème jiǔ!",
+        "vi": "Chẳng lẽ sự việc như vậy mà các bạn không thông báo trước cho khách hàng sao? Tôi đã đợi lâu như vậy!"
+      },
+      {
+        "speaker": "B",
+        "zh": "您说得对，这是我们的疏忽，非常抱歉。我们保证明天上午会优先安排发货，同时补偿您五十元优惠券。",
+        "pinyin": "Nín shuō de duì, zhè shì wǒmen de shūhū, fēicháng bàoqiàn. Wǒmen bǎozhèng míngtiān shàngwǔ huì yōuxiān ānpái fāhuò, tóngshí bǔcháng nín wǔshí yuán yōuhuìquàn.",
+        "vi": "Quý khách nói đúng, đây là sơ suất của chúng tôi, xin lỗi rất nhiều. Chúng tôi đảm bảo sáng mai sẽ ưu tiên sắp xếp giao hàng, đồng thời bồi thường cho quý khách phiếu giảm giá 50 tệ."
+      },
+      {
+        "speaker": "A",
+        "zh": "好吧，那我就等到明天。希望以后你们能改进这方面的服务。",
+        "pinyin": "Hǎo ba, nà wǒ jiù děng dào míngtiān. Xīwàng yǐhòu nǐmen néng gǎijìn zhè fāngmiàn de fúwù.",
+        "vi": "Thôi được, vậy tôi đợi đến ngày mai. Hy vọng sau này các bạn có thể cải thiện dịch vụ ở mặt này."
+      }
+    ],
+    "vocabulary": [
+      {"zh": "反映", "pinyin": "fǎnyìng", "vi": "phản ánh", "pos": "động từ"},
+      {"zh": "订单", "pinyin": "dìngdān", "vi": "đơn hàng", "pos": "danh từ"},
+      {"zh": "延误", "pinyin": "yánwù", "vi": "chậm trễ, bị trì hoãn", "pos": "động từ"},
+      {"zh": "疏忽", "pinyin": "shūhū", "vi": "sơ suất", "pos": "danh từ/động từ"},
+      {"zh": "优先", "pinyin": "yōuxiān", "vi": "ưu tiên", "pos": "động từ/phó từ"},
+      {"zh": "补偿", "pinyin": "bǔcháng", "vi": "bồi thường, bù đắp", "pos": "động từ"},
+      {"zh": "改进", "pinyin": "gǎijìn", "vi": "cải thiện, cải tiến", "pos": "động từ"}
+    ],
+    "relatedGrammar": ["g4_nandao", "g_bei", "g4_biran", "g_yijing_le"]
+  },
+  {
+    "id": "conv_environment_01",
+    "title": "Thảo luận về bảo vệ môi trường",
+    "titleZh": "讨论环境保护",
+    "titlePinyin": "Tǎolùn huánjìng bǎohù",
+    "description": "Hai người bạn thảo luận về vấn đề môi trường và trách nhiệm cá nhân.",
+    "level": 4,
+    "category": "social",
+    "icon": "🌿",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你最近有没有关注环境问题？我觉得情况越来越严重了。",
+        "pinyin": "Nǐ zuìjìn yǒu méiyǒu guānzhù huánjìng wèntí? Wǒ juéde qíngkuàng yuèláiyuè yánzhòng le.",
+        "vi": "Gần đây bạn có quan tâm đến vấn đề môi trường không? Tôi thấy tình hình ngày càng nghiêm trọng hơn."
+      },
+      {
+        "speaker": "B",
+        "zh": "当然，所谓「绿色生活」现在变得越来越重要了。我们每个人都应该为保护环境做出贡献。",
+        "pinyin": "Dāngrán, suǒwèi 「lǜsè shēnghuó」 xiànzài biàn de yuèláiyuè zhòngyào le. Wǒmen měi gè rén dōu yīnggāi wèi bǎohù huánjìng zuòchū gòngxiàn.",
+        "vi": "Tất nhiên rồi, cái gọi là 'lối sống xanh' ngày càng trở nên quan trọng. Mỗi người chúng ta đều nên đóng góp cho việc bảo vệ môi trường."
+      },
+      {
+        "speaker": "A",
+        "zh": "但对于普通人来说，能做的事情好像很有限。",
+        "pinyin": "Dàn duìyú pǔtōng rén lái shuō, néng zuò de shìqíng hǎoxiàng hěn yǒuxiàn.",
+        "vi": "Nhưng đối với người bình thường mà nói, những việc có thể làm dường như rất hạn chế."
+      },
+      {
+        "speaker": "B",
+        "zh": "其实不是的。比如减少使用一次性用品，少开车多坐公共交通，这些都是很有效的行动。",
+        "pinyin": "Qíshí bú shì de. Bǐrú jiǎnshǎo shǐyòng yīcìxìng yòngpǐn, shǎo kāichē duō zuò gōnggòng jiāotōng, zhèxiē dōu shì hěn yǒuxiào de xíngdòng.",
+        "vi": "Thực ra không phải vậy. Ví dụ như giảm sử dụng đồ dùng một lần, ít đi xe hơn mà đi phương tiện công cộng nhiều hơn, những điều đó đều là hành động rất hiệu quả."
+      },
+      {
+        "speaker": "A",
+        "zh": "你说得有道理。甚至连买东西都可以选择环保包装，对吧？",
+        "pinyin": "Nǐ shuō de yǒu dàolǐ. Shènzhì lián mǎi dōngxi dōu kěyǐ xuǎnzé huánbǎo bāozhuāng, duì ba?",
+        "vi": "Bạn nói có lý. Thậm chí ngay cả mua đồ cũng có thể chọn bao bì thân thiện môi trường, phải không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "没错。无论我们做什么，只要有环保意识，就能为地球做贡献。",
+        "pinyin": "Méicuò. Wúlùn wǒmen zuò shénme, zhǐyào yǒu huánbǎo yìshí, jiù néng wèi dìqiú zuò gòngxiàn.",
+        "vi": "Đúng vậy. Dù chúng ta làm gì, chỉ cần có ý thức bảo vệ môi trường là có thể đóng góp cho Trái Đất."
+      }
+    ],
+    "vocabulary": [
+      {"zh": "环境", "pinyin": "huánjìng", "vi": "môi trường", "pos": "danh từ"},
+      {"zh": "保护", "pinyin": "bǎohù", "vi": "bảo vệ", "pos": "động từ"},
+      {"zh": "贡献", "pinyin": "gòngxiàn", "vi": "đóng góp, cống hiến", "pos": "danh từ/động từ"},
+      {"zh": "一次性", "pinyin": "yīcìxìng", "vi": "dùng một lần", "pos": "tính từ"},
+      {"zh": "公共交通", "pinyin": "gōnggòng jiāotōng", "vi": "phương tiện công cộng", "pos": "danh từ"},
+      {"zh": "环保", "pinyin": "huánbǎo", "vi": "bảo vệ môi trường, thân thiện môi trường", "pos": "tính từ/danh từ"},
+      {"zh": "意识", "pinyin": "yìshí", "vi": "ý thức, nhận thức", "pos": "danh từ"}
+    ],
+    "relatedGrammar": ["g4_suowei", "g4_duiyu", "g4_lai_shuo", "g4_shenzhi", "g4_wulun", "g_zhiyao_jiu"]
+  },
+  {
+    "id": "conv_negotiation_01",
+    "title": "Thương lượng giá cả",
+    "titleZh": "讨价还价",
+    "titlePinyin": "Tǎojià huánjià",
+    "description": "Khách hàng thương lượng giá với chủ cửa hàng khi mua hàng số lượng lớn.",
+    "level": 4,
+    "category": "shopping",
+    "icon": "🤝",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "老板，这款手机我们公司想批量采购，大概需要五十台左右。",
+        "pinyin": "Lǎobǎn, zhè kuǎn shǒujī wǒmen gōngsī xiǎng pīliàng cǎigòu, dàgài xūyào wǔshí tái zuǒyòu.",
+        "vi": "Chủ ơi, công ty chúng tôi muốn mua số lượng lớn loại điện thoại này, cần khoảng 50 chiếc."
+      },
+      {
+        "speaker": "B",
+        "zh": "欢迎！数量这么大，我们肯定会给您优惠的。目前单价是两千八，批量可以优惠到两千五。",
+        "pinyin": "Huānyíng! Shùliàng zhème dà, wǒmen kěndìng huì gěi nín yōuhuì de. Mùqián dānjià shì liǎngqiān bā, pīliàng kěyǐ yōuhuì dào liǎngqiān wǔ.",
+        "vi": "Chào mừng! Số lượng lớn như vậy, chúng tôi nhất định sẽ ưu đãi cho quý khách. Hiện đơn giá là 2800, mua sỉ có thể ưu đãi xuống còn 2500."
+      },
+      {
+        "speaker": "A",
+        "zh": "两千五还是有点贵。基于长期合作的考虑，能不能再降一点？",
+        "pinyin": "Liǎngqiān wǔ háishi yǒudiǎn guì. Jīyú chángqī hézuò de kǎolǜ, néng bù néng zài jiàng yīdiǎn?",
+        "vi": "2500 vẫn hơi đắt. Căn cứ vào mục tiêu hợp tác lâu dài, có thể giảm thêm một chút không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "您真会讲价！至于价格，我需要跟上级确认一下。这样吧，两千三，这已经是我们的底线了。",
+        "pinyin": "Nín zhēn huì jiǎngjià! Zhìyú jiàgé, wǒ xūyào gēn shàngjí quèrèn yīxià. Zhèyàng ba, liǎngqiān sān, zhè yǐjīng shì wǒmen de dǐxiàn le.",
+        "vi": "Quý khách thật biết cách thương lượng! Còn về giá cả, tôi cần xác nhận với cấp trên. Thế này nhé, 2300, đây đã là mức thấp nhất của chúng tôi rồi."
+      },
+      {
+        "speaker": "A",
+        "zh": "好，两千三我们可以接受。另外，能不能提供一年的保修服务？",
+        "pinyin": "Hǎo, liǎngqiān sān wǒmen kěyǐ jiēshòu. Lìngwài, néng bù néng tígōng yī nián de bǎoxiū fúwù?",
+        "vi": "Được, 2300 chúng tôi chấp nhận được. Ngoài ra, có thể cung cấp dịch vụ bảo hành một năm không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "没问题，我们提供一年的全面保修。如果数量超过一百台，还可以赠送免费上门安装服务。",
+        "pinyin": "Méi wèntí, wǒmen tígōng yī nián de quánmiàn bǎoxiū. Rúguǒ shùliàng chāoguò yī bǎi tái, hái kěyǐ zèngsòng miǎnfèi shàngmén ānzhuāng fúwù.",
+        "vi": "Không vấn đề gì, chúng tôi cung cấp bảo hành toàn diện một năm. Nếu số lượng vượt 100 chiếc, còn có thể tặng thêm dịch vụ lắp đặt tận nơi miễn phí."
+      },
+      {
+        "speaker": "A",
+        "zh": "很好，我们先订五十台，如果效果好，以后必然还会追加订单的。",
+        "pinyin": "Hěn hǎo, wǒmen xiān dìng wǔshí tái, rúguǒ xiàoguǒ hǎo, yǐhòu bìrán hái huì zhuījiā dìngdān de.",
+        "vi": "Tốt lắm, chúng tôi đặt trước 50 chiếc, nếu hiệu quả tốt, sau này nhất định sẽ đặt thêm."
+      }
+    ],
+    "vocabulary": [
+      {"zh": "批量", "pinyin": "pīliàng", "vi": "số lượng lớn, theo lô", "pos": "tính từ/phó từ"},
+      {"zh": "采购", "pinyin": "cǎigòu", "vi": "mua sắm (cho tổ chức)", "pos": "động từ"},
+      {"zh": "单价", "pinyin": "dānjià", "vi": "đơn giá", "pos": "danh từ"},
+      {"zh": "底线", "pinyin": "dǐxiàn", "vi": "mức thấp nhất, ranh giới", "pos": "danh từ"},
+      {"zh": "保修", "pinyin": "bǎoxiū", "vi": "bảo hành", "pos": "danh từ/động từ"},
+      {"zh": "追加", "pinyin": "zhuījiā", "vi": "bổ sung thêm, đặt thêm", "pos": "động từ"},
+      {"zh": "合作", "pinyin": "hézuò", "vi": "hợp tác", "pos": "động từ/danh từ"}
+    ],
+    "relatedGrammar": ["g4_jiyu", "g4_zhi_yu", "g4_biran", "g_ruguo", "g_numbers"]
+  }
+]

@@ -26,6 +26,15 @@ class VocabRepositoryImpl implements VocabRepository {
   }
 
   @override
+  Future<List<Vocab>> getNew() async {
+    try {
+      return await localDataSource.getNew();
+    } catch (e) {
+      throw DatabaseFailure('Failed to load new vocab: $e');
+    }
+  }
+
+  @override
   Future<List<Vocab>> getByLevel(int level) async {
     try {
       return await localDataSource.getByLevel(level);
@@ -66,6 +75,17 @@ class VocabRepositoryImpl implements VocabRepository {
       );
     } catch (e) {
       throw DatabaseFailure('Failed to search vocab: $e');
+    }
+  }
+
+  @override
+  Future<List<Vocab>> getByIds(List<String> ids) async {
+    try {
+      final all = await localDataSource.getAll();
+      final idSet = ids.toSet();
+      return all.where((v) => idSet.contains(v.id)).toList();
+    } catch (e) {
+      throw DatabaseFailure('Failed to load vocab by ids: $e');
     }
   }
 

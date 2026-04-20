@@ -44,3 +44,44 @@ class ShowPinyin extends _$ShowPinyin with AsyncPrefsNotifier<bool> {
     await persist();
   }
 }
+
+/// Tracks if onboarding has been shown — persisted.
+@Riverpod(keepAlive: true)
+class ShowOnboarding extends _$ShowOnboarding with AsyncPrefsNotifier<bool> {
+  static const _prefKey = 'show_onboarding';
+
+  @override
+  String get prefsKey => _prefKey;
+
+  @override
+  bool get defaultValue => true;
+
+  @override
+  bool get currentValue => state;
+
+  @override
+  void updateState(bool value) => state = value;
+
+  @override
+  bool fromPrefs(SharedPreferences prefs) =>
+      prefs.getBool(_prefKey) ?? true;
+
+  @override
+  Future<void> toPrefs(SharedPreferences prefs, bool value) =>
+      prefs.setBool(_prefKey, value);
+
+  @override
+  bool build() {
+    return initAsyncPrefs(
+      key: _prefKey,
+      defaultVal: true,
+      from: (prefs) => prefs.getBool(_prefKey) ?? true,
+      to: (prefs, value) => prefs.setBool(_prefKey, value),
+    );
+  }
+
+  Future<void> complete() async {
+    state = false;
+    await persist();
+  }
+}

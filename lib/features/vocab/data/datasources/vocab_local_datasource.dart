@@ -3,6 +3,7 @@ import '../../domain/entities/vocab.dart';
 abstract class VocabLocalDataSource {
   Future<List<Vocab>> getAll({int limit = 0, int offset = 0});
   Future<List<Vocab>> getDue({int limit = 0, int offset = 0});
+  Future<List<Vocab>> getNew({int limit = 0, int offset = 0});
   Future<void> update(Vocab model);
   Future<void> insert(Vocab model);
 

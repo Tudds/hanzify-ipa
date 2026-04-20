@@ -171,6 +171,9 @@
       "g_ba",
       "g_le2",
       "g_result_complement"
+    ],
+    "sentenceRefs": [
+      "conv_complaint_01#L3"
     ]
   },
   {
@@ -414,7 +417,8 @@
       "g_zhiyou_cai",
       "g_suiran_danshi",
       "g_yinggai"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_buguan",
@@ -731,7 +735,8 @@
       "g_la",
       "g_de_comp",
       "g_neg_bu"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_de_potential",
@@ -1794,7 +1799,8 @@
       "g_bixu",
       "g_zhiyao_jiu",
       "g_ba_suggest"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_bixu",
@@ -1953,6 +1959,9 @@
       "g_shi_de",
       "g_ruguo",
       "g_yinwei_suoyi"
+    ],
+    "sentenceRefs": [
+      "conv_daily_02#L3"
     ]
   }
 ]

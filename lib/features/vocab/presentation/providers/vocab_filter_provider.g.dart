@@ -101,43 +101,41 @@ final class VocabSearchProvider
 
 String _$vocabSearchHash() => r'92f2fa946b297338d93653cbed34f76f310c7e40';
 
-@ProviderFor(filteredVocab)
-final filteredVocabProvider = FilteredVocabProvider._();
+@ProviderFor(filteredVocabList)
+final filteredVocabListProvider = FilteredVocabListProvider._();
 
-final class FilteredVocabProvider
-    extends $FunctionalProvider<List<Vocab>, List<Vocab>, List<Vocab>>
-    with $Provider<List<Vocab>> {
-  FilteredVocabProvider._()
+final class FilteredVocabListProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<List<Vocab>>,
+          List<Vocab>,
+          FutureOr<List<Vocab>>
+        >
+    with $FutureModifier<List<Vocab>>, $FutureProvider<List<Vocab>> {
+  FilteredVocabListProvider._()
     : super(
         from: null,
         argument: null,
         retry: null,
-        name: r'filteredVocabProvider',
+        name: r'filteredVocabListProvider',
         isAutoDispose: true,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
 
   @override
-  String debugGetCreateSourceHash() => _$filteredVocabHash();
+  String debugGetCreateSourceHash() => _$filteredVocabListHash();
 
   @$internal
   @override
-  $ProviderElement<List<Vocab>> $createElement($ProviderPointer pointer) =>
-      $ProviderElement(pointer);
+  $FutureProviderElement<List<Vocab>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
 
   @override
-  List<Vocab> create(Ref ref) {
-    return filteredVocab(ref);
-  }
-
-  /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(List<Vocab> value) {
-    return $ProviderOverride(
-      origin: this,
-      providerOverride: $SyncValueProvider<List<Vocab>>(value),
-    );
+  FutureOr<List<Vocab>> create(Ref ref) {
+    return filteredVocabList(ref);
   }
 }
 
-String _$filteredVocabHash() => r'd41cdf756fa24177cc17ef71fe41ad8d4239e87c';
+String _$filteredVocabListHash() => r'c5c4c725d28e6fcc0467083e01c88dc26fe57b5d';

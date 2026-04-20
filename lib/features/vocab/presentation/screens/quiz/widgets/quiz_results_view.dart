@@ -7,6 +7,7 @@ import 'package:hanzify/core/providers/navigation_provider.dart';
 import 'package:hanzify/features/vocab/presentation/providers/quiz_state.dart';
 import 'package:hanzify/core/widgets/hanzify_button.dart';
 import 'package:hanzify/core/widgets/hanzify_progress_bar.dart';
+import 'package:hanzify/core/widgets/hanzify_celebration.dart';
 import 'package:hanzify/core/widgets/hanzify_result_header.dart';
 
 class QuizResultsView extends ConsumerWidget {
@@ -30,61 +31,69 @@ class QuizResultsView extends ConsumerWidget {
 
     return Scaffold(
       backgroundColor: c.background,
-      body: Center(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(AppSpacing.xxl),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              HanzifyResultHeader(emoji: emoji, color: barColor),
-              const SizedBox(height: AppSpacing.lg),
-              Text(
-                text,
-                style: theme.textTheme.headlineLarge?.copyWith(
-                  fontWeight: FontWeight.w800,
-                  color: c.text,
-                ),
+      body: Stack(
+        children: [
+          if (pct >= 80)
+            const Positioned.fill(
+              child: HanzifyCelebration(),
+            ),
+          Center(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(AppSpacing.xxl),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  HanzifyResultHeader(emoji: emoji, color: barColor),
+                  const SizedBox(height: AppSpacing.lg),
+                  Text(
+                    text,
+                    style: theme.textTheme.headlineLarge?.copyWith(
+                      fontWeight: FontWeight.w800,
+                      color: c.text,
+                    ),
+                  ),
+                  const SizedBox(height: AppSpacing.sm),
+                  Text(
+                    '$score / $total',
+                    style: theme.textTheme.displayMedium?.copyWith(
+                      fontWeight: FontWeight.w800,
+                      color: barColor,
+                    ),
+                  ),
+                  const SizedBox(height: AppSpacing.xs),
+                  Text(
+                    '$pct% chính xác',
+                    style: TextStyle(fontSize: 16, color: c.placeholder),
+                  ),
+                  const SizedBox(height: AppSpacing.xl),
+                  HanzifyProgressBar(
+                    progress: pct / 100,
+                    height: 12,
+                    barColor: barColor,
+                    borderRadius: AppRadii.full,
+                  ),
+                  const SizedBox(height: AppSpacing.xxxl),
+                  HanzifyButton(
+                    label: '🔄 Làm lại',
+                    onTap: () => ref.read(quizProvider.notifier).startQuiz(quizState.mode!),
+                  ),
+                  const SizedBox(height: AppSpacing.md),
+                  HanzifyButton(
+                    label: '🔀 Đổi chế độ',
+                    type: HanzifyButtonType.outline,
+                    onTap: () => ref.read(quizProvider.notifier).reset(),
+                  ),
+                  const SizedBox(height: AppSpacing.md),
+                  HanzifyButton(
+                    label: '← Về Trang Chủ',
+                    type: HanzifyButtonType.outline,
+                    onTap: () => ref.read(navigationProvider.notifier).navigate(AppRoutes.home),
+                  ),
+                ],
               ),
-              const SizedBox(height: AppSpacing.sm),
-              Text(
-                '$score / $total',
-                style: theme.textTheme.displayMedium?.copyWith(
-                  fontWeight: FontWeight.w800,
-                  color: barColor,
-                ),
-              ),
-              const SizedBox(height: AppSpacing.xs),
-              Text(
-                '$pct% chính xác',
-                style: TextStyle(fontSize: 16, color: c.placeholder),
-              ),
-              const SizedBox(height: AppSpacing.xl),
-              HanzifyProgressBar(
-                progress: pct / 100,
-                height: 12,
-                barColor: barColor,
-                borderRadius: AppRadii.full,
-              ),
-              const SizedBox(height: AppSpacing.xxxl),
-              HanzifyButton(
-                label: '🔄 Làm lại',
-                onTap: () => ref.read(quizProvider.notifier).startQuiz(quizState.mode!),
-              ),
-              const SizedBox(height: AppSpacing.md),
-              HanzifyButton(
-                label: '🔀 Đổi chế độ',
-                type: HanzifyButtonType.outline,
-                onTap: () => ref.read(quizProvider.notifier).reset(),
-              ),
-              const SizedBox(height: AppSpacing.md),
-              HanzifyButton(
-                label: '← Về Trang Chủ',
-                type: HanzifyButtonType.outline,
-                onTap: () => ref.read(navigationProvider.notifier).navigate(AppRoutes.home),
-              ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

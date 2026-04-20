@@ -64,3 +64,61 @@ abstract class _$ShowPinyin extends $Notifier<bool> {
     element.handleCreate(ref, build);
   }
 }
+
+/// Tracks if onboarding has been shown — persisted.
+
+@ProviderFor(ShowOnboarding)
+final showOnboardingProvider = ShowOnboardingProvider._();
+
+/// Tracks if onboarding has been shown — persisted.
+final class ShowOnboardingProvider
+    extends $NotifierProvider<ShowOnboarding, bool> {
+  /// Tracks if onboarding has been shown — persisted.
+  ShowOnboardingProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'showOnboardingProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$showOnboardingHash();
+
+  @$internal
+  @override
+  ShowOnboarding create() => ShowOnboarding();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(bool value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<bool>(value),
+    );
+  }
+}
+
+String _$showOnboardingHash() => r'fc18f3f410139a06b37b69f0cebdd623bdb9b7ac';
+
+/// Tracks if onboarding has been shown — persisted.
+
+abstract class _$ShowOnboarding extends $Notifier<bool> {
+  bool build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<bool, bool>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<bool, bool>,
+              bool,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, build);
+  }
+}

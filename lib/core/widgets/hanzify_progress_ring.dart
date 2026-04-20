@@ -1,33 +1,25 @@
-import 'dart:math';
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import 'package:hanzify/core/theme/app_curves.dart';
-import 'package:hanzify/core/theme/app_durations.dart';
-import 'package:hanzify/core/theme/theme_state.dart';
-import 'package:hanzify/core/theme/typography.dart';
+import 'package:hanzify/core/theme/app_theme_helper.dart';
 
-/// Circular progress ring with animated fill and center label.
-///
-/// [progress] is 0.0–1.0. Changes animate automatically.
 class HanzifyProgressRing extends StatefulWidget {
-  final double progress;
+  final double progress; // 0.0 to 1.0
   final double size;
-  final double strokeWidth;
-  final Color? color;
-  final Color? trackColor;
   final Widget? center;
   final String? label;
   final String? sublabel;
+  final Color? color;
+  final double strokeWidth;
 
   const HanzifyProgressRing({
     super.key,
     required this.progress,
-    this.size = 80,
-    this.strokeWidth = 6,
-    this.color,
-    this.trackColor,
+    this.size = 100,
     this.center,
     this.label,
     this.sublabel,
+    this.color,
+    this.strokeWidth = 8,
   });
 
   @override
@@ -36,135 +28,174 @@ class HanzifyProgressRing extends StatefulWidget {
 
 class _HanzifyProgressRingState extends State<HanzifyProgressRing>
     with SingleTickerProviderStateMixin {
-  late final AnimationController _ctrl;
-  late Animation<double> _anim;
-  double _oldProgress = 0;
+  late AnimationController _controller;
+  late Animation<double> _animation;
+  double _lastProgress = 0;
 
   @override
   void initState() {
     super.initState();
-    _ctrl = AnimationController(vsync: this, duration: AppDurations.celebrate);
-    _anim = Tween<double>(begin: 0, end: widget.progress).animate(
-      CurvedAnimation(parent: _ctrl, curve: AppCurves.progress),
+    _lastProgress = widget.progress;
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
     );
-    _ctrl.forward();
+    _animation = Tween<double>(begin: 0, end: widget.progress).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeOutBack),
+    );
+    _controller.forward();
   }
 
   @override
-  void didUpdateWidget(HanzifyProgressRing old) {
-    super.didUpdateWidget(old);
-    if (old.progress != widget.progress) {
-      _oldProgress = old.progress;
-      _anim = Tween<double>(begin: _oldProgress, end: widget.progress).animate(
-        CurvedAnimation(parent: _ctrl, curve: AppCurves.progress),
+  void didUpdateWidget(HanzifyProgressRing oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.progress != widget.progress) {
+      _animation = Tween<double>(
+        begin: _lastProgress,
+        end: widget.progress,
+      ).animate(
+        CurvedAnimation(parent: _controller, curve: Curves.easeOutCubic),
       );
-      _ctrl.forward(from: 0);
+      _lastProgress = widget.progress;
+      _controller.forward(from: 0);
     }
   }
 
   @override
   void dispose() {
-    _ctrl.dispose();
+    _controller.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    final c = Theme.of(context).extension<AppThemeExtension>()?.colors
-        ?? AppThemeColors.light;
-    final ringColor = widget.color ?? c.primary;
-    final track = widget.trackColor ?? ringColor.withValues(alpha: 0.12);
+    final colors = themeColorsOf(context);
+    final activeColor = widget.color ?? colors.primary;
 
     return SizedBox(
       width: widget.size,
       height: widget.size,
-      child: AnimatedBuilder(
-        animation: _anim,
-        builder: (_, child) => CustomPaint(
-          painter: _RingPainter(
-            progress: _anim.value.clamp(0.0, 1.0),
-            color: ringColor,
-            trackColor: track,
-            strokeWidth: widget.strokeWidth,
+      child: Stack(
+        children: [
+          Positioned.fill(
+            child: AnimatedBuilder(
+              animation: _animation,
+              builder: (context, child) {
+                return CustomPaint(
+                  painter: _ProgressRingPainter(
+                    progress: _animation.value.clamp(0, 1),
+                    color: activeColor,
+                    backgroundColor: activeColor.withValues(alpha: 0.1),
+                    strokeWidth: widget.strokeWidth,
+                  ),
+                );
+              },
+            ),
           ),
-          child: child,
-        ),
-        child: Center(
-          child: widget.center ??
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  if (widget.label != null)
-                    Text(
-                      widget.label!,
-                      style: AppTypography.headline(
-                        fontSize: AppFontSizes.headlineSm,
-                        fontWeight: FontWeight.w800,
-                        color: c.text,
+          Center(
+            child: widget.center ??
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (widget.label != null)
+                      Text(
+                        widget.label!,
+                        style: TextStyle(
+                          fontSize: widget.size * 0.25,
+                          fontWeight: FontWeight.w900,
+                          color: activeColor,
+                          height: 1,
+                        ),
                       ),
-                    ),
-                  if (widget.sublabel != null)
-                    Text(
-                      widget.sublabel!,
-                      style: AppTypography.label(
-                        fontSize: AppFontSizes.labelSm,
-                        color: c.onSurfaceVariant,
+                    if (widget.sublabel != null)
+                      Text(
+                        widget.sublabel!,
+                        style: TextStyle(
+                          fontSize: widget.size * 0.1,
+                          fontWeight: FontWeight.bold,
+                          color: colors.placeholder,
+                        ),
                       ),
-                    ),
-                ],
-              ),
-        ),
+                  ],
+                ),
+          ),
+        ],
       ),
     );
   }
 }
 
-class _RingPainter extends CustomPainter {
+class _ProgressRingPainter extends CustomPainter {
   final double progress;
   final Color color;
-  final Color trackColor;
+  final Color backgroundColor;
   final double strokeWidth;
 
-  _RingPainter({
+  _ProgressRingPainter({
     required this.progress,
     required this.color,
-    required this.trackColor,
+    required this.backgroundColor,
     required this.strokeWidth,
   });
 
   @override
   void paint(Canvas canvas, Size size) {
-    final center = size.center(Offset.zero);
-    final radius = (size.width - strokeWidth) / 2;
-    final rect = Rect.fromCircle(center: center, radius: radius);
+    final center = Offset(size.width / 2, size.height / 2);
+    final radius = (math.min(size.width, size.height) - strokeWidth) / 2;
+
+    // Draw background
+    final bgPaint = Paint()
+      ..color = backgroundColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = strokeWidth
+      ..strokeCap = StrokeCap.round;
+    canvas.drawCircle(center, radius, bgPaint);
+
+    // Draw progress arc
+    final progressPaint = Paint()
+      ..color = color
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = strokeWidth
+      ..strokeCap = StrokeCap.round;
 
     canvas.drawArc(
-      rect,
-      0,
-      2 * pi,
+      Rect.fromCircle(center: center, radius: radius),
+      -math.pi / 2,
+      2 * math.pi * progress,
       false,
-      Paint()
-        ..color = trackColor
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = strokeWidth,
+      progressPaint,
     );
 
-    if (progress > 0) {
+    // Draw a subtle glow/gradient if progress > 0
+    if (progress > 0.05) {
+      final glowPaint = Paint()
+        ..shader = SweepGradient(
+          colors: [
+            color.withValues(alpha: 0),
+            color.withValues(alpha: 0.5),
+          ],
+          stops: const [0.0, 1.0],
+          transform: GradientRotation(-math.pi / 2 + (2 * math.pi * progress) - 0.5),
+        ).createShader(Rect.fromCircle(center: center, radius: radius))
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = strokeWidth * 1.5
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 3);
+        
+      // Only draw the glow near the tip
       canvas.drawArc(
-        rect,
-        -pi / 2,
-        2 * pi * progress,
+        Rect.fromCircle(center: center, radius: radius),
+        -math.pi / 2 + (2 * math.pi * progress) - 0.3,
+        0.3,
         false,
-        Paint()
-          ..color = color
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = strokeWidth
-          ..strokeCap = StrokeCap.round,
+        glowPaint,
       );
     }
   }
 
   @override
-  bool shouldRepaint(_RingPainter old) =>
-      old.progress != progress || old.color != color;
+  bool shouldRepaint(_ProgressRingPainter oldDelegate) {
+    return oldDelegate.progress != progress ||
+        oldDelegate.color != color ||
+        oldDelegate.backgroundColor != backgroundColor;
+  }
 }

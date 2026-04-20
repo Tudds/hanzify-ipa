@@ -37,7 +37,7 @@ class CharacterWebDataSourceImpl implements CharacterLocalDataSource {
   Future<void> _seedFromAssets() async {
     try {
       // 1. Seed Characters
-      final charFiles = ['char_hsk1.json', 'char_hsk2.json', 'char_hsk3.json'];
+      final charFiles = ['char_hsk1.json', 'char_hsk2.json', 'char_hsk3.json', 'char_hsk4.json'];
       for (final fileName in charFiles) {
         try {
           final jsonStr = await rootBundle.loadString('assets/data/$fileName');
@@ -71,7 +71,7 @@ class CharacterWebDataSourceImpl implements CharacterLocalDataSource {
       // 2. Seed Vocabs (needed for getVocabContainingChar)
       // Since VocabWebDataSource also does this, it's redundant but necessary if we want isolation.
       // Alternatively, we could inject the vocab store.
-      final vocabFiles = ['hsk1.json', 'hsk2.json', 'hsk3.json'];
+      final vocabFiles = ['hsk1.json', 'hsk2.json', 'hsk3.json', 'hsk4.json'];
       for (final fileName in vocabFiles) {
         try {
           final jsonStr = await rootBundle.loadString('assets/data/$fileName');

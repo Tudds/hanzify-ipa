@@ -143,7 +143,8 @@
       "g_svo",
       "g_neg_bu",
       "g_ma"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_you",
@@ -217,7 +218,8 @@
       "g_shi",
       "g_neg_mei",
       "g_numbers"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_zai",
@@ -290,7 +292,8 @@
       "g_svo",
       "g_you",
       "g_time_word"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_de_attr",
@@ -363,7 +366,8 @@
       "g_shi",
       "g_svo",
       "g_numbers"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_shi_de",
@@ -529,7 +533,8 @@
     "relatedGrammar": [
       "g_le1",
       "g_neg_bu"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_neg_bu",
@@ -602,7 +607,8 @@
       "g_neg_mei",
       "g_svo",
       "g_shi"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_neg_mei",
@@ -748,6 +754,9 @@
       "g_neg_mei",
       "g_shi_de",
       "g_tai_le"
+    ],
+    "sentenceRefs": [
+      "conv_travel_01#L0"
     ]
   },
   {
@@ -825,7 +834,8 @@
       "g_ne",
       "g_neg_bu",
       "g_shi"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_ne",
@@ -968,7 +978,8 @@
       "g_xiang",
       "g_svo",
       "g_neg_bu"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_xiang",
@@ -1122,6 +1133,9 @@
       "g_svo",
       "g_yao",
       "g_tai_le"
+    ],
+    "sentenceRefs": [
+      "conv_shopping_01#L2"
     ]
   },
   {
@@ -1341,7 +1355,8 @@
       "g_duoshao",
       "g_you",
       "g_le1"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_time_word",
@@ -1414,7 +1429,8 @@
       "g_svo",
       "g_zai",
       "g_le1"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_er",
@@ -1564,7 +1580,8 @@
       "g_ma",
       "g_svo",
       "g_shi"
-    ]
+    ],
+    "sentenceRefs": []
   },
   {
     "id": "g_he_conjunction",
@@ -1633,6 +1650,10 @@
       "g_svo",
       "g_budan_erqie",
       "g_gen"
+    ],
+    "sentenceRefs": [
+      "conv_restaurant_01#L2",
+      "conv_restaurant_01#L3"
     ]
   },
   {
@@ -1713,6 +1734,9 @@
       "g_yao",
       "g_xiang",
       "g_neg_bu"
+    ],
+    "sentenceRefs": [
+      "conv_daily_02#L2"
     ]
   },
   {
@@ -1789,6 +1813,7 @@
       "g_neg_bu",
       "g_neg_mei",
       "g_yao"
-    ]
+    ],
+    "sentenceRefs": []
   }
 ]

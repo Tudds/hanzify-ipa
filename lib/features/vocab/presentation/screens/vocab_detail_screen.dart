@@ -5,20 +5,21 @@ import 'package:hanzify/core/theme/colors.dart';
 import 'package:hanzify/core/theme/typography.dart';
 import 'package:hanzify/core/theme/theme_state.dart';
 import 'package:hanzify/core/theme/app_theme_helper.dart';
-import 'package:hanzify/core/navigation/app_routes.dart';
 import 'package:hanzify/core/providers/user_preferences_provider.dart';
-import 'package:hanzify/core/providers/navigation_provider.dart';
-import 'package:hanzify/core/widgets/hanzify_card.dart';
 import 'package:hanzify/core/widgets/hanzify_badge.dart';
 import 'package:hanzify/core/widgets/hanzify_section_header.dart';
 import 'package:hanzify/core/widgets/highlighted_text.dart';
+import 'package:hanzify/core/widgets/hanzify_loading_indicator.dart';
 import 'package:hanzify/core/widgets/hanzify_detail_frame.dart';
 import 'package:hanzify/core/utils/pos_labels.dart' show posLabelFull;
-import 'package:hanzify/core/utils/vocab_meaning_helper.dart';
+import 'package:hanzify/core/widgets/hanzify_bookmark_button.dart';
 import 'package:hanzify/features/vocab/domain/entities/vocab.dart';
 import 'package:hanzify/features/vocab/presentation/providers/vocab_state.dart';
 import 'package:hanzify/features/character/presentation/providers/character_providers.dart';
 import 'package:hanzify/features/character/presentation/widgets/stroke_animation_widget.dart';
+import 'package:hanzify/features/conversation/presentation/screens/conversation_detail_screen.dart';
+import 'package:hanzify/core/graph/graph_providers.dart';
+import 'package:hanzify/features/character/presentation/screens/character_detail_screen.dart';
 
 class VocabDetailScreen extends ConsumerStatefulWidget {
   final Vocab vocab;
@@ -36,70 +37,62 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
     final c = themeColorsOf(context);
     final showPinyin = ref.watch(showPinyinProvider);
 
     return HanzifyDetailFrame(
-      watermarkHanzi: vocab.hanzi,
       appBarTrailing: _buildBookmarkButton(c),
-      hero: _buildHero(c, showPinyin),
+      hero: _buildHero(cs, c, showPinyin),
       slivers: [
-        SliverToBoxAdapter(child: _buildWritingGuide(context, ref, c)),
-        SliverToBoxAdapter(child: _buildMeanings(c)),
-        SliverToBoxAdapter(child: _buildExamples(c, showPinyin)),
+        SliverToBoxAdapter(child: _buildWritingGuide(context, ref, c, cs)),
+        SliverToBoxAdapter(child: _sectionDivider(cs)),
+        SliverToBoxAdapter(child: _buildMeanings(theme, cs, c)),
+        SliverToBoxAdapter(child: _sectionDivider(cs)),
+        SliverToBoxAdapter(child: _buildExamples(theme, cs, c, showPinyin)),
+        SliverToBoxAdapter(child: _sectionDivider(cs)),
+        SliverToBoxAdapter(child: _buildRelatedConversations(theme, cs, c, context)),
+        const SliverToBoxAdapter(child: SizedBox(height: 40)),
       ],
     );
   }
 
-  // ── Bookmark button ──────────────────────────────────────────────────────────
   Widget _buildBookmarkButton(AppThemeColors c) {
-    return GestureDetector(
+    return HanzifyBookmarkButton(
+      isBookmarked: vocab.isBookmarked,
+      colors: c,
       onTap: () {
-        HapticFeedback.lightImpact();
         ref.read(allVocabProvider.notifier).toggleBookmark(vocab);
       },
-      child: Container(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppSpacing.lg,
-          vertical: AppSpacing.sm,
-        ),
-        decoration: BoxDecoration(
-          color: vocab.isBookmarked
-              ? c.primary.withValues(alpha: 0.12)
-              : c.surfaceLowest,
-          borderRadius: BorderRadius.circular(AppRadii.full),
-          boxShadow: c.cardShadow,
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              vocab.isBookmarked
-                  ? Icons.bookmark_rounded
-                  : Icons.bookmark_border_rounded,
-              color: vocab.isBookmarked ? c.primary : c.placeholder,
-              size: 20,
-            ),
-            const SizedBox(width: AppSpacing.xs),
-            Text(
-              'Lưu',
-              style: AppTypography.label(
-                color: vocab.isBookmarked ? c.primary : c.placeholder,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 
-  // ── Hero ─────────────────────────────────────────────────────────────────────
-  Widget _buildHero(AppThemeColors c, bool showPinyin) {
-    final fontSize = vocab.hanzi.length > 3 ? 80.0 : 120.0;
-
+  Widget _sectionDivider(ColorScheme cs) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: AppSpacing.xxl),
+      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 4),
+      child: Divider(color: cs.outlineVariant.withValues(alpha: 0.3)),
+    );
+  }
+
+  Widget _buildHero(ColorScheme cs, AppThemeColors c, bool showPinyin) {
+    final fontSize = vocab.hanzi.length > 3 ? 64.0 : 96.0;
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(vertical: 32),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            cs.primaryContainer.withValues(alpha: 0.6),
+            cs.primaryContainer.withValues(alpha: 0.15),
+            cs.surface,
+          ],
+          stops: const [0.0, 0.6, 1.0],
+        ),
+      ),
       child: Column(
         children: [
           Row(
@@ -107,30 +100,24 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
             children: vocab.hanzi.split('').map((char) {
               return Hero(
                 tag: 'char_$char',
-                child: Material(
-                  color: Colors.transparent,
-                  child: ShaderMask(
-                    shaderCallback: (bounds) =>
-                        c.accentGradient.createShader(bounds),
-                    blendMode: BlendMode.srcIn,
-                    child: Text(
-                      char,
-                      style: AppTypography.hanziDisplay(
-                        fontSize: fontSize,
-                        color: Colors.white,
-                      ),
-                    ),
+                child: Text(
+                  char,
+                  style: AppTypography.hanziDisplay(
+                    fontSize: fontSize,
+                    color: cs.primary,
+                    fontWeight: FontWeight.w900,
                   ),
                 ),
               );
             }).toList(),
           ),
-          const SizedBox(height: AppSpacing.sm),
+          const SizedBox(height: 8),
           Text(
-            '(${vocab.pinyin})',
+            vocab.pinyin,
             style: AppTypography.pinyin(
-              fontSize: AppFontSizes.titleLg,
-              color: c.secondary,
+              fontSize: 24,
+              color: cs.secondary,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ],
@@ -138,23 +125,19 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
     );
   }
 
-  // ── Writing Guide ────────────────────────────────────────────────────────────
-  Widget _buildWritingGuide(BuildContext context, WidgetRef ref, AppThemeColors c) {
+  Widget _buildWritingGuide(BuildContext context, WidgetRef ref, AppThemeColors c, ColorScheme cs) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const HanzifySectionHeader(
-          title: 'Chi tiết từng chữ',
-          icon: Icons.draw_rounded,
-        ),
+        const HanzifySectionHeader(title: 'Chi tiết từng chữ', icon: Icons.draw_rounded),
         if (vocab.characters.isNotEmpty)
           SizedBox(
             height: 220,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               itemCount: vocab.characters.length,
-              separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.md),
+              separatorBuilder: (_, _) => const SizedBox(width: 12),
               itemBuilder: (_, index) {
                 return _CharacterStrokeCard(
                   char: vocab.characters[index],
@@ -162,203 +145,210 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
                   isSelected: _activeCharIndex == index,
                   onTap: () {
                     HapticFeedback.mediumImpact();
-                    setState(() {
-                      _activeCharIndex =
-                          _activeCharIndex == index ? null : index;
-                    });
+                    if (_activeCharIndex == index) {
+                      // Chạm lần 2: Chuyển sang chi tiết
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => CharacterDetailScreen(char: vocab.characters[index]),
+                        ),
+                      );
+                    } else {
+                      // Chạm lần 1: Mở preview
+                      setState(() {
+                        _activeCharIndex = index;
+                      });
+                    }
                   },
                 );
               },
             ),
           ),
-        const SizedBox(height: AppSpacing.xl),
+        const SizedBox(height: 24),
       ],
     );
   }
 
-  // ── Meanings & POS ───────────────────────────────────────────────────────────
-  Widget _buildMeanings(AppThemeColors c) {
+  Widget _buildMeanings(ThemeData theme, ColorScheme cs, AppThemeColors c) {
     final groupedMeanings = vocab.groupedByPos;
     final posKeys = groupedMeanings.keys.toList();
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const HanzifySectionHeader(
-          title: 'Nghĩa & từ loại',
-          icon: Icons.menu_book_rounded,
-        ),
+        const HanzifySectionHeader(title: 'Nghĩa & từ loại', icon: Icons.menu_book_rounded),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xl),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: HanzifyBadge.hsk(level: vocab.level, colors: c),
         ),
-        const SizedBox(height: AppSpacing.md),
-        if (vocab.meanings.isNotEmpty)
-          ...posKeys.map((pos) {
-            final meanings = groupedMeanings[pos]!;
-            final posLabel = posLabelFull(pos);
-            final posColor = c.posColors[pos] ?? c.primary;
+        const SizedBox(height: 16),
+        ...posKeys.map((pos) {
+          final meanings = groupedMeanings[pos]!;
+          final posLabel = posLabelFull(pos);
+          final posColor = c.posColors[pos] ?? cs.primary;
 
-            return Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppSpacing.xl,
-                vertical: AppSpacing.xs,
-              ).copyWith(bottom: AppSpacing.md),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: AppSpacing.md,
-                          vertical: 4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: posColor.withValues(alpha: 0.12),
-                          borderRadius: BorderRadius.circular(AppRadii.md),
-                          border: Border.all(
-                            color: posColor.withValues(alpha: 0.3),
-                            width: 1,
-                          ),
-                        ),
-                        child: Text(
-                          posLabel,
-                          style: AppTypography.label(
-                            fontSize: AppFontSizes.labelSm,
-                            color: posColor,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
+          return Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: posColor.withValues(alpha: 0.1),
+                        borderRadius: BorderRadius.circular(8),
                       ),
-                      const SizedBox(width: AppSpacing.sm),
-                      Expanded(
-                        child: Divider(
-                          color: posColor.withValues(alpha: 0.1),
-                          thickness: 1,
-                        ),
+                      child: Text(
+                        posLabel,
+                        style: TextStyle(fontSize: 12, color: posColor, fontWeight: FontWeight.bold),
                       ),
-                    ],
-                  ),
-                  const SizedBox(height: AppSpacing.sm),
-                  HanzifyCard(
-                    variant: HanzifyCardVariant.glass,
-                    padding: const EdgeInsets.all(AppSpacing.lg),
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(child: Divider(color: posColor.withValues(alpha: 0.1))),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                Card.filled(
+                  color: cs.surfaceContainerLow,
+                  margin: EdgeInsets.zero,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         for (int i = 0; i < meanings.length; i++) ...[
-                          if (i > 0) const SizedBox(height: AppSpacing.md),
-                          _buildMeaningRow(meanings[i], c),
+                          if (i > 0) const SizedBox(height: 12),
+                          _buildMeaningRow(meanings[i], theme, cs, posColor),
                         ],
                       ],
                     ),
                   ),
-                ],
-              ),
-            );
-          }),
-        const SizedBox(height: AppSpacing.xl),
+                ),
+              ],
+            ),
+          );
+        }),
       ],
     );
   }
 
-  Widget _buildMeaningRow(Meaning m, AppThemeColors c) {
-    final posColor = c.posColors[m.pos] ?? c.primary;
+  Widget _buildMeaningRow(Meaning m, ThemeData theme, ColorScheme cs, Color posColor) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          margin: const EdgeInsets.only(top: 8),
-          width: 6,
-          height: 6,
-          decoration: BoxDecoration(color: posColor, shape: BoxShape.circle),
+        Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Container(width: 6, height: 6, decoration: BoxDecoration(color: posColor, shape: BoxShape.circle)),
         ),
-        const SizedBox(width: AppSpacing.sm),
+        const SizedBox(width: 12),
         Expanded(
           child: Text(
             m.vi,
-            style: AppTypography.body(
-              fontSize: AppFontSizes.bodyLg,
-              color: c.text,
-              fontWeight: FontWeight.w600,
-            ),
+            style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600),
           ),
         ),
       ],
     );
   }
 
-  // ── Examples ─────────────────────────────────────────────────────────────────
-  Widget _buildExamples(AppThemeColors c, bool showPinyin) {
+  Widget _buildExamples(ThemeData theme, ColorScheme cs, AppThemeColors c, bool showPinyin) {
     if (vocab.exampleSentences.isEmpty) return const SizedBox.shrink();
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const HanzifySectionHeader(
-          title: 'Câu ví dụ',
-          icon: Icons.format_quote_rounded,
-        ),
+        const HanzifySectionHeader(title: 'Câu ví dụ', icon: Icons.format_quote_rounded),
         ...vocab.exampleSentences.map(
           (ex) => Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppSpacing.xl,
-            ).copyWith(bottom: AppSpacing.md),
-            child: HanzifyCard(
-              variant: HanzifyCardVariant.glass,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  HanzifyHighlightedText(
-                    text: ex.cn,
-                    highlight: vocab.hanzi,
-                    baseStyle: AppTypography.hanziUi(
-                      fontSize: AppFontSizes.titleLg,
-                      color: c.text,
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+            child: Card.filled(
+              color: cs.surfaceContainerLow,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    HanzifyHighlightedText(
+                      text: ex.cn,
+                      highlight: vocab.hanzi,
+                      baseStyle: AppTypography.hanziUi(fontSize: 20, color: cs.onSurface),
+                      colors: c,
                     ),
-                    colors: c,
-                  ),
-                  const SizedBox(height: AppSpacing.xs),
-                  HanzifyHighlightedText(
-                    text: ex.pinyin,
-                    highlight: vocab.pinyin,
-                    baseStyle: AppTypography.pinyin(
-                      fontSize: AppFontSizes.bodySm,
-                      color: c.secondary,
+                    const SizedBox(height: 4),
+                    Text(ex.pinyin, style: TextStyle(fontSize: 14, color: cs.secondary)),
+                    const SizedBox(height: 8),
+                    Container(
+                      padding: const EdgeInsets.only(left: 12),
+                      decoration: BoxDecoration(border: Border(left: BorderSide(color: cs.primaryContainer, width: 4))),
+                      child: Text(ex.vi, style: theme.textTheme.bodyMedium?.copyWith(color: cs.onSurfaceVariant)),
                     ),
-                    colors: c,
-                  ),
-                  const SizedBox(height: AppSpacing.sm),
-                  Container(
-                    padding: const EdgeInsets.only(
-                      left: AppSpacing.md,
-                      top: AppSpacing.xs,
-                      bottom: AppSpacing.xs,
-                    ),
-                    decoration: BoxDecoration(
-                      border: Border(
-                        left: BorderSide(
-                          color: c.primary.withValues(alpha: 0.4),
-                          width: 3,
-                        ),
-                      ),
-                    ),
-                    child: Text(
-                      ex.vi,
-                      style: AppTypography.body(
-                        fontSize: AppFontSizes.bodyMd,
-                        color: c.onSurfaceVariant,
-                      ),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
         ),
-        const SizedBox(height: AppSpacing.xl),
       ],
+    );
+  }
+
+  Widget _buildRelatedConversations(ThemeData theme, ColorScheme cs, AppThemeColors c, BuildContext context) {
+    final convsAsync = ref.watch(vocabRelatedConversationsProvider(vocab.id));
+
+    return convsAsync.when(
+      data: (convs) {
+        if (convs.isEmpty) return const SizedBox.shrink();
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Theme(
+            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+            child: Card.filled(
+              color: cs.surfaceContainerLow,
+              margin: EdgeInsets.zero,
+              child: ExpansionTile(
+                title: const Text('Hội thoại liên quan', style: TextStyle(fontWeight: FontWeight.bold)),
+                leading: const Icon(Icons.chat_bubble_outline_rounded),
+                childrenPadding: const EdgeInsets.only(bottom: 8),
+                children: convs.map((conv) => Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 8, vertical: 4),
+                  child: Card.filled(
+                    color: cs.surfaceContainerHigh,
+                    child: InkWell(
+                      onTap: () {
+                        HapticFeedback.lightImpact();
+                        Navigator.of(context).push(MaterialPageRoute(builder: (_) => ConversationDetailScreen(conversation: conv)));
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Row(
+                          children: [
+                            Text(conv.icon, style: const TextStyle(fontSize: 24)),
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(conv.titleZh, style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+                                  Text(conv.title, style: theme.textTheme.bodySmall?.copyWith(color: cs.onSurfaceVariant)),
+                                ],
+                              ),
+                            ),
+                            const Icon(Icons.chevron_right, size: 20),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                )).toList(),
+              ),
+            ),
+          ),
+        );
+      },
+      loading: () => const SizedBox.shrink(),
+      error: (_, _) => const SizedBox.shrink(),
     );
   }
 }
@@ -378,115 +368,60 @@ class _CharacterStrokeCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final c = colors;
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
     final charAsync = ref.watch(characterDetailProvider(char));
 
     return GestureDetector(
       onTap: onTap,
-      onDoubleTap: () {
-        HapticFeedback.mediumImpact();
-        Navigator.of(context).pop();
-        ref
-            .read(navigationProvider.notifier)
-            .navigate(AppRoutes.charDetail, arg: char);
-      },
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeOut,
-        width: isSelected ? 200 : 100,
-        child: HanzifyCard(
-          variant: isSelected ? HanzifyCardVariant.solid : HanzifyCardVariant.glass,
-          color: isSelected ? c.surfaceLowest : null,
+        duration: const Duration(milliseconds: 400),
+        curve: Curves.easeOutCubic,
+        width: isSelected ? 180 : 100,
+        child: Card.filled(
+          color: isSelected ? cs.primaryContainer : cs.surfaceContainerLow,
           margin: EdgeInsets.zero,
-          padding: const EdgeInsets.all(AppSpacing.md),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              if (!isSelected) ...[
-                Text(
-                  char,
-                  style: AppTypography.hanziDisplay(
-                    fontSize: AppFontSizes.displaySm,
-                    color: c.text,
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                if (!isSelected) ...[
+                  Text(char, style: AppTypography.hanziDisplay(fontSize: 32, color: cs.onSurface)),
+                  charAsync.maybeWhen(
+                    data: (character) => character?.pinyin != null
+                        ? Text(character!.pinyin!, style: TextStyle(fontSize: 12, color: cs.primary))
+                        : const SizedBox.shrink(),
+                    orElse: () => const SizedBox.shrink(),
                   ),
-                ),
-                charAsync.maybeWhen(
-                  data: (character) => character?.pinyin != null
-                      ? Text(
-                          character!.pinyin!,
-                          style: AppTypography.pinyin(
-                            fontSize: 12,
-                            color: c.primary,
+                  const SizedBox(height: 4),
+                  Icon(Icons.open_in_new_rounded, size: 14, color: cs.onSurfaceVariant.withValues(alpha: 0.5)),
+                ] else
+                  charAsync.when(
+                    loading: () => const HanzifyLoadingIndicator(size: 32),
+                    error: (e, _) => Text(char, style: AppTypography.hanziDisplay(fontSize: 32, color: cs.onSurface)),
+                    data: (character) {
+                      if (character == null || character.strokes.isEmpty) {
+                        return Text(char, style: AppTypography.hanziDisplay(fontSize: 32, color: cs.onSurface));
+                      }
+                      return Column(
+                        children: [
+                          Text(char, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                          const SizedBox(height: 8),
+                          StrokeAnimationWidget(
+                            svgStrokes: character.strokes,
+                            colors: colors,
+                            size: 100,
+                            autoPlay: true,
+                            showControls: false,
+                            loop: true,
                           ),
-                        )
-                      : const SizedBox.shrink(),
-                  orElse: () => const SizedBox.shrink(),
-                ),
-                const SizedBox(height: AppSpacing.xs),
-                Text(
-                  'Nét ✍️',
-                  style: AppTypography.label(fontSize: 10, color: c.primary),
-                ),
-              ] else
-                charAsync.when(
-                  loading: () =>
-                      Center(child: CircularProgressIndicator(color: c.primary)),
-                  error: (e, _) => Center(
-                    child: Text(
-                      char,
-                      style: AppTypography.hanziDisplay(
-                        fontSize: AppFontSizes.displaySm,
-                        color: c.text,
-                      ),
-                    ),
-                  ),
-                  data: (character) {
-                    if (character == null || character.strokes.isEmpty) {
-                      return Center(
-                        child: Text(
-                          char,
-                          style: AppTypography.hanziDisplay(
-                            fontSize: AppFontSizes.displaySm,
-                            color: c.text,
-                          ),
-                        ),
+                        ],
                       );
-                    }
-                    return Column(
-                      children: [
-                        Column(
-                          children: [
-                            Text(
-                              char,
-                              style: AppTypography.hanziDisplay(
-                                fontSize: AppFontSizes.titleMd,
-                                color: c.text,
-                              ),
-                            ),
-                            if (character.pinyin != null)
-                              Text(
-                                character.pinyin!,
-                                style: AppTypography.pinyin(
-                                  fontSize: 10,
-                                  color: c.primary,
-                                ),
-                              ),
-                          ],
-                        ),
-                        const SizedBox(height: AppSpacing.sm),
-                        StrokeAnimationWidget(
-                          svgStrokes: character.strokes,
-                          colors: c,
-                          size: 120,
-                          autoPlay: true,
-                          showControls: false,
-                          loop: true,
-                        ),
-                      ],
-                    );
-                  },
-                ),
-            ],
+                    },
+                  ),
+              ],
+            ),
           ),
         ),
       ),

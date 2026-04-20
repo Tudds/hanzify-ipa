@@ -1,30 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:hanzify/core/theme/theme_state.dart';
-import 'package:hanzify/core/theme/typography.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 enum HanzifyCardVariant {
-  /// Solid white/surface card with soft shadow (default)
   solid,
-  /// Subtle tinted surface — no blur, just a light fill + border
   glass,
-  /// Outlined card — no fill, border only
   outlined,
-  /// Large-radius soft card for flashcard study view
   study,
+  elevated,
+  gradient,
 }
 
-class HanzifyCard extends ConsumerStatefulWidget {
+class HanzifyCard extends StatefulWidget {
   final Widget child;
   final EdgeInsetsGeometry? padding;
   final EdgeInsetsGeometry? margin;
   final Color? color;
   final double? borderRadius;
-  final List<BoxShadow>? boxShadow;
-  final Border? border;
   final VoidCallback? onTap;
   final VoidCallback? onLongPress;
-  final Gradient? gradient;
   final HanzifyCardVariant variant;
 
   const HanzifyCard({
@@ -34,20 +26,16 @@ class HanzifyCard extends ConsumerStatefulWidget {
     this.margin,
     this.color,
     this.borderRadius,
-    this.boxShadow,
-    this.border,
     this.onTap,
     this.onLongPress,
-    this.gradient,
     this.variant = HanzifyCardVariant.solid,
   });
 
   @override
-  ConsumerState<HanzifyCard> createState() => _HanzifyCardState();
+  State<HanzifyCard> createState() => _HanzifyCardState();
 }
 
-class _HanzifyCardState extends ConsumerState<HanzifyCard>
-    with SingleTickerProviderStateMixin {
+class _HanzifyCardState extends State<HanzifyCard> with SingleTickerProviderStateMixin {
   late final AnimationController _scaleCtrl;
   late final Animation<double> _scaleAnim;
 
@@ -56,8 +44,7 @@ class _HanzifyCardState extends ConsumerState<HanzifyCard>
     super.initState();
     _scaleCtrl = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 120),
-      reverseDuration: const Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 100),
       lowerBound: 0.97,
       upperBound: 1.0,
       value: 1.0,
@@ -71,109 +58,96 @@ class _HanzifyCardState extends ConsumerState<HanzifyCard>
     super.dispose();
   }
 
-  void _onTapDown(_) => _scaleCtrl.reverse();
-  void _onTapUp(_) => _scaleCtrl.forward();
-  void _onTapCancel() => _scaleCtrl.forward();
-
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final c = theme.extension<AppThemeExtension>()?.colors ?? AppThemeColors.light;
-    final radius = widget.borderRadius ?? AppRadii.xxxl;
+    final cs = theme.colorScheme;
+    final radius = widget.borderRadius ?? (widget.variant == HanzifyCardVariant.study ? 24.0 : 16.0);
 
-    final content = Padding(
-      padding: widget.padding ?? const EdgeInsets.all(AppSpacing.xl),
+    Widget cardContent = Padding(
+      padding: widget.padding ?? const EdgeInsets.all(16),
       child: widget.child,
     );
 
+    if (widget.onTap != null || widget.onLongPress != null) {
+      cardContent = InkWell(
+        onTap: widget.onTap,
+        onLongPress: widget.onLongPress,
+        borderRadius: BorderRadius.circular(radius),
+        child: cardContent,
+      );
+    }
+
     Widget card;
     switch (widget.variant) {
-      case HanzifyCardVariant.glass:
-        card = Container(
-          decoration: BoxDecoration(
-            color: widget.color ?? c.glassSurface,
-            borderRadius: BorderRadius.circular(radius),
-            border: widget.border ?? Border.all(color: c.glassBorder, width: 1),
-            boxShadow: widget.boxShadow ?? c.cardShadow,
-          ),
-          child: content,
-        );
       case HanzifyCardVariant.outlined:
-        card = Container(
-          decoration: BoxDecoration(
-            color: Colors.transparent,
-            borderRadius: BorderRadius.circular(radius),
-            border: widget.border ?? Border.all(color: c.outlineVariant, width: 1),
-          ),
-          child: content,
+        card = Card.outlined(
+          margin: widget.margin ?? EdgeInsets.zero,
+          color: widget.color,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius)),
+          child: cardContent,
         );
-      case HanzifyCardVariant.solid:
-        card = Container(
-          decoration: BoxDecoration(
-            color: widget.gradient == null ? (widget.color ?? c.surfaceLowest) : null,
-            gradient: widget.gradient,
-            borderRadius: BorderRadius.circular(radius),
-            boxShadow: widget.boxShadow ?? c.cardShadow,
-            border: widget.border,
-          ),
-          child: content,
-        );
+        break;
       case HanzifyCardVariant.study:
+        card = Card.filled(
+          margin: widget.margin ?? EdgeInsets.zero,
+          color: widget.color ?? cs.primaryContainer.withValues(alpha: 0.2),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius)),
+          child: cardContent,
+        );
+        break;
+      case HanzifyCardVariant.elevated:
+        card = Card(
+          margin: widget.margin ?? EdgeInsets.zero,
+          color: widget.color ?? cs.surfaceContainerHigh,
+          elevation: 2,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius)),
+          child: cardContent,
+        );
+        break;
+      case HanzifyCardVariant.gradient:
         card = Container(
+          margin: widget.margin ?? EdgeInsets.zero,
           decoration: BoxDecoration(
-            color: widget.color ?? c.surfaceLowest,
-            borderRadius: BorderRadius.circular(widget.borderRadius ?? AppRadii.xxxl),
-            boxShadow: widget.boxShadow ?? [
+            gradient: LinearGradient(colors: [cs.primary, cs.tertiary]),
+            borderRadius: BorderRadius.circular(radius),
+            boxShadow: [
               BoxShadow(
-                color: c.text.withValues(alpha: 0.06),
-                blurRadius: 20,
+                color: cs.primary.withValues(alpha: 0.2),
+                blurRadius: 16,
                 offset: const Offset(0, 4),
               ),
             ],
-            border: widget.border,
           ),
-          child: Padding(
-            padding: widget.padding ?? const EdgeInsets.all(AppSpacing.xxl),
-            child: widget.child,
-          ),
-        );
-        return Container(
-          margin: widget.margin ?? const EdgeInsets.symmetric(vertical: 6),
-          child: widget.onTap != null
-              ? GestureDetector(
-                  onTap: widget.onTap,
-                  onLongPress: widget.onLongPress,
-                  onTapDown: _onTapDown,
-                  onTapUp: _onTapUp,
-                  onTapCancel: _onTapCancel,
-                  child: ScaleTransition(scale: _scaleAnim, child: card),
-                )
-              : card,
-        );
-    }
-
-    final wrapped = Container(
-      margin: widget.margin ?? const EdgeInsets.symmetric(vertical: 6),
-      child: card,
-    );
-
-    if (widget.onTap != null || widget.onLongPress != null) {
-      return GestureDetector(
-        onTap: widget.onTap,
-        onLongPress: widget.onLongPress,
-        onTapDown: _onTapDown,
-        onTapUp: _onTapUp,
-        onTapCancel: _onTapCancel,
-        child: ScaleTransition(
-          scale: _scaleAnim,
           child: Material(
             color: Colors.transparent,
             borderRadius: BorderRadius.circular(radius),
-            child: wrapped,
+            child: cardContent,
           ),
+        );
+        break;
+      default:
+        card = Card.filled(
+          margin: widget.margin ?? EdgeInsets.zero,
+          color: widget.color ?? cs.surfaceContainerLow,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius)),
+          child: cardContent,
+        );
+        break;
+    }
+
+    if (widget.onTap != null) {
+      return GestureDetector(
+        onTapDown: (_) => _scaleCtrl.reverse(),
+        onTapUp: (_) => _scaleCtrl.forward(),
+        onTapCancel: () => _scaleCtrl.forward(),
+        child: ScaleTransition(
+          scale: _scaleAnim,
+          child: card,
         ),
       );
     }
-    return wrapped;
+
+    return card;
   }
 }
