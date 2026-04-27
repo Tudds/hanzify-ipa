@@ -39,6 +39,8 @@ class AudioPlayerService {
 
   bool get isPlaying => _player.playing;
 
+  String? get currentUrl => _currentUrl;
+
   Stream<bool> get playingStream => _player.playingStream;
 }
 
