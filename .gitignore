@@ -43,3 +43,19 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+/android/.gradle/
+
+# Local backups and generated working copies
+.codex
+.claude/worktrees/
+backups/
+assets/data/*.bak*.json
+assets/data_backup_*/
+assets/data_backup_phaseB_*/
+assets/data_backup_phaseC_*.json
+test/core/widgets/failures/
+
+# Audio TTS pipeline (sinh ra cục bộ, upload lên R2)
+audio_out/
+tool/.venv/
+tool/.r2.env
