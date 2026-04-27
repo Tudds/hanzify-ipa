@@ -21570,7 +21570,11 @@
     ],
     "level": 4,
     "wordType": "adj",
-    "frequency": "low"
+    "frequency": "low",
+    "tags": [
+      "tính chất",
+      "phân loại"
+    ]
   },
   {
     "id": "hsk4_特征",
@@ -21597,7 +21601,11 @@
     ],
     "level": 4,
     "wordType": "n",
-    "frequency": "low"
+    "frequency": "low",
+    "tags": [
+      "tính chất",
+      "mô tả"
+    ]
   },
   {
     "id": "hsk4_提供",
