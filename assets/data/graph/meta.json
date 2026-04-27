@@ -1,0 +1,14 @@
+{
+  "graphVersion": 1,
+  "dataHash": "5b2cbd5fef1d7323",
+  "generatedAt": "2026-04-27T15:37:06.063270",
+  "nodeCounts": {
+    "vocab": 3593,
+    "grammar": 119,
+    "conversation": 49,
+    "total": 3761
+  },
+  "edgeCount": 2415,
+  "tokenMatches": 2991,
+  "tokenMisses": 163
+}

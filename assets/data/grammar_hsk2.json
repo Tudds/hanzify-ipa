@@ -72,6 +72,13 @@
     ],
     "sentenceRefs": [
       "conv_school_01#L1"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他说中文说得很。",
+        "right": "✅ 他中文说得很好。",
+        "note": "Sau 得 phải có phần đánh giá cụ thể (形容词/副词). 说得很 thiếu tính từ bổ sung."
+      }
     ]
   },
   {
@@ -154,6 +161,13 @@
       "g_mei_you",
       "g_geng",
       "g_zui"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他比我更高三厘米。",
+        "right": "✅ 他比我高三厘米。",
+        "note": "Sau 比...Adj không dùng 更/很/非常. Chỉ dùng Adj thuần hoặc Adj + số lượng."
+      }
     ]
   },
   {
@@ -218,6 +232,13 @@
     "relatedGrammar": [
       "g_mei_le",
       "g_yijing_le"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我去过中国了。",
+        "right": "✅ 我去过中国。",
+        "note": "过 (kinh nghiệm) thường không đi kèm 了. Dùng 了 sẽ thành nghĩa 'đã đi và xong'."
+      }
     ]
   },
   {
@@ -299,6 +320,95 @@
       "g_neg_mei",
       "g_yijing_le",
       "g_guo"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他没有喝了咖啡。",
+        "right": "✅ 他没喝咖啡了。",
+        "note": "没...了 = không còn làm nữa (thay đổi). Không cần 有 giữa 没 và V trong cấu trúc này."
+      }
+    ]
+  },
+  {
+    "id": "g_le2",
+    "title": "Thay đổi trạng thái 了2",
+    "structure": "S + V/A + 了",
+    "explanation": "助词 了 đặt ở cuối câu hoặc sau tính từ/động từ để diễn tả sự thay đổi trạng thái hoặc việc mới xảy ra, gọi là 了2. Khác với 了1 (sau động từ, biểu thị hoàn thành), 了2 nhấn mạnh tình hình hiện tại khác với trước đó. Câu phủ định dùng 没(有)...了, câu nghi vấn dùng 了吗 hoặc 了没有.",
+    "level": 2,
+    "category": "aspect",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V/A",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "了",
+        "isHighlighted": true
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🔄",
+        "title": "Thay đổi trạng thái",
+        "description": "Nhấn mạnh tình hình hiện tại đã khác so với trước, ví dụ: từ không biết thành biết."
+      },
+      {
+        "icon": "🆕",
+        "title": "Việc mới xảy ra",
+        "description": "Diễn tả sự việc vừa mới xảy ra hoặc tình huống mới xuất hiện."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "下雨了。",
+        "pinyin": "Xiàyǔ le.",
+        "vi": "Trời mưa rồi (trước đó chưa mưa)."
+      },
+      {
+        "zh": "他会说汉语了。",
+        "pinyin": "Tā huì shuō Hànyǔ le.",
+        "vi": "Anh ấy đã biết nói tiếng Trung rồi (trước đó không biết)."
+      },
+      {
+        "zh": "春天了，天气暖和了。",
+        "pinyin": "Chūntiān le, tiānqì nuǎnhuo le.",
+        "vi": "Đã đến mùa xuân rồi, thời tiết đã ấm lên rồi."
+      },
+      {
+        "zh": "我已经是大学生了。",
+        "pinyin": "Wǒ yǐjīng shì dàxuéshēng le.",
+        "vi": "Tôi đã là sinh viên đại học rồi."
+      }
+    ],
+    "exampleTags": [
+      "THAY ĐỔI",
+      "MỚI XẢY RA"
+    ],
+    "relatedGrammar": [
+      "g_guo_le",
+      "g_la",
+      "g_de_comp",
+      "g_neg_bu"
+    ],
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 天气冷了 (không ngữ cảnh).",
+        "right": "✅ 天气越来越冷了。",
+        "note": "了₂ thường đi kèm ngữ cảnh thay đổi rõ ràng. Câu đơn giản cần thêm thông tin để tự nhiên."
+      }
     ]
   },
   {
@@ -383,6 +493,13 @@
     ],
     "sentenceRefs": [
       "conv_complaint_01#L2"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他已经来了明天。",
+        "right": "✅ 他明天已经要来了。/ 他昨天已经来了。",
+        "note": "已经 thường dùng với quá khứ/hiện tại. Tương lai dùng '就要...了' hoặc '快...了'."
+      }
     ]
   },
   {
@@ -455,6 +572,13 @@
     "relatedGrammar": [
       "g_yijing_le",
       "g_zhe"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我正在吃饭了。",
+        "right": "✅ 我正在吃饭。/ 我在吃饭呢。",
+        "note": "正在...không dùng kèm 了. Đang làm (진행) không kết hợp với 了 (hoàn thành)."
+      }
     ]
   },
   {
@@ -527,6 +651,13 @@
     "relatedGrammar": [
       "g_zai_V",
       "g_de_attr"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他穿着一件红色衣服去了。",
+        "right": "✅ 他穿着一件红色衣服。",
+        "note": "着 diễn tả trạng thái đang duy trì, không kết hợp với 了 (hoàn thành). Hai ý nghĩa mâu thuẫn nhau."
+      }
     ]
   },
   {
@@ -600,7 +731,14 @@
       "g_cai",
       "g_ruguo"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 如果你来，我就高兴很。",
+        "right": "✅ 如果你来，我就很高兴。",
+        "note": "很/非常 đặt TRƯỚC tính từ, không đặt sau. Trật tự: 就 + 很 + Adj."
+      }
+    ]
   },
   {
     "id": "g_cai",
@@ -672,6 +810,13 @@
     "relatedGrammar": [
       "g_jiu",
       "g_zhi"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他才八点来。",
+        "right": "✅ 他八点才来。",
+        "note": "才 đặt TRƯỚC động từ, ngay trước V. Không đặt trước trạng từ thời gian."
+      }
     ]
   },
   {
@@ -755,6 +900,13 @@
     ],
     "sentenceRefs": [
       "conv_workplace_01#L1"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 因为我忙，因为我没去。",
+        "right": "✅ 因为我忙，所以我没去。",
+        "note": "Cặp liên từ: 因为...所以. Không lặp 因为 hai lần. Thường bỏ một trong hai trong văn nói."
+      }
     ]
   },
   {
@@ -837,7 +989,14 @@
       "g_jiu",
       "g_cai"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 如果下雨，我会不去。",
+        "right": "✅ 如果下雨，我就不去。",
+        "note": "Mệnh đề kết quả trong 如果...就 dùng 就, không dùng 会 (会 chỉ dự đoán độc lập)."
+      }
+    ]
   },
   {
     "id": "g_huozhe",
@@ -909,6 +1068,13 @@
     "relatedGrammar": [
       "g_haishi",
       "g_gen"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你喝茶或者咖啡吗？",
+        "right": "✅ 你喝茶还是咖啡？",
+        "note": "Câu hỏi lựa chọn (A hay B?) dùng 还是. 或者 dùng trong câu trần thuật, không dùng trong câu hỏi."
+      }
     ]
   },
   {
@@ -989,6 +1155,13 @@
     "relatedGrammar": [
       "g_huozhe",
       "g_bi"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我跟朋友和去公园。",
+        "right": "✅ 我跟朋友去公园。",
+        "note": "跟 đã có nghĩa 'cùng với', không cần thêm 和. Dùng một trong hai: 跟...V hoặc 和...V."
+      }
     ]
   },
   {
@@ -1069,6 +1242,13 @@
     "relatedGrammar": [
       "g_lian",
       "g_yinwei_suoyi"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 除了苹果还有，我也喜欢橙子。",
+        "right": "✅ 除了苹果，我也喜欢橙子。",
+        "note": "除了...还/也 — 还/也 đặt đầu mệnh đề thứ hai, không đặt sau 还有 bên trong mệnh đề 1."
+      }
     ]
   },
   {
@@ -1149,6 +1329,13 @@
     "relatedGrammar": [
       "g_chu_le",
       "g_zhi"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 连他都没有来吗？",
+        "right": "✅ 连他也没来！(cảm thán)",
+        "note": "连...都/也 thường dùng trong câu khẳng định cảm thán, không kết thúc bằng 吗."
+      }
     ]
   },
   {
@@ -1230,6 +1417,13 @@
       "g_bi",
       "g_geng",
       "g_zui"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 越喝越我渴。",
+        "right": "✅ 越喝越渴。/ 我越喝越渴。",
+        "note": "Cấu trúc 越V越Adj — chủ ngữ (nếu có) đứng trước 越, không chen vào giữa."
+      }
     ]
   },
   {
@@ -1310,6 +1504,13 @@
     "relatedGrammar": [
       "g_yue_yue",
       "g_chu_le"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 这道菜又好吃又便宜。（không lỗi）\n❌ 他又唱歌又跳舞又弹吉他。",
+        "right": "✅ 他又唱歌，又跳舞，还弹吉他。",
+        "note": "又...又 chỉ nối hai tính chất. Nếu nhiều hơn hai, dùng 又A，又B，还C."
+      }
     ]
   },
   {
@@ -1386,7 +1587,14 @@
     "relatedGrammar": [
       "g_huozhe"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你要喝茶或者咖啡？",
+        "right": "✅ 你要喝茶还是咖啡？",
+        "note": "Câu hỏi lựa chọn (muốn A hay B?) dùng 还是, không dùng 或者. 或者 chỉ trong câu khẳng định."
+      }
+    ]
   },
   {
     "id": "g_zhi",
@@ -1467,6 +1675,13 @@
       "g_lian",
       "g_cai",
       "g_neg_bu"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我只有一个苹果吃。",
+        "right": "✅ 我只有一个苹果。/ 我只吃了一个苹果。",
+        "note": "只 (chỉ, duy nhất) đặt trước V hoặc trước số lượng. Không ghép 只有...V theo kiểu không tự nhiên."
+      }
     ]
   },
   {
@@ -1540,6 +1755,13 @@
       "g_bi",
       "g_geng",
       "g_mei_you"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他是最高的人在这里。",
+        "right": "✅ 他是这里最高的人。",
+        "note": "最 + Adj đặt TRƯỚC danh từ nó bổ nghĩa. Không đặt cụm 最... sau danh từ."
+      }
     ]
   },
   {
@@ -1613,6 +1835,13 @@
       "g_bi",
       "g_zui",
       "g_yue_yue"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他比我更高很多。",
+        "right": "✅ 他比我高很多。/ 他更高。",
+        "note": "Câu 比 không dùng 更/很. 更 dùng trong so sánh tuyệt đối (不用比): 这个更好."
+      }
     ]
   },
   {
@@ -1694,6 +1923,13 @@
       "g_bi",
       "g_geng",
       "g_zui"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他没有我高大。",
+        "right": "✅ 他没有我高。/ 他不如我高。",
+        "note": "A + 没有 + B + Adj — Adj phải là tính từ đơn. Không thêm 大/得 sau tính từ."
+      }
     ]
   },
   {
@@ -1775,7 +2011,14 @@
       "g_shenme",
       "g_shi_de"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你怎么去了北京？（hỏi cách di chuyển）",
+        "right": "✅ 你怎么去北京？（hỏi cách）/ 你怎么去了北京？（ngạc nhiên）",
+        "note": "怎么 + V (hỏi cách). 怎么 + V + 了 (ngạc nhiên/trách cứ). Hai nghĩa khác nhau tùy có 了 hay không."
+      }
+    ]
   },
   {
     "id": "g_zěnmeyàng",
@@ -1848,7 +2091,14 @@
       "g_wh_question",
       "g_ne"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你怎么样去？",
+        "right": "✅ 你怎么去？（cách đi）/ 你去，怎么样？（bạn thấy thế nào về việc đi）",
+        "note": "怎么样 hỏi đánh giá/tình trạng (thế nào). 怎么 hỏi cách thức (như thế nào/bằng cách gì)."
+      }
+    ]
   },
   {
     "id": "g_youdianr",
@@ -1929,7 +2179,14 @@
       "g_tai_le",
       "g_bi"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 有点儿好吃。",
+        "right": "✅ 有点儿难吃。/ 真好吃！",
+        "note": "有点儿 mang hàm ý không hài lòng/phàn nàn — thường đi với tính từ tiêu cực hoặc không mong muốn."
+      }
+    ]
   },
   {
     "id": "g_yixia",
@@ -2002,7 +2259,14 @@
       "g_zhe",
       "g_le1"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 一下看。",
+        "right": "✅ 看一下。",
+        "note": "一下 luôn đặt SAU động từ: V + 一下. Không đặt trước động từ."
+      }
+    ]
   },
   {
     "id": "g_ránhòu",
@@ -2079,6 +2343,13 @@
     ],
     "sentenceRefs": [
       "conv_daily_01#L2"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我然后去了学校。",
+        "right": "✅ 我去了学校，然后去了图书馆。",
+        "note": "然后 là liên từ nối hai mệnh đề, không đứng trong giữa một mệnh đề đơn như 我然后去."
+      }
     ]
   },
   {
@@ -2150,7 +2421,14 @@
       "g_cai",
       "g_jiu"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 先吃饭，然后我们去。",
+        "right": "✅ 我们先吃饭，然后再去。",
+        "note": "先...然后 — hai mệnh đề nên có cùng chủ ngữ. Thêm 再 trước V2 càng tự nhiên hơn."
+      }
+    ]
   },
   {
     "id": "g_zai_repeat",
@@ -2223,7 +2501,14 @@
       "g_guo",
       "g_le1"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 请你再一次说。",
+        "right": "✅ 请你再说一次。",
+        "note": "再 + V + (số lần). Không đặt số lần trước V: 再一次说 ❌ → 再说一次 ✅."
+      }
+    ]
   },
   {
     "id": "g_hai_yao",
@@ -2304,7 +2589,14 @@
       "g_zhe",
       "g_zai_repeat"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我还要去，也想休息。",
+        "right": "✅ 我还要去，但也想休息。",
+        "note": "还 (vẫn/thêm) và 也 (cũng) có thể cùng xuất hiện, nhưng cần liên từ nối để rõ nghĩa tương phản."
+      }
+    ]
   },
   {
     "id": "g_le_duration",
@@ -2391,6 +2683,285 @@
     ],
     "sentenceRefs": [
       "conv_school_01#L1"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我学中文学三年了。",
+        "right": "✅ 我学了三年中文了。/ 我学中文三年了。",
+        "note": "V + 了 + [thời gian] + 了 — không cần lặp động từ khi O theo sau thời gian."
+      }
+    ]
+  },
+  {
+    "id": "g_kuai_le",
+    "title": "Sắp xảy ra 快/要...了",
+    "structure": "快/快要/就要 + V + 了",
+    "explanation": "Cấu trúc này diễn tả sự việc sắp xảy ra trong tương lai gần, tương đương 'sắp' trong tiếng Việt. Có ba dạng phổ biến: 快...了 (ngắn gọn, thông dụng), 快要...了 (nhấn mạnh hơn), 就要...了 (thường kèm thời gian cụ thể như 明天就要走了). Câu phủ định không dùng cấu trúc này — thay bằng '还没...呢'.",
+    "level": 2,
+    "category": "time_expression",
+    "formulaParts": [
+      {
+        "text": "快/快要/就要",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "了",
+        "isHighlighted": true
+      }
+    ],
+    "usages": [
+      {
+        "icon": "⏰",
+        "title": "快...了 — sắp (ngắn gọn)",
+        "description": "快下课了 — Sắp hết giờ học rồi. Dùng trong văn nói hàng ngày."
+      },
+      {
+        "icon": "📅",
+        "title": "就要...了 + mốc thời gian",
+        "description": "明天就要考试了 — Ngày mai là thi rồi. Kết hợp với trạng từ thời gian cụ thể."
+      },
+      {
+        "icon": "🎂",
+        "title": "Biểu đạt kỳ vọng / lo lắng",
+        "description": "快要毕业了 — Sắp tốt nghiệp rồi. Hàm ý xúc cảm về sự thay đổi sắp đến."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "快下课了，我们收拾书包吧。",
+        "pinyin": "Kuài xiàkè le, wǒmen shōushi shūbāo ba.",
+        "vi": "Sắp hết giờ học rồi, chúng ta dọn cặp sách đi thôi."
+      },
+      {
+        "zh": "快要过年了，大家都很开心。",
+        "pinyin": "Kuàiyào guònián le, dàjiā dōu hěn kāixīn.",
+        "vi": "Sắp Tết rồi, mọi người đều rất vui."
+      },
+      {
+        "zh": "他明天就要回国了。",
+        "pinyin": "Tā míngtiān jiùyào huí guó le.",
+        "vi": "Ngày mai anh ấy sắp về nước rồi."
+      },
+      {
+        "zh": "火车快要到站了，请准备下车。",
+        "pinyin": "Huǒchē kuàiyào dào zhàn le, qǐng zhǔnbèi xiàchē.",
+        "vi": "Tàu sắp đến ga rồi, mọi người chuẩn bị xuống tàu."
+      }
+    ],
+    "exampleTags": [
+      "SẮP",
+      "TƯƠNG LAI GẦN",
+      "THỜI GIAN",
+      "THAY ĐỔI"
+    ],
+    "relatedGrammar": [
+      "g_le2",
+      "g_hui_future",
+      "g_yao"
+    ],
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 快下课。",
+        "right": "✅ 快下课了。",
+        "note": "快...了 là cấu trúc cố định, phải có 了 ở cuối. Thiếu 了 câu nghe thiếu hoàn chỉnh."
+      }
+    ]
+  },
+  {
+    "id": "g_v_v",
+    "title": "Câu liên động 连动句",
+    "structure": "S + V1 + (O1) + V2 + O2",
+    "explanation": "Câu liên động là câu có hai động từ liên tiếp cùng chủ ngữ, không cần liên từ. V1 thường là phương tiện/hành động dẫn đến V2, hoặc V1 là mục đích của V2. Phổ biến nhất là dạng 'đi bằng X để làm Y' hoặc 'làm X để đạt Y'. Không nhầm với 'và' — hai V không hoán đổi được vì có quan hệ thứ tự/mục đích.",
+    "level": 2,
+    "category": "sentence_pattern",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V1",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V2 + O",
+        "isHighlighted": true
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🚶",
+        "title": "Phương tiện → Hành động",
+        "description": "S + đi bằng gì + làm gì: 他骑车去学校 (anh ấy đạp xe đến trường)"
+      },
+      {
+        "icon": "🎯",
+        "title": "Hành động → Mục đích",
+        "description": "S + làm gì + để làm gì: 我去超市买菜 (tôi đi siêu thị mua rau)"
+      },
+      {
+        "icon": "📞",
+        "title": "Dùng gì → Làm gì",
+        "description": "用 + công cụ + V2: 他用手机查地图 (anh ấy dùng điện thoại tra bản đồ)"
+      }
+    ],
+    "examples": [
+      {
+        "zh": "我去图书馆借书。",
+        "pinyin": "Wǒ qù túshūguǎn jiè shū.",
+        "vi": "Tôi đến thư viện để mượn sách."
+      },
+      {
+        "zh": "她骑自行车上班。",
+        "pinyin": "Tā qí zìxíngchē shàngbān.",
+        "vi": "Cô ấy đạp xe đi làm."
+      },
+      {
+        "zh": "我用中文写了一封信。",
+        "pinyin": "Wǒ yòng Zhōngwén xiěle yī fēng xìn.",
+        "vi": "Tôi dùng tiếng Trung viết một lá thư."
+      },
+      {
+        "zh": "他拿着雨伞出门了。",
+        "pinyin": "Tā ná zhe yǔsǎn chūmén le.",
+        "vi": "Anh ấy cầm ô ra ngoài rồi."
+      }
+    ],
+    "exampleTags": [
+      "PHƯƠNG TIỆN",
+      "MỤC ĐÍCH",
+      "HÀNH ĐỘNG LIÊN TIẾP",
+      "DÙNG GÌ"
+    ],
+    "relatedGrammar": [
+      "g_svo",
+      "g_xian_ránhòu",
+      "g_gen"
+    ],
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我去图书馆，然后借书。",
+        "right": "✅ 我去图书馆借书。",
+        "note": "Câu liên động hai V cùng chủ ngữ liên tiếp nhau, không cần 然后/和. Thêm vào là dư thừa."
+      }
+    ]
+  },
+  {
+    "id": "g_mei_tian",
+    "title": "Thói quen / tần suất 每",
+    "structure": "每 + 时间词 + (都) + V",
+    "explanation": "每 (měi) kết hợp với từ chỉ thời gian để diễn tả tần suất hoặc thói quen định kỳ: 每天 (mỗi ngày), 每周/每星期 (mỗi tuần), 每月 (mỗi tháng), 每年 (mỗi năm), 每次 (mỗi lần), 每个人 (mỗi người). Thường kết hợp với 都 để nhấn mạnh tính đều đặn. Thời gian đặt trước chủ ngữ hoặc sau chủ ngữ đều được.",
+    "level": 2,
+    "category": "time_expression",
+    "formulaParts": [
+      {
+        "text": "每",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "时间词",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "(都)",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🗓️",
+        "title": "每天/每周/每月/每年",
+        "description": "我每天早上六点起床 — Tôi dậy lúc 6 giờ sáng mỗi ngày."
+      },
+      {
+        "icon": "🔁",
+        "title": "每次 — mỗi lần",
+        "description": "每次考试他都很紧张 — Mỗi kỳ thi anh ấy đều rất hồi hộp."
+      },
+      {
+        "icon": "👥",
+        "title": "每个 + N — mỗi (người/cái)",
+        "description": "每个学生都有一本书 — Mỗi học sinh đều có một quyển sách."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "我每天早上都去跑步。",
+        "pinyin": "Wǒ měitiān zǎoshang dōu qù pǎobù.",
+        "vi": "Tôi mỗi sáng đều đi chạy bộ."
+      },
+      {
+        "zh": "她每周末都回家看父母。",
+        "pinyin": "Tā měi zhōumò dōu huí jiā kàn fùmǔ.",
+        "vi": "Cô ấy mỗi cuối tuần đều về nhà thăm bố mẹ."
+      },
+      {
+        "zh": "每次下雨，他都忘记带伞。",
+        "pinyin": "Měi cì xià yǔ, tā dōu wàngjì dài sǎn.",
+        "vi": "Mỗi lần mưa, anh ấy đều quên mang ô."
+      },
+      {
+        "zh": "每个人都有自己的梦想。",
+        "pinyin": "Měi gè rén dōu yǒu zìjǐ de mèngxiǎng.",
+        "vi": "Mỗi người đều có ước mơ riêng của mình."
+      }
+    ],
+    "exampleTags": [
+      "THÓI QUEN",
+      "TẦN SUẤT",
+      "MỖI",
+      "ĐỀU ĐẶN"
+    ],
+    "relatedGrammar": [
+      "g_time_word",
+      "g_hai_yao",
+      "g_zai_V"
+    ],
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我跑步每天早上。",
+        "right": "✅ 我每天早上跑步。/ 每天早上我跑步。",
+        "note": "每天/每周 là trạng từ thời gian — đặt TRƯỚC động từ hoặc đầu câu, không cuối câu."
+      }
     ]
   }
 ]

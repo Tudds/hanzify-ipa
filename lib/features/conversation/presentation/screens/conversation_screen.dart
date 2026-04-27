@@ -8,6 +8,7 @@ import 'package:hanzify/core/theme/theme_state.dart';
 import 'package:hanzify/core/theme/app_theme_helper.dart';
 import 'package:hanzify/core/widgets/hanzify_empty_state.dart';
 import 'package:hanzify/core/widgets/hanzify_icon_avatar.dart';
+import 'package:hanzify/core/widgets/hanzify_section_header.dart';
 import 'package:hanzify/features/conversation/domain/entities/conversation_context.dart';
 import 'package:hanzify/features/conversation/presentation/providers/conversation_providers.dart';
 import 'package:hanzify/core/providers/navigation_provider.dart';
@@ -127,10 +128,11 @@ class _ConversationScreenState extends ConsumerState<ConversationScreen> {
                         scrollDirection: Axis.horizontal,
                         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                         children: [
-                          (1, 'HSK 1', 'Căn bản'),
-                          (2, 'HSK 2', 'Trung cấp'),
-                          (3, 'HSK 3', 'Trung cấp'),
-                          (4, 'HSK 4', 'Nâng cao'),
+                          (0, 'Tất cả'),
+                          (1, 'HSK 1'),
+                          (2, 'HSK 2'),
+                          (3, 'HSK 3'),
+                          (4, 'HSK 4'),
                         ].map((t) {
                           final isSelected = _selectedLevel == t.$1;
                           return Padding(
@@ -155,49 +157,118 @@ class _ConversationScreenState extends ConsumerState<ConversationScreen> {
         },
         body: conversationListAsync.isLoading && allConversations.isEmpty
             ? const Center(child: CircularProgressIndicator())
-            : CustomScrollView(
-                slivers: [
-                  if (filteredList.isEmpty && isSearching)
-                    const SliverFillRemaining(
-                      child: HanzifyEmptyState.searchNoResults(),
-                    )
-                  else if (filteredList.isEmpty)
-                    const SliverFillRemaining(
-                      child: HanzifyEmptyState(
-                        icon: Icons.chat_bubble_outline_rounded,
-                        title: 'Chưa có bài hội thoại cho cấp độ này',
-                      ),
-                    )
-                  else
-                    SliverPadding(
-                      padding: const EdgeInsets.only(top: 8),
-                      sliver: SliverList(
-                        delegate: SliverChildBuilderDelegate(
-                          (context, index) => Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 16),
-                            child: _ConversationCard(
-                              conversation: filteredList[index],
-                              colors: c,
-                              onTap: () {
-                                HanzifyHaptic.tap();
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (_) => ConversationDetailScreen(conversation: filteredList[index]),
-                                  ),
-                                );
-                              },
-                            ),
-                          ),
-                          childCount: filteredList.length,
-                        ),
-                      ),
-                    ),
-                  const SliverToBoxAdapter(
-                    child: SizedBox(height: 80),
-                  ),
-                ],
-              ),
+            : isSearching
+                ? _buildSearchResults(filteredList, c)
+                : _selectedLevel == 0
+                    ? _buildCategorizedLists(allConversations, c)
+                    : _buildSearchResults(filteredList, c),
       ),
+    );
+  }
+
+  Widget _buildCategorizedLists(List<ConversationContext> conversations, AppThemeColors c) {
+    if (conversations.isEmpty) return const SizedBox.shrink();
+
+    // Group by category
+    final grouped = <String, List<ConversationContext>>{};
+    for (final conv in conversations) {
+      grouped.putIfAbsent(conv.category, () => []).add(conv);
+    }
+
+    final categoryNames = {
+      'greeting': 'Chào hỏi & Giao tiếp cơ bản',
+      'shopping': 'Mua sắm',
+      'transport': 'Giao thông & Đi lại',
+      'restaurant': 'Nhà hàng & Ăn uống',
+      'daily': 'Đời sống hàng ngày',
+      'school': 'Trường học & Giáo dục',
+      'travel': 'Du lịch',
+      'phone': 'Điện thoại & Liên lạc',
+      'workplace': 'Công sở & Làm việc',
+    };
+
+    return ListView.builder(
+      padding: const EdgeInsets.only(bottom: 80),
+      itemCount: grouped.keys.length,
+      itemBuilder: (context, index) {
+        final categoryKey = grouped.keys.elementAt(index);
+        final categoryTitle = categoryNames[categoryKey] ?? categoryKey.toUpperCase();
+        final categoryConvs = grouped[categoryKey]!;
+
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 16),
+            HanzifySectionHeader(title: categoryTitle, emoji: '💬'),
+            SizedBox(
+              height: 220,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                itemCount: categoryConvs.length,
+                separatorBuilder: (context, index) => const SizedBox(width: 12),
+                itemBuilder: (context, i) {
+                  return SizedBox(
+                    width: 280,
+                    child: _ConversationCard(
+                      conversation: categoryConvs[i],
+                      colors: c,
+                      isVertical: true,
+                      onTap: () {
+                        HanzifyHaptic.tap();
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => ConversationDetailScreen(conversation: categoryConvs[i]),
+                          ),
+                        );
+                      },
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget _buildSearchResults(List<ConversationContext> filteredList, AppThemeColors c) {
+    return CustomScrollView(
+      slivers: [
+        if (filteredList.isEmpty)
+          const SliverFillRemaining(
+            child: HanzifyEmptyState.searchNoResults(),
+          )
+        else
+          SliverPadding(
+            padding: const EdgeInsets.only(top: 8),
+            sliver: SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) => Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: _ConversationCard(
+                    conversation: filteredList[index],
+                    colors: c,
+                    isVertical: false,
+                    onTap: () {
+                      HanzifyHaptic.tap();
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => ConversationDetailScreen(conversation: filteredList[index]),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                childCount: filteredList.length,
+              ),
+            ),
+          ),
+        const SliverToBoxAdapter(
+          child: SizedBox(height: 80),
+        ),
+      ],
     );
   }
 
@@ -272,12 +343,14 @@ class _ConversationScreenState extends ConsumerState<ConversationScreen> {
 class _ConversationCard extends StatelessWidget {
   final ConversationContext conversation;
   final AppThemeColors colors;
+  final bool isVertical;
   final VoidCallback onTap;
 
   const _ConversationCard({
     required this.conversation,
     required this.colors,
     required this.onTap,
+    this.isVertical = false,
   });
 
   @override
@@ -294,50 +367,86 @@ class _ConversationCard extends StatelessWidget {
         onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Row(
-            children: [
-              HanzifyIconAvatar.emoji(
-                emoji: conversation.icon,
-                backgroundColor: cs.primaryContainer,
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
+          child: isVertical
+              ? Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Expanded(
-                          child: Text(
-                            conversation.title,
-                            style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          ),
+                        HanzifyIconAvatar.emoji(
+                          emoji: conversation.icon,
+                          backgroundColor: cs.primaryContainer,
                         ),
                         if (conversation.isMastered)
-                          Icon(Icons.check_circle, size: 16, color: colors.success),
+                          Icon(Icons.check_circle, size: 20, color: colors.success),
                       ],
                     ),
-                    const SizedBox(height: 2),
+                    const Spacer(),
                     Text(
                       conversation.titleZh,
-                      style: AppTypography.hanziUi(fontSize: 14, color: cs.primary),
+                      style: AppTypography.hanziUi(fontSize: 16, color: cs.primary),
                     ),
-                    const SizedBox(height: 2),
+                    const SizedBox(height: 4),
+                    Text(
+                      conversation.title,
+                      style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 4),
                     Text(
                       conversation.description,
-                      maxLines: 1,
+                      maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: theme.textTheme.bodySmall?.copyWith(color: cs.onSurfaceVariant),
                     ),
                   ],
+                )
+              : Row(
+                  children: [
+                    HanzifyIconAvatar.emoji(
+                      emoji: conversation.icon,
+                      backgroundColor: cs.primaryContainer,
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  conversation.title,
+                                  style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              if (conversation.isMastered)
+                                Icon(Icons.check_circle, size: 16, color: colors.success),
+                            ],
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            conversation.titleZh,
+                            style: AppTypography.hanziUi(fontSize: 14, color: cs.primary),
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            conversation.description,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: theme.textTheme.bodySmall?.copyWith(color: cs.onSurfaceVariant),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Icon(Icons.chevron_right, size: 20, color: cs.onSurfaceVariant),
+                  ],
                 ),
-              ),
-              const SizedBox(width: 8),
-              Icon(Icons.chevron_right, size: 20, color: cs.onSurfaceVariant),
-            ],
-          ),
         ),
       ),
     );

@@ -1,6 +1,5 @@
 import 'package:drift/drift.dart';
-import '../../../../core/database/app_database_stub.dart'
-    if (dart.library.io) '../../../../core/database/app_database.dart';
+import '../../../../core/database/app_database.dart';
 import '../../../vocab/domain/entities/vocab.dart';
 import '../../domain/entities/character.dart';
 import 'character_local_datasource.dart';

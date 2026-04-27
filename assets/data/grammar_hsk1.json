@@ -70,6 +70,13 @@
       "g_shi",
       "g_you",
       "g_neg_bu"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我饭吃。",
+        "right": "✅ 我吃饭。",
+        "note": "Tiếng Trung giữ cứng thứ tự S-V-O, không đảo O lên trước V như một số ngôn ngữ."
+      }
     ]
   },
   {
@@ -144,7 +151,14 @@
       "g_neg_bu",
       "g_ma"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我是喜欢音乐。",
+        "right": "✅ 我喜欢音乐。",
+        "note": "是 chỉ nối hai danh từ/cụm danh từ. Không đặt 是 trước động từ thường."
+      }
+    ]
   },
   {
     "id": "g_you",
@@ -219,7 +233,14 @@
       "g_neg_mei",
       "g_numbers"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 桌子上是一本书。",
+        "right": "✅ 桌子上有一本书。",
+        "note": "Diễn đạt 'có/tồn tại' dùng 有, không dùng 是. 是 = 'là', 有 = 'có'."
+      }
+    ]
   },
   {
     "id": "g_zai",
@@ -293,7 +314,14 @@
       "g_you",
       "g_time_word"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我在学校去。",
+        "right": "✅ 我去学校。",
+        "note": "在 + địa điểm = đang ở chỗ đó. Dùng 去 để diễn tả đến nơi, không ghép 在...去."
+      }
+    ]
   },
   {
     "id": "g_de_attr",
@@ -367,7 +395,14 @@
       "g_svo",
       "g_numbers"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我朋友的书。",
+        "right": "✅ 我的朋友的书。",
+        "note": "Đại từ nhân xưng 我/你/他 cần thêm 的 khi làm định ngữ: 我的书 (không phải 我书)."
+      }
+    ]
   },
   {
     "id": "g_shi_de",
@@ -461,6 +496,13 @@
       "g_shi",
       "g_de_attr",
       "g_le1"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我是昨天来的北京。",
+        "right": "✅ 我是昨天来北京的。",
+        "note": "Trong 是...的, 的 phải đặt ở cuối câu, sau toàn bộ nội dung được nhấn mạnh."
+      }
     ]
   },
   {
@@ -534,7 +576,14 @@
       "g_le1",
       "g_neg_bu"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 太好！",
+        "right": "✅ 太好了！",
+        "note": "太...了 là cấu trúc cố định — hầu như luôn cần 了 ở cuối. Thiếu 了 nghe rất thiếu tự nhiên."
+      }
+    ]
   },
   {
     "id": "g_neg_bu",
@@ -608,7 +657,14 @@
       "g_svo",
       "g_shi"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我不有钱。",
+        "right": "✅ 我没有钱。",
+        "note": "Động từ 有 chỉ phủ định bằng 没, không bao giờ dùng 不有."
+      }
+    ]
   },
   {
     "id": "g_neg_mei",
@@ -681,6 +737,13 @@
       "g_neg_bu",
       "g_you",
       "g_le1"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我明天没去学校。",
+        "right": "✅ 我明天不去学校。",
+        "note": "没 phủ định quá khứ/hiện tại đã xảy ra. Tương lai dùng 不, không dùng 没."
+      }
     ]
   },
   {
@@ -757,6 +820,13 @@
     ],
     "sentenceRefs": [
       "conv_travel_01#L0"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我了吃饭。",
+        "right": "✅ 我吃了饭。/ 我吃饭了。",
+        "note": "了₁ đặt ngay SAU động từ (V+了+O). Không đặt trước động từ như 过 hay 着."
+      }
     ]
   },
   {
@@ -835,7 +905,14 @@
       "g_neg_bu",
       "g_shi"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你去哪里吗？",
+        "right": "✅ 你去哪里？",
+        "note": "Câu đã có từ hỏi (哪里/什么/谁/几) thì KHÔNG thêm 吗. 吗 chỉ dùng trong câu hỏi yes/no."
+      }
+    ]
   },
   {
     "id": "g_ne",
@@ -900,6 +977,13 @@
       "g_ma",
       "g_shi",
       "g_de_attr"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你叫什么名字呢？",
+        "right": "✅ 你叫什么名字？/ 你呢？",
+        "note": "呢 dùng trong câu hỏi rút gọn (你呢？) hoặc hỏi nhẹ. Câu đã có từ hỏi không cần 呢."
+      }
     ]
   },
   {
@@ -979,7 +1063,14 @@
       "g_svo",
       "g_neg_bu"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我想一杯水。",
+        "right": "✅ 我要一杯水。/ 我想喝水。",
+        "note": "想 phải đi kèm động từ (想 + V). Yêu cầu trực tiếp (đặt hàng, gọi món) dùng 要."
+      }
+    ]
   },
   {
     "id": "g_xiang",
@@ -1052,6 +1143,13 @@
       "g_yao",
       "g_svo",
       "g_neg_bu"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我想中国。",
+        "right": "✅ 我想去中国。",
+        "note": "想 bắt buộc phải có động từ theo sau. Muốn đến đâu = 想去 + địa điểm."
+      }
     ]
   },
   {
@@ -1136,6 +1234,13 @@
     ],
     "sentenceRefs": [
       "conv_shopping_01#L2"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 一点儿快！",
+        "right": "✅ 快一点儿！",
+        "note": "Khi bổ nghĩa cho tính từ (yêu cầu mức độ hơn), 一点儿 đặt SAU tính từ: Adj + 一点儿."
+      }
     ]
   },
   {
@@ -1201,6 +1306,13 @@
       "g_numbers",
       "g_shenme",
       "g_you"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 现在多少点？",
+        "right": "✅ 现在几点？",
+        "note": "Hỏi giờ dùng 几点, không dùng 多少点. 多少 + đơn vị đo lường (多少钱/多少人)."
+      }
     ]
   },
   {
@@ -1282,6 +1394,13 @@
       "g_duoshao",
       "g_shi",
       "g_zai"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你要喝什么茶，绿茶还是红茶？",
+        "right": "✅ 你要喝哪种茶，绿茶还是红茶？",
+        "note": "什么 = cái gì (mở, không xác định). 哪 = cái nào (chọn trong nhóm đã biết)."
+      }
     ]
   },
   {
@@ -1356,7 +1475,14 @@
       "g_you",
       "g_le1"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我有二个苹果。",
+        "right": "✅ 我有两个苹果。",
+        "note": "Số 2 trước lượng từ phải dùng 两 (liǎng), không dùng 二 (èr). Trừ khi đọc số thuần túy: 十二, 二十."
+      }
+    ]
   },
   {
     "id": "g_time_word",
@@ -1430,7 +1556,14 @@
       "g_zai",
       "g_le1"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我去了昨天。",
+        "right": "✅ 我昨天去了。",
+        "note": "Trạng từ thời gian (昨天/今天/明天) đặt TRƯỚC động từ, không đặt sau."
+      }
+    ]
   },
   {
     "id": "g_er",
@@ -1495,6 +1628,13 @@
       "g_yidianr",
       "g_shenme",
       "g_de_attr"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 这里儿 (viết thêm 儿 bất kỳ)",
+        "right": "✅ 这儿 / 那儿 / 哪儿",
+        "note": "儿化 không phải thêm vào mọi từ. Chỉ một số từ cố định có 儿化 trong tiếng Phổ thông."
+      }
     ]
   },
   {
@@ -1581,7 +1721,14 @@
       "g_svo",
       "g_shi"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 什么你叫名字？",
+        "right": "✅ 你叫什么名字？",
+        "note": "Từ hỏi GIỮ NGUYÊN vị trí trong câu (không chuyển ra đầu câu như tiếng Anh/Việt)."
+      }
+    ]
   },
   {
     "id": "g_he_conjunction",
@@ -1654,6 +1801,13 @@
     "sentenceRefs": [
       "conv_restaurant_01#L2",
       "conv_restaurant_01#L3"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我喜欢音乐和我喜欢跳舞。",
+        "right": "✅ 我喜欢音乐，也喜欢跳舞。",
+        "note": "和 chỉ nối danh từ/đại từ (A和B). Nối hai câu/mệnh đề phải dùng 也/而且/但是."
+      }
     ]
   },
   {
@@ -1737,6 +1891,13 @@
     ],
     "sentenceRefs": [
       "conv_daily_02#L2"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你会帮我吗？（nhờ vả）",
+        "right": "✅ 你能帮我吗？",
+        "note": "能 = có điều kiện/khả năng thực tế để làm. 会 = biết làm (kỹ năng) hoặc dự đoán sẽ xảy ra."
+      }
     ]
   },
   {
@@ -1814,6 +1975,357 @@
       "g_neg_mei",
       "g_yao"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 不别说话！",
+        "right": "✅ 别说话！",
+        "note": "别 tự nó đã là phủ định — không thêm 不 trước 别. 别 = đừng, không cần 不别."
+      }
+    ]
+  },
+  {
+    "id": "g_pronoun_all",
+    "title": "Đại từ nhân xưng 人称代词",
+    "structure": "我/你/他/她/它 + 们 (số nhiều)",
+    "explanation": "Tiếng Trung có hệ thống đại từ nhân xưng rõ ràng: ngôi 1/2/3 số ít và số nhiều. Thêm 们 vào sau đại từ để tạo số nhiều. Lưu ý: 他 (anh ấy/họ nam), 她 (cô ấy), 它 (nó — vật/động vật) đọc cùng âm tā nhưng viết khác. 您 là dạng tôn trọng của 你, dùng với người lớn tuổi hoặc cấp trên.",
+    "level": 1,
+    "category": "basic",
+    "formulaParts": [
+      {
+        "text": "我/你/他/她/它",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "们",
+        "isHighlighted": true
+      },
+      {
+        "text": "(số nhiều)",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "👤",
+        "title": "Số ít: 我/你/他/她/它/您",
+        "description": "我 (tôi) · 你 (bạn) · 他 (anh ấy) · 她 (cô ấy) · 它 (nó) · 您 (ngài — lịch sự)"
+      },
+      {
+        "icon": "👥",
+        "title": "Số nhiều: thêm 们",
+        "description": "我们 (chúng tôi/ta) · 你们 (các bạn) · 他们/她们 (họ) · 大家 (mọi người)"
+      },
+      {
+        "icon": "⚠️",
+        "title": "他/她/它 đọc cùng âm tā",
+        "description": "Chỉ khác nhau khi viết: 他 (người nam), 她 (người nữ), 它 (vật/động vật)"
+      }
+    ],
+    "examples": [
+      {
+        "zh": "我们都是学生。",
+        "pinyin": "Wǒmen dōu shì xuésheng.",
+        "vi": "Chúng tôi đều là học sinh."
+      },
+      {
+        "zh": "他们来自不同的国家。",
+        "pinyin": "Tāmen lái zì bùtóng de guójiā.",
+        "vi": "Họ đến từ những quốc gia khác nhau."
+      },
+      {
+        "zh": "您好，请问您贵姓？",
+        "pinyin": "Nín hǎo, qǐngwèn nín guì xìng?",
+        "vi": "Kính chào, xin hỏi quý danh của ngài là gì?"
+      },
+      {
+        "zh": "那只猫，它很可爱。",
+        "pinyin": "Nà zhī māo, tā hěn kě'ài.",
+        "vi": "Con mèo đó, nó rất đáng yêu."
+      }
+    ],
+    "exampleTags": [
+      "SỐ NHIỀU",
+      "LỊCH SỰ",
+      "PHÂN BIỆT",
+      "ĐỘNG VẬT"
+    ],
+    "relatedGrammar": [
+      "g_svo",
+      "g_shi",
+      "g_wh_question"
+    ],
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他 (chỉ đồ vật)",
+        "right": "✅ 它 (chỉ đồ vật/động vật)",
+        "note": "它 dùng cho vật/động vật. Người nước ngoài hay dùng 他 cho mọi đối tượng, kể cả vật."
+      }
+    ]
+  },
+  {
+    "id": "g_fangwei",
+    "title": "Từ phương vị 方位词",
+    "structure": "在 + N + 上/下/里/前/后/旁边",
+    "explanation": "Từ phương vị chỉ vị trí tương đối của sự vật. Khác tiếng Việt, trong tiếng Trung phương vị từ đặt SAU danh từ: 桌子上 (trên bàn), không nói 上桌子. Kết hợp với động từ 在 (ở) để chỉ nơi chốn. Các từ phổ biến: 上 (trên), 下/底下 (dưới), 里/里面 (trong), 外/外面 (ngoài), 前/前面 (trước), 后/后面 (sau), 旁边 (bên cạnh), 中间 (ở giữa).",
+    "level": 1,
+    "category": "basic",
+    "formulaParts": [
+      {
+        "text": "在",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "N",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "上/下/里/前/后/旁边",
+        "isHighlighted": true
+      }
+    ],
+    "usages": [
+      {
+        "icon": "📍",
+        "title": "Chỉ vị trí với 在",
+        "description": "在 + N + 方位词 — Sự vật ở đâu: 书在桌子上 (sách ở trên bàn)"
+      },
+      {
+        "icon": "🗺️",
+        "title": "Chỉ hướng / phía",
+        "description": "N + 方位词 làm định ngữ: 学校前面 (phía trước trường), 公司旁边 (cạnh công ty)"
+      },
+      {
+        "icon": "⚠️",
+        "title": "Phương vị đặt SAU danh từ",
+        "description": "Nói 桌子上 (trên bàn), KHÔNG nói 上桌子 — đây là điểm khác hoàn toàn so với tiếng Việt"
+      }
+    ],
+    "examples": [
+      {
+        "zh": "书在桌子上。",
+        "pinyin": "Shū zài zhuōzi shàng.",
+        "vi": "Sách ở trên bàn."
+      },
+      {
+        "zh": "猫在床底下睡觉。",
+        "pinyin": "Māo zài chuáng dǐxia shuìjiào.",
+        "vi": "Con mèo ngủ dưới gầm giường."
+      },
+      {
+        "zh": "超市在学校前面。",
+        "pinyin": "Chāoshì zài xuéxiào qiánmiàn.",
+        "vi": "Siêu thị ở phía trước trường."
+      },
+      {
+        "zh": "冰箱里有很多东西。",
+        "pinyin": "Bīngxiāng lǐ yǒu hěn duō dōngxi.",
+        "vi": "Trong tủ lạnh có rất nhiều thứ."
+      }
+    ],
+    "exampleTags": [
+      "VỊ TRÍ",
+      "HƯỚNG",
+      "NƠI CHỐN",
+      "TRONG/NGOÀI"
+    ],
+    "relatedGrammar": [
+      "g_zai",
+      "g_you",
+      "g_svo"
+    ],
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 上桌子有书。",
+        "right": "✅ 桌子上有书。",
+        "note": "Phương vị từ đặt SAU danh từ chỉ nơi chốn: 桌子上, 房间里, 门口前. Khác hoàn toàn tiếng Việt."
+      }
+    ]
+  },
+  {
+    "id": "g_ji_question",
+    "title": "Từ hỏi 几 — hỏi số nhỏ",
+    "structure": "几 + M + N / 几点 / 几岁",
+    "explanation": "几 (jǐ) dùng để hỏi về số lượng nhỏ, thường dưới 10. Khác với 多少 (hỏi bất kỳ số nào, không cần lượng từ), 几 bắt buộc phải đi kèm lượng từ (量词) trong hầu hết trường hợp. Các cụm cố định hay dùng: 几点 (mấy giờ), 几岁 (mấy tuổi), 几月几号 (ngày mấy tháng mấy), 几个 (mấy cái).",
+    "level": 1,
+    "category": "question",
+    "formulaParts": [
+      {
+        "text": "几",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "M",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "N",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "🕐",
+        "title": "Hỏi giờ: 几点",
+        "description": "现在几点？ — Bây giờ mấy giờ rồi?"
+      },
+      {
+        "icon": "👶",
+        "title": "Hỏi tuổi (trẻ em): 几岁",
+        "description": "你的孩子几岁了？— Con bạn mấy tuổi rồi? (dùng 几岁 cho trẻ nhỏ, 多大 cho người lớn)"
+      },
+      {
+        "icon": "🔢",
+        "title": "Hỏi số lượng nhỏ: 几 + M + N",
+        "description": "你有几个兄弟？— Bạn có mấy anh em trai? (期待số nhỏ < 10)"
+      }
+    ],
+    "examples": [
+      {
+        "zh": "现在几点了？",
+        "pinyin": "Xiànzài jǐ diǎn le?",
+        "vi": "Bây giờ mấy giờ rồi?"
+      },
+      {
+        "zh": "你有几个兄弟姐妹？",
+        "pinyin": "Nǐ yǒu jǐ gè xiōngdì jiěmèi?",
+        "vi": "Bạn có mấy anh chị em?"
+      },
+      {
+        "zh": "这个班有几个学生？",
+        "pinyin": "Zhège bān yǒu jǐ gè xuésheng?",
+        "vi": "Lớp này có mấy học sinh?"
+      },
+      {
+        "zh": "你买了几本书？",
+        "pinyin": "Nǐ mǎile jǐ běn shū?",
+        "vi": "Bạn mua mấy quyển sách?"
+      }
+    ],
+    "exampleTags": [
+      "HỎI GIỜ",
+      "HỎI TUỔI",
+      "HỎI SỐ LƯỢNG",
+      "PHÂN BIỆT VỚI 多少"
+    ],
+    "relatedGrammar": [
+      "g_duoshao",
+      "g_numbers",
+      "g_wh_question"
+    ],
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 现在多少点？",
+        "right": "✅ 现在几点？",
+        "note": "几 dùng hỏi giờ (几点), tuổi trẻ em (几岁), số nhỏ + lượng từ. 多少 + danh từ/tiền."
+      }
+    ]
+  },
+  {
+    "id": "g_duo_adj",
+    "title": "Hỏi mức độ 多 + Adj",
+    "structure": "多 + Adj?",
+    "explanation": "多 (duō) đặt trước tính từ để hỏi về mức độ hoặc kích thước: 多高 (cao bao nhiêu), 多远 (xa bao nhiêu), 多长 (dài bao nhiêu), 多重 (nặng bao nhiêu), 多大 (to/lớn/bao nhiêu tuổi bao nhiêu). Lưu ý: 多大 có thể hỏi cả tuổi lẫn kích thước. Câu trả lời thường là số lượng + đơn vị đo.",
+    "level": 1,
+    "category": "question",
+    "formulaParts": [
+      {
+        "text": "多",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "Adj",
+        "isHighlighted": true
+      },
+      {
+        "text": "?",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "📏",
+        "title": "Hỏi kích thước / khoảng cách",
+        "description": "多高 (cao bao nhiêu) · 多远 (xa bao nhiêu) · 多长 (dài bao nhiêu) · 多重 (nặng bao nhiêu)"
+      },
+      {
+        "icon": "🎂",
+        "title": "Hỏi tuổi người lớn: 多大",
+        "description": "你多大了？— Bạn bao nhiêu tuổi? (dùng cho người lớn; trẻ em dùng 几岁)"
+      },
+      {
+        "icon": "⏱️",
+        "title": "Hỏi thời gian: 多久",
+        "description": "你学中文多久了？— Bạn học tiếng Trung bao lâu rồi?"
+      }
+    ],
+    "examples": [
+      {
+        "zh": "你多高？",
+        "pinyin": "Nǐ duō gāo?",
+        "vi": "Bạn cao bao nhiêu?"
+      },
+      {
+        "zh": "从这里到学校多远？",
+        "pinyin": "Cóng zhèlǐ dào xuéxiào duō yuǎn?",
+        "vi": "Từ đây đến trường bao xa?"
+      },
+      {
+        "zh": "你多大了？",
+        "pinyin": "Nǐ duō dà le?",
+        "vi": "Bạn bao nhiêu tuổi rồi?"
+      },
+      {
+        "zh": "你学中文多久了？",
+        "pinyin": "Nǐ xué Zhōngwén duō jiǔ le?",
+        "vi": "Bạn học tiếng Trung bao lâu rồi?"
+      }
+    ],
+    "exampleTags": [
+      "KÍCH THƯỚC",
+      "TUỔI",
+      "KHOẢNG CÁCH",
+      "THỜI GIAN"
+    ],
+    "relatedGrammar": [
+      "g_ji_question",
+      "g_duoshao",
+      "g_wh_question"
+    ],
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你高多？",
+        "right": "✅ 你多高？",
+        "note": "多 đặt TRƯỚC tính từ: 多 + Adj? Không đặt Adj + 多 khi hỏi mức độ."
+      }
+    ]
   }
 ]

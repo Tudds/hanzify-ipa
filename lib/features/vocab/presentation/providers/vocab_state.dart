@@ -47,6 +47,7 @@ class AllVocabNotifier extends _$AllVocabNotifier {
       final repository = ref.read(vocabRepositoryProvider); // đọc 1 lần duy nhất
       final updated = vocab.copyWith(isBookmarked: !vocab.isBookmarked);
       await repository.update(updated);
+      ref.invalidate(dueVocabProvider);
       ref.read(syncProvider.notifier).push().ignore();
       return repository.getAll();
     });
@@ -58,6 +59,7 @@ class AllVocabNotifier extends _$AllVocabNotifier {
       final repository = ref.read(vocabRepositoryProvider); // đọc 1 lần duy nhất
       final updated = vocab.copyWith(isMastered: !vocab.isMastered);
       await repository.update(updated);
+      ref.invalidate(dueVocabProvider);
       ref.read(syncProvider.notifier).push().ignore();
       return repository.getAll();
     });
@@ -98,12 +100,7 @@ class FlashcardSession extends _$FlashcardSession {
         // 2. Nếu không có từ cần ôn, lấy từ mới (New)
         if (dueCards.isEmpty) {
           cards = await repository.getNew();
-          
-          // 3. Nếu vẫn không có từ nào (DB rỗng), mới reseed
-          if (cards.isEmpty) {
-            await repository.reseed();
-            cards = await repository.getNew();
-          }
+          // Không reseed — trả về list rỗng nếu không có từ nào
         } else {
           cards = dueCards;
         }
@@ -117,10 +114,6 @@ class FlashcardSession extends _$FlashcardSession {
         cards = await repository.getByLevel(hskLevel);
       } else {
         cards = await repository.getAll();
-        if (cards.isEmpty) {
-          await repository.reseed();
-          cards = await repository.getAll();
-        }
       }
 
       // Bookmark filter vẫn phải ở client-side vì DB không có method riêng

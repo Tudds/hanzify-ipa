@@ -7,6 +7,7 @@ enum HanzifyCardVariant {
   study,
   elevated,
   gradient,
+  glassmorphism,
 }
 
 class HanzifyCard extends StatefulWidget {
@@ -123,6 +124,30 @@ class _HanzifyCardState extends State<HanzifyCard> with SingleTickerProviderStat
             color: Colors.transparent,
             borderRadius: BorderRadius.circular(radius),
             child: cardContent,
+          ),
+        );
+        break;
+      case HanzifyCardVariant.glassmorphism:
+        card = Container(
+          margin: widget.margin ?? EdgeInsets.zero,
+          decoration: BoxDecoration(
+            color: (widget.color ?? cs.surfaceContainerHigh).withValues(alpha: 0.7),
+            borderRadius: BorderRadius.circular(radius),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.05),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(radius),
+            child: Material(
+              color: Colors.transparent,
+              child: cardContent,
+            ),
           ),
         );
         break;

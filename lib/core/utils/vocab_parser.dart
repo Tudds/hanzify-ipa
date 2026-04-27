@@ -59,6 +59,9 @@ class VocabJsonParser {
       nextReview: DateTime.parse(
         map['nextReview'] as String? ?? DateTime.now().toUtc().toIso8601String(),
       ),
+      updatedAt: DateTime.parse(
+        map['updatedAt'] as String? ?? DateTime.now().toUtc().toIso8601String(),
+      ),
     );
   }
 }

@@ -202,6 +202,7 @@ class VocabsTable extends Table {
   IntColumn get interval => integer().withDefault(const Constant(0))();
   DateTimeColumn get nextReview => dateTime()();
   BoolColumn get needsSync => boolean().withDefault(const Constant(false))();
+  DateTimeColumn get updatedAt => dateTime().withDefault(currentDateAndTime)();
 
   @override
   Set<Column> get primaryKey => {id};
@@ -238,6 +239,8 @@ class GrammarPointsTable extends Table {
   TextColumn get formulaParts => text().map(const FormulaPartListConverter())();
   TextColumn get usages => text().map(const GrammarUsageListConverter())();
   TextColumn get exampleTags => text().map(const StringListConverter())();
+  BoolColumn get needsSync => boolean().withDefault(const Constant(false))();
+  DateTimeColumn get updatedAt => dateTime().withDefault(currentDateAndTime)();
 
   @override
   Set<Column> get primaryKey => {id};
@@ -294,7 +297,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 10;
+  int get schemaVersion => 11;
 
   @override
   MigrationStrategy get migration {
@@ -353,6 +356,14 @@ class AppDatabase extends _$AppDatabase {
           await DatabaseSeedService(this).seedCharacters();
           debugPrint(
             '[Migration] v9→v10: Re-seeded characters with HSK4 data',
+          );
+        }
+        if (from < 11) {
+          // Version 10→11: Add updatedAt to vocabs, needsSync+updatedAt to grammar
+          await m.alterTable(TableMigration(vocabsTable));
+          await m.alterTable(TableMigration(grammarPointsTable));
+          debugPrint(
+            '[Migration] v10→v11: Added updatedAt to vocabs, needsSync+updatedAt to grammar',
           );
         }
       },
@@ -469,6 +480,16 @@ class DatabaseSeedService {
 
   Future<void> seedVocabs() async {
     try {
+      // Lưu trạng thái SRS của user trước khi re-seed
+      final existingRows = await db.select(db.vocabsTable).get();
+      final Map<String, VocabDbModel> userState = {};
+      for (final row in existingRows) {
+        // Giữ lại row nếu user đã tương tác (SRS fields thay đổi hoặc bookmark/mastered)
+        if (row.repetitions > 0 || row.isBookmarked || row.isMastered || row.interval > 0) {
+          userState[row.id] = row;
+        }
+      }
+
       final List<VocabsTableCompanion> inserts = [];
 
       final listFiles = ['hsk1.json', 'hsk2.json', 'hsk3.json', 'hsk4.json'];
@@ -489,12 +510,23 @@ class DatabaseSeedService {
                 id: id,
                 defaultLevel: inferredLevel,
               );
-              inserts.add(
-                _vocabToCompanion(
-                  vocab,
-                  needsSync: map['needsSync'] as bool? ?? false,
-                ),
+
+              // Merge SRS state từ user nếu có
+              final saved = userState[id];
+              final companion = _vocabToCompanion(
+                saved != null
+                    ? vocab.copyWith(
+                        repetitions: saved.repetitions,
+                        easeFactor: saved.easeFactor,
+                        interval: saved.interval,
+                        nextReview: saved.nextReview,
+                        isBookmarked: saved.isBookmarked,
+                        isMastered: saved.isMastered,
+                      )
+                    : vocab,
+                needsSync: saved?.needsSync ?? false,
               );
+              inserts.add(companion);
             }
           }
         } catch (e) {
@@ -510,7 +542,9 @@ class DatabaseSeedService {
             mode: InsertMode.insertOrReplace,
           );
         });
-        debugPrint('[Seed] Seeded ${inserts.length} vocab items');
+        debugPrint(
+          '[Seed] Seeded ${inserts.length} vocab items (preserved ${userState.length} user states)',
+        );
       }
     } catch (e) {
       debugPrint('[Seed] Vocab seed error: $e');
@@ -630,6 +664,7 @@ class DatabaseSeedService {
           formulaParts: gp.formulaParts,
           usages: gp.usages,
           exampleTags: gp.exampleTags,
+          needsSync: const Value(false),
         );
       }).toList();
 
@@ -773,6 +808,7 @@ class DatabaseSeedService {
       interval: Value(v.interval),
       nextReview: v.nextReview,
       needsSync: Value(needsSync),
+      updatedAt: Value(DateTime.now().toUtc()),
     );
   }
 }

@@ -86,6 +86,7 @@ class Vocab extends Equatable {
   final double easeFactor;
   final int interval;
   final DateTime nextReview;
+  final DateTime updatedAt;
 
   const Vocab({
     required this.id,
@@ -103,6 +104,7 @@ class Vocab extends Equatable {
     this.easeFactor = 2.5,
     this.interval = 0,
     required this.nextReview,
+    required this.updatedAt,
   });
 
   String get primaryMeaningVi => meanings.isNotEmpty ? meanings.first.vi : '';
@@ -119,7 +121,7 @@ class Vocab extends Equatable {
   List<Object?> get props => [
     id, hanzi, pinyin, pinyinNormalized, characters,
     meanings, exampleSentences, level, wordType,
-    isBookmarked, isMastered, repetitions, easeFactor, interval, nextReview,
+    isBookmarked, isMastered, repetitions, easeFactor, interval, nextReview, updatedAt,
   ];
 
   /// Tạo Vocab từ Drift DbModel (thay thế _mapToDomain trong datasource).
@@ -140,6 +142,7 @@ class Vocab extends Equatable {
       easeFactor: model.easeFactor as double,
       interval: model.interval as int,
       nextReview: (model.nextReview as DateTime).toLocal(),
+      updatedAt: (model.updatedAt as DateTime).toLocal(),
     );
   }
 
@@ -150,6 +153,7 @@ class Vocab extends Equatable {
     DateTime? nextReview,
     bool? isBookmarked,
     bool? isMastered,
+    DateTime? updatedAt,
     List<Meaning>? meanings,
     List<ExampleSentence>? exampleSentences,
     List<String>? characters,
@@ -171,6 +175,7 @@ class Vocab extends Equatable {
       easeFactor: easeFactor ?? this.easeFactor,
       interval: interval ?? this.interval,
       nextReview: nextReview ?? this.nextReview,
+      updatedAt: updatedAt ?? this.updatedAt,
     );
   }
 }

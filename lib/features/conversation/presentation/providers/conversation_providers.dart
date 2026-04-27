@@ -2,7 +2,8 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../core/providers/database_provider.dart';
 import '../../data/datasources/conversation_local_datasource.dart';
-import '../../data/datasources/conversation_local_datasource_impl.dart';
+import 'conversation_providers_web.dart'
+    if (dart.library.io) 'conversation_providers_native.dart' as platform;
 import '../../data/repositories/conversation_repository_impl.dart';
 import '../../domain/entities/conversation_context.dart';
 import '../../domain/repositories/conversation_repository.dart';
@@ -17,7 +18,7 @@ part 'conversation_providers.g.dart';
 @Riverpod(keepAlive: true)
 ConversationLocalDataSource conversationLocalDataSource(Ref ref) {
   final db = ref.watch(appDatabaseProvider);
-  return ConversationLocalDataSourceImpl(db);
+  return platform.createNativeDataSource(db);
 }
 
 @Riverpod(keepAlive: true)

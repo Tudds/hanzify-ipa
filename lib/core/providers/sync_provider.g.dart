@@ -8,13 +8,17 @@ part of 'sync_provider.dart';
 
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
+/// SyncService cho native (Drift DB). Null trên web.
 
 @ProviderFor(syncService)
 final syncServiceProvider = SyncServiceProvider._();
 
+/// SyncService cho native (Drift DB). Null trên web.
+
 final class SyncServiceProvider
     extends $FunctionalProvider<SyncService?, SyncService?, SyncService?>
     with $Provider<SyncService?> {
+  /// SyncService cho native (Drift DB). Null trên web.
   SyncServiceProvider._()
     : super(
         from: null,
@@ -49,6 +53,53 @@ final class SyncServiceProvider
 }
 
 String _$syncServiceHash() => r'895346a4dbe1d3ea868fc85f0521ca26ce571a32';
+
+/// SyncWebService cho web. Null trên native.
+
+@ProviderFor(syncWebService)
+final syncWebServiceProvider = SyncWebServiceProvider._();
+
+/// SyncWebService cho web. Null trên native.
+
+final class SyncWebServiceProvider
+    extends
+        $FunctionalProvider<SyncWebService?, SyncWebService?, SyncWebService?>
+    with $Provider<SyncWebService?> {
+  /// SyncWebService cho web. Null trên native.
+  SyncWebServiceProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'syncWebServiceProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$syncWebServiceHash();
+
+  @$internal
+  @override
+  $ProviderElement<SyncWebService?> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  SyncWebService? create(Ref ref) {
+    return syncWebService(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(SyncWebService? value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<SyncWebService?>(value),
+    );
+  }
+}
+
+String _$syncWebServiceHash() => r'814f7de0a093634489f1466978d14611127232cf';
 
 @ProviderFor(connectivityStream)
 final connectivityStreamProvider = ConnectivityStreamProvider._();
@@ -93,13 +144,16 @@ String _$connectivityStreamHash() =>
     r'fd6c265ea6cb2c714cc320227dd8621579b6f3f2';
 
 /// Reacts to auth events (pull on login) and connectivity (push on reconnect).
+/// Hoạt động trên cả native và web.
 
 @ProviderFor(SyncNotifier)
 final syncProvider = SyncNotifierProvider._();
 
 /// Reacts to auth events (pull on login) and connectivity (push on reconnect).
+/// Hoạt động trên cả native và web.
 final class SyncNotifierProvider extends $NotifierProvider<SyncNotifier, void> {
   /// Reacts to auth events (pull on login) and connectivity (push on reconnect).
+  /// Hoạt động trên cả native và web.
   SyncNotifierProvider._()
     : super(
         from: null,
@@ -127,9 +181,10 @@ final class SyncNotifierProvider extends $NotifierProvider<SyncNotifier, void> {
   }
 }
 
-String _$syncNotifierHash() => r'358a20e06e01a3d53713f89f9a92cdaf8d250753';
+String _$syncNotifierHash() => r'8d630700e0ca98f59536bdf6d6b329209de38598';
 
 /// Reacts to auth events (pull on login) and connectivity (push on reconnect).
+/// Hoạt động trên cả native và web.
 
 abstract class _$SyncNotifier extends $Notifier<void> {
   void build();

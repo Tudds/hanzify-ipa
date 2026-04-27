@@ -189,6 +189,18 @@ class $VocabsTableTable extends VocabsTable
     ),
     defaultValue: const Constant(false),
   );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+    defaultValue: currentDateAndTime,
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -207,6 +219,7 @@ class $VocabsTableTable extends VocabsTable
     interval,
     nextReview,
     needsSync,
+    updatedAt,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -318,6 +331,12 @@ class $VocabsTableTable extends VocabsTable
         needsSync.isAcceptableOrUnknown(data['needs_sync']!, _needsSyncMeta),
       );
     }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    }
     return context;
   }
 
@@ -397,6 +416,10 @@ class $VocabsTableTable extends VocabsTable
         DriftSqlType.bool,
         data['${effectivePrefix}needs_sync'],
       )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
     );
   }
 
@@ -430,6 +453,7 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
   final int interval;
   final DateTime nextReview;
   final bool needsSync;
+  final DateTime updatedAt;
   const VocabDbModel({
     required this.id,
     required this.hanzi,
@@ -447,6 +471,7 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
     required this.interval,
     required this.nextReview,
     required this.needsSync,
+    required this.updatedAt,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -479,6 +504,7 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
     map['interval'] = Variable<int>(interval);
     map['next_review'] = Variable<DateTime>(nextReview);
     map['needs_sync'] = Variable<bool>(needsSync);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
     return map;
   }
 
@@ -500,6 +526,7 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
       interval: Value(interval),
       nextReview: Value(nextReview),
       needsSync: Value(needsSync),
+      updatedAt: Value(updatedAt),
     );
   }
 
@@ -527,6 +554,7 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
       interval: serializer.fromJson<int>(json['interval']),
       nextReview: serializer.fromJson<DateTime>(json['nextReview']),
       needsSync: serializer.fromJson<bool>(json['needsSync']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
     );
   }
   @override
@@ -551,6 +579,7 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
       'interval': serializer.toJson<int>(interval),
       'nextReview': serializer.toJson<DateTime>(nextReview),
       'needsSync': serializer.toJson<bool>(needsSync),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
     };
   }
 
@@ -571,6 +600,7 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
     int? interval,
     DateTime? nextReview,
     bool? needsSync,
+    DateTime? updatedAt,
   }) => VocabDbModel(
     id: id ?? this.id,
     hanzi: hanzi ?? this.hanzi,
@@ -588,6 +618,7 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
     interval: interval ?? this.interval,
     nextReview: nextReview ?? this.nextReview,
     needsSync: needsSync ?? this.needsSync,
+    updatedAt: updatedAt ?? this.updatedAt,
   );
   VocabDbModel copyWithCompanion(VocabsTableCompanion data) {
     return VocabDbModel(
@@ -623,6 +654,7 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
           ? data.nextReview.value
           : this.nextReview,
       needsSync: data.needsSync.present ? data.needsSync.value : this.needsSync,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
     );
   }
 
@@ -644,7 +676,8 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
           ..write('easeFactor: $easeFactor, ')
           ..write('interval: $interval, ')
           ..write('nextReview: $nextReview, ')
-          ..write('needsSync: $needsSync')
+          ..write('needsSync: $needsSync, ')
+          ..write('updatedAt: $updatedAt')
           ..write(')'))
         .toString();
   }
@@ -667,6 +700,7 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
     interval,
     nextReview,
     needsSync,
+    updatedAt,
   );
   @override
   bool operator ==(Object other) =>
@@ -687,7 +721,8 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
           other.easeFactor == this.easeFactor &&
           other.interval == this.interval &&
           other.nextReview == this.nextReview &&
-          other.needsSync == this.needsSync);
+          other.needsSync == this.needsSync &&
+          other.updatedAt == this.updatedAt);
 }
 
 class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
@@ -707,6 +742,7 @@ class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
   final Value<int> interval;
   final Value<DateTime> nextReview;
   final Value<bool> needsSync;
+  final Value<DateTime> updatedAt;
   final Value<int> rowid;
   const VocabsTableCompanion({
     this.id = const Value.absent(),
@@ -725,6 +761,7 @@ class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
     this.interval = const Value.absent(),
     this.nextReview = const Value.absent(),
     this.needsSync = const Value.absent(),
+    this.updatedAt = const Value.absent(),
     this.rowid = const Value.absent(),
   });
   VocabsTableCompanion.insert({
@@ -744,6 +781,7 @@ class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
     this.interval = const Value.absent(),
     required DateTime nextReview,
     this.needsSync = const Value.absent(),
+    this.updatedAt = const Value.absent(),
     this.rowid = const Value.absent(),
   }) : id = Value(id),
        hanzi = Value(hanzi),
@@ -772,6 +810,7 @@ class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
     Expression<int>? interval,
     Expression<DateTime>? nextReview,
     Expression<bool>? needsSync,
+    Expression<DateTime>? updatedAt,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
@@ -791,6 +830,7 @@ class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
       if (interval != null) 'interval': interval,
       if (nextReview != null) 'next_review': nextReview,
       if (needsSync != null) 'needs_sync': needsSync,
+      if (updatedAt != null) 'updated_at': updatedAt,
       if (rowid != null) 'rowid': rowid,
     });
   }
@@ -812,6 +852,7 @@ class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
     Value<int>? interval,
     Value<DateTime>? nextReview,
     Value<bool>? needsSync,
+    Value<DateTime>? updatedAt,
     Value<int>? rowid,
   }) {
     return VocabsTableCompanion(
@@ -831,6 +872,7 @@ class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
       interval: interval ?? this.interval,
       nextReview: nextReview ?? this.nextReview,
       needsSync: needsSync ?? this.needsSync,
+      updatedAt: updatedAt ?? this.updatedAt,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -894,6 +936,9 @@ class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
     if (needsSync.present) {
       map['needs_sync'] = Variable<bool>(needsSync.value);
     }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
     if (rowid.present) {
       map['rowid'] = Variable<int>(rowid.value);
     }
@@ -919,6 +964,7 @@ class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
           ..write('interval: $interval, ')
           ..write('nextReview: $nextReview, ')
           ..write('needsSync: $needsSync, ')
+          ..write('updatedAt: $updatedAt, ')
           ..write('rowid: $rowid')
           ..write(')'))
         .toString();
@@ -1667,6 +1713,33 @@ class $GrammarPointsTableTable extends GrammarPointsTable
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   ).withConverter<List<String>>($GrammarPointsTableTable.$converterexampleTags);
+  static const VerificationMeta _needsSyncMeta = const VerificationMeta(
+    'needsSync',
+  );
+  @override
+  late final GeneratedColumn<bool> needsSync = GeneratedColumn<bool>(
+    'needs_sync',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("needs_sync" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+    defaultValue: currentDateAndTime,
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -1682,6 +1755,8 @@ class $GrammarPointsTableTable extends GrammarPointsTable
     formulaParts,
     usages,
     exampleTags,
+    needsSync,
+    updatedAt,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -1758,6 +1833,18 @@ class $GrammarPointsTableTable extends GrammarPointsTable
         isMastered.isAcceptableOrUnknown(data['is_mastered']!, _isMasteredMeta),
       );
     }
+    if (data.containsKey('needs_sync')) {
+      context.handle(
+        _needsSyncMeta,
+        needsSync.isAcceptableOrUnknown(data['needs_sync']!, _needsSyncMeta),
+      );
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    }
     return context;
   }
 
@@ -1829,6 +1916,14 @@ class $GrammarPointsTableTable extends GrammarPointsTable
           data['${effectivePrefix}example_tags'],
         )!,
       ),
+      needsSync: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}needs_sync'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
     );
   }
 
@@ -1864,6 +1959,8 @@ class GrammarPointDbModel extends DataClass
   final List<FormulaPart> formulaParts;
   final List<GrammarUsage> usages;
   final List<String> exampleTags;
+  final bool needsSync;
+  final DateTime updatedAt;
   const GrammarPointDbModel({
     required this.id,
     required this.title,
@@ -1878,6 +1975,8 @@ class GrammarPointDbModel extends DataClass
     required this.formulaParts,
     required this.usages,
     required this.exampleTags,
+    required this.needsSync,
+    required this.updatedAt,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -1915,6 +2014,8 @@ class GrammarPointDbModel extends DataClass
         $GrammarPointsTableTable.$converterexampleTags.toSql(exampleTags),
       );
     }
+    map['needs_sync'] = Variable<bool>(needsSync);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
     return map;
   }
 
@@ -1933,6 +2034,8 @@ class GrammarPointDbModel extends DataClass
       formulaParts: Value(formulaParts),
       usages: Value(usages),
       exampleTags: Value(exampleTags),
+      needsSync: Value(needsSync),
+      updatedAt: Value(updatedAt),
     );
   }
 
@@ -1957,6 +2060,8 @@ class GrammarPointDbModel extends DataClass
       ),
       usages: serializer.fromJson<List<GrammarUsage>>(json['usages']),
       exampleTags: serializer.fromJson<List<String>>(json['exampleTags']),
+      needsSync: serializer.fromJson<bool>(json['needsSync']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
     );
   }
   @override
@@ -1976,6 +2081,8 @@ class GrammarPointDbModel extends DataClass
       'formulaParts': serializer.toJson<List<FormulaPart>>(formulaParts),
       'usages': serializer.toJson<List<GrammarUsage>>(usages),
       'exampleTags': serializer.toJson<List<String>>(exampleTags),
+      'needsSync': serializer.toJson<bool>(needsSync),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
     };
   }
 
@@ -1993,6 +2100,8 @@ class GrammarPointDbModel extends DataClass
     List<FormulaPart>? formulaParts,
     List<GrammarUsage>? usages,
     List<String>? exampleTags,
+    bool? needsSync,
+    DateTime? updatedAt,
   }) => GrammarPointDbModel(
     id: id ?? this.id,
     title: title ?? this.title,
@@ -2007,6 +2116,8 @@ class GrammarPointDbModel extends DataClass
     formulaParts: formulaParts ?? this.formulaParts,
     usages: usages ?? this.usages,
     exampleTags: exampleTags ?? this.exampleTags,
+    needsSync: needsSync ?? this.needsSync,
+    updatedAt: updatedAt ?? this.updatedAt,
   );
   GrammarPointDbModel copyWithCompanion(GrammarPointsTableCompanion data) {
     return GrammarPointDbModel(
@@ -2035,6 +2146,8 @@ class GrammarPointDbModel extends DataClass
       exampleTags: data.exampleTags.present
           ? data.exampleTags.value
           : this.exampleTags,
+      needsSync: data.needsSync.present ? data.needsSync.value : this.needsSync,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
     );
   }
 
@@ -2053,7 +2166,9 @@ class GrammarPointDbModel extends DataClass
           ..write('isMastered: $isMastered, ')
           ..write('formulaParts: $formulaParts, ')
           ..write('usages: $usages, ')
-          ..write('exampleTags: $exampleTags')
+          ..write('exampleTags: $exampleTags, ')
+          ..write('needsSync: $needsSync, ')
+          ..write('updatedAt: $updatedAt')
           ..write(')'))
         .toString();
   }
@@ -2073,6 +2188,8 @@ class GrammarPointDbModel extends DataClass
     formulaParts,
     usages,
     exampleTags,
+    needsSync,
+    updatedAt,
   );
   @override
   bool operator ==(Object other) =>
@@ -2090,7 +2207,9 @@ class GrammarPointDbModel extends DataClass
           other.isMastered == this.isMastered &&
           other.formulaParts == this.formulaParts &&
           other.usages == this.usages &&
-          other.exampleTags == this.exampleTags);
+          other.exampleTags == this.exampleTags &&
+          other.needsSync == this.needsSync &&
+          other.updatedAt == this.updatedAt);
 }
 
 class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
@@ -2107,6 +2226,8 @@ class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
   final Value<List<FormulaPart>> formulaParts;
   final Value<List<GrammarUsage>> usages;
   final Value<List<String>> exampleTags;
+  final Value<bool> needsSync;
+  final Value<DateTime> updatedAt;
   final Value<int> rowid;
   const GrammarPointsTableCompanion({
     this.id = const Value.absent(),
@@ -2122,6 +2243,8 @@ class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
     this.formulaParts = const Value.absent(),
     this.usages = const Value.absent(),
     this.exampleTags = const Value.absent(),
+    this.needsSync = const Value.absent(),
+    this.updatedAt = const Value.absent(),
     this.rowid = const Value.absent(),
   });
   GrammarPointsTableCompanion.insert({
@@ -2138,6 +2261,8 @@ class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
     required List<FormulaPart> formulaParts,
     required List<GrammarUsage> usages,
     required List<String> exampleTags,
+    this.needsSync = const Value.absent(),
+    this.updatedAt = const Value.absent(),
     this.rowid = const Value.absent(),
   }) : id = Value(id),
        title = Value(title),
@@ -2164,6 +2289,8 @@ class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
     Expression<String>? formulaParts,
     Expression<String>? usages,
     Expression<String>? exampleTags,
+    Expression<bool>? needsSync,
+    Expression<DateTime>? updatedAt,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
@@ -2180,6 +2307,8 @@ class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
       if (formulaParts != null) 'formula_parts': formulaParts,
       if (usages != null) 'usages': usages,
       if (exampleTags != null) 'example_tags': exampleTags,
+      if (needsSync != null) 'needs_sync': needsSync,
+      if (updatedAt != null) 'updated_at': updatedAt,
       if (rowid != null) 'rowid': rowid,
     });
   }
@@ -2198,6 +2327,8 @@ class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
     Value<List<FormulaPart>>? formulaParts,
     Value<List<GrammarUsage>>? usages,
     Value<List<String>>? exampleTags,
+    Value<bool>? needsSync,
+    Value<DateTime>? updatedAt,
     Value<int>? rowid,
   }) {
     return GrammarPointsTableCompanion(
@@ -2214,6 +2345,8 @@ class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
       formulaParts: formulaParts ?? this.formulaParts,
       usages: usages ?? this.usages,
       exampleTags: exampleTags ?? this.exampleTags,
+      needsSync: needsSync ?? this.needsSync,
+      updatedAt: updatedAt ?? this.updatedAt,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -2274,6 +2407,12 @@ class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
         $GrammarPointsTableTable.$converterexampleTags.toSql(exampleTags.value),
       );
     }
+    if (needsSync.present) {
+      map['needs_sync'] = Variable<bool>(needsSync.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
     if (rowid.present) {
       map['rowid'] = Variable<int>(rowid.value);
     }
@@ -2296,6 +2435,8 @@ class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
           ..write('formulaParts: $formulaParts, ')
           ..write('usages: $usages, ')
           ..write('exampleTags: $exampleTags, ')
+          ..write('needsSync: $needsSync, ')
+          ..write('updatedAt: $updatedAt, ')
           ..write('rowid: $rowid')
           ..write(')'))
         .toString();
@@ -3223,6 +3364,7 @@ typedef $$VocabsTableTableCreateCompanionBuilder =
       Value<int> interval,
       required DateTime nextReview,
       Value<bool> needsSync,
+      Value<DateTime> updatedAt,
       Value<int> rowid,
     });
 typedef $$VocabsTableTableUpdateCompanionBuilder =
@@ -3243,6 +3385,7 @@ typedef $$VocabsTableTableUpdateCompanionBuilder =
       Value<int> interval,
       Value<DateTime> nextReview,
       Value<bool> needsSync,
+      Value<DateTime> updatedAt,
       Value<int> rowid,
     });
 
@@ -3341,6 +3484,11 @@ class $$VocabsTableTableFilterComposer
     column: $table.needsSync,
     builder: (column) => ColumnFilters(column),
   );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
 }
 
 class $$VocabsTableTableOrderingComposer
@@ -3431,6 +3579,11 @@ class $$VocabsTableTableOrderingComposer
     column: $table.needsSync,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$VocabsTableTableAnnotationComposer
@@ -3507,6 +3660,9 @@ class $$VocabsTableTableAnnotationComposer
 
   GeneratedColumn<bool> get needsSync =>
       $composableBuilder(column: $table.needsSync, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
 }
 
 class $$VocabsTableTableTableManager
@@ -3557,6 +3713,7 @@ class $$VocabsTableTableTableManager
                 Value<int> interval = const Value.absent(),
                 Value<DateTime> nextReview = const Value.absent(),
                 Value<bool> needsSync = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => VocabsTableCompanion(
                 id: id,
@@ -3575,6 +3732,7 @@ class $$VocabsTableTableTableManager
                 interval: interval,
                 nextReview: nextReview,
                 needsSync: needsSync,
+                updatedAt: updatedAt,
                 rowid: rowid,
               ),
           createCompanionCallback:
@@ -3595,6 +3753,7 @@ class $$VocabsTableTableTableManager
                 Value<int> interval = const Value.absent(),
                 required DateTime nextReview,
                 Value<bool> needsSync = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => VocabsTableCompanion.insert(
                 id: id,
@@ -3613,6 +3772,7 @@ class $$VocabsTableTableTableManager
                 interval: interval,
                 nextReview: nextReview,
                 needsSync: needsSync,
+                updatedAt: updatedAt,
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
@@ -3946,6 +4106,8 @@ typedef $$GrammarPointsTableTableCreateCompanionBuilder =
       required List<FormulaPart> formulaParts,
       required List<GrammarUsage> usages,
       required List<String> exampleTags,
+      Value<bool> needsSync,
+      Value<DateTime> updatedAt,
       Value<int> rowid,
     });
 typedef $$GrammarPointsTableTableUpdateCompanionBuilder =
@@ -3963,6 +4125,8 @@ typedef $$GrammarPointsTableTableUpdateCompanionBuilder =
       Value<List<FormulaPart>> formulaParts,
       Value<List<GrammarUsage>> usages,
       Value<List<String>> exampleTags,
+      Value<bool> needsSync,
+      Value<DateTime> updatedAt,
       Value<int> rowid,
     });
 
@@ -4048,6 +4212,16 @@ class $$GrammarPointsTableTableFilterComposer
     column: $table.exampleTags,
     builder: (column) => ColumnWithTypeConverterFilters(column),
   );
+
+  ColumnFilters<bool> get needsSync => $composableBuilder(
+    column: $table.needsSync,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
 }
 
 class $$GrammarPointsTableTableOrderingComposer
@@ -4123,6 +4297,16 @@ class $$GrammarPointsTableTableOrderingComposer
     column: $table.exampleTags,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<bool> get needsSync => $composableBuilder(
+    column: $table.needsSync,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$GrammarPointsTableTableAnnotationComposer
@@ -4187,6 +4371,12 @@ class $$GrammarPointsTableTableAnnotationComposer
         column: $table.exampleTags,
         builder: (column) => column,
       );
+
+  GeneratedColumn<bool> get needsSync =>
+      $composableBuilder(column: $table.needsSync, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
 }
 
 class $$GrammarPointsTableTableTableManager
@@ -4242,6 +4432,8 @@ class $$GrammarPointsTableTableTableManager
                 Value<List<FormulaPart>> formulaParts = const Value.absent(),
                 Value<List<GrammarUsage>> usages = const Value.absent(),
                 Value<List<String>> exampleTags = const Value.absent(),
+                Value<bool> needsSync = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => GrammarPointsTableCompanion(
                 id: id,
@@ -4257,6 +4449,8 @@ class $$GrammarPointsTableTableTableManager
                 formulaParts: formulaParts,
                 usages: usages,
                 exampleTags: exampleTags,
+                needsSync: needsSync,
+                updatedAt: updatedAt,
                 rowid: rowid,
               ),
           createCompanionCallback:
@@ -4274,6 +4468,8 @@ class $$GrammarPointsTableTableTableManager
                 required List<FormulaPart> formulaParts,
                 required List<GrammarUsage> usages,
                 required List<String> exampleTags,
+                Value<bool> needsSync = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => GrammarPointsTableCompanion.insert(
                 id: id,
@@ -4289,6 +4485,8 @@ class $$GrammarPointsTableTableTableManager
                 formulaParts: formulaParts,
                 usages: usages,
                 exampleTags: exampleTags,
+                needsSync: needsSync,
+                updatedAt: updatedAt,
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0

@@ -56,7 +56,7 @@ final class ConversationLocalDataSourceProvider
 }
 
 String _$conversationLocalDataSourceHash() =>
-    r'19cf89f13a0754941a7f66e4cf6dc281773c783c';
+    r'0c9e15b7cfb03bcd9e3f1fb4285a796e260caad7';
 
 @ProviderFor(conversationRepository)
 final conversationRepositoryProvider = ConversationRepositoryProvider._();

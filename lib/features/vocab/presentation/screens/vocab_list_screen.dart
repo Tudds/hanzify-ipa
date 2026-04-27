@@ -15,6 +15,7 @@ import 'package:hanzify/core/utils/pos_labels.dart' show posLabelShort;
 import 'package:hanzify/core/enums/filter_enums.dart';
 import 'package:hanzify/features/vocab/domain/entities/vocab.dart';
 import 'package:hanzify/features/vocab/presentation/providers/vocab_filter_provider.dart';
+import 'package:hanzify/features/vocab/presentation/providers/vocab_state.dart';
 import 'package:hanzify/features/vocab/presentation/screens/vocab_detail_screen.dart';
 
 class VocabListScreen extends ConsumerStatefulWidget {
@@ -38,6 +39,7 @@ class _VocabListScreenState extends ConsumerState<VocabListScreen> {
       level: 1,
       wordType: 'n',
       nextReview: DateTime.now(),
+      updatedAt: DateTime.now(),
     ),
   );
 
@@ -127,8 +129,10 @@ class _VocabListScreenState extends ConsumerState<VocabListScreen> {
                       elevation: WidgetStateProperty.all(0),
                       backgroundColor: WidgetStateProperty.all(cs.surfaceContainerHighest),
                       padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 16)),
+                      shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))),
                     ),
                   ),
+                  _buildDashboardHeader(theme, cs, c, ref),
                   SizedBox(
                     height: 56,
                     child: ListView(
@@ -207,6 +211,57 @@ class _VocabListScreenState extends ConsumerState<VocabListScreen> {
       notifier.setLevel(0);
       notifier.setWordType(posToFilterWordType(chip['value']!));
     }
+  }
+
+  Widget _buildDashboardHeader(ThemeData theme, ColorScheme cs, AppThemeColors c, WidgetRef ref) {
+    final allVocabs = ref.watch(allVocabProvider).asData?.value ?? [];
+    if (allVocabs.isEmpty) return const SizedBox.shrink();
+
+    final totalCount = allVocabs.length;
+    final masteredCount = allVocabs.where((v) => v.isMastered).length;
+    final progress = totalCount > 0 ? masteredCount / totalCount : 0.0;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      child: HanzifyCard(
+        variant: HanzifyCardVariant.gradient,
+        padding: const EdgeInsets.all(20),
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Từ vựng của bạn', style: theme.textTheme.titleMedium?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 4),
+                  Text('Đã thuộc $masteredCount / $totalCount từ', style: theme.textTheme.bodySmall?.copyWith(color: Colors.white.withValues(alpha: 0.85))),
+                  const SizedBox(height: 12),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(4),
+                    child: LinearProgressIndicator(
+                      value: progress,
+                      backgroundColor: Colors.white.withValues(alpha: 0.2),
+                      valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
+                      minHeight: 6,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 24),
+            Container(
+              width: 56,
+              height: 56,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.2),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(Icons.school_rounded, color: Colors.white, size: 28),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 

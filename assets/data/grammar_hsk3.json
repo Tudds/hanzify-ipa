@@ -84,6 +84,13 @@
       "g_bei",
       "g_de_comp",
       "g_result_complement"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我把书看完了。(đúng nghĩa nhưng thiếu kết quả)",
+        "right": "✅ 我把书看完了。✅ Nhưng: ❌ 我把书看。",
+        "note": "Câu 把 BẮT BUỘC có bổ ngữ/kết quả sau V. Không được kết thúc chỉ bằng 把+O+V mà không có gì theo sau."
+      }
     ]
   },
   {
@@ -174,6 +181,13 @@
     ],
     "sentenceRefs": [
       "conv_complaint_01#L3"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我被表扬。",
+        "right": "✅ 我被老师表扬了。",
+        "note": "被 thường cần chỉ rõ ai làm (被 + người/vật). Câu 被 cũng cần bổ ngữ/结果 sau V."
+      }
     ]
   },
   {
@@ -255,6 +269,13 @@
       "g_buguan",
       "g_jishi_ye",
       "g_zhiyao_jiu"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 虽然他很聪明，虽然他考试没过。",
+        "right": "✅ 虽然他很聪明，但是他考试没过。",
+        "note": "Cặp cố định: 虽然...但是/可是. Không lặp 虽然 ở mệnh đề hai."
+      }
     ]
   },
   {
@@ -336,6 +357,13 @@
       "g_zhiyao_jiu",
       "g_buguan",
       "g_yinggai"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 只有努力，你成功。",
+        "right": "✅ 只有努力，你才能成功。",
+        "note": "只有...才 là cặp cố định. Mệnh đề kết quả bắt buộc có 才."
+      }
     ]
   },
   {
@@ -418,7 +446,14 @@
       "g_suiran_danshi",
       "g_yinggai"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 只要你努力，会成功。",
+        "right": "✅ 只要你努力，就会成功。",
+        "note": "只要...就 là cặp cố định. Mệnh đề kết quả bắt buộc có 就."
+      }
+    ]
   },
   {
     "id": "g_buguan",
@@ -499,6 +534,13 @@
       "g_suiran_danshi",
       "g_jishi_ye",
       "g_zhiyou_cai"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 不管天气，我都去。",
+        "right": "✅ 不管天气怎么样，我都去。",
+        "note": "不管 cần có mệnh đề điều kiện rõ ràng (不管 + A/B, 不管...怎么样). Không nói 不管 + N đơn thuần."
+      }
     ]
   },
   {
@@ -580,6 +622,13 @@
       "g_budan_erqie",
       "g_buguan",
       "g_suiran_danshi"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 除了他，大家来了。",
+        "right": "✅ 除了他，大家都来了。",
+        "note": "除了...都 — 都 là bắt buộc trong mệnh đề kết quả để nhấn mạnh 'tất cả ngoại trừ'."
+      }
     ]
   },
   {
@@ -661,82 +710,14 @@
       "g_chule_dou",
       "g_yi_mian",
       "g_suiran_danshi"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 不但他会唱歌，而且他。",
+        "right": "✅ 他不但会唱歌，而且会跳舞。",
+        "note": "Khi cùng chủ ngữ: 不但 đặt sau chủ ngữ. Khi khác chủ ngữ: 不但 đặt đầu mệnh đề 1."
+      }
     ]
-  },
-  {
-    "id": "g_le2",
-    "title": "Thay đổi trạng thái 了2",
-    "structure": "S + V/A + 了",
-    "explanation": "助词 了 đặt ở cuối câu hoặc sau tính từ/động từ để diễn tả sự thay đổi trạng thái hoặc việc mới xảy ra, gọi là 了2. Khác với 了1 (sau động từ, biểu thị hoàn thành), 了2 nhấn mạnh tình hình hiện tại khác với trước đó. Câu phủ định dùng 没(有)...了, câu nghi vấn dùng 了吗 hoặc 了没有.",
-    "level": 3,
-    "category": "aspect",
-    "formulaParts": [
-      {
-        "text": "S",
-        "isHighlighted": false
-      },
-      {
-        "text": "+",
-        "isHighlighted": false
-      },
-      {
-        "text": "V/A",
-        "isHighlighted": false
-      },
-      {
-        "text": "+",
-        "isHighlighted": false
-      },
-      {
-        "text": "了",
-        "isHighlighted": true
-      }
-    ],
-    "usages": [
-      {
-        "icon": "🔄",
-        "title": "Thay đổi trạng thái",
-        "description": "Nhấn mạnh tình hình hiện tại đã khác so với trước, ví dụ: từ không biết thành biết."
-      },
-      {
-        "icon": "🆕",
-        "title": "Việc mới xảy ra",
-        "description": "Diễn tả sự việc vừa mới xảy ra hoặc tình huống mới xuất hiện."
-      }
-    ],
-    "examples": [
-      {
-        "zh": "下雨了。",
-        "pinyin": "Xiàyǔ le.",
-        "vi": "Trời mưa rồi (trước đó chưa mưa)."
-      },
-      {
-        "zh": "他会说汉语了。",
-        "pinyin": "Tā huì shuō Hànyǔ le.",
-        "vi": "Anh ấy đã biết nói tiếng Trung rồi (trước đó không biết)."
-      },
-      {
-        "zh": "春天了，天气暖和了。",
-        "pinyin": "Chūntiān le, tiānqì nuǎnhuo le.",
-        "vi": "Đã đến mùa xuân rồi, thời tiết đã ấm lên rồi."
-      },
-      {
-        "zh": "我已经是大学生了。",
-        "pinyin": "Wǒ yǐjīng shì dàxuéshēng le.",
-        "vi": "Tôi đã là sinh viên đại học rồi."
-      }
-    ],
-    "exampleTags": [
-      "THAY ĐỔI",
-      "MỚI XẢY RA"
-    ],
-    "relatedGrammar": [
-      "g_guo_le",
-      "g_la",
-      "g_de_comp",
-      "g_neg_bu"
-    ],
-    "sentenceRefs": []
   },
   {
     "id": "g_de_potential",
@@ -801,6 +782,13 @@
       "g_de_bu_bu",
       "g_result_complement",
       "g_de_comp"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 这道题我做不了。（sai nếu muốn nói 'làm không được'）",
+        "right": "✅ 这道题我做不出来。/ 我做不完。",
+        "note": "了 trong V得了/V不了 chỉ khả năng. Chọn đúng kết quả bổ ngữ theo nghĩa muốn diễn đạt."
+      }
     ]
   },
   {
@@ -874,6 +862,13 @@
       "g_le2",
       "g_ba_suggest",
       "g_guo_le"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 好啦好啦，我知道了啦。",
+        "right": "✅ 好啦，我知道了。",
+        "note": "啦 là trợ từ nhẹ, không nên lặp nhiều lần trong một câu — nghe thiếu tự nhiên và hơi trẻ con."
+      }
     ]
   },
   {
@@ -939,6 +934,13 @@
       "g_le2",
       "g_guo",
       "g_result_complement"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我吃过了饭了。",
+        "right": "✅ 我吃过饭了。",
+        "note": "过了 và 了 cuối câu không dùng cùng nhau — tránh lặp. Chọn một: 吃过饭了 hoặc 吃过了。"
+      }
     ]
   },
   {
@@ -1018,6 +1020,13 @@
       "g_la",
       "g_mei_guanxi",
       "g_yinggai"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我们去吧！（mệnh lệnh mạnh）",
+        "right": "✅ 我们去吧。（đề nghị nhẹ nhàng）",
+        "note": "吧 có tông nhẹ nhàng, dùng dấu ! làm câu nghe mệnh lệnh hơn đề nghị. Nên kết thúc bằng dấu chấm."
+      }
     ]
   },
   {
@@ -1099,6 +1108,13 @@
       "g_budan_erqie",
       "g_chule_dou",
       "g_de_comp"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他一边吃饭一边看电视看。",
+        "right": "✅ 他一边吃饭，一边看电视。",
+        "note": "一边...一边 chỉ cần hai V, không lặp lại V2 ở cuối."
+      }
     ]
   },
   {
@@ -1172,6 +1188,13 @@
       "g_budan_erqie",
       "g_chule_dou",
       "g_suiran_danshi"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 再说，你应该道歉。（dùng đầu câu）",
+        "right": "✅ 你应该道歉，再说，这是你的错。",
+        "note": "再说 (hơn nữa) đứng ở đầu mệnh đề thứ hai, bổ sung lý do. Không dùng ở đầu câu chính đầu tiên."
+      }
     ]
   },
   {
@@ -1253,6 +1276,13 @@
       "g_suiran_danshi",
       "g_jishi_ye",
       "g_zhiyao_jiu"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 要不是你，我失败了。",
+        "right": "✅ 要不是你帮我，我就失败了。",
+        "note": "要不是...就 — mệnh đề kết quả cần có 就 để hoàn chỉnh quan hệ giả định phản thực tế."
+      }
     ]
   },
   {
@@ -1334,6 +1364,13 @@
       "g_suiran_danshi",
       "g_buguan",
       "g_zhiyou_cai"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 即使下雨，我去。",
+        "right": "✅ 即使下雨，我也去。",
+        "note": "即使...也 là cặp cố định — mệnh đề kết quả bắt buộc có 也 (hoặc 还/都)."
+      }
     ]
   },
   {
@@ -1415,6 +1452,13 @@
       "g_bi",
       "g_de_comp",
       "g_budan_erqie"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 比起以前，他现在好多。",
+        "right": "✅ 比起以前，他现在好多了。",
+        "note": "So sánh với trước thường kèm 了 ở cuối để nhấn mạnh sự thay đổi đã xảy ra."
+      }
     ]
   },
   {
@@ -1496,6 +1540,13 @@
       "g_direction_complement",
       "g_ba",
       "g_de_comp"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我做完功课。（chưa hoàn thành rõ ràng）",
+        "right": "✅ 我做完了功课。",
+        "note": "Bổ ngữ kết quả thường kết hợp với 了 để chỉ hành động đã hoàn thành."
+      }
     ]
   },
   {
@@ -1566,6 +1617,13 @@
       "g_result_complement",
       "g_ba",
       "g_de_comp"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他跑出了去。",
+        "right": "✅ 他跑出去了。",
+        "note": "了 đặt sau toàn bộ bổ ngữ hướng kép (V+出+去+了), không chen vào giữa 出 và 去."
+      }
     ]
   },
   {
@@ -1655,6 +1713,13 @@
       "g_de_potential",
       "g_result_complement",
       "g_de_comp"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 这道菜做得不好吃。",
+        "right": "✅ 这道菜做得不好。/ 这道菜不好吃。",
+        "note": "做得不好 = kết quả không tốt. 不好吃 = không ngon (tính chất). Chọn đúng nghĩa cần diễn đạt."
+      }
     ]
   },
   {
@@ -1720,6 +1785,13 @@
       "g_ba_suggest",
       "g_la",
       "g_yinggai"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 没关系，谢谢你。",
+        "right": "✅ 不客气。/ 没关系。（tùy ngữ cảnh）",
+        "note": "没关系 = không sao (khi ai xin lỗi). 不客气 = không có gì (khi ai cảm ơn). Hai câu dùng khác ngữ cảnh."
+      }
     ]
   },
   {
@@ -1800,7 +1872,14 @@
       "g_zhiyao_jiu",
       "g_ba_suggest"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你应该要去。",
+        "right": "✅ 你应该去。",
+        "note": "应该 đã là động từ tình thái — không cần thêm 要. 应该 + V trực tiếp."
+      }
+    ]
   },
   {
     "id": "g_bixu",
@@ -1879,6 +1958,13 @@
       "g_yinggai",
       "g_zhiyou_cai",
       "g_ba_suggest"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你必须要完成作业。",
+        "right": "✅ 你必须完成作业。",
+        "note": "必须 đã biểu thị bắt buộc mạnh — không cần thêm 要. 必须 + V trực tiếp."
+      }
     ]
   },
   {
@@ -1962,6 +2048,281 @@
     ],
     "sentenceRefs": [
       "conv_daily_02#L3"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他说我去。",
+        "right": "✅ 他说他去。/ 他说让我去。",
+        "note": "Câu gián tiếp trong tiếng Trung không đổi ngôi tự động. Phải xác định rõ chủ ngữ trong mệnh đề trích dẫn."
+      }
+    ]
+  },
+  {
+    "id": "g_bushi_ershi",
+    "title": "Không phải...mà là 不是...而是",
+    "structure": "不是 + A + 而是 + B",
+    "explanation": "Cấu trúc 不是...而是 dùng để phủ nhận A và khẳng định B thay thế, tương đương 'không phải...mà là' trong tiếng Việt. Mạnh hơn 'không...mà' vì 而是 nhấn mạnh sự thay thế hoàn toàn. A và B có thể là danh từ, động từ, hoặc cụm từ. Thường dùng để sửa thông tin sai hoặc làm rõ ý.",
+    "level": 3,
+    "category": "conjunction",
+    "formulaParts": [
+      {
+        "text": "不是",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "A",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "而是",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "B",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "✏️",
+        "title": "Sửa thông tin sai",
+        "description": "Dùng khi muốn chỉnh lại một nhận định: 他不是老师，而是医生。"
+      },
+      {
+        "icon": "🎯",
+        "title": "Nhấn mạnh ý thực sự",
+        "description": "不是不想去，而是没有时间 — Không phải không muốn đi, mà là không có thời gian."
+      },
+      {
+        "icon": "⚖️",
+        "title": "Phân biệt với 不是...就是",
+        "description": "不是A就是B = hoặc A hoặc B. Không phải...而是 = loại bỏ A, chọn B."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "他不是中国人，而是日本人。",
+        "pinyin": "Tā bù shì Zhōngguó rén, ér shì Rìběn rén.",
+        "vi": "Anh ấy không phải người Trung Quốc, mà là người Nhật."
+      },
+      {
+        "zh": "问题不是钱，而是时间。",
+        "pinyin": "Wèntí bù shì qián, ér shì shíjiān.",
+        "vi": "Vấn đề không phải là tiền, mà là thời gian."
+      },
+      {
+        "zh": "我不是不喜欢你，而是工作太忙了。",
+        "pinyin": "Wǒ bù shì bù xǐhuan nǐ, ér shì gōngzuò tài máng le.",
+        "vi": "Không phải tôi không thích bạn, mà là công việc quá bận."
+      },
+      {
+        "zh": "成功不是靠运气，而是靠努力。",
+        "pinyin": "Chénggōng bù shì kào yùnqi, ér shì kào nǔlì.",
+        "vi": "Thành công không phải nhờ may mắn, mà là nhờ nỗ lực."
+      }
+    ],
+    "exampleTags": [
+      "PHỦ NHẬN",
+      "SỬA THÔNG TIN",
+      "NHẤN MẠNH",
+      "ĐỐI LẬP"
+    ],
+    "relatedGrammar": [
+      "g_suiran_danshi",
+      "g_budan_erqie",
+      "g_neg_bu"
+    ],
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他不是老师，但是医生。",
+        "right": "✅ 他不是老师，而是医生。",
+        "note": "不是...而是 = phủ nhận A, khẳng định B thay thế. 但是 = nhượng bộ/tương phản, không thay thế."
+      }
+    ]
+  },
+  {
+    "id": "g_zhihao",
+    "title": "Không còn cách nào khác 只好/不得不",
+    "structure": "只好/不得不 + V",
+    "explanation": "Hai cấu trúc này đều diễn tả 'buộc phải làm gì vì không có lựa chọn khác'. Sắc thái khác nhau: 只好 (zhǐhǎo) — bất đắc dĩ, chấp nhận thụ động vì không còn cách nào tốt hơn; 不得不 (bùdébù) — bắt buộc mạnh hơn, do áp lực bên ngoài. Cả hai không dùng với 不 để phủ định.",
+    "level": 3,
+    "category": "modal",
+    "formulaParts": [
+      {
+        "text": "只好/不得不",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "V",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "😔",
+        "title": "只好 — đành phải (thụ động)",
+        "description": "没有伞，只好等雨停 — Không có ô, đành phải đợi tạnh mưa. Hàm ý không vui nhưng chấp nhận."
+      },
+      {
+        "icon": "😤",
+        "title": "不得不 — buộc phải (áp lực mạnh hơn)",
+        "description": "生病了，不得不请假 — Bị ốm, buộc phải xin nghỉ. Nhấn mạnh không có lựa chọn."
+      },
+      {
+        "icon": "🔄",
+        "title": "Nguyên nhân + 只好/不得不",
+        "description": "Thường đi sau một mệnh đề nêu nguyên nhân/hoàn cảnh bất lợi."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "外面下大雨，我只好待在家里。",
+        "pinyin": "Wàimiàn xià dà yǔ, wǒ zhǐhǎo dāi zài jiāli.",
+        "vi": "Bên ngoài mưa to, tôi đành phải ở nhà."
+      },
+      {
+        "zh": "火车票卖完了，他只好坐飞机。",
+        "pinyin": "Huǒchē piào mài wán le, tā zhǐhǎo zuò fēijī.",
+        "vi": "Vé tàu hết rồi, anh ấy đành phải đi máy bay."
+      },
+      {
+        "zh": "为了家人，他不得不离开家乡。",
+        "pinyin": "Wèi le jiārén, tā bùdébù líkāi jiāxiāng.",
+        "vi": "Vì gia đình, anh ấy buộc phải rời quê hương."
+      },
+      {
+        "zh": "项目出了问题，我们不得不重新开始。",
+        "pinyin": "Xiàngmù chūle wèntí, wǒmen bùdébù chóngxīn kāishǐ.",
+        "vi": "Dự án gặp vấn đề, chúng tôi buộc phải làm lại từ đầu."
+      }
+    ],
+    "exampleTags": [
+      "BẮT BUỘC",
+      "KHÔNG CÒN LỰA CHỌN",
+      "ĐÀI PHẢI",
+      "ÁP LỰC"
+    ],
+    "relatedGrammar": [
+      "g_bixu",
+      "g_yinggai",
+      "g_ruguo"
+    ],
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 没有伞，只是等雨停。",
+        "right": "✅ 没有伞，只好等雨停。",
+        "note": "只好 = không còn lựa chọn, đành chấp nhận. 只是 = chỉ là (giới hạn/giải thích). Nghĩa khác hoàn toàn."
+      }
+    ]
+  },
+  {
+    "id": "g_yuelai",
+    "title": "Ngày càng 越来越",
+    "structure": "S + 越来越 + Adj/V",
+    "explanation": "越来越 (yuè lái yuè) diễn tả sự thay đổi tăng dần theo thời gian, tương đương 'ngày càng / càng ngày càng' trong tiếng Việt. Khác với 越...越 (càng...càng — hai sự việc tỉ lệ thuận đồng thời), 越来越 chỉ dùng một tính từ/động từ và ám chỉ sự thay đổi qua thời gian. Cuối câu thường thêm 了 để nhấn mạnh thay đổi đã xảy ra.",
+    "level": 3,
+    "category": "sentence_pattern",
+    "formulaParts": [
+      {
+        "text": "S",
+        "isHighlighted": false
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "越来越",
+        "isHighlighted": true
+      },
+      {
+        "text": "+",
+        "isHighlighted": false
+      },
+      {
+        "text": "Adj/V",
+        "isHighlighted": false
+      },
+      {
+        "text": "(+ 了)",
+        "isHighlighted": false
+      }
+    ],
+    "usages": [
+      {
+        "icon": "📈",
+        "title": "Thay đổi tăng dần — tích cực",
+        "description": "我的中文越来越好了 — Tiếng Trung của tôi ngày càng tốt hơn rồi."
+      },
+      {
+        "icon": "📉",
+        "title": "Thay đổi tăng dần — tiêu cực",
+        "description": "天气越来越冷了 — Thời tiết ngày càng lạnh hơn rồi."
+      },
+      {
+        "icon": "⚠️",
+        "title": "Phân biệt với 越...越",
+        "description": "越来越好 = ngày càng tốt hơn (theo thời gian). 越说越开心 = càng nói càng vui (hai việc đồng thời)."
+      }
+    ],
+    "examples": [
+      {
+        "zh": "他的中文越来越流利了。",
+        "pinyin": "Tā de Zhōngwén yuèláiyuè liúlì le.",
+        "vi": "Tiếng Trung của anh ấy ngày càng trôi chảy hơn rồi."
+      },
+      {
+        "zh": "城市里的人越来越多。",
+        "pinyin": "Chéngshì lǐ de rén yuèláiyuè duō.",
+        "vi": "Người trong thành phố ngày càng đông hơn."
+      },
+      {
+        "zh": "她越来越不喜欢吃甜食了。",
+        "pinyin": "Tā yuèláiyuè bù xǐhuan chī tiánshí le.",
+        "vi": "Cô ấy ngày càng không thích ăn đồ ngọt nữa rồi."
+      },
+      {
+        "zh": "科技发展得越来越快，生活也越来越方便了。",
+        "pinyin": "Kējì fāzhǎn de yuèláiyuè kuài, shēnghuó yě yuèláiyuè fāngbiàn le.",
+        "vi": "Công nghệ phát triển ngày càng nhanh, cuộc sống cũng ngày càng tiện lợi hơn."
+      }
+    ],
+    "exampleTags": [
+      "NGÀY CÀNG",
+      "THAY ĐỔI",
+      "THỜI GIAN",
+      "PHÂN BIỆT 越...越"
+    ],
+    "relatedGrammar": [
+      "g_yue_yue",
+      "g_le2",
+      "g_bi"
+    ],
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 越来越他学得好。",
+        "right": "✅ 他的中文越来越好了。",
+        "note": "越来越 đặt trước tính từ/động từ. Chủ ngữ đặt trước 越来越, không chen vào giữa."
+      }
     ]
   }
 ]

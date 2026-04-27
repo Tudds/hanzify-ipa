@@ -28,6 +28,7 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
       interval: Value(vocab.interval),
       nextReview: vocab.nextReview.toUtc(),
       needsSync: const Value(true),
+      updatedAt: Value(DateTime.now().toUtc()),
     );
   }
 
@@ -58,7 +59,9 @@ class VocabLocalDataSourceImpl implements VocabLocalDataSource {
     final now = DateTime.now().toUtc();
     var query = db.select(db.vocabsTable)
       ..where((t) =>
-          t.nextReview.isSmallerThanValue(now) & t.interval.isBiggerThanValue(0));
+          t.nextReview.isSmallerThanValue(now) &
+          t.interval.isBiggerThanValue(0) &
+          t.isMastered.equals(false));
     query = _applyPagination(query, limit: limit, offset: offset);
     final results = await query.get();
     return results.map(Vocab.fromDbModel).toList();

@@ -1,0 +1,3994 @@
+[
+  {
+    "id": "hsk1_爱",
+    "hanzi": "爱",
+    "pinyin": "ài",
+    "pinyinNormalized": "ai",
+    "characters": [
+      "爱"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "yêu, thương",
+        "en": "to love"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我爱我的家人。",
+        "pinyin": "Wǒ ài wǒ de jiārén.",
+        "vi": "Tôi yêu gia đình mình."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_八",
+    "hanzi": "八",
+    "pinyin": "bā",
+    "pinyinNormalized": "ba",
+    "characters": [
+      "八"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "tám",
+        "en": "eight"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我有八个苹果。",
+        "pinyin": "Wǒ yǒu bā gè píngguǒ.",
+        "vi": "Tôi có tám quả táo."
+      }
+    ],
+    "level": 1,
+    "wordType": "num"
+  },
+  {
+    "id": "hsk1_爸爸",
+    "hanzi": "爸爸",
+    "pinyin": "bà ba",
+    "pinyinNormalized": "baba",
+    "characters": [
+      "爸",
+      "爸"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "bố, ba",
+        "en": "father"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我爸爸是医生。",
+        "pinyin": "Wǒ bàba shì yīshēng.",
+        "vi": "Bố tôi là bác sĩ."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_杯子",
+    "hanzi": "杯子",
+    "pinyin": "bēi zi",
+    "pinyinNormalized": "beizi",
+    "characters": [
+      "杯",
+      "子"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "cái cốc, cái ly",
+        "en": "cup, glass"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "桌子上有一个杯子。",
+        "pinyin": "Zhuōzi shàng yǒu yīgè bēizi.",
+        "vi": "Trên bàn có một cái cốc."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_北京",
+    "hanzi": "北京",
+    "pinyin": "Běi jīng",
+    "pinyinNormalized": "beijing",
+    "characters": [
+      "北",
+      "京"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "Bắc Kinh",
+        "en": "Beijing"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我住在北京。",
+        "pinyin": "Wǒ zhù zài Běijīng.",
+        "vi": "Tôi sống ở Bắc Kinh."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_本",
+    "hanzi": "本",
+    "pinyin": "běn",
+    "pinyinNormalized": "ben",
+    "characters": [
+      "本"
+    ],
+    "meanings": [
+      {
+        "pos": "mw",
+        "vi": "quyển, cuốn",
+        "en": "measure word for books"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我买了一本书。",
+        "pinyin": "Wǒ mǎile yī běn shū.",
+        "vi": "Tôi đã mua một quyển sách."
+      }
+    ],
+    "level": 1,
+    "wordType": "mw"
+  },
+  {
+    "id": "hsk1_不",
+    "hanzi": "不",
+    "pinyin": "bù",
+    "pinyinNormalized": "bu",
+    "characters": [
+      "不"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "không",
+        "en": "not"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他不吃肉。",
+        "pinyin": "Tā bù chī ròu.",
+        "vi": "Anh ấy không ăn thịt."
+      }
+    ],
+    "level": 1,
+    "wordType": "adv"
+  },
+  {
+    "id": "hsk1_不客气",
+    "hanzi": "不客气",
+    "pinyin": "bú kè qi",
+    "pinyinNormalized": "bukeqi",
+    "characters": [
+      "不",
+      "客",
+      "气"
+    ],
+    "meanings": [
+      {
+        "pos": "interj",
+        "vi": "không có gì, đừng khách sáo",
+        "en": "you're welcome"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "A: 谢谢！ B: 不客气。",
+        "pinyin": "A: Xièxiè! B: Bú kèqi.",
+        "vi": "A: Cảm ơn! B: Không có gì."
+      }
+    ],
+    "level": 1,
+    "wordType": "interj"
+  },
+  {
+    "id": "hsk1_菜",
+    "hanzi": "菜",
+    "pinyin": "cài",
+    "pinyinNormalized": "cai",
+    "characters": [
+      "菜"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "món ăn, rau",
+        "en": "dish, vegetable"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这些菜很好吃。",
+        "pinyin": "Zhèxiē cài hěn hǎochī.",
+        "vi": "Những món ăn này rất ngon."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_茶",
+    "hanzi": "茶",
+    "pinyin": "chá",
+    "pinyinNormalized": "cha",
+    "characters": [
+      "茶"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "trà, chè",
+        "en": "tea"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "请喝茶。",
+        "pinyin": "Qǐng hē chá.",
+        "vi": "Mời uống trà."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_吃",
+    "hanzi": "吃",
+    "pinyin": "chī",
+    "pinyinNormalized": "chi",
+    "characters": [
+      "吃"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "ăn",
+        "en": "to eat"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你想吃什么？",
+        "pinyin": "Nǐ xiǎng chī shénme?",
+        "vi": "Bạn muốn ăn gì?"
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_出租车",
+    "hanzi": "出租车",
+    "pinyin": "chū zū chē",
+    "pinyinNormalized": "chuzuche",
+    "characters": [
+      "出",
+      "租",
+      "车"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "xe taxi",
+        "en": "taxi"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我们打出租车去吧。",
+        "pinyin": "Wǒmen dǎ chūzūchē qù ba.",
+        "vi": "Chúng ta đi taxi đi."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_打电话",
+    "hanzi": "打电话",
+    "pinyin": "dǎ diàn huà",
+    "pinyinNormalized": "dadianhua",
+    "characters": [
+      "打",
+      "电",
+      "话"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "gọi điện thoại",
+        "en": "to make a phone call"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他在打电话。",
+        "pinyin": "Tā zài dǎ diànhuà.",
+        "vi": "Anh ấy đang gọi điện thoại."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_大",
+    "hanzi": "大",
+    "pinyin": "dà",
+    "pinyinNormalized": "da",
+    "characters": [
+      "大"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "lớn, to",
+        "en": "big"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这个苹果很大。",
+        "pinyin": "Zhège píngguǒ hěn dà.",
+        "vi": "Quả táo này rất lớn."
+      }
+    ],
+    "level": 1,
+    "wordType": "adj"
+  },
+  {
+    "id": "hsk1_的",
+    "hanzi": "的",
+    "pinyin": "de",
+    "pinyinNormalized": "de",
+    "characters": [
+      "的"
+    ],
+    "meanings": [
+      {
+        "pos": "other",
+        "vi": "trợ từ (của...)",
+        "en": "possessive particle"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这是我的书。",
+        "pinyin": "Zhè shì wǒ de shū.",
+        "vi": "Đây là sách của tôi."
+      }
+    ],
+    "level": 1,
+    "wordType": "other"
+  },
+  {
+    "id": "hsk1_点",
+    "hanzi": "点",
+    "pinyin": "diǎn",
+    "pinyinNormalized": "dian",
+    "characters": [
+      "点"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "giờ, điểm",
+        "en": "o'clock, dot"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "现在三点。",
+        "pinyin": "Xiànzài sān diǎn.",
+        "vi": "Bây giờ là 3 giờ."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_电脑",
+    "hanzi": "电脑",
+    "pinyin": "diàn nǎo",
+    "pinyinNormalized": "diannao",
+    "characters": [
+      "电",
+      "脑"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "máy tính",
+        "en": "computer"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我每天用电脑工作。",
+        "pinyin": "Wǒ měitiān yòng diànnǎo gōngzuò.",
+        "vi": "Tôi dùng máy tính làm việc mỗi ngày."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_电视",
+    "hanzi": "电视",
+    "pinyin": "diàn shì",
+    "pinyinNormalized": "dianshi",
+    "characters": [
+      "电",
+      "视"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tivi",
+        "en": "television"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他在看电视。",
+        "pinyin": "Tā zài kàn diànshì.",
+        "vi": "Anh ấy đang xem tivi."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_电影",
+    "hanzi": "电影",
+    "pinyin": "diàn yǐng",
+    "pinyinNormalized": "dianying",
+    "characters": [
+      "电",
+      "影"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "phim",
+        "en": "movie"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这部电影很有意思。",
+        "pinyin": "Zhè bù diànyǐng hěn yǒu yìsi.",
+        "vi": "Bộ phim này rất thú vị."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_东西",
+    "hanzi": "东西",
+    "pinyin": "dōng xi",
+    "pinyinNormalized": "dongxi",
+    "characters": [
+      "东",
+      "西"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "đồ đạc, thứ",
+        "en": "thing, stuff"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你买什么东西了？",
+        "pinyin": "Nǐ mǎi shénme dōngxi le?",
+        "vi": "Bạn đã mua thứ gì thế?"
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_都",
+    "hanzi": "都",
+    "pinyin": "dōu",
+    "pinyinNormalized": "dou",
+    "characters": [
+      "都"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "đều",
+        "en": "all, both"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我们都是学生。",
+        "pinyin": "Wǒmen dōu shì xuéshēng.",
+        "vi": "Chúng tôi đều là học sinh."
+      }
+    ],
+    "level": 1,
+    "wordType": "adv"
+  },
+  {
+    "id": "hsk1_读",
+    "hanzi": "读",
+    "pinyin": "dú",
+    "pinyinNormalized": "du",
+    "characters": [
+      "读"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đọc",
+        "en": "to read"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "请读一下这个句子。",
+        "pinyin": "Qǐng dú yīxià zhège jùzi.",
+        "vi": "Hãy đọc câu này một chút."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_对不起",
+    "hanzi": "对不起",
+    "pinyin": "duì bu qǐ",
+    "pinyinNormalized": "duibuqi",
+    "characters": [
+      "对",
+      "不",
+      "起"
+    ],
+    "meanings": [
+      {
+        "pos": "interj",
+        "vi": "xin lỗi",
+        "en": "sorry"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "对不起，我来晚了。",
+        "pinyin": "Duìbuqǐ, wǒ lái wǎn le.",
+        "vi": "Xin lỗi, tôi đến muộn."
+      }
+    ],
+    "level": 1,
+    "wordType": "interj"
+  },
+  {
+    "id": "hsk1_多",
+    "hanzi": "多",
+    "pinyin": "duō",
+    "pinyinNormalized": "duo",
+    "characters": [
+      "多"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "nhiều",
+        "en": "many, much"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这里的人很多。",
+        "pinyin": "Zhèlǐ de rén hěn duō.",
+        "vi": "Người ở đây rất đông."
+      }
+    ],
+    "level": 1,
+    "wordType": "adj"
+  },
+  {
+    "id": "hsk1_多少",
+    "hanzi": "多少",
+    "pinyin": "duō shao",
+    "pinyinNormalized": "duoshao",
+    "characters": [
+      "多",
+      "少"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "bao nhiêu",
+        "en": "how many, how much"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这个多少钱？",
+        "pinyin": "Zhège duōshǎo qián?",
+        "vi": "Cái này bao nhiêu tiền?"
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_儿子",
+    "hanzi": "儿子",
+    "pinyin": "ér zi",
+    "pinyinNormalized": "erzi",
+    "characters": [
+      "儿",
+      "子"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "con trai",
+        "en": "son"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他的儿子很聪明。",
+        "pinyin": "Tā de érzi hěn cōngmíng.",
+        "vi": "Con trai của anh ấy rất thông minh."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_二",
+    "hanzi": "二",
+    "pinyin": "èr",
+    "pinyinNormalized": "er",
+    "characters": [
+      "二"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "hai",
+        "en": "two"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我有二月的事情。",
+        "pinyin": "Wǒ yǒu èryuè de shìqíng.",
+        "vi": "Tôi có việc vào tháng hai."
+      }
+    ],
+    "level": 1,
+    "wordType": "num"
+  },
+  {
+    "id": "hsk1_饭店",
+    "hanzi": "饭店",
+    "pinyin": "fàn diàn",
+    "pinyinNormalized": "fandian",
+    "characters": [
+      "饭",
+      "店"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "nhà hàng, khách sạn",
+        "en": "restaurant, hotel"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我们去饭店吃饭吧。",
+        "pinyin": "Wǒmen qù fàndiàn chīfàn ba.",
+        "vi": "Chúng ta đi nhà hàng ăn cơm đi."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_飞机",
+    "hanzi": "飞机",
+    "pinyin": "fēi jī",
+    "pinyinNormalized": "feiji",
+    "characters": [
+      "飞",
+      "机"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "máy bay",
+        "en": "airplane"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我坐飞机去上海。",
+        "pinyin": "Wǒ zuò fēijī qù Shànghǎi.",
+        "vi": "Tôi đi máy bay đến Thượng Hải."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_分钟",
+    "hanzi": "分钟",
+    "pinyin": "fēn zhōng",
+    "pinyinNormalized": "fenzhong",
+    "characters": [
+      "分",
+      "钟"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "phút",
+        "en": "minute"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "请等十分钟。",
+        "pinyin": "Qǐng děng shí fēnzhōng.",
+        "vi": "Vui lòng đợi mười phút."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_高兴",
+    "hanzi": "高兴",
+    "pinyin": "gāo xìng",
+    "pinyinNormalized": "gaoxing",
+    "characters": [
+      "高",
+      "兴"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "vui vẻ, phấn khởi",
+        "en": "happy, glad"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "见到你很高兴。",
+        "pinyin": "Jiàn dào nǐ hěn gāoxìng.",
+        "vi": "Rất vui được gặp bạn."
+      }
+    ],
+    "level": 1,
+    "wordType": "adj"
+  },
+  {
+    "id": "hsk1_个",
+    "hanzi": "个",
+    "pinyin": "gè",
+    "pinyinNormalized": "ge",
+    "characters": [
+      "个"
+    ],
+    "meanings": [
+      {
+        "pos": "mw",
+        "vi": "cái, con, chiếc (lượng từ phổ biến)",
+        "en": "measure word for most things"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我有一个哥哥。",
+        "pinyin": "Wǒ yǒu yí gè gēge.",
+        "vi": "Tôi có một người anh trai."
+      }
+    ],
+    "level": 1,
+    "wordType": "mw"
+  },
+  {
+    "id": "hsk1_工作",
+    "hanzi": "工作",
+    "pinyin": "gōng zuò",
+    "pinyinNormalized": "gongzuo",
+    "characters": [
+      "工",
+      "作"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "làm việc",
+        "en": "to work"
+      },
+      {
+        "pos": "n",
+        "vi": "công việc, nghề nghiệp",
+        "en": "job, work"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他在医院工作。",
+        "pinyin": "Tā zài yīyuàn gōngzuò.",
+        "vi": "Anh ấy làm việc ở bệnh viện."
+      },
+      {
+        "cn": "这份工作很难。",
+        "pinyin": "Zhè fèn gōngzuò hěn nán.",
+        "vi": "Công việc này rất khó."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_狗",
+    "hanzi": "狗",
+    "pinyin": "gǒu",
+    "pinyinNormalized": "gou",
+    "characters": [
+      "狗"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "con chó",
+        "en": "dog"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我有一只小狗。",
+        "pinyin": "Wǒ yǒu yì zhī xiǎo gǒu.",
+        "vi": "Tôi có một con chó nhỏ."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_汉语",
+    "hanzi": "汉语",
+    "pinyin": "Hàn yǔ",
+    "pinyinNormalized": "hanyu",
+    "characters": [
+      "汉",
+      "语"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tiếng Hán, tiếng Trung",
+        "en": "Chinese language"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我会说汉语。",
+        "pinyin": "Wǒ huì shuō Hànyǔ.",
+        "vi": "Tôi biết nói tiếng Trung."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_好",
+    "hanzi": "好",
+    "pinyin": "hǎo",
+    "pinyinNormalized": "hao",
+    "characters": [
+      "好"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "tốt, đẹp, khỏe, ngon",
+        "en": "good, well, fine"
+      },
+      {
+        "pos": "adv",
+        "vi": "rất (dùng trong khẩu ngữ)",
+        "en": "very"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "今天天气很好。",
+        "pinyin": "Jīntiān tiānqì hěn hǎo.",
+        "vi": "Thời tiết hôm nay rất tốt."
+      }
+    ],
+    "level": 1,
+    "wordType": "adj"
+  },
+  {
+    "id": "hsk1_好吃",
+    "hanzi": "好吃",
+    "pinyin": "hǎo chī",
+    "pinyinNormalized": "haochi",
+    "characters": [
+      "好",
+      "吃"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "ngon (đồ ăn)",
+        "en": "delicious"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这个包子很好吃。",
+        "pinyin": "Zhège bāozi hěn hǎochī.",
+        "vi": "Cái bánh bao này rất ngon."
+      }
+    ],
+    "level": 1,
+    "wordType": "adj"
+  },
+  {
+    "id": "hsk1_号",
+    "hanzi": "号",
+    "pinyin": "hào",
+    "pinyinNormalized": "hao",
+    "characters": [
+      "号"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "ngày (trong ngày tháng), số, số hiệu",
+        "en": "date, number"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "今天是十月一号。",
+        "pinyin": "Jīntiān shì shíyuè yī hào.",
+        "vi": "Hôm nay là ngày 1 tháng 10."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_喝",
+    "hanzi": "喝",
+    "pinyin": "hē",
+    "pinyinNormalized": "he",
+    "characters": [
+      "喝"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "uống",
+        "en": "to drink"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你想喝什么？",
+        "pinyin": "Nǐ xiǎng hē shénme?",
+        "vi": "Bạn muốn uống gì?"
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_和",
+    "hanzi": "和",
+    "pinyin": "hé",
+    "pinyinNormalized": "he",
+    "characters": [
+      "和"
+    ],
+    "meanings": [
+      {
+        "pos": "conj",
+        "vi": "và",
+        "en": "and"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我和他是好朋友。",
+        "pinyin": "Wǒ hé tā shì hǎo péngyou.",
+        "vi": "Tôi và anh ấy là bạn thân."
+      }
+    ],
+    "level": 1,
+    "wordType": "conj"
+  },
+  {
+    "id": "hsk1_很",
+    "hanzi": "很",
+    "pinyin": "hěn",
+    "pinyinNormalized": "hen",
+    "characters": [
+      "很"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "rất",
+        "en": "very"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "她很高兴。",
+        "pinyin": "Tā hěn gāoxìng.",
+        "vi": "Cô ấy rất vui."
+      }
+    ],
+    "level": 1,
+    "wordType": "adv"
+  },
+  {
+    "id": "hsk1_后面",
+    "hanzi": "后面",
+    "pinyin": "hòu miàn",
+    "pinyinNormalized": "houmian",
+    "characters": [
+      "后",
+      "面"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "phía sau, đằng sau",
+        "en": "behind, back"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他在我后面。",
+        "pinyin": "Tā zài wǒ hòumiàn.",
+        "vi": "Anh ấy ở phía sau tôi."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_回",
+    "hanzi": "回",
+    "pinyin": "huí",
+    "pinyinNormalized": "hui",
+    "characters": [
+      "回"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "về, trở về",
+        "en": "to return, to go back"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我什么时候回家？",
+        "pinyin": "Wǒ shénme shíhou huí jiā?",
+        "vi": "Khi nào tôi về nhà?"
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_会",
+    "hanzi": "会",
+    "pinyin": "huì",
+    "pinyinNormalized": "hui",
+    "characters": [
+      "会"
+    ],
+    "meanings": [
+      {
+        "pos": "aux",
+        "vi": "biết (thông qua học tập), sẽ",
+        "en": "can, know how to, will"
+      },
+      {
+        "pos": "v",
+        "vi": "gặp, hội họp",
+        "en": "to meet, to gather"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我会开车。",
+        "pinyin": "Wǒ huì kāichē.",
+        "vi": "Tôi biết lái xe."
+      },
+      {
+        "cn": "明天会下雨。",
+        "pinyin": "Míngtiān huì xià yǔ.",
+        "vi": "Ngày mai sẽ mưa."
+      }
+    ],
+    "level": 1,
+    "wordType": "aux"
+  },
+  {
+    "id": "hsk1_几",
+    "hanzi": "几",
+    "pinyin": "jǐ",
+    "pinyinNormalized": "ji",
+    "characters": [
+      "几"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "mấy, vài",
+        "en": "how many, a few"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你有几个学生？",
+        "pinyin": "Nǐ yǒu jǐ gè xuésheng?",
+        "vi": "Bạn có mấy học sinh?"
+      }
+    ],
+    "level": 1,
+    "wordType": "num"
+  },
+  {
+    "id": "hsk1_家",
+    "hanzi": "家",
+    "pinyin": "jiā",
+    "pinyinNormalized": "jia",
+    "characters": [
+      "家"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "nhà, gia đình",
+        "en": "home, family"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我家有四口人。",
+        "pinyin": "Wǒ jiā yǒu sì kǒu rén.",
+        "vi": "Gia đình tôi có bốn người."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_叫",
+    "hanzi": "叫",
+    "pinyin": "jiào",
+    "pinyinNormalized": "jiao",
+    "characters": [
+      "叫"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "gọi, tên là",
+        "en": "to call, to be called"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你叫什么名字？",
+        "pinyin": "Nǐ jiào shénme míngzi?",
+        "vi": "Bạn tên là gì?"
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_今天",
+    "hanzi": "今天",
+    "pinyin": "jīn tiān",
+    "pinyinNormalized": "jintian",
+    "characters": [
+      "今",
+      "天"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "hôm nay",
+        "en": "today"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "今天星期一。",
+        "pinyin": "Jīntiān xīngqīyī.",
+        "vi": "Hôm nay là thứ Hai."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_九",
+    "hanzi": "九",
+    "pinyin": "jiǔ",
+    "pinyinNormalized": "jiu",
+    "characters": [
+      "九"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "số chín",
+        "en": "nine"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我有九本书。",
+        "pinyin": "Wǒ yǒu jiǔ běn shū.",
+        "vi": "Tôi có chín quyển sách."
+      }
+    ],
+    "level": 1,
+    "wordType": "num"
+  },
+  {
+    "id": "hsk1_开",
+    "hanzi": "开",
+    "pinyin": "kāi",
+    "pinyinNormalized": "kai",
+    "characters": [
+      "开"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "mở, lái (xe)",
+        "en": "to open, to drive"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "请开门。",
+        "pinyin": "Qǐng kāimén.",
+        "vi": "Xin hãy mở cửa."
+      },
+      {
+        "cn": "他在开车。",
+        "pinyin": "Tā zài kāichē.",
+        "vi": "Anh ấy đang lái xe."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_看",
+    "hanzi": "看",
+    "pinyin": "kàn",
+    "pinyinNormalized": "kan",
+    "characters": [
+      "看"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "nhìn, xem, đọc",
+        "en": "to look, to watch, to read"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我看书。",
+        "pinyin": "Wǒ kàn shū.",
+        "vi": "Tôi đọc sách."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_看见",
+    "hanzi": "看见",
+    "pinyin": "kàn jiàn",
+    "pinyinNormalized": "kanjian",
+    "characters": [
+      "看",
+      "见"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "nhìn thấy",
+        "en": "to see"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我看见他了。",
+        "pinyin": "Wǒ kànjiàn tā le.",
+        "vi": "Tôi nhìn thấy anh ấy rồi."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_块",
+    "hanzi": "块",
+    "pinyin": "kuài",
+    "pinyinNormalized": "kuai",
+    "characters": [
+      "块"
+    ],
+    "meanings": [
+      {
+        "pos": "mw",
+        "vi": "đồng (đơn vị tiền), miếng, cục",
+        "en": "piece, yuan"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这个苹果三块钱。",
+        "pinyin": "Zhège píngguǒ sān kuài qián.",
+        "vi": "Quả táo này giá ba tệ."
+      }
+    ],
+    "level": 1,
+    "wordType": "mw"
+  },
+  {
+    "id": "hsk1_来",
+    "hanzi": "来",
+    "pinyin": "lái",
+    "pinyinNormalized": "lai",
+    "characters": [
+      "来"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đến, tới",
+        "en": "to come"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他来我家玩儿。",
+        "pinyin": "Tā lái wǒ jiā wánr.",
+        "vi": "Anh ấy đến nhà tôi chơi."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_老师",
+    "hanzi": "老师",
+    "pinyin": "lǎo shī",
+    "pinyinNormalized": "laoshi",
+    "characters": [
+      "老",
+      "师"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "thầy giáo, cô giáo",
+        "en": "teacher"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "老师好！",
+        "pinyin": "Lǎoshī hǎo!",
+        "vi": "Em chào thầy/cô ạ!"
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_了",
+    "hanzi": "了",
+    "pinyin": "le",
+    "pinyinNormalized": "le",
+    "characters": [
+      "了"
+    ],
+    "meanings": [
+      {
+        "pos": "aux",
+        "vi": "rồi (trợ từ biểu thị sự thay đổi hoặc hoàn thành)",
+        "en": "particle indicating change or completed action"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我吃饭了。",
+        "pinyin": "Wǒ chīfàn le.",
+        "vi": "Tôi ăn cơm rồi."
+      }
+    ],
+    "level": 1,
+    "wordType": "aux"
+  },
+  {
+    "id": "hsk1_冷",
+    "hanzi": "冷",
+    "pinyin": "lěng",
+    "pinyinNormalized": "leng",
+    "characters": [
+      "冷"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "lạnh",
+        "en": "cold"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "今天很冷。",
+        "pinyin": "Jīntiān hěn lěng.",
+        "vi": "Hôm nay rất lạnh."
+      }
+    ],
+    "level": 1,
+    "wordType": "adj"
+  },
+  {
+    "id": "hsk1_里",
+    "hanzi": "里",
+    "pinyin": "lǐ",
+    "pinyinNormalized": "li",
+    "characters": [
+      "里"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "trong, bên trong",
+        "en": "inside, in"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "书在包里。",
+        "pinyin": "Shū zài bāo lǐ.",
+        "vi": "Sách ở trong túi."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_六",
+    "hanzi": "六",
+    "pinyin": "liù",
+    "pinyinNormalized": "liu",
+    "characters": [
+      "六"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "số sáu",
+        "en": "six"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "六个人。",
+        "pinyin": "Liù gè rén.",
+        "vi": "Sáu người."
+      }
+    ],
+    "level": 1,
+    "wordType": "num"
+  },
+  {
+    "id": "hsk1_妈妈",
+    "hanzi": "妈妈",
+    "pinyin": "mā ma",
+    "pinyinNormalized": "mama",
+    "characters": [
+      "妈",
+      "妈"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "mẹ",
+        "en": "mother, mom"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我爱妈妈。",
+        "pinyin": "Wǒ ài māma.",
+        "vi": "Con yêu mẹ."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_吗",
+    "hanzi": "吗",
+    "pinyin": "ma",
+    "pinyinNormalized": "ma",
+    "characters": [
+      "吗"
+    ],
+    "meanings": [
+      {
+        "pos": "interj",
+        "vi": "không (trợ từ nghi vấn)",
+        "en": "question particle"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你好吗？",
+        "pinyin": "Nǐ hǎo ma?",
+        "vi": "Bạn khỏe không?"
+      }
+    ],
+    "level": 1,
+    "wordType": "interj"
+  },
+  {
+    "id": "hsk1_买",
+    "hanzi": "买",
+    "pinyin": "mǎi",
+    "pinyinNormalized": "mai",
+    "characters": [
+      "买"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "mua",
+        "en": "to buy"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我想买一个苹果。",
+        "pinyin": "Wǒ xiǎng mǎi yīgè píngguǒ.",
+        "vi": "Tôi muốn mua một quả táo."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_猫",
+    "hanzi": "猫",
+    "pinyin": "māo",
+    "pinyinNormalized": "mao",
+    "characters": [
+      "猫"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "con mèo",
+        "en": "cat"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我有一只小猫。",
+        "pinyin": "Wǒ yǒu yī zhī xiǎo māo.",
+        "vi": "Tôi có một con mèo nhỏ."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_没关系",
+    "hanzi": "没关系",
+    "pinyin": "méi guān xi",
+    "pinyinNormalized": "meiguanxi",
+    "characters": [
+      "没",
+      "关",
+      "系"
+    ],
+    "meanings": [
+      {
+        "pos": "other",
+        "vi": "không sao, không có gì",
+        "en": "it's okay"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "对不起！— 没关系。",
+        "pinyin": "Duìbuqǐ! — Méi guānxi.",
+        "vi": "Xin lỗi! — Không sao đâu."
+      }
+    ],
+    "level": 1,
+    "wordType": "other"
+  },
+  {
+    "id": "hsk1_没有",
+    "hanzi": "没有",
+    "pinyin": "méi yǒu",
+    "pinyinNormalized": "meiyou",
+    "characters": [
+      "没",
+      "有"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "không có",
+        "en": "to not have"
+      },
+      {
+        "pos": "adv",
+        "vi": "chưa, không",
+        "en": "not"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我没有钱。",
+        "pinyin": "Wǒ méiyǒu qián.",
+        "vi": "Tôi không có tiền."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_米饭",
+    "hanzi": "米饭",
+    "pinyin": "mǐ fàn",
+    "pinyinNormalized": "mifan",
+    "characters": [
+      "米",
+      "饭"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "cơm",
+        "en": "cooked rice"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我爱吃米饭。",
+        "pinyin": "Wǒ ài chī mǐfàn.",
+        "vi": "Tôi thích ăn cơm."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_明天",
+    "hanzi": "明天",
+    "pinyin": "míng tiān",
+    "pinyinNormalized": "mingtian",
+    "characters": [
+      "明",
+      "天"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "ngày mai",
+        "en": "tomorrow"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "明天见！",
+        "pinyin": "Míngtiān jiàn!",
+        "vi": "Hẹn gặp lại vào ngày mai!"
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_名字",
+    "hanzi": "名字",
+    "pinyin": "míng zi",
+    "pinyinNormalized": "mingzi",
+    "characters": [
+      "名",
+      "字"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tên",
+        "en": "name"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你叫什么名字？",
+        "pinyin": "Nǐ jiào shénme míngzi?",
+        "vi": "Bạn tên là gì?"
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_哪",
+    "hanzi": "哪",
+    "pinyin": "nǎ",
+    "pinyinNormalized": "na",
+    "characters": [
+      "哪"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "nào",
+        "en": "which"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你是哪国人？",
+        "pinyin": "Nǐ shì nǎ guó rén?",
+        "vi": "Bạn là người nước nào?"
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_哪儿",
+    "hanzi": "哪儿",
+    "pinyin": "nǎr",
+    "pinyinNormalized": "nar",
+    "characters": [
+      "哪",
+      "儿"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "đâu, ở đâu",
+        "en": "where"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你去哪儿？",
+        "pinyin": "Nǐ qù nǎr?",
+        "vi": "Bạn đi đâu thế?"
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_那",
+    "hanzi": "那",
+    "pinyin": "nà",
+    "pinyinNormalized": "na",
+    "characters": [
+      "那"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "kia, đó",
+        "en": "that"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "那是我的老师。",
+        "pinyin": "Nà shì wǒ de lǎoshī.",
+        "vi": "Đó là thầy giáo của tôi."
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_呢",
+    "hanzi": "呢",
+    "pinyin": "ne",
+    "pinyinNormalized": "ne",
+    "characters": [
+      "呢"
+    ],
+    "meanings": [
+      {
+        "pos": "interj",
+        "vi": "còn... thì sao, nhỉ",
+        "en": "particle"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我很好，你呢？",
+        "pinyin": "Wǒ hěn hǎo, nǐ ne?",
+        "vi": "Tôi rất khỏe, còn bạn thì sao?"
+      }
+    ],
+    "level": 1,
+    "wordType": "interj"
+  },
+  {
+    "id": "hsk1_能",
+    "hanzi": "能",
+    "pinyin": "néng",
+    "pinyinNormalized": "neng",
+    "characters": [
+      "能"
+    ],
+    "meanings": [
+      {
+        "pos": "aux",
+        "vi": "có thể",
+        "en": "can, be able to"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我能去吗？",
+        "pinyin": "Wǒ néng qù ma?",
+        "vi": "Tôi có thể đi không?"
+      }
+    ],
+    "level": 1,
+    "wordType": "aux"
+  },
+  {
+    "id": "hsk1_你",
+    "hanzi": "你",
+    "pinyin": "nǐ",
+    "pinyinNormalized": "ni",
+    "characters": [
+      "你"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "bạn, anh, chị",
+        "en": "you"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你好！",
+        "pinyin": "Nǐ hǎo!",
+        "vi": "Chào bạn!"
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_你好",
+    "hanzi": "你好",
+    "pinyin": "nǐ hǎo",
+    "pinyinNormalized": "nihao",
+    "characters": [
+      "你",
+      "好"
+    ],
+    "meanings": [
+      {
+        "pos": "interj",
+        "vi": "chào bạn, xin chào",
+        "en": "hello"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你好，王老师。",
+        "pinyin": "Nǐ hǎo, Wáng lǎoshī.",
+        "vi": "Chào thầy Vương."
+      }
+    ],
+    "level": 1,
+    "wordType": "interj"
+  },
+  {
+    "id": "hsk1_年",
+    "hanzi": "年",
+    "pinyin": "nián",
+    "pinyinNormalized": "nian",
+    "characters": [
+      "年"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "năm",
+        "en": "year"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "今年是二〇二四年。",
+        "pinyin": "Jīnnián shì èr líng èr sì nián.",
+        "vi": "Năm nay là năm 2024."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_女儿",
+    "hanzi": "女儿",
+    "pinyin": "nǚ ér",
+    "pinyinNormalized": "nver",
+    "characters": [
+      "女",
+      "儿"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "con gái",
+        "en": "daughter"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "她有一个女儿。",
+        "pinyin": "Tā yǒu yīgè nǚ'ér.",
+        "vi": "Cô ấy có một người con gái."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_朋友",
+    "hanzi": "朋友",
+    "pinyin": "péng you",
+    "pinyinNormalized": "pengyou",
+    "characters": [
+      "朋",
+      "友"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "bạn bè, bạn",
+        "en": "friend"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他是我的好朋友。",
+        "pinyin": "Tā shì wǒ de hǎo péngyou.",
+        "vi": "Anh ấy là người bạn tốt của tôi."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_漂亮",
+    "hanzi": "漂亮",
+    "pinyin": "piào liang",
+    "pinyinNormalized": "piaoliang",
+    "characters": [
+      "漂",
+      "亮"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "đẹp, xinh đẹp",
+        "en": "beautiful, pretty"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这件衣服很漂亮。",
+        "pinyin": "Zhè jiàn yīfu hěn piàoliang.",
+        "vi": "Bộ quần áo này rất đẹp."
+      }
+    ],
+    "level": 1,
+    "wordType": "adj"
+  },
+  {
+    "id": "hsk1_苹果",
+    "hanzi": "苹果",
+    "pinyin": "píng guǒ",
+    "pinyinNormalized": "pingguo",
+    "characters": [
+      "苹",
+      "果"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "quả táo",
+        "en": "apple"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我喜欢吃苹果。",
+        "pinyin": "Wǒ xǐhuān chī píngguǒ.",
+        "vi": "Tôi thích ăn táo."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_七",
+    "hanzi": "七",
+    "pinyin": "qī",
+    "pinyinNormalized": "qi",
+    "characters": [
+      "七"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "bảy",
+        "en": "seven"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我有七个苹果。",
+        "pinyin": "Wǒ yǒu qī gè píngguǒ.",
+        "vi": "Tôi có bảy quả táo."
+      }
+    ],
+    "level": 1,
+    "wordType": "num"
+  },
+  {
+    "id": "hsk1_钱",
+    "hanzi": "钱",
+    "pinyin": "qián",
+    "pinyinNormalized": "qian",
+    "characters": [
+      "钱"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tiền",
+        "en": "money"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我没钱了。",
+        "pinyin": "Wǒ méi qián le.",
+        "vi": "Tôi hết tiền rồi."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_前面",
+    "hanzi": "前面",
+    "pinyin": "qián miàn",
+    "pinyinNormalized": "qianmian",
+    "characters": [
+      "前",
+      "面"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "phía trước",
+        "en": "front"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "商店在前面。",
+        "pinyin": "Shāngdiàn zài qiánmiàn.",
+        "vi": "Cửa hàng ở phía trước."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_请",
+    "hanzi": "请",
+    "pinyin": "qǐng",
+    "pinyinNormalized": "qing",
+    "characters": [
+      "请"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "mời",
+        "en": "to invite"
+      },
+      {
+        "pos": "aux",
+        "vi": "xin hãy, mời",
+        "en": "please"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "请坐。",
+        "pinyin": "Qǐng zuò.",
+        "vi": "Mời ngồi."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_去",
+    "hanzi": "去",
+    "pinyin": "qù",
+    "pinyinNormalized": "qu",
+    "characters": [
+      "去"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "đi",
+        "en": "to go"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我要去学校。",
+        "pinyin": "Wǒ yào qù xuéxiào.",
+        "vi": "Tôi phải đi đến trường."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_热",
+    "hanzi": "热",
+    "pinyin": "rè",
+    "pinyinNormalized": "re",
+    "characters": [
+      "热"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "nóng",
+        "en": "hot"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "今天天气很热。",
+        "pinyin": "Jīntiān tiānqì hěn rè.",
+        "vi": "Hôm nay thời tiết rất nóng."
+      }
+    ],
+    "level": 1,
+    "wordType": "adj"
+  },
+  {
+    "id": "hsk1_人",
+    "hanzi": "人",
+    "pinyin": "rén",
+    "pinyinNormalized": "ren",
+    "characters": [
+      "人"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "người",
+        "en": "person, people"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他是好人。",
+        "pinyin": "Tā shì hǎorén.",
+        "vi": "Anh ấy là người tốt."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_认识",
+    "hanzi": "认识",
+    "pinyin": "rèn shi",
+    "pinyinNormalized": "renshi",
+    "characters": [
+      "认",
+      "识"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "quen biết, nhận biết",
+        "en": "to know, to recognize"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "很高兴认识你。",
+        "pinyin": "Hěn gāoxìng rènshi nǐ.",
+        "vi": "Rất vui được quen biết bạn."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_日",
+    "hanzi": "日",
+    "pinyin": "rì",
+    "pinyinNormalized": "ri",
+    "characters": [
+      "日"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "ngày",
+        "en": "day"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "生日快乐！",
+        "pinyin": "Shēngrì kuàilè!",
+        "vi": "Chúc mừng sinh nhật!"
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_三",
+    "hanzi": "三",
+    "pinyin": "sān",
+    "pinyinNormalized": "san",
+    "characters": [
+      "三"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "ba",
+        "en": "three"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我有三个朋友。",
+        "pinyin": "Wǒ yǒu sān gè péngyou.",
+        "vi": "Tôi có ba người bạn."
+      }
+    ],
+    "level": 1,
+    "wordType": "num"
+  },
+  {
+    "id": "hsk1_商店",
+    "hanzi": "商店",
+    "pinyin": "shāng diàn",
+    "pinyinNormalized": "shangdian",
+    "characters": [
+      "商",
+      "店"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "cửa hàng, tiệm",
+        "en": "shop, store"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这家商店很大。",
+        "pinyin": "Zhè jiā shāngdiàn hěn dà.",
+        "vi": "Cửa hàng này rất lớn."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_上",
+    "hanzi": "上",
+    "pinyin": "shàng",
+    "pinyinNormalized": "shang",
+    "characters": [
+      "上"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "lên, đi lên",
+        "en": "to go up, to ascend"
+      },
+      {
+        "pos": "prep",
+        "vi": "trên",
+        "en": "on, above"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "请上车。",
+        "pinyin": "Qǐng shàng chē.",
+        "vi": "Mời lên xe."
+      },
+      {
+        "cn": "桌子上有一本书。",
+        "pinyin": "Zhuōzi shàng yǒu yì běn shū.",
+        "vi": "Trên bàn có một quyển sách."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_上午",
+    "hanzi": "上午",
+    "pinyin": "shàng wǔ",
+    "pinyinNormalized": "shangwu",
+    "characters": [
+      "上",
+      "午"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "buổi sáng",
+        "en": "morning"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我上午有课。",
+        "pinyin": "Wǒ shàngwǔ yǒu kè.",
+        "vi": "Buổi sáng tôi có tiết học."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_少",
+    "hanzi": "少",
+    "pinyin": "shǎo",
+    "pinyinNormalized": "shao",
+    "characters": [
+      "少"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "ít, ít ỏi",
+        "en": "few, little"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这里的人很少。",
+        "pinyin": "Zhèlǐ de rén hěn shǎo.",
+        "vi": "Người ở đây rất ít."
+      }
+    ],
+    "level": 1,
+    "wordType": "adj"
+  },
+  {
+    "id": "hsk1_谁",
+    "hanzi": "谁",
+    "pinyin": "shéi",
+    "pinyinNormalized": "shei",
+    "characters": [
+      "谁"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "ai",
+        "en": "who"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他是谁？",
+        "pinyin": "Tā shì shéi?",
+        "vi": "Anh ấy là ai?"
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_什么",
+    "hanzi": "什么",
+    "pinyin": "shén me",
+    "pinyinNormalized": "shenme",
+    "characters": [
+      "什",
+      "么"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "cái gì",
+        "en": "what"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你在做什么？",
+        "pinyin": "Nǐ zài zuò shénme?",
+        "vi": "Bạn đang làm gì thế?"
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_生日",
+    "hanzi": "生日",
+    "pinyin": "shēng rì",
+    "pinyinNormalized": "shengri",
+    "characters": [
+      "生",
+      "日"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "sinh nhật",
+        "en": "birthday"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "祝你生日快乐！",
+        "pinyin": "Zhù nǐ shēngrì kuàilè!",
+        "vi": "Chúc bạn sinh nhật vui vẻ!"
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_十",
+    "hanzi": "十",
+    "pinyin": "shí",
+    "pinyinNormalized": "shi",
+    "characters": [
+      "十"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "mười",
+        "en": "ten"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我有十块钱。",
+        "pinyin": "Wǒ yǒu shí kuài qián.",
+        "vi": "Tôi có mười tệ."
+      }
+    ],
+    "level": 1,
+    "wordType": "num"
+  },
+  {
+    "id": "hsk1_时候",
+    "hanzi": "时候",
+    "pinyin": "shí hou",
+    "pinyinNormalized": "shihou",
+    "characters": [
+      "时",
+      "候"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "lúc, khi",
+        "en": "time, moment"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "什么时候去？",
+        "pinyin": "Shénme shíhou qù?",
+        "vi": "Khi nào đi?"
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_是",
+    "hanzi": "是",
+    "pinyin": "shì",
+    "pinyinNormalized": "shi",
+    "characters": [
+      "是"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "là",
+        "en": "to be"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我是学生。",
+        "pinyin": "Wǒ shì xuésheng.",
+        "vi": "Tôi là học sinh."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_书",
+    "hanzi": "书",
+    "pinyin": "shū",
+    "pinyinNormalized": "shu",
+    "characters": [
+      "书"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "sách",
+        "en": "book"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我喜欢看书。",
+        "pinyin": "Wǒ xǐhuān kànshū.",
+        "vi": "Tôi thích đọc sách."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_水",
+    "hanzi": "水",
+    "pinyin": "shuǐ",
+    "pinyinNormalized": "shui",
+    "characters": [
+      "水"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "nước",
+        "en": "water"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "请给我一点水。",
+        "pinyin": "Qǐng gěi wǒ yìdiǎn shuǐ.",
+        "vi": "Làm ơn cho tôi một chút nước."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_水果",
+    "hanzi": "水果",
+    "pinyin": "shuǐ guǒ",
+    "pinyinNormalized": "shuiguo",
+    "characters": [
+      "水",
+      "果"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "hoa quả, trái cây",
+        "en": "fruit"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "多吃水果对身体好。",
+        "pinyin": "Duō chī shuǐguǒ duì shēntǐ hǎo.",
+        "vi": "Ăn nhiều hoa quả tốt cho sức khỏe."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_睡觉",
+    "hanzi": "睡觉",
+    "pinyin": "shuì jiào",
+    "pinyinNormalized": "shuijiao",
+    "characters": [
+      "睡",
+      "觉"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "ngủ",
+        "en": "to sleep"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "该睡觉了。",
+        "pinyin": "Gāi shuìjiào le.",
+        "vi": "Đến lúc phải đi ngủ rồi."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_说",
+    "hanzi": "说",
+    "pinyin": "shuō",
+    "pinyinNormalized": "shuo",
+    "characters": [
+      "说"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "nói",
+        "en": "to speak, to say"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他在说什么？",
+        "pinyin": "Tā zài shuō shénme?",
+        "vi": "Anh ấy đang nói gì vậy?"
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_四",
+    "hanzi": "四",
+    "pinyin": "sì",
+    "pinyinNormalized": "si",
+    "characters": [
+      "四"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "bốn",
+        "en": "four"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我有四个苹果。",
+        "pinyin": "Wǒ yǒu sì gè píngguǒ.",
+        "vi": "Tôi có bốn quả táo."
+      }
+    ],
+    "level": 1,
+    "wordType": "num"
+  },
+  {
+    "id": "hsk1_岁",
+    "hanzi": "岁",
+    "pinyin": "suì",
+    "pinyinNormalized": "sui",
+    "characters": [
+      "岁"
+    ],
+    "meanings": [
+      {
+        "pos": "mw",
+        "vi": "tuổi",
+        "en": "years old"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我今年二十岁。",
+        "pinyin": "Wǒ jīnnián èrshí suì.",
+        "vi": "Năm nay tôi hai mươi tuổi."
+      }
+    ],
+    "level": 1,
+    "wordType": "mw"
+  },
+  {
+    "id": "hsk1_他",
+    "hanzi": "他",
+    "pinyin": "tā",
+    "pinyinNormalized": "ta",
+    "characters": [
+      "他"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "anh ấy, ông ấy",
+        "en": "he, him"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他是我的老师。",
+        "pinyin": "Tā shì wǒ de lǎoshī.",
+        "vi": "Anh ấy là thầy giáo của tôi."
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_她",
+    "hanzi": "她",
+    "pinyin": "tā",
+    "pinyinNormalized": "ta",
+    "characters": [
+      "她"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "cô ấy, bà ấy",
+        "en": "she, her"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "她是我的同学。",
+        "pinyin": "Tā shì wǒ de tóngxué.",
+        "vi": "Cô ấy là bạn học của tôi."
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_太",
+    "hanzi": "太",
+    "pinyin": "tài",
+    "pinyinNormalized": "tai",
+    "characters": [
+      "太"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "quá, lắm",
+        "en": "too, extremely"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "今天太热了。",
+        "pinyin": "Jīntiān tài rè le.",
+        "vi": "Hôm nay nóng quá."
+      }
+    ],
+    "level": 1,
+    "wordType": "adv"
+  },
+  {
+    "id": "hsk1_天气",
+    "hanzi": "天气",
+    "pinyin": "tiān qì",
+    "pinyinNormalized": "tianqi",
+    "characters": [
+      "天",
+      "气"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "thời tiết",
+        "en": "weather"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "今天天气怎么样？",
+        "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+        "vi": "Thời tiết hôm nay thế nào?"
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_听",
+    "hanzi": "听",
+    "pinyin": "tīng",
+    "pinyinNormalized": "ting",
+    "characters": [
+      "听"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "nghe",
+        "en": "to listen, to hear"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "请听我说。",
+        "pinyin": "Qǐng tīng wǒ shuō.",
+        "vi": "Vui lòng nghe tôi nói."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_同学",
+    "hanzi": "同学",
+    "pinyin": "tóng xué",
+    "pinyinNormalized": "tongxue",
+    "characters": [
+      "同",
+      "学"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "bạn học",
+        "en": "classmate"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他是我的好同学。",
+        "pinyin": "Tā shì wǒ de hǎo tóngxué.",
+        "vi": "Cậu ấy là bạn học tốt của tôi."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_喂",
+    "hanzi": "喂",
+    "pinyin": "wèi",
+    "pinyinNormalized": "wei",
+    "characters": [
+      "喂"
+    ],
+    "meanings": [
+      {
+        "pos": "interj",
+        "vi": "alo, này",
+        "en": "hello (on phone), hey"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "喂，请问你是谁？",
+        "pinyin": "Wèi, qǐngwèn nǐ shì shéi?",
+        "vi": "Alo, xin hỏi bạn là ai?"
+      }
+    ],
+    "level": 1,
+    "wordType": "interj"
+  },
+  {
+    "id": "hsk1_我",
+    "hanzi": "我",
+    "pinyin": "wǒ",
+    "pinyinNormalized": "wo",
+    "characters": [
+      "我"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "tôi, tao, mình",
+        "en": "I, me"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我很高兴。",
+        "pinyin": "Wǒ hěn gāoxìng.",
+        "vi": "Tôi rất vui."
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_我们",
+    "hanzi": "我们",
+    "pinyin": "wǒ men",
+    "pinyinNormalized": "women",
+    "characters": [
+      "我",
+      "们"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "chúng tôi, chúng ta",
+        "en": "we, us"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我们去吃饭吧。",
+        "pinyin": "Wǒmen qù chīfàn ba.",
+        "vi": "Chúng ta đi ăn cơm đi."
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_五",
+    "hanzi": "五",
+    "pinyin": "wǔ",
+    "pinyinNormalized": "wu",
+    "characters": [
+      "五"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "năm",
+        "en": "five"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "现在是五点。",
+        "pinyin": "Xiànzài shì wǔ diǎn.",
+        "vi": "Bây giờ là năm giờ."
+      }
+    ],
+    "level": 1,
+    "wordType": "num"
+  },
+  {
+    "id": "hsk1_下午",
+    "hanzi": "下午",
+    "pinyin": "xià wǔ",
+    "pinyinNormalized": "xiawu",
+    "characters": [
+      "下",
+      "午"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "buổi chiều",
+        "en": "afternoon"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我下午三点去商店。",
+        "pinyin": "Wǒ xiàwǔ sān diǎn qù shāngdiàn.",
+        "vi": "Tôi đi cửa hàng vào lúc ba giờ chiều."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_下雨",
+    "hanzi": "下雨",
+    "pinyin": "xià yǔ",
+    "pinyinNormalized": "xiayu",
+    "characters": [
+      "下",
+      "雨"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "mưa, rơi mưa",
+        "en": "to rain"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "外面下雨了。",
+        "pinyin": "Wàimiàn xiàyǔ le.",
+        "vi": "Bên ngoài mưa rồi."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_先生",
+    "hanzi": "先生",
+    "pinyin": "xiān sheng",
+    "pinyinNormalized": "xiansheng",
+    "characters": [
+      "先",
+      "生"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "ông, ngài, tiên sinh, chồng",
+        "en": "Mr., gentleman, husband"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "王先生在那儿。",
+        "pinyin": "Wáng xiānsheng zài nà'er.",
+        "vi": "Ông Vương ở đằng kia."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_现在",
+    "hanzi": "现在",
+    "pinyin": "xiàn zài",
+    "pinyinNormalized": "xianzai",
+    "characters": [
+      "现",
+      "在"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "bây giờ, hiện tại",
+        "en": "now"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "现在几点？",
+        "pinyin": "Xiànzài jǐ diǎn?",
+        "vi": "Bây giờ là mấy giờ?"
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_想",
+    "hanzi": "想",
+    "pinyin": "xiǎng",
+    "pinyinNormalized": "xiang",
+    "characters": [
+      "想"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "muốn, nghĩ, nhớ",
+        "en": "to want, to think, to miss"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我想喝茶。",
+        "pinyin": "Wǒ xiǎng hē chá.",
+        "vi": "Tôi muốn uống trà."
+      },
+      {
+        "cn": "我很想你。",
+        "pinyin": "Wǒ hěn xiǎng nǐ.",
+        "vi": "Tôi rất nhớ bạn."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_小",
+    "hanzi": "小",
+    "pinyin": "xiǎo",
+    "pinyinNormalized": "xiao",
+    "characters": [
+      "小"
+    ],
+    "meanings": [
+      {
+        "pos": "adj",
+        "vi": "nhỏ, bé",
+        "en": "small, little"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这个苹果很小。",
+        "pinyin": "Zhège píngguǒ hěn xiǎo.",
+        "vi": "Quả táo này rất nhỏ."
+      }
+    ],
+    "level": 1,
+    "wordType": "adj"
+  },
+  {
+    "id": "hsk1_小姐",
+    "hanzi": "小姐",
+    "pinyin": "xiǎo jiě",
+    "pinyinNormalized": "xiaojie",
+    "characters": [
+      "小",
+      "姐"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "cô, tiểu thư",
+        "en": "Miss"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "王小姐在办公室。",
+        "pinyin": "Wáng xiǎojiě zài bàngōngshì.",
+        "vi": "Cô Vương đang ở văn phòng."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_些",
+    "hanzi": "些",
+    "pinyin": "xiē",
+    "pinyinNormalized": "xie",
+    "characters": [
+      "些"
+    ],
+    "meanings": [
+      {
+        "pos": "mw",
+        "vi": "một số, một vài",
+        "en": "some, a few"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这些书是我的。",
+        "pinyin": "Zhèxiē shū shì wǒ de.",
+        "vi": "Những cuốn sách này là của tôi."
+      }
+    ],
+    "level": 1,
+    "wordType": "mw"
+  },
+  {
+    "id": "hsk1_写",
+    "hanzi": "写",
+    "pinyin": "xiě",
+    "pinyinNormalized": "xie",
+    "characters": [
+      "写"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "viết",
+        "en": "to write"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你会写汉字吗？",
+        "pinyin": "Nǐ huì xiě Hànzì ma?",
+        "vi": "Bạn biết viết chữ Hán không?"
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_谢谢",
+    "hanzi": "谢谢",
+    "pinyin": "xiè xie",
+    "pinyinNormalized": "xiexie",
+    "characters": [
+      "谢",
+      "谢"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "cảm ơn",
+        "en": "to thank"
+      },
+      {
+        "pos": "interj",
+        "vi": "cảm ơn!",
+        "en": "thanks!"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "谢谢你的帮助。",
+        "pinyin": "Xièxie nǐ de bāngzhù.",
+        "vi": "Cảm ơn sự giúp đỡ của bạn."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_星期",
+    "hanzi": "星期",
+    "pinyin": "xīng qī",
+    "pinyinNormalized": "xingqi",
+    "characters": [
+      "星",
+      "期"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tuần, thứ",
+        "en": "week"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "今天是星期五。",
+        "pinyin": "Jīntiān shì xīngqīwǔ.",
+        "vi": "Hôm nay là thứ Sáu."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_学生",
+    "hanzi": "学生",
+    "pinyin": "xué sheng",
+    "pinyinNormalized": "xuesheng",
+    "characters": [
+      "学",
+      "生"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "học sinh, sinh viên",
+        "en": "student"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他是我的学生。",
+        "pinyin": "Tā shì wǒ de xuésheng.",
+        "vi": "Cậu ấy là học sinh của tôi."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_学习",
+    "hanzi": "学习",
+    "pinyin": "xué xí",
+    "pinyinNormalized": "xuexi",
+    "characters": [
+      "学",
+      "习"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "học tập",
+        "en": "to study"
+      },
+      {
+        "pos": "n",
+        "vi": "việc học tập",
+        "en": "study"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我们要努力学习。",
+        "pinyin": "Wǒmen yào nǔlì xuéxí.",
+        "vi": "Chúng ta cần phải nỗ lực học tập."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_学校",
+    "hanzi": "学校",
+    "pinyin": "xué xiào",
+    "pinyinNormalized": "xuexiao",
+    "characters": [
+      "学",
+      "校"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "trường học",
+        "en": "school"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "学校很大。",
+        "pinyin": "Xuéxiào hěn dà.",
+        "vi": "Trường học rất lớn."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_一",
+    "hanzi": "一",
+    "pinyin": "yī",
+    "pinyinNormalized": "yi",
+    "characters": [
+      "一"
+    ],
+    "meanings": [
+      {
+        "pos": "num",
+        "vi": "một",
+        "en": "one"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我有一本书。",
+        "pinyin": "Wǒ yǒu yī běn shū.",
+        "vi": "Tôi có một quyển sách."
+      }
+    ],
+    "level": 1,
+    "wordType": "num"
+  },
+  {
+    "id": "hsk1_一点儿",
+    "hanzi": "一点儿",
+    "pinyin": "yī diǎnr",
+    "pinyinNormalized": "yidianr",
+    "characters": [
+      "一",
+      "点",
+      "儿"
+    ],
+    "meanings": [
+      {
+        "pos": "mw",
+        "vi": "một chút, một ít",
+        "en": "a little bit"
+      },
+      {
+        "pos": "adv",
+        "vi": "một chút",
+        "en": "a bit"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "请喝一点儿水。",
+        "pinyin": "Qǐng hē yīdiǎnr shuǐ.",
+        "vi": "Mời uống một chút nước."
+      }
+    ],
+    "level": 1,
+    "wordType": "mw"
+  },
+  {
+    "id": "hsk1_衣服",
+    "hanzi": "衣服",
+    "pinyin": "yī fú",
+    "pinyinNormalized": "yifu",
+    "characters": [
+      "衣",
+      "服"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "quần áo",
+        "en": "clothes"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这件衣服很漂亮。",
+        "pinyin": "Zhè jiàn yīfu hěn piàoliang.",
+        "vi": "Bộ quần áo này rất đẹp."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_医生",
+    "hanzi": "医生",
+    "pinyin": "yī shēng",
+    "pinyinNormalized": "yisheng",
+    "characters": [
+      "医",
+      "生"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "bác sĩ",
+        "en": "doctor"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我妈妈是医生。",
+        "pinyin": "Wǒ māma shì yīshēng.",
+        "vi": "Mẹ tôi là bác sĩ."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_医院",
+    "hanzi": "医院",
+    "pinyin": "yī yuàn",
+    "pinyinNormalized": "yiyuan",
+    "characters": [
+      "医",
+      "院"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "bệnh viện",
+        "en": "hospital"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他去医院看病了。",
+        "pinyin": "Tā qù yīyuàn kànbìng le.",
+        "vi": "Anh ấy đi bệnh viện khám bệnh rồi."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_椅子",
+    "hanzi": "椅子",
+    "pinyin": "yǐ zi",
+    "pinyinNormalized": "yizi",
+    "characters": [
+      "椅",
+      "子"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "cái ghế",
+        "en": "chair"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "请坐椅子上。",
+        "pinyin": "Qǐng zuò yǐzi shàng.",
+        "vi": "Mời ngồi lên ghế."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_有",
+    "hanzi": "有",
+    "pinyin": "yǒu",
+    "pinyinNormalized": "you",
+    "characters": [
+      "有"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "có",
+        "en": "to have, to exist"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "桌子上有书。",
+        "pinyin": "Zhuōzi shàng yǒu shū.",
+        "vi": "Trên bàn có sách."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_月",
+    "hanzi": "月",
+    "pinyin": "yuè",
+    "pinyinNormalized": "yue",
+    "characters": [
+      "月"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "tháng, mặt trăng",
+        "en": "month, moon"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "现在是三月。",
+        "pinyin": "Xiànzài shì sān yuè.",
+        "vi": "Bây giờ là tháng Ba."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_在",
+    "hanzi": "在",
+    "pinyin": "zài",
+    "pinyinNormalized": "zai",
+    "characters": [
+      "在"
+    ],
+    "meanings": [
+      {
+        "pos": "prep",
+        "vi": "ở, tại",
+        "en": "at, in"
+      },
+      {
+        "pos": "v",
+        "vi": "ở",
+        "en": "to be at"
+      },
+      {
+        "pos": "adv",
+        "vi": "đang",
+        "en": "doing (aspect marker)"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我在家。",
+        "pinyin": "Wǒ zài jiā.",
+        "vi": "Tôi ở nhà."
+      },
+      {
+        "cn": "他在吃饭。",
+        "pinyin": "Tā zài chī fàn.",
+        "vi": "Anh ấy đang ăn cơm."
+      }
+    ],
+    "level": 1,
+    "wordType": "prep"
+  },
+  {
+    "id": "hsk1_再见",
+    "hanzi": "再见",
+    "pinyin": "zài jiàn",
+    "pinyinNormalized": "zaijian",
+    "characters": [
+      "再",
+      "见"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "tạm biệt",
+        "en": "goodbye"
+      },
+      {
+        "pos": "interj",
+        "vi": "tạm biệt!",
+        "en": "bye!"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "老师，再见！",
+        "pinyin": "Lǎoshī, zàijiàn!",
+        "vi": "Chào thầy, tạm biệt thầy!"
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_怎么",
+    "hanzi": "怎么",
+    "pinyin": "zěn me",
+    "pinyinNormalized": "zenme",
+    "characters": [
+      "怎",
+      "么"
+    ],
+    "meanings": [
+      {
+        "pos": "adv",
+        "vi": "thế nào, làm sao",
+        "en": "how, why"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你怎么去学校？",
+        "pinyin": "Nǐ zěnme qù xuéxiào?",
+        "vi": "Bạn đi đến trường bằng cách nào?"
+      },
+      {
+        "cn": "你怎么了？",
+        "pinyin": "Nǐ zěnme le?",
+        "vi": "Bạn làm sao vậy?"
+      }
+    ],
+    "level": 1,
+    "wordType": "adv"
+  },
+  {
+    "id": "hsk1_怎么样",
+    "hanzi": "怎么样",
+    "pinyin": "zěn me yàng",
+    "pinyinNormalized": "zenmeyang",
+    "characters": [
+      "怎",
+      "么",
+      "样"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "như thế nào",
+        "en": "how about, how is it"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你的身体怎么样？",
+        "pinyin": "Nǐ de shēntǐ zěnmeyàng?",
+        "vi": "Sức khỏe của bạn thế nào?"
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_这",
+    "hanzi": "这",
+    "pinyin": "zhè",
+    "pinyinNormalized": "zhe",
+    "characters": [
+      "这"
+    ],
+    "meanings": [
+      {
+        "pos": "pron",
+        "vi": "đây, này",
+        "en": "this"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这是谁的书？",
+        "pinyin": "Zhè shì shéi de shū?",
+        "vi": "Đây là sách của ai?"
+      }
+    ],
+    "level": 1,
+    "wordType": "pron"
+  },
+  {
+    "id": "hsk1_中国",
+    "hanzi": "中国",
+    "pinyin": "Zhōng guó",
+    "pinyinNormalized": "zhongguo",
+    "characters": [
+      "中",
+      "国"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "Trung Quốc",
+        "en": "China"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "我去过中国。",
+        "pinyin": "Wǒ qùguo Zhōngguó.",
+        "vi": "Tôi đã từng đi Trung Quốc."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_中午",
+    "hanzi": "中午",
+    "pinyin": "zhōng wǔ",
+    "pinyinNormalized": "zhongwu",
+    "characters": [
+      "中",
+      "午"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "buổi trưa",
+        "en": "noon, midday"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "中午我们去吃饭吧。",
+        "pinyin": "Zhōngwǔ wǒmen qù chīfàn ba.",
+        "vi": "Buổi trưa chúng ta đi ăn cơm đi."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_住",
+    "hanzi": "住",
+    "pinyin": "zhù",
+    "pinyinNormalized": "zhu",
+    "characters": [
+      "住"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "ở, cư trú",
+        "en": "to live, to reside"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "你住在哪儿？",
+        "pinyin": "Nǐ zhù zài nǎr?",
+        "vi": "Bạn sống ở đâu?"
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_桌子",
+    "hanzi": "桌子",
+    "pinyin": "zhuō zi",
+    "pinyinNormalized": "zhuozi",
+    "characters": [
+      "桌",
+      "子"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "cái bàn",
+        "en": "table, desk"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "桌子上有苹果。",
+        "pinyin": "Zhuōzi shàng yǒu píngguǒ.",
+        "vi": "Trên bàn có táo."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_字",
+    "hanzi": "字",
+    "pinyin": "zì",
+    "pinyinNormalized": "zi",
+    "characters": [
+      "字"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "chữ, chữ viết",
+        "en": "character, word"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "这个字怎么写？",
+        "pinyin": "Zhège zì zěnme xiě?",
+        "vi": "Chữ này viết như thế nào?"
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_昨天",
+    "hanzi": "昨天",
+    "pinyin": "zuó tiān",
+    "pinyinNormalized": "zuotian",
+    "characters": [
+      "昨",
+      "天"
+    ],
+    "meanings": [
+      {
+        "pos": "n",
+        "vi": "hôm qua",
+        "en": "yesterday"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "昨天很热。",
+        "pinyin": "Zuótiān hěn rè.",
+        "vi": "Hôm qua rất nóng."
+      }
+    ],
+    "level": 1,
+    "wordType": "n"
+  },
+  {
+    "id": "hsk1_坐",
+    "hanzi": "坐",
+    "pinyin": "zuò",
+    "pinyinNormalized": "zuo",
+    "characters": [
+      "坐"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "ngồi",
+        "en": "to sit"
+      },
+      {
+        "pos": "v",
+        "vi": "đi (bằng phương tiện giao thông)",
+        "en": "to ride/travel by"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "请坐下。",
+        "pinyin": "Qǐng zuò xià.",
+        "vi": "Mời ngồi xuống."
+      },
+      {
+        "cn": "我每天坐公共汽车上班。",
+        "pinyin": "Wǒ měitiān zuò gōnggòng qìchē shàngbān.",
+        "vi": "Tôi đi làm bằng xe buýt mỗi ngày."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  },
+  {
+    "id": "hsk1_做",
+    "hanzi": "做",
+    "pinyin": "zuò",
+    "pinyinNormalized": "zuo",
+    "characters": [
+      "做"
+    ],
+    "meanings": [
+      {
+        "pos": "v",
+        "vi": "làm, chế tạo",
+        "en": "to do/make"
+      },
+      {
+        "pos": "v",
+        "vi": "làm (nghề nghiệp), đóng vai trò",
+        "en": "to act as/to be"
+      }
+    ],
+    "exampleSentences": [
+      {
+        "cn": "他在做什么工作？",
+        "pinyin": "Tā zài zuò shénme gōngzuò?",
+        "vi": "Anh ấy đang làm công việc gì?"
+      },
+      {
+        "cn": "我想做一个好学生。",
+        "pinyin": "Wǒ xiǎng zuò yīgè hǎo xuéshēng.",
+        "vi": "Tôi muốn làm một học sinh tốt."
+      }
+    ],
+    "level": 1,
+    "wordType": "v"
+  }
+]

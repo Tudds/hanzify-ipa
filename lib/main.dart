@@ -6,7 +6,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'core/theme/theme_state.dart';
 
 import 'core/theme/app_durations.dart';
-import 'core/widgets/bottom_tab_bar.dart';
+import 'core/widgets/app_navigation_shell.dart';
 import 'core/providers/navigation_provider.dart';
 import 'core/providers/nav_visibility_provider.dart';
 import 'core/providers/performance_provider.dart';
@@ -29,10 +29,17 @@ import 'features/vocab/presentation/screens/flashcard_screen.dart';
 import 'features/vocab/presentation/screens/quiz_screen.dart';
 import 'features/dashboard/presentation/screens/progress_screen.dart';
 import 'features/grammar/presentation/screens/grammar_screen.dart';
+import 'features/grammar/presentation/screens/grammar_detail_screen.dart';
 import 'features/conversation/presentation/screens/conversation_screen.dart';
+import 'features/conversation/presentation/screens/conversation_detail_screen.dart';
 import 'features/profile/presentation/screens/profile_screen.dart';
 import 'features/character/presentation/screens/character_detail_screen.dart';
 import 'features/onboarding/presentation/screens/onboarding_screen.dart';
+import 'features/vocab/presentation/screens/vocab_detail_screen.dart';
+import 'features/vocab/domain/entities/vocab.dart';
+import 'features/vocab/presentation/providers/vocab_state.dart';
+import 'features/grammar/domain/entities/grammar_point.dart';
+import 'features/conversation/domain/entities/conversation_context.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -72,9 +79,8 @@ class AppRoot extends ConsumerWidget {
     ref.watch(syncProvider);
 
     final authAsync = ref.watch(authStateChangesProvider);
-    final hasSession = authAsync.whenOrNull(
-          data: (state) => state.session != null,
-        ) ??
+    final hasSession =
+        authAsync.whenOrNull(data: (state) => state.session != null) ??
         (Supabase.instance.client.auth.currentSession != null);
     final isGuest = ref.watch(guestModeProvider);
 
@@ -88,9 +94,8 @@ class AppRoot extends ConsumerWidget {
 
       return authAsync.when(
         data: (_) => const AuthScreen(),
-        loading: () => const Scaffold(
-          body: Center(child: CircularProgressIndicator()),
-        ),
+        loading: () =>
+            const Scaffold(body: Center(child: CircularProgressIndicator())),
         error: (_, _) => const AuthScreen(),
       );
     }
@@ -100,6 +105,9 @@ class AppRoot extends ConsumerWidget {
     final isNavVisible = ref.watch(navVisibilityProvider);
     final isReduced = ref.watch(performanceProvider);
     final screen = nav.screen;
+    final dueCount = ref.watch(dueVocabProvider).asData?.value.length ?? 0;
+    final width = MediaQuery.sizeOf(context).width;
+    final useRail = width >= 840;
 
     Widget buildScreen() {
       switch (screen) {
@@ -118,13 +126,29 @@ class AppRoot extends ConsumerWidget {
         case AppRoutes.profile:
           return const ProfileScreen();
         case AppRoutes.charDetail:
-          return CharacterDetailScreen(char: nav.arg ?? '');
+          final char = nav.arg;
+          return CharacterDetailScreen(char: char is String ? char : '');
+        case AppRoutes.vocabDetail:
+          final vocab = nav.arg;
+          return vocab is Vocab
+              ? VocabDetailScreen(vocab: vocab)
+              : const HomeScreen();
+        case AppRoutes.grammarDetail:
+          final grammar = nav.arg;
+          return grammar is GrammarPoint
+              ? GrammarDetailScreen(grammar: grammar)
+              : const GrammarScreen();
+        case AppRoutes.conversationDetail:
+          final conversation = nav.arg;
+          return conversation is ConversationContext
+              ? ConversationDetailScreen(conversation: conversation)
+              : const ConversationScreen();
         default:
           return const HomeScreen();
       }
     }
 
-    final showTabBar = AppRoutes.tabBarScreens.contains(screen);
+    final showPrimaryNav = AppRoutes.tabBarScreens.contains(screen);
 
     return Scaffold(
       backgroundColor: c.background,
@@ -140,54 +164,39 @@ class AppRoot extends ConsumerWidget {
         },
         child: Stack(
           children: [
-            Column(
-              children: [
-                Expanded(
-                  child: AnimatedSwitcher(
-                    duration: isReduced ? AppDurations.fast : AppDurations.slow,
-                    switchInCurve: Curves.easeOutCubic,
-                    switchOutCurve: Curves.easeIn,
-                    transitionBuilder: (child, animation) {
-                      if (isReduced) {
-                        return FadeTransition(opacity: animation, child: child);
-                      }
-                      final scale = Tween<double>(begin: 0.97, end: 1.0).animate(
-                        CurvedAnimation(
-                          parent: animation,
-                          curve: Curves.easeOutCubic,
-                        ),
-                      );
-                      return FadeTransition(
-                        opacity: CurvedAnimation(
-                          parent: animation,
-                          curve: Curves.easeIn,
-                        ),
-                        child: ScaleTransition(scale: scale, child: child),
-                      );
-                    },
-                    child: KeyedSubtree(
-                      key: ValueKey<String>('${nav.screen}_${nav.arg}'),
-                      child: buildScreen(),
-                    ),
+            AnimatedSwitcher(
+              duration: isReduced ? AppDurations.fast : AppDurations.slow,
+              switchInCurve: Curves.easeOutCubic,
+              switchOutCurve: Curves.easeIn,
+              transitionBuilder: (child, animation) {
+                if (isReduced) {
+                  return FadeTransition(opacity: animation, child: child);
+                }
+                final scale = Tween<double>(begin: 0.97, end: 1.0).animate(
+                  CurvedAnimation(
+                    parent: animation,
+                    curve: Curves.easeOutCubic,
                   ),
-                ),
-              ],
-            ),
-            
-            // Bottom Navigation - Autohide
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: 0,
-              child: AnimatedSlide(
-                offset: (isNavVisible && showTabBar) ? Offset.zero : const Offset(0, 1),
-                duration: AppDurations.normal,
-                curve: Curves.easeInOutCubic,
-                child: BottomTabBarWidget(
+                );
+                return FadeTransition(
+                  opacity: CurvedAnimation(
+                    parent: animation,
+                    curve: Curves.easeIn,
+                  ),
+                  child: ScaleTransition(scale: scale, child: child),
+                );
+              },
+              child: KeyedSubtree(
+                key: ValueKey<(String, Object?)>((nav.screen, nav.arg)),
+                child: AppNavigationShell(
                   currentScreen: screen,
                   onNavigate: (s) =>
                       ref.read(navigationProvider.notifier).navigate(s),
-                  colors: c,
+                  useRail: useRail,
+                  showPrimaryNav: showPrimaryNav,
+                  isNavVisible: isNavVisible,
+                  dueCount: dueCount,
+                  child: buildScreen(),
                 ),
               ),
             ),
@@ -197,5 +206,3 @@ class AppRoot extends ConsumerWidget {
     );
   }
 }
-
-

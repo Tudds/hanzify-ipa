@@ -4,7 +4,8 @@ import 'package:hanzify/features/character/domain/entities/character.dart';
 import '../../../../core/providers/database_provider.dart';
 import '../../domain/repositories/character_repository.dart';
 import '../../data/datasources/character_local_datasource.dart';
-import '../../data/datasources/character_local_datasource_impl.dart';
+import 'character_providers_web.dart'
+    if (dart.library.io) 'character_providers_native.dart' as platform;
 import '../../data/repositories/character_repository_impl.dart';
 
 part 'character_providers.g.dart';
@@ -17,7 +18,7 @@ part 'character_providers.g.dart';
 @Riverpod(keepAlive: true)
 CharacterLocalDataSource characterLocalDataSource(Ref ref) {
   final db = ref.watch(appDatabaseProvider);
-  return CharacterLocalDataSourceImpl(db);
+  return platform.createNativeDataSource(db);
 }
 
 @Riverpod(keepAlive: true)

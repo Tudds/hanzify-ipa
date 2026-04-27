@@ -1,6 +1,5 @@
 import 'package:drift/drift.dart';
-import '../../../../core/database/app_database_stub.dart'
-    if (dart.library.io) '../../../../core/database/app_database.dart';
+import '../../../../core/database/app_database.dart';
 import '../../domain/entities/grammar_point.dart';
 import 'grammar_local_datasource.dart';
 
@@ -100,6 +99,8 @@ class GrammarLocalDataSourceImpl implements GrammarLocalDataSource {
         formulaParts: grammar.formulaParts,
         usages: grammar.usages,
         exampleTags: grammar.exampleTags,
+        needsSync: const Value(true),
+        updatedAt: Value(DateTime.now().toUtc()),
       ),
       mode: InsertMode.insertOrReplace,
     );

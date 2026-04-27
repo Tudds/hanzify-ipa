@@ -13,7 +13,7 @@ import 'package:hanzify/core/providers/user_preferences_provider.dart';
 import 'package:hanzify/core/widgets/hanzify_badge.dart';
 import 'package:hanzify/core/widgets/hanzify_section_header.dart';
 import 'package:hanzify/core/widgets/hanzify_card.dart';
-import 'package:hanzify/core/widgets/hanzify_detail_frame.dart';
+import 'package:hanzify/core/widgets/hanzify_tabbed_frame.dart';
 import 'package:hanzify/features/conversation/domain/entities/conversation_context.dart';
 import 'package:hanzify/features/conversation/presentation/providers/conversation_providers.dart';
 import 'package:hanzify/features/grammar/presentation/providers/grammar_providers.dart';
@@ -81,22 +81,29 @@ class _ConversationDetailScreenState
     final showPinyin = ref.watch(showPinyinProvider);
     final conv = widget.conversation;
 
-    return HanzifyDetailFrame(
+    return HanzifyTabbedFrame(
       title: 'Chi tiết hội thoại',
-      scrollController: _scrollController,
       hero: _buildHeroCard(c, conv),
-      slivers: [
-        SliverToBoxAdapter(child: _buildModeToggle(c)),
-        if (_isPracticeMode)
-          SliverToBoxAdapter(child: _buildPracticeView(c, conv))
-        else
-          SliverToBoxAdapter(
-              child: _buildDialogueView(c, conv, showPinyin)),
-        SliverToBoxAdapter(child: _buildContextVocabs(c, conv)),
-        if (conv.cultureTip.isNotEmpty)
-          SliverToBoxAdapter(child: _buildCultureTip(c, conv)),
-        SliverToBoxAdapter(child: _buildContextGrammars(c, context, conv)),
-        SliverToBoxAdapter(child: _buildCTA(c)),
+      tabLabels: const ['Hội thoại', 'Học thuật'],
+      tabSlivers: [
+        // Tab 1: Hội thoại
+        [
+          SliverToBoxAdapter(child: _buildModeToggle(c)),
+          if (_isPracticeMode)
+            SliverToBoxAdapter(child: _buildPracticeView(c, conv))
+          else
+            SliverToBoxAdapter(
+                child: _buildDialogueView(c, conv, showPinyin)),
+          if (conv.cultureTip.isNotEmpty)
+            SliverToBoxAdapter(child: _buildCultureTip(c, conv)),
+          SliverToBoxAdapter(child: const SizedBox(height: AppSpacing.xl)),
+          SliverToBoxAdapter(child: _buildCTA(c)),
+        ],
+        // Tab 2: Từ vựng & Ngữ pháp (Học thuật)
+        [
+          SliverToBoxAdapter(child: _buildContextVocabs(c, conv)),
+          SliverToBoxAdapter(child: _buildContextGrammars(c, context, conv)),
+        ],
       ],
     );
   }

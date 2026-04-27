@@ -10,7 +10,7 @@ import 'package:hanzify/core/widgets/hanzify_badge.dart';
 import 'package:hanzify/core/widgets/hanzify_section_header.dart';
 import 'package:hanzify/core/widgets/highlighted_text.dart';
 import 'package:hanzify/core/widgets/hanzify_loading_indicator.dart';
-import 'package:hanzify/core/widgets/hanzify_detail_frame.dart';
+import 'package:hanzify/core/widgets/hanzify_tabbed_frame.dart';
 import 'package:hanzify/core/utils/pos_labels.dart' show posLabelFull;
 import 'package:hanzify/core/widgets/hanzify_bookmark_button.dart';
 import 'package:hanzify/features/vocab/domain/entities/vocab.dart';
@@ -42,18 +42,23 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
     final c = themeColorsOf(context);
     final showPinyin = ref.watch(showPinyinProvider);
 
-    return HanzifyDetailFrame(
+    return HanzifyTabbedFrame(
       appBarTrailing: _buildBookmarkButton(c),
       hero: _buildHero(cs, c, showPinyin),
-      slivers: [
-        SliverToBoxAdapter(child: _buildWritingGuide(context, ref, c, cs)),
-        SliverToBoxAdapter(child: _sectionDivider(cs)),
-        SliverToBoxAdapter(child: _buildMeanings(theme, cs, c)),
-        SliverToBoxAdapter(child: _sectionDivider(cs)),
-        SliverToBoxAdapter(child: _buildExamples(theme, cs, c, showPinyin)),
-        SliverToBoxAdapter(child: _sectionDivider(cs)),
-        SliverToBoxAdapter(child: _buildRelatedConversations(theme, cs, c, context)),
-        const SliverToBoxAdapter(child: SizedBox(height: 40)),
+      tabLabels: const ['Tổng quan', 'Ứng dụng'],
+      tabSlivers: [
+        // Tab 1: Tổng quan
+        [
+          SliverToBoxAdapter(child: _buildMeanings(theme, cs, c)),
+          SliverToBoxAdapter(child: const SizedBox(height: 16)),
+          SliverToBoxAdapter(child: _buildWritingGuide(context, ref, c, cs)),
+        ],
+        // Tab 2: Ứng dụng
+        [
+          SliverToBoxAdapter(child: _buildExamples(theme, cs, c, showPinyin)),
+          SliverToBoxAdapter(child: const SizedBox(height: 16)),
+          SliverToBoxAdapter(child: _buildRelatedConversations(theme, cs, c, context)),
+        ],
       ],
     );
   }
@@ -68,12 +73,7 @@ class _VocabDetailScreenState extends ConsumerState<VocabDetailScreen> {
     );
   }
 
-  Widget _sectionDivider(ColorScheme cs) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 4),
-      child: Divider(color: cs.outlineVariant.withValues(alpha: 0.3)),
-    );
-  }
+  // Section divider removed since we use tabs now
 
   Widget _buildHero(ColorScheme cs, AppThemeColors c, bool showPinyin) {
     final fontSize = vocab.hanzi.length > 3 ? 64.0 : 96.0;

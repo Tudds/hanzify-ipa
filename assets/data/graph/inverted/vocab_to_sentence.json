@@ -1,0 +1,4413 @@
+{
+  "hsk1_你好": [
+    "conv_complaint_01#L0",
+    "conv_greeting_01#L0",
+    "conv_greeting_01#L1",
+    "conv_hsk2_appointment_01#L0",
+    "conv_hsk2_bank_01#L0",
+    "conv_hsk3_tech_01#L0",
+    "conv_phone_01#L0",
+    "conv_travel_01#L0",
+    "conv_travel_03#L0"
+  ],
+  "hsk1_我": [
+    "conv_complaint_01#L0",
+    "conv_complaint_01#L2",
+    "conv_complaint_01#L3",
+    "conv_complaint_01#L4",
+    "conv_complaint_01#L6",
+    "conv_daily_01#L1",
+    "conv_daily_01#L2",
+    "conv_daily_01#L4",
+    "conv_daily_01#L6",
+    "conv_daily_03#L1",
+    "conv_daily_03#L3",
+    "conv_daily_03#L5",
+    "conv_education_01#L0",
+    "conv_education_01#L2",
+    "conv_education_01#L4",
+    "conv_education_01#L6",
+    "conv_environment_01#L0",
+    "conv_greeting_01#L1",
+    "conv_greeting_01#L2",
+    "conv_greeting_01#L3",
+    "conv_greeting_01#L4",
+    "conv_greeting_01#L5",
+    "conv_greeting_02#L1",
+    "conv_greeting_02#L2",
+    "conv_greeting_02#L3",
+    "conv_greeting_02#L4",
+    "conv_greeting_03#L1",
+    "conv_greeting_03#L3",
+    "conv_greeting_03#L5",
+    "conv_greeting_04#L0",
+    "conv_greeting_04#L5",
+    "conv_health_01#L0",
+    "conv_health_01#L2",
+    "conv_health_01#L3",
+    "conv_health_01#L5",
+    "conv_health_01#L6",
+    "conv_hsk2_appointment_01#L0",
+    "conv_hsk2_appointment_01#L4",
+    "conv_hsk2_bank_01#L0",
+    "conv_hsk2_bank_01#L1",
+    "conv_hsk2_bank_01#L4",
+    "conv_hsk2_sport_01#L2",
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_apartment_repair_01#L3",
+    "conv_hsk3_apartment_repair_01#L4",
+    "conv_hsk3_bank_02#L0",
+    "conv_hsk3_bank_02#L2",
+    "conv_hsk3_clinic_appointment_01#L0",
+    "conv_hsk3_clinic_appointment_01#L2",
+    "conv_hsk3_clinic_appointment_01#L4",
+    "conv_hsk3_movie_01#L2",
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk3_movie_01#L4",
+    "conv_hsk3_movie_01#L5",
+    "conv_hsk3_rent_01#L0",
+    "conv_hsk3_rent_01#L4",
+    "conv_hsk3_return_item_01#L0",
+    "conv_hsk3_return_item_01#L2",
+    "conv_hsk3_return_item_01#L3",
+    "conv_hsk3_service_complaint_01#L0",
+    "conv_hsk3_service_complaint_01#L1",
+    "conv_hsk3_service_complaint_01#L2",
+    "conv_hsk3_study_plan_01#L1",
+    "conv_hsk3_study_plan_01#L3",
+    "conv_hsk3_tech_01#L0",
+    "conv_hsk3_tech_01#L1",
+    "conv_hsk3_trip_delay_01#L1",
+    "conv_hsk3_work_meeting_01#L1",
+    "conv_hsk3_work_meeting_01#L4",
+    "conv_hsk4_debate_01#L2",
+    "conv_hsk4_debate_01#L5",
+    "conv_hsk4_emergency_01#L1",
+    "conv_hsk4_emergency_01#L2",
+    "conv_hsk4_emergency_01#L4",
+    "conv_hsk4_media_01#L2",
+    "conv_hsk4_scholarship_01#L1",
+    "conv_hsk4_scholarship_01#L3",
+    "conv_hsk4_scholarship_01#L5",
+    "conv_negotiation_01#L3",
+    "conv_phone_01#L2",
+    "conv_phone_01#L4",
+    "conv_restaurant_01#L0",
+    "conv_restaurant_01#L2",
+    "conv_restaurant_02#L2",
+    "conv_restaurant_02#L4",
+    "conv_school_01#L1",
+    "conv_school_01#L4",
+    "conv_school_01#L5",
+    "conv_school_02#L4",
+    "conv_shopping_01#L4",
+    "conv_shopping_02#L4",
+    "conv_shopping_03#L4",
+    "conv_social_hsk4_01#L1",
+    "conv_social_hsk4_01#L3",
+    "conv_social_hsk4_01#L5",
+    "conv_social_hsk4_01#L6",
+    "conv_transport_02#L0",
+    "conv_travel_01#L0",
+    "conv_travel_02#L4",
+    "conv_travel_03#L0",
+    "conv_travel_03#L6",
+    "conv_workplace_01#L3",
+    "conv_workplace_01#L5",
+    "conv_workplace_02#L1",
+    "conv_workplace_02#L3",
+    "conv_workplace_04#L0",
+    "conv_workplace_04#L3",
+    "conv_workplace_04#L5"
+  ],
+  "hsk3_叫": [
+    "conv_daily_03#L3",
+    "conv_greeting_01#L1",
+    "conv_greeting_01#L2",
+    "conv_travel_03#L6"
+  ],
+  "hsk1_你": [
+    "conv_daily_01#L0",
+    "conv_daily_01#L1",
+    "conv_daily_01#L3",
+    "conv_daily_03#L0",
+    "conv_daily_03#L2",
+    "conv_education_01#L1",
+    "conv_education_01#L3",
+    "conv_education_01#L5",
+    "conv_environment_01#L0",
+    "conv_environment_01#L4",
+    "conv_greeting_01#L1",
+    "conv_greeting_01#L2",
+    "conv_greeting_01#L3",
+    "conv_greeting_01#L4",
+    "conv_greeting_01#L5",
+    "conv_greeting_02#L0",
+    "conv_greeting_02#L1",
+    "conv_greeting_02#L2",
+    "conv_greeting_02#L3",
+    "conv_greeting_03#L0",
+    "conv_greeting_03#L2",
+    "conv_greeting_03#L4",
+    "conv_greeting_04#L2",
+    "conv_health_01#L3",
+    "conv_health_01#L5",
+    "conv_hsk2_lost_01#L3",
+    "conv_hsk2_sport_01#L0",
+    "conv_hsk2_sport_01#L2",
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_apartment_repair_01#L1",
+    "conv_hsk3_apartment_repair_01#L3",
+    "conv_hsk3_apartment_repair_01#L4",
+    "conv_hsk3_movie_01#L0",
+    "conv_hsk3_movie_01#L1",
+    "conv_hsk3_movie_01#L2",
+    "conv_hsk3_movie_01#L4",
+    "conv_hsk3_movie_01#L5",
+    "conv_hsk3_study_plan_01#L0",
+    "conv_hsk3_study_plan_01#L2",
+    "conv_hsk4_debate_01#L0",
+    "conv_hsk4_media_01#L0",
+    "conv_hsk4_media_01#L1",
+    "conv_hsk4_scholarship_01#L0",
+    "conv_hsk4_scholarship_01#L2",
+    "conv_hsk4_scholarship_01#L4",
+    "conv_phone_01#L3",
+    "conv_restaurant_01#L1",
+    "conv_school_01#L0",
+    "conv_school_01#L3",
+    "conv_shopping_01#L4",
+    "conv_shopping_02#L1",
+    "conv_social_hsk4_01#L0",
+    "conv_social_hsk4_01#L2",
+    "conv_social_hsk4_01#L4",
+    "conv_social_hsk4_01#L6",
+    "conv_transport_02#L1",
+    "conv_transport_02#L3",
+    "conv_transport_02#L5",
+    "conv_travel_01#L2",
+    "conv_workplace_01#L0",
+    "conv_workplace_01#L2",
+    "conv_workplace_01#L4",
+    "conv_workplace_02#L2",
+    "conv_workplace_04#L5"
+  ],
+  "hsk1_什么": [
+    "conv_daily_01#L3",
+    "conv_education_01#L1",
+    "conv_environment_01#L5",
+    "conv_greeting_01#L1",
+    "conv_greeting_03#L2",
+    "conv_health_01#L1",
+    "conv_hsk3_bank_02#L0",
+    "conv_hsk3_movie_01#L1",
+    "conv_hsk4_scholarship_01#L4",
+    "conv_phone_01#L1",
+    "conv_restaurant_01#L1",
+    "conv_restaurant_01#L3",
+    "conv_school_01#L3",
+    "conv_school_02#L2",
+    "conv_school_02#L5",
+    "conv_social_hsk4_01#L0",
+    "conv_social_hsk4_01#L2",
+    "conv_workplace_01#L2",
+    "conv_workplace_02#L2",
+    "conv_workplace_04#L3"
+  ],
+  "hsk1_名字": [
+    "conv_daily_03#L3",
+    "conv_greeting_01#L1"
+  ],
+  "hsk4_王": [
+    "conv_greeting_01#L2",
+    "conv_phone_01#L0",
+    "conv_workplace_04#L0"
+  ],
+  "hsk1_是": [
+    "conv_complaint_01#L1",
+    "conv_complaint_01#L2",
+    "conv_complaint_01#L5",
+    "conv_education_01#L2",
+    "conv_environment_01#L3",
+    "conv_greeting_01#L2",
+    "conv_greeting_01#L3",
+    "conv_greeting_01#L4",
+    "conv_greeting_02#L2",
+    "conv_greeting_02#L3",
+    "conv_greeting_02#L4",
+    "conv_greeting_03#L3",
+    "conv_hsk3_apartment_repair_01#L3",
+    "conv_hsk4_debate_01#L2",
+    "conv_hsk4_debate_01#L3",
+    "conv_hsk4_debate_01#L4",
+    "conv_hsk4_debate_01#L5",
+    "conv_hsk4_emergency_01#L0",
+    "conv_hsk4_media_01#L4",
+    "conv_negotiation_01#L1",
+    "conv_negotiation_01#L3",
+    "conv_phone_01#L2",
+    "conv_restaurant_01#L1",
+    "conv_school_01#L3",
+    "conv_school_02#L2",
+    "conv_travel_01#L3",
+    "conv_travel_01#L6",
+    "conv_travel_02#L1",
+    "conv_travel_03#L2",
+    "conv_travel_03#L6",
+    "conv_workplace_04#L4"
+  ],
+  "hsk4_哪": [
+    "conv_education_01#L1",
+    "conv_education_01#L5",
+    "conv_greeting_01#L2",
+    "conv_hsk3_bank_02#L2",
+    "conv_transport_02#L3"
+  ],
+  "hsk1_国": [
+    "conv_greeting_01#L2",
+    "conv_hsk4_scholarship_01#L5"
+  ],
+  "hsk1_人": [
+    "conv_environment_01#L2",
+    "conv_greeting_01#L2",
+    "conv_greeting_01#L3",
+    "conv_greeting_01#L4",
+    "conv_greeting_03#L1",
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk4_debate_01#L2",
+    "conv_hsk4_debate_01#L3",
+    "conv_workplace_04#L4"
+  ],
+  "hsk1_中国": [
+    "conv_greeting_01#L3",
+    "conv_hsk3_bank_02#L1",
+    "conv_hsk4_scholarship_01#L1",
+    "conv_hsk4_scholarship_01#L2"
+  ],
+  "hsk1_呢": [
+    "conv_daily_01#L1",
+    "conv_daily_01#L5",
+    "conv_daily_02#L2",
+    "conv_greeting_01#L3",
+    "conv_greeting_02#L1",
+    "conv_greeting_02#L3",
+    "conv_greeting_03#L4",
+    "conv_hsk2_lost_01#L2",
+    "conv_hsk3_movie_01#L2",
+    "conv_hsk4_media_01#L1"
+  ],
+  "hsk2_越": [
+    "conv_greeting_01#L4",
+    "conv_hsk4_scholarship_01#L5"
+  ],
+  "hsk2_南": [
+    "conv_greeting_01#L4"
+  ],
+  "hsk1_很": [
+    "conv_daily_02#L1",
+    "conv_education_01#L2",
+    "conv_education_01#L4",
+    "conv_environment_01#L2",
+    "conv_environment_01#L3",
+    "conv_greeting_01#L4",
+    "conv_greeting_01#L5",
+    "conv_health_01#L2",
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk4_debate_01#L2",
+    "conv_hsk4_debate_01#L3",
+    "conv_hsk4_media_01#L4",
+    "conv_hsk4_scholarship_01#L1",
+    "conv_hsk4_scholarship_01#L4",
+    "conv_negotiation_01#L6",
+    "conv_restaurant_02#L1",
+    "conv_restaurant_02#L3",
+    "conv_school_01#L4",
+    "conv_school_02#L3",
+    "conv_shopping_02#L4",
+    "conv_shopping_03#L3",
+    "conv_social_hsk4_01#L6",
+    "conv_travel_02#L3",
+    "conv_workplace_01#L1"
+  ],
+  "hsk1_高兴": [
+    "conv_greeting_01#L4",
+    "conv_greeting_01#L5"
+  ],
+  "hsk1_认识": [
+    "conv_greeting_01#L4",
+    "conv_greeting_01#L5"
+  ],
+  "hsk1_也": [
+    "conv_education_01#L4",
+    "conv_greeting_01#L5",
+    "conv_greeting_02#L4",
+    "conv_health_01#L0",
+    "conv_hsk3_clinic_appointment_01#L4",
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk3_trip_delay_01#L4",
+    "conv_hsk4_debate_01#L1",
+    "conv_hsk4_debate_01#L2",
+    "conv_hsk4_media_01#L1",
+    "conv_hsk4_media_01#L4",
+    "conv_restaurant_02#L3",
+    "conv_social_hsk4_01#L3",
+    "conv_social_hsk4_01#L6",
+    "conv_workplace_01#L5"
+  ],
+  "hsk1_今年": [
+    "conv_greeting_02#L0",
+    "conv_greeting_02#L1"
+  ],
+  "hsk2_多": [
+    "conv_daily_03#L5",
+    "conv_environment_01#L3",
+    "conv_greeting_02#L0",
+    "conv_health_01#L5",
+    "conv_hsk2_appointment_01#L4",
+    "conv_hsk2_bank_01#L4",
+    "conv_hsk2_lost_01#L4",
+    "conv_hsk3_work_meeting_01#L2",
+    "conv_hsk4_debate_01#L1",
+    "conv_hsk4_debate_01#L2",
+    "conv_hsk4_debate_01#L3",
+    "conv_hsk4_media_01#L5",
+    "conv_school_01#L0",
+    "conv_school_01#L1",
+    "conv_school_01#L2",
+    "conv_school_02#L3",
+    "conv_shopping_02#L1",
+    "conv_social_hsk4_01#L3",
+    "conv_workplace_01#L1"
+  ],
+  "hsk1_大": [
+    "conv_greeting_02#L0",
+    "conv_health_01#L2",
+    "conv_hsk3_return_item_01#L3",
+    "conv_hsk4_debate_01#L0",
+    "conv_hsk4_debate_01#L1",
+    "conv_hsk4_emergency_01#L2",
+    "conv_hsk4_media_01#L4",
+    "conv_negotiation_01#L1",
+    "conv_shopping_02#L1",
+    "conv_travel_03#L1",
+    "conv_travel_03#L2",
+    "conv_travel_03#L3",
+    "conv_workplace_04#L4"
+  ],
+  "hsk1_二": [
+    "conv_complaint_01#L2",
+    "conv_greeting_02#L1",
+    "conv_greeting_02#L2",
+    "conv_hsk2_lost_01#L1",
+    "conv_shopping_01#L1",
+    "conv_shopping_01#L3",
+    "conv_shopping_02#L5",
+    "conv_shopping_03#L1",
+    "conv_travel_03#L6"
+  ],
+  "hsk1_十": [
+    "conv_complaint_01#L5",
+    "conv_daily_01#L6",
+    "conv_greeting_02#L1",
+    "conv_greeting_02#L2",
+    "conv_hsk2_bank_01#L3",
+    "conv_hsk3_rent_01#L1",
+    "conv_hsk3_rent_01#L5",
+    "conv_hsk3_tech_01#L3",
+    "conv_negotiation_01#L0",
+    "conv_negotiation_01#L6",
+    "conv_restaurant_01#L5",
+    "conv_shopping_01#L1",
+    "conv_shopping_01#L3",
+    "conv_shopping_02#L5",
+    "conv_shopping_03#L5",
+    "conv_transport_02#L3",
+    "conv_transport_02#L5",
+    "conv_travel_03#L3",
+    "conv_workplace_02#L5",
+    "conv_workplace_04#L2"
+  ],
+  "hsk1_岁": [
+    "conv_greeting_02#L1",
+    "conv_greeting_02#L2"
+  ],
+  "hsk1_学生": [
+    "conv_education_01#L5",
+    "conv_greeting_02#L2",
+    "conv_phone_01#L2"
+  ],
+  "hsk1_吗": [
+    "conv_complaint_01#L4",
+    "conv_daily_02#L2",
+    "conv_education_01#L1",
+    "conv_greeting_02#L2",
+    "conv_health_01#L4",
+    "conv_hsk2_appointment_01#L2",
+    "conv_hsk2_bank_01#L2",
+    "conv_hsk2_sport_01#L0",
+    "conv_hsk2_sport_01#L2",
+    "conv_hsk2_sport_01#L3",
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_movie_01#L0",
+    "conv_hsk3_rent_01#L0",
+    "conv_hsk3_rent_01#L3",
+    "conv_hsk3_rent_01#L4",
+    "conv_hsk3_rent_01#L5",
+    "conv_hsk3_tech_01#L0",
+    "conv_hsk3_tech_01#L2",
+    "conv_hsk3_tech_01#L4",
+    "conv_hsk4_debate_01#L0",
+    "conv_hsk4_emergency_01#L0",
+    "conv_hsk4_emergency_01#L3",
+    "conv_phone_01#L0",
+    "conv_school_02#L5",
+    "conv_shopping_01#L2",
+    "conv_shopping_02#L0",
+    "conv_shopping_02#L2",
+    "conv_shopping_02#L5",
+    "conv_transport_01#L4",
+    "conv_travel_03#L2",
+    "conv_travel_03#L4",
+    "conv_workplace_04#L3"
+  ],
+  "hsk1_的": [
+    "conv_complaint_01#L1",
+    "conv_complaint_01#L3",
+    "conv_complaint_01#L5",
+    "conv_complaint_01#L6",
+    "conv_daily_03#L3",
+    "conv_education_01#L0",
+    "conv_education_01#L2",
+    "conv_education_01#L3",
+    "conv_education_01#L4",
+    "conv_education_01#L6",
+    "conv_environment_01#L2",
+    "conv_environment_01#L3",
+    "conv_greeting_02#L3",
+    "conv_greeting_02#L4",
+    "conv_greeting_04#L2",
+    "conv_greeting_04#L4",
+    "conv_health_01#L1",
+    "conv_health_01#L6",
+    "conv_hsk2_appointment_01#L1",
+    "conv_hsk2_bank_01#L1",
+    "conv_hsk2_lost_01#L5",
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_apartment_repair_01#L2",
+    "conv_hsk3_bank_02#L1",
+    "conv_hsk3_clinic_appointment_01#L4",
+    "conv_hsk3_movie_01#L1",
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk3_rent_01#L2",
+    "conv_hsk3_rent_01#L4",
+    "conv_hsk3_return_item_01#L3",
+    "conv_hsk3_service_complaint_01#L2",
+    "conv_hsk3_tech_01#L0",
+    "conv_hsk3_tech_01#L4",
+    "conv_hsk3_tech_01#L5",
+    "conv_hsk3_trip_delay_01#L0",
+    "conv_hsk3_work_meeting_01#L4",
+    "conv_hsk4_debate_01#L0",
+    "conv_hsk4_debate_01#L2",
+    "conv_hsk4_debate_01#L3",
+    "conv_hsk4_debate_01#L5",
+    "conv_hsk4_emergency_01#L1",
+    "conv_hsk4_media_01#L3",
+    "conv_hsk4_scholarship_01#L1",
+    "conv_hsk4_scholarship_01#L2",
+    "conv_hsk4_scholarship_01#L5",
+    "conv_negotiation_01#L1",
+    "conv_negotiation_01#L2",
+    "conv_negotiation_01#L3",
+    "conv_negotiation_01#L4",
+    "conv_negotiation_01#L5",
+    "conv_negotiation_01#L6",
+    "conv_phone_01#L2",
+    "conv_phone_01#L4",
+    "conv_restaurant_01#L1",
+    "conv_restaurant_02#L2",
+    "conv_restaurant_02#L4",
+    "conv_school_01#L2",
+    "conv_school_01#L3",
+    "conv_school_02#L3",
+    "conv_shopping_02#L0",
+    "conv_shopping_02#L1",
+    "conv_shopping_02#L2",
+    "conv_shopping_02#L5",
+    "conv_shopping_03#L3",
+    "conv_shopping_03#L4",
+    "conv_shopping_03#L5",
+    "conv_social_hsk4_01#L3",
+    "conv_social_hsk4_01#L5",
+    "conv_transport_02#L0",
+    "conv_transport_02#L1",
+    "conv_transport_02#L2",
+    "conv_transport_02#L4",
+    "conv_travel_01#L1",
+    "conv_travel_01#L2",
+    "conv_travel_01#L5",
+    "conv_travel_01#L6",
+    "conv_travel_02#L1",
+    "conv_travel_02#L4",
+    "conv_travel_03#L1",
+    "conv_travel_03#L5",
+    "conv_travel_03#L7",
+    "conv_workplace_01#L4",
+    "conv_workplace_02#L0",
+    "conv_workplace_02#L1",
+    "conv_workplace_04#L2",
+    "conv_workplace_04#L4",
+    "conv_workplace_04#L6"
+  ],
+  "hsk1_大学生": [
+    "conv_greeting_02#L3"
+  ],
+  "hsk1_我们": [
+    "conv_complaint_01#L5",
+    "conv_daily_02#L4",
+    "conv_environment_01#L1",
+    "conv_environment_01#L5",
+    "conv_greeting_02#L4",
+    "conv_hsk2_sport_01#L5",
+    "conv_hsk3_bank_02#L3",
+    "conv_hsk3_family_decision_01#L0",
+    "conv_hsk3_family_decision_01#L2",
+    "conv_hsk3_family_decision_01#L3",
+    "conv_hsk3_movie_01#L4",
+    "conv_hsk3_service_complaint_01#L3",
+    "conv_hsk3_tech_01#L5",
+    "conv_hsk3_trip_delay_01#L0",
+    "conv_hsk3_trip_delay_01#L2",
+    "conv_hsk3_trip_delay_01#L3",
+    "conv_hsk3_work_meeting_01#L0",
+    "conv_hsk4_debate_01#L0",
+    "conv_hsk4_debate_01#L1",
+    "conv_negotiation_01#L0",
+    "conv_negotiation_01#L1",
+    "conv_negotiation_01#L3",
+    "conv_negotiation_01#L4",
+    "conv_negotiation_01#L5",
+    "conv_negotiation_01#L6",
+    "conv_restaurant_01#L3",
+    "conv_travel_02#L2",
+    "conv_travel_02#L5",
+    "conv_travel_03#L4",
+    "conv_travel_03#L7",
+    "conv_workplace_01#L0",
+    "conv_workplace_02#L0",
+    "conv_workplace_02#L1",
+    "conv_workplace_04#L6"
+  ],
+  "hsk2_一起": [
+    "conv_greeting_02#L4",
+    "conv_hsk2_sport_01#L2",
+    "conv_hsk2_sport_01#L5",
+    "conv_hsk3_movie_01#L0"
+  ],
+  "hsk1_同学": [
+    "conv_greeting_02#L4"
+  ],
+  "hsk2_家": [
+    "conv_greeting_03#L0",
+    "conv_greeting_03#L1",
+    "conv_greeting_04#L5",
+    "conv_hsk4_emergency_01#L2",
+    "conv_social_hsk4_01#L4",
+    "conv_workplace_01#L3"
+  ],
+  "hsk2_有": [
+    "conv_daily_02#L3",
+    "conv_education_01#L1",
+    "conv_education_01#L5",
+    "conv_environment_01#L0",
+    "conv_environment_01#L4",
+    "conv_environment_01#L5",
+    "conv_greeting_03#L0",
+    "conv_greeting_03#L1",
+    "conv_health_01#L1",
+    "conv_health_01#L3",
+    "conv_hsk2_sport_01#L0",
+    "conv_hsk2_sport_01#L1",
+    "conv_hsk2_sport_01#L4",
+    "conv_hsk3_clinic_appointment_01#L2",
+    "conv_hsk3_movie_01#L0",
+    "conv_hsk3_rent_01#L0",
+    "conv_hsk3_return_item_01#L0",
+    "conv_hsk3_work_meeting_01#L3",
+    "conv_hsk4_debate_01#L2",
+    "conv_hsk4_debate_01#L5",
+    "conv_hsk4_emergency_01#L3",
+    "conv_hsk4_scholarship_01#L2",
+    "conv_negotiation_01#L2",
+    "conv_phone_01#L1",
+    "conv_restaurant_01#L3",
+    "conv_restaurant_02#L1",
+    "conv_restaurant_02#L2",
+    "conv_restaurant_02#L3",
+    "conv_shopping_02#L0",
+    "conv_shopping_02#L1",
+    "conv_social_hsk4_01#L0",
+    "conv_social_hsk4_01#L2",
+    "conv_social_hsk4_01#L4",
+    "conv_transport_02#L3",
+    "conv_travel_02#L1",
+    "conv_travel_03#L4",
+    "conv_travel_03#L7",
+    "conv_workplace_01#L2",
+    "conv_workplace_02#L2",
+    "conv_workplace_04#L3",
+    "conv_workplace_04#L6"
+  ],
+  "hsk1_几": [
+    "conv_daily_01#L0",
+    "conv_education_01#L3",
+    "conv_greeting_03#L0",
+    "conv_hsk2_appointment_01#L1",
+    "conv_hsk2_sport_01#L5",
+    "conv_hsk3_rent_01#L2",
+    "conv_transport_02#L1",
+    "conv_travel_01#L2",
+    "conv_travel_01#L3",
+    "conv_travel_01#L5"
+  ],
+  "hsk3_个人": [
+    "conv_environment_01#L1",
+    "conv_greeting_03#L0",
+    "conv_travel_03#L4",
+    "conv_workplace_04#L4"
+  ],
+  "hsk1_四": [
+    "conv_greeting_03#L1",
+    "conv_hsk3_rent_01#L3",
+    "conv_hsk4_emergency_01#L2",
+    "conv_restaurant_01#L5",
+    "conv_shopping_03#L5",
+    "conv_travel_03#L3",
+    "conv_travel_03#L6"
+  ],
+  "hsk2_口": [
+    "conv_greeting_03#L1",
+    "conv_hsk4_emergency_01#L2"
+  ],
+  "hsk1_爸爸": [
+    "conv_greeting_03#L1",
+    "conv_greeting_03#L2",
+    "conv_greeting_03#L3"
+  ],
+  "hsk1_妈妈": [
+    "conv_greeting_03#L1",
+    "conv_greeting_03#L3"
+  ],
+  "hsk1_哥哥": [
+    "conv_greeting_03#L1",
+    "conv_greeting_03#L4",
+    "conv_greeting_03#L5"
+  ],
+  "hsk1_和": [
+    "conv_greeting_03#L1",
+    "conv_hsk3_bank_02#L1",
+    "conv_hsk3_bank_02#L3",
+    "conv_hsk4_debate_01#L1",
+    "conv_hsk4_debate_01#L3",
+    "conv_hsk4_emergency_01#L2",
+    "conv_hsk4_media_01#L1",
+    "conv_restaurant_01#L2",
+    "conv_restaurant_01#L3",
+    "conv_transport_02#L3",
+    "conv_travel_03#L5"
+  ],
+  "hsk1_做": [
+    "conv_daily_01#L3",
+    "conv_daily_01#L6",
+    "conv_education_01#L6",
+    "conv_environment_01#L1",
+    "conv_environment_01#L2",
+    "conv_environment_01#L5",
+    "conv_greeting_03#L2",
+    "conv_hsk3_family_decision_01#L1",
+    "conv_hsk3_family_decision_01#L2",
+    "conv_hsk4_emergency_01#L5",
+    "conv_hsk4_scholarship_01#L4",
+    "conv_hsk4_scholarship_01#L5",
+    "conv_social_hsk4_01#L0",
+    "conv_workplace_01#L3",
+    "conv_workplace_02#L3"
+  ],
+  "hsk1_工作": [
+    "conv_greeting_03#L2",
+    "conv_health_01#L2",
+    "conv_health_01#L5",
+    "conv_hsk4_scholarship_01#L5",
+    "conv_social_hsk4_01#L1",
+    "conv_social_hsk4_01#L2",
+    "conv_workplace_01#L0",
+    "conv_workplace_01#L2"
+  ],
+  "hsk1_老师": [
+    "conv_education_01#L0",
+    "conv_education_01#L6",
+    "conv_greeting_03#L3",
+    "conv_phone_01#L0",
+    "conv_school_02#L0",
+    "conv_school_02#L4"
+  ],
+  "hsk1_医生": [
+    "conv_daily_03#L4",
+    "conv_daily_03#L5",
+    "conv_greeting_03#L3",
+    "conv_health_01#L0",
+    "conv_hsk3_clinic_appointment_01#L0"
+  ],
+  "hsk1_在": [
+    "conv_complaint_01#L0",
+    "conv_greeting_03#L5",
+    "conv_hsk2_lost_01#L3",
+    "conv_hsk3_bank_02#L1",
+    "conv_hsk3_tech_01#L2",
+    "conv_hsk3_tech_01#L3",
+    "conv_hsk3_trip_delay_01#L3",
+    "conv_hsk3_work_meeting_01#L4",
+    "conv_hsk4_emergency_01#L2",
+    "conv_hsk4_emergency_01#L3",
+    "conv_hsk4_emergency_01#L4",
+    "conv_hsk4_emergency_01#L5",
+    "conv_hsk4_scholarship_01#L2",
+    "conv_hsk4_scholarship_01#L5",
+    "conv_phone_01#L0",
+    "conv_phone_01#L1",
+    "conv_shopping_02#L3",
+    "conv_shopping_03#L0",
+    "conv_shopping_03#L1",
+    "conv_shopping_03#L5",
+    "conv_travel_01#L4",
+    "conv_travel_01#L5",
+    "conv_travel_01#L6",
+    "conv_travel_02#L5",
+    "conv_workplace_01#L1",
+    "conv_workplace_01#L3",
+    "conv_workplace_02#L3",
+    "conv_workplace_04#L5"
+  ],
+  "hsk2_公司": [
+    "conv_greeting_03#L5",
+    "conv_negotiation_01#L0",
+    "conv_workplace_01#L0",
+    "conv_workplace_01#L1",
+    "conv_workplace_01#L3"
+  ],
+  "hsk2_上班": [
+    "conv_greeting_03#L5"
+  ],
+  "hsk1_这": [
+    "conv_complaint_01#L4",
+    "conv_complaint_01#L5",
+    "conv_complaint_01#L6",
+    "conv_education_01#L3",
+    "conv_hsk2_bank_01#L5",
+    "conv_hsk3_apartment_repair_01#L2",
+    "conv_hsk3_family_decision_01#L0",
+    "conv_hsk3_return_item_01#L0",
+    "conv_hsk3_study_plan_01#L3",
+    "conv_hsk4_debate_01#L3",
+    "conv_hsk4_media_01#L3",
+    "conv_hsk4_scholarship_01#L0",
+    "conv_negotiation_01#L0",
+    "conv_negotiation_01#L3",
+    "conv_restaurant_01#L1",
+    "conv_restaurant_02#L0",
+    "conv_school_02#L0",
+    "conv_school_02#L1",
+    "conv_shopping_01#L0",
+    "conv_shopping_01#L1",
+    "conv_shopping_02#L4",
+    "conv_shopping_03#L2",
+    "conv_social_hsk4_01#L6",
+    "conv_travel_01#L6",
+    "conv_workplace_02#L4",
+    "conv_workplace_04#L0"
+  ],
+  "hsk1_个": [
+    "conv_complaint_01#L0",
+    "conv_education_01#L3",
+    "conv_greeting_04#L5",
+    "conv_health_01#L2",
+    "conv_hsk2_lost_01#L1",
+    "conv_hsk2_sport_01#L4",
+    "conv_hsk3_apartment_repair_01#L2",
+    "conv_hsk3_apartment_repair_01#L3",
+    "conv_hsk3_bank_02#L0",
+    "conv_hsk3_family_decision_01#L0",
+    "conv_hsk3_rent_01#L2",
+    "conv_hsk3_rent_01#L3",
+    "conv_hsk3_service_complaint_01#L0",
+    "conv_hsk3_study_plan_01#L1",
+    "conv_hsk3_study_plan_01#L3",
+    "conv_hsk3_tech_01#L5",
+    "conv_hsk3_trip_delay_01#L1",
+    "conv_hsk4_media_01#L3",
+    "conv_hsk4_media_01#L4",
+    "conv_hsk4_scholarship_01#L0",
+    "conv_hsk4_scholarship_01#L3",
+    "conv_restaurant_01#L2",
+    "conv_restaurant_02#L0",
+    "conv_school_02#L0",
+    "conv_school_02#L1",
+    "conv_shopping_01#L0",
+    "conv_shopping_01#L1",
+    "conv_shopping_03#L2",
+    "conv_travel_01#L0",
+    "conv_workplace_02#L4"
+  ],
+  "hsk1_多少": [
+    "conv_complaint_01#L1",
+    "conv_hsk3_bank_02#L4",
+    "conv_hsk3_tech_01#L2",
+    "conv_restaurant_01#L4",
+    "conv_shopping_01#L0",
+    "conv_shopping_03#L2",
+    "conv_transport_02#L4",
+    "conv_travel_03#L2",
+    "conv_workplace_02#L4",
+    "conv_workplace_04#L1"
+  ],
+  "hsk1_钱": [
+    "conv_hsk2_bank_01#L0",
+    "conv_hsk3_bank_02#L4",
+    "conv_hsk3_bank_02#L5",
+    "conv_hsk3_tech_01#L2",
+    "conv_restaurant_01#L4",
+    "conv_shopping_01#L0",
+    "conv_shopping_01#L4",
+    "conv_shopping_03#L2",
+    "conv_shopping_03#L3",
+    "conv_transport_02#L4"
+  ],
+  "hsk1_五": [
+    "conv_complaint_01#L2",
+    "conv_complaint_01#L5",
+    "conv_hsk2_bank_01#L0",
+    "conv_hsk2_bank_01#L5",
+    "conv_hsk2_lost_01#L5",
+    "conv_hsk2_sport_01#L4",
+    "conv_hsk3_rent_01#L1",
+    "conv_hsk4_scholarship_01#L3",
+    "conv_negotiation_01#L0",
+    "conv_negotiation_01#L1",
+    "conv_negotiation_01#L2",
+    "conv_negotiation_01#L6",
+    "conv_restaurant_01#L5",
+    "conv_shopping_01#L1",
+    "conv_transport_02#L5",
+    "conv_travel_01#L6",
+    "conv_travel_03#L0",
+    "conv_travel_03#L6",
+    "conv_workplace_01#L5",
+    "conv_workplace_02#L5"
+  ],
+  "hsk1_块": [
+    "conv_hsk2_bank_01#L0",
+    "conv_hsk2_bank_01#L3",
+    "conv_hsk3_bank_02#L5",
+    "conv_hsk3_rent_01#L1",
+    "conv_hsk3_tech_01#L3",
+    "conv_restaurant_01#L5",
+    "conv_shopping_01#L1",
+    "conv_shopping_01#L3",
+    "conv_shopping_02#L5",
+    "conv_shopping_03#L3",
+    "conv_shopping_03#L5",
+    "conv_transport_02#L5"
+  ],
+  "hsk1_太": [
+    "conv_hsk2_sport_01#L5",
+    "conv_hsk3_apartment_repair_01#L4",
+    "conv_shopping_01#L2",
+    "conv_social_hsk4_01#L4",
+    "conv_travel_02#L4"
+  ],
+  "hsk2_贵": [
+    "conv_hsk2_appointment_01#L3",
+    "conv_negotiation_01#L2",
+    "conv_shopping_01#L2",
+    "conv_workplace_01#L1"
+  ],
+  "hsk3_了": [
+    "conv_complaint_01#L0",
+    "conv_complaint_01#L1",
+    "conv_complaint_01#L2",
+    "conv_complaint_01#L3",
+    "conv_complaint_01#L4",
+    "conv_daily_03#L0",
+    "conv_daily_03#L3",
+    "conv_daily_03#L5",
+    "conv_environment_01#L0",
+    "conv_environment_01#L1",
+    "conv_greeting_04#L0",
+    "conv_greeting_04#L2",
+    "conv_greeting_04#L5",
+    "conv_health_01#L1",
+    "conv_hsk2_sport_01#L1",
+    "conv_hsk2_sport_01#L5",
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_apartment_repair_01#L2",
+    "conv_hsk3_apartment_repair_01#L3",
+    "conv_hsk3_apartment_repair_01#L4",
+    "conv_hsk3_bank_02#L2",
+    "conv_hsk3_family_decision_01#L4",
+    "conv_hsk3_return_item_01#L2",
+    "conv_hsk3_return_item_01#L4",
+    "conv_hsk3_service_complaint_01#L2",
+    "conv_hsk3_study_plan_01#L0",
+    "conv_hsk3_tech_01#L0",
+    "conv_hsk3_tech_01#L1",
+    "conv_hsk3_trip_delay_01#L0",
+    "conv_hsk3_work_meeting_01#L1",
+    "conv_hsk4_debate_01#L1",
+    "conv_hsk4_emergency_01#L0",
+    "conv_hsk4_emergency_01#L4",
+    "conv_hsk4_scholarship_01#L3",
+    "conv_negotiation_01#L3",
+    "conv_school_01#L0",
+    "conv_school_01#L1",
+    "conv_school_02#L4",
+    "conv_shopping_01#L2",
+    "conv_shopping_01#L4",
+    "conv_shopping_02#L4",
+    "conv_social_hsk4_01#L5",
+    "conv_transport_01#L5",
+    "conv_travel_01#L0",
+    "conv_travel_02#L1",
+    "conv_travel_02#L4",
+    "conv_workplace_01#L3",
+    "conv_workplace_01#L5",
+    "conv_workplace_04#L1",
+    "conv_workplace_04#L2"
+  ],
+  "hsk2_便宜": [
+    "conv_shopping_01#L2"
+  ],
+  "hsk1_一点儿": [
+    "conv_hsk3_return_item_01#L3",
+    "conv_hsk3_trip_delay_01#L4",
+    "conv_shopping_01#L2"
+  ],
+  "hsk2_可以": [
+    "conv_education_01#L4",
+    "conv_education_01#L5",
+    "conv_environment_01#L4",
+    "conv_hsk2_appointment_01#L2",
+    "conv_hsk2_appointment_01#L3",
+    "conv_hsk2_bank_01#L2",
+    "conv_hsk2_bank_01#L3",
+    "conv_hsk3_apartment_repair_01#L1",
+    "conv_hsk3_bank_02#L2",
+    "conv_hsk3_bank_02#L3",
+    "conv_hsk3_family_decision_01#L4",
+    "conv_hsk3_rent_01#L4",
+    "conv_hsk3_rent_01#L5",
+    "conv_hsk3_return_item_01#L1",
+    "conv_hsk3_service_complaint_01#L4",
+    "conv_hsk3_study_plan_01#L2",
+    "conv_hsk3_tech_01#L5",
+    "conv_hsk3_trip_delay_01#L2",
+    "conv_hsk3_trip_delay_01#L3",
+    "conv_hsk3_work_meeting_01#L3",
+    "conv_hsk4_media_01#L3",
+    "conv_negotiation_01#L1",
+    "conv_negotiation_01#L4",
+    "conv_negotiation_01#L5",
+    "conv_phone_01#L3",
+    "conv_school_02#L3",
+    "conv_shopping_01#L2",
+    "conv_shopping_02#L2",
+    "conv_shopping_02#L3",
+    "conv_shopping_02#L5",
+    "conv_transport_01#L4",
+    "conv_transport_01#L5",
+    "conv_travel_03#L2"
+  ],
+  "hsk2_那": [
+    "conv_complaint_01#L6",
+    "conv_daily_02#L4",
+    "conv_education_01#L5",
+    "conv_hsk3_family_decision_01#L2",
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk3_movie_01#L4",
+    "conv_hsk3_return_item_01#L3",
+    "conv_restaurant_02#L4",
+    "conv_shopping_01#L3",
+    "conv_social_hsk4_01#L4"
+  ],
+  "hsk1_吧": [
+    "conv_complaint_01#L6",
+    "conv_daily_02#L4",
+    "conv_environment_01#L4",
+    "conv_greeting_04#L1",
+    "conv_hsk2_bank_01#L4",
+    "conv_hsk2_sport_01#L5",
+    "conv_hsk3_bank_02#L4",
+    "conv_hsk3_family_decision_01#L0",
+    "conv_hsk3_movie_01#L4",
+    "conv_hsk3_movie_01#L5",
+    "conv_hsk3_tech_01#L4",
+    "conv_negotiation_01#L3",
+    "conv_restaurant_01#L4",
+    "conv_shopping_01#L3",
+    "conv_transport_02#L4",
+    "conv_travel_02#L2",
+    "conv_travel_02#L5"
+  ],
+  "hsk4_好": [
+    "conv_complaint_01#L6",
+    "conv_daily_02#L1",
+    "conv_daily_02#L5",
+    "conv_daily_03#L0",
+    "conv_education_01#L5",
+    "conv_greeting_04#L4",
+    "conv_health_01#L0",
+    "conv_health_01#L6",
+    "conv_hsk2_appointment_01#L1",
+    "conv_hsk2_bank_01#L1",
+    "conv_hsk2_bank_01#L4",
+    "conv_hsk2_sport_01#L3",
+    "conv_hsk2_sport_01#L5",
+    "conv_hsk3_apartment_repair_01#L4",
+    "conv_hsk3_bank_02#L0",
+    "conv_hsk3_bank_02#L4",
+    "conv_hsk3_clinic_appointment_01#L0",
+    "conv_hsk3_clinic_appointment_01#L4",
+    "conv_hsk3_family_decision_01#L1",
+    "conv_hsk3_movie_01#L1",
+    "conv_hsk3_movie_01#L4",
+    "conv_hsk3_rent_01#L0",
+    "conv_hsk3_rent_01#L4",
+    "conv_hsk3_return_item_01#L4",
+    "conv_hsk3_service_complaint_01#L0",
+    "conv_hsk3_service_complaint_01#L4",
+    "conv_hsk3_tech_01#L4",
+    "conv_hsk3_work_meeting_01#L1",
+    "conv_hsk3_work_meeting_01#L4",
+    "conv_hsk4_emergency_01#L3",
+    "conv_hsk4_scholarship_01#L4",
+    "conv_negotiation_01#L4",
+    "conv_negotiation_01#L6",
+    "conv_phone_01#L4",
+    "conv_restaurant_01#L1",
+    "conv_restaurant_02#L4",
+    "conv_school_01#L1",
+    "conv_school_01#L2",
+    "conv_school_02#L1",
+    "conv_school_02#L3",
+    "conv_shopping_01#L4",
+    "conv_shopping_02#L5",
+    "conv_shopping_03#L4",
+    "conv_shopping_03#L5",
+    "conv_social_hsk4_01#L5",
+    "conv_transport_02#L5",
+    "conv_travel_01#L2",
+    "conv_travel_01#L5",
+    "conv_travel_02#L3",
+    "conv_travel_03#L1",
+    "conv_travel_03#L4",
+    "conv_travel_03#L7",
+    "conv_workplace_02#L1",
+    "conv_workplace_04#L1"
+  ],
+  "hsk4_要": [
+    "conv_greeting_04#L2",
+    "conv_hsk2_lost_01#L4",
+    "conv_hsk3_rent_01#L2",
+    "conv_hsk3_tech_01#L2",
+    "conv_hsk3_tech_01#L3",
+    "conv_hsk3_work_meeting_01#L2",
+    "conv_hsk4_media_01#L5",
+    "conv_restaurant_01#L2",
+    "conv_restaurant_01#L3",
+    "conv_restaurant_02#L4",
+    "conv_shopping_01#L4",
+    "conv_shopping_02#L1",
+    "conv_shopping_03#L4",
+    "conv_social_hsk4_01#L6",
+    "conv_transport_02#L0",
+    "conv_transport_02#L1",
+    "conv_transport_02#L3",
+    "conv_travel_02#L3",
+    "conv_travel_03#L4"
+  ],
+  "hsk1_给": [
+    "conv_complaint_01#L1",
+    "conv_greeting_04#L5",
+    "conv_health_01#L3",
+    "conv_hsk2_bank_01#L1",
+    "conv_hsk2_bank_01#L2",
+    "conv_hsk3_family_decision_01#L4",
+    "conv_hsk3_trip_delay_01#L1",
+    "conv_hsk4_emergency_01#L5",
+    "conv_negotiation_01#L1",
+    "conv_restaurant_01#L0",
+    "conv_shopping_01#L4",
+    "conv_shopping_03#L4",
+    "conv_transport_02#L5",
+    "conv_travel_01#L2",
+    "conv_travel_03#L5",
+    "conv_workplace_04#L5"
+  ],
+  "hsk1_谢谢": [
+    "conv_education_01#L6",
+    "conv_greeting_04#L2",
+    "conv_hsk3_return_item_01#L4",
+    "conv_hsk3_service_complaint_01#L4",
+    "conv_phone_01#L4",
+    "conv_school_02#L4",
+    "conv_shopping_01#L5",
+    "conv_travel_01#L5",
+    "conv_workplace_04#L6"
+  ],
+  "hsk3_欢迎": [
+    "conv_negotiation_01#L1",
+    "conv_shopping_01#L5"
+  ],
+  "hsk1_下次": [
+    "conv_greeting_04#L3",
+    "conv_greeting_04#L4",
+    "conv_shopping_01#L5"
+  ],
+  "hsk1_再": [
+    "conv_greeting_04#L1",
+    "conv_greeting_04#L3",
+    "conv_health_01#L6",
+    "conv_hsk3_trip_delay_01#L2",
+    "conv_hsk3_work_meeting_01#L3",
+    "conv_negotiation_01#L2",
+    "conv_phone_01#L3",
+    "conv_phone_01#L4",
+    "conv_shopping_01#L5",
+    "conv_social_hsk4_01#L1",
+    "conv_workplace_04#L4"
+  ],
+  "hsk1_来": [
+    "conv_environment_01#L2",
+    "conv_greeting_04#L3",
+    "conv_health_01#L6",
+    "conv_hsk2_appointment_01#L1",
+    "conv_hsk3_clinic_appointment_01#L3",
+    "conv_hsk3_movie_01#L4",
+    "conv_hsk3_movie_01#L5",
+    "conv_hsk3_service_complaint_01#L1",
+    "conv_hsk4_emergency_01#L0",
+    "conv_phone_01#L3",
+    "conv_phone_01#L4",
+    "conv_restaurant_01#L4",
+    "conv_shopping_01#L5",
+    "conv_shopping_03#L4",
+    "conv_travel_02#L5",
+    "conv_workplace_01#L0",
+    "conv_workplace_02#L2",
+    "conv_workplace_04#L0",
+    "conv_workplace_04#L5"
+  ],
+  "hsk1_请问": [
+    "conv_complaint_01#L1",
+    "conv_hsk2_appointment_01#L3",
+    "conv_hsk2_lost_01#L0",
+    "conv_hsk3_clinic_appointment_01#L1",
+    "conv_phone_01#L0",
+    "conv_shopping_02#L0",
+    "conv_shopping_03#L0",
+    "conv_transport_01#L0",
+    "conv_travel_03#L1",
+    "conv_travel_03#L2",
+    "conv_travel_03#L4"
+  ],
+  "hsk2_红色": [
+    "conv_shopping_02#L0"
+  ],
+  "hsk3_裙子": [
+    "conv_shopping_02#L0",
+    "conv_shopping_02#L4"
+  ],
+  "hsk1_号": [
+    "conv_complaint_01#L1",
+    "conv_complaint_01#L2",
+    "conv_daily_03#L3",
+    "conv_hsk4_media_01#L1",
+    "conv_shopping_02#L1",
+    "conv_shopping_02#L2",
+    "conv_travel_01#L6",
+    "conv_travel_03#L6"
+  ],
+  "hsk1_中": [
+    "conv_hsk4_debate_01#L3",
+    "conv_hsk4_emergency_01#L2",
+    "conv_hsk4_scholarship_01#L5",
+    "conv_shopping_02#L2"
+  ],
+  "hsk1_试": [
+    "conv_hsk3_return_item_01#L2",
+    "conv_hsk3_study_plan_01#L3",
+    "conv_shopping_02#L2",
+    "conv_shopping_02#L3"
+  ],
+  "hsk3_当然": [
+    "conv_education_01#L1",
+    "conv_environment_01#L1",
+    "conv_hsk3_rent_01#L5",
+    "conv_hsk4_debate_01#L1",
+    "conv_shopping_02#L3"
+  ],
+  "hsk1_间": [
+    "conv_shopping_02#L3",
+    "conv_travel_03#L0"
+  ],
+  "hsk1_那边": [
+    "conv_shopping_02#L3"
+  ],
+  "hsk2_条": [
+    "conv_shopping_02#L4"
+  ],
+  "hsk2_漂亮": [
+    "conv_shopping_02#L4"
+  ],
+  "hsk1_买": [
+    "conv_environment_01#L4",
+    "conv_hsk3_movie_01#L4",
+    "conv_hsk3_return_item_01#L0",
+    "conv_shopping_02#L4",
+    "conv_transport_02#L0"
+  ],
+  "hsk1_一": [
+    "conv_complaint_01#L0",
+    "conv_complaint_01#L2",
+    "conv_complaint_01#L3",
+    "conv_daily_01#L6",
+    "conv_education_01#L0",
+    "conv_environment_01#L3",
+    "conv_health_01#L3",
+    "conv_hsk2_bank_01#L3",
+    "conv_hsk2_bank_01#L5",
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_apartment_repair_01#L3",
+    "conv_hsk3_bank_02#L0",
+    "conv_hsk3_bank_02#L5",
+    "conv_hsk3_rent_01#L1",
+    "conv_hsk3_rent_01#L3",
+    "conv_hsk3_return_item_01#L2",
+    "conv_hsk3_return_item_01#L3",
+    "conv_hsk3_service_complaint_01#L0",
+    "conv_hsk3_study_plan_01#L1",
+    "conv_hsk3_tech_01#L1",
+    "conv_hsk4_emergency_01#L2",
+    "conv_hsk4_emergency_01#L4",
+    "conv_hsk4_scholarship_01#L0",
+    "conv_negotiation_01#L2",
+    "conv_negotiation_01#L3",
+    "conv_negotiation_01#L4",
+    "conv_negotiation_01#L5",
+    "conv_phone_01#L2",
+    "conv_restaurant_01#L2",
+    "conv_restaurant_01#L4",
+    "conv_restaurant_02#L4",
+    "conv_school_01#L1",
+    "conv_shopping_02#L5",
+    "conv_shopping_03#L2",
+    "conv_shopping_03#L3",
+    "conv_shopping_03#L4",
+    "conv_transport_02#L0",
+    "conv_transport_02#L3",
+    "conv_travel_01#L0",
+    "conv_travel_01#L4",
+    "conv_travel_03#L0",
+    "conv_travel_03#L6",
+    "conv_workplace_01#L3",
+    "conv_workplace_02#L0",
+    "conv_workplace_04#L0",
+    "conv_workplace_04#L5"
+  ],
+  "hsk3_百": [
+    "conv_hsk2_bank_01#L0",
+    "conv_hsk2_bank_01#L3",
+    "conv_hsk2_bank_01#L4",
+    "conv_hsk2_lost_01#L3",
+    "conv_hsk3_tech_01#L3",
+    "conv_negotiation_01#L5",
+    "conv_shopping_02#L5",
+    "conv_transport_02#L5",
+    "conv_travel_03#L3",
+    "conv_workplace_04#L2"
+  ],
+  "hsk4_微信": [
+    "conv_hsk3_bank_02#L3",
+    "conv_hsk4_media_01#L1",
+    "conv_shopping_02#L5"
+  ],
+  "hsk3_支付": [
+    "conv_hsk3_bank_02#L3",
+    "conv_shopping_02#L5"
+  ],
+  "hsk3_服务": [
+    "conv_complaint_01#L6",
+    "conv_hsk3_service_complaint_01#L0",
+    "conv_negotiation_01#L4",
+    "conv_negotiation_01#L5",
+    "conv_restaurant_01#L0"
+  ],
+  "hsk3_员": [
+    "conv_restaurant_01#L0"
+  ],
+  "hsk1_请": [
+    "conv_hsk2_bank_01#L1",
+    "conv_hsk2_bank_01#L5",
+    "conv_hsk3_apartment_repair_01#L4",
+    "conv_hsk3_bank_02#L5",
+    "conv_hsk3_movie_01#L5",
+    "conv_hsk3_service_complaint_01#L1",
+    "conv_hsk4_emergency_01#L0",
+    "conv_hsk4_emergency_01#L1",
+    "conv_hsk4_emergency_01#L5",
+    "conv_hsk4_scholarship_01#L0",
+    "conv_restaurant_01#L0",
+    "conv_restaurant_01#L5",
+    "conv_transport_02#L5",
+    "conv_travel_01#L1",
+    "conv_travel_03#L5"
+  ],
+  "hsk3_菜单": [
+    "conv_restaurant_01#L0",
+    "conv_restaurant_01#L1"
+  ],
+  "hsk1_想": [
+    "conv_complaint_01#L0",
+    "conv_education_01#L0",
+    "conv_education_01#L1",
+    "conv_hsk2_appointment_01#L0",
+    "conv_hsk2_appointment_01#L1",
+    "conv_hsk2_bank_01#L0",
+    "conv_hsk2_sport_01#L2",
+    "conv_hsk3_bank_02#L0",
+    "conv_hsk3_clinic_appointment_01#L0",
+    "conv_hsk3_movie_01#L1",
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk3_service_complaint_01#L0",
+    "conv_hsk4_scholarship_01#L0",
+    "conv_negotiation_01#L0",
+    "conv_phone_01#L2",
+    "conv_restaurant_01#L1",
+    "conv_social_hsk4_01#L1",
+    "conv_social_hsk4_01#L3",
+    "conv_travel_03#L0",
+    "conv_workplace_01#L0"
+  ],
+  "hsk1_吃": [
+    "conv_daily_01#L2",
+    "conv_health_01#L4",
+    "conv_hsk3_movie_01#L5",
+    "conv_restaurant_01#L1",
+    "conv_restaurant_02#L2"
+  ],
+  "hsk3_保": [
+    "conv_hsk3_tech_01#L2",
+    "conv_hsk3_tech_01#L3",
+    "conv_hsk3_tech_01#L4",
+    "conv_negotiation_01#L4",
+    "conv_negotiation_01#L5",
+    "conv_restaurant_01#L2"
+  ],
+  "hsk2_鸡": [
+    "conv_restaurant_01#L2"
+  ],
+  "hsk2_碗": [
+    "conv_restaurant_01#L2"
+  ],
+  "hsk1_米饭": [
+    "conv_restaurant_01#L2"
+  ],
+  "hsk2_不要": [
+    "conv_hsk4_emergency_01#L5",
+    "conv_restaurant_01#L3"
+  ],
+  "hsk1_喝": [
+    "conv_daily_03#L5",
+    "conv_health_01#L5",
+    "conv_hsk3_apartment_repair_01#L4",
+    "conv_hsk4_emergency_01#L5",
+    "conv_restaurant_01#L3"
+  ],
+  "hsk1_茶": [
+    "conv_hsk3_apartment_repair_01#L4",
+    "conv_restaurant_01#L3",
+    "conv_restaurant_01#L4"
+  ],
+  "hsk3_果汁": [
+    "conv_restaurant_01#L3"
+  ],
+  "hsk1_杯": [
+    "conv_restaurant_01#L4"
+  ],
+  "hsk2_一共": [
+    "conv_restaurant_01#L4",
+    "conv_restaurant_01#L5",
+    "conv_shopping_03#L5"
+  ],
+  "hsk3_等": [
+    "conv_complaint_01#L2",
+    "conv_complaint_01#L4",
+    "conv_daily_03#L3",
+    "conv_restaurant_01#L5"
+  ],
+  "hsk1_菜": [
+    "conv_restaurant_02#L0",
+    "conv_restaurant_02#L2"
+  ],
+  "hsk2_怎么样": [
+    "conv_daily_02#L0",
+    "conv_daily_02#L5",
+    "conv_hsk3_movie_01#L0",
+    "conv_hsk3_movie_01#L5",
+    "conv_hsk3_study_plan_01#L0",
+    "conv_restaurant_02#L0",
+    "conv_workplace_01#L4"
+  ],
+  "hsk1_好吃": [
+    "conv_restaurant_02#L1",
+    "conv_restaurant_02#L3"
+  ],
+  "hsk2_但是": [
+    "conv_hsk3_return_item_01#L0",
+    "conv_hsk3_study_plan_01#L1",
+    "conv_hsk3_work_meeting_01#L2",
+    "conv_restaurant_02#L1",
+    "conv_school_01#L1",
+    "conv_school_01#L4"
+  ],
+  "hsk1_点": [
+    "conv_daily_01#L0",
+    "conv_daily_01#L1",
+    "conv_daily_01#L2",
+    "conv_daily_01#L6",
+    "conv_daily_02#L5",
+    "conv_daily_03#L1",
+    "conv_health_01#L3",
+    "conv_hsk2_appointment_01#L1",
+    "conv_hsk2_appointment_01#L2",
+    "conv_hsk2_appointment_01#L5",
+    "conv_hsk2_sport_01#L5",
+    "conv_hsk3_clinic_appointment_01#L2",
+    "conv_hsk3_clinic_appointment_01#L3",
+    "conv_hsk3_family_decision_01#L4",
+    "conv_hsk3_rent_01#L5",
+    "conv_hsk3_return_item_01#L0",
+    "conv_hsk3_work_meeting_01#L0",
+    "conv_negotiation_01#L2",
+    "conv_phone_01#L3",
+    "conv_phone_01#L4",
+    "conv_restaurant_02#L1",
+    "conv_transport_02#L1",
+    "conv_transport_02#L3",
+    "conv_transport_02#L4",
+    "conv_travel_01#L3",
+    "conv_travel_01#L4"
+  ],
+  "hsk4_辣": [
+    "conv_restaurant_02#L1",
+    "conv_restaurant_02#L2",
+    "conv_restaurant_02#L3"
+  ],
+  "hsk2_不太": [
+    "conv_daily_02#L1",
+    "conv_daily_03#L0",
+    "conv_restaurant_02#L2",
+    "conv_school_01#L1",
+    "conv_school_01#L4",
+    "conv_transport_01#L3"
+  ],
+  "hsk1_能": [
+    "conv_complaint_01#L6",
+    "conv_environment_01#L2",
+    "conv_environment_01#L5",
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_service_complaint_01#L4",
+    "conv_hsk3_tech_01#L0",
+    "conv_hsk3_tech_01#L4",
+    "conv_hsk4_scholarship_01#L5",
+    "conv_restaurant_02#L2",
+    "conv_workplace_01#L5",
+    "conv_workplace_04#L4",
+    "conv_workplace_04#L6"
+  ],
+  "hsk1_没有": [
+    "conv_environment_01#L0",
+    "conv_health_01#L6",
+    "conv_hsk3_return_item_01#L1",
+    "conv_hsk3_return_item_01#L2",
+    "conv_hsk4_emergency_01#L3",
+    "conv_hsk4_emergency_01#L4",
+    "conv_hsk4_scholarship_01#L2",
+    "conv_restaurant_02#L2",
+    "conv_social_hsk4_01#L0",
+    "conv_social_hsk4_01#L4"
+  ],
+  "hsk1_不": [
+    "conv_complaint_01#L1",
+    "conv_complaint_01#L4",
+    "conv_education_01#L2",
+    "conv_environment_01#L3",
+    "conv_greeting_04#L0",
+    "conv_greeting_04#L2",
+    "conv_health_01#L0",
+    "conv_hsk2_lost_01#L5",
+    "conv_hsk3_apartment_repair_01#L2",
+    "conv_hsk3_bank_02#L5",
+    "conv_hsk3_clinic_appointment_01#L1",
+    "conv_hsk3_rent_01#L3",
+    "conv_hsk3_tech_01#L3",
+    "conv_hsk3_tech_01#L5",
+    "conv_hsk3_trip_delay_01#L0",
+    "conv_hsk3_work_meeting_01#L2",
+    "conv_hsk4_debate_01#L4",
+    "conv_phone_01#L1",
+    "conv_restaurant_02#L2",
+    "conv_restaurant_02#L3",
+    "conv_social_hsk4_01#L4",
+    "conv_transport_01#L2",
+    "conv_travel_03#L3",
+    "conv_workplace_04#L4"
+  ],
+  "hsk3_糖": [
+    "conv_restaurant_02#L3",
+    "conv_restaurant_02#L4"
+  ],
+  "hsk3_排": [
+    "conv_restaurant_02#L3",
+    "conv_restaurant_02#L4"
+  ],
+  "hsk2_份": [
+    "conv_restaurant_02#L4"
+  ],
+  "hsk2_火车站": [
+    "conv_transport_01#L0"
+  ],
+  "hsk1_怎么": [
+    "conv_daily_03#L0",
+    "conv_daily_03#L4",
+    "conv_hsk2_lost_01#L0",
+    "conv_hsk2_sport_01#L1",
+    "conv_hsk4_debate_01#L4",
+    "conv_school_02#L0",
+    "conv_transport_01#L0"
+  ],
+  "hsk1_走": [
+    "conv_greeting_04#L0",
+    "conv_hsk2_lost_01#L0",
+    "conv_hsk2_lost_01#L1",
+    "conv_hsk2_lost_01#L3",
+    "conv_hsk2_lost_01#L5",
+    "conv_transport_01#L0",
+    "conv_transport_01#L1"
+  ],
+  "hsk2_往": [
+    "conv_hsk2_lost_01#L1",
+    "conv_hsk2_lost_01#L3",
+    "conv_transport_01#L1"
+  ],
+  "hsk1_前": [
+    "conv_hsk2_lost_01#L1",
+    "conv_hsk2_lost_01#L3",
+    "conv_transport_01#L1"
+  ],
+  "hsk2_然后": [
+    "conv_daily_01#L2",
+    "conv_social_hsk4_01#L1",
+    "conv_transport_01#L1"
+  ],
+  "hsk1_左": [
+    "conv_hsk2_lost_01#L1",
+    "conv_hsk2_lost_01#L2",
+    "conv_transport_01#L1"
+  ],
+  "hsk3_转": [
+    "conv_health_01#L6",
+    "conv_hsk2_lost_01#L1",
+    "conv_hsk2_lost_01#L2",
+    "conv_transport_01#L1"
+  ],
+  "hsk1_远": [
+    "conv_hsk2_lost_01#L5",
+    "conv_hsk2_sport_01#L3",
+    "conv_social_hsk4_01#L4",
+    "conv_transport_01#L2",
+    "conv_transport_01#L3"
+  ],
+  "hsk1_走路": [
+    "conv_hsk2_lost_01#L4",
+    "conv_hsk2_sport_01#L4",
+    "conv_transport_01#L3"
+  ],
+  "hsk2_十分": [
+    "conv_hsk2_appointment_01#L5",
+    "conv_hsk4_emergency_01#L5",
+    "conv_transport_01#L3"
+  ],
+  "hsk3_钟": [
+    "conv_hsk2_appointment_01#L5",
+    "conv_hsk4_emergency_01#L5",
+    "conv_transport_01#L3"
+  ],
+  "hsk1_坐": [
+    "conv_environment_01#L3",
+    "conv_greeting_04#L1",
+    "conv_transport_01#L4",
+    "conv_transport_01#L5"
+  ],
+  "hsk2_公共汽车": [
+    "conv_transport_01#L4",
+    "conv_transport_01#L5"
+  ],
+  "hsk2_路": [
+    "conv_transport_01#L5"
+  ],
+  "hsk1_三": [
+    "conv_hsk2_appointment_01#L5",
+    "conv_hsk3_rent_01#L1",
+    "conv_hsk3_rent_01#L3",
+    "conv_hsk3_tech_01#L3",
+    "conv_hsk3_work_meeting_01#L0",
+    "conv_negotiation_01#L3",
+    "conv_negotiation_01#L4",
+    "conv_phone_01#L3",
+    "conv_phone_01#L4",
+    "conv_school_02#L1",
+    "conv_shopping_03#L5",
+    "conv_social_hsk4_01#L1",
+    "conv_transport_01#L5",
+    "conv_travel_01#L3",
+    "conv_travel_03#L6"
+  ],
+  "hsk2_站": [
+    "conv_transport_01#L5"
+  ],
+  "hsk2_就": [
+    "conv_complaint_01#L6",
+    "conv_environment_01#L5",
+    "conv_hsk2_lost_01#L3",
+    "conv_hsk2_sport_01#L4",
+    "conv_hsk3_bank_02#L4",
+    "conv_hsk3_family_decision_01#L3",
+    "conv_hsk3_return_item_01#L1",
+    "conv_hsk3_return_item_01#L4",
+    "conv_hsk3_service_complaint_01#L4",
+    "conv_hsk3_study_plan_01#L0",
+    "conv_hsk3_study_plan_01#L3",
+    "conv_school_01#L2",
+    "conv_social_hsk4_01#L5",
+    "conv_transport_01#L5",
+    "conv_travel_03#L2"
+  ],
+  "hsk1_到": [
+    "conv_complaint_01#L0",
+    "conv_greeting_04#L5",
+    "conv_hsk2_lost_01#L1",
+    "conv_hsk2_sport_01#L4",
+    "conv_hsk4_debate_01#L3",
+    "conv_negotiation_01#L1",
+    "conv_transport_01#L5",
+    "conv_travel_01#L3",
+    "conv_travel_01#L4",
+    "conv_travel_02#L2",
+    "conv_travel_03#L0"
+  ],
+  "hsk3_张": [
+    "conv_hsk2_bank_01#L5",
+    "conv_transport_02#L0",
+    "conv_travel_02#L5"
+  ],
+  "hsk1_去": [
+    "conv_daily_01#L4",
+    "conv_daily_02#L4",
+    "conv_daily_03#L2",
+    "conv_hsk2_sport_01#L2",
+    "conv_hsk2_sport_01#L3",
+    "conv_hsk2_sport_01#L5",
+    "conv_hsk3_family_decision_01#L0",
+    "conv_hsk3_family_decision_01#L3",
+    "conv_hsk3_movie_01#L0",
+    "conv_hsk3_rent_01#L4",
+    "conv_hsk3_trip_delay_01#L2",
+    "conv_hsk4_scholarship_01#L3",
+    "conv_social_hsk4_01#L1",
+    "conv_social_hsk4_01#L3",
+    "conv_transport_02#L0"
+  ],
+  "hsk1_北京": [
+    "conv_education_01#L2",
+    "conv_hsk4_scholarship_01#L3",
+    "conv_transport_02#L0"
+  ],
+  "hsk1_火车": [
+    "conv_hsk3_trip_delay_01#L0",
+    "conv_transport_02#L0"
+  ],
+  "hsk2_票": [
+    "conv_hsk3_movie_01#L4",
+    "conv_hsk3_movie_01#L5",
+    "conv_transport_02#L0",
+    "conv_transport_02#L5"
+  ],
+  "hsk4_高铁": [
+    "conv_transport_02#L1",
+    "conv_transport_02#L2"
+  ],
+  "hsk2_还是": [
+    "conv_education_01#L2",
+    "conv_hsk3_movie_01#L4",
+    "conv_hsk3_study_plan_01#L1",
+    "conv_negotiation_01#L2",
+    "conv_transport_02#L1",
+    "conv_travel_03#L1"
+  ],
+  "hsk2_普通": [
+    "conv_environment_01#L2",
+    "conv_transport_02#L1"
+  ],
+  "hsk4_列车": [
+    "conv_transport_02#L1"
+  ],
+  "hsk1_上午": [
+    "conv_complaint_01#L5",
+    "conv_daily_01#L3",
+    "conv_daily_01#L4",
+    "conv_hsk3_clinic_appointment_01#L0",
+    "conv_hsk3_rent_01#L5",
+    "conv_transport_02#L2",
+    "conv_transport_02#L3"
+  ],
+  "hsk1_九": [
+    "conv_transport_02#L3",
+    "conv_transport_02#L4",
+    "conv_travel_01#L4"
+  ],
+  "hsk2_两": [
+    "conv_daily_02#L5",
+    "conv_health_01#L2",
+    "conv_hsk2_appointment_01#L2",
+    "conv_hsk2_appointment_01#L5",
+    "conv_hsk2_bank_01#L4",
+    "conv_hsk2_lost_01#L3",
+    "conv_hsk3_tech_01#L5",
+    "conv_hsk4_scholarship_01#L3",
+    "conv_hsk4_scholarship_01#L5",
+    "conv_negotiation_01#L1",
+    "conv_negotiation_01#L2",
+    "conv_negotiation_01#L3",
+    "conv_negotiation_01#L4",
+    "conv_shopping_03#L4",
+    "conv_social_hsk4_01#L1",
+    "conv_transport_02#L3",
+    "conv_travel_02#L1",
+    "conv_travel_03#L0",
+    "conv_travel_03#L4",
+    "conv_workplace_01#L3",
+    "conv_workplace_04#L4"
+  ],
+  "hsk2_班": [
+    "conv_transport_02#L3"
+  ],
+  "hsk2_拿": [
+    "conv_transport_02#L5"
+  ],
+  "hsk3_每": [
+    "conv_daily_01#L0",
+    "conv_daily_01#L1",
+    "conv_environment_01#L1",
+    "conv_health_01#L5",
+    "conv_hsk3_rent_01#L1",
+    "conv_hsk3_study_plan_01#L1",
+    "conv_school_01#L5",
+    "conv_travel_03#L3"
+  ],
+  "hsk1_天": [
+    "conv_daily_01#L0",
+    "conv_daily_01#L1",
+    "conv_daily_02#L3",
+    "conv_health_01#L5",
+    "conv_hsk3_study_plan_01#L1",
+    "conv_school_01#L5",
+    "conv_travel_01#L2",
+    "conv_travel_01#L3",
+    "conv_travel_03#L3"
+  ],
+  "hsk2_起床": [
+    "conv_daily_01#L0",
+    "conv_daily_01#L1",
+    "conv_daily_01#L2"
+  ],
+  "hsk1_七": [
+    "conv_daily_01#L1",
+    "conv_hsk2_bank_01#L3",
+    "conv_travel_01#L4",
+    "conv_travel_03#L6",
+    "conv_workplace_04#L2"
+  ],
+  "hsk1_六": [
+    "conv_daily_01#L2",
+    "conv_hsk2_lost_01#L5",
+    "conv_travel_03#L3",
+    "conv_travel_03#L6"
+  ],
+  "hsk2_半": [
+    "conv_daily_01#L2"
+  ],
+  "hsk1_早饭": [
+    "conv_daily_01#L2"
+  ],
+  "hsk1_上课": [
+    "conv_daily_01#L4"
+  ],
+  "hsk1_下午": [
+    "conv_daily_01#L4",
+    "conv_daily_02#L5",
+    "conv_hsk2_appointment_01#L2",
+    "conv_hsk2_sport_01#L0",
+    "conv_hsk3_trip_delay_01#L0",
+    "conv_hsk3_work_meeting_01#L0"
+  ],
+  "hsk2_图书馆": [
+    "conv_daily_01#L4"
+  ],
+  "hsk1_看": [
+    "conv_daily_01#L4",
+    "conv_daily_03#L2",
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_clinic_appointment_01#L0",
+    "conv_hsk3_family_decision_01#L0",
+    "conv_hsk3_movie_01#L0",
+    "conv_hsk3_movie_01#L1",
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk3_movie_01#L4",
+    "conv_hsk3_rent_01#L4",
+    "conv_hsk3_tech_01#L1",
+    "conv_hsk4_media_01#L1",
+    "conv_hsk4_media_01#L2",
+    "conv_hsk4_media_01#L5",
+    "conv_travel_02#L2"
+  ],
+  "hsk1_书": [
+    "conv_daily_01#L4"
+  ],
+  "hsk2_晚上": [
+    "conv_daily_01#L5",
+    "conv_daily_01#L6",
+    "conv_hsk3_family_decision_01#L2"
+  ],
+  "hsk2_作业": [
+    "conv_daily_01#L6",
+    "conv_hsk3_family_decision_01#L1",
+    "conv_hsk3_family_decision_01#L2",
+    "conv_phone_01#L2"
+  ],
+  "hsk1_睡觉": [
+    "conv_daily_01#L6"
+  ],
+  "hsk1_今天": [
+    "conv_daily_02#L0",
+    "conv_daily_02#L1",
+    "conv_daily_02#L4",
+    "conv_greeting_04#L2",
+    "conv_hsk2_bank_01#L3",
+    "conv_hsk2_sport_01#L0",
+    "conv_hsk3_apartment_repair_01#L2",
+    "conv_hsk3_family_decision_01#L2",
+    "conv_hsk3_service_complaint_01#L4",
+    "conv_hsk3_study_plan_01#L3",
+    "conv_hsk3_trip_delay_01#L3",
+    "conv_workplace_02#L0"
+  ],
+  "hsk1_天气": [
+    "conv_daily_02#L0",
+    "conv_daily_02#L1",
+    "conv_daily_02#L3"
+  ],
+  "hsk2_晴": [
+    "conv_daily_02#L1"
+  ],
+  "hsk1_热": [
+    "conv_daily_02#L1"
+  ],
+  "hsk1_明天": [
+    "conv_complaint_01#L5",
+    "conv_complaint_01#L6",
+    "conv_daily_02#L2",
+    "conv_greeting_04#L2",
+    "conv_hsk2_appointment_01#L0",
+    "conv_hsk2_appointment_01#L5",
+    "conv_hsk3_clinic_appointment_01#L0",
+    "conv_hsk3_family_decision_01#L3",
+    "conv_hsk3_rent_01#L5",
+    "conv_hsk3_trip_delay_01#L2"
+  ],
+  "hsk2_会": [
+    "conv_complaint_01#L5",
+    "conv_daily_02#L2",
+    "conv_education_01#L6",
+    "conv_health_01#L6",
+    "conv_hsk3_study_plan_01#L4",
+    "conv_hsk3_tech_01#L5",
+    "conv_hsk3_work_meeting_01#L3",
+    "conv_negotiation_01#L1",
+    "conv_negotiation_01#L3",
+    "conv_negotiation_01#L6",
+    "conv_school_01#L2",
+    "conv_social_hsk4_01#L5",
+    "conv_travel_02#L4",
+    "conv_workplace_04#L4"
+  ],
+  "hsk1_下雨": [
+    "conv_daily_02#L2",
+    "conv_hsk3_family_decision_01#L3"
+  ],
+  "hsk3_预报": [
+    "conv_daily_02#L3"
+  ],
+  "hsk3_说明": [
+    "conv_daily_02#L3"
+  ],
+  "hsk2_小": [
+    "conv_daily_02#L3",
+    "conv_hsk3_return_item_01#L0"
+  ],
+  "hsk1_雨": [
+    "conv_daily_02#L3"
+  ],
+  "hsk2_公园": [
+    "conv_daily_02#L4"
+  ],
+  "hsk3_主意": [
+    "conv_daily_02#L5",
+    "conv_hsk3_movie_01#L1"
+  ],
+  "hsk1_学": [
+    "conv_hsk4_scholarship_01#L4",
+    "conv_school_01#L0",
+    "conv_school_01#L1",
+    "conv_school_01#L3"
+  ],
+  "hsk2_长": [
+    "conv_hsk2_appointment_01#L4",
+    "conv_hsk2_bank_01#L4",
+    "conv_hsk2_lost_01#L4",
+    "conv_school_01#L0"
+  ],
+  "hsk2_时间": [
+    "conv_greeting_04#L0",
+    "conv_health_01#L5",
+    "conv_hsk2_appointment_01#L4",
+    "conv_hsk2_bank_01#L4",
+    "conv_hsk2_lost_01#L4",
+    "conv_hsk2_sport_01#L0",
+    "conv_hsk3_work_meeting_01#L2",
+    "conv_school_01#L0"
+  ],
+  "hsk2_中文": [
+    "conv_hsk4_scholarship_01#L1",
+    "conv_school_01#L0",
+    "conv_school_01#L3",
+    "conv_workplace_01#L4"
+  ],
+  "hsk1_年": [
+    "conv_negotiation_01#L4",
+    "conv_negotiation_01#L5",
+    "conv_school_01#L1",
+    "conv_social_hsk4_01#L1",
+    "conv_workplace_01#L3"
+  ],
+  "hsk1_说": [
+    "conv_complaint_01#L5",
+    "conv_daily_03#L4",
+    "conv_daily_03#L5",
+    "conv_environment_01#L2",
+    "conv_environment_01#L4",
+    "conv_hsk3_rent_01#L0",
+    "conv_hsk3_service_complaint_01#L1",
+    "conv_hsk4_debate_01#L5",
+    "conv_school_01#L1",
+    "conv_social_hsk4_01#L5",
+    "conv_workplace_02#L2"
+  ],
+  "hsk4_得": [
+    "conv_complaint_01#L5",
+    "conv_environment_01#L1",
+    "conv_environment_01#L4",
+    "conv_hsk3_study_plan_01#L0",
+    "conv_hsk4_debate_01#L5",
+    "conv_hsk4_emergency_01#L5",
+    "conv_school_01#L1",
+    "conv_social_hsk4_01#L5"
+  ],
+  "hsk1_还": [
+    "conv_complaint_01#L0",
+    "conv_education_01#L4",
+    "conv_greeting_04#L2",
+    "conv_hsk3_apartment_repair_01#L2",
+    "conv_hsk3_rent_01#L0",
+    "conv_hsk3_rent_01#L1",
+    "conv_hsk3_tech_01#L2",
+    "conv_hsk4_emergency_01#L3",
+    "conv_hsk4_emergency_01#L4",
+    "conv_negotiation_01#L5",
+    "conv_negotiation_01#L6",
+    "conv_school_01#L1",
+    "conv_shopping_03#L4"
+  ],
+  "hsk1_没关系": [
+    "conv_hsk3_trip_delay_01#L4",
+    "conv_school_01#L2"
+  ],
+  "hsk2_练习": [
+    "conv_hsk3_study_plan_01#L4",
+    "conv_school_01#L2",
+    "conv_school_01#L5"
+  ],
+  "hsk2_觉得": [
+    "conv_environment_01#L0",
+    "conv_hsk4_debate_01#L0",
+    "conv_school_01#L3",
+    "conv_school_01#L4",
+    "conv_workplace_02#L1"
+  ],
+  "hsk2_最": [
+    "conv_hsk3_bank_02#L4",
+    "conv_hsk3_bank_02#L5",
+    "conv_hsk4_debate_01#L5",
+    "conv_school_01#L3",
+    "conv_workplace_04#L4"
+  ],
+  "hsk2_难": [
+    "conv_hsk3_study_plan_01#L1",
+    "conv_hsk4_media_01#L4",
+    "conv_school_01#L3",
+    "conv_school_01#L4"
+  ],
+  "hsk1_汉字": [
+    "conv_school_01#L4",
+    "conv_school_01#L5"
+  ],
+  "hsk1_写": [
+    "conv_hsk3_work_meeting_01#L4",
+    "conv_school_01#L4",
+    "conv_school_01#L5"
+  ],
+  "hsk4_语法": [
+    "conv_school_01#L4"
+  ],
+  "hsk2_对": [
+    "conv_complaint_01#L5",
+    "conv_education_01#L2",
+    "conv_environment_01#L4",
+    "conv_hsk3_trip_delay_01#L3",
+    "conv_hsk4_debate_01#L0",
+    "conv_hsk4_debate_01#L2",
+    "conv_hsk4_emergency_01#L5",
+    "conv_hsk4_scholarship_01#L1",
+    "conv_school_01#L5"
+  ],
+  "hsk1_都": [
+    "conv_complaint_01#L4",
+    "conv_education_01#L5",
+    "conv_environment_01#L1",
+    "conv_environment_01#L3",
+    "conv_environment_01#L4",
+    "conv_hsk3_bank_02#L2",
+    "conv_hsk4_media_01#L5",
+    "conv_school_01#L5",
+    "conv_travel_03#L4"
+  ],
+  "hsk1_字": [
+    "conv_school_02#L0",
+    "conv_school_02#L1"
+  ],
+  "hsk1_读": [
+    "conv_hsk3_study_plan_01#L2",
+    "conv_school_02#L0",
+    "conv_school_02#L1",
+    "conv_social_hsk4_01#L1"
+  ],
+  "hsk1_第": [
+    "conv_hsk2_lost_01#L1",
+    "conv_school_02#L1"
+  ],
+  "hsk2_意思": [
+    "conv_school_02#L2",
+    "conv_school_02#L3"
+  ],
+  "hsk3_表示": [
+    "conv_school_02#L3"
+  ],
+  "hsk3_行": [
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk4_media_01#L5",
+    "conv_school_02#L3"
+  ],
+  "hsk3_同意": [
+    "conv_hsk4_debate_01#L2",
+    "conv_school_02#L3"
+  ],
+  "hsk2_明白": [
+    "conv_school_02#L4"
+  ],
+  "hsk1_不客气": [
+    "conv_phone_01#L5",
+    "conv_school_02#L5"
+  ],
+  "hsk2_大家": [
+    "conv_hsk3_trip_delay_01#L4",
+    "conv_hsk3_work_meeting_01#L3",
+    "conv_school_02#L5"
+  ],
+  "hsk1_还有": [
+    "conv_daily_03#L1",
+    "conv_education_01#L3",
+    "conv_hsk3_family_decision_01#L1",
+    "conv_school_02#L5"
+  ],
+  "hsk2_问题": [
+    "conv_complaint_01#L0",
+    "conv_complaint_01#L3",
+    "conv_education_01#L3",
+    "conv_environment_01#L0",
+    "conv_hsk3_service_complaint_01#L0",
+    "conv_hsk3_work_meeting_01#L3",
+    "conv_hsk4_media_01#L4",
+    "conv_negotiation_01#L5",
+    "conv_school_02#L5",
+    "conv_workplace_04#L4"
+  ],
+  "hsk4_预订": [
+    "conv_travel_01#L0",
+    "conv_travel_03#L0",
+    "conv_travel_03#L7"
+  ],
+  "hsk1_房间": [
+    "conv_hsk3_service_complaint_01#L2",
+    "conv_travel_01#L0",
+    "conv_travel_01#L5",
+    "conv_travel_01#L6"
+  ],
+  "hsk1_出": [
+    "conv_education_01#L6",
+    "conv_environment_01#L1",
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk4_scholarship_01#L5",
+    "conv_travel_01#L1"
+  ],
+  "hsk1_您": [
+    "conv_complaint_01#L1",
+    "conv_complaint_01#L3",
+    "conv_complaint_01#L5",
+    "conv_education_01#L0",
+    "conv_education_01#L6",
+    "conv_hsk2_appointment_01#L1",
+    "conv_hsk2_appointment_01#L3",
+    "conv_hsk2_bank_01#L1",
+    "conv_hsk2_bank_01#L2",
+    "conv_hsk2_bank_01#L5",
+    "conv_hsk3_bank_02#L0",
+    "conv_hsk3_bank_02#L1",
+    "conv_hsk3_clinic_appointment_01#L0",
+    "conv_hsk3_clinic_appointment_01#L1",
+    "conv_hsk3_clinic_appointment_01#L3",
+    "conv_hsk3_rent_01#L0",
+    "conv_hsk3_return_item_01#L3",
+    "conv_hsk3_service_complaint_01#L0",
+    "conv_hsk3_service_complaint_01#L1",
+    "conv_hsk3_service_complaint_01#L3",
+    "conv_hsk3_tech_01#L5",
+    "conv_hsk4_emergency_01#L1",
+    "conv_negotiation_01#L1",
+    "conv_negotiation_01#L3",
+    "conv_phone_01#L1",
+    "conv_travel_01#L1",
+    "conv_travel_01#L6",
+    "conv_travel_03#L1",
+    "conv_travel_03#L5",
+    "conv_travel_03#L7",
+    "conv_workplace_04#L6"
+  ],
+  "hsk3_护照": [
+    "conv_hsk3_bank_02#L1",
+    "conv_travel_01#L1"
+  ],
+  "hsk1_住": [
+    "conv_hsk3_tech_01#L4",
+    "conv_travel_01#L2",
+    "conv_travel_01#L3",
+    "conv_travel_03#L5"
+  ],
+  "hsk2_早餐": [
+    "conv_travel_01#L3",
+    "conv_travel_01#L4",
+    "conv_travel_03#L2",
+    "conv_travel_03#L3",
+    "conv_travel_03#L4"
+  ],
+  "hsk2_楼": [
+    "conv_shopping_03#L1",
+    "conv_travel_01#L4",
+    "conv_travel_01#L5",
+    "conv_travel_01#L6"
+  ],
+  "hsk2_卡": [
+    "conv_hsk3_bank_02#L3",
+    "conv_hsk3_bank_02#L4",
+    "conv_travel_01#L6"
+  ],
+  "hsk3_长城": [
+    "conv_travel_02#L0",
+    "conv_travel_02#L1"
+  ],
+  "hsk2_真": [
+    "conv_negotiation_01#L3",
+    "conv_travel_02#L0"
+  ],
+  "hsk4_啊": [
+    "conv_hsk2_sport_01#L3",
+    "conv_hsk3_family_decision_01#L1",
+    "conv_travel_02#L0",
+    "conv_travel_02#L1"
+  ],
+  "hsk3_据说": [
+    "conv_travel_02#L1"
+  ],
+  "hsk2_千": [
+    "conv_hsk3_rent_01#L1",
+    "conv_negotiation_01#L1",
+    "conv_negotiation_01#L2",
+    "conv_negotiation_01#L3",
+    "conv_negotiation_01#L4",
+    "conv_travel_02#L1"
+  ],
+  "hsk4_多年": [
+    "conv_travel_02#L1"
+  ],
+  "hsk4_历史": [
+    "conv_travel_02#L1"
+  ],
+  "hsk2_爬": [
+    "conv_travel_02#L2"
+  ],
+  "hsk4_顶": [
+    "conv_travel_02#L2"
+  ],
+  "hsk3_上去": [
+    "conv_travel_02#L2"
+  ],
+  "hsk3_不过": [
+    "conv_hsk3_family_decision_01#L1",
+    "conv_hsk4_media_01#L3",
+    "conv_travel_02#L3"
+  ],
+  "hsk3_注意": [
+    "conv_health_01#L3",
+    "conv_health_01#L6",
+    "conv_travel_02#L3"
+  ],
+  "hsk3_安全": [
+    "conv_hsk3_apartment_repair_01#L1",
+    "conv_hsk3_trip_delay_01#L4",
+    "conv_travel_02#L3"
+  ],
+  "hsk4_台阶": [
+    "conv_travel_02#L3"
+  ],
+  "hsk4_别": [
+    "conv_greeting_04#L3",
+    "conv_hsk3_family_decision_01#L4",
+    "conv_hsk3_trip_delay_01#L1",
+    "conv_travel_02#L4"
+  ],
+  "hsk4_担心": [
+    "conv_hsk2_lost_01#L5",
+    "conv_social_hsk4_01#L4",
+    "conv_social_hsk4_01#L5",
+    "conv_travel_02#L4"
+  ],
+  "hsk2_小心": [
+    "conv_greeting_04#L4",
+    "conv_travel_02#L4"
+  ],
+  "hsk1_这儿": [
+    "conv_shopping_03#L5",
+    "conv_travel_02#L4",
+    "conv_travel_02#L5"
+  ],
+  "hsk4_风景": [
+    "conv_travel_02#L4"
+  ],
+  "hsk3_美": [
+    "conv_travel_02#L4"
+  ],
+  "hsk3_拍": [
+    "conv_travel_02#L5"
+  ],
+  "hsk3_照": [
+    "conv_travel_02#L5"
+  ],
+  "hsk4_喂": [
+    "conv_hsk4_emergency_01#L0",
+    "conv_phone_01#L0"
+  ],
+  "hsk1_他": [
+    "conv_hsk3_family_decision_01#L2",
+    "conv_phone_01#L1",
+    "conv_phone_01#L2",
+    "conv_phone_01#L3"
+  ],
+  "hsk2_找": [
+    "conv_hsk3_return_item_01#L3",
+    "conv_phone_01#L1"
+  ],
+  "hsk1_事": [
+    "conv_education_01#L0",
+    "conv_phone_01#L1",
+    "conv_phone_01#L2"
+  ],
+  "hsk1_问": [
+    "conv_phone_01#L2"
+  ],
+  "hsk2_下": [
+    "conv_complaint_01#L3",
+    "conv_education_01#L0",
+    "conv_health_01#L3",
+    "conv_hsk2_bank_01#L5",
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_return_item_01#L2",
+    "conv_hsk3_tech_01#L1",
+    "conv_hsk4_scholarship_01#L0",
+    "conv_negotiation_01#L3",
+    "conv_phone_01#L2",
+    "conv_workplace_02#L0",
+    "conv_workplace_04#L0",
+    "conv_workplace_04#L2",
+    "conv_workplace_04#L5"
+  ],
+  "hsk3_大概": [
+    "conv_health_01#L2",
+    "conv_hsk2_appointment_01#L4",
+    "conv_hsk2_appointment_01#L5",
+    "conv_hsk2_bank_01#L5",
+    "conv_hsk2_lost_01#L3",
+    "conv_hsk2_lost_01#L5",
+    "conv_hsk3_tech_01#L2",
+    "conv_hsk3_tech_01#L5",
+    "conv_negotiation_01#L0",
+    "conv_phone_01#L3",
+    "conv_workplace_02#L5"
+  ],
+  "hsk1_回来": [
+    "conv_phone_01#L3"
+  ],
+  "hsk3_一会儿": [
+    "conv_greeting_04#L1",
+    "conv_phone_01#L3"
+  ],
+  "hsk4_打": [
+    "conv_hsk3_trip_delay_01#L1",
+    "conv_phone_01#L3",
+    "conv_phone_01#L4"
+  ],
+  "hsk3_以后": [
+    "conv_complaint_01#L6",
+    "conv_hsk3_apartment_repair_01#L4",
+    "conv_negotiation_01#L6",
+    "conv_phone_01#L4",
+    "conv_social_hsk4_01#L0"
+  ],
+  "hsk1_再见": [
+    "conv_greeting_04#L5",
+    "conv_phone_01#L5"
+  ],
+  "hsk1_请坐": [
+    "conv_workplace_01#L0"
+  ],
+  "hsk2_为什么": [
+    "conv_hsk4_scholarship_01#L0",
+    "conv_workplace_01#L0"
+  ],
+  "hsk2_因为": [
+    "conv_complaint_01#L3",
+    "conv_social_hsk4_01#L3",
+    "conv_workplace_01#L1"
+  ],
+  "hsk4_行业": [
+    "conv_workplace_01#L1"
+  ],
+  "hsk3_内": [
+    "conv_hsk3_tech_01#L2",
+    "conv_hsk3_tech_01#L3",
+    "conv_hsk4_emergency_01#L5",
+    "conv_workplace_01#L1",
+    "conv_workplace_04#L5"
+  ],
+  "hsk2_有名": [
+    "conv_workplace_01#L1"
+  ],
+  "hsk3_而且": [
+    "conv_health_01#L0",
+    "conv_hsk3_bank_02#L3",
+    "conv_hsk3_clinic_appointment_01#L2",
+    "conv_hsk3_trip_delay_01#L3",
+    "conv_hsk4_media_01#L3",
+    "conv_hsk4_scholarship_01#L1",
+    "conv_workplace_01#L1"
+  ],
+  "hsk3_发展": [
+    "conv_hsk4_scholarship_01#L1",
+    "conv_workplace_01#L1"
+  ],
+  "hsk2_机会": [
+    "conv_education_01#L5",
+    "conv_social_hsk4_01#L3",
+    "conv_workplace_01#L1"
+  ],
+  "hsk3_经验": [
+    "conv_social_hsk4_01#L1",
+    "conv_workplace_01#L2"
+  ],
+  "hsk4_之前": [
+    "conv_workplace_01#L3"
+  ],
+  "hsk2_外": [
+    "conv_workplace_01#L3"
+  ],
+  "hsk4_翻译": [
+    "conv_workplace_01#L3"
+  ],
+  "hsk2_水平": [
+    "conv_education_01#L3",
+    "conv_workplace_01#L4"
+  ],
+  "hsk3_通过": [
+    "conv_hsk4_scholarship_01#L3",
+    "conv_workplace_01#L5"
+  ],
+  "hsk2_级": [
+    "conv_hsk4_scholarship_01#L3",
+    "conv_negotiation_01#L3",
+    "conv_workplace_01#L5"
+  ],
+  "hsk4_口语": [
+    "conv_workplace_01#L5"
+  ],
+  "hsk2_流利": [
+    "conv_workplace_01#L5"
+  ],
+  "hsk3_处理": [
+    "conv_workplace_01#L5"
+  ],
+  "hsk4_商务": [
+    "conv_workplace_01#L5"
+  ],
+  "hsk3_文件": [
+    "conv_workplace_01#L5"
+  ],
+  "hsk3_讨论": [
+    "conv_hsk3_work_meeting_01#L3",
+    "conv_workplace_02#L0"
+  ],
+  "hsk4_下个月": [
+    "conv_hsk3_study_plan_01#L0",
+    "conv_workplace_02#L0"
+  ],
+  "hsk3_计划": [
+    "conv_social_hsk4_01#L0",
+    "conv_workplace_02#L0"
+  ],
+  "hsk2_应该": [
+    "conv_daily_03#L2",
+    "conv_environment_01#L1",
+    "conv_hsk3_clinic_appointment_01#L3",
+    "conv_workplace_02#L1"
+  ],
+  "hsk4_扩大": [
+    "conv_workplace_02#L1"
+  ],
+  "hsk3_市场": [
+    "conv_workplace_02#L1",
+    "conv_workplace_02#L3"
+  ],
+  "hsk3_具体": [
+    "conv_hsk4_emergency_01#L1",
+    "conv_social_hsk4_01#L0",
+    "conv_workplace_02#L2"
+  ],
+  "hsk3_建议": [
+    "conv_education_01#L6",
+    "conv_health_01#L5",
+    "conv_workplace_02#L2",
+    "conv_workplace_02#L3"
+  ],
+  "hsk2_先": [
+    "conv_complaint_01#L5",
+    "conv_health_01#L3",
+    "conv_hsk2_bank_01#L5",
+    "conv_hsk3_apartment_repair_01#L1",
+    "conv_hsk3_bank_02#L5",
+    "conv_hsk3_family_decision_01#L2",
+    "conv_hsk3_rent_01#L3",
+    "conv_hsk3_trip_delay_01#L1",
+    "conv_hsk3_work_meeting_01#L4",
+    "conv_negotiation_01#L6",
+    "conv_social_hsk4_01#L1",
+    "conv_workplace_02#L3"
+  ],
+  "hsk2_南方": [
+    "conv_workplace_02#L3"
+  ],
+  "hsk3_推广": [
+    "conv_workplace_02#L3"
+  ],
+  "hsk3_活动": [
+    "conv_hsk3_trip_delay_01#L0",
+    "conv_hsk3_trip_delay_01#L2",
+    "conv_workplace_02#L3"
+  ],
+  "hsk2_想法": [
+    "conv_education_01#L1",
+    "conv_social_hsk4_01#L2",
+    "conv_workplace_02#L4"
+  ],
+  "hsk2_不错": [
+    "conv_hsk3_study_plan_01#L3",
+    "conv_social_hsk4_01#L2",
+    "conv_workplace_02#L4"
+  ],
+  "hsk3_需要": [
+    "conv_education_01#L3",
+    "conv_health_01#L3",
+    "conv_health_01#L4",
+    "conv_hsk2_appointment_01#L4",
+    "conv_hsk2_bank_01#L4",
+    "conv_hsk3_bank_02#L0",
+    "conv_hsk3_bank_02#L1",
+    "conv_hsk3_bank_02#L4",
+    "conv_hsk3_bank_02#L5",
+    "conv_hsk3_tech_01#L1",
+    "conv_negotiation_01#L0",
+    "conv_negotiation_01#L3",
+    "conv_travel_03#L1",
+    "conv_travel_03#L3",
+    "conv_travel_03#L7",
+    "conv_workplace_02#L4",
+    "conv_workplace_02#L5",
+    "conv_workplace_04#L3"
+  ],
+  "hsk2_算": [
+    "conv_workplace_02#L4"
+  ],
+  "hsk2_万": [
+    "conv_workplace_02#L5"
+  ],
+  "hsk3_左右": [
+    "conv_hsk2_appointment_01#L5",
+    "conv_negotiation_01#L0",
+    "conv_workplace_02#L5"
+  ],
+  "hsk2_脸": [
+    "conv_daily_03#L0"
+  ],
+  "hsk4_色": [
+    "conv_daily_03#L0"
+  ],
+  "hsk3_头": [
+    "conv_daily_03#L1",
+    "conv_health_01#L0",
+    "conv_hsk3_clinic_appointment_01#L2",
+    "conv_hsk4_emergency_01#L4"
+  ],
+  "hsk2_疼": [
+    "conv_daily_03#L1",
+    "conv_health_01#L0",
+    "conv_hsk3_clinic_appointment_01#L2"
+  ],
+  "hsk4_发烧": [
+    "conv_daily_03#L1",
+    "conv_hsk3_clinic_appointment_01#L2",
+    "conv_hsk3_clinic_appointment_01#L3"
+  ],
+  "hsk1_医院": [
+    "conv_daily_03#L2"
+  ],
+  "hsk2_已经": [
+    "conv_complaint_01#L2",
+    "conv_daily_03#L3",
+    "conv_hsk3_work_meeting_01#L1",
+    "conv_negotiation_01#L3"
+  ],
+  "hsk3_挂": [
+    "conv_daily_03#L3"
+  ],
+  "hsk4_着": [
+    "conv_daily_03#L3",
+    "conv_hsk3_study_plan_01#L2"
+  ],
+  "hsk3_感冒": [
+    "conv_daily_03#L5"
+  ],
+  "hsk2_让": [
+    "conv_daily_03#L5",
+    "conv_hsk3_family_decision_01#L2",
+    "conv_hsk3_tech_01#L1",
+    "conv_hsk3_work_meeting_01#L0",
+    "conv_hsk4_debate_01#L1"
+  ],
+  "hsk1_水": [
+    "conv_daily_03#L5",
+    "conv_health_01#L5",
+    "conv_hsk3_rent_01#L3",
+    "conv_hsk4_emergency_01#L5"
+  ],
+  "hsk3_好好": [
+    "conv_daily_03#L5",
+    "conv_hsk3_apartment_repair_01#L2"
+  ],
+  "hsk1_休息": [
+    "conv_daily_03#L5",
+    "conv_health_01#L3",
+    "conv_hsk3_trip_delay_01#L3"
+  ],
+  "hsk1_早": [
+    "conv_greeting_04#L0",
+    "conv_greeting_04#L2",
+    "conv_hsk3_clinic_appointment_01#L3"
+  ],
+  "hsk2_该": [
+    "conv_greeting_04#L0"
+  ],
+  "hsk1_起": [
+    "conv_greeting_04#L2"
+  ],
+  "hsk2_气": [
+    "conv_greeting_04#L3"
+  ],
+  "hsk2_玩": [
+    "conv_greeting_04#L3"
+  ],
+  "hsk1_见": [
+    "conv_greeting_04#L4",
+    "conv_hsk2_appointment_01#L5"
+  ],
+  "hsk1_路上": [
+    "conv_greeting_04#L4"
+  ],
+  "hsk2_发": [
+    "conv_complaint_01#L5",
+    "conv_greeting_04#L5"
+  ],
+  "hsk3_消息": [
+    "conv_greeting_04#L5"
+  ],
+  "hsk1_水果": [
+    "conv_hsk3_family_decision_01#L4",
+    "conv_shopping_03#L0"
+  ],
+  "hsk1_哪儿": [
+    "conv_shopping_03#L0"
+  ],
+  "hsk2_左边": [
+    "conv_shopping_03#L1"
+  ],
+  "hsk3_就是": [
+    "conv_hsk3_rent_01#L3",
+    "conv_shopping_03#L1"
+  ],
+  "hsk3_苹果": [
+    "conv_shopping_03#L2"
+  ],
+  "hsk2_斤": [
+    "conv_shopping_03#L2",
+    "conv_shopping_03#L3",
+    "conv_shopping_03#L4"
+  ],
+  "hsk1_八": [
+    "conv_complaint_01#L2",
+    "conv_health_01#L5",
+    "conv_hsk3_tech_01#L3",
+    "conv_negotiation_01#L1",
+    "conv_shopping_03#L3",
+    "conv_travel_03#L3",
+    "conv_travel_03#L6"
+  ],
+  "hsk4_新鲜": [
+    "conv_shopping_03#L3"
+  ],
+  "hsk4_箱": [
+    "conv_shopping_03#L4"
+  ],
+  "hsk1_牛奶": [
+    "conv_shopping_03#L4"
+  ],
+  "hsk3_付": [
+    "conv_hsk3_rent_01#L3",
+    "conv_shopping_03#L5"
+  ],
+  "hsk2_经理": [
+    "conv_hsk3_work_meeting_01#L0",
+    "conv_workplace_04#L0",
+    "conv_workplace_04#L6"
+  ],
+  "hsk4_关于": [
+    "conv_education_01#L0",
+    "conv_workplace_04#L0"
+  ],
+  "hsk4_次": [
+    "conv_environment_01#L3",
+    "conv_workplace_04#L0"
+  ],
+  "hsk4_项目": [
+    "conv_workplace_04#L0"
+  ],
+  "hsk4_汇报": [
+    "conv_workplace_04#L0"
+  ],
+  "hsk2_进": [
+    "conv_workplace_04#L0",
+    "conv_workplace_04#L4"
+  ],
+  "hsk2_度": [
+    "conv_hsk4_debate_01#L3",
+    "conv_workplace_04#L0",
+    "conv_workplace_04#L4"
+  ],
+  "hsk3_目前": [
+    "conv_negotiation_01#L1",
+    "conv_workplace_04#L1",
+    "conv_workplace_04#L4"
+  ],
+  "hsk2_完成": [
+    "conv_workplace_04#L1",
+    "conv_workplace_04#L2",
+    "conv_workplace_04#L6"
+  ],
+  "hsk3_基本上": [
+    "conv_workplace_04#L2"
+  ],
+  "hsk2_分": [
+    "conv_hsk4_media_01#L4",
+    "conv_workplace_04#L2"
+  ],
+  "hsk3_部分": [
+    "conv_workplace_04#L2"
+  ],
+  "hsk3_预计": [
+    "conv_workplace_04#L2"
+  ],
+  "hsk2_下周": [
+    "conv_travel_03#L0",
+    "conv_workplace_04#L2"
+  ],
+  "hsk3_困难": [
+    "conv_workplace_04#L3"
+  ],
+  "hsk1_帮忙": [
+    "conv_workplace_04#L3"
+  ],
+  "hsk3_调": [
+    "conv_workplace_04#L3",
+    "conv_workplace_04#L5"
+  ],
+  "hsk4_资源": [
+    "conv_workplace_04#L3"
+  ],
+  "hsk1_手": [
+    "conv_workplace_04#L4"
+  ],
+  "hsk2_如果": [
+    "conv_hsk3_clinic_appointment_01#L3",
+    "conv_hsk3_family_decision_01#L3",
+    "conv_hsk3_return_item_01#L4",
+    "conv_hsk3_trip_delay_01#L2",
+    "conv_hsk3_work_meeting_01#L3",
+    "conv_negotiation_01#L5",
+    "conv_negotiation_01#L6",
+    "conv_travel_03#L3",
+    "conv_workplace_04#L4"
+  ],
+  "hsk3_安排": [
+    "conv_complaint_01#L5",
+    "conv_hsk3_service_complaint_01#L2",
+    "conv_workplace_04#L4"
+  ],
+  "hsk2_更": [
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk3_return_item_01#L4",
+    "conv_hsk4_media_01#L2",
+    "conv_hsk4_media_01#L3",
+    "conv_social_hsk4_01#L3",
+    "conv_workplace_04#L4"
+  ],
+  "hsk1_快": [
+    "conv_hsk4_emergency_01#L0",
+    "conv_hsk4_media_01#L3",
+    "conv_workplace_04#L4"
+  ],
+  "hsk3_尽量": [
+    "conv_workplace_04#L5"
+  ],
+  "hsk1_本": [
+    "conv_workplace_04#L5"
+  ],
+  "hsk2_周": [
+    "conv_complaint_01#L2",
+    "conv_workplace_04#L5"
+  ],
+  "hsk3_支持": [
+    "conv_social_hsk4_01#L5",
+    "conv_workplace_04#L6"
+  ],
+  "hsk2_一定": [
+    "conv_hsk3_study_plan_01#L4",
+    "conv_hsk3_work_meeting_01#L2",
+    "conv_workplace_04#L6"
+  ],
+  "hsk4_按时": [
+    "conv_workplace_04#L6"
+  ],
+  "hsk2_最近": [
+    "conv_environment_01#L0",
+    "conv_health_01#L0"
+  ],
+  "hsk3_总是": [
+    "conv_health_01#L0"
+  ],
+  "hsk1_睡": [
+    "conv_health_01#L0",
+    "conv_health_01#L5",
+    "conv_hsk4_debate_01#L3"
+  ],
+  "hsk2_从": [
+    "conv_health_01#L1",
+    "conv_hsk2_lost_01#L1",
+    "conv_hsk3_clinic_appointment_01#L2",
+    "conv_hsk4_media_01#L0",
+    "conv_hsk4_media_01#L5",
+    "conv_travel_03#L0"
+  ],
+  "hsk1_时候": [
+    "conv_health_01#L1"
+  ],
+  "hsk3_开始": [
+    "conv_health_01#L1",
+    "conv_hsk3_clinic_appointment_01#L2",
+    "conv_hsk3_study_plan_01#L3"
+  ],
+  "hsk2_多久": [
+    "conv_health_01#L1"
+  ],
+  "hsk1_星期": [
+    "conv_health_01#L2"
+  ],
+  "hsk3_以来": [
+    "conv_health_01#L2"
+  ],
+  "hsk2_一直": [
+    "conv_health_01#L2",
+    "conv_hsk2_lost_01#L1",
+    "conv_hsk4_scholarship_01#L1"
+  ],
+  "hsk2_感觉": [
+    "conv_health_01#L2",
+    "conv_hsk4_media_01#L2"
+  ],
+  "hsk1_累": [
+    "conv_health_01#L2"
+  ],
+  "hsk3_压力": [
+    "conv_health_01#L2"
+  ],
+  "hsk3_比较": [
+    "conv_health_01#L2",
+    "conv_hsk3_apartment_repair_01#L1",
+    "conv_hsk3_clinic_appointment_01#L3",
+    "conv_hsk3_movie_01#L2",
+    "conv_hsk3_movie_01#L5",
+    "conv_hsk3_study_plan_01#L1"
+  ],
+  "hsk4_量": [
+    "conv_health_01#L3",
+    "conv_negotiation_01#L0",
+    "conv_negotiation_01#L1"
+  ],
+  "hsk3_血": [
+    "conv_health_01#L3"
+  ],
+  "hsk3_压": [
+    "conv_health_01#L3"
+  ],
+  "hsk1_高": [
+    "conv_health_01#L3",
+    "conv_social_hsk4_01#L3"
+  ],
+  "hsk2_药": [
+    "conv_health_01#L4"
+  ],
+  "hsk3_暂时": [
+    "conv_health_01#L5"
+  ],
+  "hsk1_不用": [
+    "conv_health_01#L5",
+    "conv_hsk2_lost_01#L5",
+    "conv_hsk4_debate_01#L4"
+  ],
+  "hsk4_减少": [
+    "conv_environment_01#L3",
+    "conv_health_01#L5"
+  ],
+  "hsk3_保证": [
+    "conv_complaint_01#L5",
+    "conv_health_01#L5"
+  ],
+  "hsk2_够": [
+    "conv_health_01#L5"
+  ],
+  "hsk2_小时": [
+    "conv_health_01#L5",
+    "conv_hsk3_study_plan_01#L1",
+    "conv_hsk3_tech_01#L5"
+  ],
+  "hsk1_少": [
+    "conv_environment_01#L3",
+    "conv_health_01#L5"
+  ],
+  "hsk3_咖啡": [
+    "conv_health_01#L5",
+    "conv_hsk4_emergency_01#L2"
+  ],
+  "hsk4_万一": [
+    "conv_health_01#L6"
+  ],
+  "hsk3_情况": [
+    "conv_environment_01#L0",
+    "conv_health_01#L6"
+  ],
+  "hsk2_向": [
+    "conv_education_01#L0",
+    "conv_hsk2_lost_01#L1",
+    "conv_hsk2_lost_01#L2",
+    "conv_hsk4_emergency_01#L4",
+    "conv_social_hsk4_01#L6"
+  ],
+  "hsk3_请教": [
+    "conv_education_01#L0"
+  ],
+  "hsk3_报": [
+    "conv_education_01#L0",
+    "conv_education_01#L1"
+  ],
+  "hsk1_考": [
+    "conv_education_01#L0"
+  ],
+  "hsk1_大学": [
+    "conv_education_01#L0"
+  ],
+  "hsk3_所": [
+    "conv_education_01#L1",
+    "conv_education_01#L5",
+    "conv_environment_01#L1"
+  ],
+  "hsk1_学校": [
+    "conv_education_01#L1",
+    "conv_education_01#L2",
+    "conv_education_01#L3",
+    "conv_education_01#L5",
+    "conv_hsk2_sport_01#L4"
+  ],
+  "hsk2_计算机": [
+    "conv_education_01#L2"
+  ],
+  "hsk3_专业": [
+    "conv_education_01#L2",
+    "conv_education_01#L3",
+    "conv_hsk4_scholarship_01#L1"
+  ],
+  "hsk4_感兴趣": [
+    "conv_education_01#L2",
+    "conv_hsk4_scholarship_01#L1"
+  ],
+  "hsk2_但": [
+    "conv_complaint_01#L0",
+    "conv_education_01#L2",
+    "conv_education_01#L4",
+    "conv_environment_01#L2",
+    "conv_hsk3_bank_02#L5",
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk4_debate_01#L2",
+    "conv_hsk4_emergency_01#L4",
+    "conv_hsk4_media_01#L4",
+    "conv_social_hsk4_01#L5"
+  ],
+  "hsk3_确定": [
+    "conv_education_01#L2"
+  ],
+  "hsk2_选": [
+    "conv_education_01#L2"
+  ],
+  "hsk1_上": [
+    "conv_education_01#L2",
+    "conv_hsk3_clinic_appointment_01#L4",
+    "conv_hsk3_trip_delay_01#L0",
+    "conv_hsk3_work_meeting_01#L4",
+    "conv_negotiation_01#L3",
+    "conv_social_hsk4_01#L3"
+  ],
+  "hsk3_海": [
+    "conv_education_01#L2",
+    "conv_social_hsk4_01#L3"
+  ],
+  "hsk4_对于": [
+    "conv_education_01#L3",
+    "conv_environment_01#L2",
+    "conv_social_hsk4_01#L2"
+  ],
+  "hsk4_考虑": [
+    "conv_education_01#L3",
+    "conv_education_01#L6",
+    "conv_negotiation_01#L2",
+    "conv_social_hsk4_01#L1"
+  ],
+  "hsk3_方面": [
+    "conv_complaint_01#L6",
+    "conv_education_01#L3",
+    "conv_education_01#L4"
+  ],
+  "hsk3_排名": [
+    "conv_education_01#L3"
+  ],
+  "hsk3_生活": [
+    "conv_education_01#L3",
+    "conv_environment_01#L1",
+    "conv_hsk4_debate_01#L0",
+    "conv_hsk4_scholarship_01#L2"
+  ],
+  "hsk3_费用": [
+    "conv_education_01#L3",
+    "conv_education_01#L4"
+  ],
+  "hsk2_成绩": [
+    "conv_education_01#L4",
+    "conv_hsk3_study_plan_01#L4",
+    "conv_hsk4_scholarship_01#L2"
+  ],
+  "hsk1_家里": [
+    "conv_education_01#L4"
+  ],
+  "hsk3_经济": [
+    "conv_education_01#L4",
+    "conv_hsk4_scholarship_01#L5"
+  ],
+  "hsk2_条件": [
+    "conv_education_01#L4"
+  ],
+  "hsk3_一般": [
+    "conv_education_01#L4"
+  ],
+  "hsk2_所以": [
+    "conv_education_01#L4",
+    "conv_hsk4_debate_01#L4",
+    "conv_hsk4_media_01#L5"
+  ],
+  "hsk2_重要": [
+    "conv_education_01#L4",
+    "conv_environment_01#L1",
+    "conv_hsk4_debate_01#L5",
+    "conv_hsk4_scholarship_01#L1"
+  ],
+  "hsk4_申请": [
+    "conv_education_01#L5",
+    "conv_hsk4_scholarship_01#L0"
+  ],
+  "hsk4_奖学金": [
+    "conv_education_01#L5",
+    "conv_hsk4_scholarship_01#L0"
+  ],
+  "hsk4_无论": [
+    "conv_education_01#L5",
+    "conv_environment_01#L5",
+    "conv_hsk4_debate_01#L5",
+    "conv_hsk4_media_01#L5"
+  ],
+  "hsk4_获得": [
+    "conv_education_01#L5",
+    "conv_hsk4_scholarship_01#L4"
+  ],
+  "hsk4_奖": [
+    "conv_education_01#L5"
+  ],
+  "hsk3_认真": [
+    "conv_education_01#L6"
+  ],
+  "hsk4_尽快": [
+    "conv_education_01#L6"
+  ],
+  "hsk3_决定": [
+    "conv_education_01#L6"
+  ],
+  "hsk3_标准": [
+    "conv_travel_03#L0",
+    "conv_travel_03#L3"
+  ],
+  "hsk1_日": [
+    "conv_travel_03#L0"
+  ],
+  "hsk1_晚": [
+    "conv_hsk3_trip_delay_01#L4",
+    "conv_travel_03#L0",
+    "conv_travel_03#L3"
+  ],
+  "hsk1_床": [
+    "conv_travel_03#L1",
+    "conv_travel_03#L2",
+    "conv_travel_03#L3"
+  ],
+  "hsk3_双": [
+    "conv_travel_03#L1"
+  ],
+  "hsk3_费": [
+    "conv_hsk3_rent_01#L3",
+    "conv_travel_03#L2"
+  ],
+  "hsk4_包含": [
+    "conv_hsk3_rent_01#L3",
+    "conv_travel_03#L2"
+  ],
+  "hsk2_元": [
+    "conv_complaint_01#L5",
+    "conv_travel_03#L3"
+  ],
+  "hsk4_含": [
+    "conv_travel_03#L3"
+  ],
+  "hsk2_位": [
+    "conv_hsk4_scholarship_01#L4",
+    "conv_travel_03#L3"
+  ],
+  "hsk2_加": [
+    "conv_negotiation_01#L6",
+    "conv_travel_03#L3"
+  ],
+  "hsk2_停车场": [
+    "conv_travel_03#L4",
+    "conv_travel_03#L5"
+  ],
+  "hsk1_有的": [
+    "conv_travel_03#L5"
+  ],
+  "hsk4_地下": [
+    "conv_travel_03#L5"
+  ],
+  "hsk4_免费": [
+    "conv_negotiation_01#L5",
+    "conv_travel_03#L5"
+  ],
+  "hsk4_提供": [
+    "conv_negotiation_01#L4",
+    "conv_negotiation_01#L5",
+    "conv_travel_03#L5"
+  ],
+  "hsk2_店": [
+    "conv_hsk4_emergency_01#L2",
+    "conv_travel_03#L5"
+  ],
+  "hsk3_客人": [
+    "conv_travel_03#L5"
+  ],
+  "hsk2_姓名": [
+    "conv_travel_03#L5"
+  ],
+  "hsk3_联系": [
+    "conv_hsk4_debate_01#L1",
+    "conv_travel_03#L5",
+    "conv_travel_03#L7"
+  ],
+  "hsk3_方式": [
+    "conv_travel_03#L5"
+  ],
+  "hsk2_手机": [
+    "conv_hsk3_movie_01#L5",
+    "conv_hsk3_tech_01#L0",
+    "conv_hsk3_tech_01#L4",
+    "conv_hsk4_debate_01#L3",
+    "conv_negotiation_01#L0",
+    "conv_travel_03#L6"
+  ],
+  "hsk2_零": [
+    "conv_complaint_01#L2",
+    "conv_travel_03#L6"
+  ],
+  "hsk3_已": [
+    "conv_travel_03#L7"
+  ],
+  "hsk3_为": [
+    "conv_environment_01#L1",
+    "conv_environment_01#L5",
+    "conv_hsk4_scholarship_01#L5",
+    "conv_travel_03#L7"
+  ],
+  "hsk3_成功": [
+    "conv_travel_03#L7"
+  ],
+  "hsk4_期待": [
+    "conv_travel_03#L7"
+  ],
+  "hsk4_光临": [
+    "conv_travel_03#L7"
+  ],
+  "hsk2_随时": [
+    "conv_hsk4_debate_01#L1",
+    "conv_travel_03#L7"
+  ],
+  "hsk4_毕业": [
+    "conv_social_hsk4_01#L0"
+  ],
+  "hsk2_打算": [
+    "conv_hsk4_scholarship_01#L4",
+    "conv_social_hsk4_01#L0"
+  ],
+  "hsk4_积累": [
+    "conv_social_hsk4_01#L1"
+  ],
+  "hsk4_是否": [
+    "conv_social_hsk4_01#L1"
+  ],
+  "hsk4_研究生": [
+    "conv_social_hsk4_01#L1"
+  ],
+  "hsk1_听": [
+    "conv_hsk3_study_plan_01#L2",
+    "conv_social_hsk4_01#L2"
+  ],
+  "hsk2_起来": [
+    "conv_social_hsk4_01#L2"
+  ],
+  "hsk1_地点": [
+    "conv_social_hsk4_01#L2"
+  ],
+  "hsk2_或者": [
+    "conv_social_hsk4_01#L3"
+  ],
+  "hsk3_深": [
+    "conv_social_hsk4_01#L3"
+  ],
+  "hsk1_那里": [
+    "conv_social_hsk4_01#L3"
+  ],
+  "hsk2_离": [
+    "conv_hsk2_sport_01#L3",
+    "conv_social_hsk4_01#L4"
+  ],
+  "hsk2_方便": [
+    "conv_hsk3_bank_02#L3",
+    "conv_hsk3_movie_01#L5",
+    "conv_hsk3_rent_01#L5",
+    "conv_hsk4_debate_01#L1",
+    "conv_social_hsk4_01#L4"
+  ],
+  "hsk3_照顾": [
+    "conv_social_hsk4_01#L4"
+  ],
+  "hsk3_父母": [
+    "conv_social_hsk4_01#L4",
+    "conv_social_hsk4_01#L5",
+    "conv_social_hsk4_01#L6"
+  ],
+  "hsk1_有时候": [
+    "conv_hsk4_media_01#L1",
+    "conv_social_hsk4_01#L5"
+  ],
+  "hsk4_依然": [
+    "conv_social_hsk4_01#L5"
+  ],
+  "hsk4_追求": [
+    "conv_social_hsk4_01#L5"
+  ],
+  "hsk2_自己": [
+    "conv_hsk3_rent_01#L3",
+    "conv_social_hsk4_01#L5"
+  ],
+  "hsk4_梦想": [
+    "conv_social_hsk4_01#L5"
+  ],
+  "hsk1_他们": [
+    "conv_hsk3_family_decision_01#L4",
+    "conv_social_hsk4_01#L5",
+    "conv_social_hsk4_01#L6"
+  ],
+  "hsk2_只要": [
+    "conv_environment_01#L5",
+    "conv_hsk3_return_item_01#L1",
+    "conv_hsk3_service_complaint_01#L4",
+    "conv_hsk3_study_plan_01#L4",
+    "conv_hsk3_trip_delay_01#L4",
+    "conv_social_hsk4_01#L5"
+  ],
+  "hsk2_过": [
+    "conv_hsk3_return_item_01#L1",
+    "conv_hsk4_debate_01#L3",
+    "conv_social_hsk4_01#L5"
+  ],
+  "hsk2_放心": [
+    "conv_social_hsk4_01#L5"
+  ],
+  "hsk1_真的": [
+    "conv_hsk4_debate_01#L3",
+    "conv_hsk4_media_01#L4",
+    "conv_social_hsk4_01#L6"
+  ],
+  "hsk1_开": [
+    "conv_hsk3_apartment_repair_01#L1",
+    "conv_hsk3_bank_02#L0",
+    "conv_hsk3_bank_02#L2",
+    "conv_hsk3_bank_02#L3",
+    "conv_hsk3_bank_02#L4",
+    "conv_social_hsk4_01#L6"
+  ],
+  "hsk1_学习": [
+    "conv_hsk4_scholarship_01#L3",
+    "conv_social_hsk4_01#L6"
+  ],
+  "hsk4_种": [
+    "conv_complaint_01#L4",
+    "conv_hsk3_bank_02#L2",
+    "conv_social_hsk4_01#L6"
+  ],
+  "hsk3_态度": [
+    "conv_social_hsk4_01#L6"
+  ],
+  "hsk4_反映": [
+    "conv_complaint_01#L0",
+    "conv_hsk3_service_complaint_01#L0"
+  ],
+  "hsk2_上周": [
+    "conv_complaint_01#L0"
+  ],
+  "hsk1_你们": [
+    "conv_complaint_01#L0",
+    "conv_complaint_01#L4",
+    "conv_complaint_01#L6"
+  ],
+  "hsk3_网站": [
+    "conv_complaint_01#L0"
+  ],
+  "hsk3_订": [
+    "conv_complaint_01#L0",
+    "conv_complaint_01#L1",
+    "conv_complaint_01#L2",
+    "conv_complaint_01#L3",
+    "conv_hsk3_movie_01#L5",
+    "conv_hsk3_service_complaint_01#L2",
+    "conv_negotiation_01#L6"
+  ],
+  "hsk3_台": [
+    "conv_complaint_01#L0",
+    "conv_negotiation_01#L0",
+    "conv_negotiation_01#L5",
+    "conv_negotiation_01#L6"
+  ],
+  "hsk4_冰箱": [
+    "conv_complaint_01#L0"
+  ],
+  "hsk1_现在": [
+    "conv_complaint_01#L0",
+    "conv_environment_01#L1",
+    "conv_hsk4_emergency_01#L3"
+  ],
+  "hsk1_没": [
+    "conv_complaint_01#L0",
+    "conv_hsk3_family_decision_01#L1",
+    "conv_negotiation_01#L5"
+  ],
+  "hsk2_收到": [
+    "conv_complaint_01#L0"
+  ],
+  "hsk4_货": [
+    "conv_complaint_01#L0",
+    "conv_complaint_01#L5"
+  ],
+  "hsk3_非常": [
+    "conv_complaint_01#L1",
+    "conv_complaint_01#L5",
+    "conv_hsk3_service_complaint_01#L3",
+    "conv_hsk4_scholarship_01#L1"
+  ],
+  "hsk3_抱歉": [
+    "conv_complaint_01#L1",
+    "conv_complaint_01#L5",
+    "conv_hsk3_service_complaint_01#L3"
+  ],
+  "hsk3_造成": [
+    "conv_complaint_01#L1"
+  ],
+  "hsk4_单": [
+    "conv_complaint_01#L1",
+    "conv_complaint_01#L2",
+    "conv_complaint_01#L3",
+    "conv_negotiation_01#L1",
+    "conv_negotiation_01#L6"
+  ],
+  "hsk3_整整": [
+    "conv_complaint_01#L2"
+  ],
+  "hsk2_马上": [
+    "conv_complaint_01#L3",
+    "conv_hsk3_service_complaint_01#L3",
+    "conv_hsk4_emergency_01#L3"
+  ],
+  "hsk1_帮": [
+    "conv_complaint_01#L3",
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_apartment_repair_01#L3",
+    "conv_hsk3_return_item_01#L3",
+    "conv_hsk3_service_complaint_01#L1",
+    "conv_hsk3_service_complaint_01#L3"
+  ],
+  "hsk2_查": [
+    "conv_complaint_01#L3"
+  ],
+  "hsk1_对不起": [
+    "conv_complaint_01#L3"
+  ],
+  "hsk4_系统": [
+    "conv_complaint_01#L3"
+  ],
+  "hsk3_显示": [
+    "conv_complaint_01#L3"
+  ],
+  "hsk3_被": [
+    "conv_complaint_01#L3",
+    "conv_hsk3_apartment_repair_01#L3",
+    "conv_hsk3_return_item_01#L1",
+    "conv_hsk3_service_complaint_01#L2",
+    "conv_hsk3_trip_delay_01#L2"
+  ],
+  "hsk3_难道": [
+    "conv_complaint_01#L4"
+  ],
+  "hsk2_事情": [
+    "conv_complaint_01#L4",
+    "conv_environment_01#L2"
+  ],
+  "hsk4_事先": [
+    "conv_complaint_01#L4"
+  ],
+  "hsk3_通知": [
+    "conv_complaint_01#L4"
+  ],
+  "hsk4_户": [
+    "conv_complaint_01#L4",
+    "conv_hsk3_bank_02#L0",
+    "conv_hsk3_bank_02#L2",
+    "conv_hsk3_bank_02#L5"
+  ],
+  "hsk2_这么": [
+    "conv_complaint_01#L4",
+    "conv_negotiation_01#L1"
+  ],
+  "hsk3_久": [
+    "conv_complaint_01#L4"
+  ],
+  "hsk3_同时": [
+    "conv_complaint_01#L5"
+  ],
+  "hsk3_补": [
+    "conv_complaint_01#L5"
+  ],
+  "hsk2_等到": [
+    "conv_complaint_01#L6"
+  ],
+  "hsk3_希望": [
+    "conv_complaint_01#L6",
+    "conv_hsk4_scholarship_01#L5"
+  ],
+  "hsk3_改进": [
+    "conv_complaint_01#L6"
+  ],
+  "hsk3_关注": [
+    "conv_environment_01#L0"
+  ],
+  "hsk3_环境": [
+    "conv_environment_01#L0",
+    "conv_environment_01#L1"
+  ],
+  "hsk2_越来越": [
+    "conv_environment_01#L0",
+    "conv_environment_01#L1"
+  ],
+  "hsk4_严重": [
+    "conv_environment_01#L0",
+    "conv_hsk3_clinic_appointment_01#L3"
+  ],
+  "hsk2_绿色": [
+    "conv_environment_01#L1"
+  ],
+  "hsk2_变": [
+    "conv_environment_01#L1"
+  ],
+  "hsk3_保护": [
+    "conv_environment_01#L1"
+  ],
+  "hsk2_好像": [
+    "conv_environment_01#L2"
+  ],
+  "hsk4_有限": [
+    "conv_environment_01#L2"
+  ],
+  "hsk3_其实": [
+    "conv_environment_01#L3"
+  ],
+  "hsk2_比如": [
+    "conv_environment_01#L3",
+    "conv_hsk3_bank_02#L1"
+  ],
+  "hsk2_使用": [
+    "conv_environment_01#L3",
+    "conv_hsk3_bank_02#L3",
+    "conv_hsk4_debate_01#L4"
+  ],
+  "hsk3_性": [
+    "conv_environment_01#L3",
+    "conv_hsk4_media_01#L5"
+  ],
+  "hsk2_用": [
+    "conv_environment_01#L3",
+    "conv_hsk3_movie_01#L5"
+  ],
+  "hsk1_开车": [
+    "conv_environment_01#L3",
+    "conv_hsk3_family_decision_01#L3"
+  ],
+  "hsk3_公共": [
+    "conv_environment_01#L3"
+  ],
+  "hsk3_交通": [
+    "conv_environment_01#L3"
+  ],
+  "hsk1_这些": [
+    "conv_environment_01#L3"
+  ],
+  "hsk3_有效": [
+    "conv_environment_01#L3"
+  ],
+  "hsk2_行动": [
+    "conv_environment_01#L3"
+  ],
+  "hsk2_道理": [
+    "conv_environment_01#L4",
+    "conv_hsk4_debate_01#L5"
+  ],
+  "hsk4_甚至": [
+    "conv_environment_01#L4",
+    "conv_hsk4_debate_01#L3"
+  ],
+  "hsk3_连": [
+    "conv_environment_01#L4"
+  ],
+  "hsk1_东西": [
+    "conv_environment_01#L4"
+  ],
+  "hsk4_选择": [
+    "conv_environment_01#L4"
+  ],
+  "hsk3_环保": [
+    "conv_environment_01#L4",
+    "conv_environment_01#L5"
+  ],
+  "hsk2_包": [
+    "conv_environment_01#L4"
+  ],
+  "hsk2_装": [
+    "conv_environment_01#L4"
+  ],
+  "hsk4_没错": [
+    "conv_environment_01#L5"
+  ],
+  "hsk2_地球": [
+    "conv_environment_01#L5"
+  ],
+  "hsk3_老板": [
+    "conv_negotiation_01#L0"
+  ],
+  "hsk4_批": [
+    "conv_hsk4_media_01#L5",
+    "conv_negotiation_01#L0",
+    "conv_negotiation_01#L1"
+  ],
+  "hsk3_数量": [
+    "conv_negotiation_01#L1",
+    "conv_negotiation_01#L5"
+  ],
+  "hsk4_定": [
+    "conv_hsk3_bank_02#L3",
+    "conv_negotiation_01#L1"
+  ],
+  "hsk3_长期": [
+    "conv_negotiation_01#L2"
+  ],
+  "hsk3_合作": [
+    "conv_hsk4_scholarship_01#L5",
+    "conv_negotiation_01#L2"
+  ],
+  "hsk3_能不能": [
+    "conv_negotiation_01#L2",
+    "conv_negotiation_01#L4"
+  ],
+  "hsk4_降": [
+    "conv_negotiation_01#L2"
+  ],
+  "hsk2_讲": [
+    "conv_negotiation_01#L3"
+  ],
+  "hsk3_价格": [
+    "conv_negotiation_01#L3"
+  ],
+  "hsk3_跟": [
+    "conv_hsk3_study_plan_01#L2",
+    "conv_negotiation_01#L3"
+  ],
+  "hsk4_确认": [
+    "conv_negotiation_01#L3"
+  ],
+  "hsk2_这样": [
+    "conv_negotiation_01#L3"
+  ],
+  "hsk4_底": [
+    "conv_negotiation_01#L3"
+  ],
+  "hsk3_线": [
+    "conv_negotiation_01#L3"
+  ],
+  "hsk2_接受": [
+    "conv_negotiation_01#L4"
+  ],
+  "hsk3_另外": [
+    "conv_hsk2_bank_01#L2",
+    "conv_negotiation_01#L4"
+  ],
+  "hsk3_修": [
+    "conv_hsk3_apartment_repair_01#L4",
+    "conv_hsk3_tech_01#L0",
+    "conv_hsk3_tech_01#L2",
+    "conv_hsk3_tech_01#L3",
+    "conv_negotiation_01#L4",
+    "conv_negotiation_01#L5"
+  ],
+  "hsk3_全面": [
+    "conv_negotiation_01#L5"
+  ],
+  "hsk3_超过": [
+    "conv_negotiation_01#L5"
+  ],
+  "hsk2_送": [
+    "conv_negotiation_01#L5"
+  ],
+  "hsk4_上门": [
+    "conv_negotiation_01#L5"
+  ],
+  "hsk3_安装": [
+    "conv_negotiation_01#L5"
+  ],
+  "hsk3_效果": [
+    "conv_negotiation_01#L6"
+  ],
+  "hsk3_必然": [
+    "conv_negotiation_01#L6"
+  ],
+  "hsk3_追": [
+    "conv_negotiation_01#L6"
+  ],
+  "hsk3_厨房": [
+    "conv_hsk3_apartment_repair_01#L0"
+  ],
+  "hsk3_灯": [
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_apartment_repair_01#L2",
+    "conv_hsk3_apartment_repair_01#L3"
+  ],
+  "hsk2_坏": [
+    "conv_hsk3_apartment_repair_01#L0",
+    "conv_hsk3_apartment_repair_01#L3",
+    "conv_hsk3_tech_01#L0",
+    "conv_hsk3_tech_01#L3"
+  ],
+  "hsk3_把": [
+    "conv_hsk2_bank_01#L1",
+    "conv_hsk3_apartment_repair_01#L1",
+    "conv_hsk3_clinic_appointment_01#L4",
+    "conv_hsk3_family_decision_01#L2",
+    "conv_hsk3_work_meeting_01#L1",
+    "conv_hsk3_work_meeting_01#L4",
+    "conv_hsk4_emergency_01#L4"
+  ],
+  "hsk4_关": [
+    "conv_hsk3_apartment_repair_01#L1",
+    "conv_hsk4_debate_01#L4",
+    "conv_hsk4_emergency_01#L2"
+  ],
+  "hsk1_关上": [
+    "conv_hsk3_apartment_repair_01#L1"
+  ],
+  "hsk1_昨天": [
+    "conv_hsk3_apartment_repair_01#L2",
+    "conv_hsk3_clinic_appointment_01#L2",
+    "conv_hsk3_return_item_01#L0",
+    "conv_hsk3_service_complaint_01#L2"
+  ],
+  "hsk3_突然": [
+    "conv_hsk3_apartment_repair_01#L2",
+    "conv_hsk4_emergency_01#L0"
+  ],
+  "hsk2_亮": [
+    "conv_hsk3_apartment_repair_01#L2"
+  ],
+  "hsk2_可能": [
+    "conv_hsk3_apartment_repair_01#L3",
+    "conv_hsk3_trip_delay_01#L0"
+  ],
+  "hsk4_烧": [
+    "conv_hsk3_apartment_repair_01#L3"
+  ],
+  "hsk2_换": [
+    "conv_hsk2_bank_01#L2",
+    "conv_hsk2_bank_01#L3",
+    "conv_hsk2_bank_01#L4",
+    "conv_hsk3_apartment_repair_01#L3",
+    "conv_hsk3_return_item_01#L1",
+    "conv_hsk3_service_complaint_01#L4",
+    "conv_hsk3_tech_01#L1",
+    "conv_hsk3_tech_01#L3",
+    "conv_hsk3_tech_01#L5"
+  ],
+  "hsk1_开会": [
+    "conv_hsk3_work_meeting_01#L0"
+  ],
+  "hsk3_报告": [
+    "conv_hsk3_work_meeting_01#L1"
+  ],
+  "hsk3_准备": [
+    "conv_hsk3_work_meeting_01#L1"
+  ],
+  "hsk2_虽然": [
+    "conv_hsk3_work_meeting_01#L2"
+  ],
+  "hsk3_内容": [
+    "conv_hsk3_work_meeting_01#L2",
+    "conv_hsk4_media_01#L2"
+  ],
+  "hsk2_清楚": [
+    "conv_hsk3_work_meeting_01#L2"
+  ],
+  "hsk1_后": [
+    "conv_hsk3_work_meeting_01#L3",
+    "conv_hsk4_scholarship_01#L4"
+  ],
+  "hsk2_重点": [
+    "conv_hsk3_work_meeting_01#L4"
+  ],
+  "hsk3_白": [
+    "conv_hsk3_work_meeting_01#L4"
+  ],
+  "hsk3_板": [
+    "conv_hsk3_work_meeting_01#L4"
+  ],
+  "hsk2_件": [
+    "conv_hsk3_return_item_01#L0",
+    "conv_hsk3_return_item_01#L3"
+  ],
+  "hsk1_衣服": [
+    "conv_hsk3_return_item_01#L0"
+  ],
+  "hsk2_刚": [
+    "conv_hsk3_return_item_01#L0"
+  ],
+  "hsk2_穿": [
+    "conv_hsk3_return_item_01#L1",
+    "conv_hsk3_return_item_01#L2"
+  ],
+  "hsk3_只是": [
+    "conv_hsk3_return_item_01#L2"
+  ],
+  "hsk1_在家": [
+    "conv_hsk3_return_item_01#L2"
+  ],
+  "hsk2_颜色": [
+    "conv_hsk3_return_item_01#L4"
+  ],
+  "hsk2_一样": [
+    "conv_hsk3_return_item_01#L4"
+  ],
+  "hsk4_晚点": [
+    "conv_hsk3_trip_delay_01#L0"
+  ],
+  "hsk3_赶": [
+    "conv_hsk3_trip_delay_01#L0"
+  ],
+  "hsk4_着急": [
+    "conv_hsk3_trip_delay_01#L1"
+  ],
+  "hsk4_导游": [
+    "conv_hsk3_trip_delay_01#L1"
+  ],
+  "hsk1_电话": [
+    "conv_hsk3_trip_delay_01#L1"
+  ],
+  "hsk3_取消": [
+    "conv_hsk3_trip_delay_01#L2"
+  ],
+  "hsk4_附近": [
+    "conv_hsk2_sport_01#L4",
+    "conv_hsk3_trip_delay_01#L3",
+    "conv_hsk4_emergency_01#L2"
+  ],
+  "hsk3_约": [
+    "conv_hsk2_appointment_01#L0",
+    "conv_hsk3_clinic_appointment_01#L0"
+  ],
+  "hsk1_哪里": [
+    "conv_hsk2_sport_01#L3",
+    "conv_hsk3_clinic_appointment_01#L1",
+    "conv_hsk4_media_01#L5"
+  ],
+  "hsk2_舒服": [
+    "conv_hsk3_clinic_appointment_01#L1"
+  ],
+  "hsk3_身份证": [
+    "conv_hsk3_clinic_appointment_01#L4"
+  ],
+  "hsk2_带": [
+    "conv_hsk3_clinic_appointment_01#L4",
+    "conv_hsk3_family_decision_01#L4"
+  ],
+  "hsk2_考试": [
+    "conv_hsk3_study_plan_01#L0"
+  ],
+  "hsk2_复习": [
+    "conv_hsk3_study_plan_01#L0",
+    "conv_hsk3_study_plan_01#L1"
+  ],
+  "hsk3_听力": [
+    "conv_hsk3_study_plan_01#L1"
+  ],
+  "hsk3_一边": [
+    "conv_hsk3_study_plan_01#L2"
+  ],
+  "hsk3_录音": [
+    "conv_hsk3_study_plan_01#L2"
+  ],
+  "hsk3_方法": [
+    "conv_hsk3_study_plan_01#L3"
+  ],
+  "hsk3_坚持": [
+    "conv_hsk3_study_plan_01#L4"
+  ],
+  "hsk2_提高": [
+    "conv_hsk3_study_plan_01#L4"
+  ],
+  "hsk2_周末": [
+    "conv_hsk3_family_decision_01#L0",
+    "conv_hsk3_movie_01#L0"
+  ],
+  "hsk2_爷爷": [
+    "conv_hsk3_family_decision_01#L0"
+  ],
+  "hsk2_奶奶": [
+    "conv_hsk3_family_decision_01#L0"
+  ],
+  "hsk1_孩子": [
+    "conv_hsk3_family_decision_01#L1"
+  ],
+  "hsk2_完": [
+    "conv_hsk2_sport_01#L5",
+    "conv_hsk3_family_decision_01#L1",
+    "conv_hsk3_family_decision_01#L2"
+  ],
+  "hsk1_忘": [
+    "conv_hsk3_family_decision_01#L4"
+  ],
+  "hsk3_慢慢": [
+    "conv_hsk3_service_complaint_01#L1"
+  ],
+  "hsk3_记录": [
+    "conv_hsk3_service_complaint_01#L1"
+  ],
+  "hsk2_错": [
+    "conv_hsk3_service_complaint_01#L2"
+  ],
+  "hsk3_解决": [
+    "conv_hsk3_service_complaint_01#L3"
+  ],
+  "hsk2_取": [
+    "conv_hsk2_bank_01#L0",
+    "conv_hsk3_tech_01#L5"
+  ],
+  "hsk2_银行卡": [
+    "conv_hsk2_bank_01#L1"
+  ],
+  "hsk1_这里": [
+    "conv_hsk2_bank_01#L2",
+    "conv_hsk2_lost_01#L1",
+    "conv_hsk2_sport_01#L3",
+    "conv_hsk4_emergency_01#L0"
+  ],
+  "hsk3_美元": [
+    "conv_hsk2_bank_01#L2",
+    "conv_hsk2_bank_01#L3",
+    "conv_hsk2_bank_01#L4"
+  ],
+  "hsk3_人民币": [
+    "conv_hsk2_bank_01#L3"
+  ],
+  "hsk2_分钟": [
+    "conv_hsk2_bank_01#L5",
+    "conv_hsk2_lost_01#L5",
+    "conv_hsk2_sport_01#L4"
+  ],
+  "hsk4_填": [
+    "conv_hsk2_bank_01#L5"
+  ],
+  "hsk2_表": [
+    "conv_hsk2_bank_01#L5"
+  ],
+  "hsk3_头发": [
+    "conv_hsk2_appointment_01#L0",
+    "conv_hsk2_appointment_01#L5"
+  ],
+  "hsk2_姓": [
+    "conv_hsk2_appointment_01#L3",
+    "conv_hsk2_appointment_01#L4"
+  ],
+  "hsk3_游泳": [
+    "conv_hsk2_sport_01#L2",
+    "conv_hsk2_sport_01#L4"
+  ],
+  "hsk3_游": [
+    "conv_hsk2_sport_01#L3",
+    "conv_hsk2_sport_01#L5"
+  ],
+  "hsk1_吃饭": [
+    "conv_hsk2_sport_01#L5"
+  ],
+  "hsk2_不好意思": [
+    "conv_hsk2_lost_01#L0"
+  ],
+  "hsk2_地铁站": [
+    "conv_hsk2_lost_01#L0",
+    "conv_hsk2_lost_01#L3"
+  ],
+  "hsk1_路口": [
+    "conv_hsk2_lost_01#L1"
+  ],
+  "hsk4_之后": [
+    "conv_hsk2_lost_01#L2"
+  ],
+  "hsk3_米": [
+    "conv_hsk2_lost_01#L3",
+    "conv_hsk3_movie_01#L5",
+    "conv_hsk3_rent_01#L1"
+  ],
+  "hsk2_右边": [
+    "conv_hsk2_lost_01#L3"
+  ],
+  "hsk1_看到": [
+    "conv_hsk3_rent_01#L0",
+    "conv_hsk4_media_01#L3"
+  ],
+  "hsk1_网上": [
+    "conv_hsk3_rent_01#L0"
+  ],
+  "hsk1_房子": [
+    "conv_hsk3_rent_01#L0",
+    "conv_hsk3_rent_01#L4"
+  ],
+  "hsk2_出租": [
+    "conv_hsk3_rent_01#L0",
+    "conv_hsk3_rent_01#L1"
+  ],
+  "hsk3_室": [
+    "conv_hsk3_rent_01#L1"
+  ],
+  "hsk4_平方": [
+    "conv_hsk3_rent_01#L1"
+  ],
+  "hsk1_月": [
+    "conv_hsk3_rent_01#L1",
+    "conv_hsk3_rent_01#L2",
+    "conv_hsk3_rent_01#L3",
+    "conv_hsk4_scholarship_01#L3"
+  ],
+  "hsk3_金": [
+    "conv_hsk3_rent_01#L2"
+  ],
+  "hsk3_交": [
+    "conv_hsk3_rent_01#L2",
+    "conv_hsk4_debate_01#L0",
+    "conv_hsk4_emergency_01#L2"
+  ],
+  "hsk1_电": [
+    "conv_hsk3_rent_01#L3"
+  ],
+  "hsk2_新": [
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk3_tech_01#L1"
+  ],
+  "hsk3_期": [
+    "conv_hsk3_tech_01#L2"
+  ],
+  "hsk3_范围": [
+    "conv_hsk3_tech_01#L3"
+  ],
+  "hsk1_里": [
+    "conv_hsk3_tech_01#L4"
+  ],
+  "hsk4_数据": [
+    "conv_hsk3_tech_01#L4",
+    "conv_hsk3_tech_01#L5"
+  ],
+  "hsk3_只": [
+    "conv_hsk3_tech_01#L5"
+  ],
+  "hsk2_影响": [
+    "conv_hsk3_tech_01#L5",
+    "conv_hsk4_debate_01#L0",
+    "conv_hsk4_debate_01#L2",
+    "conv_hsk4_debate_01#L3"
+  ],
+  "hsk4_空": [
+    "conv_hsk3_movie_01#L0"
+  ],
+  "hsk1_电影": [
+    "conv_hsk3_movie_01#L0"
+  ],
+  "hsk4_类型": [
+    "conv_hsk3_movie_01#L1"
+  ],
+  "hsk1_喜欢": [
+    "conv_hsk3_movie_01#L2",
+    "conv_hsk4_media_01#L2"
+  ],
+  "hsk3_动作": [
+    "conv_hsk3_movie_01#L2",
+    "conv_hsk3_movie_01#L3"
+  ],
+  "hsk2_片": [
+    "conv_hsk3_movie_01#L2",
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk3_movie_01#L4"
+  ],
+  "hsk3_部": [
+    "conv_hsk3_movie_01#L3"
+  ],
+  "hsk3_爱情": [
+    "conv_hsk3_movie_01#L3",
+    "conv_hsk3_movie_01#L4"
+  ],
+  "hsk2_听说": [
+    "conv_hsk3_movie_01#L3"
+  ],
+  "hsk4_花": [
+    "conv_hsk3_movie_01#L5"
+  ],
+  "hsk2_银行": [
+    "conv_hsk3_bank_02#L0"
+  ],
+  "hsk3_手续": [
+    "conv_hsk3_bank_02#L0"
+  ],
+  "hsk4_居住": [
+    "conv_hsk3_bank_02#L1"
+  ],
+  "hsk3_证明": [
+    "conv_hsk3_bank_02#L1"
+  ],
+  "hsk3_租": [
+    "conv_hsk3_bank_02#L1"
+  ],
+  "hsk4_合同": [
+    "conv_hsk3_bank_02#L1"
+  ],
+  "hsk2_带来": [
+    "conv_hsk3_bank_02#L2"
+  ],
+  "hsk2_推": [
+    "conv_hsk3_bank_02#L3"
+  ],
+  "hsk2_借": [
+    "conv_hsk3_bank_02#L3",
+    "conv_hsk3_bank_02#L4"
+  ],
+  "hsk1_记": [
+    "conv_hsk3_bank_02#L3",
+    "conv_hsk3_bank_02#L4"
+  ],
+  "hsk3_日常": [
+    "conv_hsk3_bank_02#L3"
+  ],
+  "hsk4_宝": [
+    "conv_hsk3_bank_02#L3"
+  ],
+  "hsk3_存": [
+    "conv_hsk3_bank_02#L4",
+    "conv_hsk3_bank_02#L5"
+  ],
+  "hsk3_低": [
+    "conv_hsk3_bank_02#L4",
+    "conv_hsk3_bank_02#L5"
+  ],
+  "hsk3_活": [
+    "conv_hsk3_bank_02#L5"
+  ],
+  "hsk3_媒体": [
+    "conv_hsk4_debate_01#L0"
+  ],
+  "hsk2_它": [
+    "conv_hsk4_debate_01#L1",
+    "conv_hsk4_debate_01#L2"
+  ],
+  "hsk3_随": [
+    "conv_hsk4_debate_01#L1"
+  ],
+  "hsk2_地": [
+    "conv_hsk4_debate_01#L1"
+  ],
+  "hsk1_朋友": [
+    "conv_hsk4_debate_01#L1"
+  ],
+  "hsk3_保持": [
+    "conv_hsk4_debate_01#L1",
+    "conv_hsk4_emergency_01#L1",
+    "conv_hsk4_media_01#L5"
+  ],
+  "hsk4_获取": [
+    "conv_hsk4_debate_01#L1",
+    "conv_hsk4_media_01#L0"
+  ],
+  "hsk2_信息": [
+    "conv_hsk4_debate_01#L1"
+  ],
+  "hsk2_年轻": [
+    "conv_hsk4_debate_01#L2"
+  ],
+  "hsk4_心理": [
+    "conv_hsk4_debate_01#L2"
+  ],
+  "hsk2_健康": [
+    "conv_hsk4_debate_01#L2"
+  ],
+  "hsk2_倒": [
+    "conv_hsk4_debate_01#L3",
+    "conv_hsk4_emergency_01#L0"
+  ],
+  "hsk3_现实": [
+    "conv_hsk4_debate_01#L3"
+  ],
+  "hsk3_关系": [
+    "conv_hsk4_debate_01#L3"
+  ],
+  "hsk4_在于": [
+    "conv_hsk4_debate_01#L4"
+  ],
+  "hsk3_合理": [
+    "conv_hsk4_debate_01#L4"
+  ],
+  "hsk4_而": [
+    "conv_hsk4_debate_01#L4"
+  ],
+  "hsk2_完全": [
+    "conv_hsk4_debate_01#L4"
+  ],
+  "hsk3_如何": [
+    "conv_hsk4_debate_01#L5",
+    "conv_hsk4_scholarship_01#L2"
+  ],
+  "hsk4_自": [
+    "conv_hsk4_debate_01#L5"
+  ],
+  "hsk2_介绍": [
+    "conv_hsk4_scholarship_01#L0"
+  ],
+  "hsk3_文化": [
+    "conv_hsk4_scholarship_01#L1"
+  ],
+  "hsk4_未来": [
+    "conv_hsk4_scholarship_01#L1"
+  ],
+  "hsk3_职业": [
+    "conv_hsk4_scholarship_01#L1"
+  ],
+  "hsk3_经历": [
+    "conv_hsk4_scholarship_01#L2"
+  ],
+  "hsk1_去年": [
+    "conv_hsk4_scholarship_01#L3"
+  ],
+  "hsk4_暑假": [
+    "conv_hsk4_scholarship_01#L3"
+  ],
+  "hsk4_曾": [
+    "conv_hsk4_scholarship_01#L3"
+  ],
+  "hsk3_交流": [
+    "conv_hsk4_scholarship_01#L3"
+  ],
+  "hsk4_之间": [
+    "conv_hsk4_scholarship_01#L5"
+  ],
+  "hsk4_企业": [
+    "conv_hsk4_scholarship_01#L5"
+  ],
+  "hsk2_平时": [
+    "conv_hsk4_media_01#L0"
+  ],
+  "hsk1_哪些": [
+    "conv_hsk4_media_01#L0",
+    "conv_hsk4_media_01#L4"
+  ],
+  "hsk2_道": [
+    "conv_hsk4_media_01#L0"
+  ],
+  "hsk2_新闻": [
+    "conv_hsk4_media_01#L0",
+    "conv_hsk4_media_01#L1",
+    "conv_hsk4_media_01#L2",
+    "conv_hsk4_media_01#L3",
+    "conv_hsk4_media_01#L4",
+    "conv_hsk4_media_01#L5"
+  ],
+  "hsk2_主要": [
+    "conv_hsk4_media_01#L1"
+  ],
+  "hsk1_电视": [
+    "conv_hsk4_media_01#L1"
+  ],
+  "hsk2_纸": [
+    "conv_hsk4_media_01#L2"
+  ],
+  "hsk2_报纸": [
+    "conv_hsk4_media_01#L2"
+  ],
+  "hsk2_比": [
+    "conv_hsk4_media_01#L2"
+  ],
+  "hsk4_网络": [
+    "conv_hsk4_media_01#L2",
+    "conv_hsk4_media_01#L3"
+  ],
+  "hsk3_可靠": [
+    "conv_hsk4_media_01#L2"
+  ],
+  "hsk2_观点": [
+    "conv_hsk4_media_01#L3"
+  ],
+  "hsk2_有意思": [
+    "conv_hsk4_media_01#L3"
+  ],
+  "hsk3_速度": [
+    "conv_hsk4_media_01#L3"
+  ],
+  "hsk2_不同": [
+    "conv_hsk4_media_01#L3"
+  ],
+  "hsk2_角度": [
+    "conv_hsk4_media_01#L3"
+  ],
+  "hsk3_报道": [
+    "conv_hsk4_media_01#L3"
+  ],
+  "hsk3_确实": [
+    "conv_hsk4_media_01#L4"
+  ],
+  "hsk3_假": [
+    "conv_hsk4_media_01#L4"
+  ],
+  "hsk4_方": [
+    "conv_hsk4_media_01#L5"
+  ],
+  "hsk4_才": [
+    "conv_hsk4_media_01#L5"
+  ],
+  "hsk2_急": [
+    "conv_hsk4_emergency_01#L0"
+  ],
+  "hsk3_救": [
+    "conv_hsk4_emergency_01#L0",
+    "conv_hsk4_emergency_01#L3",
+    "conv_hsk4_emergency_01#L5"
+  ],
+  "hsk2_中心": [
+    "conv_hsk4_emergency_01#L0"
+  ],
+  "hsk2_有人": [
+    "conv_hsk4_emergency_01#L0"
+  ],
+  "hsk4_冷静": [
+    "conv_hsk4_emergency_01#L1"
+  ],
+  "hsk1_告诉": [
+    "conv_hsk4_emergency_01#L1"
+  ],
+  "hsk4_位置": [
+    "conv_hsk4_emergency_01#L1"
+  ],
+  "hsk3_村": [
+    "conv_hsk4_emergency_01#L2"
+  ],
+  "hsk2_街": [
+    "conv_hsk4_emergency_01#L2"
+  ],
+  "hsk1_北": [
+    "conv_hsk4_emergency_01#L2"
+  ],
+  "hsk3_环": [
+    "conv_hsk4_emergency_01#L2"
+  ],
+  "hsk1_门口": [
+    "conv_hsk4_emergency_01#L2"
+  ],
+  "hsk1_车": [
+    "conv_hsk4_emergency_01#L3",
+    "conv_hsk4_emergency_01#L5"
+  ],
+  "hsk3_出发": [
+    "conv_hsk4_emergency_01#L3"
+  ],
+  "hsk3_伤": [
+    "conv_hsk4_emergency_01#L3"
+  ],
+  "hsk3_者": [
+    "conv_hsk4_emergency_01#L3"
+  ],
+  "hsk4_呼吸": [
+    "conv_hsk4_emergency_01#L3",
+    "conv_hsk4_emergency_01#L4"
+  ],
+  "hsk1_她": [
+    "conv_hsk4_emergency_01#L4",
+    "conv_hsk4_emergency_01#L5"
+  ],
+  "hsk3_反应": [
+    "conv_hsk4_emergency_01#L4"
+  ],
+  "hsk2_放": [
+    "conv_hsk4_emergency_01#L4"
+  ],
+  "hsk2_平": [
+    "conv_hsk4_emergency_01#L4"
+  ],
+  "hsk3_继续": [
+    "conv_hsk4_emergency_01#L5"
+  ],
+  "hsk2_身边": [
+    "conv_hsk4_emergency_01#L5"
+  ],
+  "hsk3_大约": [
+    "conv_hsk4_emergency_01#L5"
+  ],
+  "hsk3_到达": [
+    "conv_hsk4_emergency_01#L5"
+  ]
+}

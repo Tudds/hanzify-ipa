@@ -65,6 +65,13 @@
       "g_bi",
       "g_zui",
       "g_geng"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他是比我更努力。",
+        "right": "✅ 他是更努力的那个。/ 他确实比我努力。",
+        "note": "是 + 比较/更/最 nhấn mạnh thuộc tính — không ghép trực tiếp 是 + 比 + người trong cùng mệnh đề."
+      }
     ]
   },
   {
@@ -128,6 +135,13 @@
     ],
     "sentenceRefs": [
       "conv_health_01#L2"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 以来三年，我一直在这里工作。",
+        "right": "✅ 三年以来，我一直在这里工作。",
+        "note": "以来 đặt SAU mốc thời gian: 三年以来, 毕业以来, 那时以来. Không đặt đầu câu trước mốc thời gian."
+      }
     ]
   },
   {
@@ -198,6 +212,14 @@
     ],
     "sentenceRefs": [
       "conv_negotiation_01#L3"
+    ],
+    "isAdvanced": true,
+    "commonMistakes": [
+      {
+        "wrong": "❌ 至于他，他很好。",
+        "right": "✅ 至于他的情况，我不太了解。",
+        "note": "至于 dùng để chuyển sang chủ đề phụ, thường có hàm ý 'còn về phần...'. Không dùng khi chủ đề chính."
+      }
     ]
   },
   {
@@ -266,7 +288,14 @@
       "g4_zhi_yu",
       "g4_duiyu"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我关于这件事不太了解。",
+        "right": "✅ 关于这件事，我不太了解。",
+        "note": "关于 + chủ đề thường đứng ĐẦU câu làm trạng ngữ khung, không đứng giữa câu trước V."
+      }
+    ]
   },
   {
     "id": "g4_duiyu",
@@ -334,7 +363,14 @@
       "g4_guanyu",
       "g4_zhi_yu"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 对于我，这很容易。",
+        "right": "✅ 对我来说，这很容易。/ 对于这个问题，我有自己的看法。",
+        "note": "对于 + đối tượng/vấn đề (trung tính). Nói về thái độ của chủ thể nên dùng 对...来说."
+      }
+    ]
   },
   {
     "id": "g4_nar_ne",
@@ -397,6 +433,13 @@
     "relatedGrammar": [
       "g_neg_bu",
       "g_ne"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 哪儿有好？（phủ định nhẹ）",
+        "right": "✅ 哪儿有那么好呢？",
+        "note": "哪儿有...呢 cần có 那么/这么 trước tính từ để tạo câu phủ định nhẹ tự nhiên: 哪儿有那么好呢."
+      }
     ]
   },
   {
@@ -465,6 +508,13 @@
       "g_bixu",
       "g_yinggai",
       "g_yao"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你非要去不可吗？",
+        "right": "✅ 你非去不可吗？",
+        "note": "非...不可 — giữa 非 và 不可 là động từ/cụm V, không thêm 要 vào: 非去不可, không phải 非要去不可."
+      }
     ]
   },
   {
@@ -527,6 +577,14 @@
     ],
     "sentenceRefs": [
       "conv_environment_01#L1"
+    ],
+    "isAdvanced": true,
+    "commonMistakes": [
+      {
+        "wrong": "❌ 所谓的朋友就是朋友。",
+        "right": "✅ 所谓的朋友，就是在你需要时出现的人。",
+        "note": "所谓 mang hàm ý hoài nghi hoặc định nghĩa lại. Nếu dùng với câu quá đơn giản sẽ mất đi sắc thái."
+      }
     ]
   },
   {
@@ -593,6 +651,13 @@
     ],
     "sentenceRefs": [
       "conv_social_hsk4_01#L3"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他喜欢运动，尤其游泳。",
+        "right": "✅ 他喜欢运动，尤其是游泳。",
+        "note": "尤其 thường đi với 是 khi theo sau là danh từ/cụm danh từ: 尤其是 + N."
+      }
     ]
   },
   {
@@ -655,6 +720,13 @@
       "g_shi",
       "g4_fei_bu_ke",
       "g_jishi_ye"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 就是他不对，我也原谅你。",
+        "right": "✅ 就是他不对，你也不应该这样。",
+        "note": "就是 (dù vậy đi nữa) = 即使. Cần đảm bảo logic nhượng bộ trong câu nhất quán."
+      }
     ]
   },
   {
@@ -726,6 +798,13 @@
     ],
     "sentenceRefs": [
       "conv_complaint_01#L4"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 难道他是对的？",
+        "right": "✅ 难道他是对的吗？",
+        "note": "难道 là câu hỏi tu từ — hầu như luôn kết thúc bằng 吗 hoặc 不成."
+      }
     ]
   },
   {
@@ -803,7 +882,14 @@
       "g_jishi_ye",
       "g4_jiushi"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 无论你去，我不去。",
+        "right": "✅ 无论你去不去，我都不去。",
+        "note": "无论 thường đi với cấu trúc 'A还是B' hoặc 'V不V'. Mệnh đề kết quả phải có 都/也."
+      }
+    ]
   },
   {
     "id": "g4_biran",
@@ -874,6 +960,13 @@
     ],
     "sentenceRefs": [
       "conv_negotiation_01#L6"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他必然来了。",
+        "right": "✅ 他必然会来。/ 这必然是真的。",
+        "note": "必然/必定 biểu thị tất yếu khách quan — thường kết hợp với 会/是. Không kết hợp trực tiếp với 了."
+      }
     ]
   },
   {
@@ -944,6 +1037,13 @@
     ],
     "sentenceRefs": [
       "conv_social_hsk4_01#L5"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他依然了在学习。",
+        "right": "✅ 他依然在学习。",
+        "note": "依然/仍然 là phó từ đặt trước V/Adj. Không kèm 了 trừ khi 了 thuộc về cấu trúc khác ở cuối câu."
+      }
     ]
   },
   {
@@ -1007,6 +1107,13 @@
     "relatedGrammar": [
       "g4_yi_lai",
       "g_time_word"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他从此以后不来了。（ok nhưng thừa）",
+        "right": "✅ 从此，他再也没来过。",
+        "note": "从此 đã hàm nghĩa 'từ đó trở đi' — 以后 là thừa. Kết hợp tốt với 再也不/没: 从此再也不..."
+      }
     ]
   },
   {
@@ -1078,6 +1185,13 @@
     ],
     "sentenceRefs": [
       "conv_negotiation_01#L2"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 基于这个，所以我们决定…",
+        "right": "✅ 基于以上分析，我们决定…",
+        "note": "基于 mang tính văn viết/formal cao. Thường đi kèm từ ngữ trừu tượng: 基于此/基于以上/基于事实."
+      }
     ]
   },
   {
@@ -1148,6 +1262,13 @@
     ],
     "sentenceRefs": [
       "conv_workplace_04#L2"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 百分七十的人同意。",
+        "right": "✅ 百分之七十的人同意。",
+        "note": "Phần trăm bắt buộc có 之: 百分之 + số. Thiếu 之 là lỗi ngữ pháp cơ bản."
+      }
     ]
   },
   {
@@ -1216,6 +1337,13 @@
       "g_buguan",
       "g4_wulun",
       "g_shenme"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 哪儿都他去。",
+        "right": "✅ 他哪儿都去。/ 哪儿他都去。",
+        "note": "哪儿都 — chủ ngữ đứng trước hoặc sau 哪儿, nhưng 都 phải đứng trước V: 哪儿都 + V."
+      }
     ]
   },
   {
@@ -1292,6 +1420,13 @@
       "g_yinwei_suoyi",
       "g4_jiyu",
       "g4_wulun"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他为成功而努力。（ok）\n更sai: ❌ 他为而努力成功。",
+        "right": "✅ 他为成功而努力。",
+        "note": "为 + mục đích/nguyên nhân + 而 + động từ. Thứ tự cố định — không đảo 而 lên trước 为."
+      }
     ]
   },
   {
@@ -1367,6 +1502,13 @@
     ],
     "sentenceRefs": [
       "conv_environment_01#L4"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 甚至他也来了。（không tự nhiên）",
+        "right": "✅ 他甚至连父母也没告诉。",
+        "note": "甚至 thường đứng trước ví dụ cực đoan nhất, kết hợp với 连...都/也 để tăng nhấn mạnh."
+      }
     ]
   },
   {
@@ -1443,6 +1585,13 @@
       "g_yinwei_suoyi",
       "g_cai",
       "g_jiu"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 因为努力，他才成功了。（thiếu 所以）",
+        "right": "✅ 因为他很努力，所以才成功了。",
+        "note": "所以才 = 'vì vậy mới' — nhấn mạnh nguyên nhân dẫn đến kết quả đặc biệt. Nên có 因为 ở mệnh đề trước."
+      }
     ]
   },
   {
@@ -1502,6 +1651,13 @@
     "relatedGrammar": [
       "g4_suowei",
       "g4_biran"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他一石两鸟地解决了问题。",
+        "right": "✅ 他一石二鸟，同时解决了两个问题。",
+        "note": "Thành ngữ 4 chữ là đơn vị cố định — không thêm 地 để làm trạng ngữ trực tiếp. Dùng riêng làm nhận xét."
+      }
     ]
   },
   {
@@ -1586,6 +1742,13 @@
       "g_ba",
       "g_result_complement",
       "g_direction_complement"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他把书放桌子。",
+        "right": "✅ 他把书放在桌子上。",
+        "note": "把 + V địa điểm cần đầy đủ 在 + N + 方位词. Thiếu phương vị từ (上/里/下) là câu chưa hoàn chỉnh."
+      }
     ]
   },
   {
@@ -1658,6 +1821,13 @@
       "g_bei",
       "g_ba",
       "g4_ba_result"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 钱包被偷。",
+        "right": "✅ 钱包被偷了。/ 钱包被人偷走了。",
+        "note": "被 cần có bổ ngữ/了 sau V. Câu 被 kết thúc ở V mà không có gì sau nghe thiếu tự nhiên."
+      }
     ]
   },
   {
@@ -1721,6 +1891,13 @@
     ],
     "sentenceRefs": [
       "conv_health_01#L2"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 他可能不来了吧。",
+        "right": "✅ 他可能不来了。/ 他不来了吧。",
+        "note": "可能 và 吧 đều biểu thị suy đoán — dùng hai cùng nhau là thừa và nghe thiếu tự nhiên."
+      }
     ]
   },
   {
@@ -1800,6 +1977,13 @@
     ],
     "sentenceRefs": [
       "conv_environment_01#L2"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 来说我，学习很重要。",
+        "right": "✅ 对我来说，学习很重要。",
+        "note": "...来说 đứng ở cuối cụm giới ngữ, không đứng đầu câu một mình. Cần: 对/从 + đối tượng + 来说."
+      }
     ]
   },
   {
@@ -1860,6 +2044,13 @@
       "g_result_complement",
       "g4_ba_result",
       "g_de_potential"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 你看懂这本书了吗？（bình thường）vs 你看完了这本书没有？",
+        "right": "✅ Chọn đúng bổ ngữ theo nghĩa: 看完 (đọc hết), 看懂 (hiểu được), 看到 (đọc đến chỗ).",
+        "note": "完/懂/到/好 có nghĩa khác nhau — chọn sai bổ ngữ sẽ thay đổi hoàn toàn ý nghĩa câu."
+      }
     ]
   },
   {
@@ -1928,7 +2119,14 @@
       "g_yinwei_suoyi",
       "g4_wulun"
     ],
-    "sentenceRefs": []
+    "sentenceRefs": [],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 我着急他。",
+        "right": "✅ 我为他着急。/ 我替他担心。",
+        "note": "着急/担心 không trực tiếp nhận tân ngữ. Muốn nói lo cho ai: 为/替 + người + 着急/担心."
+      }
+    ]
   },
   {
     "id": "g4_ruguo_maning",
@@ -1999,6 +2197,13 @@
     ],
     "sentenceRefs": [
       "conv_health_01#L6"
+    ],
+    "commonMistakes": [
+      {
+        "wrong": "❌ 万一下雨，带伞。",
+        "right": "✅ 万一下雨，你就带伞吧。",
+        "note": "万一 (lỡ như) — mệnh đề kết quả cần có chủ ngữ rõ ràng và thường có 就/也 để hoàn chỉnh khuyến nghị."
+      }
     ]
   }
 ]

@@ -28,7 +28,8 @@
       "cảm xúc",
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_安排",
@@ -64,7 +65,8 @@
       "hành động",
       "công việc",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_安全",
@@ -100,7 +102,8 @@
       "giao thông",
       "sức khỏe",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_按时",
@@ -131,7 +134,8 @@
       "thời gian",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk3_按照",
@@ -161,7 +165,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_百",
@@ -190,7 +195,8 @@
     "tags": [
       "số lượng",
       "tài chính"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_棒",
@@ -219,7 +225,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_包括",
@@ -248,7 +255,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_保护",
@@ -279,7 +287,8 @@
       "hành động",
       "thiên nhiên",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_保证",
@@ -314,7 +323,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_抱歉",
@@ -344,7 +354,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_倍",
@@ -372,7 +383,8 @@
     "wordType": "mw",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_本来",
@@ -401,7 +413,8 @@
     "wordType": "adv",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_笔记本",
@@ -438,7 +451,8 @@
       "học tập",
       "công nghệ",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_毕业",
@@ -469,7 +483,8 @@
       "học tập",
       "giáo dục",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_表示",
@@ -504,7 +519,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_表演",
@@ -540,7 +556,8 @@
       "nghệ thuật",
       "sở thích",
       "âm nhạc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_冰",
@@ -570,7 +587,8 @@
       "thời tiết",
       "ẩm thực",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_不得不",
@@ -600,7 +618,8 @@
     "wordType": "aux",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_不管",
@@ -629,7 +648,8 @@
     "wordType": "conj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_不过",
@@ -663,7 +683,8 @@
     "wordType": "conj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_不仅",
@@ -692,7 +713,8 @@
     "wordType": "conj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_部分",
@@ -721,7 +743,8 @@
     "wordType": "n",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_猜",
@@ -750,7 +773,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_材料",
@@ -781,7 +805,8 @@
       "công việc",
       "học tập",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_菜单",
@@ -811,7 +836,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_参观",
@@ -842,7 +868,8 @@
       "du lịch",
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_厕所",
@@ -871,7 +898,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_曾经",
@@ -900,7 +928,8 @@
     "wordType": "adv",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_叉子",
@@ -929,7 +958,8 @@
     "wordType": "n",
     "tags": [
       "ẩm thực"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_差不多",
@@ -965,7 +995,8 @@
     "tags": [
       "số lượng",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_产品",
@@ -995,7 +1026,8 @@
     "tags": [
       "mua sắm",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_长途",
@@ -1030,7 +1062,8 @@
     "tags": [
       "giao thông",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_超过",
@@ -1060,7 +1093,8 @@
     "tags": [
       "hành động",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_成功",
@@ -1096,7 +1130,8 @@
       "công việc",
       "cảm xúc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_成为",
@@ -1125,7 +1160,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_乘坐",
@@ -1155,7 +1191,8 @@
     "tags": [
       "giao thông",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_吃惊",
@@ -1184,7 +1221,8 @@
     "wordType": "v",
     "tags": [
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_重新",
@@ -1214,7 +1252,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_出发",
@@ -1245,7 +1284,8 @@
       "giao thông",
       "du lịch",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_出现",
@@ -1274,7 +1314,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_厨房",
@@ -1305,7 +1346,8 @@
       "địa điểm",
       "ẩm thực",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_传统",
@@ -1339,7 +1381,8 @@
     "wordType": "n",
     "tags": [
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_窗户",
@@ -1368,7 +1411,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_词语",
@@ -1399,7 +1443,8 @@
       "học tập",
       "giáo dục",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_存在",
@@ -1433,7 +1478,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_打折",
@@ -1463,7 +1509,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_大概",
@@ -1498,7 +1545,8 @@
     "tags": [
       "thời gian",
       "số lượng"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_大使馆",
@@ -1529,7 +1577,8 @@
     "tags": [
       "địa điểm",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_大约",
@@ -1559,7 +1608,8 @@
     "tags": [
       "số lượng",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_打印",
@@ -1590,7 +1640,8 @@
       "công việc",
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_代表",
@@ -1626,7 +1677,8 @@
       "giao tiếp",
       "công việc",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_单独",
@@ -1657,7 +1709,8 @@
       "cảm xúc",
       "tính cách",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_当时",
@@ -1686,7 +1739,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_导游",
@@ -1716,7 +1770,8 @@
     "tags": [
       "nghề nghiệp",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_得到",
@@ -1745,7 +1800,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_灯",
@@ -1773,7 +1829,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_等",
@@ -1802,7 +1859,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_低",
@@ -1835,7 +1893,8 @@
     "wordType": "adj",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_底",
@@ -1864,7 +1923,8 @@
     "tags": [
       "thời gian",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_点心",
@@ -1893,7 +1953,8 @@
     "wordType": "n",
     "tags": [
       "ẩm thực"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_掉",
@@ -1921,7 +1982,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_定",
@@ -1955,7 +2017,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_丢",
@@ -1983,7 +2046,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_动作",
@@ -2012,7 +2076,8 @@
     "wordType": "n",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_肚子",
@@ -2041,7 +2106,8 @@
     "wordType": "n",
     "tags": [
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_堆",
@@ -2079,7 +2145,8 @@
     "wordType": "n",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_对面",
@@ -2108,7 +2175,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_而且",
@@ -2137,7 +2205,8 @@
     "wordType": "conj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_发展",
@@ -2172,7 +2241,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_法律",
@@ -2202,7 +2272,8 @@
     "tags": [
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_翻译",
@@ -2238,7 +2309,8 @@
       "nghề nghiệp",
       "học tập",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk3_方法",
@@ -2268,7 +2340,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_方面",
@@ -2298,7 +2371,8 @@
     "tags": [
       "giao tiếp",
       "học tập"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_方向",
@@ -2328,7 +2402,8 @@
     "tags": [
       "địa điểm",
       "giao thông"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_放弃",
@@ -2358,7 +2433,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_非常",
@@ -2388,7 +2464,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_分析",
@@ -2424,7 +2501,8 @@
       "học tập",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_风景",
@@ -2455,7 +2533,8 @@
       "du lịch",
       "thiên nhiên",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk3_服务",
@@ -2491,7 +2570,8 @@
       "công việc",
       "mua sắm",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_符合",
@@ -2521,7 +2601,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_父母",
@@ -2550,7 +2631,8 @@
     "wordType": "n",
     "tags": [
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_改变",
@@ -2585,7 +2667,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_感情",
@@ -2615,7 +2698,8 @@
     "tags": [
       "cảm xúc",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_感兴趣",
@@ -2646,7 +2730,8 @@
     "tags": [
       "sở thích",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_各",
@@ -2674,7 +2759,8 @@
     "wordType": "adj",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_根据",
@@ -2709,7 +2795,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_跟",
@@ -2743,7 +2830,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_工资",
@@ -2773,7 +2861,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_共同",
@@ -2803,7 +2892,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_鼓励",
@@ -2833,7 +2923,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_顾客",
@@ -2863,7 +2954,8 @@
     "tags": [
       "mua sắm",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_挂",
@@ -2891,7 +2983,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_管理",
@@ -2926,7 +3019,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_光",
@@ -2966,7 +3060,8 @@
       "thiên nhiên",
       "hành động",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_广告",
@@ -2996,7 +3091,8 @@
     "tags": [
       "mua sắm",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_规定",
@@ -3031,7 +3127,8 @@
     "tags": [
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_国际",
@@ -3061,7 +3158,8 @@
     "tags": [
       "địa điểm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_过程",
@@ -3091,7 +3189,8 @@
     "tags": [
       "thời gian",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_海",
@@ -3121,7 +3220,8 @@
       "thiên nhiên",
       "du lịch",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_喊",
@@ -3150,7 +3250,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_行",
@@ -3180,7 +3281,8 @@
       "nghề nghiệp",
       "công việc",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_好处",
@@ -3211,7 +3313,8 @@
       "công việc",
       "học tập",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_好看",
@@ -3242,7 +3345,8 @@
       "cảm xúc",
       "nghệ thuật",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_合适",
@@ -3273,7 +3377,8 @@
       "mua sắm",
       "công việc",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_互联网",
@@ -3303,7 +3408,8 @@
     "wordType": "n",
     "tags": [
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_互相",
@@ -3334,7 +3440,8 @@
       "giao tiếp",
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_护照",
@@ -3365,7 +3472,8 @@
       "du lịch",
       "địa điểm",
       "giao thông"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_化学",
@@ -3395,7 +3503,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_话题",
@@ -3426,7 +3535,8 @@
       "giao tiếp",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_怀疑",
@@ -3461,7 +3571,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_欢迎",
@@ -3491,7 +3602,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_活动",
@@ -3527,7 +3639,8 @@
       "sở thích",
       "hành động",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_活泼",
@@ -3557,7 +3670,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_火",
@@ -3592,7 +3706,8 @@
       "thiên nhiên",
       "cảm xúc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_几乎",
@@ -3622,7 +3737,8 @@
     "tags": [
       "số lượng",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_计划",
@@ -3658,7 +3774,8 @@
       "công việc",
       "học tập",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_记者",
@@ -3689,7 +3806,8 @@
       "nghề nghiệp",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_技术",
@@ -3720,7 +3838,8 @@
       "công nghệ",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_继续",
@@ -3751,7 +3870,8 @@
       "hành động",
       "thời gian",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_假",
@@ -3786,7 +3906,8 @@
       "thời gian",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_建立",
@@ -3817,7 +3938,8 @@
       "công việc",
       "hành động",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_交",
@@ -3847,7 +3969,8 @@
       "giao tiếp",
       "hành động",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_交通",
@@ -3878,7 +4001,8 @@
       "giao thông",
       "địa điểm",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_骄傲",
@@ -3908,7 +4032,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_节日",
@@ -3939,7 +4064,8 @@
       "văn hóa",
       "thời gian",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_解决",
@@ -3970,7 +4096,8 @@
       "hành động",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_禁止",
@@ -4001,7 +4128,8 @@
       "hành động",
       "giao tiếp",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_经济",
@@ -4036,7 +4164,8 @@
     "tags": [
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_经验",
@@ -4067,7 +4196,8 @@
       "công việc",
       "học tập",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_精彩",
@@ -4098,7 +4228,8 @@
       "cảm xúc",
       "nghệ thuật",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_竟然",
@@ -4128,7 +4259,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_举办",
@@ -4159,7 +4291,8 @@
       "hành động",
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_举行",
@@ -4190,7 +4323,8 @@
       "hành động",
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_距离",
@@ -4226,7 +4360,8 @@
       "địa điểm",
       "giao thông",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_开心",
@@ -4256,7 +4391,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_看来",
@@ -4286,7 +4422,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_科学",
@@ -4317,7 +4454,8 @@
       "giáo dục",
       "công nghệ",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_可爱",
@@ -4348,7 +4486,8 @@
       "cảm xúc",
       "tính cách",
       "động vật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_客人",
@@ -4379,7 +4518,8 @@
       "giao tiếp",
       "gia đình",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_困",
@@ -4408,7 +4548,8 @@
     "tags": [
       "sức khỏe",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_困难",
@@ -4444,7 +4585,8 @@
       "công việc",
       "học tập",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_拉",
@@ -4472,7 +4614,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_垃圾桶",
@@ -4503,7 +4646,8 @@
     "tags": [
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_来不及",
@@ -4535,7 +4679,8 @@
       "thời gian",
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_来得及",
@@ -4566,7 +4711,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_来自",
@@ -4596,7 +4742,8 @@
     "tags": [
       "địa điểm",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_懒",
@@ -4625,7 +4772,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_浪费",
@@ -4656,7 +4804,8 @@
       "tài chính",
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_浪漫",
@@ -4687,7 +4836,8 @@
       "cảm xúc",
       "tính cách",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_老虎",
@@ -4717,7 +4867,8 @@
     "tags": [
       "động vật",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_了解",
@@ -4748,7 +4899,8 @@
       "hành động",
       "giao tiếp",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_邻居",
@@ -4779,7 +4931,8 @@
       "gia đình",
       "địa điểm",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_龙",
@@ -4809,7 +4962,8 @@
       "văn hóa",
       "động vật",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_聊天",
@@ -4840,7 +4994,8 @@
       "giao tiếp",
       "sở thích",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_麻烦",
@@ -4881,7 +5036,8 @@
       "cảm xúc",
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_目的",
@@ -4912,7 +5068,8 @@
       "công việc",
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_秘书",
@@ -4942,7 +5099,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_免费",
@@ -4972,7 +5130,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk3_哪怕",
@@ -5001,7 +5160,8 @@
     "wordType": "conj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_耐心",
@@ -5037,7 +5197,8 @@
       "tính cách",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_难道",
@@ -5066,7 +5227,8 @@
     "wordType": "adv",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_内容",
@@ -5097,7 +5259,8 @@
       "học tập",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_普通话",
@@ -5129,7 +5292,8 @@
       "giáo dục",
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_其实",
@@ -5158,7 +5322,8 @@
     "wordType": "adv",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_其他",
@@ -5188,7 +5353,8 @@
     "tags": [
       "số lượng",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_奇怪",
@@ -5218,7 +5384,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_亲戚",
@@ -5248,7 +5415,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_情况",
@@ -5278,7 +5446,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_穷",
@@ -5307,7 +5476,8 @@
     "tags": [
       "tài chính",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_全部",
@@ -5341,7 +5511,8 @@
     "wordType": "adj",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_热情",
@@ -5377,7 +5548,8 @@
       "tính cách",
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_认为",
@@ -5407,7 +5579,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_认真",
@@ -5438,7 +5611,8 @@
       "tính cách",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_任何",
@@ -5468,7 +5642,8 @@
     "tags": [
       "số lượng",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_散步",
@@ -5499,7 +5674,8 @@
       "sở thích",
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_上网",
@@ -5530,7 +5706,8 @@
       "công nghệ",
       "sở thích",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_社会",
@@ -5560,7 +5737,8 @@
     "tags": [
       "văn hóa",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_申请",
@@ -5596,7 +5774,8 @@
       "công việc",
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk3_甚至",
@@ -5625,7 +5804,8 @@
     "wordType": "adv",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_生活",
@@ -5661,7 +5841,8 @@
       "hành động",
       "cảm xúc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_失去",
@@ -5691,7 +5872,8 @@
     "tags": [
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_食物",
@@ -5720,7 +5902,8 @@
     "wordType": "n",
     "tags": [
       "ẩm thực"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_收入",
@@ -5755,7 +5938,8 @@
     "tags": [
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_首先",
@@ -5785,7 +5969,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_受到",
@@ -5816,7 +6001,8 @@
       "giao tiếp",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_暑假",
@@ -5847,7 +6033,8 @@
       "thời gian",
       "học tập",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_数量",
@@ -5876,7 +6063,8 @@
     "wordType": "n",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_说明",
@@ -5911,7 +6099,8 @@
     "tags": [
       "giao tiếp",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_顺序",
@@ -5941,7 +6130,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_随便",
@@ -5976,7 +6166,8 @@
     "tags": [
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_随着",
@@ -6005,7 +6196,8 @@
     "wordType": "prep",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_态度",
@@ -6035,7 +6227,8 @@
     "tags": [
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_讨论",
@@ -6071,7 +6264,8 @@
       "giao tiếp",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_讨厌",
@@ -6106,7 +6300,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_提供",
@@ -6136,7 +6331,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_提前",
@@ -6171,7 +6367,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_提问",
@@ -6201,7 +6398,8 @@
     "tags": [
       "giao tiếp",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_体育",
@@ -6232,7 +6430,8 @@
       "thể thao",
       "sở thích",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_通过",
@@ -6268,7 +6467,8 @@
       "hành động",
       "học tập",
       "giao thông"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_通知",
@@ -6304,7 +6504,8 @@
       "giao tiếp",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_同情",
@@ -6334,7 +6535,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_同时",
@@ -6369,7 +6571,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_头发",
@@ -6398,7 +6601,8 @@
     "wordType": "n",
     "tags": [
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_突然",
@@ -6433,7 +6637,8 @@
     "tags": [
       "thời gian",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_网站",
@@ -6463,7 +6668,8 @@
     "tags": [
       "công nghệ",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_卫生间",
@@ -6493,7 +6699,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_温度",
@@ -6523,7 +6730,8 @@
     "tags": [
       "thời tiết",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_文化",
@@ -6553,7 +6761,8 @@
     "tags": [
       "văn hóa",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_文章",
@@ -6583,7 +6792,8 @@
     "tags": [
       "giáo dục",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_污染",
@@ -6618,7 +6828,8 @@
     "tags": [
       "thiên nhiên",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_无聊",
@@ -6648,7 +6859,8 @@
     "tags": [
       "cảm xúc",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_无论",
@@ -6678,7 +6890,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_西红柿",
@@ -6709,7 +6922,8 @@
     "tags": [
       "ẩm thực",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_习惯",
@@ -6744,7 +6958,8 @@
     "tags": [
       "tính cách",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_下载",
@@ -6774,7 +6989,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_现代",
@@ -6809,7 +7025,8 @@
     "tags": [
       "thời gian",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_相同",
@@ -6839,7 +7056,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_相信",
@@ -6869,7 +7087,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_详细",
@@ -6899,7 +7118,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_消息",
@@ -6929,7 +7149,8 @@
     "tags": [
       "giao tiếp",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_小吃",
@@ -6959,7 +7180,8 @@
     "tags": [
       "ẩm thực",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_效果",
@@ -6989,7 +7211,8 @@
     "tags": [
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_心情",
@@ -7019,7 +7242,8 @@
     "tags": [
       "cảm xúc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_辛苦",
@@ -7054,7 +7278,8 @@
     "tags": [
       "công việc",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_行为",
@@ -7085,7 +7310,8 @@
       "hành động",
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_幸福",
@@ -7121,7 +7347,8 @@
       "cảm xúc",
       "gia đình",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_修",
@@ -7151,7 +7378,8 @@
       "hành động",
       "công việc",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_许多",
@@ -7180,7 +7408,8 @@
     "wordType": "adj",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_演出",
@@ -7216,7 +7445,8 @@
       "nghệ thuật",
       "sở thích",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_养成",
@@ -7247,7 +7477,8 @@
       "hành động",
       "tính cách",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_页",
@@ -7276,7 +7507,8 @@
     "tags": [
       "học tập",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_以后",
@@ -7305,7 +7537,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_以前",
@@ -7334,7 +7567,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_以为",
@@ -7364,7 +7598,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_一般",
@@ -7399,7 +7634,8 @@
     "tags": [
       "tính cách",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_一边",
@@ -7429,7 +7665,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_一会儿",
@@ -7459,7 +7696,8 @@
     "wordType": "adv",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_意见",
@@ -7490,7 +7728,8 @@
       "giao tiếp",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_有趣",
@@ -7520,7 +7759,8 @@
     "tags": [
       "cảm xúc",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_语言",
@@ -7551,7 +7791,8 @@
       "học tập",
       "giao tiếp",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_在乎",
@@ -7582,7 +7823,8 @@
       "cảm xúc",
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_暂时",
@@ -7616,7 +7858,8 @@
     "wordType": "adv",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_增加",
@@ -7647,7 +7890,8 @@
       "số lượng",
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_占",
@@ -7677,7 +7921,8 @@
       "hành động",
       "số lượng",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_长大",
@@ -7708,7 +7953,8 @@
       "gia đình",
       "thời gian",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_照顾",
@@ -7739,7 +7985,8 @@
       "gia đình",
       "hành động",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_照片",
@@ -7770,7 +8017,8 @@
       "sở thích",
       "du lịch",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_照相机",
@@ -7802,7 +8050,8 @@
       "công nghệ",
       "sở thích",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_正确",
@@ -7833,7 +8082,8 @@
       "học tập",
       "công việc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_整理",
@@ -7864,7 +8114,8 @@
       "hành động",
       "công việc",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_证明",
@@ -7900,7 +8151,8 @@
       "giao tiếp",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_只有",
@@ -7930,7 +8182,8 @@
     "tags": [
       "số lượng",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_质量",
@@ -7960,7 +8213,8 @@
     "tags": [
       "mua sắm",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_准备",
@@ -7995,7 +8249,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_准确",
@@ -8030,7 +8285,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_仔细",
@@ -8065,7 +8321,8 @@
     "tags": [
       "tính cách",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_自然",
@@ -8100,7 +8357,8 @@
     "tags": [
       "thiên nhiên",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_总结",
@@ -8136,7 +8394,8 @@
       "học tập",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_租",
@@ -8166,7 +8425,8 @@
       "tài chính",
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_最好",
@@ -8201,7 +8461,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_爱心",
@@ -8231,7 +8492,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_安装",
@@ -8262,7 +8524,8 @@
       "công nghệ",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_按",
@@ -8291,7 +8554,8 @@
     "tags": [
       "hành động",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_把",
@@ -8319,7 +8583,8 @@
     "wordType": "prep",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_把握",
@@ -8350,7 +8615,8 @@
       "hành động",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_白",
@@ -8379,7 +8645,8 @@
     "tags": [
       "tài chính",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_白菜",
@@ -8408,7 +8675,8 @@
     "wordType": "n",
     "tags": [
       "ẩm thực"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_班级",
@@ -8439,7 +8707,8 @@
       "học tập",
       "giáo dục",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_搬",
@@ -8469,7 +8738,8 @@
       "hành động",
       "gia đình",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_搬家",
@@ -8500,7 +8770,8 @@
       "gia đình",
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_板",
@@ -8529,7 +8800,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_办理",
@@ -8559,7 +8831,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_保",
@@ -8588,7 +8861,8 @@
     "tags": [
       "địa điểm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_保安",
@@ -8619,7 +8893,8 @@
       "nghề nghiệp",
       "công việc",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_保持",
@@ -8650,7 +8925,8 @@
       "hành động",
       "sức khỏe",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_保存",
@@ -8681,7 +8957,8 @@
       "hành động",
       "công nghệ",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_保留",
@@ -8712,7 +8989,8 @@
       "hành động",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_保险",
@@ -8742,7 +9020,8 @@
     "tags": [
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_报",
@@ -8772,7 +9051,8 @@
       "giao tiếp",
       "văn hóa",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_报到",
@@ -8803,7 +9083,8 @@
       "công việc",
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_报道",
@@ -8834,7 +9115,8 @@
       "giao tiếp",
       "văn hóa",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_报告",
@@ -8865,7 +9147,8 @@
       "công việc",
       "học tập",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_背",
@@ -8894,7 +9177,8 @@
     "tags": [
       "hành động",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_北部",
@@ -8925,7 +9209,8 @@
       "địa điểm",
       "du lịch",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_背后",
@@ -8956,7 +9241,8 @@
       "địa điểm",
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_被",
@@ -8985,7 +9271,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_被子",
@@ -9015,7 +9302,8 @@
     "tags": [
       "gia đình",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_本领",
@@ -9046,7 +9334,8 @@
       "tính cách",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_本事",
@@ -9077,7 +9366,8 @@
       "tính cách",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_比较",
@@ -9107,7 +9397,8 @@
     "tags": [
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_比例",
@@ -9138,7 +9429,8 @@
       "số lượng",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_比赛",
@@ -9169,7 +9461,8 @@
       "thể thao",
       "sở thích",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_必然",
@@ -9200,7 +9493,8 @@
       "hành động",
       "cảm xúc",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_必要",
@@ -9231,7 +9525,8 @@
       "hành động",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_变化",
@@ -9262,7 +9557,8 @@
       "thời gian",
       "thiên nhiên",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_变为",
@@ -9292,7 +9588,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_标题",
@@ -9323,7 +9620,8 @@
       "giao tiếp",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_标准",
@@ -9354,7 +9652,8 @@
       "công việc",
       "học tập",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_表达",
@@ -9385,7 +9684,8 @@
       "giao tiếp",
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_表格",
@@ -9416,7 +9716,8 @@
       "công việc",
       "hành động",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_表面",
@@ -9447,7 +9748,8 @@
       "thiên nhiên",
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_表明",
@@ -9477,7 +9779,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_表现",
@@ -9508,7 +9811,8 @@
       "tính cách",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_并",
@@ -9537,7 +9841,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_并且",
@@ -9567,7 +9872,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_播出",
@@ -9598,7 +9904,8 @@
       "công nghệ",
       "giao tiếp",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_播放",
@@ -9629,7 +9936,8 @@
       "công nghệ",
       "âm nhạc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_不必",
@@ -9659,7 +9967,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_不断",
@@ -9689,7 +9998,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_不论",
@@ -9719,7 +10029,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_补",
@@ -9748,7 +10059,8 @@
     "tags": [
       "hành động",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_补充",
@@ -9778,7 +10090,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_不安",
@@ -9808,7 +10121,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_不光",
@@ -9838,7 +10152,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_布",
@@ -9867,7 +10182,8 @@
     "tags": [
       "mua sắm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_步",
@@ -9896,7 +10212,8 @@
     "tags": [
       "hành động",
       "thể thao"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_部",
@@ -9925,7 +10242,8 @@
     "tags": [
       "công việc",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_部门",
@@ -9955,7 +10273,8 @@
     "tags": [
       "công việc",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_部长",
@@ -9985,7 +10304,8 @@
     "tags": [
       "công việc",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_才能",
@@ -10016,7 +10336,8 @@
       "tính cách",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_采取",
@@ -10046,7 +10367,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_采用",
@@ -10076,7 +10398,8 @@
     "tags": [
       "hành động",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_彩色",
@@ -10106,7 +10429,8 @@
     "tags": [
       "màu sắc",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_产生",
@@ -10136,7 +10460,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_长城",
@@ -10167,7 +10492,8 @@
       "du lịch",
       "địa điểm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_长处",
@@ -10198,7 +10524,8 @@
       "tính cách",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_长期",
@@ -10229,7 +10556,8 @@
       "thời gian",
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_厂",
@@ -10258,7 +10586,8 @@
     "tags": [
       "địa điểm",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_场合",
@@ -10289,7 +10618,8 @@
       "giao tiếp",
       "văn hóa",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_场所",
@@ -10319,7 +10649,8 @@
     "tags": [
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_超级",
@@ -10350,7 +10681,8 @@
       "số lượng",
       "cảm xúc",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_朝",
@@ -10379,7 +10711,8 @@
     "tags": [
       "văn hóa",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_吵",
@@ -10409,7 +10742,8 @@
       "cảm xúc",
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_吵架",
@@ -10440,7 +10774,8 @@
       "giao tiếp",
       "cảm xúc",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_衬衫",
@@ -10470,7 +10805,8 @@
     "tags": [
       "mua sắm",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_衬衣",
@@ -10500,7 +10836,8 @@
     "tags": [
       "mua sắm",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_称为",
@@ -10530,7 +10867,8 @@
     "tags": [
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_成果",
@@ -10560,7 +10898,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_成就",
@@ -10591,7 +10930,8 @@
       "công việc",
       "học tập",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_成立",
@@ -10620,7 +10960,8 @@
     "wordType": "v",
     "tags": [
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_成熟",
@@ -10651,7 +10992,8 @@
       "tính cách",
       "cảm xúc",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_成员",
@@ -10682,7 +11024,8 @@
       "gia đình",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_成长",
@@ -10713,7 +11056,8 @@
       "gia đình",
       "thời gian",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_城",
@@ -10742,7 +11086,8 @@
     "tags": [
       "địa điểm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_城市",
@@ -10772,7 +11117,8 @@
     "tags": [
       "địa điểm",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_程度",
@@ -10803,7 +11149,8 @@
       "học tập",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_持续",
@@ -10833,7 +11180,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_充满",
@@ -10863,7 +11211,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_重",
@@ -10892,7 +11241,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_初",
@@ -10921,7 +11271,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_初步",
@@ -10952,7 +11303,8 @@
       "thời gian",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_初级",
@@ -10983,7 +11335,8 @@
       "học tập",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_初中",
@@ -11013,7 +11366,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_除了",
@@ -11043,7 +11397,8 @@
     "tags": [
       "giao tiếp",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_处理",
@@ -11073,7 +11428,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_传",
@@ -11103,7 +11459,8 @@
       "giao tiếp",
       "văn hóa",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_传播",
@@ -11134,7 +11491,8 @@
       "giao tiếp",
       "công nghệ",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_传来",
@@ -11165,7 +11523,8 @@
       "giao tiếp",
       "âm nhạc",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_传说",
@@ -11195,7 +11554,8 @@
     "tags": [
       "văn hóa",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_创新",
@@ -11226,7 +11586,8 @@
       "công việc",
       "công nghệ",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_创业",
@@ -11257,7 +11618,8 @@
       "công việc",
       "tài chính",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_创造",
@@ -11288,7 +11650,8 @@
       "công việc",
       "nghệ thuật",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_创作",
@@ -11319,7 +11682,8 @@
       "nghệ thuật",
       "sở thích",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_从来",
@@ -11349,7 +11713,8 @@
     "tags": [
       "thời gian",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_从前",
@@ -11379,7 +11744,8 @@
     "tags": [
       "thời gian",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_从事",
@@ -11409,7 +11775,8 @@
     "tags": [
       "công việc",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_村",
@@ -11438,7 +11805,8 @@
     "tags": [
       "địa điểm",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_存",
@@ -11467,7 +11835,8 @@
     "tags": [
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_错误",
@@ -11498,7 +11867,8 @@
       "học tập",
       "công việc",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_达到",
@@ -11529,7 +11899,8 @@
       "công việc",
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_打破",
@@ -11559,7 +11930,8 @@
     "tags": [
       "hành động",
       "thể thao"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_打听",
@@ -11589,7 +11961,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_大夫",
@@ -11619,7 +11992,8 @@
     "tags": [
       "nghề nghiệp",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_代",
@@ -11649,7 +12023,8 @@
       "công việc",
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_代表团",
@@ -11681,7 +12056,8 @@
       "giao tiếp",
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_带动",
@@ -11711,7 +12087,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_带领",
@@ -11742,7 +12119,8 @@
       "công việc",
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_单元",
@@ -11773,7 +12151,8 @@
       "địa điểm",
       "số lượng",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_当初",
@@ -11803,7 +12182,8 @@
     "tags": [
       "thời gian",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_当地",
@@ -11833,7 +12213,8 @@
     "tags": [
       "địa điểm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_当然",
@@ -11863,7 +12244,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_当中",
@@ -11893,7 +12275,8 @@
     "tags": [
       "số lượng",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_刀",
@@ -11922,7 +12305,8 @@
     "tags": [
       "ẩm thực",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_导演",
@@ -11953,7 +12337,8 @@
       "nghề nghiệp",
       "nghệ thuật",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_到达",
@@ -11984,7 +12369,8 @@
       "giao thông",
       "thời gian",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_到底",
@@ -12014,7 +12400,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_得分",
@@ -12045,7 +12432,8 @@
       "thể thao",
       "số lượng",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_等待",
@@ -12076,7 +12464,8 @@
       "thời gian",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_底下",
@@ -12105,7 +12494,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_地区",
@@ -12135,7 +12525,8 @@
     "tags": [
       "địa điểm",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_电视剧",
@@ -12167,7 +12558,8 @@
       "sở thích",
       "nghệ thuật",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_电视台",
@@ -12199,7 +12591,8 @@
       "công nghệ",
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_电台",
@@ -12230,7 +12623,8 @@
       "công nghệ",
       "giao tiếp",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_电子邮件",
@@ -12263,7 +12657,8 @@
       "công nghệ",
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_调",
@@ -12293,7 +12688,8 @@
       "hành động",
       "công việc",
       "giao thông"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_调查",
@@ -12324,7 +12720,8 @@
       "công việc",
       "hành động",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_订",
@@ -12354,7 +12751,8 @@
       "mua sắm",
       "du lịch",
       "công việc"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_定期",
@@ -12385,7 +12783,8 @@
       "thời gian",
       "công việc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_东部",
@@ -12415,7 +12814,8 @@
     "tags": [
       "địa điểm",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_动力",
@@ -12446,7 +12846,8 @@
       "cảm xúc",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_动人",
@@ -12477,7 +12878,8 @@
       "cảm xúc",
       "nghệ thuật",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_读者",
@@ -12508,7 +12910,8 @@
       "giáo dục",
       "văn hóa",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_短处",
@@ -12539,7 +12942,8 @@
       "tính cách",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_短裤",
@@ -12568,7 +12972,8 @@
     "wordType": "n",
     "tags": [
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_短期",
@@ -12599,7 +13004,8 @@
       "thời gian",
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_断",
@@ -12627,7 +13033,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_队员",
@@ -12658,7 +13065,8 @@
       "thể thao",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_对待",
@@ -12688,7 +13096,8 @@
     "tags": [
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_对方",
@@ -12717,7 +13126,8 @@
     "wordType": "n",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_对手",
@@ -12747,7 +13157,8 @@
     "tags": [
       "thể thao",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_对象",
@@ -12778,7 +13189,8 @@
       "giao tiếp",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_顿",
@@ -12806,7 +13218,8 @@
     "wordType": "mw",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_发表",
@@ -12837,7 +13250,8 @@
       "giao tiếp",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_发出",
@@ -12867,7 +13281,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_发达",
@@ -12898,7 +13313,8 @@
       "công nghệ",
       "tài chính",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_发动",
@@ -12928,7 +13344,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_发明",
@@ -12958,7 +13375,8 @@
     "tags": [
       "công nghệ",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_发生",
@@ -12987,7 +13405,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_发送",
@@ -13017,7 +13436,8 @@
     "tags": [
       "công nghệ",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_发言",
@@ -13047,7 +13467,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_反对",
@@ -13077,7 +13498,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_反复",
@@ -13107,7 +13529,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_反应",
@@ -13137,7 +13560,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_反正",
@@ -13166,7 +13590,8 @@
     "wordType": "adv",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_范围",
@@ -13197,7 +13622,8 @@
       "địa điểm",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_方式",
@@ -13228,7 +13654,8 @@
       "giao tiếp",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_防",
@@ -13258,7 +13685,8 @@
       "sức khỏe",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_防止",
@@ -13289,7 +13717,8 @@
       "sức khỏe",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_房东",
@@ -13320,7 +13749,8 @@
       "địa điểm",
       "giao tiếp",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_房屋",
@@ -13350,7 +13780,8 @@
     "tags": [
       "địa điểm",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_房租",
@@ -13381,7 +13812,8 @@
       "tài chính",
       "địa điểm",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_访问",
@@ -13412,7 +13844,8 @@
       "giao tiếp",
       "du lịch",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_放到",
@@ -13441,7 +13874,8 @@
     "wordType": "n",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_飞行",
@@ -13472,7 +13906,8 @@
       "giao thông",
       "hành động",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_费",
@@ -13502,7 +13937,8 @@
       "tài chính",
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_费用",
@@ -13533,7 +13969,8 @@
       "tài chính",
       "mua sắm",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_分别",
@@ -13564,7 +14001,8 @@
       "cảm xúc",
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_分配",
@@ -13595,7 +14033,8 @@
       "công việc",
       "hành động",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_分组",
@@ -13626,7 +14065,8 @@
       "học tập",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_丰富",
@@ -13657,7 +14097,8 @@
       "sở thích",
       "văn hóa",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_风险",
@@ -13688,7 +14129,8 @@
       "tài chính",
       "công việc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_否定",
@@ -13719,7 +14161,8 @@
       "giao tiếp",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_否认",
@@ -13750,7 +14193,8 @@
       "giao tiếp",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_服装",
@@ -13780,7 +14224,8 @@
     "tags": [
       "mua sắm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_福",
@@ -13809,7 +14254,8 @@
     "tags": [
       "cảm xúc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_父亲",
@@ -13838,7 +14284,8 @@
     "wordType": "n",
     "tags": [
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_付",
@@ -13868,7 +14315,8 @@
       "tài chính",
       "mua sắm",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_负责",
@@ -13899,7 +14347,8 @@
       "công việc",
       "tính cách",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_复印",
@@ -13930,7 +14379,8 @@
       "công việc",
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_复杂",
@@ -13961,7 +14411,8 @@
       "công việc",
       "học tập",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_富",
@@ -13991,7 +14442,8 @@
       "tài chính",
       "tính cách",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_改进",
@@ -14022,7 +14474,8 @@
       "công việc",
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_改造",
@@ -14053,7 +14506,8 @@
       "công việc",
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_概念",
@@ -14084,7 +14538,8 @@
       "học tập",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_赶",
@@ -14114,7 +14569,8 @@
       "hành động",
       "thời gian",
       "thể thao"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_赶到",
@@ -14145,7 +14601,8 @@
       "hành động",
       "thời gian",
       "giao thông"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_赶紧",
@@ -14176,7 +14633,8 @@
       "hành động",
       "thời gian",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_赶快",
@@ -14207,7 +14665,8 @@
       "hành động",
       "thời gian",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_敢",
@@ -14237,7 +14696,8 @@
       "tính cách",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_感冒",
@@ -14267,7 +14727,8 @@
     "tags": [
       "sức khỏe",
       "thời tiết"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_感受",
@@ -14298,7 +14759,8 @@
       "cảm xúc",
       "sở thích",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_干吗",
@@ -14328,7 +14790,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_高速",
@@ -14359,7 +14822,8 @@
       "giao thông",
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_高速公路",
@@ -14391,7 +14855,8 @@
     "tags": [
       "giao thông",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_告别",
@@ -14422,7 +14887,8 @@
       "giao tiếp",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_歌迷",
@@ -14453,7 +14919,8 @@
       "âm nhạc",
       "sở thích",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_歌声",
@@ -14484,7 +14951,8 @@
       "âm nhạc",
       "cảm xúc",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_歌手",
@@ -14515,7 +14983,8 @@
       "nghề nghiệp",
       "âm nhạc",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_个人",
@@ -14546,7 +15015,8 @@
       "công việc",
       "học tập",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_个性",
@@ -14576,7 +15046,8 @@
     "tags": [
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_各地",
@@ -14607,7 +15078,8 @@
       "địa điểm",
       "du lịch",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_各位",
@@ -14637,7 +15109,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_各种",
@@ -14668,7 +15141,8 @@
       "mua sắm",
       "ẩm thực",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_各自",
@@ -14698,7 +15172,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_根本",
@@ -14729,7 +15204,8 @@
       "học tập",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_更加",
@@ -14760,7 +15236,8 @@
       "cảm xúc",
       "hành động",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_工厂",
@@ -14791,7 +15268,8 @@
       "công việc",
       "địa điểm",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_工程师",
@@ -14823,7 +15301,8 @@
       "nghề nghiệp",
       "công việc",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_工夫",
@@ -14853,7 +15332,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_工具",
@@ -14884,7 +15364,8 @@
       "công việc",
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_工业",
@@ -14915,7 +15396,8 @@
       "công việc",
       "công nghệ",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_公布",
@@ -14946,7 +15428,8 @@
       "giao tiếp",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_公共",
@@ -14977,7 +15460,8 @@
       "địa điểm",
       "giao thông",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_公开",
@@ -15008,7 +15492,8 @@
       "giao tiếp",
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_公民",
@@ -15038,7 +15523,8 @@
     "tags": [
       "văn hóa",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_公务员",
@@ -15069,7 +15555,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_功夫",
@@ -15100,7 +15587,8 @@
       "thể thao",
       "sở thích",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_功课",
@@ -15130,7 +15618,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_功能",
@@ -15160,7 +15649,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_共有",
@@ -15190,7 +15680,8 @@
     "tags": [
       "số lượng",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_姑娘",
@@ -15220,7 +15711,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_古",
@@ -15250,7 +15742,8 @@
       "thời gian",
       "văn hóa",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_古代",
@@ -15280,7 +15773,8 @@
     "tags": [
       "thời gian",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_故乡",
@@ -15311,7 +15805,8 @@
       "địa điểm",
       "gia đình",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_关系",
@@ -15342,7 +15837,8 @@
       "giao tiếp",
       "gia đình",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_关注",
@@ -15373,7 +15869,8 @@
       "cảm xúc",
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_观察",
@@ -15404,7 +15901,8 @@
       "hành động",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_观看",
@@ -15435,7 +15933,8 @@
       "sở thích",
       "hành động",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_观念",
@@ -15466,7 +15965,8 @@
       "văn hóa",
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_观众",
@@ -15496,7 +15996,8 @@
     "tags": [
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_管",
@@ -15525,7 +16026,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_光明",
@@ -15555,7 +16057,8 @@
     "tags": [
       "cảm xúc",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_广播",
@@ -15585,7 +16088,8 @@
     "tags": [
       "công nghệ",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_广大",
@@ -15615,7 +16119,8 @@
     "tags": [
       "số lượng",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_规范",
@@ -15645,7 +16150,8 @@
     "tags": [
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_国内",
@@ -15675,7 +16181,8 @@
     "tags": [
       "địa điểm",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_国庆",
@@ -15705,7 +16212,8 @@
     "tags": [
       "thời gian",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_果然",
@@ -15735,7 +16243,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_果汁",
@@ -15765,7 +16274,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_过去",
@@ -15795,7 +16305,8 @@
     "tags": [
       "thời gian",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_哈哈",
@@ -15825,7 +16336,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_海关",
@@ -15855,7 +16367,8 @@
     "tags": [
       "địa điểm",
       "giao thông"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_害怕",
@@ -15885,7 +16398,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_好好",
@@ -15915,7 +16429,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_好奇",
@@ -15945,7 +16460,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_合",
@@ -15974,7 +16490,8 @@
     "tags": [
       "hành động",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_合法",
@@ -16004,7 +16521,8 @@
     "tags": [
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_合格",
@@ -16034,7 +16552,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_合理",
@@ -16064,7 +16583,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_合作",
@@ -16094,7 +16614,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_和平",
@@ -16124,7 +16645,8 @@
     "tags": [
       "văn hóa",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_红茶",
@@ -16154,7 +16676,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_红酒",
@@ -16184,7 +16707,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_后果",
@@ -16214,7 +16738,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_后面",
@@ -16244,7 +16769,8 @@
     "tags": [
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_后年",
@@ -16273,7 +16799,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_划船",
@@ -16304,7 +16831,8 @@
       "sở thích",
       "thể thao",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_华人",
@@ -16335,7 +16863,8 @@
       "văn hóa",
       "giao tiếp",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_化",
@@ -16364,7 +16893,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_话剧",
@@ -16395,7 +16925,8 @@
       "nghệ thuật",
       "sở thích",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_欢乐",
@@ -16424,7 +16955,8 @@
     "wordType": "adj",
     "tags": [
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_环",
@@ -16452,7 +16984,8 @@
     "wordType": "n",
     "tags": [
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_环保",
@@ -16483,7 +17016,8 @@
       "thiên nhiên",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_环境",
@@ -16514,7 +17048,8 @@
       "thiên nhiên",
       "địa điểm",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_会议",
@@ -16544,7 +17079,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_会员",
@@ -16574,7 +17110,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_活",
@@ -16603,7 +17140,8 @@
     "tags": [
       "động vật",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_机器",
@@ -16633,7 +17171,8 @@
     "tags": [
       "công nghệ",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_积极",
@@ -16664,7 +17203,8 @@
       "tính cách",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_基本",
@@ -16694,7 +17234,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_基本上",
@@ -16725,7 +17266,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_基础",
@@ -16756,7 +17298,8 @@
       "học tập",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_及时",
@@ -16787,7 +17330,8 @@
       "thời gian",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_…极了",
@@ -16818,7 +17362,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_集体",
@@ -16849,7 +17394,8 @@
       "công việc",
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_集中",
@@ -16880,7 +17426,8 @@
       "học tập",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_计算",
@@ -16911,7 +17458,8 @@
       "công việc",
       "học tập",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_记录",
@@ -16942,7 +17490,8 @@
       "học tập",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_纪录",
@@ -16972,7 +17521,8 @@
     "tags": [
       "thể thao",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_纪念",
@@ -17003,7 +17553,8 @@
       "văn hóa",
       "thời gian",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_加工",
@@ -17034,7 +17585,8 @@
       "công việc",
       "công nghệ",
       "ẩm thực"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_加快",
@@ -17065,7 +17617,8 @@
       "hành động",
       "công việc",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_加强",
@@ -17096,7 +17649,8 @@
       "hành động",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_家具",
@@ -17127,7 +17681,8 @@
       "mua sắm",
       "địa điểm",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_家属",
@@ -17157,7 +17712,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_家乡",
@@ -17188,7 +17744,8 @@
       "địa điểm",
       "gia đình",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_价格",
@@ -17218,7 +17775,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_价钱",
@@ -17248,7 +17806,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_价值",
@@ -17279,7 +17838,8 @@
       "tài chính",
       "văn hóa",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_架",
@@ -17309,7 +17869,8 @@
       "số lượng",
       "giao thông",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_坚持",
@@ -17340,7 +17901,8 @@
       "tính cách",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_坚决",
@@ -17370,7 +17932,8 @@
     "tags": [
       "tính cách",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_坚强",
@@ -17400,7 +17963,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_简单",
@@ -17431,7 +17995,8 @@
       "tính cách",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_简直",
@@ -17461,7 +18026,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_建",
@@ -17491,7 +18057,8 @@
       "hành động",
       "công việc",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_建成",
@@ -17522,7 +18089,8 @@
       "công việc",
       "địa điểm",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_建设",
@@ -17553,7 +18121,8 @@
       "công việc",
       "địa điểm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_建议",
@@ -17584,7 +18153,8 @@
       "giao tiếp",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_将近",
@@ -17614,7 +18184,8 @@
     "tags": [
       "thời gian",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_将来",
@@ -17645,7 +18216,8 @@
       "thời gian",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_交费",
@@ -17676,7 +18248,8 @@
       "tài chính",
       "hành động",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_交警",
@@ -17707,7 +18280,8 @@
       "nghề nghiệp",
       "giao thông",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_交流",
@@ -17738,7 +18312,8 @@
       "giao tiếp",
       "học tập",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_交往",
@@ -17769,7 +18344,8 @@
       "giao tiếp",
       "hành động",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_交易",
@@ -17800,7 +18376,8 @@
       "tài chính",
       "mua sắm",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_叫",
@@ -17829,7 +18406,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_较",
@@ -17858,7 +18436,8 @@
     "tags": [
       "số lượng",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_教材",
@@ -17888,7 +18467,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_教练",
@@ -17919,7 +18499,8 @@
       "thể thao",
       "nghề nghiệp",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_结实",
@@ -17948,7 +18529,8 @@
     "wordType": "adj",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_接待",
@@ -17979,7 +18561,8 @@
       "giao tiếp",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_接近",
@@ -18010,7 +18593,8 @@
       "hành động",
       "địa điểm",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_节约",
@@ -18040,7 +18624,8 @@
     "tags": [
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_结合",
@@ -18070,7 +18655,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_结婚",
@@ -18101,7 +18687,8 @@
       "gia đình",
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_结束",
@@ -18131,7 +18718,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_解开",
@@ -18160,7 +18748,8 @@
     "wordType": "n",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_金",
@@ -18190,7 +18779,8 @@
       "màu sắc",
       "tài chính",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_金牌",
@@ -18219,7 +18809,8 @@
     "wordType": "n",
     "tags": [
       "thể thao"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_仅",
@@ -18248,7 +18839,8 @@
     "tags": [
       "số lượng",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_仅仅",
@@ -18278,7 +18870,8 @@
     "tags": [
       "số lượng",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_尽量",
@@ -18308,7 +18901,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_紧",
@@ -18336,7 +18930,8 @@
     "wordType": "adj",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_紧急",
@@ -18367,7 +18962,8 @@
       "thời gian",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_紧张",
@@ -18398,7 +18994,8 @@
       "cảm xúc",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_进步",
@@ -18429,7 +19026,8 @@
       "học tập",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_进一步",
@@ -18461,7 +19059,8 @@
       "hành động",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_进展",
@@ -18492,7 +19091,8 @@
       "công việc",
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_近期",
@@ -18521,7 +19121,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_京剧",
@@ -18551,7 +19152,8 @@
     "tags": [
       "văn hóa",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_经历",
@@ -18581,7 +19183,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_经营",
@@ -18611,7 +19214,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_精神",
@@ -18641,7 +19245,8 @@
     "tags": [
       "cảm xúc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_景色",
@@ -18671,7 +19276,8 @@
     "tags": [
       "thiên nhiên",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_警察",
@@ -18701,7 +19307,8 @@
     "tags": [
       "nghề nghiệp",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_静",
@@ -18730,7 +19337,8 @@
     "tags": [
       "cảm xúc",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_久",
@@ -18758,7 +19366,8 @@
     "wordType": "adj",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_旧",
@@ -18787,7 +19396,8 @@
     "tags": [
       "hành động",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_救",
@@ -18816,7 +19426,8 @@
     "tags": [
       "hành động",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_就是",
@@ -18845,7 +19456,8 @@
     "wordType": "conj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_就业",
@@ -18875,7 +19487,8 @@
     "tags": [
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_具体",
@@ -18905,7 +19518,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_具有",
@@ -18935,7 +19549,8 @@
     "tags": [
       "tính cách",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_剧场",
@@ -18965,7 +19580,8 @@
     "tags": [
       "địa điểm",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_据说",
@@ -18994,7 +19610,8 @@
     "wordType": "v",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_决定",
@@ -19024,7 +19641,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_决赛",
@@ -19054,7 +19672,8 @@
     "tags": [
       "thể thao",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_决心",
@@ -19084,7 +19703,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_绝对",
@@ -19114,7 +19734,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_咖啡",
@@ -19143,7 +19764,8 @@
     "wordType": "n",
     "tags": [
       "ẩm thực"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_开发",
@@ -19173,7 +19795,8 @@
     "tags": [
       "công việc",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_开放",
@@ -19203,7 +19826,8 @@
     "tags": [
       "hành động",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_开始",
@@ -19233,7 +19857,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_开业",
@@ -19264,7 +19889,8 @@
       "công việc",
       "tài chính",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_开展",
@@ -19295,7 +19921,8 @@
       "công việc",
       "hành động",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_看起来",
@@ -19327,7 +19954,8 @@
       "giao tiếp",
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_看上去",
@@ -19359,7 +19987,8 @@
       "giao tiếp",
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_考验",
@@ -19390,7 +20019,8 @@
       "học tập",
       "công việc",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_科技",
@@ -19421,7 +20051,8 @@
       "công nghệ",
       "giáo dục",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_可靠",
@@ -19452,7 +20083,8 @@
       "tính cách",
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_可乐",
@@ -19483,7 +20115,8 @@
       "cảm xúc",
       "tính cách",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_克服",
@@ -19514,7 +20147,8 @@
       "hành động",
       "cảm xúc",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_客观",
@@ -19545,7 +20179,8 @@
       "giao tiếp",
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_课程",
@@ -19576,7 +20211,8 @@
       "học tập",
       "giáo dục",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_空",
@@ -19606,7 +20242,8 @@
       "số lượng",
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_空调",
@@ -19637,7 +20274,8 @@
       "công nghệ",
       "địa điểm",
       "thời tiết"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_恐怕",
@@ -19668,7 +20306,8 @@
       "cảm xúc",
       "giao tiếp",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_空儿",
@@ -19699,7 +20338,8 @@
       "thời gian",
       "sở thích",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_裤子",
@@ -19730,7 +20370,8 @@
       "mua sắm",
       "màu sắc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_快速",
@@ -19761,7 +20402,8 @@
       "hành động",
       "giao thông",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_老百姓",
@@ -19792,7 +20434,8 @@
     "tags": [
       "văn hóa",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_老板",
@@ -19823,7 +20466,8 @@
       "công việc",
       "nghề nghiệp",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_老太太",
@@ -19854,7 +20498,8 @@
     "tags": [
       "gia đình",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_老头儿",
@@ -19885,7 +20530,8 @@
     "tags": [
       "gia đình",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_乐",
@@ -19915,7 +20561,8 @@
       "cảm xúc",
       "sở thích",
       "âm nhạc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_乐观",
@@ -19946,7 +20593,8 @@
       "tính cách",
       "cảm xúc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_类",
@@ -19976,7 +20624,8 @@
       "số lượng",
       "học tập",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_类似",
@@ -20007,7 +20656,8 @@
       "số lượng",
       "học tập",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_离婚",
@@ -20037,7 +20687,8 @@
     "tags": [
       "gia đình",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_里面",
@@ -20067,7 +20718,8 @@
     "tags": [
       "địa điểm",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_理发",
@@ -20097,7 +20749,8 @@
     "tags": [
       "hành động",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_理解",
@@ -20128,7 +20781,8 @@
       "giao tiếp",
       "cảm xúc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_理论",
@@ -20159,7 +20813,8 @@
       "học tập",
       "giáo dục",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_理由",
@@ -20189,7 +20844,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_力",
@@ -20219,7 +20875,8 @@
       "thể thao",
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_力量",
@@ -20250,7 +20907,8 @@
       "thể thao",
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_立刻",
@@ -20280,7 +20938,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_利用",
@@ -20310,7 +20969,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_连",
@@ -20339,7 +20999,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_连忙",
@@ -20370,7 +21031,8 @@
       "hành động",
       "thời gian",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_连续",
@@ -20400,7 +21062,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_连续剧",
@@ -20431,7 +21094,8 @@
     "tags": [
       "sở thích",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_联合",
@@ -20461,7 +21125,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_联合国",
@@ -20493,7 +21158,8 @@
       "văn hóa",
       "công việc",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_联系",
@@ -20523,7 +21189,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_凉水",
@@ -20553,7 +21220,8 @@
     "tags": [
       "ẩm thực",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_了",
@@ -20582,7 +21250,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_领",
@@ -20611,7 +21280,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_领导",
@@ -20642,7 +21312,8 @@
       "nghề nghiệp",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_领先",
@@ -20672,7 +21343,8 @@
     "tags": [
       "công việc",
       "thể thao"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_另外",
@@ -20702,7 +21374,8 @@
     "tags": [
       "giao tiếp",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_另一方面",
@@ -20734,7 +21407,8 @@
     "tags": [
       "giao tiếp",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_留学",
@@ -20765,7 +21439,8 @@
       "học tập",
       "giáo dục",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_录",
@@ -20795,7 +21470,8 @@
       "hành động",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_录音",
@@ -20826,7 +21502,8 @@
       "hành động",
       "công nghệ",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_路线",
@@ -20857,7 +21534,8 @@
       "địa điểm",
       "giao thông",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_旅馆",
@@ -20888,7 +21566,8 @@
       "địa điểm",
       "du lịch",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_旅行社",
@@ -20919,7 +21598,8 @@
     "tags": [
       "du lịch",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_绿茶",
@@ -20949,7 +21629,8 @@
     "tags": [
       "ẩm thực",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_乱",
@@ -20979,7 +21660,8 @@
       "tính cách",
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_落后",
@@ -21010,7 +21692,8 @@
       "công việc",
       "giáo dục",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_马",
@@ -21040,7 +21723,8 @@
       "động vật",
       "thể thao",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_满足",
@@ -21071,7 +21755,8 @@
       "cảm xúc",
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_慢慢",
@@ -21101,7 +21786,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_毛",
@@ -21129,7 +21815,8 @@
     "wordType": "n",
     "tags": [
       "động vật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_毛病",
@@ -21160,7 +21847,8 @@
       "công việc",
       "tính cách",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_没用",
@@ -21190,7 +21878,8 @@
     "tags": [
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_媒体",
@@ -21221,7 +21910,8 @@
       "công nghệ",
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_每",
@@ -21250,7 +21940,8 @@
     "tags": [
       "số lượng",
       "thời gian"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_美",
@@ -21279,7 +21970,8 @@
     "tags": [
       "địa điểm",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_美好",
@@ -21308,7 +22000,8 @@
     "wordType": "adj",
     "tags": [
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_美丽",
@@ -21339,7 +22032,8 @@
       "tính cách",
       "thiên nhiên",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_美食",
@@ -21370,7 +22064,8 @@
       "ẩm thực",
       "du lịch",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_美术",
@@ -21401,7 +22096,8 @@
       "nghệ thuật",
       "giáo dục",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_美元",
@@ -21430,7 +22126,8 @@
     "wordType": "n",
     "tags": [
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_迷",
@@ -21459,7 +22156,8 @@
     "tags": [
       "cảm xúc",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_米",
@@ -21488,7 +22186,8 @@
     "tags": [
       "ẩm thực",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_面对",
@@ -21519,7 +22218,8 @@
       "hành động",
       "cảm xúc",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_面积",
@@ -21549,7 +22249,8 @@
     "tags": [
       "địa điểm",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_民间",
@@ -21579,7 +22280,8 @@
     "tags": [
       "văn hóa",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_民族",
@@ -21609,7 +22311,8 @@
     "tags": [
       "văn hóa",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_明确",
@@ -21639,7 +22342,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_明显",
@@ -21669,7 +22373,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_命运",
@@ -21699,7 +22404,8 @@
     "tags": [
       "cảm xúc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_某",
@@ -21728,7 +22434,8 @@
     "tags": [
       "số lượng",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_母亲",
@@ -21758,7 +22465,8 @@
     "tags": [
       "gia đình",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_木头",
@@ -21788,7 +22496,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_目标",
@@ -21818,7 +22527,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_目前",
@@ -21848,7 +22558,8 @@
     "tags": [
       "thời gian",
       "công việc"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_奶茶",
@@ -21878,7 +22589,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_男子",
@@ -21908,7 +22620,8 @@
     "tags": [
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_南部",
@@ -21938,7 +22651,8 @@
     "tags": [
       "địa điểm",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_难度",
@@ -21968,7 +22682,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_内",
@@ -21997,7 +22712,8 @@
     "tags": [
       "địa điểm",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_内心",
@@ -22027,7 +22743,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_能不能",
@@ -22058,7 +22775,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_能力",
@@ -22088,7 +22806,8 @@
     "tags": [
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_年初",
@@ -22118,7 +22837,8 @@
     "tags": [
       "thời gian",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_年代",
@@ -22148,7 +22868,8 @@
     "tags": [
       "thời gian",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_年底",
@@ -22178,7 +22899,8 @@
     "tags": [
       "thời gian",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_年纪",
@@ -22208,7 +22930,8 @@
     "tags": [
       "thời gian",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_念",
@@ -22237,7 +22960,8 @@
     "tags": [
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_牛",
@@ -22266,7 +22990,8 @@
     "tags": [
       "động vật",
       "ẩm thực"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_农村",
@@ -22296,7 +23021,8 @@
     "tags": [
       "địa điểm",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_农民",
@@ -22326,7 +23052,8 @@
     "tags": [
       "nghề nghiệp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_农业",
@@ -22356,7 +23083,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_女子",
@@ -22386,7 +23114,8 @@
     "tags": [
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_暖和",
@@ -22416,7 +23145,8 @@
     "tags": [
       "thời tiết",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_怕",
@@ -22445,7 +23175,8 @@
     "tags": [
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_拍",
@@ -22474,7 +23205,8 @@
     "tags": [
       "hành động",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_排",
@@ -22503,7 +23235,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_排名",
@@ -22533,7 +23266,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_牌子",
@@ -22563,7 +23297,8 @@
     "tags": [
       "mua sắm",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_派",
@@ -22592,7 +23327,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_判断",
@@ -22622,7 +23358,8 @@
     "tags": [
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_胖",
@@ -22651,7 +23388,8 @@
     "tags": [
       "sức khỏe",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_跑步",
@@ -22681,7 +23419,8 @@
     "tags": [
       "thể thao",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_配",
@@ -22710,7 +23449,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_配合",
@@ -22740,7 +23480,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_批评",
@@ -22770,7 +23511,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_批准",
@@ -22800,7 +23542,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_皮",
@@ -22829,7 +23572,8 @@
     "tags": [
       "sức khỏe",
       "động vật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_皮包",
@@ -22858,7 +23602,8 @@
     "wordType": "n",
     "tags": [
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_啤酒",
@@ -22888,7 +23633,8 @@
     "tags": [
       "ẩm thực",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_票价",
@@ -22918,7 +23664,8 @@
     "tags": [
       "du lịch",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_评价",
@@ -22948,7 +23695,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_苹果",
@@ -22978,7 +23726,8 @@
     "tags": [
       "công nghệ",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_破",
@@ -23007,7 +23756,8 @@
     "tags": [
       "hành động",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_破坏",
@@ -23038,7 +23788,8 @@
       "hành động",
       "thiên nhiên",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_普遍",
@@ -23069,7 +23820,8 @@
       "giao tiếp",
       "văn hóa",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_普及",
@@ -23100,7 +23852,8 @@
       "giáo dục",
       "công nghệ",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_期",
@@ -23130,7 +23883,8 @@
       "thời gian",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_齐",
@@ -23158,7 +23912,8 @@
     "wordType": "adj",
     "tags": [
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_其次",
@@ -23188,7 +23943,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_气候",
@@ -23218,7 +23974,8 @@
     "tags": [
       "thời tiết",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_千万",
@@ -23248,7 +24005,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_前后",
@@ -23278,7 +24036,8 @@
     "tags": [
       "thời gian",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_前进",
@@ -23308,7 +24067,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_前面",
@@ -23338,7 +24098,8 @@
     "tags": [
       "địa điểm",
       "giao thông"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_前往",
@@ -23369,7 +24130,8 @@
       "hành động",
       "du lịch",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_强",
@@ -23398,7 +24160,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_强大",
@@ -23428,7 +24191,8 @@
     "tags": [
       "công việc",
       "thể thao"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_强调",
@@ -23459,7 +24223,8 @@
       "giao tiếp",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_强烈",
@@ -23489,7 +24254,8 @@
     "tags": [
       "cảm xúc",
       "thời tiết"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_桥",
@@ -23518,7 +24284,8 @@
     "tags": [
       "địa điểm",
       "giao thông"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_巧",
@@ -23548,7 +24315,8 @@
       "hành động",
       "tính cách",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_亲",
@@ -23577,7 +24345,8 @@
     "tags": [
       "gia đình",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_亲切",
@@ -23608,7 +24377,8 @@
       "cảm xúc",
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_亲人",
@@ -23638,7 +24408,8 @@
     "tags": [
       "gia đình",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_亲自",
@@ -23668,7 +24439,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_情感",
@@ -23698,7 +24470,8 @@
     "tags": [
       "cảm xúc",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_请教",
@@ -23729,7 +24502,8 @@
       "học tập",
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_庆祝",
@@ -23760,7 +24534,8 @@
       "văn hóa",
       "cảm xúc",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_球迷",
@@ -23790,7 +24565,8 @@
     "tags": [
       "thể thao",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_区",
@@ -23818,7 +24594,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_区别",
@@ -23848,7 +24625,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_取消",
@@ -23878,7 +24656,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_去世",
@@ -23908,7 +24687,8 @@
     "tags": [
       "gia đình",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_全场",
@@ -23938,7 +24718,8 @@
     "tags": [
       "thể thao",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_全面",
@@ -23968,7 +24749,8 @@
     "tags": [
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_全球",
@@ -23998,7 +24780,8 @@
     "tags": [
       "địa điểm",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_缺",
@@ -24027,7 +24810,8 @@
     "tags": [
       "số lượng",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_缺点",
@@ -24057,7 +24841,8 @@
     "tags": [
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_缺少",
@@ -24087,7 +24872,8 @@
     "tags": [
       "số lượng",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_确保",
@@ -24117,7 +24903,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_确定",
@@ -24147,7 +24934,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_确实",
@@ -24177,7 +24965,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_裙子",
@@ -24207,7 +24996,8 @@
     "tags": [
       "mua sắm",
       "màu sắc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_群",
@@ -24236,7 +25026,8 @@
     "tags": [
       "số lượng",
       "động vật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_热爱",
@@ -24266,7 +25057,8 @@
     "tags": [
       "cảm xúc",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_热烈",
@@ -24296,7 +25088,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_人才",
@@ -24326,7 +25119,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_人工",
@@ -24356,7 +25150,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_人类",
@@ -24386,7 +25181,8 @@
     "tags": [
       "văn hóa",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_人民",
@@ -24416,7 +25212,8 @@
     "tags": [
       "văn hóa",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_人民币",
@@ -24447,7 +25244,8 @@
     "tags": [
       "tài chính",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_人群",
@@ -24477,7 +25275,8 @@
     "tags": [
       "số lượng",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_人生",
@@ -24507,7 +25306,8 @@
     "tags": [
       "cảm xúc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_人员",
@@ -24537,7 +25337,8 @@
     "tags": [
       "công việc",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_认出",
@@ -24567,7 +25368,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_认得",
@@ -24597,7 +25399,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_认可",
@@ -24627,7 +25430,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_任",
@@ -24656,7 +25460,8 @@
     "tags": [
       "công việc",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_任务",
@@ -24686,7 +25491,8 @@
     "tags": [
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_仍",
@@ -24715,7 +25521,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_仍然",
@@ -24745,7 +25552,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_日常",
@@ -24775,7 +25583,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_容易",
@@ -24805,7 +25614,8 @@
     "tags": [
       "học tập",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_如何",
@@ -24835,7 +25645,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_沙发",
@@ -24865,7 +25676,8 @@
     "tags": [
       "địa điểm",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_沙子",
@@ -24895,7 +25707,8 @@
     "tags": [
       "thiên nhiên",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_伤",
@@ -24924,7 +25737,8 @@
     "tags": [
       "sức khỏe",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_伤心",
@@ -24954,7 +25768,8 @@
     "tags": [
       "cảm xúc",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_商品",
@@ -24984,7 +25799,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_商业",
@@ -25014,7 +25830,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_上来",
@@ -25044,7 +25861,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_上面",
@@ -25073,7 +25891,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_上去",
@@ -25103,7 +25922,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_上升",
@@ -25133,7 +25953,8 @@
     "tags": [
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_上衣",
@@ -25163,7 +25984,8 @@
     "tags": [
       "mua sắm",
       "thời tiết"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_设备",
@@ -25193,7 +26015,8 @@
     "tags": [
       "công nghệ",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_设计",
@@ -25223,7 +26046,8 @@
     "tags": [
       "công việc",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_设立",
@@ -25253,7 +26077,8 @@
     "tags": [
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_身份证",
@@ -25285,7 +26110,8 @@
       "hành động",
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_深",
@@ -25315,7 +26141,8 @@
       "thiên nhiên",
       "địa điểm",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_深刻",
@@ -25346,7 +26173,8 @@
       "cảm xúc",
       "tính cách",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_深入",
@@ -25377,7 +26205,8 @@
       "hành động",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_升",
@@ -25407,7 +26236,8 @@
       "hành động",
       "thời tiết",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_生",
@@ -25437,7 +26267,8 @@
       "thiên nhiên",
       "gia đình",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_生产",
@@ -25468,7 +26299,8 @@
       "công việc",
       "công nghệ",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_生存",
@@ -25499,7 +26331,8 @@
       "thiên nhiên",
       "hành động",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_生动",
@@ -25530,7 +26363,8 @@
       "nghệ thuật",
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_生命",
@@ -25561,7 +26395,8 @@
       "sức khỏe",
       "thiên nhiên",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_生意",
@@ -25592,7 +26427,8 @@
       "tài chính",
       "công việc",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_生长",
@@ -25623,7 +26459,8 @@
       "thiên nhiên",
       "gia đình",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_声明",
@@ -25654,7 +26491,8 @@
       "giao tiếp",
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_胜",
@@ -25684,7 +26522,8 @@
       "thể thao",
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_胜利",
@@ -25715,7 +26554,8 @@
       "thể thao",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_石头",
@@ -25745,7 +26585,8 @@
     "tags": [
       "thiên nhiên",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_石油",
@@ -25776,7 +26617,8 @@
       "công nghệ",
       "tài chính",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_时",
@@ -25805,7 +26647,8 @@
     "tags": [
       "thời gian",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_时代",
@@ -25836,7 +26679,8 @@
       "thời gian",
       "văn hóa",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_时刻",
@@ -25866,7 +26710,8 @@
     "tags": [
       "thời gian",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_实际上",
@@ -25897,7 +26742,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_实力",
@@ -25928,7 +26774,8 @@
       "công việc",
       "thể thao",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_实行",
@@ -25959,7 +26806,8 @@
       "công việc",
       "hành động",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_实验",
@@ -25989,7 +26837,8 @@
     "tags": [
       "học tập",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_实验室",
@@ -26021,7 +26870,8 @@
       "địa điểm",
       "học tập",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_食品",
@@ -26051,7 +26901,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_使",
@@ -26080,7 +26931,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_始终",
@@ -26110,7 +26962,8 @@
     "tags": [
       "thời gian",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_世纪",
@@ -26140,7 +26993,8 @@
     "tags": [
       "thời gian",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_世界",
@@ -26170,7 +27024,8 @@
     "tags": [
       "địa điểm",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_世界杯",
@@ -26201,7 +27056,8 @@
     "tags": [
       "thể thao",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_市场",
@@ -26231,7 +27087,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_事故",
@@ -26261,7 +27118,8 @@
     "tags": [
       "giao thông",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_事件",
@@ -26291,7 +27149,8 @@
     "tags": [
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_事实",
@@ -26321,7 +27180,8 @@
     "tags": [
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_事实上",
@@ -26351,7 +27211,8 @@
     "wordType": "n",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_事业",
@@ -26381,7 +27242,8 @@
     "tags": [
       "công việc",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_试题",
@@ -26411,7 +27273,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_试验",
@@ -26441,7 +27304,8 @@
     "tags": [
       "công nghệ",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_适合",
@@ -26471,7 +27335,8 @@
     "tags": [
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_适应",
@@ -26501,7 +27366,8 @@
     "tags": [
       "tính cách",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_适用",
@@ -26531,7 +27397,8 @@
     "tags": [
       "công nghệ",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_室",
@@ -26559,7 +27426,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_收费",
@@ -26589,7 +27457,8 @@
     "tags": [
       "tài chính",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_收看",
@@ -26619,7 +27488,8 @@
     "tags": [
       "sở thích",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_收听",
@@ -26649,7 +27519,8 @@
     "tags": [
       "sở thích",
       "âm nhạc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_收音机",
@@ -26680,7 +27551,8 @@
     "tags": [
       "công nghệ",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_手续",
@@ -26710,7 +27582,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_手指",
@@ -26740,7 +27613,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_首都",
@@ -26770,7 +27644,8 @@
     "tags": [
       "địa điểm",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_受",
@@ -26799,7 +27674,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_受伤",
@@ -26829,7 +27705,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_书架",
@@ -26859,7 +27736,8 @@
     "tags": [
       "học tập",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_输",
@@ -26889,7 +27767,8 @@
       "thể thao",
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_输入",
@@ -26919,7 +27798,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_熟人",
@@ -26949,7 +27829,8 @@
     "tags": [
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_属",
@@ -26978,7 +27859,8 @@
     "tags": [
       "hành động",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_属于",
@@ -27007,7 +27889,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_束",
@@ -27036,7 +27919,8 @@
     "tags": [
       "số lượng",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_双",
@@ -27065,7 +27949,8 @@
     "tags": [
       "số lượng",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_双方",
@@ -27095,7 +27980,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_思想",
@@ -27125,7 +28011,8 @@
     "tags": [
       "cảm xúc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_死",
@@ -27154,7 +28041,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_速度",
@@ -27184,7 +28072,8 @@
     "tags": [
       "giao thông",
       "thể thao"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_随",
@@ -27212,7 +28101,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_所",
@@ -27241,7 +28131,8 @@
     "tags": [
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_所长",
@@ -27271,7 +28162,8 @@
     "tags": [
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_台",
@@ -27300,7 +28192,8 @@
     "tags": [
       "địa điểm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_谈",
@@ -27329,7 +28222,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_谈话",
@@ -27358,7 +28252,8 @@
     "wordType": "n",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_谈判",
@@ -27388,7 +28283,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_汤",
@@ -27416,7 +28312,8 @@
     "wordType": "n",
     "tags": [
       "ẩm thực"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_糖",
@@ -27444,7 +28341,8 @@
     "wordType": "n",
     "tags": [
       "ẩm thực"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_特色",
@@ -27475,7 +28373,8 @@
       "văn hóa",
       "ẩm thực",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_题目",
@@ -27505,7 +28404,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_体会",
@@ -27536,7 +28436,8 @@
       "cảm xúc",
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_体现",
@@ -27567,7 +28468,8 @@
       "hành động",
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_体验",
@@ -27598,7 +28500,8 @@
       "hành động",
       "du lịch",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_天空",
@@ -27629,7 +28532,8 @@
       "thiên nhiên",
       "thời tiết",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_甜",
@@ -27658,7 +28562,8 @@
     "tags": [
       "ẩm thực",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_调整",
@@ -27689,7 +28594,8 @@
       "hành động",
       "công việc",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_跳",
@@ -27718,7 +28624,8 @@
     "tags": [
       "hành động",
       "thể thao"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_跳高",
@@ -27748,7 +28655,8 @@
     "tags": [
       "thể thao",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_跳舞",
@@ -27779,7 +28687,8 @@
       "sở thích",
       "nghệ thuật",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_跳远",
@@ -27809,7 +28718,8 @@
     "tags": [
       "thể thao",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_铁",
@@ -27838,7 +28748,8 @@
     "tags": [
       "công nghệ",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_铁路",
@@ -27868,7 +28779,8 @@
     "tags": [
       "giao thông",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_听力",
@@ -27899,7 +28811,8 @@
       "học tập",
       "sức khỏe",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_听众",
@@ -27929,7 +28842,8 @@
     "tags": [
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_停止",
@@ -27959,7 +28873,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_通常",
@@ -27989,7 +28904,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_通信",
@@ -28019,7 +28935,8 @@
     "tags": [
       "giao tiếp",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_同意",
@@ -28049,7 +28966,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_痛",
@@ -28078,7 +28996,8 @@
     "tags": [
       "sức khỏe",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_痛苦",
@@ -28108,7 +29027,8 @@
     "tags": [
       "cảm xúc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_头",
@@ -28137,7 +29057,8 @@
     "tags": [
       "công việc",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_头脑",
@@ -28168,7 +29089,8 @@
       "sức khỏe",
       "tính cách",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_突出",
@@ -28199,7 +29121,8 @@
       "tính cách",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_图",
@@ -28229,7 +29152,8 @@
       "học tập",
       "công nghệ",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_图画",
@@ -28259,7 +29183,8 @@
     "tags": [
       "nghệ thuật",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_土",
@@ -28288,7 +29213,8 @@
     "tags": [
       "văn hóa",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_团",
@@ -28317,7 +29243,8 @@
     "tags": [
       "số lượng",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_团结",
@@ -28348,7 +29275,8 @@
       "giao tiếp",
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_团体",
@@ -28379,7 +29307,8 @@
       "công việc",
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_推动",
@@ -28409,7 +29338,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_推广",
@@ -28440,7 +29370,8 @@
       "công việc",
       "giao tiếp",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_推进",
@@ -28470,7 +29401,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_推开",
@@ -28499,7 +29431,8 @@
     "wordType": "n",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_退",
@@ -28528,7 +29461,8 @@
     "tags": [
       "hành động",
       "giao thông"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_退出",
@@ -28558,7 +29492,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_退休",
@@ -28589,7 +29524,8 @@
       "công việc",
       "thời gian",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_外交",
@@ -28620,7 +29556,8 @@
       "công việc",
       "văn hóa",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_外面",
@@ -28649,7 +29586,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_外文",
@@ -28680,7 +29618,8 @@
       "học tập",
       "giáo dục",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_完美",
@@ -28710,7 +29649,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_完善",
@@ -28740,7 +29680,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_完整",
@@ -28770,7 +29711,8 @@
     "tags": [
       "số lượng",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_玩具",
@@ -28800,7 +29742,8 @@
     "tags": [
       "sở thích",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_往往",
@@ -28829,7 +29772,8 @@
     "wordType": "adv",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_危害",
@@ -28859,7 +29803,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_危险",
@@ -28889,7 +29834,8 @@
     "tags": [
       "sức khỏe",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_为",
@@ -28917,7 +29863,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_围",
@@ -28946,7 +29893,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_伟大",
@@ -28976,7 +29924,8 @@
     "tags": [
       "tính cách",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_卫生",
@@ -29006,7 +29955,8 @@
     "tags": [
       "sức khỏe",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_为了",
@@ -29036,7 +29986,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_温暖",
@@ -29067,7 +30018,8 @@
       "cảm xúc",
       "thời tiết",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_文件",
@@ -29098,7 +30050,8 @@
       "công việc",
       "công nghệ",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_文明",
@@ -29128,7 +30081,8 @@
     "tags": [
       "văn hóa",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_文学",
@@ -29159,7 +30113,8 @@
       "học tập",
       "nghệ thuật",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_文字",
@@ -29190,7 +30145,8 @@
       "học tập",
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_握手",
@@ -29220,7 +30176,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_屋子",
@@ -29250,7 +30207,8 @@
     "tags": [
       "địa điểm",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_武器",
@@ -29280,7 +30238,8 @@
     "tags": [
       "hành động",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_武术",
@@ -29311,7 +30270,8 @@
       "thể thao",
       "sở thích",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_舞台",
@@ -29341,7 +30301,8 @@
     "tags": [
       "nghệ thuật",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_西部",
@@ -29371,7 +30332,8 @@
     "tags": [
       "địa điểm",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_希望",
@@ -29401,7 +30363,8 @@
     "tags": [
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_系",
@@ -29430,7 +30393,8 @@
     "tags": [
       "hành động",
       "giao thông"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_下来",
@@ -29460,7 +30424,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_下面",
@@ -29489,7 +30454,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_下去",
@@ -29519,7 +30485,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_先进",
@@ -29549,7 +30516,8 @@
     "tags": [
       "công nghệ",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_显得",
@@ -29579,7 +30547,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_显然",
@@ -29608,7 +30577,8 @@
     "wordType": "adj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_显示",
@@ -29638,7 +30608,8 @@
     "tags": [
       "công nghệ",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_现场",
@@ -29668,7 +30639,8 @@
     "tags": [
       "địa điểm",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_现金",
@@ -29698,7 +30670,8 @@
     "tags": [
       "tài chính",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_现实",
@@ -29728,7 +30701,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_现象",
@@ -29758,7 +30732,8 @@
     "tags": [
       "thiên nhiên",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_线",
@@ -29788,7 +30763,8 @@
       "hành động",
       "địa điểm",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_相比",
@@ -29818,7 +30794,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_相当",
@@ -29849,7 +30826,8 @@
       "số lượng",
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_相关",
@@ -29880,7 +30858,8 @@
       "giao tiếp",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_相互",
@@ -29911,7 +30890,8 @@
       "giao tiếp",
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_相似",
@@ -29942,7 +30922,8 @@
       "tính cách",
       "hành động",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_香",
@@ -29972,7 +30953,8 @@
       "ẩm thực",
       "thiên nhiên",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_香蕉",
@@ -30002,7 +30984,8 @@
     "tags": [
       "ẩm thực",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_消费",
@@ -30033,7 +31016,8 @@
       "mua sắm",
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_消失",
@@ -30064,7 +31048,8 @@
       "hành động",
       "thời gian",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_写作",
@@ -30095,7 +31080,8 @@
       "học tập",
       "nghệ thuật",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_血",
@@ -30124,7 +31110,8 @@
     "tags": [
       "sức khỏe",
       "động vật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_心",
@@ -30154,7 +31141,8 @@
       "sức khỏe",
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_信",
@@ -30184,7 +31172,8 @@
       "giao tiếp",
       "văn hóa",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_信封",
@@ -30214,7 +31203,8 @@
     "tags": [
       "giao tiếp",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_信任",
@@ -30245,7 +31235,8 @@
       "cảm xúc",
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_行李",
@@ -30276,7 +31267,8 @@
       "du lịch",
       "giao thông",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_形成",
@@ -30307,7 +31299,8 @@
       "hành động",
       "thời gian",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_形式",
@@ -30338,7 +31331,8 @@
       "văn hóa",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_形象",
@@ -30369,7 +31363,8 @@
       "văn hóa",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_形状",
@@ -30400,7 +31395,8 @@
       "thiên nhiên",
       "nghệ thuật",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_幸运",
@@ -30431,7 +31427,8 @@
       "cảm xúc",
       "tính cách",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_性",
@@ -30461,7 +31458,8 @@
       "tính cách",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_性别",
@@ -30492,7 +31490,8 @@
       "gia đình",
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_性格",
@@ -30523,7 +31522,8 @@
       "tính cách",
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_修改",
@@ -30554,7 +31554,8 @@
       "hành động",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_需求",
@@ -30585,7 +31586,8 @@
       "công việc",
       "tài chính",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_需要",
@@ -30616,7 +31618,8 @@
       "hành động",
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_宣布",
@@ -30647,7 +31650,8 @@
       "giao tiếp",
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_宣传",
@@ -30678,7 +31682,8 @@
       "giao tiếp",
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_选手",
@@ -30708,7 +31713,8 @@
     "tags": [
       "thể thao",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_学费",
@@ -30739,7 +31745,8 @@
       "giáo dục",
       "tài chính",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_训练",
@@ -30770,7 +31777,8 @@
       "thể thao",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_压",
@@ -30798,7 +31806,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_压力",
@@ -30829,7 +31838,8 @@
       "cảm xúc",
       "công việc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_烟",
@@ -30857,7 +31867,8 @@
     "wordType": "n",
     "tags": [
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_眼前",
@@ -30887,7 +31898,8 @@
     "tags": [
       "thời gian",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_演",
@@ -30916,7 +31928,8 @@
     "tags": [
       "nghệ thuật",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_演唱",
@@ -30947,7 +31960,8 @@
       "âm nhạc",
       "nghệ thuật",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_演唱会",
@@ -30979,7 +31993,8 @@
       "âm nhạc",
       "nghệ thuật",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_演员",
@@ -31009,7 +32024,8 @@
     "tags": [
       "nghề nghiệp",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_羊",
@@ -31038,7 +32054,8 @@
     "tags": [
       "động vật",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_阳光",
@@ -31068,7 +32085,8 @@
     "tags": [
       "thời tiết",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_要是",
@@ -31097,7 +32115,8 @@
     "wordType": "conj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_衣架",
@@ -31126,7 +32145,8 @@
     "wordType": "n",
     "tags": [
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_一切",
@@ -31156,7 +32176,8 @@
     "tags": [
       "số lượng",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_已",
@@ -31184,7 +32205,8 @@
     "wordType": "adv",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_以来",
@@ -31213,7 +32235,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_一方面",
@@ -31244,7 +32267,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_艺术",
@@ -31275,7 +32299,8 @@
       "nghệ thuật",
       "văn hóa",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_意外",
@@ -31306,7 +32331,8 @@
       "cảm xúc",
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_意义",
@@ -31337,7 +32363,8 @@
       "giao tiếp",
       "giáo dục",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_因此",
@@ -31367,7 +32394,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_银",
@@ -31397,7 +32425,8 @@
       "màu sắc",
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_银牌",
@@ -31427,7 +32456,8 @@
     "tags": [
       "thể thao",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_印象",
@@ -31458,7 +32488,8 @@
       "cảm xúc",
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_应当",
@@ -31488,7 +32519,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_迎接",
@@ -31519,7 +32551,8 @@
       "hành động",
       "giao tiếp",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_营养",
@@ -31549,7 +32582,8 @@
     "tags": [
       "sức khỏe",
       "ẩm thực"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_赢",
@@ -31579,7 +32613,8 @@
       "thể thao",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_影视",
@@ -31610,7 +32645,8 @@
       "nghệ thuật",
       "sở thích",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_应用",
@@ -31641,7 +32677,8 @@
       "công nghệ",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_优点",
@@ -31672,7 +32709,8 @@
       "tính cách",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_优势",
@@ -31703,7 +32741,8 @@
       "công việc",
       "thể thao",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_由",
@@ -31732,7 +32771,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_由于",
@@ -31762,7 +32802,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_邮件",
@@ -31793,7 +32834,8 @@
       "công nghệ",
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_邮票",
@@ -31824,7 +32866,8 @@
       "giao tiếp",
       "sở thích",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_邮箱",
@@ -31854,7 +32897,8 @@
     "tags": [
       "công nghệ",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_游",
@@ -31884,7 +32928,8 @@
       "thể thao",
       "sở thích",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_游戏",
@@ -31915,7 +32960,8 @@
       "sở thích",
       "công nghệ",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_游泳",
@@ -31946,7 +32992,8 @@
       "thể thao",
       "sở thích",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_有的是",
@@ -31978,7 +33025,8 @@
       "số lượng",
       "tài chính",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_有利",
@@ -32009,7 +33057,8 @@
       "công việc",
       "tài chính",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_有效",
@@ -32040,7 +33089,8 @@
       "công việc",
       "thời gian",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_预报",
@@ -32070,7 +33120,8 @@
     "tags": [
       "thời tiết",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_预防",
@@ -32100,7 +33151,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_预计",
@@ -32130,7 +33182,8 @@
     "tags": [
       "công việc",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_预习",
@@ -32160,7 +33213,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_员",
@@ -32189,7 +33243,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_员工",
@@ -32219,7 +33274,8 @@
     "tags": [
       "công việc",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_愿望",
@@ -32249,7 +33305,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_约",
@@ -32278,7 +33335,8 @@
     "tags": [
       "giao tiếp",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_乐队",
@@ -32308,7 +33366,8 @@
     "tags": [
       "âm nhạc",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_运输",
@@ -32338,7 +33397,8 @@
     "tags": [
       "giao thông",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_杂志",
@@ -32368,7 +33428,8 @@
     "tags": [
       "sở thích",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_早已",
@@ -32397,7 +33458,8 @@
     "wordType": "adv",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_造",
@@ -32426,7 +33488,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_造成",
@@ -32456,7 +33519,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_责任",
@@ -32486,7 +33550,8 @@
     "tags": [
       "công việc",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_增长",
@@ -32516,7 +33581,8 @@
     "tags": [
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_展开",
@@ -32546,7 +33612,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_张",
@@ -32575,7 +33642,8 @@
     "tags": [
       "số lượng",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_照",
@@ -32604,7 +33672,8 @@
     "tags": [
       "hành động",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_者",
@@ -32633,7 +33702,8 @@
     "tags": [
       "nghề nghiệp",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_真实",
@@ -32663,7 +33733,8 @@
     "tags": [
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_争",
@@ -32692,7 +33763,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_争取",
@@ -32722,7 +33794,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_整",
@@ -32751,7 +33824,8 @@
     "tags": [
       "số lượng",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_整个",
@@ -32781,7 +33855,8 @@
     "tags": [
       "số lượng",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_整齐",
@@ -32812,7 +33887,8 @@
       "hành động",
       "tính cách",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_整体",
@@ -32843,7 +33919,8 @@
       "công việc",
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_整天",
@@ -32873,7 +33950,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_整整",
@@ -32903,7 +33981,8 @@
     "tags": [
       "thời gian",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_正",
@@ -32932,7 +34011,8 @@
     "tags": [
       "thời gian",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_正式",
@@ -32963,7 +34043,8 @@
       "công việc",
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_证",
@@ -32993,7 +34074,8 @@
       "công việc",
       "hành động",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_证件",
@@ -33024,7 +34106,8 @@
       "công việc",
       "giao thông",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_证据",
@@ -33054,7 +34137,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_支",
@@ -33083,7 +34167,8 @@
     "tags": [
       "số lượng",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_支持",
@@ -33114,7 +34199,8 @@
       "giao tiếp",
       "cảm xúc",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_支付",
@@ -33145,7 +34231,8 @@
       "tài chính",
       "mua sắm",
       "công nghệ"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_只",
@@ -33174,7 +34261,8 @@
     "tags": [
       "số lượng",
       "động vật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_直",
@@ -33203,7 +34291,8 @@
     "tags": [
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_直播",
@@ -33234,7 +34323,8 @@
       "công nghệ",
       "sở thích",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_直到",
@@ -33264,7 +34354,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_值",
@@ -33293,7 +34384,8 @@
     "tags": [
       "tài chính",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_值得",
@@ -33324,7 +34416,8 @@
       "cảm xúc",
       "hành động",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_职工",
@@ -33354,7 +34447,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_职业",
@@ -33385,7 +34479,8 @@
       "nghề nghiệp",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_只好",
@@ -33415,7 +34510,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_只是",
@@ -33445,7 +34541,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_指",
@@ -33474,7 +34571,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_指出",
@@ -33505,7 +34603,8 @@
       "giao tiếp",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_指导",
@@ -33536,7 +34635,8 @@
       "học tập",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_至今",
@@ -33565,7 +34665,8 @@
     "wordType": "adv",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_至少",
@@ -33595,7 +34696,8 @@
     "tags": [
       "số lượng",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_志愿",
@@ -33626,7 +34728,8 @@
       "cảm xúc",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_志愿者",
@@ -33658,7 +34761,8 @@
       "nghề nghiệp",
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_制定",
@@ -33688,7 +34792,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_制度",
@@ -33718,7 +34823,8 @@
     "tags": [
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_制造",
@@ -33749,7 +34855,8 @@
       "công việc",
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_制作",
@@ -33780,7 +34887,8 @@
       "công việc",
       "nghệ thuật",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_中部",
@@ -33809,7 +34917,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_中华民族",
@@ -33841,7 +34950,8 @@
     "tags": [
       "văn hóa",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_终于",
@@ -33871,7 +34981,8 @@
     "tags": [
       "thời gian",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_钟",
@@ -33899,7 +35010,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_种",
@@ -33927,7 +35039,8 @@
     "wordType": "mw",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_种子",
@@ -33956,7 +35069,8 @@
     "wordType": "n",
     "tags": [
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_重大",
@@ -33986,7 +35100,8 @@
     "tags": [
       "công việc",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_周围",
@@ -34015,7 +35130,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_猪",
@@ -34044,7 +35160,8 @@
     "tags": [
       "động vật",
       "ẩm thực"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_主持",
@@ -34074,7 +35191,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_主动",
@@ -34104,7 +35222,8 @@
     "tags": [
       "tính cách",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_主任",
@@ -34134,7 +35253,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_主意",
@@ -34164,7 +35284,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_主张",
@@ -34194,7 +35315,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_注意",
@@ -34224,7 +35346,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk3_祝",
@@ -34253,7 +35376,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_抓",
@@ -34281,7 +35405,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_抓住",
@@ -34311,7 +35436,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_专家",
@@ -34342,7 +35468,8 @@
       "nghề nghiệp",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_专门",
@@ -34373,7 +35500,8 @@
       "công việc",
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_专题",
@@ -34404,7 +35532,8 @@
       "học tập",
       "giáo dục",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_专业",
@@ -34435,7 +35564,8 @@
       "học tập",
       "nghề nghiệp",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_转",
@@ -34465,7 +35595,8 @@
       "hành động",
       "giao thông",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_转变",
@@ -34496,7 +35627,8 @@
       "hành động",
       "thời gian",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_状况",
@@ -34527,7 +35659,8 @@
       "sức khỏe",
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_状态",
@@ -34558,7 +35691,8 @@
       "sức khỏe",
       "cảm xúc",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_追",
@@ -34588,7 +35722,8 @@
       "hành động",
       "thể thao",
       "động vật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_准",
@@ -34618,7 +35753,8 @@
       "hành động",
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_资格",
@@ -34649,7 +35785,8 @@
       "công việc",
       "giáo dục",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_资金",
@@ -34680,7 +35817,8 @@
       "tài chính",
       "công việc",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_子女",
@@ -34709,7 +35847,8 @@
     "wordType": "n",
     "tags": [
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_自从",
@@ -34738,7 +35877,8 @@
     "wordType": "prep",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_自动",
@@ -34768,7 +35908,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_自觉",
@@ -34799,7 +35940,8 @@
       "tính cách",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_自身",
@@ -34829,7 +35971,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_自主",
@@ -34860,7 +36003,8 @@
       "tính cách",
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_总",
@@ -34889,7 +36033,8 @@
     "tags": [
       "số lượng",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_总是",
@@ -34919,7 +36064,8 @@
     "tags": [
       "thời gian",
       "tính cách"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_足够",
@@ -34949,7 +36095,8 @@
     "tags": [
       "số lượng",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_足球",
@@ -34979,7 +36126,8 @@
     "tags": [
       "thể thao",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_组合",
@@ -35010,7 +36158,8 @@
       "hành động",
       "công nghệ",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_左右",
@@ -35041,7 +36190,8 @@
       "số lượng",
       "địa điểm",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_作品",
@@ -35072,7 +36222,8 @@
       "nghệ thuật",
       "văn hóa",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_作者",
@@ -35103,7 +36254,8 @@
       "văn hóa",
       "nghệ thuật",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk3_做客",
@@ -35134,6 +36286,7 @@
       "giao tiếp",
       "gia đình",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   }
 ]

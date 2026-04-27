@@ -21,7 +21,7 @@ Future<Widget> createProviderScope(Widget child) async {
   final webDs = await VocabWebDataSourceImpl.init();
   final grammarWebDs = await GrammarWebDataSourceImpl.init();
   final convWebDs = await ConversationWebDataSourceImpl.init();
-  final charWebDs = await CharacterWebDataSourceImpl.init();
+  final charWebDs = await CharacterWebDataSourceImpl.init(vocabWebDs: webDs);
 
   return ProviderScope(
     overrides: [

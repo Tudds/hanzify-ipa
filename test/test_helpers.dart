@@ -63,6 +63,7 @@ Vocab makeVocab({
     exampleSentences: examples ?? [],
     level: level,
     nextReview: DateTime(2026, 1, 1),
+    updatedAt: DateTime.now(),
     isMastered: isMastered,
     repetitions: repetitions,
     interval: interval,

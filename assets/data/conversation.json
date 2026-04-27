@@ -1542,7 +1542,7 @@
         "speaker": "B",
         "zh": "是啊，据说长城有两千多年的历史了。",
         "pinyin": "Shì a, jùshuō Chángchéng yǒu liǎng qiān duō nián de lìshǐ le.",
-        "vi": "Đúng vậy,据说 Trường Thành có hơn hai nghìn năm lịch sử."
+        "vi": "Đúng vậy, nghe nói Trường Thành có hơn hai nghìn năm lịch sử."
       },
       {
         "speaker": "A",
@@ -1872,7 +1872,7 @@
         "speaker": "A",
         "zh": "具体来说，你有什么建议？",
         "pinyin": "Jùtǐ lái shuō, nǐ yǒu shénme jiànyì?",
-        "vi": "Cụ thể而言, bạn có đề xuất gì?"
+        "vi": "Cụ thể thì bạn có đề xuất gì?"
       },
       {
         "speaker": "B",
@@ -2380,7 +2380,24 @@
       "g4_fen",
       "g_ruguo",
       "g4_biran"
-    ]
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Nội dung hội thoại được dùng để luyện giao tiếp theo cấp độ HSK tương ứng.",
+    "isBookmarked": false,
+    "isMastered": false
   },
   {
     "id": "conv_health_01",
@@ -2484,7 +2501,24 @@
       "g4_ruguo_maning",
       "g4_keneng",
       "g_yinggai"
-    ]
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Nội dung hội thoại được dùng để luyện giao tiếp theo cấp độ HSK tương ứng.",
+    "isBookmarked": false,
+    "isMastered": false
   },
   {
     "id": "conv_education_01",
@@ -2588,7 +2622,24 @@
       "g4_duiyu",
       "g4_wulun",
       "g_haishi"
-    ]
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Nội dung hội thoại được dùng để luyện giao tiếp theo cấp độ HSK tương ứng.",
+    "isBookmarked": false,
+    "isMastered": false
   },
   {
     "id": "conv_travel_03",
@@ -2698,7 +2749,24 @@
       "g_ruguo",
       "g_numbers",
       "g_haishi"
-    ]
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Nội dung hội thoại được dùng để luyện giao tiếp theo cấp độ HSK tương ứng.",
+    "isBookmarked": false,
+    "isMastered": false
   },
   {
     "id": "conv_social_hsk4_01",
@@ -2803,7 +2871,24 @@
       "g4_yiran",
       "g_zhiyao_jiu",
       "g4_zhaoji"
-    ]
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Nội dung hội thoại được dùng để luyện giao tiếp theo cấp độ HSK tương ứng.",
+    "isBookmarked": false,
+    "isMastered": false
   },
   {
     "id": "conv_complaint_01",
@@ -2907,7 +2992,24 @@
       "g_bei",
       "g4_biran",
       "g_yijing_le"
-    ]
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Nội dung hội thoại được dùng để luyện giao tiếp theo cấp độ HSK tương ứng.",
+    "isBookmarked": false,
+    "isMastered": false
   },
   {
     "id": "conv_environment_01",
@@ -3007,7 +3109,24 @@
       "g4_shenzhi",
       "g4_wulun",
       "g_zhiyao_jiu"
-    ]
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Nội dung hội thoại được dùng để luyện giao tiếp theo cấp độ HSK tương ứng.",
+    "isBookmarked": false,
+    "isMastered": false
   },
   {
     "id": "conv_negotiation_01",
@@ -3112,6 +3231,2043 @@
       "g4_biran",
       "g_ruguo",
       "g_numbers"
-    ]
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Nội dung hội thoại được dùng để luyện giao tiếp theo cấp độ HSK tương ứng.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_apartment_repair_01",
+    "title": "Sửa đồ trong nhà",
+    "titleZh": "修理家里的东西",
+    "titlePinyin": "Xiūlǐ jiālǐ de dōngxi",
+    "description": "Nói về xử lý đồ bị hỏng trong căn hộ.",
+    "level": 3,
+    "category": "home",
+    "icon": "🛠️",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "厨房的灯坏了，你能帮我看一下吗？",
+        "pinyin": "Chúfáng de dēng huài le, nǐ néng bāng wǒ kàn yíxià ma?",
+        "vi": "Đèn trong bếp hỏng rồi, bạn giúp tôi xem một chút được không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "可以。你先把开关关上，比较安全。",
+        "pinyin": "Kěyǐ. Nǐ xiān bǎ kāiguān guān shàng, bǐjiào ānquán.",
+        "vi": "Được. Bạn tắt công tắc trước, như vậy an toàn hơn."
+      },
+      {
+        "speaker": "A",
+        "zh": "这个灯昨天还好好的，今天突然不亮了。",
+        "pinyin": "Zhège dēng zuótiān hái hǎohāo de, jīntiān tūrán bú liàng le.",
+        "vi": "Cái đèn này hôm qua vẫn bình thường, hôm nay đột nhiên không sáng nữa."
+      },
+      {
+        "speaker": "B",
+        "zh": "可能是灯泡被烧坏了，我帮你换一个。",
+        "pinyin": "Kěnéng shì dēngpào bèi shāo huài le, wǒ bāng nǐ huàn yí ge.",
+        "vi": "Có thể bóng đèn bị cháy rồi, tôi giúp bạn thay một cái."
+      },
+      {
+        "speaker": "A",
+        "zh": "太好了，修好以后我请你喝茶。",
+        "pinyin": "Tài hǎo le, xiū hǎo yǐhòu wǒ qǐng nǐ hē chá.",
+        "vi": "Tốt quá, sửa xong tôi mời bạn uống trà."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "厨房",
+        "pinyin": "chúfáng",
+        "vi": "nhà bếp",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "安全",
+        "pinyin": "ānquán",
+        "vi": "an toàn",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "突然",
+        "pinyin": "tūrán",
+        "vi": "đột nhiên",
+        "pos": "trạng từ"
+      },
+      {
+        "zh": "修好",
+        "pinyin": "xiū hǎo",
+        "vi": "sửa xong",
+        "pos": "động từ"
+      }
+    ],
+    "relatedGrammar": [
+      "g_ba",
+      "g_bei",
+      "g_result_complement"
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Bridge HSK3 conversation được curate để luyện grammar/vocab HSK3 trong ngữ cảnh đời sống.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_work_meeting_01",
+    "title": "Chuẩn bị cuộc họp",
+    "titleZh": "准备会议",
+    "titlePinyin": "Zhǔnbèi huìyì",
+    "description": "Trao đổi công việc trước cuộc họp.",
+    "level": 3,
+    "category": "work",
+    "icon": "💼",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "经理让我们下午三点开会。",
+        "pinyin": "Jīnglǐ ràng wǒmen xiàwǔ sān diǎn kāihuì.",
+        "vi": "Quản lý bảo chúng ta họp lúc ba giờ chiều."
+      },
+      {
+        "speaker": "B",
+        "zh": "我已经把报告准备好了。",
+        "pinyin": "Wǒ yǐjīng bǎ bàogào zhǔnbèi hǎo le.",
+        "vi": "Tôi đã chuẩn bị xong báo cáo rồi."
+      },
+      {
+        "speaker": "A",
+        "zh": "虽然时间不多，但是内容一定要清楚。",
+        "pinyin": "Suīrán shíjiān bù duō, dànshì nèiróng yídìng yào qīngchu.",
+        "vi": "Tuy thời gian không nhiều, nhưng nội dung nhất định phải rõ ràng."
+      },
+      {
+        "speaker": "B",
+        "zh": "如果大家有问题，可以会后再讨论。",
+        "pinyin": "Rúguǒ dàjiā yǒu wèntí, kěyǐ huì hòu zài tǎolùn.",
+        "vi": "Nếu mọi người có câu hỏi, có thể thảo luận sau cuộc họp."
+      },
+      {
+        "speaker": "A",
+        "zh": "好的，我先把重点写在白板上。",
+        "pinyin": "Hǎo de, wǒ xiān bǎ zhòngdiǎn xiě zài báibǎn shàng.",
+        "vi": "Được, tôi viết các điểm chính lên bảng trước."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "经理",
+        "pinyin": "jīnglǐ",
+        "vi": "quản lý",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "报告",
+        "pinyin": "bàogào",
+        "vi": "báo cáo",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "内容",
+        "pinyin": "nèiróng",
+        "vi": "nội dung",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "讨论",
+        "pinyin": "tǎolùn",
+        "vi": "thảo luận",
+        "pos": "động từ"
+      }
+    ],
+    "relatedGrammar": [
+      "g_ba",
+      "g_suiran_danshi",
+      "g_ruguo"
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Bridge HSK3 conversation được curate để luyện grammar/vocab HSK3 trong ngữ cảnh đời sống.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_return_item_01",
+    "title": "Đổi trả hàng",
+    "titleZh": "退换商品",
+    "titlePinyin": "Tuìhuàn shāngpǐn",
+    "description": "Nói chuyện ở cửa hàng khi sản phẩm có vấn đề.",
+    "level": 3,
+    "category": "shopping",
+    "icon": "🧾",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "这件衣服我昨天刚买，但是有点儿小。",
+        "pinyin": "Zhè jiàn yīfu wǒ zuótiān gāng mǎi, dànshì yǒudiǎnr xiǎo.",
+        "vi": "Cái áo này tôi mới mua hôm qua, nhưng hơi nhỏ."
+      },
+      {
+        "speaker": "B",
+        "zh": "只要没有被穿过，就可以换。",
+        "pinyin": "Zhǐyào méiyǒu bèi chuān guo, jiù kěyǐ huàn.",
+        "vi": "Chỉ cần chưa bị mặc qua thì có thể đổi."
+      },
+      {
+        "speaker": "A",
+        "zh": "我没有穿，只是在家试了一下。",
+        "pinyin": "Wǒ méiyǒu chuān, zhǐ shì zài jiā shì le yíxià.",
+        "vi": "Tôi chưa mặc, chỉ thử ở nhà một chút."
+      },
+      {
+        "speaker": "B",
+        "zh": "那我帮您找一件大一点儿的。",
+        "pinyin": "Nà wǒ bāng nín zhǎo yí jiàn dà yìdiǎnr de.",
+        "vi": "Vậy tôi giúp anh/chị tìm một cái lớn hơn một chút."
+      },
+      {
+        "speaker": "A",
+        "zh": "谢谢，如果颜色一样就更好了。",
+        "pinyin": "Xièxie, rúguǒ yánsè yíyàng jiù gèng hǎo le.",
+        "vi": "Cảm ơn, nếu màu giống nhau thì càng tốt."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "商品",
+        "pinyin": "shāngpǐn",
+        "vi": "hàng hóa",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "换",
+        "pinyin": "huàn",
+        "vi": "đổi",
+        "pos": "động từ"
+      },
+      {
+        "zh": "试",
+        "pinyin": "shì",
+        "vi": "thử",
+        "pos": "động từ"
+      },
+      {
+        "zh": "颜色",
+        "pinyin": "yánsè",
+        "vi": "màu sắc",
+        "pos": "danh từ"
+      }
+    ],
+    "relatedGrammar": [
+      "g_zhiyou_cai",
+      "g_bei",
+      "g_ruguo"
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Bridge HSK3 conversation được curate để luyện grammar/vocab HSK3 trong ngữ cảnh đời sống.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_trip_delay_01",
+    "title": "Chuyến đi bị trễ",
+    "titleZh": "旅行延误",
+    "titlePinyin": "Lǚxíng yánwù",
+    "description": "Xử lý tình huống tàu xe bị trễ khi đi du lịch.",
+    "level": 3,
+    "category": "travel",
+    "icon": "🚆",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "火车晚点了，我们可能赶不上下午的活动。",
+        "pinyin": "Huǒchē wǎndiǎn le, wǒmen kěnéng gǎn bu shàng xiàwǔ de huódòng.",
+        "vi": "Tàu trễ rồi, có thể chúng ta không kịp hoạt động buổi chiều."
+      },
+      {
+        "speaker": "B",
+        "zh": "别着急，我先给导游打个电话。",
+        "pinyin": "Bié zháojí, wǒ xiān gěi dǎoyóu dǎ ge diànhuà.",
+        "vi": "Đừng sốt ruột, tôi gọi điện cho hướng dẫn viên trước."
+      },
+      {
+        "speaker": "A",
+        "zh": "如果活动被取消，我们可以明天再去。",
+        "pinyin": "Rúguǒ huódòng bèi qǔxiāo, wǒmen kěyǐ míngtiān zài qù.",
+        "vi": "Nếu hoạt động bị hủy, chúng ta có thể đi lại vào ngày mai."
+      },
+      {
+        "speaker": "B",
+        "zh": "对，而且今天我们可以在附近休息。",
+        "pinyin": "Duì, érqiě jīntiān wǒmen kěyǐ zài fùjìn xiūxi.",
+        "vi": "Đúng, hơn nữa hôm nay chúng ta có thể nghỉ gần đây."
+      },
+      {
+        "speaker": "A",
+        "zh": "只要大家安全，晚一点儿也没关系。",
+        "pinyin": "Zhǐyào dàjiā ānquán, wǎn yìdiǎnr yě méi guānxi.",
+        "vi": "Chỉ cần mọi người an toàn, muộn một chút cũng không sao."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "晚点",
+        "pinyin": "wǎndiǎn",
+        "vi": "trễ giờ",
+        "pos": "động từ"
+      },
+      {
+        "zh": "活动",
+        "pinyin": "huódòng",
+        "vi": "hoạt động",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "取消",
+        "pinyin": "qǔxiāo",
+        "vi": "hủy",
+        "pos": "động từ"
+      },
+      {
+        "zh": "附近",
+        "pinyin": "fùjìn",
+        "vi": "gần đây",
+        "pos": "danh từ"
+      }
+    ],
+    "relatedGrammar": [
+      "g_ruguo",
+      "g_bei",
+      "g_zhiyao_jiu"
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Bridge HSK3 conversation được curate để luyện grammar/vocab HSK3 trong ngữ cảnh đời sống.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_clinic_appointment_01",
+    "title": "Đặt lịch khám",
+    "titleZh": "预约看病",
+    "titlePinyin": "Yùyuē kànbìng",
+    "description": "Trao đổi với phòng khám về triệu chứng và lịch hẹn.",
+    "level": 3,
+    "category": "health",
+    "icon": "🏥",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "您好，我想预约明天上午看医生。",
+        "pinyin": "Nínhǎo, wǒ xiǎng yùyuē míngtiān shàngwǔ kàn yīshēng.",
+        "vi": "Xin chào, tôi muốn đặt lịch khám bác sĩ sáng mai."
+      },
+      {
+        "speaker": "B",
+        "zh": "请问您哪里不舒服？",
+        "pinyin": "Qǐngwèn nín nǎlǐ bù shūfu?",
+        "vi": "Xin hỏi anh/chị khó chịu ở đâu?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我从昨天开始头疼，而且有点儿发烧。",
+        "pinyin": "Wǒ cóng zuótiān kāishǐ tóuténg, érqiě yǒudiǎnr fāshāo.",
+        "vi": "Tôi bắt đầu đau đầu từ hôm qua, hơn nữa hơi sốt."
+      },
+      {
+        "speaker": "B",
+        "zh": "如果发烧比较严重，您应该早点儿来。",
+        "pinyin": "Rúguǒ fāshāo bǐjiào yánzhòng, nín yīnggāi zǎodiǎnr lái.",
+        "vi": "Nếu sốt khá nặng, anh/chị nên đến sớm hơn."
+      },
+      {
+        "speaker": "A",
+        "zh": "好的，我把身份证也带上。",
+        "pinyin": "Hǎo de, wǒ bǎ shēnfènzhèng yě dài shàng.",
+        "vi": "Được, tôi cũng sẽ mang theo giấy tờ tùy thân."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "预约",
+        "pinyin": "yùyuē",
+        "vi": "đặt lịch",
+        "pos": "động từ"
+      },
+      {
+        "zh": "头疼",
+        "pinyin": "tóuténg",
+        "vi": "đau đầu",
+        "pos": "động từ"
+      },
+      {
+        "zh": "发烧",
+        "pinyin": "fāshāo",
+        "vi": "sốt",
+        "pos": "động từ"
+      },
+      {
+        "zh": "严重",
+        "pinyin": "yánzhòng",
+        "vi": "nghiêm trọng",
+        "pos": "tính từ"
+      }
+    ],
+    "relatedGrammar": [
+      "g_time_word",
+      "g_ruguo",
+      "g_ba"
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Bridge HSK3 conversation được curate để luyện grammar/vocab HSK3 trong ngữ cảnh đời sống.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_study_plan_01",
+    "title": "Kế hoạch học tập",
+    "titleZh": "学习计划",
+    "titlePinyin": "Xuéxí jìhuà",
+    "description": "Lập kế hoạch học và ôn tập trước kỳ thi.",
+    "level": 3,
+    "category": "study",
+    "icon": "📚",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "下个月就考试了，你复习得怎么样？",
+        "pinyin": "Xià ge yuè jiù kǎoshì le, nǐ fùxí de zěnmeyàng?",
+        "vi": "Tháng sau thi rồi, bạn ôn tập thế nào?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我每天复习一个小时，但是听力还是比较难。",
+        "pinyin": "Wǒ měitiān fùxí yí ge xiǎoshí, dànshì tīnglì háishì bǐjiào nán.",
+        "vi": "Mỗi ngày tôi ôn một tiếng, nhưng nghe vẫn khá khó."
+      },
+      {
+        "speaker": "A",
+        "zh": "你可以一边听录音，一边跟着读。",
+        "pinyin": "Nǐ kěyǐ yìbiān tīng lùyīn, yìbiān gēnzhe dú.",
+        "vi": "Bạn có thể vừa nghe ghi âm vừa đọc theo."
+      },
+      {
+        "speaker": "B",
+        "zh": "这个方法不错，我今天就开始试试。",
+        "pinyin": "Zhège fāngfǎ búcuò, wǒ jīntiān jiù kāishǐ shìshi.",
+        "vi": "Cách này không tệ, hôm nay tôi sẽ bắt đầu thử."
+      },
+      {
+        "speaker": "A",
+        "zh": "只要坚持练习，成绩一定会提高。",
+        "pinyin": "Zhǐyào jiānchí liànxí, chéngjì yídìng huì tígāo.",
+        "vi": "Chỉ cần kiên trì luyện tập, điểm số nhất định sẽ tăng."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "复习",
+        "pinyin": "fùxí",
+        "vi": "ôn tập",
+        "pos": "động từ"
+      },
+      {
+        "zh": "听力",
+        "pinyin": "tīnglì",
+        "vi": "nghe hiểu",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "方法",
+        "pinyin": "fāngfǎ",
+        "vi": "phương pháp",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "提高",
+        "pinyin": "tígāo",
+        "vi": "nâng cao",
+        "pos": "động từ"
+      }
+    ],
+    "relatedGrammar": [
+      "g_yi_mian",
+      "g_zhiyao_jiu",
+      "g_de_comp"
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Bridge HSK3 conversation được curate để luyện grammar/vocab HSK3 trong ngữ cảnh đời sống.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_family_decision_01",
+    "title": "Quyết định cuối tuần",
+    "titleZh": "周末的决定",
+    "titlePinyin": "Zhōumò de juédìng",
+    "description": "Gia đình bàn kế hoạch cuối tuần.",
+    "level": 3,
+    "category": "family",
+    "icon": "👨‍👩‍👧",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "这个周末我们去看爷爷奶奶吧。",
+        "pinyin": "Zhège zhōumò wǒmen qù kàn yéye nǎinai ba.",
+        "vi": "Cuối tuần này chúng ta đi thăm ông bà nhé."
+      },
+      {
+        "speaker": "B",
+        "zh": "好啊，不过孩子还有作业没做完。",
+        "pinyin": "Hǎo a, búguò háizi hái yǒu zuòyè méi zuò wán.",
+        "vi": "Được, nhưng con vẫn còn bài tập chưa làm xong."
+      },
+      {
+        "speaker": "A",
+        "zh": "那我们让他今天晚上先把作业做完。",
+        "pinyin": "Nà wǒmen ràng tā jīntiān wǎnshang xiān bǎ zuòyè zuò wán.",
+        "vi": "Vậy tối nay chúng ta để con làm xong bài tập trước."
+      },
+      {
+        "speaker": "B",
+        "zh": "如果明天下雨，我们就开车去。",
+        "pinyin": "Rúguǒ míngtiān xiàyǔ, wǒmen jiù kāichē qù.",
+        "vi": "Nếu ngày mai trời mưa, chúng ta sẽ lái xe đi."
+      },
+      {
+        "speaker": "A",
+        "zh": "可以，别忘了给他们带点儿水果。",
+        "pinyin": "Kěyǐ, bié wàng le gěi tāmen dài diǎnr shuǐguǒ.",
+        "vi": "Được, đừng quên mang cho họ ít trái cây."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "周末",
+        "pinyin": "zhōumò",
+        "vi": "cuối tuần",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "决定",
+        "pinyin": "juédìng",
+        "vi": "quyết định",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "作业",
+        "pinyin": "zuòyè",
+        "vi": "bài tập",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "忘",
+        "pinyin": "wàng",
+        "vi": "quên",
+        "pos": "động từ"
+      }
+    ],
+    "relatedGrammar": [
+      "g_ba",
+      "g_ruguo",
+      "g_bie_negation"
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Bridge HSK3 conversation được curate để luyện grammar/vocab HSK3 trong ngữ cảnh đời sống.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_service_complaint_01",
+    "title": "Phản ánh dịch vụ",
+    "titleZh": "反映服务问题",
+    "titlePinyin": "Fǎnyìng fúwù wèntí",
+    "description": "Khách hàng phản ánh vấn đề dịch vụ một cách lịch sự.",
+    "level": 3,
+    "category": "service",
+    "icon": "☎️",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "您好，我想反映一个服务问题。",
+        "pinyin": "Nínhǎo, wǒ xiǎng fǎnyìng yí ge fúwù wèntí.",
+        "vi": "Xin chào, tôi muốn phản ánh một vấn đề dịch vụ."
+      },
+      {
+        "speaker": "B",
+        "zh": "请您慢慢说，我来帮您记录。",
+        "pinyin": "Qǐng nín mànman shuō, wǒ lái bāng nín jìlù.",
+        "vi": "Xin anh/chị nói từ từ, tôi sẽ ghi lại giúp anh/chị."
+      },
+      {
+        "speaker": "A",
+        "zh": "我昨天订的房间被安排错了。",
+        "pinyin": "Wǒ zuótiān dìng de fángjiān bèi ānpái cuò le.",
+        "vi": "Phòng tôi đặt hôm qua bị sắp xếp nhầm."
+      },
+      {
+        "speaker": "B",
+        "zh": "非常抱歉，我们马上帮您解决。",
+        "pinyin": "Fēicháng bàoqiàn, wǒmen mǎshàng bāng nín jiějué.",
+        "vi": "Rất xin lỗi, chúng tôi sẽ giúp anh/chị giải quyết ngay."
+      },
+      {
+        "speaker": "A",
+        "zh": "谢谢，只要今天能换好就可以。",
+        "pinyin": "Xièxie, zhǐyào jīntiān néng huàn hǎo jiù kěyǐ.",
+        "vi": "Cảm ơn, chỉ cần hôm nay đổi xong là được."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "反映",
+        "pinyin": "fǎnyìng",
+        "vi": "phản ánh",
+        "pos": "động từ"
+      },
+      {
+        "zh": "服务",
+        "pinyin": "fúwù",
+        "vi": "dịch vụ",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "安排",
+        "pinyin": "ānpái",
+        "vi": "sắp xếp",
+        "pos": "động từ"
+      },
+      {
+        "zh": "解决",
+        "pinyin": "jiějué",
+        "vi": "giải quyết",
+        "pos": "động từ"
+      }
+    ],
+    "relatedGrammar": [
+      "g_bei",
+      "g_zhiyao_jiu",
+      "g_de_attr"
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người nói A",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người nói B",
+        "avatarColor": "#009688"
+      }
+    ],
+    "cultureTip": "Bridge HSK3 conversation được curate để luyện grammar/vocab HSK3 trong ngữ cảnh đời sống.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk2_bank_01",
+    "title": "Rút tiền và đổi ngoại tệ",
+    "titleZh": "取钱和换钱",
+    "titlePinyin": "Qǔ qián hé huàn qián",
+    "description": "Rút tiền mặt và đổi ngoại tệ tại ngân hàng.",
+    "level": 2,
+    "category": "banking",
+    "icon": "🏦",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你好，我想取五百块钱。",
+        "pinyin": "Nǐ hǎo, wǒ xiǎng qǔ wǔbǎi kuài qián.",
+        "vi": "Xin chào, tôi muốn rút năm trăm tệ."
+      },
+      {
+        "speaker": "B",
+        "zh": "好的，请把您的银行卡给我。",
+        "pinyin": "Hǎo de, qǐng bǎ nín de yínhángkǎ gěi wǒ.",
+        "vi": "Vâng, xin đưa thẻ ngân hàng của bạn cho tôi."
+      },
+      {
+        "speaker": "A",
+        "zh": "给您。另外，这里可以换美元吗？",
+        "pinyin": "Gěi nín. Lìngwài, zhèlǐ kěyǐ huàn Měiyuán ma?",
+        "vi": "Đây ạ. Ngoài ra, ở đây có thể đổi đô la Mỹ không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "可以。今天一百美元换七百一十块人民币。",
+        "pinyin": "Kěyǐ. Jīntiān yìbǎi Měiyuán huàn qībǎi yīshí kuài Rénmínbì.",
+        "vi": "Được. Hôm nay một trăm đô đổi được bảy trăm mười tệ nhân dân tệ."
+      },
+      {
+        "speaker": "A",
+        "zh": "好，我换两百美元吧。需要多长时间？",
+        "pinyin": "Hǎo, wǒ huàn liǎngbǎi Měiyuán ba. Xūyào duō cháng shíjiān?",
+        "vi": "Được, tôi đổi hai trăm đô. Mất bao lâu?"
+      },
+      {
+        "speaker": "B",
+        "zh": "大概五分钟。请您先填一下这张表。",
+        "pinyin": "Dàgài wǔ fēnzhōng. Qǐng nín xiān tián yīxià zhè zhāng biǎo.",
+        "vi": "Khoảng năm phút. Phiền bạn điền vào tờ phiếu này trước."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "取钱",
+        "pinyin": "qǔ qián",
+        "vi": "rút tiền",
+        "pos": "động từ"
+      },
+      {
+        "zh": "银行卡",
+        "pinyin": "yínhángkǎ",
+        "vi": "thẻ ngân hàng",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "换",
+        "pinyin": "huàn",
+        "vi": "đổi",
+        "pos": "động từ"
+      },
+      {
+        "zh": "美元",
+        "pinyin": "Měiyuán",
+        "vi": "đô la Mỹ",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "人民币",
+        "pinyin": "Rénmínbì",
+        "vi": "nhân dân tệ",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "填",
+        "pinyin": "tián",
+        "vi": "điền (vào)",
+        "pos": "động từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "Khách",
+        "role": "Người giao dịch",
+        "avatarColor": "#1976D2"
+      },
+      {
+        "code": "B",
+        "nameVi": "Giao dịch viên",
+        "role": "Nhân viên ngân hàng",
+        "avatarColor": "#388E3C"
+      }
+    ],
+    "relatedGrammar": [
+      "g_xiang",
+      "g_duoshao",
+      "g_ma"
+    ],
+    "cultureTip": "Ở Trung Quốc, để đổi ngoại tệ tại ngân hàng bạn cần mang theo hộ chiếu (护照). Tỷ giá ngân hàng thường tốt hơn ở sân bay. WeChat Pay và Alipay giờ cũng hỗ trợ liên kết thẻ nước ngoài.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk2_appointment_01",
+    "title": "Đặt lịch cắt tóc",
+    "titleZh": "预约理发",
+    "titlePinyin": "Yùyuē lǐfà",
+    "description": "Gọi điện đặt lịch cắt tóc tại tiệm.",
+    "level": 2,
+    "category": "daily",
+    "icon": "✂️",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你好，我想预约明天剪头发。",
+        "pinyin": "Nǐ hǎo, wǒ xiǎng yùyuē míngtiān jiǎn tóufa.",
+        "vi": "Xin chào, tôi muốn đặt lịch cắt tóc ngày mai."
+      },
+      {
+        "speaker": "B",
+        "zh": "好的，您想几点来？",
+        "pinyin": "Hǎo de, nín xiǎng jǐ diǎn lái?",
+        "vi": "Vâng, bạn muốn đến lúc mấy giờ?"
+      },
+      {
+        "speaker": "A",
+        "zh": "下午两点可以吗？",
+        "pinyin": "Xiàwǔ liǎng diǎn kěyǐ ma?",
+        "vi": "Hai giờ chiều có được không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "可以。请问您贵姓？",
+        "pinyin": "Kěyǐ. Qǐngwèn nín guì xìng?",
+        "vi": "Được. Xin hỏi quý danh của bạn là gì?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我姓李。大概需要多长时间？",
+        "pinyin": "Wǒ xìng Lǐ. Dàgài xūyào duō cháng shíjiān?",
+        "vi": "Tôi họ Lý. Khoảng mất bao lâu?"
+      },
+      {
+        "speaker": "B",
+        "zh": "剪头发大概三十分钟左右。明天两点见！",
+        "pinyin": "Jiǎn tóufa dàgài sānshí fēnzhōng zuǒyòu. Míngtiān liǎng diǎn jiàn!",
+        "vi": "Cắt tóc khoảng ba mươi phút thôi. Hẹn gặp ngày mai lúc hai giờ nhé!"
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "预约",
+        "pinyin": "yùyuē",
+        "vi": "đặt lịch hẹn",
+        "pos": "động từ"
+      },
+      {
+        "zh": "剪头发",
+        "pinyin": "jiǎn tóufa",
+        "vi": "cắt tóc",
+        "pos": "động từ"
+      },
+      {
+        "zh": "下午",
+        "pinyin": "xiàwǔ",
+        "vi": "buổi chiều",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "贵姓",
+        "pinyin": "guì xìng",
+        "vi": "quý danh (hỏi họ lịch sự)",
+        "pos": "thành ngữ"
+      },
+      {
+        "zh": "大概",
+        "pinyin": "dàgài",
+        "vi": "khoảng, đại khái",
+        "pos": "trạng từ"
+      },
+      {
+        "zh": "左右",
+        "pinyin": "zuǒyòu",
+        "vi": "khoảng chừng",
+        "pos": "trạng từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "Khách",
+        "role": "Người đặt lịch",
+        "avatarColor": "#9C27B0"
+      },
+      {
+        "code": "B",
+        "nameVi": "Nhân viên",
+        "role": "Nhân viên tiệm tóc",
+        "avatarColor": "#FF5722"
+      }
+    ],
+    "relatedGrammar": [
+      "g_ji_question",
+      "g_duo_adj",
+      "g_ma"
+    ],
+    "cultureTip": "Tiệm tóc ở Trung Quốc thường cần đặt lịch trước (预约 yùyuē), đặc biệt vào cuối tuần. Nhiều tiệm có app WeChat Mini Program để đặt lịch trực tiếp mà không cần gọi điện.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk2_sport_01",
+    "title": "Rủ nhau đi tập thể thao",
+    "titleZh": "一起去运动",
+    "titlePinyin": "Yīqǐ qù yùndòng",
+    "description": "Rủ bạn đi bơi và lên kế hoạch cùng nhau.",
+    "level": 2,
+    "category": "social",
+    "icon": "🏊",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你今天下午有时间吗？",
+        "pinyin": "Nǐ jīntiān xiàwǔ yǒu shíjiān ma?",
+        "vi": "Chiều nay bạn có rảnh không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "有，怎么了？",
+        "pinyin": "Yǒu, zěnme le?",
+        "vi": "Có, có chuyện gì vậy?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我想去游泳，你一起去吗？",
+        "pinyin": "Wǒ xiǎng qù yóuyǒng, nǐ yīqǐ qù ma?",
+        "vi": "Tôi muốn đi bơi, bạn đi cùng không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "好啊！去哪里游？离这里远吗？",
+        "pinyin": "Hǎo a! Qù nǎlǐ yóu? Lí zhèlǐ yuǎn ma?",
+        "vi": "Hay đấy! Đi bơi ở đâu? Xa đây không?"
+      },
+      {
+        "speaker": "A",
+        "zh": "学校附近有个游泳池，走路五分钟就到。",
+        "pinyin": "Xuéxiào fùjìn yǒu gè yóuyǒngchí, zǒulù wǔ fēnzhōng jiù dào.",
+        "vi": "Gần trường có một bể bơi, đi bộ năm phút là tới."
+      },
+      {
+        "speaker": "B",
+        "zh": "太好了！几点去？游完我们一起吃饭吧。",
+        "pinyin": "Tài hǎo le! Jǐ diǎn qù? Yóu wán wǒmen yīqǐ chīfàn ba.",
+        "vi": "Tuyệt quá! Mấy giờ đi? Bơi xong chúng mình cùng ăn tối nhé."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "运动",
+        "pinyin": "yùndòng",
+        "vi": "thể thao, vận động",
+        "pos": "danh từ/động từ"
+      },
+      {
+        "zh": "游泳",
+        "pinyin": "yóuyǒng",
+        "vi": "bơi lội",
+        "pos": "động từ"
+      },
+      {
+        "zh": "一起",
+        "pinyin": "yīqǐ",
+        "vi": "cùng nhau",
+        "pos": "trạng từ"
+      },
+      {
+        "zh": "附近",
+        "pinyin": "fùjìn",
+        "vi": "gần đây, xung quanh",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "游泳池",
+        "pinyin": "yóuyǒngchí",
+        "vi": "bể bơi",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "走路",
+        "pinyin": "zǒulù",
+        "vi": "đi bộ",
+        "pos": "động từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "An",
+        "role": "Người rủ",
+        "avatarColor": "#00BCD4"
+      },
+      {
+        "code": "B",
+        "nameVi": "Bình",
+        "role": "Người được rủ",
+        "avatarColor": "#FF9800"
+      }
+    ],
+    "relatedGrammar": [
+      "g_xiang",
+      "g_ji_question",
+      "g_tai_le"
+    ],
+    "cultureTip": "Người Trung Quốc rất thích rủ nhau vận động buổi sáng sớm hoặc chiều tối. Công viên (公园) thường có người tập thái cực quyền (太极拳), khiêu vũ quảng trường (广场舞) miễn phí — đây là hoạt động cộng đồng rất phổ biến.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk2_lost_01",
+    "title": "Hỏi đường khi bị lạc",
+    "titleZh": "问路",
+    "titlePinyin": "Wèn lù",
+    "description": "Hỏi đường để tìm đến ga tàu điện ngầm.",
+    "level": 2,
+    "category": "transport",
+    "icon": "🗺️",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "不好意思，请问地铁站怎么走？",
+        "pinyin": "Bù hǎoyìsi, qǐngwèn dìtiě zhàn zěnme zǒu?",
+        "vi": "Xin lỗi, xin hỏi đi đến ga tàu điện ngầm như thế nào?"
+      },
+      {
+        "speaker": "B",
+        "zh": "从这里一直往前走，走到第二个路口向左转。",
+        "pinyin": "Cóng zhèlǐ yīzhí wǎng qián zǒu, zǒu dào dì-èr gè lùkǒu xiàng zuǒ zhuǎn.",
+        "vi": "Từ đây đi thẳng về phía trước, đến ngã tư thứ hai rẽ trái."
+      },
+      {
+        "speaker": "A",
+        "zh": "向左转之后呢？",
+        "pinyin": "Xiàng zuǒ zhuǎn zhīhòu ne?",
+        "vi": "Sau khi rẽ trái thì sao?"
+      },
+      {
+        "speaker": "B",
+        "zh": "往前走大概两百米，地铁站就在你右边。",
+        "pinyin": "Wǎng qián zǒu dàgài liǎngbǎi mǐ, dìtiě zhàn jiù zài nǐ yòubiān.",
+        "vi": "Đi thẳng khoảng hai trăm mét, ga tàu điện ngầm sẽ ở bên phải bạn."
+      },
+      {
+        "speaker": "A",
+        "zh": "走路要多长时间？",
+        "pinyin": "Zǒulù yào duō cháng shíjiān?",
+        "vi": "Đi bộ mất bao lâu?"
+      },
+      {
+        "speaker": "B",
+        "zh": "大概走五六分钟。不远的，不用担心。",
+        "pinyin": "Dàgài zǒu wǔ liù fēnzhōng. Bù yuǎn de, bù yòng dānxīn.",
+        "vi": "Khoảng năm sáu phút đi bộ thôi. Không xa đâu, đừng lo."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "地铁站",
+        "pinyin": "dìtiě zhàn",
+        "vi": "ga tàu điện ngầm",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "一直",
+        "pinyin": "yīzhí",
+        "vi": "thẳng, liên tục",
+        "pos": "trạng từ"
+      },
+      {
+        "zh": "路口",
+        "pinyin": "lùkǒu",
+        "vi": "ngã tư, ngã ba",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "向左/右转",
+        "pinyin": "xiàng zuǒ/yòu zhuǎn",
+        "vi": "rẽ trái/phải",
+        "pos": "động từ"
+      },
+      {
+        "zh": "右边",
+        "pinyin": "yòubiān",
+        "vi": "bên phải",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "担心",
+        "pinyin": "dānxīn",
+        "vi": "lo lắng",
+        "pos": "động từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "Du khách",
+        "role": "Người hỏi đường",
+        "avatarColor": "#E91E63"
+      },
+      {
+        "code": "B",
+        "nameVi": "Người dân",
+        "role": "Người chỉ đường",
+        "avatarColor": "#607D8B"
+      }
+    ],
+    "relatedGrammar": [
+      "g_zai",
+      "g_fangwei",
+      "g_duo_adj"
+    ],
+    "cultureTip": "Người Trung Quốc rất sẵn lòng chỉ đường cho người lạ. Khi hỏi đường, bắt đầu bằng '不好意思' (bù hǎoyìsi — xin lỗi làm phiền) là cách lịch sự nhất. Nếu vẫn chưa hiểu, cứ hỏi lại '请再说一遍' (nói lại một lần nữa).",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_rent_01",
+    "title": "Hỏi thuê nhà",
+    "titleZh": "租房子",
+    "titlePinyin": "Zū fángzi",
+    "description": "Liên hệ chủ nhà để hỏi thông tin và xem phòng trọ.",
+    "level": 3,
+    "category": "home",
+    "icon": "🏠",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "您好，我看到网上说您有房子出租，还出租吗？",
+        "pinyin": "Nín hǎo, wǒ kàndào wǎngshàng shuō nín yǒu fángzi chūzū, hái chūzū ma?",
+        "vi": "Xin chào, tôi thấy trên mạng nói bạn có nhà cho thuê, còn thuê không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "还出租。一室一厅，五十平方米，每月三千块。",
+        "pinyin": "Hái chūzū. Yī shì yī tīng, wǔshí píngfāng mǐ, měi yuè sānqiān kuài.",
+        "vi": "Vẫn còn cho thuê. Một phòng ngủ một phòng khách, năm mươi mét vuông, ba nghìn tệ mỗi tháng."
+      },
+      {
+        "speaker": "A",
+        "zh": "押金要交几个月的？",
+        "pinyin": "Yājīn yào jiāo jǐ gè yuè de?",
+        "vi": "Tiền đặt cọc phải nộp mấy tháng?"
+      },
+      {
+        "speaker": "B",
+        "zh": "押一付三，就是先付四个月。包含水电费吗？不包含，水电自己付。",
+        "pinyin": "Yā yī fù sān, jiùshì xiān fù sì gè yuè. Bāohán shuǐdiànfèi ma? Bù bāohán, shuǐdiàn zìjǐ fù.",
+        "vi": "Cọc một trả ba, tức là trả trước bốn tháng. Bao điện nước không? Không bao, tự trả điện nước."
+      },
+      {
+        "speaker": "A",
+        "zh": "好的。我可以去看看房子吗？",
+        "pinyin": "Hǎo de. Wǒ kěyǐ qù kànkan fángzi ma?",
+        "vi": "Được. Tôi có thể đến xem nhà được không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "当然可以，明天上午十点方便吗？",
+        "pinyin": "Dāngrán kěyǐ, míngtiān shàngwǔ shí diǎn fāngbiàn ma?",
+        "vi": "Đương nhiên được, ngày mai mười giờ sáng có tiện không?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "出租",
+        "pinyin": "chūzū",
+        "vi": "cho thuê",
+        "pos": "động từ"
+      },
+      {
+        "zh": "平方米",
+        "pinyin": "píngfāng mǐ",
+        "vi": "mét vuông",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "押金",
+        "pinyin": "yājīn",
+        "vi": "tiền đặt cọc",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "水电费",
+        "pinyin": "shuǐdiànfèi",
+        "vi": "tiền điện nước",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "包含",
+        "pinyin": "bāohán",
+        "vi": "bao gồm",
+        "pos": "động từ"
+      },
+      {
+        "zh": "方便",
+        "pinyin": "fāngbiàn",
+        "vi": "tiện, thuận tiện",
+        "pos": "tính từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "Người thuê",
+        "role": "Người muốn thuê nhà",
+        "avatarColor": "#3F51B5"
+      },
+      {
+        "code": "B",
+        "nameVi": "Chủ nhà",
+        "role": "Người cho thuê",
+        "avatarColor": "#795548"
+      }
+    ],
+    "relatedGrammar": [
+      "g_ji_question",
+      "g_yao",
+      "g_ruguo"
+    ],
+    "cultureTip": "Ở Trung Quốc hợp đồng thuê nhà thường theo hình thức '押一付三' (cọc 1 tháng + trả trước 3 tháng) hoặc '押一付一'. Nền tảng thuê nhà phổ biến nhất là 链家 (Liánjia) và 贝壳找房 (Bèiké). Nhớ ký hợp đồng và giữ biên nhận.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_tech_01",
+    "title": "Điện thoại bị hỏng",
+    "titleZh": "手机坏了",
+    "titlePinyin": "Shǒujī huài le",
+    "description": "Đem điện thoại đến cửa hàng để sửa.",
+    "level": 3,
+    "category": "technology",
+    "icon": "📱",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你好，我的手机屏幕摔坏了，能修吗？",
+        "pinyin": "Nǐ hǎo, wǒ de shǒujī píngmù shuāi huài le, néng xiū ma?",
+        "vi": "Xin chào, màn hình điện thoại của tôi bị vỡ do rơi, có sửa được không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "让我看一下。哦，屏幕裂了，需要换新屏幕。",
+        "pinyin": "Ràng wǒ kàn yīxià. Ō, píngmù liè le, xūyào huàn xīn píngmù.",
+        "vi": "Để tôi xem. Ồ, màn hình bị nứt rồi, cần thay màn hình mới."
+      },
+      {
+        "speaker": "A",
+        "zh": "大概要多少钱？还在保修期内吗？",
+        "pinyin": "Dàgài yào duōshao qián? Hái zài bǎoxiūqī nèi ma?",
+        "vi": "Khoảng bao nhiêu tiền? Còn trong thời hạn bảo hành không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "摔坏不在保修范围内，换屏幕要三百八十块。",
+        "pinyin": "Shuāi huài bù zài bǎoxiū fànwéi nèi, huàn píngmù yào sānbǎi bāshí kuài.",
+        "vi": "Vỡ do rơi không thuộc phạm vi bảo hành, thay màn hình mất ba trăm tám mươi tệ."
+      },
+      {
+        "speaker": "A",
+        "zh": "好吧。手机里的数据能保住吗？",
+        "pinyin": "Hǎo ba. Shǒujī lǐ de shùjù néng bǎo zhù ma?",
+        "vi": "Thôi được. Dữ liệu trong điện thoại có giữ được không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "可以的，我们只换屏幕，不会影响您的数据。大概两个小时取。",
+        "pinyin": "Kěyǐ de, wǒmen zhǐ huàn píngmù, bù huì yǐngxiǎng nín de shùjù. Dàgài liǎng gè xiǎoshí qǔ.",
+        "vi": "Được, chúng tôi chỉ thay màn hình, sẽ không ảnh hưởng đến dữ liệu của bạn. Khoảng hai tiếng đến lấy."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "屏幕",
+        "pinyin": "píngmù",
+        "vi": "màn hình",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "摔坏",
+        "pinyin": "shuāi huài",
+        "vi": "rơi vỡ, làm hỏng",
+        "pos": "động từ"
+      },
+      {
+        "zh": "保修期",
+        "pinyin": "bǎoxiūqī",
+        "vi": "thời hạn bảo hành",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "范围",
+        "pinyin": "fànwéi",
+        "vi": "phạm vi",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "数据",
+        "pinyin": "shùjù",
+        "vi": "dữ liệu",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "影响",
+        "pinyin": "yǐngxiǎng",
+        "vi": "ảnh hưởng",
+        "pos": "động từ/danh từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "Khách",
+        "role": "Người cần sửa máy",
+        "avatarColor": "#F44336"
+      },
+      {
+        "code": "B",
+        "nameVi": "Kỹ thuật viên",
+        "role": "Nhân viên sửa chữa",
+        "avatarColor": "#2196F3"
+      }
+    ],
+    "relatedGrammar": [
+      "g_le2",
+      "g_result_complement",
+      "g_de_potential"
+    ],
+    "cultureTip": "Tại Trung Quốc có nhiều trung tâm sửa điện thoại uy tín gọi là '手机维修店'. Hãng Apple có 'Apple Store' và 'Apple 授权服务商' (đại lý ủy quyền). Nhớ hỏi kỹ giá và thời gian trước khi để lại máy.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_movie_01",
+    "title": "Rủ nhau đi xem phim",
+    "titleZh": "一起去看电影",
+    "titlePinyin": "Yīqǐ qù kàn diànyǐng",
+    "description": "Bàn về chọn phim và đặt vé xem phim cùng bạn bè.",
+    "level": 3,
+    "category": "entertainment",
+    "icon": "🎬",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "周末你有空吗？一起去看电影怎么样？",
+        "pinyin": "Zhōumò nǐ yǒu kòng ma? Yīqǐ qù kàn diànyǐng zěnmeyàng?",
+        "vi": "Cuối tuần bạn rảnh không? Cùng đi xem phim thế nào?"
+      },
+      {
+        "speaker": "B",
+        "zh": "好主意！你想看什么类型的？",
+        "pinyin": "Hǎo zhǔyì! Nǐ xiǎng kàn shénme lèixíng de?",
+        "vi": "Ý hay đấy! Bạn muốn xem thể loại gì?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我比较喜欢动作片，你呢？",
+        "pinyin": "Wǒ bǐjiào xǐhuan dòngzuòpiān, nǐ ne?",
+        "vi": "Tôi khá thích phim hành động, còn bạn?"
+      },
+      {
+        "speaker": "B",
+        "zh": "动作片也行，但我更想看那部新出的爱情片，听说很感人。",
+        "pinyin": "Dòngzuòpiān yě xíng, dàn wǒ gèng xiǎng kàn nà bù xīn chū de àiqíngpiān, tīngshuō hěn gǎnrén.",
+        "vi": "Phim hành động cũng được, nhưng tôi muốn xem bộ phim tình cảm mới ra hơn, nghe nói rất cảm động."
+      },
+      {
+        "speaker": "A",
+        "zh": "好吧，那我们看爱情片。你来买票还是我买？",
+        "pinyin": "Hǎo ba, nà wǒmen kàn àiqíngpiān. Nǐ lái mǎi piào háishi wǒ mǎi?",
+        "vi": "Thôi được, vậy mình xem phim tình cảm. Bạn mua vé hay tôi mua?"
+      },
+      {
+        "speaker": "B",
+        "zh": "用手机APP订票比较方便，我来订吧，你请我吃爆米花怎么样？",
+        "pinyin": "Yòng shǒujī APP dìng piào bǐjiào fāngbiàn, wǒ lái dìng ba, nǐ qǐng wǒ chī bàomǐhuā zěnmeyàng?",
+        "vi": "Đặt vé qua app điện thoại tiện hơn, để tôi đặt, còn bạn mời tôi ăn bỏng ngô nhé?"
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "类型",
+        "pinyin": "lèixíng",
+        "vi": "thể loại, kiểu",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "动作片",
+        "pinyin": "dòngzuòpiān",
+        "vi": "phim hành động",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "爱情片",
+        "pinyin": "àiqíngpiān",
+        "vi": "phim tình cảm",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "感人",
+        "pinyin": "gǎnrén",
+        "vi": "cảm động",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "订票",
+        "pinyin": "dìng piào",
+        "vi": "đặt vé",
+        "pos": "động từ"
+      },
+      {
+        "zh": "爆米花",
+        "pinyin": "bàomǐhuā",
+        "vi": "bỏng ngô",
+        "pos": "danh từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "Minh",
+        "role": "Người rủ đi xem phim",
+        "avatarColor": "#9C27B0"
+      },
+      {
+        "code": "B",
+        "nameVi": "Lan",
+        "role": "Bạn bè",
+        "avatarColor": "#FF4081"
+      }
+    ],
+    "relatedGrammar": [
+      "g_bi",
+      "g_haishi",
+      "g_geng"
+    ],
+    "cultureTip": "Rạp chiếu phim ở Trung Quốc rất phát triển — Trung Quốc là thị trường điện ảnh lớn nhất thế giới. App đặt vé phổ biến nhất là 猫眼 (Māoyǎn) và 淘票票 (Táo piàopiào). Mua trước qua app thường rẻ hơn mua tại quầy.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk3_bank_02",
+    "title": "Mở tài khoản ngân hàng",
+    "titleZh": "开银行账户",
+    "titlePinyin": "Kāi yínháng zhànghù",
+    "description": "Làm thủ tục mở tài khoản ngân hàng lần đầu tại Trung Quốc.",
+    "level": 3,
+    "category": "banking",
+    "icon": "💳",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "您好，我想开一个银行账户，需要什么手续？",
+        "pinyin": "Nín hǎo, wǒ xiǎng kāi yīgè yínháng zhànghù, xūyào shénme shǒuxù?",
+        "vi": "Xin chào, tôi muốn mở tài khoản ngân hàng, cần làm thủ tục gì?"
+      },
+      {
+        "speaker": "B",
+        "zh": "需要您的护照和在中国的居住证明，比如租房合同。",
+        "pinyin": "Xūyào nín de hùzhào hé zài Zhōngguó de jūzhù zhèngmíng, bǐrú zū fáng hétong.",
+        "vi": "Cần hộ chiếu và bằng chứng cư trú ở Trung Quốc, ví dụ như hợp đồng thuê nhà."
+      },
+      {
+        "speaker": "A",
+        "zh": "我都带来了。可以开哪种账户？",
+        "pinyin": "Wǒ dōu dài lái le. Kěyǐ kāi nǎ zhǒng zhànghù?",
+        "vi": "Tôi đã mang theo cả rồi. Có thể mở loại tài khoản nào?"
+      },
+      {
+        "speaker": "B",
+        "zh": "我们推荐开借记卡，方便日常使用，而且可以绑定支付宝和微信。",
+        "pinyin": "Wǒmen tuījiàn kāi jièjìkǎ, fāngbiàn rìcháng shǐyòng, érqiě kěyǐ bǎngdìng Zhīfùbǎo hé Wēixìn.",
+        "vi": "Chúng tôi khuyến nghị mở thẻ ghi nợ, tiện cho chi tiêu hàng ngày, hơn nữa có thể liên kết với Alipay và WeChat."
+      },
+      {
+        "speaker": "A",
+        "zh": "好，就开借记卡吧。需要存最低多少钱？",
+        "pinyin": "Hǎo, jiù kāi jièjìkǎ ba. Xūyào cún zuìdī duōshao qián?",
+        "vi": "Được, vậy mở thẻ ghi nợ. Cần nạp tối thiểu bao nhiêu tiền?"
+      },
+      {
+        "speaker": "B",
+        "zh": "不需要最低存款，但请先存一块钱激活账户。",
+        "pinyin": "Bù xūyào zuìdī cúnkuǎn, dàn qǐng xiān cún yī kuài qián jīhuó zhànghù.",
+        "vi": "Không cần số dư tối thiểu, nhưng hãy nạp một tệ trước để kích hoạt tài khoản."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "账户",
+        "pinyin": "zhànghù",
+        "vi": "tài khoản",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "手续",
+        "pinyin": "shǒuxù",
+        "vi": "thủ tục",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "居住证明",
+        "pinyin": "jūzhù zhèngmíng",
+        "vi": "bằng chứng cư trú",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "借记卡",
+        "pinyin": "jièjìkǎ",
+        "vi": "thẻ ghi nợ",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "绑定",
+        "pinyin": "bǎngdìng",
+        "vi": "liên kết, ràng buộc",
+        "pos": "động từ"
+      },
+      {
+        "zh": "激活",
+        "pinyin": "jīhuó",
+        "vi": "kích hoạt",
+        "pos": "động từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "Khách",
+        "role": "Người mở tài khoản",
+        "avatarColor": "#009688"
+      },
+      {
+        "code": "B",
+        "nameVi": "Giao dịch viên",
+        "role": "Nhân viên ngân hàng",
+        "avatarColor": "#FFC107"
+      }
+    ],
+    "relatedGrammar": [
+      "g_ba",
+      "g_budan_erqie",
+      "g_ruguo"
+    ],
+    "cultureTip": "Người nước ngoài mở tài khoản ngân hàng tại Trung Quốc cần hộ chiếu và thường cần visa còn hạn dài. Ngân hàng dễ mở nhất cho người nước ngoài là 中国银行 (Bank of China) và 工商银行 (ICBC). Sau khi có tài khoản, liên kết với Alipay (支付宝) để dùng ở khắp nơi.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk4_debate_01",
+    "title": "Tranh luận về mạng xã hội",
+    "titleZh": "讨论社交媒体",
+    "titlePinyin": "Tǎolùn shèjiāo méitǐ",
+    "description": "Hai người bạn tranh luận về tác động tích cực và tiêu cực của mạng xã hội.",
+    "level": 4,
+    "category": "social",
+    "icon": "💬",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你觉得社交媒体对我们的生活影响大吗？",
+        "pinyin": "Nǐ juéde shèjiāo méitǐ duì wǒmen de shēnghuó yǐngxiǎng dà ma?",
+        "vi": "Bạn thấy mạng xã hội ảnh hưởng lớn đến cuộc sống của chúng ta không?"
+      },
+      {
+        "speaker": "B",
+        "zh": "当然大。它让我们随时随地和朋友保持联系，获取信息也方便多了。",
+        "pinyin": "Dāngrán dà. Tā ràng wǒmen suíshí suídì hé péngyou bǎochí liánxì, huòqǔ xìnxī yě fāngbiàn duō le.",
+        "vi": "Lớn chứ. Nó giúp chúng ta duy trì liên lạc với bạn bè mọi lúc mọi nơi, việc tiếp cận thông tin cũng tiện hơn nhiều."
+      },
+      {
+        "speaker": "A",
+        "zh": "我同意，但它也有很多负面影响，尤其是对年轻人的心理健康。",
+        "pinyin": "Wǒ tóngyì, dàn tā yě yǒu hěn duō fùmiàn yǐngxiǎng, yóuqí shì duì niánqīngrén de xīnlǐ jiànkāng.",
+        "vi": "Tôi đồng ý, nhưng nó cũng có nhiều ảnh hưởng tiêu cực, đặc biệt là đối với sức khỏe tâm lý của người trẻ."
+      },
+      {
+        "speaker": "B",
+        "zh": "这倒是真的。很多人过度依赖手机，甚至影响到睡眠和现实中的人际关系。",
+        "pinyin": "Zhè dào shì zhēn de. Hěn duō rén guòdù yīlài shǒujī, shènzhì yǐngxiǎng dào shuìmián hé xiànshí zhōng de rénjì guānxi.",
+        "vi": "Điều đó đúng đấy. Nhiều người quá phụ thuộc vào điện thoại, thậm chí ảnh hưởng đến giấc ngủ và các mối quan hệ ngoài đời thực."
+      },
+      {
+        "speaker": "A",
+        "zh": "所以关键在于怎么合理使用，而不是完全不用。",
+        "pinyin": "Suǒyǐ guānjiàn zàiyú zěnme hélǐ shǐyòng, ér bùshì wánquán bù yòng.",
+        "vi": "Vì vậy điều quan trọng là cách sử dụng hợp lý, chứ không phải hoàn toàn không dùng."
+      },
+      {
+        "speaker": "B",
+        "zh": "说得有道理。无论如何，自我控制是最重要的。",
+        "pinyin": "Shuō de yǒu dàolǐ. Wúlùn rúhé, zìwǒ kòngzhì shì zuì zhòngyào de.",
+        "vi": "Nói có lý đấy. Dù thế nào, tự kiểm soát bản thân vẫn là quan trọng nhất."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "社交媒体",
+        "pinyin": "shèjiāo méitǐ",
+        "vi": "mạng xã hội",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "负面影响",
+        "pinyin": "fùmiàn yǐngxiǎng",
+        "vi": "ảnh hưởng tiêu cực",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "过度依赖",
+        "pinyin": "guòdù yīlài",
+        "vi": "quá phụ thuộc",
+        "pos": "động từ"
+      },
+      {
+        "zh": "人际关系",
+        "pinyin": "rénjì guānxi",
+        "vi": "mối quan hệ giữa người với người",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "合理",
+        "pinyin": "hélǐ",
+        "vi": "hợp lý",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "自我控制",
+        "pinyin": "zìwǒ kòngzhì",
+        "vi": "tự kiểm soát",
+        "pos": "danh từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "Hà",
+        "role": "Người hoài nghi về MXH",
+        "avatarColor": "#FF5722"
+      },
+      {
+        "code": "B",
+        "nameVi": "Tuấn",
+        "role": "Người ủng hộ MXH",
+        "avatarColor": "#3F51B5"
+      }
+    ],
+    "relatedGrammar": [
+      "g4_youqi",
+      "g4_shenzhi",
+      "g4_wulun",
+      "g4_jiushi"
+    ],
+    "cultureTip": "Mạng xã hội phổ biến nhất ở Trung Quốc là WeChat (微信), Weibo (微博), Douyin (抖音 — TikTok bản Trung Quốc) và Xiaohongshu (小红书 — giống Instagram). Facebook, Instagram, YouTube đều bị chặn tại Trung Quốc đại lục.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk4_scholarship_01",
+    "title": "Phỏng vấn xin học bổng du học",
+    "titleZh": "奖学金面试",
+    "titlePinyin": "Jiǎngxuéjīn miànshì",
+    "description": "Phỏng vấn xin học bổng du học Trung Quốc với hội đồng tuyển chọn.",
+    "level": 4,
+    "category": "education",
+    "icon": "🎓",
+    "lines": [
+      {
+        "speaker": "B",
+        "zh": "请介绍一下你为什么想申请这个奖学金。",
+        "pinyin": "Qǐng jièshào yīxià nǐ wèishénme xiǎng shēnqǐng zhège jiǎngxuéjīn.",
+        "vi": "Hãy giới thiệu lý do bạn muốn xin học bổng này."
+      },
+      {
+        "speaker": "A",
+        "zh": "我一直对中国文化很感兴趣，而且中文专业对我未来的职业发展非常重要。",
+        "pinyin": "Wǒ yīzhí duì Zhōngguó wénhuà hěn gǎn xìngqù, érqiě Zhōngwén zhuānyè duì wǒ wèilái de zhíyè fāzhǎn fēicháng zhòngyào.",
+        "vi": "Tôi luôn rất hứng thú với văn hóa Trung Quốc, hơn nữa chuyên ngành tiếng Trung rất quan trọng cho sự phát triển nghề nghiệp của tôi trong tương lai."
+      },
+      {
+        "speaker": "B",
+        "zh": "你的HSK成绩如何？有没有在中国生活的经历？",
+        "pinyin": "Nǐ de HSK chéngjì rúhé? Yǒu méiyǒu zài Zhōngguó shēnghuó de jīnglì?",
+        "vi": "Kết quả HSK của bạn thế nào? Bạn có kinh nghiệm sống ở Trung Quốc không?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我通过了HSK五级，去年暑假曾去北京交流学习两个月。",
+        "pinyin": "Wǒ tōngguò le HSK wǔ jí, qùnián shǔjià céng qù Běijīng jiāoliú xuéxí liǎng gè yuè.",
+        "vi": "Tôi đã đạt HSK cấp 5, năm ngoái trong kỳ nghỉ hè tôi đã đến Bắc Kinh giao lưu học tập hai tháng."
+      },
+      {
+        "speaker": "B",
+        "zh": "很好。获得学位后，你打算做什么？",
+        "pinyin": "Hěn hǎo. Huòdé xuéwèi hòu, nǐ dǎsuàn zuò shénme?",
+        "vi": "Rất tốt. Sau khi lấy bằng, bạn dự định làm gì?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我希望能在中越两国之间的企业工作，为两国经济合作做出贡献。",
+        "pinyin": "Wǒ xīwàng néng zài Zhōng-Yuè liǎng guó zhī jiān de qǐyè gōngzuò, wèi liǎng guó jīngjì hézuò zuòchū gòngxiàn.",
+        "vi": "Tôi hy vọng có thể làm việc tại doanh nghiệp giữa hai nước Trung-Việt, đóng góp cho hợp tác kinh tế hai nước."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "奖学金",
+        "pinyin": "jiǎngxuéjīn",
+        "vi": "học bổng",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "申请",
+        "pinyin": "shēnqǐng",
+        "vi": "xin, đăng ký",
+        "pos": "động từ"
+      },
+      {
+        "zh": "专业",
+        "pinyin": "zhuānyè",
+        "vi": "chuyên ngành",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "经历",
+        "pinyin": "jīnglì",
+        "vi": "kinh nghiệm, trải nghiệm",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "学位",
+        "pinyin": "xuéwèi",
+        "vi": "bằng cấp, học vị",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "贡献",
+        "pinyin": "gòngxiàn",
+        "vi": "đóng góp",
+        "pos": "danh từ/động từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "Thí sinh",
+        "role": "Người xin học bổng",
+        "avatarColor": "#009688"
+      },
+      {
+        "code": "B",
+        "nameVi": "Hội đồng",
+        "role": "Người phỏng vấn",
+        "avatarColor": "#607D8B"
+      }
+    ],
+    "relatedGrammar": [
+      "g_budan_erqie",
+      "g4_keneng",
+      "g_guo",
+      "g4_wei_er"
+    ],
+    "cultureTip": "Học bổng Chính phủ Trung Quốc (中国政府奖学金 CSC) là học bổng toàn phần phổ biến nhất, bao học phí và sinh hoạt phí. Khi phỏng vấn, người Trung Quốc đánh giá cao sự khiêm tốn (谦虚 qiānxū) và thái độ cầu tiến. Tránh nói quá tự tin hoặc phô trương.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk4_media_01",
+    "title": "Thảo luận về tin tức và truyền thông",
+    "titleZh": "讨论新闻和媒体",
+    "titlePinyin": "Tǎolùn xīnwén hé méitǐ",
+    "description": "Hai đồng nghiệp trao đổi về cách tiếp cận và đánh giá thông tin truyền thông.",
+    "level": 4,
+    "category": "media",
+    "icon": "📰",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "你平时从哪些渠道获取新闻？",
+        "pinyin": "Nǐ píngshí cóng nǎxiē qúdào huòqǔ xīnwén?",
+        "vi": "Bình thường bạn lấy tin tức từ những kênh nào?"
+      },
+      {
+        "speaker": "B",
+        "zh": "主要看微信公众号和微博，有时候也看电视新闻。你呢？",
+        "pinyin": "Zhǔyào kàn Wēixìn gōngzhònghào hé Wēibó, yǒu shíhòu yě kàn diànshì xīnwén. Nǐ ne?",
+        "vi": "Chủ yếu xem tài khoản công khai WeChat và Weibo, đôi khi cũng xem tin tức truyền hình. Còn bạn?"
+      },
+      {
+        "speaker": "A",
+        "zh": "我更喜欢看纸质报纸，感觉内容比网络新闻更可靠。",
+        "pinyin": "Wǒ gèng xǐhuan kàn zhǐzhì bàozhǐ, gǎnjué nèiróng bǐ wǎngluò xīnwén gèng kěkào.",
+        "vi": "Tôi thích đọc báo giấy hơn, cảm thấy nội dung đáng tin cậy hơn tin tức mạng."
+      },
+      {
+        "speaker": "B",
+        "zh": "这个观点有意思。不过网络新闻速度更快，而且可以看到不同角度的报道。",
+        "pinyin": "Zhège guāndiǎn yǒu yìsi. Bùguò wǎngluò xīnwén sùdù gèng kuài, érqiě kěyǐ kàndào bùtóng jiǎodù de bàodào.",
+        "vi": "Quan điểm thú vị đấy. Nhưng tin tức mạng nhanh hơn, và có thể xem các góc nhìn báo cáo khác nhau."
+      },
+      {
+        "speaker": "A",
+        "zh": "确实，但假新闻也是个大问题，很难分辨哪些是真的。",
+        "pinyin": "Quèshí, dàn jiǎ xīnwén yě shì gè dà wèntí, hěn nán fēnbiàn nǎxiē shì zhēn de.",
+        "vi": "Đúng vậy, nhưng tin giả cũng là vấn đề lớn, rất khó phân biệt cái nào là thật."
+      },
+      {
+        "speaker": "B",
+        "zh": "所以无论从哪里看新闻，都要保持批判性思维，多方核实才行。",
+        "pinyin": "Suǒyǐ wúlùn cóng nǎlǐ kàn xīnwén, dōu yào bǎochí pīpànxìng sīwéi, duō fāng héshí cái xíng.",
+        "vi": "Vì vậy dù xem tin tức từ đâu cũng phải giữ tư duy phản biện, xác minh đa chiều mới được."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "渠道",
+        "pinyin": "qúdào",
+        "vi": "kênh, nguồn",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "可靠",
+        "pinyin": "kěkào",
+        "vi": "đáng tin cậy",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "角度",
+        "pinyin": "jiǎodù",
+        "vi": "góc độ, góc nhìn",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "假新闻",
+        "pinyin": "jiǎ xīnwén",
+        "vi": "tin giả",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "分辨",
+        "pinyin": "fēnbiàn",
+        "vi": "phân biệt",
+        "pos": "động từ"
+      },
+      {
+        "zh": "批判性思维",
+        "pinyin": "pīpànxìng sīwéi",
+        "vi": "tư duy phản biện",
+        "pos": "danh từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "Hùng",
+        "role": "Người ưa báo truyền thống",
+        "avatarColor": "#795548"
+      },
+      {
+        "code": "B",
+        "nameVi": "Linh",
+        "role": "Người dùng mạng xã hội",
+        "avatarColor": "#00BCD4"
+      }
+    ],
+    "relatedGrammar": [
+      "g4_wulun",
+      "g_budan_erqie",
+      "g_bi",
+      "g4_youqi"
+    ],
+    "cultureTip": "Môi trường truyền thông tại Trung Quốc rất đặc thù. Báo chí lớn như 人民日报 (Rénmín Rìbào), 新华社 (Xinhua) là cơ quan nhà nước. WeChat 公众号 (tài khoản công khai) của các tổ chức và cá nhân có sức ảnh hưởng rất lớn trong xã hội.",
+    "isBookmarked": false,
+    "isMastered": false
+  },
+  {
+    "id": "conv_hsk4_emergency_01",
+    "title": "Gọi cấp cứu khi có tai nạn",
+    "titleZh": "拨打急救电话",
+    "titlePinyin": "Bōdǎ jíjiù diànhuà",
+    "description": "Gọi điện báo cấp cứu khi có người bị ngã và ngất xỉu trên đường.",
+    "level": 4,
+    "category": "emergency",
+    "icon": "🚑",
+    "lines": [
+      {
+        "speaker": "A",
+        "zh": "喂，是急救中心吗？这里有人突然晕倒了，请快来！",
+        "pinyin": "Wèi, shì jíjiù zhōngxīn ma? Zhèlǐ yǒu rén túrán yūndǎo le, qǐng kuài lái!",
+        "vi": "Alô, có phải trung tâm cấp cứu không? Ở đây có người đột nhiên ngất xỉu, mau đến đây!"
+      },
+      {
+        "speaker": "B",
+        "zh": "请保持冷静。请告诉我您的具体位置。",
+        "pinyin": "Qǐng bǎochí lěngjìng. Qǐng gàosù wǒ nín de jùtǐ wèizhì.",
+        "vi": "Hãy bình tĩnh. Hãy cho tôi biết vị trí cụ thể của bạn."
+      },
+      {
+        "speaker": "A",
+        "zh": "我在中关村大街和北四环交叉口附近，一家咖啡店门口。",
+        "pinyin": "Wǒ zài Zhōngguāncūn Dàjiē hé Běi Sìhuán jiāochākǒu fùjìn, yījiā kāfēidiàn ménkǒu.",
+        "vi": "Tôi ở gần ngã tư phố Trung Quan Tôn và Vành đai 4 Bắc, trước cửa một quán cà phê."
+      },
+      {
+        "speaker": "B",
+        "zh": "好，救护车马上出发。伤者现在有没有意识？还在呼吸吗？",
+        "pinyin": "Hǎo, jiùhùchē mǎshàng chūfā. Shāngzhě xiànzài yǒu méiyǒu yìshí? Hái zài hūxī ma?",
+        "vi": "Được, xe cứu thương xuất phát ngay. Người bị nạn có còn ý thức không? Còn thở không?"
+      },
+      {
+        "speaker": "A",
+        "zh": "她还在呼吸，但没有反应。我把她放平了，头偏向一侧。",
+        "pinyin": "Tā hái zài hūxī, dàn méiyǒu fǎnyìng. Wǒ bǎ tā fàng píng le, tóu piān xiàng yī cè.",
+        "vi": "Cô ấy vẫn còn thở, nhưng không có phản ứng. Tôi đã đặt cô ấy nằm thẳng, đầu nghiêng về một bên."
+      },
+      {
+        "speaker": "B",
+        "zh": "做得对。请继续陪在她身边，不要给她喝水，救护车大约十分钟内到达。",
+        "pinyin": "Zuò de duì. Qǐng jìxù péi zài tā shēnbiān, bùyào gěi tā hē shuǐ, jiùhùchē dàyuē shí fēnzhōng nèi dàodá.",
+        "vi": "Làm đúng rồi. Hãy tiếp tục ở bên cạnh cô ấy, đừng cho cô ấy uống nước, xe cứu thương sẽ đến trong khoảng mười phút."
+      }
+    ],
+    "vocabulary": [
+      {
+        "zh": "晕倒",
+        "pinyin": "yūndǎo",
+        "vi": "ngất xỉu, ngã ngất",
+        "pos": "động từ"
+      },
+      {
+        "zh": "冷静",
+        "pinyin": "lěngjìng",
+        "vi": "bình tĩnh",
+        "pos": "tính từ"
+      },
+      {
+        "zh": "救护车",
+        "pinyin": "jiùhùchē",
+        "vi": "xe cứu thương",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "意识",
+        "pinyin": "yìshí",
+        "vi": "ý thức, tỉnh táo",
+        "pos": "danh từ"
+      },
+      {
+        "zh": "呼吸",
+        "pinyin": "hūxī",
+        "vi": "thở, hô hấp",
+        "pos": "động từ/danh từ"
+      },
+      {
+        "zh": "反应",
+        "pinyin": "fǎnyìng",
+        "vi": "phản ứng",
+        "pos": "danh từ/động từ"
+      }
+    ],
+    "speakers": [
+      {
+        "code": "A",
+        "nameVi": "Người gọi",
+        "role": "Người phát hiện tai nạn",
+        "avatarColor": "#F44336"
+      },
+      {
+        "code": "B",
+        "nameVi": "Điều phối viên",
+        "role": "Trung tâm cấp cứu 120",
+        "avatarColor": "#4CAF50"
+      }
+    ],
+    "relatedGrammar": [
+      "g_ba",
+      "g_bixu",
+      "g4_keneng",
+      "g_le2"
+    ],
+    "cultureTip": "Số cấp cứu tại Trung Quốc là **120** (y tế), **110** (cảnh sát), **119** (cứu hỏa). Khi gọi 120, hãy chuẩn bị nói rõ: vị trí, triệu chứng, tình trạng người bị nạn. Không di chuyển người bị tai nạn giao thông trừ khi họ đang trong nguy hiểm tức thì.",
+    "isBookmarked": false,
+    "isMastered": false
   }
 ]

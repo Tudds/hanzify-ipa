@@ -1,20 +1,25 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import '../../domain/entities/grammar_point.dart';
 import 'grammar_local_datasource.dart';
+import 'package:hanzify/core/services/sync_web_service.dart';
 
 // ============================================================================
 // GrammarWebDataSourceImpl — In-memory datasource cho Grammar trên Web
+// Khi user đã login, bookmark/mastered sẽ được sync với Supabase.
 // ============================================================================
 class GrammarWebDataSourceImpl implements GrammarLocalDataSource {
   final List<GrammarPoint> _store = [];
+  final SyncWebService _syncService = SyncWebService();
 
   GrammarWebDataSourceImpl._();
 
   static Future<GrammarWebDataSourceImpl> init() async {
     final ds = GrammarWebDataSourceImpl._();
     await ds._seedFromAssets();
+    await ds._mergeSupabaseProgress();
     return ds;
   }
 
@@ -86,10 +91,57 @@ class GrammarWebDataSourceImpl implements GrammarLocalDataSource {
     } else {
       _store.add(grammar);
     }
+
+    // Push lên Supabase nếu đã login
+    _pushToSupabase(grammar);
   }
 
   @override
   Future<int> count() async => _store.length;
+
+  // ── Supabase Sync ──────────────────────────────────────────────────────────
+
+  /// Push grammar update lên Supabase (fire-and-forget)
+  void _pushToSupabase(GrammarPoint grammar) {
+    final userId = Supabase.instance.client.auth.currentUser?.id;
+    if (userId == null) return;
+    _syncService.pushGrammarUpdate(
+      userId,
+      grammar.id,
+      isBookmarked: grammar.isBookmarked,
+      isMastered: grammar.isMastered,
+    ).ignore();
+  }
+
+  /// Pull bookmark/mastered từ Supabase và merge vào store.
+  /// Remote luôn wins vì web không có persistent state.
+  Future<void> _mergeSupabaseProgress() async {
+    try {
+      final userId = Supabase.instance.client.auth.currentUser?.id;
+      if (userId == null) return;
+
+      final remoteProgress = await _syncService.pullGrammarProgress(userId);
+      if (remoteProgress.isEmpty) return;
+
+      int merged = 0;
+      for (int i = 0; i < _store.length; i++) {
+        final syncData = remoteProgress[_store[i].id];
+        if (syncData != null) {
+          _store[i] = _store[i].copyWith(
+            isBookmarked: syncData.isBookmarked,
+            isMastered: syncData.isMastered,
+          );
+          merged++;
+        }
+      }
+
+      debugPrint('✅ [Web] Merged $merged grammar progress items from Supabase');
+    } catch (e) {
+      debugPrint('⚠️ [Web] Failed to merge Supabase grammar progress: $e');
+    }
+  }
+
+  // ── Seed ────────────────────────────────────────────────────────────────────
 
   Future<void> _seedFromAssets() async {
     const files = [

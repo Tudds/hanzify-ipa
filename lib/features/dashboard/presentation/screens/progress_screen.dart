@@ -55,11 +55,12 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> with SingleTick
       body: allVocabAsync.when(
         data: (allVocab) {
           final dueCount = dueVocabAsync.asData?.value.length ?? 0;
-          final mastered = allVocab.where((v) => v.interval >= 7).length;
+          final mastered = allVocab.where((v) => v.isMastered).length;
+          final learning = allVocab.where((v) => v.interval > 0 && !v.isMastered).length;
           final total = allVocab.length;
-          final progress = total > 0 ? (dueCount / total).clamp(0.0, 1.0) : 0.0;
-          const streak = 15;
-          final easyToForget = allVocab.where((v) => v.easeFactor < 2.0).length;
+          final progress = total > 0 ? ((mastered + learning) / total).clamp(0.0, 1.0) : 0.0;
+          final streak = allVocab.any((v) => v.updatedAt.day == DateTime.now().day) ? 1 : 0;
+          final easyToForget = allVocab.where((v) => v.easeFactor < 2.0 && v.interval > 0).length;
 
           return CustomScrollView(
             slivers: [
@@ -201,8 +202,8 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> with SingleTick
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('$currentCount', style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w900, color: cs.onSurface)),
-                          Text('CẦN ÔN', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: cs.onSurfaceVariant, letterSpacing: 1.1)),
+                          Text('${(progress * 100).toInt()}%', style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w900, color: cs.onSurface)),
+                          Text('TIẾN ĐỘ', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: cs.onSurfaceVariant, letterSpacing: 1.1)),
                         ],
                       ),
                     ),
@@ -234,8 +235,8 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> with SingleTick
     final data = levels.map((lvl) {
       final lvlVocabs = allVocab.where((v) => v.level == lvl).toList();
       final total = lvlVocabs.length;
-      final mastered = lvlVocabs.where((v) => v.interval >= 7).length;
-      return (lvl, total, mastered);
+      final learned = lvlVocabs.where((v) => v.interval > 0 || v.isMastered).length;
+      return (lvl, total, learned);
     }).toList();
 
     final maxY = data.map((d) => d.$2).fold<int>(0, (a, b) => a > b ? a : b).toDouble();
@@ -299,7 +300,7 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> with SingleTick
             const SizedBox(height: 16),
             Row(
               children: [
-                _legendDot(cs.primary, 'Đã thuộc'),
+                _legendDot(cs.primary, 'Tiến độ'),
                 const SizedBox(width: 16),
                 _legendDot(cs.surfaceContainerHighest, 'Tổng số'),
               ],

@@ -121,7 +121,7 @@ final class FlashcardSessionProvider
   FlashcardSession create() => FlashcardSession();
 }
 
-String _$flashcardSessionHash() => r'77f878791e2b0bd09d3af7fa3d930b8288244195';
+String _$flashcardSessionHash() => r'7f919cf7827d59e13aad805f1f188958ec3f679c';
 
 abstract class _$FlashcardSession extends $AsyncNotifier<List<Vocab>?> {
   FutureOr<List<Vocab>?> build();

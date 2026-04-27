@@ -27,7 +27,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_啊",
@@ -56,7 +57,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_矮",
@@ -85,7 +87,8 @@
     "tags": [
       "tính cách",
       "màu sắc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_矮小",
@@ -115,7 +118,8 @@
     "tags": [
       "tính cách",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_爱国",
@@ -145,7 +149,8 @@
     "tags": [
       "văn hóa",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_爱护",
@@ -175,7 +180,8 @@
     "tags": [
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_安",
@@ -204,7 +210,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_安置",
@@ -234,7 +241,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_按时",
@@ -265,7 +273,8 @@
       "thời gian",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_暗",
@@ -294,7 +303,8 @@
     "tags": [
       "thời tiết",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_暗示",
@@ -324,7 +334,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_巴士",
@@ -354,7 +365,8 @@
     "tags": [
       "giao thông",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_百货",
@@ -384,7 +396,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_摆",
@@ -413,7 +426,8 @@
     "tags": [
       "hành động",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_摆动",
@@ -443,7 +457,8 @@
     "tags": [
       "hành động",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_摆脱",
@@ -473,7 +488,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_败",
@@ -502,7 +518,8 @@
     "tags": [
       "thể thao",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_办事",
@@ -532,7 +549,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_包裹",
@@ -562,7 +580,8 @@
     "tags": [
       "mua sắm",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_包含",
@@ -592,7 +611,8 @@
     "tags": [
       "số lượng",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_包括",
@@ -622,7 +642,8 @@
     "tags": [
       "số lượng",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_薄",
@@ -650,7 +671,8 @@
     "wordType": "adj",
     "tags": [
       "màu sắc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_宝",
@@ -679,7 +701,8 @@
     "tags": [
       "tài chính",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_宝宝",
@@ -709,7 +732,8 @@
     "tags": [
       "gia đình",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_宝贝",
@@ -740,7 +764,8 @@
       "gia đình",
       "cảm xúc",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_宝贵",
@@ -771,7 +796,8 @@
       "cảm xúc",
       "thời gian",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_宝石",
@@ -802,7 +828,8 @@
       "mua sắm",
       "tài chính",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_保密",
@@ -833,7 +860,8 @@
       "giao tiếp",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_保守",
@@ -864,7 +892,8 @@
       "tính cách",
       "văn hóa",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_抱",
@@ -894,7 +923,8 @@
       "hành động",
       "cảm xúc",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_背景",
@@ -925,7 +955,8 @@
       "công việc",
       "học tập",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_倍",
@@ -955,7 +986,8 @@
       "số lượng",
       "tài chính",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_被迫",
@@ -986,7 +1018,8 @@
       "hành động",
       "công việc",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_本科",
@@ -1017,7 +1050,8 @@
       "giáo dục",
       "học tập",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_笨",
@@ -1047,7 +1081,8 @@
       "tính cách",
       "cảm xúc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_比分",
@@ -1078,7 +1113,8 @@
       "thể thao",
       "số lượng",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_毕业",
@@ -1109,7 +1145,8 @@
       "giáo dục",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_毕业生",
@@ -1141,7 +1178,8 @@
       "giáo dục",
       "học tập",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_避",
@@ -1171,7 +1209,8 @@
       "hành động",
       "giao thông",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_避免",
@@ -1202,7 +1241,8 @@
       "hành động",
       "sức khỏe",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_编",
@@ -1232,7 +1272,8 @@
       "hành động",
       "công việc",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_辩论",
@@ -1263,7 +1304,8 @@
       "giao tiếp",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_标志",
@@ -1294,7 +1336,8 @@
       "giao thông",
       "văn hóa",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_表情",
@@ -1325,7 +1368,8 @@
       "giao tiếp",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_表扬",
@@ -1356,7 +1400,8 @@
       "giao tiếp",
       "cảm xúc",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_别",
@@ -1386,7 +1431,8 @@
       "cảm xúc",
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_冰",
@@ -1416,7 +1462,8 @@
       "thời tiết",
       "ẩm thực",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_冰箱",
@@ -1447,7 +1494,8 @@
       "ẩm thực",
       "công nghệ",
       "gia đình"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_冰雪",
@@ -1478,7 +1526,8 @@
       "thời tiết",
       "thiên nhiên",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_兵",
@@ -1508,7 +1557,8 @@
       "nghề nghiệp",
       "văn hóa",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_并",
@@ -1537,7 +1587,8 @@
     "tags": [
       "hành động",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_不要紧",
@@ -1568,7 +1619,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_不在乎",
@@ -1599,7 +1651,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_不管",
@@ -1629,7 +1682,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_不然",
@@ -1659,7 +1713,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_布置",
@@ -1689,7 +1744,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_步行",
@@ -1719,7 +1775,8 @@
     "tags": [
       "giao thông",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_擦",
@@ -1747,7 +1804,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_才",
@@ -1776,7 +1834,8 @@
     "tags": [
       "tính cách",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_材料",
@@ -1806,7 +1865,8 @@
     "tags": [
       "công việc",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_财产",
@@ -1835,7 +1895,8 @@
     "wordType": "n",
     "tags": [
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_财富",
@@ -1864,7 +1925,8 @@
     "wordType": "n",
     "tags": [
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_采访",
@@ -1894,7 +1956,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_参考",
@@ -1924,7 +1987,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_参与",
@@ -1954,7 +2018,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_操场",
@@ -1984,7 +2049,8 @@
     "tags": [
       "địa điểm",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_操作",
@@ -2014,7 +2080,8 @@
     "tags": [
       "công việc",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_测",
@@ -2043,7 +2110,8 @@
     "tags": [
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_测量",
@@ -2073,7 +2141,8 @@
     "tags": [
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_测试",
@@ -2103,7 +2172,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_曾",
@@ -2132,7 +2202,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_茶叶",
@@ -2162,7 +2233,8 @@
     "tags": [
       "ẩm thực",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_产品",
@@ -2192,7 +2264,8 @@
     "tags": [
       "mua sắm",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_长途",
@@ -2222,7 +2295,8 @@
     "tags": [
       "giao thông",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_常识",
@@ -2252,7 +2326,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_唱片",
@@ -2282,7 +2357,8 @@
     "tags": [
       "âm nhạc",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_抄",
@@ -2311,7 +2387,8 @@
     "tags": [
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_抄写",
@@ -2341,7 +2418,8 @@
     "tags": [
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_潮",
@@ -2370,7 +2448,8 @@
     "tags": [
       "thiên nhiên",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_潮流",
@@ -2399,7 +2478,8 @@
     "wordType": "n",
     "tags": [
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_潮湿",
@@ -2429,7 +2509,8 @@
     "tags": [
       "thời tiết",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_彻底",
@@ -2459,7 +2540,8 @@
     "tags": [
       "hành động",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_沉",
@@ -2488,7 +2570,8 @@
     "tags": [
       "hành động",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_沉默",
@@ -2519,7 +2602,8 @@
       "cảm xúc",
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_沉重",
@@ -2549,7 +2633,8 @@
     "tags": [
       "cảm xúc",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_称赞",
@@ -2579,7 +2664,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_成人",
@@ -2608,7 +2694,8 @@
     "wordType": "n",
     "tags": [
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_诚实",
@@ -2638,7 +2725,8 @@
     "tags": [
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_诚信",
@@ -2669,7 +2757,8 @@
       "tính cách",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_承担",
@@ -2699,7 +2788,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_承认",
@@ -2729,7 +2819,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_承受",
@@ -2759,7 +2850,8 @@
     "tags": [
       "cảm xúc",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_程序",
@@ -2789,7 +2881,8 @@
     "tags": [
       "công việc",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_吃惊",
@@ -2818,7 +2911,8 @@
     "wordType": "n",
     "tags": [
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_迟到",
@@ -2849,7 +2943,8 @@
       "thời gian",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_尺",
@@ -2877,7 +2972,8 @@
     "wordType": "n",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_尺寸",
@@ -2907,7 +3003,8 @@
     "tags": [
       "mua sắm",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_尺子",
@@ -2936,7 +3033,8 @@
     "wordType": "n",
     "tags": [
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_冲",
@@ -2965,7 +3063,8 @@
     "tags": [
       "hành động",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_充电",
@@ -2995,7 +3094,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_充电器",
@@ -3026,7 +3126,8 @@
     "tags": [
       "công nghệ",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_充分",
@@ -3056,7 +3157,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_虫子",
@@ -3086,7 +3188,8 @@
     "tags": [
       "động vật",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_抽",
@@ -3114,7 +3217,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_抽奖",
@@ -3144,7 +3248,8 @@
     "tags": [
       "mua sắm",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_抽烟",
@@ -3174,7 +3279,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_出口",
@@ -3204,7 +3310,8 @@
     "tags": [
       "địa điểm",
       "giao thông"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_出色",
@@ -3234,7 +3341,8 @@
     "tags": [
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_出售",
@@ -3264,7 +3372,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_出席",
@@ -3294,7 +3403,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_处于",
@@ -3324,7 +3434,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_处",
@@ -3352,7 +3463,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_穿上",
@@ -3382,7 +3494,8 @@
     "tags": [
       "hành động",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_传统",
@@ -3412,7 +3525,8 @@
     "tags": [
       "văn hóa",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_窗户",
@@ -3441,7 +3555,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_窗台",
@@ -3470,7 +3585,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_窗子",
@@ -3499,7 +3615,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_春季",
@@ -3529,7 +3646,8 @@
     "tags": [
       "thời gian",
       "thời tiết"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_纯",
@@ -3558,7 +3676,8 @@
     "tags": [
       "tính cách",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_纯净水",
@@ -3589,7 +3708,8 @@
     "tags": [
       "ẩm thực",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_词汇",
@@ -3619,7 +3739,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_此",
@@ -3647,7 +3768,8 @@
     "wordType": "pron",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_此外",
@@ -3676,7 +3798,8 @@
     "wordType": "conj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_次",
@@ -3705,7 +3828,8 @@
     "tags": [
       "số lượng",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_刺",
@@ -3734,7 +3858,8 @@
     "tags": [
       "hành động",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_刺激",
@@ -3764,7 +3889,8 @@
     "tags": [
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_从此",
@@ -3793,7 +3919,8 @@
     "wordType": "adv",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_粗",
@@ -3822,7 +3949,8 @@
     "tags": [
       "hành động",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_粗心",
@@ -3852,7 +3980,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_促进",
@@ -3882,7 +4011,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_促使",
@@ -3911,7 +4041,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_促销",
@@ -3942,7 +4073,8 @@
       "mua sắm",
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_措施",
@@ -3972,7 +4104,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_打",
@@ -4001,7 +4134,8 @@
     "tags": [
       "số lượng",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_答案",
@@ -4031,7 +4165,8 @@
     "tags": [
       "học tập",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_打败",
@@ -4061,7 +4196,8 @@
     "tags": [
       "thể thao",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_打雷",
@@ -4091,7 +4227,8 @@
     "tags": [
       "thời tiết",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_打扫",
@@ -4121,7 +4258,8 @@
     "tags": [
       "hành động",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_打折",
@@ -4151,7 +4289,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_打针",
@@ -4181,7 +4320,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大巴",
@@ -4211,7 +4351,8 @@
     "tags": [
       "giao thông",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大多",
@@ -4240,7 +4381,8 @@
     "wordType": "adv",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大方",
@@ -4269,7 +4411,8 @@
     "wordType": "adj",
     "tags": [
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大哥",
@@ -4299,7 +4442,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大规模",
@@ -4330,7 +4474,8 @@
     "tags": [
       "công việc",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大会",
@@ -4360,7 +4505,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大姐",
@@ -4390,7 +4536,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大楼",
@@ -4419,7 +4566,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大陆",
@@ -4449,7 +4597,8 @@
     "tags": [
       "địa điểm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大妈",
@@ -4479,7 +4628,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大型",
@@ -4510,7 +4660,8 @@
       "công việc",
       "công nghệ",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大爷",
@@ -4541,7 +4692,8 @@
       "gia đình",
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_大众",
@@ -4572,7 +4724,8 @@
       "giao thông",
       "công nghệ",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_代替",
@@ -4603,7 +4756,8 @@
       "hành động",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_待遇",
@@ -4634,7 +4788,8 @@
       "công việc",
       "tài chính",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_袋",
@@ -4664,7 +4819,8 @@
       "mua sắm",
       "hành động",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_戴",
@@ -4694,7 +4850,8 @@
       "hành động",
       "mua sắm",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_担保",
@@ -4725,7 +4882,8 @@
       "tài chính",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_担任",
@@ -4756,7 +4914,8 @@
       "công việc",
       "nghề nghiệp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_担心",
@@ -4787,7 +4946,8 @@
       "cảm xúc",
       "gia đình",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_单",
@@ -4817,7 +4977,8 @@
       "số lượng",
       "mua sắm",
       "hành động"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_单纯",
@@ -4848,7 +5009,8 @@
       "tính cách",
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_单调",
@@ -4879,7 +5041,8 @@
       "cảm xúc",
       "sở thích",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_单独",
@@ -4910,7 +5073,8 @@
       "hành động",
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_淡",
@@ -4940,7 +5104,8 @@
       "ẩm thực",
       "cảm xúc",
       "màu sắc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_导游",
@@ -4971,7 +5136,8 @@
       "du lịch",
       "nghề nghiệp",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_导致",
@@ -5002,7 +5168,8 @@
       "hành động",
       "công việc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_倒闭",
@@ -5032,7 +5199,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_倒车",
@@ -5062,7 +5230,8 @@
     "tags": [
       "giao thông",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_得意",
@@ -5092,7 +5261,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_得",
@@ -5122,7 +5292,8 @@
       "hành động",
       "thời gian",
       "công việc"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_灯光",
@@ -5153,7 +5324,8 @@
       "nghệ thuật",
       "địa điểm",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_登",
@@ -5183,7 +5355,8 @@
       "hành động",
       "thể thao",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_登记",
@@ -5214,7 +5387,8 @@
       "hành động",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_登录",
@@ -5245,7 +5419,8 @@
       "công nghệ",
       "hành động",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_登山",
@@ -5276,7 +5451,8 @@
       "du lịch",
       "thể thao",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_的确",
@@ -5306,7 +5482,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_敌人",
@@ -5336,7 +5513,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_底",
@@ -5365,7 +5543,8 @@
     "tags": [
       "thời gian",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_地方",
@@ -5395,7 +5574,8 @@
     "tags": [
       "địa điểm",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_地面",
@@ -5425,7 +5605,8 @@
     "tags": [
       "địa điểm",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_地位",
@@ -5454,7 +5635,8 @@
     "wordType": "n",
     "tags": [
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_地下",
@@ -5484,7 +5666,8 @@
     "tags": [
       "địa điểm",
       "giao thông"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_地址",
@@ -5514,7 +5697,8 @@
     "tags": [
       "giao tiếp",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_典型",
@@ -5544,7 +5728,8 @@
     "tags": [
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_点名",
@@ -5575,7 +5760,8 @@
       "học tập",
       "giáo dục",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_电灯",
@@ -5605,7 +5791,8 @@
     "tags": [
       "công nghệ",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_电动车",
@@ -5636,7 +5823,8 @@
     "tags": [
       "giao thông",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_电梯",
@@ -5666,7 +5854,8 @@
     "tags": [
       "giao thông",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_电源",
@@ -5696,7 +5885,8 @@
     "tags": [
       "công nghệ",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_顶",
@@ -5725,7 +5915,8 @@
     "tags": [
       "địa điểm",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_定",
@@ -5754,7 +5945,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_冬季",
@@ -5785,7 +5977,8 @@
       "thời gian",
       "thời tiết",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_动画片",
@@ -5816,7 +6009,8 @@
     "tags": [
       "sở thích",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_动摇",
@@ -5846,7 +6040,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_豆腐",
@@ -5876,7 +6071,8 @@
     "tags": [
       "ẩm thực",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_独立",
@@ -5906,7 +6102,8 @@
     "tags": [
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_独特",
@@ -5937,7 +6134,8 @@
       "tính cách",
       "nghệ thuật",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_独自",
@@ -5967,7 +6165,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_堵",
@@ -5996,7 +6195,8 @@
     "tags": [
       "giao thông",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_堵车",
@@ -6027,7 +6227,8 @@
       "giao thông",
       "thời gian",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_肚子",
@@ -6056,7 +6257,8 @@
     "wordType": "n",
     "tags": [
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_度过",
@@ -6087,7 +6289,8 @@
       "thời gian",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_锻炼",
@@ -6118,7 +6321,8 @@
       "sức khỏe",
       "thể thao",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_对比",
@@ -6149,7 +6353,8 @@
       "hành động",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_对付",
@@ -6180,7 +6385,8 @@
       "hành động",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_对于",
@@ -6210,7 +6416,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_多次",
@@ -6241,7 +6448,8 @@
       "số lượng",
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_多年",
@@ -6271,7 +6479,8 @@
     "tags": [
       "thời gian",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_多样",
@@ -6302,7 +6511,8 @@
       "tính cách",
       "văn hóa",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_多种",
@@ -6333,7 +6543,8 @@
       "số lượng",
       "mua sắm",
       "ẩm thực"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_恶心",
@@ -6363,7 +6574,8 @@
     "tags": [
       "cảm xúc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_儿童",
@@ -6393,7 +6605,8 @@
     "tags": [
       "gia đình",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_而",
@@ -6422,7 +6635,8 @@
     "tags": [
       "giao tiếp",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_而是",
@@ -6452,7 +6666,8 @@
     "tags": [
       "giao tiếp",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_耳机",
@@ -6483,7 +6698,8 @@
       "công nghệ",
       "sở thích",
       "âm nhạc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_二手",
@@ -6513,7 +6729,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_发挥",
@@ -6544,7 +6761,8 @@
       "công việc",
       "học tập",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_发票",
@@ -6575,7 +6793,8 @@
       "mua sắm",
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_发烧",
@@ -6604,7 +6823,8 @@
     "wordType": "n",
     "tags": [
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_法",
@@ -6633,7 +6853,8 @@
     "tags": [
       "địa điểm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_法官",
@@ -6663,7 +6884,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_法律",
@@ -6693,7 +6915,8 @@
     "tags": [
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_法院",
@@ -6723,7 +6946,8 @@
     "tags": [
       "địa điểm",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_翻",
@@ -6751,7 +6975,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_翻译",
@@ -6782,7 +7007,8 @@
       "nghề nghiệp",
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_烦",
@@ -6811,7 +7037,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_反",
@@ -6840,7 +7067,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_反而",
@@ -6870,7 +7098,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_反映",
@@ -6900,7 +7129,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_方",
@@ -6929,7 +7159,8 @@
     "tags": [
       "số lượng",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_方案",
@@ -6959,7 +7190,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_方针",
@@ -6989,7 +7221,8 @@
     "tags": [
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_放松",
@@ -7020,7 +7253,8 @@
       "sức khỏe",
       "cảm xúc",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_非",
@@ -7049,7 +7283,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_肥",
@@ -7078,7 +7313,8 @@
     "tags": [
       "sức khỏe",
       "động vật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_分布",
@@ -7108,7 +7344,8 @@
     "tags": [
       "địa điểm",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_分散",
@@ -7138,7 +7375,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_分手",
@@ -7169,7 +7407,8 @@
       "cảm xúc",
       "giao tiếp",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_分为",
@@ -7199,7 +7438,8 @@
     "tags": [
       "số lượng",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_…分之…",
@@ -7230,7 +7470,8 @@
     "wordType": "n",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_纷纷",
@@ -7260,7 +7501,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_奋斗",
@@ -7291,7 +7533,8 @@
       "công việc",
       "học tập",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_风格",
@@ -7322,7 +7565,8 @@
       "nghệ thuật",
       "văn hóa",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_风景",
@@ -7353,7 +7597,8 @@
       "du lịch",
       "thiên nhiên",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_风俗",
@@ -7383,7 +7628,8 @@
     "tags": [
       "văn hóa",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_封闭",
@@ -7413,7 +7659,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_否则",
@@ -7443,7 +7690,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_夫妇",
@@ -7473,7 +7721,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_夫妻",
@@ -7503,7 +7752,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_夫人",
@@ -7533,7 +7783,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_符号",
@@ -7564,7 +7815,8 @@
       "công nghệ",
       "giao tiếp",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_符合",
@@ -7594,7 +7846,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_付出",
@@ -7624,7 +7877,8 @@
     "tags": [
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_负担",
@@ -7655,7 +7909,8 @@
       "công việc",
       "gia đình",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_附近",
@@ -7685,7 +7940,8 @@
     "tags": [
       "địa điểm",
       "giao thông"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_复制",
@@ -7715,7 +7971,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_改善",
@@ -7746,7 +8003,8 @@
       "công việc",
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_改正",
@@ -7776,7 +8034,8 @@
     "tags": [
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_盖",
@@ -7805,7 +8064,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_概括",
@@ -7835,7 +8095,8 @@
     "tags": [
       "học tập",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_感兴趣",
@@ -7866,7 +8127,8 @@
     "tags": [
       "sở thích",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_高潮",
@@ -7897,7 +8159,8 @@
       "thời gian",
       "nghệ thuật",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_高价",
@@ -7927,7 +8190,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_高尚",
@@ -7957,7 +8221,8 @@
     "tags": [
       "tính cách",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_高铁",
@@ -7987,7 +8252,8 @@
     "tags": [
       "giao thông",
       "du lịch"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_格外",
@@ -8017,7 +8283,8 @@
     "tags": [
       "cảm xúc",
       "thời tiết"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_隔",
@@ -8046,7 +8313,8 @@
     "tags": [
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_隔开",
@@ -8076,7 +8344,8 @@
     "tags": [
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_个别",
@@ -8106,7 +8375,8 @@
     "tags": [
       "số lượng",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_个体",
@@ -8136,7 +8406,8 @@
     "tags": [
       "thiên nhiên",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_各个",
@@ -8166,7 +8437,8 @@
     "tags": [
       "số lượng",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_根",
@@ -8194,7 +8466,8 @@
     "wordType": "mw",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_根据",
@@ -8224,7 +8497,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_工程",
@@ -8254,7 +8528,8 @@
     "tags": [
       "công việc",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_公元",
@@ -8284,7 +8559,8 @@
     "tags": [
       "thời gian",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_供应",
@@ -8315,7 +8591,8 @@
       "công việc",
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_共",
@@ -8345,7 +8622,8 @@
       "số lượng",
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_构成",
@@ -8376,7 +8654,8 @@
       "hành động",
       "công nghệ",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_构造",
@@ -8405,7 +8684,8 @@
     "wordType": "n",
     "tags": [
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_购买",
@@ -8436,7 +8716,8 @@
       "mua sắm",
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_购物",
@@ -8467,7 +8748,8 @@
       "mua sắm",
       "sở thích",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_骨头",
@@ -8498,7 +8780,8 @@
       "sức khỏe",
       "động vật",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_固定",
@@ -8529,7 +8812,8 @@
       "hành động",
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_瓜",
@@ -8558,7 +8842,8 @@
     "tags": [
       "ẩm thực",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_怪",
@@ -8587,7 +8872,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_关",
@@ -8616,7 +8902,8 @@
     "tags": [
       "địa điểm",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_关闭",
@@ -8647,7 +8934,8 @@
       "hành động",
       "công việc",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_关于",
@@ -8677,7 +8965,8 @@
     "tags": [
       "giao tiếp",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_官",
@@ -8706,7 +8995,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_官方",
@@ -8736,7 +9026,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_光临",
@@ -8767,7 +9058,8 @@
       "giao tiếp",
       "văn hóa",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_光盘",
@@ -8798,7 +9090,8 @@
       "công nghệ",
       "âm nhạc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_逛",
@@ -8828,7 +9121,8 @@
       "sở thích",
       "du lịch",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_归",
@@ -8858,7 +9152,8 @@
       "hành động",
       "địa điểm",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_规律",
@@ -8888,7 +9183,8 @@
     "tags": [
       "học tập",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_规模",
@@ -8918,7 +9214,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_规则",
@@ -8949,7 +9246,8 @@
       "học tập",
       "công việc",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_果实",
@@ -8979,7 +9277,8 @@
     "tags": [
       "ẩm thực",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_过分",
@@ -9010,7 +9309,8 @@
       "cảm xúc",
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_海水",
@@ -9040,7 +9340,8 @@
     "tags": [
       "thiên nhiên",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_海鲜",
@@ -9070,7 +9371,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_含",
@@ -9099,7 +9401,8 @@
     "tags": [
       "hành động",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_含量",
@@ -9129,7 +9432,8 @@
     "tags": [
       "số lượng",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_含义",
@@ -9159,7 +9463,8 @@
     "tags": [
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_含有",
@@ -9189,7 +9494,8 @@
     "tags": [
       "số lượng",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_寒假",
@@ -9219,7 +9525,8 @@
     "tags": [
       "học tập",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_寒冷",
@@ -9249,7 +9556,8 @@
     "tags": [
       "thời tiết",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_行业",
@@ -9279,7 +9587,8 @@
     "tags": [
       "công việc",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_航班",
@@ -9309,7 +9618,8 @@
     "tags": [
       "giao thông",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_航空",
@@ -9339,7 +9649,8 @@
     "tags": [
       "giao thông",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_毫米",
@@ -9369,7 +9680,8 @@
     "tags": [
       "số lượng",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_毫升",
@@ -9399,7 +9711,8 @@
     "tags": [
       "số lượng",
       "ẩm thực"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_好友",
@@ -9429,7 +9742,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_号码",
@@ -9459,7 +9773,8 @@
     "tags": [
       "giao tiếp",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_好",
@@ -9488,7 +9803,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_合同",
@@ -9518,7 +9834,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_黑暗",
@@ -9548,7 +9865,8 @@
     "tags": [
       "thiên nhiên",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_红包",
@@ -9578,7 +9896,8 @@
     "tags": [
       "văn hóa",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_后头",
@@ -9608,7 +9927,8 @@
     "tags": [
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_厚",
@@ -9637,7 +9957,8 @@
     "tags": [
       "số lượng",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_呼吸",
@@ -9667,7 +9988,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_忽视",
@@ -9697,7 +10019,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_户",
@@ -9726,7 +10049,8 @@
     "tags": [
       "gia đình",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_护士",
@@ -9756,7 +10080,8 @@
     "tags": [
       "nghề nghiệp",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_花",
@@ -9785,7 +10110,8 @@
     "tags": [
       "thiên nhiên",
       "màu sắc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_划",
@@ -9814,7 +10140,8 @@
     "tags": [
       "hành động",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_怀念",
@@ -9844,7 +10171,8 @@
     "tags": [
       "cảm xúc",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_怀疑",
@@ -9874,7 +10202,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_缓解",
@@ -9904,7 +10233,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_黄瓜",
@@ -9934,7 +10264,8 @@
     "tags": [
       "ẩm thực",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_黄金",
@@ -9964,7 +10295,8 @@
     "tags": [
       "tài chính",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_回复",
@@ -9994,7 +10326,8 @@
     "tags": [
       "hành động",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_汇",
@@ -10023,7 +10356,8 @@
     "tags": [
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_汇报",
@@ -10053,7 +10387,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_汇率",
@@ -10083,7 +10418,8 @@
     "tags": [
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_婚礼",
@@ -10113,7 +10449,8 @@
     "tags": [
       "gia đình",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_火",
@@ -10142,7 +10479,8 @@
     "tags": [
       "thiên nhiên",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_伙",
@@ -10171,7 +10509,8 @@
     "tags": [
       "ẩm thực",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_伙伴",
@@ -10201,7 +10540,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_或许",
@@ -10231,7 +10571,8 @@
     "tags": [
       "giao tiếp",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_货",
@@ -10260,7 +10601,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_获",
@@ -10289,7 +10631,8 @@
     "tags": [
       "thể thao",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_获得",
@@ -10318,7 +10661,8 @@
     "wordType": "v",
     "tags": [
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_获奖",
@@ -10347,7 +10691,8 @@
     "wordType": "v",
     "tags": [
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_获取",
@@ -10377,7 +10722,8 @@
     "tags": [
       "hành động",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_几乎",
@@ -10407,7 +10753,8 @@
     "tags": [
       "thời gian",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_机构",
@@ -10437,7 +10784,8 @@
     "tags": [
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_机遇",
@@ -10467,7 +10815,8 @@
     "tags": [
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_积累",
@@ -10497,7 +10846,8 @@
     "tags": [
       "tài chính",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_激动",
@@ -10527,7 +10877,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_激烈",
@@ -10558,7 +10909,8 @@
       "hành động",
       "công việc",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_及格",
@@ -10588,7 +10940,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_极",
@@ -10618,7 +10971,8 @@
       "tính cách",
       "cảm xúc",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_极其",
@@ -10649,7 +11003,8 @@
       "tính cách",
       "cảm xúc",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_即将",
@@ -10679,7 +11034,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_急忙",
@@ -10709,7 +11065,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_集合",
@@ -10740,7 +11097,8 @@
       "hành động",
       "địa điểm",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_记载",
@@ -10771,7 +11129,8 @@
       "học tập",
       "văn hóa",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_纪律",
@@ -10802,7 +11161,8 @@
       "học tập",
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_技巧",
@@ -10833,7 +11193,8 @@
       "công việc",
       "học tập",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_系",
@@ -10861,7 +11222,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_季",
@@ -10890,7 +11252,8 @@
     "tags": [
       "thời gian",
       "thời tiết"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_季度",
@@ -10921,7 +11284,8 @@
       "thời gian",
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_季节",
@@ -10952,7 +11316,8 @@
       "thời gian",
       "thời tiết",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_既",
@@ -10980,7 +11345,8 @@
     "wordType": "adv",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_既然",
@@ -11009,7 +11375,8 @@
     "wordType": "conj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_寄",
@@ -11039,7 +11406,8 @@
       "hành động",
       "giao tiếp",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_加班",
@@ -11069,7 +11437,8 @@
     "tags": [
       "công việc",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_加入",
@@ -11100,7 +11469,8 @@
       "hành động",
       "công việc",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_加油站",
@@ -11131,7 +11501,8 @@
     "tags": [
       "giao thông",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_家务",
@@ -11161,7 +11532,8 @@
     "tags": [
       "gia đình",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_假如",
@@ -11190,7 +11562,8 @@
     "wordType": "conj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_坚固",
@@ -11220,7 +11593,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_检测",
@@ -11251,7 +11625,8 @@
       "công nghệ",
       "sức khỏe",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_减",
@@ -11280,7 +11655,8 @@
     "tags": [
       "hành động",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_减肥",
@@ -11310,7 +11686,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_减少",
@@ -11340,7 +11717,8 @@
     "tags": [
       "hành động",
       "số lượng"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_简历",
@@ -11370,7 +11748,8 @@
     "tags": [
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_健身",
@@ -11401,7 +11780,8 @@
       "sức khỏe",
       "thể thao",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_渐渐",
@@ -11431,7 +11811,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_江",
@@ -11460,7 +11841,8 @@
     "tags": [
       "thiên nhiên",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_讲究",
@@ -11490,7 +11872,8 @@
     "tags": [
       "tính cách",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_讲座",
@@ -11520,7 +11903,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_奖",
@@ -11549,7 +11933,8 @@
     "tags": [
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_奖金",
@@ -11579,7 +11964,8 @@
     "tags": [
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_奖学金",
@@ -11611,7 +11997,8 @@
       "học tập",
       "tài chính",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_降",
@@ -11640,7 +12027,8 @@
     "tags": [
       "hành động",
       "thời tiết"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_降低",
@@ -11670,7 +12058,8 @@
     "tags": [
       "hành động",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_降价",
@@ -11700,7 +12089,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_降落",
@@ -11730,7 +12120,8 @@
     "tags": [
       "giao thông",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_降温",
@@ -11760,7 +12151,8 @@
     "tags": [
       "thời tiết",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_交换",
@@ -11790,7 +12182,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_交际",
@@ -11820,7 +12213,8 @@
     "tags": [
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_教授",
@@ -11851,7 +12245,8 @@
       "nghề nghiệp",
       "giáo dục",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_教训",
@@ -11881,7 +12276,8 @@
     "tags": [
       "giáo dục",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_阶段",
@@ -11911,7 +12307,8 @@
     "tags": [
       "thời gian",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_街道",
@@ -11941,7 +12338,8 @@
     "tags": [
       "địa điểm",
       "giao thông"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_节省",
@@ -11971,7 +12369,8 @@
     "tags": [
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_结",
@@ -12000,7 +12399,8 @@
     "tags": [
       "thiên nhiên",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_结构",
@@ -12031,7 +12431,8 @@
       "công việc",
       "học tập",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_结论",
@@ -12062,7 +12463,8 @@
       "học tập",
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_姐妹",
@@ -12093,7 +12495,8 @@
       "gia đình",
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_解释",
@@ -12124,7 +12527,8 @@
       "giao tiếp",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_尽快",
@@ -12155,7 +12559,8 @@
       "thời gian",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_紧密",
@@ -12186,7 +12591,8 @@
       "giao tiếp",
       "cảm xúc",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_尽力",
@@ -12217,7 +12623,8 @@
       "hành động",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_进口",
@@ -12248,7 +12655,8 @@
       "tài chính",
       "mua sắm",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_近代",
@@ -12279,7 +12687,8 @@
       "thời gian",
       "văn hóa",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_禁止",
@@ -12310,7 +12719,8 @@
       "hành động",
       "địa điểm",
       "giao thông"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_经典",
@@ -12341,7 +12751,8 @@
       "văn hóa",
       "nghệ thuật",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_精力",
@@ -12372,7 +12783,8 @@
       "sức khỏe",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_竟然",
@@ -12403,7 +12815,8 @@
       "cảm xúc",
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_镜头",
@@ -12434,7 +12847,8 @@
       "công nghệ",
       "sở thích",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_镜子",
@@ -12465,7 +12879,8 @@
       "mua sắm",
       "gia đình",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_究竟",
@@ -12496,7 +12911,8 @@
       "giao tiếp",
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_酒吧",
@@ -12527,7 +12943,8 @@
       "địa điểm",
       "sở thích",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_居民",
@@ -12557,7 +12974,8 @@
     "tags": [
       "địa điểm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_居住",
@@ -12588,7 +13006,8 @@
       "địa điểm",
       "gia đình",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_局",
@@ -12617,7 +13036,8 @@
     "tags": [
       "công việc",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_巨大",
@@ -12648,7 +13068,8 @@
       "số lượng",
       "thiên nhiên",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_具备",
@@ -12679,7 +13100,8 @@
       "công việc",
       "học tập",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_距离",
@@ -12710,7 +13132,8 @@
       "địa điểm",
       "giao thông",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_聚",
@@ -12740,7 +13163,8 @@
       "giao tiếp",
       "sở thích",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_聚会",
@@ -12771,7 +13195,8 @@
       "giao tiếp",
       "sở thích",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_卷",
@@ -12800,7 +13225,8 @@
     "tags": [
       "hành động",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_角色",
@@ -12831,7 +13257,8 @@
       "công việc",
       "văn hóa",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_开花",
@@ -12861,7 +13288,8 @@
     "tags": [
       "thiên nhiên",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_开水",
@@ -12891,7 +13319,8 @@
     "tags": [
       "ẩm thực",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_看不起",
@@ -12923,7 +13352,8 @@
       "cảm xúc",
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_看来",
@@ -12952,7 +13382,8 @@
     "wordType": "n",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_看望",
@@ -12983,7 +13414,8 @@
       "gia đình",
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_考察",
@@ -13014,7 +13446,8 @@
       "công việc",
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_考虑",
@@ -13044,7 +13477,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_棵",
@@ -13073,7 +13507,8 @@
     "tags": [
       "thiên nhiên",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_可见",
@@ -13102,7 +13537,8 @@
     "wordType": "conj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_空间",
@@ -13132,7 +13568,8 @@
     "tags": [
       "địa điểm",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_空",
@@ -13161,7 +13598,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_口袋",
@@ -13190,7 +13628,8 @@
     "wordType": "n",
     "tags": [
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_口语",
@@ -13221,7 +13660,8 @@
       "học tập",
       "giao tiếp",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_苦",
@@ -13250,7 +13690,8 @@
     "tags": [
       "ẩm thực",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_会计",
@@ -13281,7 +13722,8 @@
       "nghề nghiệp",
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_快递",
@@ -13312,7 +13754,8 @@
       "mua sắm",
       "giao thông",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_宽",
@@ -13341,7 +13784,8 @@
     "tags": [
       "địa điểm",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_宽广",
@@ -13371,7 +13815,8 @@
     "tags": [
       "địa điểm",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_矿泉水",
@@ -13402,7 +13847,8 @@
     "tags": [
       "ẩm thực",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_扩大",
@@ -13432,7 +13878,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_扩展",
@@ -13463,7 +13910,8 @@
       "hành động",
       "công việc",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_括号",
@@ -13494,7 +13942,8 @@
       "học tập",
       "giáo dục",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_垃圾",
@@ -13524,7 +13973,8 @@
     "tags": [
       "thiên nhiên",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_拉开",
@@ -13553,7 +14003,8 @@
     "wordType": "n",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_辣",
@@ -13582,7 +14033,8 @@
     "tags": [
       "ẩm thực",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_来不及",
@@ -13613,7 +14065,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_来得及",
@@ -13644,7 +14097,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_来源",
@@ -13675,7 +14129,8 @@
       "công việc",
       "tài chính",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_老公",
@@ -13705,7 +14160,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_老家",
@@ -13735,7 +14191,8 @@
     "tags": [
       "gia đình",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_老婆",
@@ -13765,7 +14222,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_老实",
@@ -13795,7 +14253,8 @@
     "tags": [
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_乐趣",
@@ -13825,7 +14284,8 @@
     "tags": [
       "cảm xúc",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_泪",
@@ -13854,7 +14314,8 @@
     "tags": [
       "cảm xúc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_泪水",
@@ -13884,7 +14345,8 @@
     "tags": [
       "cảm xúc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_类型",
@@ -13915,7 +14377,8 @@
       "công nghệ",
       "mua sắm",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_冷静",
@@ -13946,7 +14409,8 @@
       "tính cách",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_厘米",
@@ -13976,7 +14440,8 @@
     "tags": [
       "số lượng",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_离不开",
@@ -14008,7 +14473,8 @@
       "cảm xúc",
       "giao tiếp",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_力气",
@@ -14039,7 +14505,8 @@
       "sức khỏe",
       "hành động",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_历史",
@@ -14069,7 +14536,8 @@
     "tags": [
       "giáo dục",
       "văn hóa"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_立即",
@@ -14099,7 +14567,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_利息",
@@ -14128,7 +14597,8 @@
     "wordType": "n",
     "tags": [
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_利益",
@@ -14159,7 +14629,8 @@
       "công việc",
       "tài chính",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_俩",
@@ -14188,7 +14659,8 @@
     "tags": [
       "số lượng",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_良好",
@@ -14219,7 +14691,8 @@
       "tính cách",
       "công việc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_量",
@@ -14248,7 +14721,8 @@
     "tags": [
       "hành động",
       "số lượng"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_粮食",
@@ -14278,7 +14752,8 @@
     "tags": [
       "ẩm thực",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_两边",
@@ -14308,7 +14783,8 @@
     "tags": [
       "địa điểm",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_疗养",
@@ -14338,7 +14814,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_了不起",
@@ -14369,7 +14846,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_了解",
@@ -14399,7 +14877,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_列",
@@ -14428,7 +14907,8 @@
     "tags": [
       "hành động",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_列车",
@@ -14458,7 +14938,8 @@
     "tags": [
       "giao thông",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_列入",
@@ -14488,7 +14969,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_列为",
@@ -14518,7 +15000,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_临时",
@@ -14548,7 +15031,8 @@
     "tags": [
       "thời gian",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_零食",
@@ -14578,7 +15062,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_流传",
@@ -14608,7 +15093,8 @@
     "tags": [
       "văn hóa",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_楼梯",
@@ -14638,7 +15124,8 @@
     "tags": [
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_陆地",
@@ -14668,7 +15155,8 @@
     "tags": [
       "thiên nhiên",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_陆续",
@@ -14698,7 +15186,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_录取",
@@ -14728,7 +15217,8 @@
     "tags": [
       "giáo dục",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_律师",
@@ -14758,7 +15248,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_轮",
@@ -14787,7 +15278,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_轮船",
@@ -14817,7 +15309,8 @@
     "tags": [
       "giao thông",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_轮椅",
@@ -14847,7 +15340,8 @@
     "tags": [
       "sức khỏe",
       "giao thông"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_轮子",
@@ -14877,7 +15371,8 @@
     "tags": [
       "giao thông",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_论文",
@@ -14907,7 +15402,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_落",
@@ -14936,7 +15432,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_毛巾",
@@ -14966,7 +15463,8 @@
     "tags": [
       "mua sắm",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_毛衣",
@@ -14996,7 +15494,8 @@
     "tags": [
       "mua sắm",
       "thời tiết"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_帽子",
@@ -15026,7 +15525,8 @@
     "tags": [
       "mua sắm",
       "thời tiết"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_没错",
@@ -15056,7 +15556,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_没法儿",
@@ -15087,7 +15588,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_没想到",
@@ -15118,7 +15620,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_美金",
@@ -15148,7 +15651,8 @@
     "tags": [
       "tài chính",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_美女",
@@ -15178,7 +15682,8 @@
     "tags": [
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_梦",
@@ -15207,7 +15712,8 @@
     "tags": [
       "cảm xúc",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_梦见",
@@ -15237,7 +15743,8 @@
     "tags": [
       "cảm xúc",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_梦想",
@@ -15268,7 +15775,8 @@
       "cảm xúc",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_秘密",
@@ -15298,7 +15806,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_秘书",
@@ -15328,7 +15837,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_密",
@@ -15356,7 +15866,8 @@
     "wordType": "adj",
     "tags": [
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_密码",
@@ -15386,7 +15897,8 @@
     "tags": [
       "công nghệ",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_密切",
@@ -15416,7 +15928,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_免费",
@@ -15446,7 +15959,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_面临",
@@ -15476,7 +15990,8 @@
     "tags": [
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_面试",
@@ -15506,7 +16021,8 @@
     "tags": [
       "công việc",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_描述",
@@ -15536,7 +16052,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_描写",
@@ -15566,7 +16083,8 @@
     "tags": [
       "nghệ thuật",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_名牌儿",
@@ -15597,7 +16115,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_名片",
@@ -15627,7 +16146,8 @@
     "tags": [
       "công việc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_名人",
@@ -15657,7 +16177,8 @@
     "tags": [
       "văn hóa",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_摸",
@@ -15686,7 +16207,8 @@
     "tags": [
       "hành động",
       "động vật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_模特儿",
@@ -15717,7 +16239,8 @@
     "tags": [
       "nghề nghiệp",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_模型",
@@ -15747,7 +16270,8 @@
     "tags": [
       "sở thích",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_末",
@@ -15776,7 +16300,8 @@
     "tags": [
       "thời gian",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_默默",
@@ -15806,7 +16331,8 @@
     "tags": [
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_哪怕",
@@ -15836,7 +16362,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_哪",
@@ -15865,7 +16392,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_男女",
@@ -15895,7 +16423,8 @@
     "tags": [
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_男士",
@@ -15925,7 +16454,8 @@
     "tags": [
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_难免",
@@ -15955,7 +16485,8 @@
     "tags": [
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_脑袋",
@@ -15984,7 +16515,8 @@
     "wordType": "n",
     "tags": [
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_闹",
@@ -16013,7 +16545,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_闹钟",
@@ -16043,7 +16576,8 @@
     "tags": [
       "thời gian",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_内部",
@@ -16073,7 +16607,8 @@
     "tags": [
       "công việc",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_内科",
@@ -16103,7 +16638,8 @@
     "tags": [
       "sức khỏe",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_能干",
@@ -16133,7 +16669,8 @@
     "tags": [
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_宁静",
@@ -16163,7 +16700,8 @@
     "tags": [
       "cảm xúc",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_浓",
@@ -16192,7 +16730,8 @@
     "tags": [
       "ẩm thực",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_女士",
@@ -16222,7 +16761,8 @@
     "tags": [
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_暖气",
@@ -16252,7 +16792,8 @@
     "tags": [
       "thời tiết",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_拍照",
@@ -16282,7 +16823,8 @@
     "tags": [
       "sở thích",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_排列",
@@ -16312,7 +16854,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_牌",
@@ -16341,7 +16884,8 @@
     "tags": [
       "địa điểm",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_盘",
@@ -16370,7 +16914,8 @@
     "tags": [
       "ẩm thực",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_盘子",
@@ -16399,7 +16944,8 @@
     "wordType": "n",
     "tags": [
       "ẩm thực"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_胖子",
@@ -16429,7 +16975,8 @@
     "tags": [
       "tính cách",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_培训",
@@ -16459,7 +17006,8 @@
     "tags": [
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_培训班",
@@ -16490,7 +17038,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_培养",
@@ -16520,7 +17069,8 @@
     "tags": [
       "giáo dục",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_培育",
@@ -16551,7 +17101,8 @@
       "giáo dục",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_批",
@@ -16581,7 +17132,8 @@
       "công việc",
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_片面",
@@ -16612,7 +17164,8 @@
       "giao tiếp",
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_品质",
@@ -16642,7 +17195,8 @@
     "tags": [
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_平方",
@@ -16672,7 +17226,8 @@
     "tags": [
       "số lượng",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_平静",
@@ -16703,7 +17258,8 @@
       "cảm xúc",
       "thiên nhiên",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_平均",
@@ -16734,7 +17290,8 @@
       "số lượng",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_平稳",
@@ -16765,7 +17322,8 @@
       "công việc",
       "giao thông",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_迫切",
@@ -16796,7 +17354,8 @@
       "cảm xúc",
       "công việc",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_破产",
@@ -16826,7 +17385,8 @@
     "tags": [
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_妻子",
@@ -16856,7 +17416,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_期待",
@@ -16887,7 +17448,8 @@
       "cảm xúc",
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_期间",
@@ -16918,7 +17480,8 @@
       "thời gian",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_期末",
@@ -16948,7 +17511,8 @@
     "tags": [
       "học tập",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_期限",
@@ -16979,7 +17543,8 @@
       "thời gian",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_期中",
@@ -17009,7 +17574,8 @@
     "tags": [
       "học tập",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_其余",
@@ -17039,7 +17605,8 @@
     "tags": [
       "số lượng",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_企业",
@@ -17070,7 +17637,8 @@
       "công việc",
       "tài chính",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_气球",
@@ -17099,7 +17667,8 @@
     "wordType": "n",
     "tags": [
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_汽水",
@@ -17129,7 +17698,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_汽油",
@@ -17159,7 +17729,8 @@
     "tags": [
       "giao thông",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_器官",
@@ -17188,7 +17759,8 @@
     "wordType": "n",
     "tags": [
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_前头",
@@ -17218,7 +17790,8 @@
     "tags": [
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_前途",
@@ -17249,7 +17822,8 @@
       "công việc",
       "nghề nghiệp",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_浅",
@@ -17279,7 +17853,8 @@
       "thiên nhiên",
       "địa điểm",
       "màu sắc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_巧克力",
@@ -17310,7 +17885,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_切",
@@ -17339,7 +17915,8 @@
     "tags": [
       "hành động",
       "ẩm thực"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_亲爱",
@@ -17370,7 +17947,8 @@
       "cảm xúc",
       "giao tiếp",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_亲密",
@@ -17401,7 +17979,8 @@
       "cảm xúc",
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_青春",
@@ -17432,7 +18011,8 @@
       "thời gian",
       "cảm xúc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_轻松",
@@ -17463,7 +18043,8 @@
       "cảm xúc",
       "công việc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_轻易",
@@ -17494,7 +18075,8 @@
       "hành động",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_清醒",
@@ -17524,7 +18106,8 @@
     "tags": [
       "sức khỏe",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_情景",
@@ -17554,7 +18137,8 @@
     "tags": [
       "văn hóa",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_穷",
@@ -17583,7 +18167,8 @@
     "tags": [
       "tài chính",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_穷人",
@@ -17613,7 +18198,8 @@
     "tags": [
       "tài chính",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_秋季",
@@ -17644,7 +18230,8 @@
       "thời tiết",
       "thời gian",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_趋势",
@@ -17675,7 +18262,8 @@
       "công nghệ",
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_圈",
@@ -17704,7 +18292,8 @@
     "tags": [
       "động vật",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_权利",
@@ -17734,7 +18323,8 @@
     "tags": [
       "văn hóa",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_却",
@@ -17763,7 +18353,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_确认",
@@ -17794,7 +18385,8 @@
       "công việc",
       "giao tiếp",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_然而",
@@ -17824,7 +18416,8 @@
     "tags": [
       "giao tiếp",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_燃料",
@@ -17854,7 +18447,8 @@
     "tags": [
       "công nghệ",
       "giao thông"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_燃烧",
@@ -17884,7 +18478,8 @@
     "tags": [
       "thiên nhiên",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_热闹",
@@ -17915,7 +18510,8 @@
       "địa điểm",
       "cảm xúc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_热心",
@@ -17945,7 +18541,8 @@
     "tags": [
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_人家",
@@ -17975,7 +18572,8 @@
     "tags": [
       "gia đình",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_日记",
@@ -18005,7 +18603,8 @@
     "tags": [
       "sở thích",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_日历",
@@ -18034,7 +18633,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_如今",
@@ -18064,7 +18664,8 @@
     "tags": [
       "thời gian",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_弱",
@@ -18094,7 +18695,8 @@
       "sức khỏe",
       "tính cách",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_伞",
@@ -18123,7 +18725,8 @@
     "tags": [
       "thời tiết",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_散",
@@ -18152,7 +18755,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_扫",
@@ -18180,7 +18784,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_色",
@@ -18208,7 +18813,8 @@
     "wordType": "n",
     "tags": [
       "màu sắc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_色彩",
@@ -18238,7 +18844,8 @@
     "tags": [
       "màu sắc",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_森林",
@@ -18268,7 +18875,8 @@
     "tags": [
       "thiên nhiên",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_晒",
@@ -18297,7 +18905,8 @@
     "tags": [
       "thời tiết",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_闪",
@@ -18325,7 +18934,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_闪电",
@@ -18355,7 +18965,8 @@
     "tags": [
       "thời tiết",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_善良",
@@ -18385,7 +18996,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_善于",
@@ -18416,7 +19028,8 @@
       "tính cách",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_伤害",
@@ -18447,7 +19060,8 @@
       "cảm xúc",
       "hành động",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_商务",
@@ -18477,7 +19091,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_赏",
@@ -18507,7 +19122,8 @@
       "công việc",
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_上个月",
@@ -18537,7 +19153,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_上楼",
@@ -18567,7 +19184,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_上门",
@@ -18597,7 +19215,8 @@
     "tags": [
       "giao tiếp",
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_烧",
@@ -18626,7 +19245,8 @@
     "tags": [
       "hành động",
       "ẩm thực"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_设施",
@@ -18656,7 +19276,8 @@
     "tags": [
       "địa điểm",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_设置",
@@ -18686,7 +19307,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_申请",
@@ -18717,7 +19339,8 @@
       "công việc",
       "học tập",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_身材",
@@ -18747,7 +19370,8 @@
     "tags": [
       "sức khỏe",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_身份",
@@ -18777,7 +19401,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_身高",
@@ -18807,7 +19432,8 @@
     "tags": [
       "sức khỏe",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_深厚",
@@ -18837,7 +19463,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_神话",
@@ -18867,7 +19494,8 @@
     "tags": [
       "văn hóa",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_神秘",
@@ -18897,7 +19525,8 @@
     "tags": [
       "cảm xúc",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_甚至",
@@ -18927,7 +19556,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_失败",
@@ -18958,7 +19588,8 @@
       "công việc",
       "học tập",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_失望",
@@ -18988,7 +19619,8 @@
     "tags": [
       "cảm xúc",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_失业",
@@ -19018,7 +19650,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_诗",
@@ -19048,7 +19681,8 @@
       "nghệ thuật",
       "văn hóa",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_诗人",
@@ -19079,7 +19713,8 @@
       "nghề nghiệp",
       "nghệ thuật",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_湿",
@@ -19108,7 +19743,8 @@
     "tags": [
       "thời tiết",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_实施",
@@ -19138,7 +19774,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_实用",
@@ -19168,7 +19805,8 @@
     "tags": [
       "công việc",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_食堂",
@@ -19199,7 +19837,8 @@
       "ẩm thực",
       "địa điểm",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_使劲",
@@ -19229,7 +19868,8 @@
     "tags": [
       "hành động",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_士兵",
@@ -19259,7 +19899,8 @@
     "tags": [
       "nghề nghiệp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_市区",
@@ -19290,7 +19931,8 @@
       "địa điểm",
       "giao thông",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_似的",
@@ -19320,7 +19962,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_事物",
@@ -19350,7 +19993,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_事先",
@@ -19380,7 +20024,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_试卷",
@@ -19410,7 +20055,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_是否",
@@ -19440,7 +20086,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_收回",
@@ -19470,7 +20117,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_收获",
@@ -19501,7 +20149,8 @@
       "công việc",
       "học tập",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_收益",
@@ -19531,7 +20180,8 @@
     "tags": [
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_手工",
@@ -19562,7 +20212,8 @@
       "sở thích",
       "hành động",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_手里",
@@ -19592,7 +20243,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_手术",
@@ -19622,7 +20274,8 @@
     "tags": [
       "sức khỏe",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_手套",
@@ -19652,7 +20305,8 @@
     "tags": [
       "mua sắm",
       "thời tiết"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_守",
@@ -19681,7 +20335,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_首",
@@ -19711,7 +20366,8 @@
       "âm nhạc",
       "nghệ thuật",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_受不了",
@@ -19742,7 +20398,8 @@
     "tags": [
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_售货员",
@@ -19774,7 +20431,8 @@
       "nghề nghiệp",
       "mua sắm",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_叔叔",
@@ -19804,7 +20462,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_舒适",
@@ -19834,7 +20493,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_熟练",
@@ -19865,7 +20525,8 @@
       "học tập",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_暑假",
@@ -19896,7 +20557,8 @@
       "thời gian",
       "học tập",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_树林",
@@ -19926,7 +20588,8 @@
     "tags": [
       "thiên nhiên",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_树叶",
@@ -19956,7 +20619,8 @@
     "tags": [
       "thiên nhiên",
       "màu sắc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_数据",
@@ -19986,7 +20650,8 @@
     "tags": [
       "công nghệ",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_数码",
@@ -20016,7 +20681,8 @@
     "tags": [
       "công nghệ",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_刷",
@@ -20045,7 +20711,8 @@
     "tags": [
       "hành động",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_刷牙",
@@ -20076,7 +20743,8 @@
       "sức khỏe",
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_刷子",
@@ -20106,7 +20774,8 @@
     "tags": [
       "gia đình",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_帅",
@@ -20135,7 +20804,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_帅哥",
@@ -20165,7 +20835,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_率先",
@@ -20195,7 +20866,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_睡着",
@@ -20226,7 +20898,8 @@
       "hành động",
       "sức khỏe",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_顺序",
@@ -20256,7 +20929,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_说不定",
@@ -20287,7 +20961,8 @@
     "tags": [
       "giao tiếp",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_说服",
@@ -20318,7 +20993,8 @@
       "giao tiếp",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_思考",
@@ -20349,7 +21025,8 @@
       "hành động",
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_似乎",
@@ -20379,7 +21056,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_松",
@@ -20407,7 +21085,8 @@
     "wordType": "adj",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_松树",
@@ -20436,7 +21115,8 @@
     "wordType": "n",
     "tags": [
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_塑料",
@@ -20465,7 +21145,8 @@
     "wordType": "n",
     "tags": [
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_塑料袋",
@@ -20495,7 +21176,8 @@
     "wordType": "n",
     "tags": [
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_酸",
@@ -20523,7 +21205,8 @@
     "wordType": "adj",
     "tags": [
       "ẩm thực"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_酸奶",
@@ -20553,7 +21236,8 @@
     "tags": [
       "ẩm thực",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_随手",
@@ -20582,7 +21266,8 @@
     "wordType": "adv",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_孙女",
@@ -20611,7 +21296,8 @@
     "wordType": "n",
     "tags": [
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_孙子",
@@ -20640,7 +21326,8 @@
     "wordType": "n",
     "tags": [
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_缩短",
@@ -20671,7 +21358,8 @@
       "thời gian",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_缩小",
@@ -20701,7 +21389,8 @@
     "tags": [
       "hành động",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_台阶",
@@ -20730,7 +21419,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_台上",
@@ -20760,7 +21450,8 @@
     "tags": [
       "địa điểm",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_躺",
@@ -20789,7 +21480,8 @@
     "tags": [
       "hành động",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_套餐",
@@ -20819,7 +21511,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_特价",
@@ -20849,7 +21542,8 @@
     "tags": [
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_特殊",
@@ -20875,7 +21569,8 @@
       }
     ],
     "level": 4,
-    "wordType": "adj"
+    "wordType": "adj",
+    "frequency": "low"
   },
   {
     "id": "hsk4_特征",
@@ -20901,7 +21596,8 @@
       }
     ],
     "level": 4,
-    "wordType": "n"
+    "wordType": "n",
+    "frequency": "low"
   },
   {
     "id": "hsk4_提供",
@@ -20931,7 +21627,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_提醒",
@@ -20961,7 +21658,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_体操",
@@ -20991,7 +21689,8 @@
     "tags": [
       "thể thao",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_体检",
@@ -21021,7 +21720,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_体重",
@@ -21051,7 +21751,8 @@
     "tags": [
       "sức khỏe",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_替",
@@ -21080,7 +21781,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_替代",
@@ -21110,7 +21812,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_天真",
@@ -21140,7 +21843,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_填",
@@ -21169,7 +21873,8 @@
     "tags": [
       "hành động",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_填空",
@@ -21199,7 +21904,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_挑",
@@ -21227,7 +21933,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_挑选",
@@ -21257,7 +21964,8 @@
     "tags": [
       "hành động",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_调皮",
@@ -21287,7 +21995,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_挑战",
@@ -21317,7 +22026,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_贴",
@@ -21345,7 +22055,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_停下",
@@ -21375,7 +22086,8 @@
     "tags": [
       "hành động",
       "giao thông"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_挺",
@@ -21403,7 +22115,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_通知书",
@@ -21434,7 +22147,8 @@
     "tags": [
       "giáo dục",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_同情",
@@ -21464,7 +22178,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_童话",
@@ -21494,7 +22209,8 @@
     "tags": [
       "văn hóa",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_童年",
@@ -21524,7 +22240,8 @@
     "tags": [
       "thời gian",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_统计",
@@ -21554,7 +22271,8 @@
     "tags": [
       "công việc",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_统一",
@@ -21584,7 +22302,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_痛快",
@@ -21614,7 +22333,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_投",
@@ -21643,7 +22363,8 @@
     "tags": [
       "hành động",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_投入",
@@ -21673,7 +22394,8 @@
     "tags": [
       "hành động",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_投诉",
@@ -21703,7 +22425,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_投资",
@@ -21733,7 +22456,8 @@
     "tags": [
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_透",
@@ -21762,7 +22486,8 @@
     "tags": [
       "hành động",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_透明",
@@ -21792,7 +22517,8 @@
     "tags": [
       "thiên nhiên",
       "màu sắc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_图案",
@@ -21823,7 +22549,8 @@
       "nghệ thuật",
       "mua sắm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_途中",
@@ -21854,7 +22581,8 @@
       "giao thông",
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_土地",
@@ -21884,7 +22612,8 @@
     "tags": [
       "thiên nhiên",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_推迟",
@@ -21915,7 +22644,8 @@
       "thời gian",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_推销",
@@ -21946,7 +22676,8 @@
       "công việc",
       "mua sắm",
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_脱",
@@ -21974,7 +22705,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_袜子",
@@ -22003,7 +22735,8 @@
     "wordType": "n",
     "tags": [
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_外汇",
@@ -22032,7 +22765,8 @@
     "wordType": "n",
     "tags": [
       "tài chính"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_外交官",
@@ -22064,7 +22798,8 @@
       "nghề nghiệp",
       "giao tiếp",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_外套",
@@ -22094,7 +22829,8 @@
     "tags": [
       "mua sắm",
       "thời tiết"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_弯",
@@ -22123,7 +22859,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_晚点",
@@ -22153,7 +22890,8 @@
     "tags": [
       "thời gian",
       "giao thông"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_万一",
@@ -22183,7 +22921,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_王",
@@ -22212,7 +22951,8 @@
     "tags": [
       "văn hóa",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_网络",
@@ -22243,7 +22983,8 @@
       "công nghệ",
       "giao tiếp",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_网址",
@@ -22273,7 +23014,8 @@
     "tags": [
       "công nghệ",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_微笑",
@@ -22304,7 +23046,8 @@
       "cảm xúc",
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_微信",
@@ -22334,7 +23077,8 @@
     "tags": [
       "công nghệ",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_围巾",
@@ -22364,7 +23108,8 @@
     "tags": [
       "mua sắm",
       "thời tiết"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_维持",
@@ -22395,7 +23140,8 @@
       "hành động",
       "công việc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_维护",
@@ -22426,7 +23172,8 @@
       "công việc",
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_维修",
@@ -22457,7 +23204,8 @@
       "công việc",
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_尾巴",
@@ -22487,7 +23235,8 @@
     "tags": [
       "động vật",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_未必",
@@ -22517,7 +23266,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_未来",
@@ -22548,7 +23298,8 @@
       "thời gian",
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_位于",
@@ -22578,7 +23329,8 @@
     "tags": [
       "địa điểm",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_位置",
@@ -22609,7 +23361,8 @@
       "địa điểm",
       "giao thông",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_味儿",
@@ -22639,7 +23392,8 @@
     "tags": [
       "ẩm thực",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_喂",
@@ -22667,7 +23421,8 @@
     "wordType": "v",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_稳",
@@ -22697,7 +23452,8 @@
       "công việc",
       "tính cách",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_稳定",
@@ -22728,7 +23484,8 @@
       "công việc",
       "tài chính",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_问候",
@@ -22758,7 +23515,8 @@
     "tags": [
       "giao tiếp",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_无",
@@ -22787,7 +23545,8 @@
     "tags": [
       "số lượng",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_无法",
@@ -22817,7 +23576,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_无聊",
@@ -22847,7 +23607,8 @@
     "tags": [
       "cảm xúc",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_无论",
@@ -22877,7 +23638,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_无数",
@@ -22907,7 +23669,8 @@
     "tags": [
       "số lượng",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_无所谓",
@@ -22938,7 +23701,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_无限",
@@ -22968,7 +23732,8 @@
     "tags": [
       "số lượng",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_五颜六色",
@@ -23001,7 +23766,8 @@
       "màu sắc",
       "nghệ thuật",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_误会",
@@ -23031,7 +23797,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_西瓜",
@@ -23060,7 +23827,8 @@
     "wordType": "n",
     "tags": [
       "ẩm thực"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_吸",
@@ -23089,7 +23857,8 @@
     "tags": [
       "hành động",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_吸管",
@@ -23119,7 +23888,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_吸收",
@@ -23150,7 +23920,8 @@
       "học tập",
       "sức khỏe",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_吸烟",
@@ -23180,7 +23951,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_吸引",
@@ -23211,7 +23983,8 @@
       "cảm xúc",
       "du lịch",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_喜爱",
@@ -23241,7 +24014,8 @@
     "tags": [
       "cảm xúc",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_系列",
@@ -23272,7 +24046,8 @@
       "công nghệ",
       "mua sắm",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_系统",
@@ -23302,7 +24077,8 @@
     "tags": [
       "công nghệ",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_细",
@@ -23330,7 +24106,8 @@
     "wordType": "adj",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_细节",
@@ -23360,7 +24137,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_细致",
@@ -23390,7 +24168,8 @@
     "tags": [
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_下个月",
@@ -23420,7 +24199,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_下降",
@@ -23450,7 +24230,8 @@
     "tags": [
       "tài chính",
       "thời tiết"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_下楼",
@@ -23480,7 +24261,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_下载",
@@ -23510,7 +24292,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_夏季",
@@ -23540,7 +24323,8 @@
     "tags": [
       "thời tiết",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_鲜",
@@ -23569,7 +24353,8 @@
     "tags": [
       "ẩm thực",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_鲜花",
@@ -23599,7 +24384,8 @@
     "tags": [
       "thiên nhiên",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_鲜明",
@@ -23629,7 +24415,8 @@
     "tags": [
       "màu sắc",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_咸",
@@ -23657,7 +24444,8 @@
     "wordType": "adj",
     "tags": [
       "ẩm thực"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_显著",
@@ -23687,7 +24475,8 @@
     "tags": [
       "công việc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_县",
@@ -23715,7 +24504,8 @@
     "wordType": "n",
     "tags": [
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_限制",
@@ -23745,7 +24535,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_相处",
@@ -23775,7 +24566,8 @@
     "tags": [
       "giao tiếp",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_相反",
@@ -23804,7 +24596,8 @@
     "wordType": "adj",
     "tags": [
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_箱",
@@ -23832,7 +24625,8 @@
     "wordType": "mw",
     "tags": [
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_箱子",
@@ -23862,7 +24656,8 @@
     "tags": [
       "du lịch",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_想念",
@@ -23892,7 +24687,8 @@
     "tags": [
       "cảm xúc",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_想象",
@@ -23922,7 +24718,8 @@
     "tags": [
       "cảm xúc",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_项",
@@ -23951,7 +24748,8 @@
     "tags": [
       "công việc",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_项目",
@@ -23981,7 +24779,8 @@
     "tags": [
       "công việc",
       "tài chính"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_相片",
@@ -24011,7 +24810,8 @@
     "tags": [
       "sở thích",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_消化",
@@ -24041,7 +24841,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_销售",
@@ -24072,7 +24873,8 @@
       "công việc",
       "tài chính",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_小吃",
@@ -24102,7 +24904,8 @@
     "tags": [
       "ẩm thực",
       "du lịch"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_小伙子",
@@ -24133,7 +24936,8 @@
     "tags": [
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_小型",
@@ -24163,7 +24967,8 @@
     "tags": [
       "công nghệ",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_效率",
@@ -24193,7 +24998,8 @@
     "tags": [
       "công việc",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_些",
@@ -24221,7 +25027,8 @@
     "wordType": "mw",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_心理",
@@ -24251,7 +25058,8 @@
     "tags": [
       "cảm xúc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_新郎",
@@ -24281,7 +25089,8 @@
     "tags": [
       "gia đình",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_新娘",
@@ -24311,7 +25120,8 @@
     "tags": [
       "gia đình",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_新鲜",
@@ -24341,7 +25151,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_新型",
@@ -24371,7 +25182,8 @@
     "tags": [
       "công nghệ",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_兴奋",
@@ -24400,7 +25212,8 @@
     "wordType": "adj",
     "tags": [
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_形容",
@@ -24430,7 +25243,8 @@
     "tags": [
       "giao tiếp",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_形势",
@@ -24460,7 +25274,8 @@
     "tags": [
       "công việc",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_型",
@@ -24489,7 +25304,8 @@
     "tags": [
       "công nghệ",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_型号",
@@ -24519,7 +25335,8 @@
     "tags": [
       "công nghệ",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_醒",
@@ -24548,7 +25365,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_兴趣",
@@ -24578,7 +25396,8 @@
     "tags": [
       "sở thích",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_性质",
@@ -24608,7 +25427,8 @@
     "tags": [
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_兄弟",
@@ -24638,7 +25458,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_胸部",
@@ -24668,7 +25489,8 @@
     "tags": [
       "sức khỏe",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_修理",
@@ -24698,7 +25520,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_选择",
@@ -24728,7 +25551,8 @@
     "tags": [
       "hành động",
       "mua sắm"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_学分",
@@ -24758,7 +25582,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_学年",
@@ -24789,7 +25614,8 @@
       "học tập",
       "thời gian",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_学时",
@@ -24820,7 +25646,8 @@
       "học tập",
       "thời gian",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_学术",
@@ -24851,7 +25678,8 @@
       "học tập",
       "giáo dục",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_学问",
@@ -24882,7 +25710,8 @@
       "học tập",
       "giáo dục",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_寻找",
@@ -24912,7 +25741,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_迅速",
@@ -24942,7 +25772,8 @@
     "tags": [
       "hành động",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_牙",
@@ -24970,7 +25801,8 @@
     "wordType": "n",
     "tags": [
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_牙刷",
@@ -25000,7 +25832,8 @@
     "tags": [
       "sức khỏe",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_亚运会",
@@ -25032,7 +25865,8 @@
       "thể thao",
       "du lịch",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_呀",
@@ -25061,7 +25895,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_延长",
@@ -25092,7 +25927,8 @@
       "thời gian",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_延期",
@@ -25123,7 +25959,8 @@
       "thời gian",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_延续",
@@ -25153,7 +25990,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_严",
@@ -25183,7 +26021,8 @@
       "tính cách",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_严格",
@@ -25214,7 +26053,8 @@
       "tính cách",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_严重",
@@ -25245,7 +26085,8 @@
       "sức khỏe",
       "cảm xúc",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_研究",
@@ -25276,7 +26117,8 @@
       "học tập",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_研究生",
@@ -25308,7 +26150,8 @@
       "học tập",
       "nghề nghiệp",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_研制",
@@ -25339,7 +26182,8 @@
       "công việc",
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_盐",
@@ -25368,7 +26212,8 @@
     "tags": [
       "ẩm thực",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_眼镜",
@@ -25398,7 +26243,8 @@
     "tags": [
       "mua sắm",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_眼泪",
@@ -25428,7 +26274,8 @@
     "tags": [
       "cảm xúc",
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_眼里",
@@ -25458,7 +26305,8 @@
     "tags": [
       "cảm xúc",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_演讲",
@@ -25489,7 +26337,8 @@
       "giao tiếp",
       "công việc",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_阳台",
@@ -25519,7 +26368,8 @@
     "tags": [
       "địa điểm",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_养成",
@@ -25550,7 +26400,8 @@
       "hành động",
       "học tập",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_腰",
@@ -25579,7 +26430,8 @@
     "tags": [
       "sức khỏe",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_摇",
@@ -25607,7 +26459,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_药物",
@@ -25636,7 +26489,8 @@
     "wordType": "n",
     "tags": [
       "sức khỏe"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_要",
@@ -25665,7 +26519,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_业余",
@@ -25696,7 +26551,8 @@
       "sở thích",
       "thời gian",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_叶子",
@@ -25726,7 +26582,8 @@
     "tags": [
       "thiên nhiên",
       "màu sắc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_医疗",
@@ -25756,7 +26613,8 @@
     "tags": [
       "sức khỏe",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_医学",
@@ -25787,7 +26645,8 @@
       "giáo dục",
       "sức khỏe",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_依靠",
@@ -25817,7 +26676,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_依然",
@@ -25847,7 +26707,8 @@
     "tags": [
       "thời gian",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_一律",
@@ -25877,7 +26738,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_一再",
@@ -25907,7 +26769,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_一致",
@@ -25937,7 +26800,8 @@
     "tags": [
       "giao tiếp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_移",
@@ -25966,7 +26830,8 @@
     "tags": [
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_移动",
@@ -25996,7 +26861,8 @@
     "tags": [
       "hành động",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_移民",
@@ -26026,7 +26892,8 @@
     "tags": [
       "địa điểm",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_遗产",
@@ -26056,7 +26923,8 @@
     "tags": [
       "tài chính",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_遗传",
@@ -26086,7 +26954,8 @@
     "tags": [
       "sức khỏe",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_疑问",
@@ -26117,7 +26986,8 @@
       "học tập",
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_以及",
@@ -26147,7 +27017,8 @@
     "tags": [
       "giao tiếp",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_以内",
@@ -26178,7 +27049,8 @@
       "địa điểm",
       "thời gian",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_一般来说",
@@ -26210,7 +27082,8 @@
     "tags": [
       "giao tiếp",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_义务",
@@ -26241,7 +27114,8 @@
       "công việc",
       "giáo dục",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_议论",
@@ -26271,7 +27145,8 @@
     "tags": [
       "giao tiếp",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_引",
@@ -26300,7 +27175,8 @@
     "tags": [
       "hành động",
       "giao thông"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_引导",
@@ -26331,7 +27207,8 @@
       "hành động",
       "giáo dục",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_引进",
@@ -26362,7 +27239,8 @@
       "công việc",
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_引起",
@@ -26392,7 +27270,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_应",
@@ -26421,7 +27300,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_英勇",
@@ -26451,7 +27331,8 @@
     "tags": [
       "tính cách",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_营业",
@@ -26482,7 +27363,8 @@
       "công việc",
       "tài chính",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_赢得",
@@ -26513,7 +27395,8 @@
       "thể thao",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_影子",
@@ -26542,7 +27425,8 @@
     "wordType": "n",
     "tags": [
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_勇敢",
@@ -26572,7 +27456,8 @@
     "tags": [
       "tính cách",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_勇气",
@@ -26602,7 +27487,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_用途",
@@ -26632,7 +27518,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_优良",
@@ -26662,7 +27549,8 @@
     "tags": [
       "tính cách",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_优美",
@@ -26692,7 +27580,8 @@
     "tags": [
       "nghệ thuật",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_优秀",
@@ -26723,7 +27612,8 @@
       "học tập",
       "công việc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_邮局",
@@ -26753,7 +27643,8 @@
     "tags": [
       "địa điểm",
       "giao thông"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_有劲儿",
@@ -26784,7 +27675,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_有趣",
@@ -26814,7 +27706,8 @@
     "tags": [
       "sở thích",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_有限",
@@ -26844,7 +27737,8 @@
     "tags": [
       "số lượng",
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_幼儿园",
@@ -26876,7 +27770,8 @@
       "giáo dục",
       "địa điểm",
       "gia đình"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_于是",
@@ -26906,7 +27801,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_语法",
@@ -26936,7 +27832,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_语音",
@@ -26967,7 +27864,8 @@
       "học tập",
       "giáo dục",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_玉",
@@ -26996,7 +27894,8 @@
     "tags": [
       "văn hóa",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_玉米",
@@ -27026,7 +27925,8 @@
     "tags": [
       "ẩm thực",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_预测",
@@ -27057,7 +27957,8 @@
       "thời tiết",
       "công việc",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_预订",
@@ -27088,7 +27989,8 @@
       "mua sắm",
       "du lịch",
       "ẩm thực"
-    ]
+    ],
+    "frequency": "high"
   },
   {
     "id": "hsk4_遇",
@@ -27118,7 +28020,8 @@
       "giao tiếp",
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_遇到",
@@ -27149,7 +28052,8 @@
       "giao tiếp",
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_遇见",
@@ -27180,7 +28084,8 @@
       "giao tiếp",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_原料",
@@ -27211,7 +28116,8 @@
       "công việc",
       "ẩm thực",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_原则",
@@ -27242,7 +28148,8 @@
       "công việc",
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_圆",
@@ -27272,7 +28179,8 @@
       "thiên nhiên",
       "màu sắc",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_圆满",
@@ -27303,7 +28211,8 @@
       "cảm xúc",
       "gia đình",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_约会",
@@ -27334,7 +28243,8 @@
       "giao tiếp",
       "cảm xúc",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_月底",
@@ -27365,7 +28275,8 @@
       "thời gian",
       "tài chính",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_阅读",
@@ -27396,7 +28307,8 @@
       "học tập",
       "sở thích",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_运动会",
@@ -27428,7 +28340,8 @@
       "thể thao",
       "giáo dục",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_运动员",
@@ -27460,7 +28373,8 @@
       "thể thao",
       "nghề nghiệp",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_运气",
@@ -27491,7 +28405,8 @@
       "cảm xúc",
       "tính cách",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_运用",
@@ -27522,7 +28437,8 @@
       "học tập",
       "công việc",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_再三",
@@ -27553,7 +28469,8 @@
       "hành động",
       "giao tiếp",
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_在乎",
@@ -27584,7 +28501,8 @@
       "cảm xúc",
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_在于",
@@ -27615,7 +28533,8 @@
       "công việc",
       "học tập",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_赞成",
@@ -27646,7 +28565,8 @@
       "giao tiếp",
       "công việc",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_赞赏",
@@ -27677,7 +28597,8 @@
       "cảm xúc",
       "giao tiếp",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_赞助",
@@ -27708,7 +28629,8 @@
       "tài chính",
       "công việc",
       "thể thao"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_造型",
@@ -27739,7 +28661,8 @@
       "nghệ thuật",
       "mua sắm",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_战斗",
@@ -27769,7 +28692,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_战胜",
@@ -27800,7 +28724,8 @@
       "thể thao",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_战士",
@@ -27831,7 +28756,8 @@
       "nghề nghiệp",
       "hành động",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_战争",
@@ -27861,7 +28787,8 @@
     "tags": [
       "văn hóa",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_丈夫",
@@ -27891,7 +28818,8 @@
     "tags": [
       "gia đình",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_招呼",
@@ -27921,7 +28849,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_着",
@@ -27950,7 +28879,8 @@
     "tags": [
       "sở thích",
       "hành động"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_着火",
@@ -27980,7 +28910,8 @@
     "tags": [
       "hành động",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_着急",
@@ -28009,7 +28940,8 @@
     "wordType": "n",
     "tags": [
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_召开",
@@ -28040,7 +28972,8 @@
       "công việc",
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_折",
@@ -28068,7 +29001,8 @@
     "wordType": "v",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_针",
@@ -28097,7 +29031,8 @@
     "tags": [
       "sức khỏe",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_针对",
@@ -28127,7 +29062,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_阵",
@@ -28156,7 +29092,8 @@
     "tags": [
       "thời tiết",
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_争论",
@@ -28187,7 +29124,8 @@
       "giao tiếp",
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_征服",
@@ -28217,7 +29155,8 @@
     "tags": [
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_征求",
@@ -28248,7 +29187,8 @@
       "giao tiếp",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_政府",
@@ -28278,7 +29218,8 @@
     "tags": [
       "công việc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_政治",
@@ -28308,7 +29249,8 @@
     "tags": [
       "văn hóa",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_之后",
@@ -28337,7 +29279,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_之间",
@@ -28368,7 +29311,8 @@
       "địa điểm",
       "thời gian",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_之前",
@@ -28397,7 +29341,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_之一",
@@ -28426,7 +29371,8 @@
     "wordType": "n",
     "tags": [
       "số lượng"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_支",
@@ -28455,7 +29401,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_植物",
@@ -28486,7 +29433,8 @@
       "thiên nhiên",
       "động vật",
       "sở thích"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_指挥",
@@ -28517,7 +29465,8 @@
       "công việc",
       "hành động",
       "âm nhạc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_制订",
@@ -28547,7 +29496,8 @@
     "tags": [
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_质量",
@@ -28578,7 +29528,8 @@
       "mua sắm",
       "công việc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_治",
@@ -28608,7 +29559,8 @@
       "sức khỏe",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_治疗",
@@ -28638,7 +29590,8 @@
     "tags": [
       "sức khỏe",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_智力",
@@ -28669,7 +29622,8 @@
       "giáo dục",
       "tính cách",
       "học tập"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_智能",
@@ -28700,7 +29654,8 @@
       "công nghệ",
       "giáo dục",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_中介",
@@ -28731,7 +29686,8 @@
       "công việc",
       "tài chính",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_种类",
@@ -28762,7 +29718,8 @@
       "số lượng",
       "mua sắm",
       "thiên nhiên"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_中奖",
@@ -28793,7 +29750,8 @@
       "tài chính",
       "sở thích",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_种",
@@ -28823,7 +29781,8 @@
       "thiên nhiên",
       "hành động",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_种植",
@@ -28854,7 +29813,8 @@
       "thiên nhiên",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_重量",
@@ -28885,7 +29845,8 @@
       "số lượng",
       "mua sắm",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_逐步",
@@ -28916,7 +29877,8 @@
       "thời gian",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_逐渐",
@@ -28947,7 +29909,8 @@
       "thời gian",
       "hành động",
       "cảm xúc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_主题",
@@ -28978,7 +29941,8 @@
       "học tập",
       "giao tiếp",
       "nghệ thuật"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_主席",
@@ -29009,7 +29973,8 @@
       "công việc",
       "nghề nghiệp",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_祝福",
@@ -29040,7 +30005,8 @@
       "giao tiếp",
       "cảm xúc",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_著名",
@@ -29071,7 +30037,8 @@
       "văn hóa",
       "nghệ thuật",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_著作",
@@ -29102,7 +30069,8 @@
       "nghệ thuật",
       "học tập",
       "văn hóa"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_抓紧",
@@ -29133,7 +30101,8 @@
       "thời gian",
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_专心",
@@ -29164,7 +30133,8 @@
       "học tập",
       "công việc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_转动",
@@ -29194,7 +30164,8 @@
     "tags": [
       "hành động",
       "công nghệ"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_转告",
@@ -29224,7 +30195,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_转身",
@@ -29253,7 +30225,8 @@
     "wordType": "n",
     "tags": [
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_转弯",
@@ -29284,7 +30257,8 @@
       "giao thông",
       "hành động",
       "địa điểm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_转移",
@@ -29315,7 +30289,8 @@
       "hành động",
       "địa điểm",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_装修",
@@ -29345,7 +30320,8 @@
     "tags": [
       "địa điểm",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_装置",
@@ -29375,7 +30351,8 @@
     "tags": [
       "công nghệ",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_追求",
@@ -29406,7 +30383,8 @@
       "hành động",
       "cảm xúc",
       "sở thích"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_准时",
@@ -29436,7 +30414,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_资料",
@@ -29466,7 +30445,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_资源",
@@ -29496,7 +30476,8 @@
     "tags": [
       "thiên nhiên",
       "công việc"
-    ]
+    ],
+    "frequency": "medium"
   },
   {
     "id": "hsk4_自",
@@ -29525,7 +30506,8 @@
     "tags": [
       "thời gian",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_自信",
@@ -29555,7 +30537,8 @@
     "tags": [
       "cảm xúc",
       "tính cách"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_字母",
@@ -29585,7 +30568,8 @@
     "tags": [
       "học tập",
       "giáo dục"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_综合",
@@ -29615,7 +30599,8 @@
     "tags": [
       "học tập",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_总共",
@@ -29645,7 +30630,8 @@
     "tags": [
       "số lượng",
       "mua sắm"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_总理",
@@ -29675,7 +30661,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_总统",
@@ -29705,7 +30692,8 @@
     "tags": [
       "nghề nghiệp",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_总之",
@@ -29735,7 +30723,8 @@
     "tags": [
       "giao tiếp",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_阻止",
@@ -29765,7 +30754,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_嘴巴",
@@ -29795,7 +30785,8 @@
     "tags": [
       "hành động",
       "giao tiếp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_最初",
@@ -29824,7 +30815,8 @@
     "wordType": "n",
     "tags": [
       "thời gian"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_作出",
@@ -29854,7 +30846,8 @@
     "tags": [
       "hành động",
       "công việc"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_作为",
@@ -29884,7 +30877,8 @@
     "tags": [
       "hành động",
       "nghề nghiệp"
-    ]
+    ],
+    "frequency": "low"
   },
   {
     "id": "hsk4_做梦",
@@ -29914,6 +30908,7 @@
     "tags": [
       "cảm xúc",
       "hành động"
-    ]
+    ],
+    "frequency": "low"
   }
 ]

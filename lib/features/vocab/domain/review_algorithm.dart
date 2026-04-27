@@ -34,5 +34,6 @@ Vocab reviewVocab(Vocab vocab, int quality) {
     interval: interval,
     nextReview: DateTime.now().add(Duration(days: interval)),
     isMastered: isMastered,
+    updatedAt: DateTime.now().toUtc(),
   );
 }

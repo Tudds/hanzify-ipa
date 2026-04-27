@@ -55,7 +55,7 @@ final class CharacterLocalDataSourceProvider
 }
 
 String _$characterLocalDataSourceHash() =>
-    r'6cdb16c0d04a6c6c65c1fc5a6c3b98f8cd7d4f8e';
+    r'18ef76522db4b4276b85d540cf7c93b2e2a4bad3';
 
 @ProviderFor(characterRepository)
 final characterRepositoryProvider = CharacterRepositoryProvider._();

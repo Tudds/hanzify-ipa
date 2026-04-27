@@ -11,6 +11,7 @@ import 'package:hanzify/features/grammar/domain/entities/grammar_point.dart';
 import 'package:hanzify/features/grammar/presentation/providers/grammar_providers.dart';
 import 'package:hanzify/core/providers/navigation_provider.dart';
 import 'package:hanzify/features/grammar/presentation/screens/grammar_detail_screen.dart';
+import 'package:hanzify/core/widgets/hanzify_card.dart';
 
 class GrammarScreen extends ConsumerStatefulWidget {
   const GrammarScreen({super.key});
@@ -105,34 +106,39 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
                       elevation: WidgetStateProperty.all(0),
                       backgroundColor: WidgetStateProperty.all(cs.surfaceContainerHighest),
                       padding: WidgetStateProperty.all(const EdgeInsets.symmetric(horizontal: 16)),
+                      shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))),
                     ),
                   ),
+                  _buildDashboardHeader(theme, cs, themeColorsOfRef(ref), allGrammar),
                   if (!isSearching)
                     SizedBox(
-                      height: 56,
+                      height: 120,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                         children: [
-                          (1, 'HSK 1', 'Căn bản'),
-                          (2, 'HSK 2', 'Trung cấp'),
-                          (3, 'HSK 3', 'Trung cấp'),
-                          (4, 'HSK 4', 'Nâng cao'),
+                          (1, 'HSK 1', 'Căn bản', '🌱'),
+                          (2, 'HSK 2', 'Trung cấp', '🌿'),
+                          (3, 'HSK 3', 'Trung cấp', '🌳'),
+                          (4, 'HSK 4', 'Nâng cao', '🔥'),
                         ].map((t) {
                           final isSelected = _selectedLevel == t.$1;
                           return Padding(
-                            padding: const EdgeInsets.only(right: 8),
-                            child: FilterChip(
-                              label: Text(t.$2),
-                              selected: isSelected,
-                              onSelected: (_) {
+                            padding: const EdgeInsets.only(right: 12),
+                            child: _LevelCard(
+                              level: t.$1,
+                              title: t.$2,
+                              subtitle: t.$3,
+                              emoji: t.$4,
+                              isSelected: isSelected,
+                              cs: cs,
+                              onTap: () {
                                 HanzifyHaptic.select();
                                 setState(() {
                                   _selectedLevel = t.$1;
                                   _expandedId = null;
                                 });
                               },
-                              showCheckmark: false,
                             ),
                           );
                         }).toList(),
@@ -205,6 +211,131 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
     return const HanzifyEmptyState(
       icon: Icons.auto_awesome_motion_rounded,
       title: 'Chưa có dữ liệu cho cấp độ này',
+    );
+  }
+
+  Widget _buildDashboardHeader(ThemeData theme, ColorScheme cs, AppThemeColors c, List<GrammarPoint> allGrammar) {
+    if (allGrammar.isEmpty) return const SizedBox.shrink();
+
+    final totalCount = allGrammar.length;
+    final masteredCount = allGrammar.where((g) => g.isMastered).length;
+    final progress = totalCount > 0 ? masteredCount / totalCount : 0.0;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      child: HanzifyCard(
+        variant: HanzifyCardVariant.gradient,
+        padding: const EdgeInsets.all(20),
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Ngữ pháp của bạn', style: theme.textTheme.titleMedium?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 4),
+                  Text('Đã thuộc $masteredCount / $totalCount cấu trúc', style: theme.textTheme.bodySmall?.copyWith(color: Colors.white.withValues(alpha: 0.85))),
+                  const SizedBox(height: 12),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(4),
+                    child: LinearProgressIndicator(
+                      value: progress,
+                      backgroundColor: Colors.white.withValues(alpha: 0.2),
+                      valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
+                      minHeight: 6,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 24),
+            Container(
+              width: 56,
+              height: 56,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.2),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(Icons.menu_book_rounded, color: Colors.white, size: 28),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _LevelCard extends StatelessWidget {
+  final int level;
+  final String title;
+  final String subtitle;
+  final String emoji;
+  final bool isSelected;
+  final ColorScheme cs;
+  final VoidCallback onTap;
+
+  const _LevelCard({
+    required this.level,
+    required this.title,
+    required this.subtitle,
+    required this.emoji,
+    required this.isSelected,
+    required this.cs,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+      width: 120,
+      decoration: BoxDecoration(
+        color: isSelected ? cs.primary : cs.surfaceContainerLow,
+        borderRadius: BorderRadius.circular(16),
+        border: isSelected ? Border.all(color: cs.primary, width: 2) : Border.all(color: cs.outlineVariant.withValues(alpha: 0.3)),
+        boxShadow: isSelected
+            ? [BoxShadow(color: cs.primary.withValues(alpha: 0.3), blurRadius: 12, offset: const Offset(0, 4))]
+            : null,
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(16),
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(emoji, style: const TextStyle(fontSize: 20)),
+                    if (isSelected) Icon(Icons.check_circle_rounded, size: 16, color: cs.onPrimary),
+                  ],
+                ),
+                const Spacer(),
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: isSelected ? cs.onPrimary : cs.onSurface,
+                  ),
+                ),
+                Text(
+                  subtitle,
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: isSelected ? cs.onPrimary.withValues(alpha: 0.8) : cs.onSurfaceVariant,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

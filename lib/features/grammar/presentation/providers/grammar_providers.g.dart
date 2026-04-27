@@ -55,7 +55,7 @@ final class GrammarLocalDataSourceProvider
 }
 
 String _$grammarLocalDataSourceHash() =>
-    r'bbb92483ba17c16526109d27c861939bacb7db96';
+    r'575ec440ce6b38c6e39e9d69dc546d06b2e4e8a7';
 
 @ProviderFor(grammarRepository)
 final grammarRepositoryProvider = GrammarRepositoryProvider._();
@@ -128,7 +128,7 @@ final class GrammarListProvider
   GrammarList create() => GrammarList();
 }
 
-String _$grammarListHash() => r'5aacc05f8fd4933f6cb4afba7ce9700cddd8f17d';
+String _$grammarListHash() => r'e9c47bf8640ecf7c1f789cff8a73a997b73989f8';
 
 abstract class _$GrammarList extends $AsyncNotifier<List<GrammarPoint>> {
   FutureOr<List<GrammarPoint>> build();

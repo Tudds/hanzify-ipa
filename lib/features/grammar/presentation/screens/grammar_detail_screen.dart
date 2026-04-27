@@ -10,7 +10,7 @@ import 'package:hanzify/core/providers/user_preferences_provider.dart';
 import 'package:hanzify/core/widgets/hanzify_card.dart';
 import 'package:hanzify/core/widgets/hanzify_badge.dart';
 import 'package:hanzify/core/widgets/hanzify_section_header.dart';
-import 'package:hanzify/core/widgets/hanzify_detail_frame.dart';
+import 'package:hanzify/core/widgets/hanzify_tabbed_frame.dart';
 import 'package:hanzify/features/grammar/domain/entities/grammar_point.dart';
 import 'package:hanzify/features/grammar/presentation/providers/grammar_providers.dart';
 import 'package:hanzify/core/graph/graph_providers.dart';
@@ -26,20 +26,27 @@ class GrammarDetailScreen extends ConsumerWidget {
     final c = themeColorsOf(context);
     final showPinyin = ref.watch(showPinyinProvider);
 
-    return HanzifyDetailFrame(
+    return HanzifyTabbedFrame(
       title: 'Chi tiết ngữ pháp',
       hero: _buildHeroCard(c),
-      slivers: [
-        if (grammar.formulaParts.isNotEmpty)
-          SliverToBoxAdapter(child: _buildFormula(c)),
-        if (grammar.usages.isNotEmpty)
-          SliverToBoxAdapter(child: _buildUsages(c)),
-        SliverToBoxAdapter(child: _buildExamples(c, showPinyin)),
-        SliverToBoxAdapter(child: _buildConvSentences(c, ref, showPinyin, context)),
-        if (grammar.relatedGrammar.isNotEmpty)
-          SliverToBoxAdapter(
-              child: _buildRelatedGrammar(c, ref, context)),
-        SliverToBoxAdapter(child: _buildCTA(c)),
+      tabLabels: const ['Công thức', 'Ứng dụng'],
+      tabSlivers: [
+        // Tab 1: Công thức
+        [
+          if (grammar.formulaParts.isNotEmpty)
+            SliverToBoxAdapter(child: _buildFormula(c)),
+          if (grammar.usages.isNotEmpty)
+            SliverToBoxAdapter(child: _buildUsages(c)),
+          SliverToBoxAdapter(child: const SizedBox(height: AppSpacing.xl)),
+          SliverToBoxAdapter(child: _buildCTA(c)),
+        ],
+        // Tab 2: Ứng dụng
+        [
+          SliverToBoxAdapter(child: _buildExamples(c, showPinyin)),
+          SliverToBoxAdapter(child: _buildConvSentences(c, ref, showPinyin, context)),
+          if (grammar.relatedGrammar.isNotEmpty)
+            SliverToBoxAdapter(child: _buildRelatedGrammar(c, ref, context)),
+        ],
       ],
     );
   }

@@ -1,8 +1,10 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../core/providers/database_provider.dart';
+import '../../../../core/providers/sync_provider.dart';
 import '../../data/datasources/grammar_local_datasource.dart';
-import '../../data/datasources/grammar_local_datasource_impl.dart';
+import 'grammar_providers_web.dart'
+    if (dart.library.io) 'grammar_providers_native.dart' as platform;
 import '../../data/repositories/grammar_repository_impl.dart';
 import '../../domain/entities/grammar_point.dart';
 import '../../domain/repositories/grammar_repository.dart';
@@ -17,7 +19,7 @@ part 'grammar_providers.g.dart';
 @Riverpod(keepAlive: true)
 GrammarLocalDataSource grammarLocalDataSource(Ref ref) {
   final db = ref.watch(appDatabaseProvider);
-  return GrammarLocalDataSourceImpl(db);
+  return platform.createNativeDataSource(db);
 }
 
 @Riverpod(keepAlive: true)
@@ -62,6 +64,7 @@ class GrammarList extends _$GrammarList {
   Future<void> toggleBookmark(GrammarPoint grammar) async {
     final updated = grammar.copyWith(isBookmarked: !grammar.isBookmarked);
     await ref.read(grammarRepositoryProvider).update(updated);
+    ref.read(syncProvider.notifier).push().ignore();
     await reload();
   }
 
@@ -69,6 +72,7 @@ class GrammarList extends _$GrammarList {
   Future<void> toggleMastered(GrammarPoint grammar) async {
     final updated = grammar.copyWith(isMastered: !grammar.isMastered);
     await ref.read(grammarRepositoryProvider).update(updated);
+    ref.read(syncProvider.notifier).push().ignore();
     await reload();
   }
 }

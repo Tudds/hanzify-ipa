@@ -117,6 +117,14 @@ class QuizNotifier extends _$QuizNotifier {
     if (state.selectedAnswer != null || state.isFinished) return;
 
     final isCorrect = index == state.questions[state.currentIndex].correctIndex;
+    final vocab = state.questions[state.currentIndex].vocab;
+
+    // Cập nhật SRS progress:
+    // Quiz trắc nghiệm có cognitive load thấp hơn flashcard, nên map chặt hơn:
+    // Đúng = quality 3 (Pass — không phải 4 vì dễ đoán mò)
+    // Sai = quality 1 (Lapse — reset vào queue học tích cực)
+    final quality = isCorrect ? 3 : 1;
+    ref.read(dueVocabProvider.notifier).review(vocab, quality);
 
     state = state.copyWith(
       selectedAnswer: index,

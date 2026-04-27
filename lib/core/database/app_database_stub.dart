@@ -38,6 +38,8 @@ class GrammarPointDbModel {
   dynamic get formulaParts => null;
   dynamic get usages => null;
   dynamic get exampleTags => null;
+  bool get needsSync => false;
+  DateTime get updatedAt => DateTime.fromMillisecondsSinceEpoch(0);
 }
 
 class VocabDbModel {
@@ -58,6 +60,7 @@ class VocabDbModel {
   int get interval => 0;
   DateTime get nextReview => DateTime.fromMillisecondsSinceEpoch(0);
   bool get needsSync => false;
+  DateTime get updatedAt => DateTime.fromMillisecondsSinceEpoch(0);
 }
 
 class CharacterDbModel {
@@ -73,6 +76,16 @@ class CharacterDbModel {
 }
 
 class GrammarPointsTableCompanion {
+  final dynamic needsSync;
+  final dynamic isBookmarked;
+  final dynamic isMastered;
+  final dynamic updatedAt;
+  const GrammarPointsTableCompanion({
+    this.needsSync,
+    this.isBookmarked,
+    this.isMastered,
+    this.updatedAt,
+  });
   static dynamic insert({
     required dynamic id,
     required dynamic title,
@@ -87,6 +100,8 @@ class GrammarPointsTableCompanion {
     dynamic formulaParts,
     dynamic usages,
     dynamic exampleTags,
+    dynamic needsSync,
+    dynamic updatedAt,
   }) => throw UnimplementedError();
 }
 
@@ -98,6 +113,7 @@ class VocabsTableCompanion {
   final dynamic nextReview;
   final dynamic isBookmarked;
   final dynamic isMastered;
+  final dynamic updatedAt;
   const VocabsTableCompanion({
     this.needsSync,
     this.repetitions,
@@ -106,6 +122,7 @@ class VocabsTableCompanion {
     this.nextReview,
     this.isBookmarked,
     this.isMastered,
+    this.updatedAt,
   });
   static dynamic insert({
     required dynamic id,
@@ -125,6 +142,7 @@ class VocabsTableCompanion {
     dynamic interval,
     required dynamic nextReview,
     dynamic needsSync,
+    dynamic updatedAt,
   }) => throw UnimplementedError();
 }
 
