@@ -8,10 +8,10 @@
 class AudioUrls {
   const AudioUrls._();
 
-  /// Base URL — đổi qua --dart-define hoặc env config.
+  /// Base URL — có thể override qua `--dart-define=AUDIO_BASE_URL=...`
   static const String _base = String.fromEnvironment(
     'AUDIO_BASE_URL',
-    defaultValue: 'https://pub-PLACEHOLDER.r2.dev/audio/v1',
+    defaultValue: 'https://pub-7d5fb452d3c14b469b1d630f885dfa87.r2.dev/audio/v1',
   );
 
   static String forVocab(String vocabId) => '$_base/vocab/$vocabId.mp3';
