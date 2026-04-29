@@ -139,7 +139,7 @@ class SessionCompleteCard extends StatelessWidget {
   }
 }
 
-class LessonIntroCard extends StatelessWidget {
+class LessonIntroCard extends StatefulWidget {
   const LessonIntroCard({
     super.key,
     required this.session,
@@ -154,7 +154,22 @@ class LessonIntroCard extends StatelessWidget {
   final VoidCallback onStart;
 
   @override
+  State<LessonIntroCard> createState() => _LessonIntroCardState();
+}
+
+class _LessonIntroCardState extends State<LessonIntroCard> {
+  var _step = 0;
+
+  static const _titles = ['Nghe hội thoại', 'Học từ khóa', 'Nhìn mẫu câu'];
+  static const _bodies = [
+    'Nghe từng dòng, đọc Hán tự - pinyin - nghĩa Việt.',
+    'Chỉ nhớ các từ chính của bài. Bấm loa nếu muốn nghe từ đơn.',
+    'Nhìn công thức và ý nghĩa, không cần nhớ mã kỹ thuật.',
+  ];
+
+  @override
   Widget build(BuildContext context) {
+    final isLastStep = _step == _titles.length - 1;
     return Card(
       color: Theme.of(
         context,
@@ -168,7 +183,9 @@ class LessonIntroCard extends StatelessWidget {
             Row(
               children: [
                 Icon(
-                  isCheckpoint ? Icons.flag_outlined : Icons.route_outlined,
+                  widget.isCheckpoint
+                      ? Icons.flag_outlined
+                      : Icons.route_outlined,
                   size: 36,
                 ),
                 const SizedBox(width: 12),
@@ -177,11 +194,13 @@ class LessonIntroCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        isCheckpoint ? 'Checkpoint' : 'Bắt đầu bài học',
+                        widget.isCheckpoint
+                            ? 'Checkpoint'
+                            : 'Bài học mini-flow',
                         style: Theme.of(context).textTheme.titleLarge,
                       ),
                       Text(
-                        'Đi theo 4 bước từ trên xuống, rồi mới làm quiz.',
+                        'Bước ${_step + 1}/3 · ${_titles[_step]}',
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
@@ -190,49 +209,43 @@ class LessonIntroCard extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 12),
-            _IntroStep(
-              index: 1,
-              title: 'Nghe hội thoại',
-              body:
-                  'Đọc Hán tự, pinyin và nghĩa Việt từng dòng. Bấm loa ở từng dòng để nghe đúng audio.',
-            ),
-            _IntroStep(
-              index: 2,
-              title: 'Nhìn từ khóa',
-              body:
-                  'Ưu tiên các từ HSK${session.activeLevel} trong bài; đây là từ sẽ xuất hiện trong quiz.',
-            ),
-            _IntroStep(
-              index: 3,
-              title: 'Nhận mẫu câu',
-              body:
-                  'Xem ý nghĩa grammar bằng tiếng Việt, không cần nhớ mã kỹ thuật.',
-            ),
-            _IntroStep(
-              index: 4,
-              title: isCheckpoint ? 'Vượt checkpoint' : 'Làm quiz',
-              body: isCheckpoint
-                  ? 'Đạt từ 70% để mở reward và tiếp tục learning path.'
-                  : 'Đạt từ 70% để lưu tiến độ và tạo thẻ ôn SRS.',
-            ),
-            const SizedBox(height: 16),
+            _StepProgress(currentStep: _step, totalSteps: _titles.length),
+            const SizedBox(height: 12),
+            _CurrentStepCopy(title: _titles[_step], body: _bodies[_step]),
+            const SizedBox(height: 12),
             ConstrainedBox(
-              constraints: const BoxConstraints(maxHeight: 360),
+              constraints: const BoxConstraints(maxHeight: 330),
               child: SingleChildScrollView(
                 child: LessonDetailCard(
-                  session: session,
-                  lessonContext: lessonContext,
+                  session: widget.session,
+                  lessonContext: widget.lessonContext,
+                  step: _step,
                 ),
               ),
             ),
             const SizedBox(height: 16),
-            SizedBox(
-              width: double.infinity,
-              child: FilledButton.icon(
-                onPressed: onStart,
-                icon: const Icon(Icons.play_arrow),
-                label: const Text('Bắt đầu'),
-              ),
+            Row(
+              children: [
+                if (_step > 0)
+                  Expanded(
+                    child: OutlinedButton(
+                      onPressed: () => setState(() => _step -= 1),
+                      child: const Text('Quay lại'),
+                    ),
+                  ),
+                if (_step > 0) const SizedBox(width: 10),
+                Expanded(
+                  child: FilledButton.icon(
+                    onPressed: isLastStep
+                        ? widget.onStart
+                        : () => setState(() => _step += 1),
+                    icon: Icon(
+                      isLastStep ? Icons.play_arrow : Icons.arrow_forward,
+                    ),
+                    label: Text(isLastStep ? 'Bắt đầu quiz' : 'Tiếp tục'),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -241,43 +254,51 @@ class LessonIntroCard extends StatelessWidget {
   }
 }
 
-class _IntroStep extends StatelessWidget {
-  const _IntroStep({
-    required this.index,
-    required this.title,
-    required this.body,
-  });
+class _StepProgress extends StatelessWidget {
+  const _StepProgress({required this.currentStep, required this.totalSteps});
 
-  final int index;
+  final int currentStep;
+  final int totalSteps;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    return Row(
+      children: [
+        for (var index = 0; index < totalSteps; index++) ...[
+          Expanded(
+            child: Container(
+              height: 4,
+              decoration: BoxDecoration(
+                color: index <= currentStep
+                    ? colors.primary
+                    : colors.outlineVariant,
+                borderRadius: BorderRadius.circular(99),
+              ),
+            ),
+          ),
+          if (index != totalSteps - 1) const SizedBox(width: 6),
+        ],
+      ],
+    );
+  }
+}
+
+class _CurrentStepCopy extends StatelessWidget {
+  const _CurrentStepCopy({required this.title, required this.body});
+
   final String title;
   final String body;
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
-    return Padding(
-      padding: const EdgeInsets.only(top: 10),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CircleAvatar(
-            radius: 13,
-            backgroundColor: colors.primary,
-            foregroundColor: colors.onPrimary,
-            child: Text('$index'),
-          ),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(title, style: Theme.of(context).textTheme.labelLarge),
-                Text(body, style: Theme.of(context).textTheme.bodySmall),
-              ],
-            ),
-          ),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(title, style: Theme.of(context).textTheme.titleMedium),
+        const SizedBox(height: 4),
+        Text(body, style: Theme.of(context).textTheme.bodySmall),
+      ],
     );
   }
 }

@@ -11,10 +11,12 @@ class LessonDetailCard extends StatelessWidget {
     super.key,
     required this.session,
     required this.lessonContext,
+    required this.step,
   });
 
   final HskLearningSessionSeed session;
   final LessonContext? lessonContext;
+  final int step;
 
   @override
   Widget build(BuildContext context) {
@@ -35,47 +37,34 @@ class LessonDetailCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            _LessonHeader(title: _title, goal: _goal),
-            _LessonSection(
-              icon: Icons.forum_outlined,
-              title: '1. Hội thoại đầy đủ',
-              child: conversationItems.isEmpty
-                  ? _TokenWrap(values: _conversationTokens)
-                  : _ConversationPreview(items: conversationItems),
-            ),
-            _LessonSection(
-              icon: Icons.translate_outlined,
-              title: '2. Từ khóa cần nhớ',
-              child: vocab.isEmpty
-                  ? const Text('Từ vựng sẽ xuất hiện trong quiz.')
-                  : _VocabTokenWrap(items: vocab),
-            ),
-            _LessonSection(
-              icon: Icons.account_tree_outlined,
-              title: '3. Mẫu câu trọng tâm',
-              child: grammar.isEmpty
-                  ? const Text('Pattern được chọn từ câu luyện tập.')
-                  : _GrammarTokenWrap(values: grammar),
-            ),
+            if (step == 0)
+              _LessonSection(
+                icon: Icons.forum_outlined,
+                title: 'Hội thoại',
+                child: conversationItems.isEmpty
+                    ? _TokenWrap(values: _conversationTokens)
+                    : _ConversationPreview(items: conversationItems),
+              )
+            else if (step == 1)
+              _LessonSection(
+                icon: Icons.translate_outlined,
+                title: 'Từ khóa',
+                child: vocab.isEmpty
+                    ? const Text('Từ vựng sẽ xuất hiện trong quiz.')
+                    : _VocabTokenWrap(items: vocab),
+              )
+            else
+              _LessonSection(
+                icon: Icons.account_tree_outlined,
+                title: 'Mẫu câu',
+                child: grammar.isEmpty
+                    ? const Text('Pattern được chọn từ câu luyện tập.')
+                    : _GrammarTokenWrap(values: grammar),
+              ),
           ],
         ),
       ),
     );
-  }
-
-  String get _title {
-    if (lessonContext == null) return 'Today\'s lesson';
-    return '${lessonContext!.moduleId} · ${lessonContext!.lessonUnitId}';
-  }
-
-  String get _goal {
-    if (session.activeLevel <= 1) {
-      return 'Review foundation words and sentence patterns before moving on.';
-    }
-    if (session.activeLevel == 2) {
-      return 'Build HSK2 recognition, recall, pinyin, and cloze accuracy.';
-    }
-    return 'Practice unlocked HSK${session.activeLevel} content with controlled examples.';
   }
 
   List<String> get _conversationTokens {
@@ -151,37 +140,6 @@ class LessonDetailCard extends StatelessWidget {
     if (audioUrl == null) return 999;
     final match = RegExp(r'_L(\d+)\.mp3$').firstMatch(audioUrl);
     return int.tryParse(match?.group(1) ?? '') ?? 999;
-  }
-}
-
-class _LessonHeader extends StatelessWidget {
-  const _LessonHeader({required this.title, required this.goal});
-
-  final String title;
-  final String goal;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Icon(
-          Icons.route_outlined,
-          color: Theme.of(context).colorScheme.primary,
-        ),
-        const SizedBox(width: 10),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title, style: Theme.of(context).textTheme.titleMedium),
-              const SizedBox(height: 4),
-              Text(goal, style: Theme.of(context).textTheme.bodySmall),
-            ],
-          ),
-        ),
-      ],
-    );
   }
 }
 
