@@ -1,0 +1,854 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-04-27",
+  "scope": "Curated vi_short overrides for top-frequency HSK1-HSK3 vocab seed.",
+  "items": [
+    {
+      "id": "hsk1_我",
+      "hanzi": "我",
+      "level": 1,
+      "current_vi_short": "tôi",
+      "override_vi_short": "tôi"
+    },
+    {
+      "id": "hsk1_的",
+      "hanzi": "的",
+      "level": 1,
+      "current_vi_short": "của",
+      "override_vi_short": "của"
+    },
+    {
+      "id": "hsk1_了",
+      "hanzi": "了",
+      "level": 1,
+      "current_vi_short": "rồi",
+      "override_vi_short": "rồi"
+    },
+    {
+      "id": "hsk3_了",
+      "hanzi": "了",
+      "level": 3,
+      "current_vi_short": "rồi",
+      "override_vi_short": "rồi"
+    },
+    {
+      "id": "hsk1_很",
+      "hanzi": "很",
+      "level": 1,
+      "current_vi_short": "rất",
+      "override_vi_short": "rất"
+    },
+    {
+      "id": "hsk1_这",
+      "hanzi": "这",
+      "level": 1,
+      "current_vi_short": "này",
+      "override_vi_short": "này"
+    },
+    {
+      "id": "hsk1_他",
+      "hanzi": "他",
+      "level": 1,
+      "current_vi_short": "anh ấy",
+      "override_vi_short": "anh ấy"
+    },
+    {
+      "id": "hsk1_一",
+      "hanzi": "一",
+      "level": 1,
+      "current_vi_short": "một",
+      "override_vi_short": "một"
+    },
+    {
+      "id": "hsk1_你",
+      "hanzi": "你",
+      "level": 1,
+      "current_vi_short": "bạn",
+      "override_vi_short": "bạn"
+    },
+    {
+      "id": "hsk1_个",
+      "hanzi": "个",
+      "level": 1,
+      "current_vi_short": "cái",
+      "override_vi_short": "cái"
+    },
+    {
+      "id": "hsk1_是",
+      "hanzi": "是",
+      "level": 1,
+      "current_vi_short": "là",
+      "override_vi_short": "là"
+    },
+    {
+      "id": "hsk1_有",
+      "hanzi": "有",
+      "level": 1,
+      "current_vi_short": "có",
+      "override_vi_short": "có"
+    },
+    {
+      "id": "hsk2_有",
+      "hanzi": "有",
+      "level": 2,
+      "current_vi_short": "có",
+      "override_vi_short": "có"
+    },
+    {
+      "id": "hsk1_们",
+      "hanzi": "们",
+      "level": 1,
+      "current_vi_short": "số nhiều",
+      "override_vi_short": "số nhiều"
+    },
+    {
+      "id": "hsk1_在",
+      "hanzi": "在",
+      "level": 1,
+      "current_vi_short": "ở",
+      "override_vi_short": "ở"
+    },
+    {
+      "id": "hsk1_天",
+      "hanzi": "天",
+      "level": 1,
+      "current_vi_short": "ngày",
+      "override_vi_short": "ngày"
+    },
+    {
+      "id": "hsk1_好",
+      "hanzi": "好",
+      "level": 1,
+      "current_vi_short": "tốt",
+      "override_vi_short": "tốt"
+    },
+    {
+      "id": "hsk2_好",
+      "hanzi": "好",
+      "level": 2,
+      "current_vi_short": "tốt",
+      "override_vi_short": "tốt"
+    },
+    {
+      "id": "hsk1_我们",
+      "hanzi": "我们",
+      "level": 1,
+      "current_vi_short": "chúng tôi",
+      "override_vi_short": "chúng tôi"
+    },
+    {
+      "id": "hsk1_请",
+      "hanzi": "请",
+      "level": 1,
+      "current_vi_short": "xin mời",
+      "override_vi_short": "xin mời"
+    },
+    {
+      "id": "hsk1_要",
+      "hanzi": "要",
+      "level": 1,
+      "current_vi_short": "muốn",
+      "override_vi_short": "muốn"
+    },
+    {
+      "id": "hsk1_去",
+      "hanzi": "去",
+      "level": 1,
+      "current_vi_short": "đi",
+      "override_vi_short": "đi"
+    },
+    {
+      "id": "hsk1_不",
+      "hanzi": "不",
+      "level": 1,
+      "current_vi_short": "không",
+      "override_vi_short": "không"
+    },
+    {
+      "id": "hsk1_学",
+      "hanzi": "学",
+      "level": 1,
+      "current_vi_short": "học",
+      "override_vi_short": "học"
+    },
+    {
+      "id": "hsk1_上",
+      "hanzi": "上",
+      "level": 1,
+      "current_vi_short": "lên",
+      "override_vi_short": "lên"
+    },
+    {
+      "id": "hsk1_家",
+      "hanzi": "家",
+      "level": 1,
+      "current_vi_short": "nhà",
+      "override_vi_short": "nhà"
+    },
+    {
+      "id": "hsk2_家",
+      "hanzi": "家",
+      "level": 2,
+      "current_vi_short": "dùng trong gia hỏa",
+      "override_vi_short": "dùng trong gia hỏa"
+    },
+    {
+      "id": "hsk1_来",
+      "hanzi": "来",
+      "level": 1,
+      "current_vi_short": "đến",
+      "override_vi_short": "đến"
+    },
+    {
+      "id": "hsk1_下",
+      "hanzi": "下",
+      "level": 1,
+      "current_vi_short": "dưới",
+      "override_vi_short": "dưới"
+    },
+    {
+      "id": "hsk2_下",
+      "hanzi": "下",
+      "level": 2,
+      "current_vi_short": "lần",
+      "override_vi_short": "lần"
+    },
+    {
+      "id": "hsk1_人",
+      "hanzi": "人",
+      "level": 1,
+      "current_vi_short": "người",
+      "override_vi_short": "người"
+    },
+    {
+      "id": "hsk1_多",
+      "hanzi": "多",
+      "level": 1,
+      "current_vi_short": "nhiều",
+      "override_vi_short": "nhiều"
+    },
+    {
+      "id": "hsk2_多",
+      "hanzi": "多",
+      "level": 2,
+      "current_vi_short": "nhiều",
+      "override_vi_short": "nhiều"
+    },
+    {
+      "id": "hsk1_喜欢",
+      "hanzi": "喜欢",
+      "level": 1,
+      "current_vi_short": "thích",
+      "override_vi_short": "thích"
+    },
+    {
+      "id": "hsk1_会",
+      "hanzi": "会",
+      "level": 1,
+      "current_vi_short": "biết",
+      "override_vi_short": "biết"
+    },
+    {
+      "id": "hsk2_会",
+      "hanzi": "会",
+      "level": 2,
+      "current_vi_short": "biết",
+      "override_vi_short": "biết"
+    },
+    {
+      "id": "hsk1_点",
+      "hanzi": "点",
+      "level": 1,
+      "current_vi_short": "chạm nhẹ",
+      "override_vi_short": "chạm nhẹ"
+    },
+    {
+      "id": "hsk2_生",
+      "hanzi": "生",
+      "level": 2,
+      "current_vi_short": "sinh ra",
+      "override_vi_short": "sinh ra"
+    },
+    {
+      "id": "hsk3_生",
+      "hanzi": "生",
+      "level": 3,
+      "current_vi_short": "sinh ra",
+      "override_vi_short": "sinh ra"
+    },
+    {
+      "id": "hsk1_大",
+      "hanzi": "大",
+      "level": 1,
+      "current_vi_short": "lớn",
+      "override_vi_short": "lớn"
+    },
+    {
+      "id": "hsk1_都",
+      "hanzi": "都",
+      "level": 1,
+      "current_vi_short": "đều",
+      "override_vi_short": "đều"
+    },
+    {
+      "id": "hsk1_子",
+      "hanzi": "子",
+      "level": 1,
+      "current_vi_short": "con trai",
+      "override_vi_short": "con trai"
+    },
+    {
+      "id": "hsk1_中",
+      "hanzi": "中",
+      "level": 1,
+      "current_vi_short": "Trung Quốc",
+      "override_vi_short": "Trung Quốc"
+    },
+    {
+      "id": "hsk1_书",
+      "hanzi": "书",
+      "level": 1,
+      "current_vi_short": "sách",
+      "override_vi_short": "sách"
+    },
+    {
+      "id": "hsk1_看",
+      "hanzi": "看",
+      "level": 1,
+      "current_vi_short": "xem",
+      "override_vi_short": "xem"
+    },
+    {
+      "id": "hsk1_想",
+      "hanzi": "想",
+      "level": 1,
+      "current_vi_short": "nghĩ",
+      "override_vi_short": "nghĩ"
+    },
+    {
+      "id": "hsk1_吃",
+      "hanzi": "吃",
+      "level": 1,
+      "current_vi_short": "ăn",
+      "override_vi_short": "ăn"
+    },
+    {
+      "id": "hsk1_里",
+      "hanzi": "里",
+      "level": 1,
+      "current_vi_short": "trong",
+      "override_vi_short": "trong"
+    },
+    {
+      "id": "hsk1_到",
+      "hanzi": "到",
+      "level": 1,
+      "current_vi_short": "đến",
+      "override_vi_short": "đến"
+    },
+    {
+      "id": "hsk1_今天",
+      "hanzi": "今天",
+      "level": 1,
+      "current_vi_short": "hôm nay",
+      "override_vi_short": "hôm nay"
+    },
+    {
+      "id": "hsk3_时",
+      "hanzi": "时",
+      "level": 3,
+      "current_vi_short": "giờ",
+      "override_vi_short": "giờ"
+    },
+    {
+      "id": "hsk1_对",
+      "hanzi": "对",
+      "level": 1,
+      "current_vi_short": "đối với",
+      "override_vi_short": "đối với"
+    },
+    {
+      "id": "hsk2_对",
+      "hanzi": "对",
+      "level": 2,
+      "current_vi_short": "đối với",
+      "override_vi_short": "đối với"
+    },
+    {
+      "id": "hsk1_什么",
+      "hanzi": "什么",
+      "level": 1,
+      "current_vi_short": "gì",
+      "override_vi_short": "gì"
+    },
+    {
+      "id": "hsk1_说",
+      "hanzi": "说",
+      "level": 1,
+      "current_vi_short": "thuyết phục",
+      "override_vi_short": "thuyết phục"
+    },
+    {
+      "id": "hsk2_件",
+      "hanzi": "件",
+      "level": 2,
+      "current_vi_short": "cái",
+      "override_vi_short": "cái"
+    },
+    {
+      "id": "hsk2_得",
+      "hanzi": "得",
+      "level": 2,
+      "current_vi_short": "đạt được",
+      "override_vi_short": "đạt được"
+    },
+    {
+      "id": "hsk1_问",
+      "hanzi": "问",
+      "level": 1,
+      "current_vi_short": "hỏi",
+      "override_vi_short": "hỏi"
+    },
+    {
+      "id": "hsk1_她",
+      "hanzi": "她",
+      "level": 1,
+      "current_vi_short": "cô ấy",
+      "override_vi_short": "cô ấy"
+    },
+    {
+      "id": "hsk1_国",
+      "hanzi": "国",
+      "level": 1,
+      "current_vi_short": "nước",
+      "override_vi_short": "nước"
+    },
+    {
+      "id": "hsk1_没",
+      "hanzi": "没",
+      "level": 1,
+      "current_vi_short": "chưa",
+      "override_vi_short": "chưa"
+    },
+    {
+      "id": "hsk1_就",
+      "hanzi": "就",
+      "level": 1,
+      "current_vi_short": "thì",
+      "override_vi_short": "thì"
+    },
+    {
+      "id": "hsk2_就",
+      "hanzi": "就",
+      "level": 2,
+      "current_vi_short": "thì",
+      "override_vi_short": "thì"
+    },
+    {
+      "id": "hsk1_新",
+      "hanzi": "新",
+      "level": 1,
+      "current_vi_short": "mới",
+      "override_vi_short": "mới"
+    },
+    {
+      "id": "hsk2_新",
+      "hanzi": "新",
+      "level": 2,
+      "current_vi_short": "mới",
+      "override_vi_short": "mới"
+    },
+    {
+      "id": "hsk1_开",
+      "hanzi": "开",
+      "level": 1,
+      "current_vi_short": "mở",
+      "override_vi_short": "mở"
+    },
+    {
+      "id": "hsk2_成",
+      "hanzi": "成",
+      "level": 2,
+      "current_vi_short": "tên viết tắt Thành Đô",
+      "override_vi_short": "tên viết tắt Thành Đô"
+    },
+    {
+      "id": "hsk1_事",
+      "hanzi": "事",
+      "level": 1,
+      "current_vi_short": "việc",
+      "override_vi_short": "việc"
+    },
+    {
+      "id": "hsk1_吗",
+      "hanzi": "吗",
+      "level": 1,
+      "current_vi_short": "không",
+      "override_vi_short": "không"
+    },
+    {
+      "id": "hsk1_老",
+      "hanzi": "老",
+      "level": 1,
+      "current_vi_short": "tiền tố chỉ tuổi",
+      "override_vi_short": "tiền tố chỉ tuổi"
+    },
+    {
+      "id": "hsk1_起",
+      "hanzi": "起",
+      "level": 1,
+      "current_vi_short": "đứng dậy",
+      "override_vi_short": "đứng dậy"
+    },
+    {
+      "id": "hsk2_老",
+      "hanzi": "老",
+      "level": 2,
+      "current_vi_short": "già",
+      "override_vi_short": "già"
+    },
+    {
+      "id": "hsk1_正",
+      "hanzi": "正",
+      "level": 1,
+      "current_vi_short": "tháng giêng âm lịch",
+      "override_vi_short": "tháng giêng âm lịch"
+    },
+    {
+      "id": "hsk3_正",
+      "hanzi": "正",
+      "level": 3,
+      "current_vi_short": "tháng giêng",
+      "override_vi_short": "tháng giêng"
+    },
+    {
+      "id": "hsk1_小",
+      "hanzi": "小",
+      "level": 1,
+      "current_vi_short": "nhỏ",
+      "override_vi_short": "nhỏ"
+    },
+    {
+      "id": "hsk2_小",
+      "hanzi": "小",
+      "level": 2,
+      "current_vi_short": "nhỏ",
+      "override_vi_short": "nhỏ"
+    },
+    {
+      "id": "hsk2_每",
+      "hanzi": "每",
+      "level": 2,
+      "current_vi_short": "mỗi",
+      "override_vi_short": "mỗi"
+    },
+    {
+      "id": "hsk3_每",
+      "hanzi": "每",
+      "level": 3,
+      "current_vi_short": "mỗi",
+      "override_vi_short": "mỗi"
+    },
+    {
+      "id": "hsk1_电",
+      "hanzi": "电",
+      "level": 1,
+      "current_vi_short": "sét",
+      "override_vi_short": "sét"
+    },
+    {
+      "id": "hsk1_间",
+      "hanzi": "间",
+      "level": 1,
+      "current_vi_short": "giữa",
+      "override_vi_short": "giữa"
+    },
+    {
+      "id": "hsk2_题",
+      "hanzi": "题",
+      "level": 2,
+      "current_vi_short": "đề bài",
+      "override_vi_short": "đề bài"
+    },
+    {
+      "id": "hsk1_年",
+      "hanzi": "年",
+      "level": 1,
+      "current_vi_short": "năm",
+      "override_vi_short": "năm"
+    },
+    {
+      "id": "hsk1_吧",
+      "hanzi": "吧",
+      "level": 1,
+      "current_vi_short": "nhé",
+      "override_vi_short": "nhé"
+    },
+    {
+      "id": "hsk1_饭",
+      "hanzi": "饭",
+      "level": 1,
+      "current_vi_short": "cơm",
+      "override_vi_short": "cơm"
+    },
+    {
+      "id": "hsk1_高",
+      "hanzi": "高",
+      "level": 1,
+      "current_vi_short": "cao",
+      "override_vi_short": "cao"
+    },
+    {
+      "id": "hsk2_把",
+      "hanzi": "把",
+      "level": 2,
+      "current_vi_short": "đem",
+      "override_vi_short": "đem"
+    },
+    {
+      "id": "hsk3_把",
+      "hanzi": "把",
+      "level": 3,
+      "current_vi_short": "đem",
+      "override_vi_short": "đem"
+    },
+    {
+      "id": "hsk1_行",
+      "hanzi": "行",
+      "level": 1,
+      "current_vi_short": "xếp hàng",
+      "override_vi_short": "xếp hàng"
+    },
+    {
+      "id": "hsk1_还",
+      "hanzi": "还",
+      "level": 1,
+      "current_vi_short": "vẫn",
+      "override_vi_short": "vẫn"
+    },
+    {
+      "id": "hsk3_行",
+      "hanzi": "行",
+      "level": 3,
+      "current_vi_short": "hàng",
+      "override_vi_short": "hàng"
+    },
+    {
+      "id": "hsk1_工作",
+      "hanzi": "工作",
+      "level": 1,
+      "current_vi_short": "làm việc",
+      "override_vi_short": "làm việc"
+    },
+    {
+      "id": "hsk1_常",
+      "hanzi": "常",
+      "level": 1,
+      "current_vi_short": "thường",
+      "override_vi_short": "thường"
+    },
+    {
+      "id": "hsk1_快",
+      "hanzi": "快",
+      "level": 1,
+      "current_vi_short": "nhanh",
+      "override_vi_short": "nhanh"
+    },
+    {
+      "id": "hsk1_车",
+      "hanzi": "车",
+      "level": 1,
+      "current_vi_short": "xe",
+      "override_vi_short": "xe"
+    },
+    {
+      "id": "hsk1_过",
+      "hanzi": "过",
+      "level": 1,
+      "current_vi_short": "qua",
+      "override_vi_short": "qua"
+    },
+    {
+      "id": "hsk2_过",
+      "hanzi": "过",
+      "level": 2,
+      "current_vi_short": "qua",
+      "override_vi_short": "qua"
+    },
+    {
+      "id": "hsk1_做",
+      "hanzi": "做",
+      "level": 1,
+      "current_vi_short": "làm",
+      "override_vi_short": "làm"
+    },
+    {
+      "id": "hsk1_正在",
+      "hanzi": "正在",
+      "level": 1,
+      "current_vi_short": "đang",
+      "override_vi_short": "đang"
+    },
+    {
+      "id": "hsk2_正在",
+      "hanzi": "正在",
+      "level": 2,
+      "current_vi_short": "đang",
+      "override_vi_short": "đang"
+    },
+    {
+      "id": "hsk1_出",
+      "hanzi": "出",
+      "level": 1,
+      "current_vi_short": "ra",
+      "override_vi_short": "ra"
+    },
+    {
+      "id": "hsk1_学习",
+      "hanzi": "学习",
+      "level": 1,
+      "current_vi_short": "học",
+      "override_vi_short": "học"
+    },
+    {
+      "id": "hsk1_本",
+      "hanzi": "本",
+      "level": 1,
+      "current_vi_short": "gốc",
+      "override_vi_short": "gốc"
+    },
+    {
+      "id": "hsk1_给",
+      "hanzi": "给",
+      "level": 1,
+      "current_vi_short": "cho",
+      "override_vi_short": "cho"
+    },
+    {
+      "id": "hsk2_气",
+      "hanzi": "气",
+      "level": 2,
+      "current_vi_short": "khí",
+      "override_vi_short": "khí"
+    },
+    {
+      "id": "hsk2_需要",
+      "hanzi": "需要",
+      "level": 2,
+      "current_vi_short": "cần",
+      "override_vi_short": "cần"
+    },
+    {
+      "id": "hsk3_需要",
+      "hanzi": "需要",
+      "level": 3,
+      "current_vi_short": "cần",
+      "override_vi_short": "cần"
+    },
+    {
+      "id": "hsk2_发",
+      "hanzi": "发",
+      "level": 2,
+      "current_vi_short": "gửi đi",
+      "override_vi_short": "gửi đi"
+    },
+    {
+      "id": "hsk2_问题",
+      "hanzi": "问题",
+      "level": 2,
+      "current_vi_short": "vấn đề",
+      "override_vi_short": "vấn đề"
+    },
+    {
+      "id": "hsk1_能",
+      "hanzi": "能",
+      "level": 1,
+      "current_vi_short": "có thể",
+      "override_vi_short": "có thể"
+    },
+    {
+      "id": "hsk2_为",
+      "hanzi": "为",
+      "level": 2,
+      "current_vi_short": "vì",
+      "override_vi_short": "vì"
+    },
+    {
+      "id": "hsk3_为",
+      "hanzi": "为",
+      "level": 3,
+      "current_vi_short": "vì",
+      "override_vi_short": "vì"
+    },
+    {
+      "id": "hsk1_三",
+      "hanzi": "三",
+      "level": 1,
+      "current_vi_short": "ba",
+      "override_vi_short": "ba"
+    },
+    {
+      "id": "hsk1_买",
+      "hanzi": "买",
+      "level": 1,
+      "current_vi_short": "mua",
+      "override_vi_short": "mua"
+    },
+    {
+      "id": "hsk1_早",
+      "hanzi": "早",
+      "level": 1,
+      "current_vi_short": "sớm",
+      "override_vi_short": "sớm"
+    },
+    {
+      "id": "hsk1_老师",
+      "hanzi": "老师",
+      "level": 1,
+      "current_vi_short": "thầy giáo",
+      "override_vi_short": "thầy giáo"
+    },
+    {
+      "id": "hsk1_那",
+      "hanzi": "那",
+      "level": 1,
+      "current_vi_short": "kia",
+      "override_vi_short": "kia"
+    },
+    {
+      "id": "hsk2_名",
+      "hanzi": "名",
+      "level": 2,
+      "current_vi_short": "tên",
+      "override_vi_short": "tên"
+    },
+    {
+      "id": "hsk2_那",
+      "hanzi": "那",
+      "level": 2,
+      "current_vi_short": "đó",
+      "override_vi_short": "đó"
+    },
+    {
+      "id": "hsk1_明天",
+      "hanzi": "明天",
+      "level": 1,
+      "current_vi_short": "ngày mai",
+      "override_vi_short": "ngày mai"
+    },
+    {
+      "id": "hsk1_十",
+      "hanzi": "十",
+      "level": 1,
+      "current_vi_short": "mười",
+      "override_vi_short": "mười"
+    },
+    {
+      "id": "hsk2_比如",
+      "hanzi": "比如",
+      "level": 2,
+      "current_vi_short": "",
+      "override_vi_short": "ví dụ"
+    }
+  ]
+}

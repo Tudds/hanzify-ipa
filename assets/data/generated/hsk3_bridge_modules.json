@@ -1,0 +1,430 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-04-27",
+  "scope": "Temporary HSK3 bridge content until more HSK3 conversations are curated.",
+  "modules": [
+    {
+      "id": "hsk3_bridge_01",
+      "level": 3,
+      "type": "bridge_module",
+      "title": "HSK3 bridge 1",
+      "sourceConversationIds": [
+        "conv_shopping_02"
+      ],
+      "grammarIds": [
+        "g_ba",
+        "g_bei",
+        "g_suiran_danshi",
+        "g_zhiyou_cai"
+      ],
+      "exampleSentences": [
+        {
+          "grammarId": "g_ba",
+          "zh": "请把门关上。",
+          "pinyin": "Qǐng bǎ mén guānshang.",
+          "vi": "Xin hãy đóng cửa lại."
+        },
+        {
+          "grammarId": "g_ba",
+          "zh": "我把衣服洗干净了。",
+          "pinyin": "Wǒ bǎ yīfu xǐ gānjìng le.",
+          "vi": "Tôi đã giặt sạch quần áo rồi."
+        },
+        {
+          "grammarId": "g_bei",
+          "zh": "我的自行车被偷了。",
+          "pinyin": "Wǒ de zìxíngchē bèi tōu le.",
+          "vi": "Xe đạp của tôi bị trộm rồi."
+        },
+        {
+          "grammarId": "g_bei",
+          "zh": "他被评为优秀学生。",
+          "pinyin": "Tā bèi píngwéi yōuxiù xuéshēng.",
+          "vi": "Anh ấy được đánh giá là học sinh xuất sắc."
+        },
+        {
+          "grammarId": "g_suiran_danshi",
+          "zh": "虽然下雨，但是我还是要去。",
+          "pinyin": "Suīrán xiàyǔ, dànshì wǒ háishì yào qù.",
+          "vi": "Mặc dù trời mưa, nhưng tôi vẫn phải đi."
+        },
+        {
+          "grammarId": "g_suiran_danshi",
+          "zh": "虽然他很累，但是他没有休息。",
+          "pinyin": "Suīrán tā hěn lèi, dànshì tā méiyǒu xiūxi.",
+          "vi": "Mặc dù anh ấy rất mệt, nhưng anh ấy không nghỉ ngơi."
+        },
+        {
+          "grammarId": "g_zhiyou_cai",
+          "zh": "只有努力学习，才能取得好成绩。",
+          "pinyin": "Zhǐyǒu nǔlì xuéxí, cái néng qǔdé hǎo chéngjì.",
+          "vi": "Chỉ có học tập chăm chỉ, mới có thể đạt kết quả tốt."
+        },
+        {
+          "grammarId": "g_zhiyou_cai",
+          "zh": "只有你亲自去，才能解决这个问题。",
+          "pinyin": "Zhǐyǒu nǐ qīnzì qù, cái néng jiějué zhège wèntí.",
+          "vi": "Chỉ có bạn tự đi, mới có thể giải quyết vấn đề này."
+        }
+      ],
+      "note": "Bridge module dùng HSK2 conversation làm context và HSK3 grammar examples làm câu validated."
+    },
+    {
+      "id": "hsk3_bridge_02",
+      "level": 3,
+      "type": "bridge_module",
+      "title": "HSK3 bridge 2",
+      "sourceConversationIds": [
+        "conv_restaurant_02"
+      ],
+      "grammarIds": [
+        "g_zhiyao_jiu",
+        "g_buguan",
+        "g_chule_dou",
+        "g_budan_erqie"
+      ],
+      "exampleSentences": [
+        {
+          "grammarId": "g_zhiyao_jiu",
+          "zh": "只要你来，我就很高兴。",
+          "pinyin": "Zhǐyào nǐ lái, wǒ jiù hěn gāoxìng.",
+          "vi": "Chỉ cần bạn đến, tôi đã rất vui rồi."
+        },
+        {
+          "grammarId": "g_zhiyao_jiu",
+          "zh": "只要多练习，就能学好汉语。",
+          "pinyin": "Zhǐyào duō liànxí, jiù néng xué hǎo Hànyǔ.",
+          "vi": "Chỉ cần luyện tập nhiều, thì có thể học tốt tiếng Trung."
+        },
+        {
+          "grammarId": "g_buguan",
+          "zh": "不管下雨还是晴天，我都去跑步。",
+          "pinyin": "Bùguǎn xiàyǔ háishì qíngtiān, wǒ dōu qù pǎobù.",
+          "vi": "Bất kể mưa hay nắng, tôi đều đi chạy bộ."
+        },
+        {
+          "grammarId": "g_buguan",
+          "zh": "不管谁来，我都不见。",
+          "pinyin": "Bùguǎn shéi lái, wǒ dōu bú jiàn.",
+          "vi": "Bất cứ ai đến, tôi đều không gặp."
+        },
+        {
+          "grammarId": "g_chule_dou",
+          "zh": "除了小明，大家都来了。",
+          "pinyin": "Chúle Xiǎo Míng, dàjiā dōu lái le.",
+          "vi": "Ngoài Tiểu Minh ra, mọi người đều đến rồi."
+        },
+        {
+          "grammarId": "g_chule_dou",
+          "zh": "除了英语，他还会法语。",
+          "pinyin": "Chúle Yīngyǔ, tā hái huì Fǎyǔ.",
+          "vi": "Ngoài tiếng Anh, anh ấy còn biết tiếng Pháp."
+        },
+        {
+          "grammarId": "g_budan_erqie",
+          "zh": "他不但聪明，而且很努力。",
+          "pinyin": "Tā búdàn cōngming, érqiě hěn nǔlì.",
+          "vi": "Anh ấy không những thông minh, mà còn rất chăm chỉ."
+        },
+        {
+          "grammarId": "g_budan_erqie",
+          "zh": "这道菜不但好看，而且很好吃。",
+          "pinyin": "Zhè dào cài búdàn hǎokàn, érqiě hěn hǎochī.",
+          "vi": "Món ăn này không những đẹp, mà còn rất ngon."
+        }
+      ],
+      "note": "Bridge module dùng HSK2 conversation làm context và HSK3 grammar examples làm câu validated."
+    },
+    {
+      "id": "hsk3_bridge_03",
+      "level": 3,
+      "type": "bridge_module",
+      "title": "HSK3 bridge 3",
+      "sourceConversationIds": [
+        "conv_transport_02"
+      ],
+      "grammarIds": [
+        "g_le2",
+        "g_de_potential",
+        "g_la",
+        "g_guo_le"
+      ],
+      "exampleSentences": [
+        {
+          "grammarId": "g_le2",
+          "zh": "下雨了。",
+          "pinyin": "Xiàyǔ le.",
+          "vi": "Trời mưa rồi (trước đó chưa mưa)."
+        },
+        {
+          "grammarId": "g_le2",
+          "zh": "他会说汉语了。",
+          "pinyin": "Tā huì shuō Hànyǔ le.",
+          "vi": "Anh ấy đã biết nói tiếng Trung rồi (trước đó không biết)."
+        },
+        {
+          "grammarId": "g_de_potential",
+          "zh": "这么多菜，我一个人吃不了。",
+          "pinyin": "Zhème duō cài, wǒ yígerén chī bùliǎo.",
+          "vi": "Nhiều món thế này, một mình tôi không ăn hết."
+        },
+        {
+          "grammarId": "g_de_potential",
+          "zh": "明天你来得了吗？",
+          "pinyin": "Míngtiān nǐ lái de liǎo ma?",
+          "vi": "Ngày mai bạn đến được không?"
+        },
+        {
+          "grammarId": "g_la",
+          "zh": "太好啦！我们终于成功了！",
+          "pinyin": "Tài hǎo la! Wǒmen zhōngyú chénggōng le!",
+          "vi": "Tuyệt quá rồi! Chúng ta cuối cùng đã thành công!"
+        },
+        {
+          "grammarId": "g_la",
+          "zh": "时间到啦，快走吧！",
+          "pinyin": "Shíjiān dào la, kuài zǒu ba!",
+          "vi": "Đến giờ rồi, mau đi thôi!"
+        },
+        {
+          "grammarId": "g_guo_le",
+          "zh": "我去过北京了。",
+          "pinyin": "Wǒ qù guo Běijīng le.",
+          "vi": "Tôi đã từng đến Bắc Kinh rồi."
+        },
+        {
+          "grammarId": "g_guo_le",
+          "zh": "这本书我看过了。",
+          "pinyin": "Zhè běn shū wǒ kàn guo le.",
+          "vi": "Cuốn sách này tôi đã đọc qua rồi."
+        }
+      ],
+      "note": "Bridge module dùng HSK2 conversation làm context và HSK3 grammar examples làm câu validated."
+    },
+    {
+      "id": "hsk3_bridge_04",
+      "level": 3,
+      "type": "bridge_module",
+      "title": "HSK3 bridge 4",
+      "sourceConversationIds": [
+        "conv_daily_02"
+      ],
+      "grammarIds": [
+        "g_ba_suggest",
+        "g_yi_mian",
+        "g_zai_shuo",
+        "g_yaobushi"
+      ],
+      "exampleSentences": [
+        {
+          "grammarId": "g_ba_suggest",
+          "zh": "我们走吧！时间不早了。",
+          "pinyin": "Wǒmen zǒu ba! Shíjiān bù zǎo le.",
+          "vi": "Chúng ta đi thôi! Đã không còn sớm nữa rồi."
+        },
+        {
+          "grammarId": "g_ba_suggest",
+          "zh": "你就休息吧，别太累了。",
+          "pinyin": "Nǐ jiù xiūxi ba, bié tài lèi le.",
+          "vi": "Bạn cứ nghỉ ngơi đi, đừng quá mệt."
+        },
+        {
+          "grammarId": "g_yi_mian",
+          "zh": "他一边吃饭一边看电视。",
+          "pinyin": "Tā yìbiān chīfàn yìbiān kàn diànshì.",
+          "vi": "Anh ấy vừa ăn cơm vừa xem tivi."
+        },
+        {
+          "grammarId": "g_yi_mian",
+          "zh": "她一边唱歌一边跳舞。",
+          "pinyin": "Tā yìbiān chànggē yìbiān tiàowǔ.",
+          "vi": "Cô ấy vừa hát vừa múa."
+        },
+        {
+          "grammarId": "g_zai_shuo",
+          "zh": "今天太晚了，再说外面还下雨，明天再去吧。",
+          "pinyin": "Jīntiān tài wǎn le, zàishuō wàimiàn hái xiàyǔ, míngtiān zài qù ba.",
+          "vi": "Hôm nay quá muộn, hơn nữa ngoài trời còn mưa, ngày mai đi nữa vậy."
+        },
+        {
+          "grammarId": "g_zai_shuo",
+          "zh": "这个工作不适合我，再说工资也不高。",
+          "pinyin": "Zhège gōngzuò bù shìhé wǒ, zàishuō gōngzī yě bù gāo.",
+          "vi": "Công việc này không phù hợp với tôi, hơn nữa lương cũng không cao."
+        },
+        {
+          "grammarId": "g_yaobushi",
+          "zh": "要不是下雨，我们就去爬山了。",
+          "pinyin": "Yàobúshì xiàyǔ, wǒmen jiù qù páshān le.",
+          "vi": "Nếu không phải vì trời mưa, chúng tôi đã đi leo núi rồi."
+        },
+        {
+          "grammarId": "g_yaobushi",
+          "zh": "要不是你帮我，我就迟到了。",
+          "pinyin": "Yàobúshì nǐ bāng wǒ, wǒ jiù chídào le.",
+          "vi": "Nếu không phải bạn giúp tôi, tôi đã đến muộn rồi."
+        }
+      ],
+      "note": "Bridge module dùng HSK2 conversation làm context và HSK3 grammar examples làm câu validated."
+    },
+    {
+      "id": "hsk3_bridge_05",
+      "level": 3,
+      "type": "bridge_module",
+      "title": "HSK3 bridge 5",
+      "sourceConversationIds": [
+        "conv_school_01"
+      ],
+      "grammarIds": [
+        "g_jishi_ye",
+        "g_bilai",
+        "g_result_complement",
+        "g_direction_complement"
+      ],
+      "exampleSentences": [
+        {
+          "grammarId": "g_jishi_ye",
+          "zh": "即使下雨，我也要去。",
+          "pinyin": "Jíshǐ xiàyǔ, wǒ yě yào qù.",
+          "vi": "Ngay cả trời mưa, tôi vẫn phải đi."
+        },
+        {
+          "grammarId": "g_jishi_ye",
+          "zh": "即使很困难，我们也不放弃。",
+          "pinyin": "Jíshǐ hěn kùnnán, wǒmen yě bù fàngqì.",
+          "vi": "Dù rất khó khăn, chúng tôi cũng không bỏ cuộc."
+        },
+        {
+          "grammarId": "g_bilai",
+          "zh": "跟北京比起来，上海的冬天不太冷。",
+          "pinyin": "Gēn Běijīng bǐ qǐlái, Shànghǎi de dōngtiān bú tài lěng.",
+          "vi": "So với Bắc Kinh, mùa đông ở Thượng Hải không quá lạnh."
+        },
+        {
+          "grammarId": "g_bilai",
+          "zh": "跟去年比起来，今年进步很大。",
+          "pinyin": "Gēn qùnián bǐ qǐlái, jīnnián jìnbù hěn dà.",
+          "vi": "So với năm ngoái, năm nay tiến bộ rất nhiều."
+        },
+        {
+          "grammarId": "g_result_complement",
+          "zh": "我做完了作业。",
+          "pinyin": "Wǒ zuò wán le zuòyè.",
+          "vi": "Tôi đã làm xong bài tập."
+        },
+        {
+          "grammarId": "g_result_complement",
+          "zh": "我找到了钥匙。",
+          "pinyin": "Wǒ zhǎo dào le yàoshi.",
+          "vi": "Tôi đã tìm thấy chìa khóa."
+        },
+        {
+          "grammarId": "g_direction_complement",
+          "zh": "请走进来。",
+          "pinyin": "Qǐng zǒu jìnlái.",
+          "vi": "Xin hãy đi vào đây."
+        },
+        {
+          "grammarId": "g_direction_complement",
+          "zh": "他跑出去了。",
+          "pinyin": "Tā pǎo chūqù le.",
+          "vi": "Anh ấy đã chạy ra ngoài đó rồi."
+        }
+      ],
+      "note": "Bridge module dùng HSK2 conversation làm context và HSK3 grammar examples làm câu validated."
+    },
+    {
+      "id": "hsk3_bridge_06",
+      "level": 3,
+      "type": "bridge_module",
+      "title": "HSK3 bridge 6",
+      "sourceConversationIds": [
+        "conv_travel_01"
+      ],
+      "grammarIds": [
+        "g_de_bu_bu",
+        "g_mei_guanxi",
+        "g_yinggai",
+        "g_bixu"
+      ],
+      "exampleSentences": [
+        {
+          "grammarId": "g_de_bu_bu",
+          "zh": "他做得不错。",
+          "pinyin": "Tā zuò de búcuò.",
+          "vi": "Anh ấy làm không tệ (làm khá tốt)."
+        },
+        {
+          "grammarId": "g_de_bu_bu",
+          "zh": "这个东西吃不得。",
+          "pinyin": "Zhège dōngxi chī bùdé.",
+          "vi": "Cái này không thể ăn được."
+        },
+        {
+          "grammarId": "g_mei_guanxi",
+          "zh": "——对不起，我迟到了。——没关系。",
+          "pinyin": "——Duìbuqǐ, wǒ chídào le. ——Méi guānxi.",
+          "vi": "——Xin lỗi, tôi đến muộn rồi. ——Không sao."
+        },
+        {
+          "grammarId": "g_mei_guanxi",
+          "zh": "没关系，下次注意就好了。",
+          "pinyin": "Méi guānxi, xià cì zhùyì jiù hǎo le.",
+          "vi": "Không sao, lần sau chú ý là được."
+        },
+        {
+          "grammarId": "g_yinggai",
+          "zh": "你应该早点儿休息。",
+          "pinyin": "Nǐ yīnggāi zǎo diǎnr xiūxi.",
+          "vi": "Bạn nên nghỉ ngơi sớm một chút."
+        },
+        {
+          "grammarId": "g_yinggai",
+          "zh": "我们不应该迟到。",
+          "pinyin": "Wǒmen bù yīnggāi chídào.",
+          "vi": "Chúng ta không nên đến muộn."
+        },
+        {
+          "grammarId": "g_bixu",
+          "zh": "你必须按时完成作业。",
+          "pinyin": "Nǐ bìxū ànshí wánchéng zuòyè.",
+          "vi": "Bạn phải hoàn thành bài tập đúng giờ."
+        },
+        {
+          "grammarId": "g_bixu",
+          "zh": "大家必须遵守规则。",
+          "pinyin": "Dàjiā bìxū zūnshǒu guīzé.",
+          "vi": "Mọi người phải tuân thủ quy tắc."
+        }
+      ],
+      "note": "Bridge module dùng HSK2 conversation làm context và HSK3 grammar examples làm câu validated."
+    },
+    {
+      "id": "hsk3_bridge_07",
+      "level": 3,
+      "type": "bridge_module",
+      "title": "HSK3 bridge 7",
+      "sourceConversationIds": [
+        "conv_phone_01"
+      ],
+      "grammarIds": [
+        "g_say_transfer"
+      ],
+      "exampleSentences": [
+        {
+          "grammarId": "g_say_transfer",
+          "zh": "他说他今天有事，不能来。",
+          "pinyin": "Tā shuō tā jīntiān yǒu shì, bù néng lái.",
+          "vi": "Anh ấy nói anh ấy hôm nay có việc, không đến được."
+        },
+        {
+          "grammarId": "g_say_transfer",
+          "zh": "老师告诉我们明天考试。",
+          "pinyin": "Lǎoshī gàosù wǒmen míngtiān kǎoshì.",
+          "vi": "Giáo viên nói với chúng tôi ngày mai có bài kiểm tra."
+        }
+      ],
+      "note": "Bridge module dùng HSK2 conversation làm context và HSK3 grammar examples làm câu validated."
+    }
+  ]
+}

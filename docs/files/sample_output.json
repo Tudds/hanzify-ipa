@@ -1,0 +1,2125 @@
+{
+  "description": "Sample output từ Generator cho 12 từ HSK1-4",
+  "user_level": 4,
+  "count_per_word": 8,
+  "samples": [
+    {
+      "target": "考虑",
+      "pos": "v",
+      "note": "HSK4 abstract verb",
+      "sentences": [
+        {
+          "zh": "我喜欢考虑问题。",
+          "vi": "Tôi thích suy nghĩ vấn đề.",
+          "frame_id": "F-H1-08",
+          "frame_grammar": "verb_chain_喜欢",
+          "time": "habitual",
+          "mood": "preference",
+          "scenario": "study",
+          "collocation": {
+            "head": "考虑",
+            "partner": "问题",
+            "partner_vi": "vấn đề, câu hỏi",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 1
+        },
+        {
+          "zh": "他也考虑情况。",
+          "vi": "Anh ấy cũng suy nghĩ tình hình.",
+          "frame_id": "F-H2-10",
+          "frame_grammar": "adverb_也",
+          "time": "habitual",
+          "mood": "addition",
+          "scenario": "work",
+          "collocation": {
+            "head": "考虑",
+            "partner": "情况",
+            "partner_vi": "tình hình, tình huống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "我可以考虑情况吗？",
+          "vi": "Tôi có thể suy nghĩ tình hình không?",
+          "frame_id": "F-H2-07",
+          "frame_grammar": "modal_可以",
+          "time": "future",
+          "mood": "permission_q",
+          "scenario": "work",
+          "collocation": {
+            "head": "考虑",
+            "partner": "情况",
+            "partner_vi": "tình hình, tình huống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "你考虑建议吗？",
+          "vi": "Bạn suy nghĩ đề nghị không?",
+          "frame_id": "F-H1-07",
+          "frame_grammar": "question_吗",
+          "time": "habitual",
+          "mood": "yes_no_q",
+          "scenario": "study",
+          "collocation": {
+            "head": "考虑",
+            "partner": "建议",
+            "partner_vi": "đề nghị, kiến nghị",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我不考虑建议。",
+          "vi": "Tôi không suy nghĩ đề nghị.",
+          "frame_id": "F-H1-06",
+          "frame_grammar": "negation_不",
+          "time": "habitual",
+          "mood": "negation",
+          "scenario": "study",
+          "collocation": {
+            "head": "考虑",
+            "partner": "建议",
+            "partner_vi": "đề nghị, kiến nghị",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我为了健康而考虑问题。",
+          "vi": "Tôi suy nghĩ vấn đề vì sức khỏe.",
+          "frame_id": "F-H3-06",
+          "frame_grammar": "purpose_为了_而",
+          "time": "habitual",
+          "mood": "purpose",
+          "scenario": "study",
+          "collocation": {
+            "head": "考虑",
+            "partner": "问题",
+            "partner_vi": "vấn đề, câu hỏi",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 3,
+          "hsk_level": 3
+        },
+        {
+          "zh": "他考虑问题。",
+          "vi": "Anh ấy suy nghĩ vấn đề.",
+          "frame_id": "F-H1-02",
+          "frame_grammar": "basic_SVO_3rd",
+          "time": "habitual",
+          "mood": "statement",
+          "scenario": "study",
+          "collocation": {
+            "head": "考虑",
+            "partner": "问题",
+            "partner_vi": "vấn đề, câu hỏi",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我会考虑情况。",
+          "vi": "Tôi biết suy nghĩ tình hình.",
+          "frame_id": "F-H2-06",
+          "frame_grammar": "modal_会_ability",
+          "time": "ability",
+          "mood": "ability",
+          "scenario": "work",
+          "collocation": {
+            "head": "考虑",
+            "partner": "情况",
+            "partner_vi": "tình hình, tình huống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 8,
+        "unique_scenarios": 2,
+        "unique_times": 3,
+        "unique_moods": 8,
+        "unique_collocation_partners": 3,
+        "avg_complexity": 1.75
+      }
+    },
+    {
+      "target": "解决",
+      "pos": "v",
+      "note": "HSK3 (used at HSK2+)",
+      "sentences": [
+        {
+          "zh": "我喜欢解决问题。",
+          "vi": "Tôi thích giải quyết vấn đề.",
+          "frame_id": "F-H1-08",
+          "frame_grammar": "verb_chain_喜欢",
+          "time": "habitual",
+          "mood": "preference",
+          "scenario": "study",
+          "collocation": {
+            "head": "解决",
+            "partner": "问题",
+            "partner_vi": "vấn đề, câu hỏi",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 1
+        },
+        {
+          "zh": "他也解决困难。",
+          "vi": "Anh ấy cũng giải quyết khó khăn.",
+          "frame_id": "F-H2-10",
+          "frame_grammar": "adverb_也",
+          "time": "habitual",
+          "mood": "addition",
+          "scenario": "work",
+          "collocation": {
+            "head": "解决",
+            "partner": "困难",
+            "partner_vi": "khó khăn",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "我可以解决困难吗？",
+          "vi": "Tôi có thể giải quyết khó khăn không?",
+          "frame_id": "F-H2-07",
+          "frame_grammar": "modal_可以",
+          "time": "future",
+          "mood": "permission_q",
+          "scenario": "work",
+          "collocation": {
+            "head": "解决",
+            "partner": "困难",
+            "partner_vi": "khó khăn",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "你解决问题吗？",
+          "vi": "Bạn giải quyết vấn đề không?",
+          "frame_id": "F-H1-07",
+          "frame_grammar": "question_吗",
+          "time": "habitual",
+          "mood": "yes_no_q",
+          "scenario": "study",
+          "collocation": {
+            "head": "解决",
+            "partner": "问题",
+            "partner_vi": "vấn đề, câu hỏi",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "经过仔细考虑，我决定解决麻烦。",
+          "vi": "Sau khi cân nhắc kỹ, tôi quyết định giải quyết làm phiền.",
+          "frame_id": "F-H4-08",
+          "frame_grammar": "sequence_经过",
+          "time": "future",
+          "mood": "decision_after_thought",
+          "scenario": "emotion",
+          "collocation": {
+            "head": "解决",
+            "partner": "麻烦",
+            "partner_vi": "làm phiền",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "我们解决问题。",
+          "vi": "Chúng tôi giải quyết vấn đề.",
+          "frame_id": "F-H1-03",
+          "frame_grammar": "basic_SVO_plural",
+          "time": "habitual",
+          "mood": "statement",
+          "scenario": "study",
+          "collocation": {
+            "head": "解决",
+            "partner": "问题",
+            "partner_vi": "vấn đề, câu hỏi",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我不解决困难。",
+          "vi": "Tôi không giải quyết khó khăn.",
+          "frame_id": "F-H1-06",
+          "frame_grammar": "negation_不",
+          "time": "habitual",
+          "mood": "negation",
+          "scenario": "work",
+          "collocation": {
+            "head": "解决",
+            "partner": "困难",
+            "partner_vi": "khó khăn",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我可以解决问题吗？",
+          "vi": "Tôi có thể giải quyết vấn đề không?",
+          "frame_id": "F-H2-07",
+          "frame_grammar": "modal_可以",
+          "time": "future",
+          "mood": "permission_q",
+          "scenario": "study",
+          "collocation": {
+            "head": "解决",
+            "partner": "问题",
+            "partner_vi": "vấn đề, câu hỏi",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 7,
+        "unique_scenarios": 3,
+        "unique_times": 2,
+        "unique_moods": 7,
+        "unique_collocation_partners": 3,
+        "avg_complexity": 1.875
+      }
+    },
+    {
+      "target": "戴",
+      "pos": "v",
+      "note": "HSK4 daily verb",
+      "sentences": [
+        {
+          "zh": "我喜欢戴围巾。",
+          "vi": "Tôi thích đeo khăn quàng cổ.",
+          "frame_id": "F-H1-08",
+          "frame_grammar": "verb_chain_喜欢",
+          "time": "habitual",
+          "mood": "preference",
+          "scenario": "weather",
+          "collocation": {
+            "head": "戴",
+            "partner": "围巾",
+            "partner_vi": "khăn quàng cổ",
+            "frequency": 4,
+            "sources": [
+              "mined",
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 1
+        },
+        {
+          "zh": "他也戴眼镜。",
+          "vi": "Anh ấy cũng đeo kính mắt.",
+          "frame_id": "F-H2-10",
+          "frame_grammar": "adverb_也",
+          "time": "habitual",
+          "mood": "addition",
+          "scenario": "shopping",
+          "collocation": {
+            "head": "戴",
+            "partner": "眼镜",
+            "partner_vi": "kính mắt",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "我可以戴眼镜吗？",
+          "vi": "Tôi có thể đeo kính mắt không?",
+          "frame_id": "F-H2-07",
+          "frame_grammar": "modal_可以",
+          "time": "future",
+          "mood": "permission_q",
+          "scenario": "shopping",
+          "collocation": {
+            "head": "戴",
+            "partner": "眼镜",
+            "partner_vi": "kính mắt",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "你戴手套吗？",
+          "vi": "Bạn đeo găng tay không?",
+          "frame_id": "F-H1-07",
+          "frame_grammar": "question_吗",
+          "time": "habitual",
+          "mood": "yes_no_q",
+          "scenario": "weather",
+          "collocation": {
+            "head": "戴",
+            "partner": "手套",
+            "partner_vi": "găng tay",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "无论如何，我都要戴围巾。",
+          "vi": "Dù thế nào tôi cũng phải đeo khăn quàng cổ.",
+          "frame_id": "F-H4-05",
+          "frame_grammar": "concession_无论_都",
+          "time": "future",
+          "mood": "determination",
+          "scenario": "weather",
+          "collocation": {
+            "head": "戴",
+            "partner": "围巾",
+            "partner_vi": "khăn quàng cổ",
+            "frequency": 4,
+            "sources": [
+              "mined",
+              "curated"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "经过仔细考虑，我决定戴帽子。",
+          "vi": "Sau khi cân nhắc kỹ, tôi quyết định đeo mũ.",
+          "frame_id": "F-H4-08",
+          "frame_grammar": "sequence_经过",
+          "time": "future",
+          "mood": "decision_after_thought",
+          "scenario": "weather",
+          "collocation": {
+            "head": "戴",
+            "partner": "帽子",
+            "partner_vi": "mũ, nón",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "我们戴围巾。",
+          "vi": "Chúng tôi đeo khăn quàng cổ.",
+          "frame_id": "F-H1-03",
+          "frame_grammar": "basic_SVO_plural",
+          "time": "habitual",
+          "mood": "statement",
+          "scenario": "weather",
+          "collocation": {
+            "head": "戴",
+            "partner": "围巾",
+            "partner_vi": "khăn quàng cổ",
+            "frequency": 4,
+            "sources": [
+              "mined",
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我不戴眼镜。",
+          "vi": "Tôi không đeo kính mắt.",
+          "frame_id": "F-H1-06",
+          "frame_grammar": "negation_不",
+          "time": "habitual",
+          "mood": "negation",
+          "scenario": "shopping",
+          "collocation": {
+            "head": "戴",
+            "partner": "眼镜",
+            "partner_vi": "kính mắt",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 8,
+        "unique_scenarios": 2,
+        "unique_times": 2,
+        "unique_moods": 8,
+        "unique_collocation_partners": 4,
+        "avg_complexity": 2.125
+      }
+    },
+    {
+      "target": "参加",
+      "pos": "v",
+      "note": "HSK2 common verb",
+      "sentences": [
+        {
+          "zh": "我喜欢参加会议。",
+          "vi": "Tôi thích tham gia cuộc họp.",
+          "frame_id": "F-H1-08",
+          "frame_grammar": "verb_chain_喜欢",
+          "time": "habitual",
+          "mood": "preference",
+          "scenario": "work",
+          "collocation": {
+            "head": "参加",
+            "partner": "会议",
+            "partner_vi": "cuộc họp, hội nghị",
+            "frequency": 7,
+            "sources": [
+              "mined",
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 1
+        },
+        {
+          "zh": "他也参加活动。",
+          "vi": "Anh ấy cũng tham gia vận động.",
+          "frame_id": "F-H2-10",
+          "frame_grammar": "adverb_也",
+          "time": "habitual",
+          "mood": "addition",
+          "scenario": "health",
+          "collocation": {
+            "head": "参加",
+            "partner": "活动",
+            "partner_vi": "vận động, tập thể dục",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "我可以参加活动吗？",
+          "vi": "Tôi có thể tham gia vận động không?",
+          "frame_id": "F-H2-07",
+          "frame_grammar": "modal_可以",
+          "time": "future",
+          "mood": "permission_q",
+          "scenario": "health",
+          "collocation": {
+            "head": "参加",
+            "partner": "活动",
+            "partner_vi": "vận động, tập thể dục",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "你参加汉语吗？",
+          "vi": "Bạn tham gia tiếng Hán không?",
+          "frame_id": "F-H1-07",
+          "frame_grammar": "question_吗",
+          "time": "habitual",
+          "mood": "yes_no_q",
+          "scenario": "study",
+          "collocation": {
+            "head": "参加",
+            "partner": "汉语",
+            "partner_vi": "tiếng Hán, tiếng Trung",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "无论如何，我都要参加会议。",
+          "vi": "Dù thế nào tôi cũng phải tham gia cuộc họp.",
+          "frame_id": "F-H4-05",
+          "frame_grammar": "concession_无论_都",
+          "time": "future",
+          "mood": "determination",
+          "scenario": "work",
+          "collocation": {
+            "head": "参加",
+            "partner": "会议",
+            "partner_vi": "cuộc họp, hội nghị",
+            "frequency": 7,
+            "sources": [
+              "mined",
+              "curated"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "经过仔细考虑，我决定参加考试。",
+          "vi": "Sau khi cân nhắc kỹ, tôi quyết định tham gia thi.",
+          "frame_id": "F-H4-08",
+          "frame_grammar": "sequence_经过",
+          "time": "future",
+          "mood": "decision_after_thought",
+          "scenario": "study",
+          "collocation": {
+            "head": "参加",
+            "partner": "考试",
+            "partner_vi": "thi, kiểm tra",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "我们参加会议。",
+          "vi": "Chúng tôi tham gia cuộc họp.",
+          "frame_id": "F-H1-03",
+          "frame_grammar": "basic_SVO_plural",
+          "time": "habitual",
+          "mood": "statement",
+          "scenario": "work",
+          "collocation": {
+            "head": "参加",
+            "partner": "会议",
+            "partner_vi": "cuộc họp, hội nghị",
+            "frequency": 7,
+            "sources": [
+              "mined",
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我不参加活动。",
+          "vi": "Tôi không tham gia vận động.",
+          "frame_id": "F-H1-06",
+          "frame_grammar": "negation_不",
+          "time": "habitual",
+          "mood": "negation",
+          "scenario": "health",
+          "collocation": {
+            "head": "参加",
+            "partner": "活动",
+            "partner_vi": "vận động, tập thể dục",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 8,
+        "unique_scenarios": 3,
+        "unique_times": 2,
+        "unique_moods": 8,
+        "unique_collocation_partners": 4,
+        "avg_complexity": 2.125
+      }
+    },
+    {
+      "target": "反映",
+      "pos": "v",
+      "note": "HSK4 abstract",
+      "sentences": [
+        {
+          "zh": "我喜欢反映情况。",
+          "vi": "Tôi thích phản ánh tình hình.",
+          "frame_id": "F-H1-08",
+          "frame_grammar": "verb_chain_喜欢",
+          "time": "habitual",
+          "mood": "preference",
+          "scenario": "work",
+          "collocation": {
+            "head": "反映",
+            "partner": "情况",
+            "partner_vi": "tình hình, tình huống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 1
+        },
+        {
+          "zh": "他也反映情况。",
+          "vi": "Anh ấy cũng phản ánh tình hình.",
+          "frame_id": "F-H2-10",
+          "frame_grammar": "adverb_也",
+          "time": "habitual",
+          "mood": "addition",
+          "scenario": "work",
+          "collocation": {
+            "head": "反映",
+            "partner": "情况",
+            "partner_vi": "tình hình, tình huống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "我可以反映情况吗？",
+          "vi": "Tôi có thể phản ánh tình hình không?",
+          "frame_id": "F-H2-07",
+          "frame_grammar": "modal_可以",
+          "time": "future",
+          "mood": "permission_q",
+          "scenario": "work",
+          "collocation": {
+            "head": "反映",
+            "partner": "情况",
+            "partner_vi": "tình hình, tình huống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "你反映现实吗？",
+          "vi": "Bạn phản ánh hiện thực không?",
+          "frame_id": "F-H1-07",
+          "frame_grammar": "question_吗",
+          "time": "habitual",
+          "mood": "yes_no_q",
+          "scenario": "social",
+          "collocation": {
+            "head": "反映",
+            "partner": "现实",
+            "partner_vi": "hiện thực, thực tế",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "无论如何，我都要反映情况。",
+          "vi": "Dù thế nào tôi cũng phải phản ánh tình hình.",
+          "frame_id": "F-H4-05",
+          "frame_grammar": "concession_无论_都",
+          "time": "future",
+          "mood": "determination",
+          "scenario": "work",
+          "collocation": {
+            "head": "反映",
+            "partner": "情况",
+            "partner_vi": "tình hình, tình huống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "经过仔细考虑，我决定反映问题。",
+          "vi": "Sau khi cân nhắc kỹ, tôi quyết định phản ánh vấn đề.",
+          "frame_id": "F-H4-08",
+          "frame_grammar": "sequence_经过",
+          "time": "future",
+          "mood": "decision_after_thought",
+          "scenario": "study",
+          "collocation": {
+            "head": "反映",
+            "partner": "问题",
+            "partner_vi": "vấn đề, câu hỏi",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "我们反映情况。",
+          "vi": "Chúng tôi phản ánh tình hình.",
+          "frame_id": "F-H1-03",
+          "frame_grammar": "basic_SVO_plural",
+          "time": "habitual",
+          "mood": "statement",
+          "scenario": "work",
+          "collocation": {
+            "head": "反映",
+            "partner": "情况",
+            "partner_vi": "tình hình, tình huống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我不反映情况。",
+          "vi": "Tôi không phản ánh tình hình.",
+          "frame_id": "F-H1-06",
+          "frame_grammar": "negation_不",
+          "time": "habitual",
+          "mood": "negation",
+          "scenario": "work",
+          "collocation": {
+            "head": "反映",
+            "partner": "情况",
+            "partner_vi": "tình hình, tình huống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 8,
+        "unique_scenarios": 3,
+        "unique_times": 2,
+        "unique_moods": 8,
+        "unique_collocation_partners": 3,
+        "avg_complexity": 2.125
+      }
+    },
+    {
+      "target": "提供",
+      "pos": "v",
+      "note": "curated HSK4",
+      "sentences": [
+        {
+          "zh": "我喜欢提供帮助。",
+          "vi": "Tôi thích cung cấp giúp đỡ.",
+          "frame_id": "F-H1-08",
+          "frame_grammar": "verb_chain_喜欢",
+          "time": "habitual",
+          "mood": "preference",
+          "scenario": "social",
+          "collocation": {
+            "head": "提供",
+            "partner": "帮助",
+            "partner_vi": "giúp đỡ",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 1
+        },
+        {
+          "zh": "他也提供信息。",
+          "vi": "Anh ấy cũng cung cấp thông tin.",
+          "frame_id": "F-H2-10",
+          "frame_grammar": "adverb_也",
+          "time": "habitual",
+          "mood": "addition",
+          "scenario": "tech",
+          "collocation": {
+            "head": "提供",
+            "partner": "信息",
+            "partner_vi": "thông tin",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "我可以提供信息吗？",
+          "vi": "Tôi có thể cung cấp thông tin không?",
+          "frame_id": "F-H2-07",
+          "frame_grammar": "modal_可以",
+          "time": "future",
+          "mood": "permission_q",
+          "scenario": "tech",
+          "collocation": {
+            "head": "提供",
+            "partner": "信息",
+            "partner_vi": "thông tin",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "你提供多种吗？",
+          "vi": "Bạn cung cấp nhiều loại không?",
+          "frame_id": "F-H1-07",
+          "frame_grammar": "question_吗",
+          "time": "habitual",
+          "mood": "yes_no_q",
+          "scenario": "shopping",
+          "collocation": {
+            "head": "提供",
+            "partner": "多种",
+            "partner_vi": "nhiều loại",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我不提供多种。",
+          "vi": "Tôi không cung cấp nhiều loại.",
+          "frame_id": "F-H1-06",
+          "frame_grammar": "negation_不",
+          "time": "habitual",
+          "mood": "negation",
+          "scenario": "shopping",
+          "collocation": {
+            "head": "提供",
+            "partner": "多种",
+            "partner_vi": "nhiều loại",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我为了健康而提供帮助。",
+          "vi": "Tôi cung cấp giúp đỡ vì sức khỏe.",
+          "frame_id": "F-H3-06",
+          "frame_grammar": "purpose_为了_而",
+          "time": "habitual",
+          "mood": "purpose",
+          "scenario": "social",
+          "collocation": {
+            "head": "提供",
+            "partner": "帮助",
+            "partner_vi": "giúp đỡ",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 3,
+          "hsk_level": 3
+        },
+        {
+          "zh": "他提供帮助。",
+          "vi": "Anh ấy cung cấp giúp đỡ.",
+          "frame_id": "F-H1-02",
+          "frame_grammar": "basic_SVO_3rd",
+          "time": "habitual",
+          "mood": "statement",
+          "scenario": "social",
+          "collocation": {
+            "head": "提供",
+            "partner": "帮助",
+            "partner_vi": "giúp đỡ",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我会提供信息。",
+          "vi": "Tôi biết cung cấp thông tin.",
+          "frame_id": "F-H2-06",
+          "frame_grammar": "modal_会_ability",
+          "time": "ability",
+          "mood": "ability",
+          "scenario": "tech",
+          "collocation": {
+            "head": "提供",
+            "partner": "信息",
+            "partner_vi": "thông tin",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 8,
+        "unique_scenarios": 3,
+        "unique_times": 3,
+        "unique_moods": 8,
+        "unique_collocation_partners": 3,
+        "avg_complexity": 1.75
+      }
+    },
+    {
+      "target": "减少",
+      "pos": "v",
+      "note": "HSK4 quantity",
+      "sentences": [
+        {
+          "zh": "我喜欢减少压力。",
+          "vi": "Tôi thích giảm bớt áp lực.",
+          "frame_id": "F-H1-08",
+          "frame_grammar": "verb_chain_喜欢",
+          "time": "habitual",
+          "mood": "preference",
+          "scenario": "emotion",
+          "collocation": {
+            "head": "减少",
+            "partner": "压力",
+            "partner_vi": "áp lực",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 1
+        },
+        {
+          "zh": "他也减少费用。",
+          "vi": "Anh ấy cũng giảm bớt chi phí.",
+          "frame_id": "F-H2-10",
+          "frame_grammar": "adverb_也",
+          "time": "habitual",
+          "mood": "addition",
+          "scenario": "shopping",
+          "collocation": {
+            "head": "减少",
+            "partner": "费用",
+            "partner_vi": "chi phí, phí tổn",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "我可以减少费用吗？",
+          "vi": "Tôi có thể giảm bớt chi phí không?",
+          "frame_id": "F-H2-07",
+          "frame_grammar": "modal_可以",
+          "time": "future",
+          "mood": "permission_q",
+          "scenario": "shopping",
+          "collocation": {
+            "head": "减少",
+            "partner": "费用",
+            "partner_vi": "chi phí, phí tổn",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "你减少工作吗？",
+          "vi": "Bạn giảm bớt làm việc không?",
+          "frame_id": "F-H1-07",
+          "frame_grammar": "question_吗",
+          "time": "habitual",
+          "mood": "yes_no_q",
+          "scenario": "work",
+          "collocation": {
+            "head": "减少",
+            "partner": "工作",
+            "partner_vi": "làm việc",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我不减少工作。",
+          "vi": "Tôi không giảm bớt làm việc.",
+          "frame_id": "F-H1-06",
+          "frame_grammar": "negation_不",
+          "time": "habitual",
+          "mood": "negation",
+          "scenario": "work",
+          "collocation": {
+            "head": "减少",
+            "partner": "工作",
+            "partner_vi": "làm việc",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我为了健康而减少压力。",
+          "vi": "Tôi giảm bớt áp lực vì sức khỏe.",
+          "frame_id": "F-H3-06",
+          "frame_grammar": "purpose_为了_而",
+          "time": "habitual",
+          "mood": "purpose",
+          "scenario": "emotion",
+          "collocation": {
+            "head": "减少",
+            "partner": "压力",
+            "partner_vi": "áp lực",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 3,
+          "hsk_level": 3
+        },
+        {
+          "zh": "他减少压力。",
+          "vi": "Anh ấy giảm bớt áp lực.",
+          "frame_id": "F-H1-02",
+          "frame_grammar": "basic_SVO_3rd",
+          "time": "habitual",
+          "mood": "statement",
+          "scenario": "emotion",
+          "collocation": {
+            "head": "减少",
+            "partner": "压力",
+            "partner_vi": "áp lực",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我会减少费用。",
+          "vi": "Tôi biết giảm bớt chi phí.",
+          "frame_id": "F-H2-06",
+          "frame_grammar": "modal_会_ability",
+          "time": "ability",
+          "mood": "ability",
+          "scenario": "shopping",
+          "collocation": {
+            "head": "减少",
+            "partner": "费用",
+            "partner_vi": "chi phí, phí tổn",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 8,
+        "unique_scenarios": 3,
+        "unique_times": 3,
+        "unique_moods": 8,
+        "unique_collocation_partners": 3,
+        "avg_complexity": 1.75
+      }
+    },
+    {
+      "target": "丰富",
+      "pos": "adj",
+      "note": "HSK4 adj",
+      "sentences": [
+        {
+          "zh": "知识很丰富。",
+          "vi": "kiến thức rất phong phú.",
+          "frame_id": "F-H1-10",
+          "frame_grammar": "stative_很",
+          "time": "habitual",
+          "mood": "description",
+          "scenario": "study",
+          "collocation": {
+            "head": "丰富",
+            "partner": "知识",
+            "partner_vi": "kiến thức",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "内容非常丰富。",
+          "vi": "nội dung cực kỳ phong phú.",
+          "frame_id": "F-H3-10",
+          "frame_grammar": "intensifier_非常",
+          "time": "habitual",
+          "mood": "emphasis",
+          "scenario": "study",
+          "collocation": {
+            "head": "丰富",
+            "partner": "内容",
+            "partner_vi": "nội dung",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 3
+        },
+        {
+          "zh": "内容比现在丰富。",
+          "vi": "nội dung thì phong phú hơn bây giờ.",
+          "frame_id": "F-H2-13",
+          "frame_grammar": "comparison_比",
+          "time": "habitual",
+          "mood": "comparison",
+          "scenario": "study",
+          "collocation": {
+            "head": "丰富",
+            "partner": "内容",
+            "partner_vi": "nội dung",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 3,
+          "hsk_level": 2
+        },
+        {
+          "zh": "生活对身体非常丰富。",
+          "vi": "cuộc sống rất phong phú cho sức khỏe.",
+          "frame_id": "F-H4-11",
+          "frame_grammar": "preposition_对",
+          "time": "habitual",
+          "mood": "evaluation",
+          "scenario": "emotion",
+          "collocation": {
+            "head": "丰富",
+            "partner": "生活",
+            "partner_vi": "cuộc sống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 3,
+          "hsk_level": 4
+        },
+        {
+          "zh": "内容对身体非常丰富。",
+          "vi": "nội dung rất phong phú cho sức khỏe.",
+          "frame_id": "F-H4-11",
+          "frame_grammar": "preposition_对",
+          "time": "habitual",
+          "mood": "evaluation",
+          "scenario": "study",
+          "collocation": {
+            "head": "丰富",
+            "partner": "内容",
+            "partner_vi": "nội dung",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 3,
+          "hsk_level": 4
+        },
+        {
+          "zh": "生活比上午丰富。",
+          "vi": "cuộc sống thì phong phú hơn buổi sáng.",
+          "frame_id": "F-H2-13",
+          "frame_grammar": "comparison_比",
+          "time": "habitual",
+          "mood": "comparison",
+          "scenario": "emotion",
+          "collocation": {
+            "head": "丰富",
+            "partner": "生活",
+            "partner_vi": "cuộc sống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 3,
+          "hsk_level": 2
+        },
+        {
+          "zh": "经验非常丰富。",
+          "vi": "kinh nghiệm cực kỳ phong phú.",
+          "frame_id": "F-H3-10",
+          "frame_grammar": "intensifier_非常",
+          "time": "habitual",
+          "mood": "emphasis",
+          "scenario": "work",
+          "collocation": {
+            "head": "丰富",
+            "partner": "经验",
+            "partner_vi": "kinh nghiệm",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 3
+        },
+        {
+          "zh": "生活很丰富。",
+          "vi": "cuộc sống rất phong phú.",
+          "frame_id": "F-H1-10",
+          "frame_grammar": "stative_很",
+          "time": "habitual",
+          "mood": "description",
+          "scenario": "emotion",
+          "collocation": {
+            "head": "丰富",
+            "partner": "生活",
+            "partner_vi": "cuộc sống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 4,
+        "unique_scenarios": 3,
+        "unique_times": 1,
+        "unique_moods": 4,
+        "unique_collocation_partners": 4,
+        "avg_complexity": 2.25
+      }
+    },
+    {
+      "target": "严重",
+      "pos": "adj",
+      "note": "HSK4 adj",
+      "sentences": [
+        {
+          "zh": "错误很严重。",
+          "vi": "sai lầm rất nghiêm trọng.",
+          "frame_id": "F-H1-10",
+          "frame_grammar": "stative_很",
+          "time": "habitual",
+          "mood": "description",
+          "scenario": "study",
+          "collocation": {
+            "head": "严重",
+            "partner": "错误",
+            "partner_vi": "sai lầm, sai",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "后果非常严重。",
+          "vi": "hậu quả cực kỳ nghiêm trọng.",
+          "frame_id": "F-H3-10",
+          "frame_grammar": "intensifier_非常",
+          "time": "habitual",
+          "mood": "emphasis",
+          "scenario": "emotion",
+          "collocation": {
+            "head": "严重",
+            "partner": "后果",
+            "partner_vi": "hậu quả",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 3
+        },
+        {
+          "zh": "后果比现在严重。",
+          "vi": "hậu quả thì nghiêm trọng hơn bây giờ.",
+          "frame_id": "F-H2-13",
+          "frame_grammar": "comparison_比",
+          "time": "habitual",
+          "mood": "comparison",
+          "scenario": "emotion",
+          "collocation": {
+            "head": "严重",
+            "partner": "后果",
+            "partner_vi": "hậu quả",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 3,
+          "hsk_level": 2
+        },
+        {
+          "zh": "情况对身体非常严重。",
+          "vi": "tình hình rất nghiêm trọng cho sức khỏe.",
+          "frame_id": "F-H4-11",
+          "frame_grammar": "preposition_对",
+          "time": "habitual",
+          "mood": "evaluation",
+          "scenario": "work",
+          "collocation": {
+            "head": "严重",
+            "partner": "情况",
+            "partner_vi": "tình hình, tình huống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 3,
+          "hsk_level": 4
+        },
+        {
+          "zh": "后果很严重。",
+          "vi": "hậu quả rất nghiêm trọng.",
+          "frame_id": "F-H1-10",
+          "frame_grammar": "stative_很",
+          "time": "habitual",
+          "mood": "description",
+          "scenario": "emotion",
+          "collocation": {
+            "head": "严重",
+            "partner": "后果",
+            "partner_vi": "hậu quả",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "错误比日严重。",
+          "vi": "sai lầm thì nghiêm trọng hơn mặt trời.",
+          "frame_id": "F-H2-13",
+          "frame_grammar": "comparison_比",
+          "time": "habitual",
+          "mood": "comparison",
+          "scenario": "study",
+          "collocation": {
+            "head": "严重",
+            "partner": "错误",
+            "partner_vi": "sai lầm, sai",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 3,
+          "hsk_level": 2
+        },
+        {
+          "zh": "情况比分钟严重。",
+          "vi": "tình hình thì nghiêm trọng hơn phút.",
+          "frame_id": "F-H2-13",
+          "frame_grammar": "comparison_比",
+          "time": "habitual",
+          "mood": "comparison",
+          "scenario": "work",
+          "collocation": {
+            "head": "严重",
+            "partner": "情况",
+            "partner_vi": "tình hình, tình huống",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 3,
+          "hsk_level": 2
+        },
+        {
+          "zh": "随着时间的推移，我越来越严重。",
+          "vi": "Theo thời gian, tôi càng ngày càng nghiêm trọng.",
+          "frame_id": "F-H4-04",
+          "frame_grammar": "progressive_越来越",
+          "time": "progressive",
+          "mood": "evolution",
+          "scenario": "study",
+          "collocation": {
+            "head": "严重",
+            "partner": "问题",
+            "partner_vi": "vấn đề, câu hỏi",
+            "frequency": 3,
+            "sources": [
+              "curated"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 5,
+        "unique_scenarios": 3,
+        "unique_times": 2,
+        "unique_moods": 5,
+        "unique_collocation_partners": 4,
+        "avg_complexity": 2.5
+      }
+    },
+    {
+      "target": "看",
+      "pos": "v",
+      "note": "HSK1 (rich collocations)",
+      "sentences": [
+        {
+          "zh": "我喜欢看电影。",
+          "vi": "Tôi thích xem phim.",
+          "frame_id": "F-H1-08",
+          "frame_grammar": "verb_chain_喜欢",
+          "time": "habitual",
+          "mood": "preference",
+          "scenario": "leisure",
+          "collocation": {
+            "head": "看",
+            "partner": "电影",
+            "partner_vi": "phim",
+            "frequency": 4,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 1
+        },
+        {
+          "zh": "他也看地图。",
+          "vi": "Anh ấy cũng xem bản đồ.",
+          "frame_id": "F-H2-10",
+          "frame_grammar": "adverb_也",
+          "time": "habitual",
+          "mood": "addition",
+          "scenario": "tech",
+          "collocation": {
+            "head": "看",
+            "partner": "地图",
+            "partner_vi": "bản đồ",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "我可以看报纸吗？",
+          "vi": "Tôi có thể xem báo không?",
+          "frame_id": "F-H2-07",
+          "frame_grammar": "modal_可以",
+          "time": "future",
+          "mood": "permission_q",
+          "scenario": "social",
+          "collocation": {
+            "head": "看",
+            "partner": "报纸",
+            "partner_vi": "báo, tờ báo",
+            "frequency": 2,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "你看演唱会吗？",
+          "vi": "Bạn xem buổi hòa nhạc không?",
+          "frame_id": "F-H1-07",
+          "frame_grammar": "question_吗",
+          "time": "habitual",
+          "mood": "yes_no_q",
+          "scenario": "leisure",
+          "collocation": {
+            "head": "看",
+            "partner": "演唱会",
+            "partner_vi": "buổi hòa nhạc, đêm nhạc",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "无论如何，我都要看新闻。",
+          "vi": "Dù thế nào tôi cũng phải xem tin tức.",
+          "frame_id": "F-H4-05",
+          "frame_grammar": "concession_无论_都",
+          "time": "future",
+          "mood": "determination",
+          "scenario": "tech",
+          "collocation": {
+            "head": "看",
+            "partner": "新闻",
+            "partner_vi": "tin tức",
+            "frequency": 2,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "经过仔细考虑，我决定看日报。",
+          "vi": "Sau khi cân nhắc kỹ, tôi quyết định xem nhật báo.",
+          "frame_id": "F-H4-08",
+          "frame_grammar": "sequence_经过",
+          "time": "future",
+          "mood": "decision_after_thought",
+          "scenario": "time",
+          "collocation": {
+            "head": "看",
+            "partner": "日报",
+            "partner_vi": "nhật báo, báo hàng ngày",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "我们看电影。",
+          "vi": "Chúng tôi xem phim.",
+          "frame_id": "F-H1-03",
+          "frame_grammar": "basic_SVO_plural",
+          "time": "habitual",
+          "mood": "statement",
+          "scenario": "leisure",
+          "collocation": {
+            "head": "看",
+            "partner": "电影",
+            "partner_vi": "phim",
+            "frequency": 4,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我不看地图。",
+          "vi": "Tôi không xem bản đồ.",
+          "frame_id": "F-H1-06",
+          "frame_grammar": "negation_不",
+          "time": "habitual",
+          "mood": "negation",
+          "scenario": "tech",
+          "collocation": {
+            "head": "看",
+            "partner": "地图",
+            "partner_vi": "bản đồ",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 8,
+        "unique_scenarios": 4,
+        "unique_times": 2,
+        "unique_moods": 8,
+        "unique_collocation_partners": 6,
+        "avg_complexity": 2.125
+      }
+    },
+    {
+      "target": "去",
+      "pos": "v",
+      "note": "HSK1 movement",
+      "sentences": [
+        {
+          "zh": "我喜欢去公园。",
+          "vi": "Tôi thích đi công viên.",
+          "frame_id": "F-H1-08",
+          "frame_grammar": "verb_chain_喜欢",
+          "time": "habitual",
+          "mood": "preference",
+          "scenario": "leisure",
+          "collocation": {
+            "head": "去",
+            "partner": "公园",
+            "partner_vi": "công viên",
+            "frequency": 10,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 1
+        },
+        {
+          "zh": "他也去唱歌。",
+          "vi": "Anh ấy cũng đi hát bài hát.",
+          "frame_id": "F-H2-10",
+          "frame_grammar": "adverb_也",
+          "time": "habitual",
+          "mood": "addition",
+          "scenario": "leisure",
+          "collocation": {
+            "head": "去",
+            "partner": "唱歌",
+            "partner_vi": "hát bài hát",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "我可以去海边吗？",
+          "vi": "Tôi có thể đi bờ biển không?",
+          "frame_id": "F-H2-07",
+          "frame_grammar": "modal_可以",
+          "time": "future",
+          "mood": "permission_q",
+          "scenario": "place",
+          "collocation": {
+            "head": "去",
+            "partner": "海边",
+            "partner_vi": "bờ biển",
+            "frequency": 5,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "你去中国吗？",
+          "vi": "Bạn đi Trung Quốc không?",
+          "frame_id": "F-H1-07",
+          "frame_grammar": "question_吗",
+          "time": "habitual",
+          "mood": "yes_no_q",
+          "scenario": "place",
+          "collocation": {
+            "head": "去",
+            "partner": "中国",
+            "partner_vi": "Trung Quốc",
+            "frequency": 6,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "经过仔细考虑，我决定去国外。",
+          "vi": "Sau khi cân nhắc kỹ, tôi quyết định đi nước ngoài.",
+          "frame_id": "F-H4-08",
+          "frame_grammar": "sequence_经过",
+          "time": "future",
+          "mood": "decision_after_thought",
+          "scenario": "place",
+          "collocation": {
+            "head": "去",
+            "partner": "国外",
+            "partner_vi": "nước ngoài, hải ngoại",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "我们去公园。",
+          "vi": "Chúng tôi đi công viên.",
+          "frame_id": "F-H1-03",
+          "frame_grammar": "basic_SVO_plural",
+          "time": "habitual",
+          "mood": "statement",
+          "scenario": "leisure",
+          "collocation": {
+            "head": "去",
+            "partner": "公园",
+            "partner_vi": "công viên",
+            "frequency": 10,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我不去饭店。",
+          "vi": "Tôi không đi nhà hàng.",
+          "frame_id": "F-H1-06",
+          "frame_grammar": "negation_不",
+          "time": "habitual",
+          "mood": "negation",
+          "scenario": "place",
+          "collocation": {
+            "head": "去",
+            "partner": "饭店",
+            "partner_vi": "nhà hàng, khách sạn",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "由于工作忙，我没有时间去公园。",
+          "vi": "Do bận việc, tôi không có thời gian đi công viên.",
+          "frame_id": "F-H4-09",
+          "frame_grammar": "causal_由于",
+          "time": "habitual",
+          "mood": "explanation",
+          "scenario": "leisure",
+          "collocation": {
+            "head": "去",
+            "partner": "公园",
+            "partner_vi": "công viên",
+            "frequency": 10,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 8,
+        "unique_scenarios": 2,
+        "unique_times": 2,
+        "unique_moods": 8,
+        "unique_collocation_partners": 6,
+        "avg_complexity": 2.125
+      }
+    },
+    {
+      "target": "吃",
+      "pos": "v",
+      "note": "HSK1 food",
+      "sentences": [
+        {
+          "zh": "我喜欢吃早饭。",
+          "vi": "Tôi thích ăn bữa sáng.",
+          "frame_id": "F-H1-08",
+          "frame_grammar": "verb_chain_喜欢",
+          "time": "habitual",
+          "mood": "preference",
+          "scenario": "time",
+          "collocation": {
+            "head": "吃",
+            "partner": "早饭",
+            "partner_vi": "bữa sáng",
+            "frequency": 4,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 1
+        },
+        {
+          "zh": "他也吃包子。",
+          "vi": "Anh ấy cũng ăn bánh bao.",
+          "frame_id": "F-H2-10",
+          "frame_grammar": "adverb_也",
+          "time": "habitual",
+          "mood": "addition",
+          "scenario": "general",
+          "collocation": {
+            "head": "吃",
+            "partner": "包子",
+            "partner_vi": "bánh bao",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "我可以吃面包吗？",
+          "vi": "Tôi có thể ăn bánh mì không?",
+          "frame_id": "F-H2-07",
+          "frame_grammar": "modal_可以",
+          "time": "future",
+          "mood": "permission_q",
+          "scenario": "general",
+          "collocation": {
+            "head": "吃",
+            "partner": "面包",
+            "partner_vi": "bánh mì",
+            "frequency": 2,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 2,
+          "hsk_level": 2
+        },
+        {
+          "zh": "你吃玉米吗？",
+          "vi": "Bạn ăn ngô không?",
+          "frame_id": "F-H1-07",
+          "frame_grammar": "question_吗",
+          "time": "habitual",
+          "mood": "yes_no_q",
+          "scenario": "nature",
+          "collocation": {
+            "head": "吃",
+            "partner": "玉米",
+            "partner_vi": "ngô, bắp",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "无论如何，我都要吃米饭。",
+          "vi": "Dù thế nào tôi cũng phải ăn cơm.",
+          "frame_id": "F-H4-05",
+          "frame_grammar": "concession_无论_都",
+          "time": "future",
+          "mood": "determination",
+          "scenario": "general",
+          "collocation": {
+            "head": "吃",
+            "partner": "米饭",
+            "partner_vi": "cơm",
+            "frequency": 2,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "经过仔细考虑，我决定吃面条。",
+          "vi": "Sau khi cân nhắc kỹ, tôi quyết định ăn mì.",
+          "frame_id": "F-H4-08",
+          "frame_grammar": "sequence_经过",
+          "time": "future",
+          "mood": "decision_after_thought",
+          "scenario": "general",
+          "collocation": {
+            "head": "吃",
+            "partner": "面条",
+            "partner_vi": "mì, mì sợi",
+            "frequency": 1,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 4,
+          "hsk_level": 4
+        },
+        {
+          "zh": "我们吃早饭。",
+          "vi": "Chúng tôi ăn bữa sáng.",
+          "frame_id": "F-H1-03",
+          "frame_grammar": "basic_SVO_plural",
+          "time": "habitual",
+          "mood": "statement",
+          "scenario": "time",
+          "collocation": {
+            "head": "吃",
+            "partner": "早饭",
+            "partner_vi": "bữa sáng",
+            "frequency": 4,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        },
+        {
+          "zh": "我不吃西瓜。",
+          "vi": "Tôi không ăn dưa hấu.",
+          "frame_id": "F-H1-06",
+          "frame_grammar": "negation_不",
+          "time": "habitual",
+          "mood": "negation",
+          "scenario": "general",
+          "collocation": {
+            "head": "吃",
+            "partner": "西瓜",
+            "partner_vi": "dưa hấu",
+            "frequency": 2,
+            "sources": [
+              "mined"
+            ]
+          },
+          "complexity": 1,
+          "hsk_level": 1
+        }
+      ],
+      "diversity_report": {
+        "count": 8,
+        "unique_frames": 8,
+        "unique_scenarios": 3,
+        "unique_times": 2,
+        "unique_moods": 8,
+        "unique_collocation_partners": 7,
+        "avg_complexity": 2.125
+      }
+    }
+  ]
+}

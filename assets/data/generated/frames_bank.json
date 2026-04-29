@@ -1,0 +1,634 @@
+{
+  "version": "1.0",
+  "description": "FramesBank cho HSK1-4. Mỗi frame = template ngữ pháp đã validate.",
+  "total_frames": 47,
+  "by_level": {
+    "1": 10,
+    "2": 15,
+    "3": 10,
+    "4": 12
+  },
+  "frames": [
+    {
+      "id": "F-H1-01",
+      "zh": "我{VO}。",
+      "vi": "Tôi {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "statement",
+      "grammar_focus": "basic_SVO",
+      "hsk_level_min": 1,
+      "complexity": 1
+    },
+    {
+      "id": "F-H1-02",
+      "zh": "他{VO}。",
+      "vi": "Anh ấy {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "statement",
+      "grammar_focus": "basic_SVO_3rd",
+      "hsk_level_min": 1,
+      "complexity": 1
+    },
+    {
+      "id": "F-H1-03",
+      "zh": "我们{VO}。",
+      "vi": "Chúng tôi {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "statement",
+      "grammar_focus": "basic_SVO_plural",
+      "hsk_level_min": 1,
+      "complexity": 1
+    },
+    {
+      "id": "F-H1-04",
+      "zh": "今天我{VO}。",
+      "vi": "Hôm nay tôi {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "today",
+      "mood": "statement",
+      "grammar_focus": "time_adverb_今天",
+      "hsk_level_min": 1,
+      "complexity": 1
+    },
+    {
+      "id": "F-H1-05",
+      "zh": "明天我{VO}。",
+      "vi": "Ngày mai tôi {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "statement",
+      "grammar_focus": "time_adverb_明天",
+      "hsk_level_min": 1,
+      "complexity": 1
+    },
+    {
+      "id": "F-H1-06",
+      "zh": "我不{VO}。",
+      "vi": "Tôi không {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "negation",
+      "grammar_focus": "negation_不",
+      "hsk_level_min": 1,
+      "complexity": 1,
+      "scenario_blacklist": []
+    },
+    {
+      "id": "F-H1-07",
+      "zh": "你{VO}吗？",
+      "vi": "Bạn {VVO} không?",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "yes_no_q",
+      "grammar_focus": "question_吗",
+      "hsk_level_min": 1,
+      "complexity": 1
+    },
+    {
+      "id": "F-H1-08",
+      "zh": "我喜欢{VO}。",
+      "vi": "Tôi thích {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "preference",
+      "grammar_focus": "verb_chain_喜欢",
+      "hsk_level_min": 1,
+      "complexity": 2
+    },
+    {
+      "id": "F-H1-09",
+      "zh": "他是{N}。",
+      "vi": "Anh ấy là {VN}.",
+      "slot_types": [
+        "N"
+      ],
+      "time": "habitual",
+      "mood": "identity",
+      "grammar_focus": "copula_是",
+      "hsk_level_min": 1,
+      "complexity": 1
+    },
+    {
+      "id": "F-H1-10",
+      "zh": "{N}很{ADJ}。",
+      "vi": "{VN} rất {VADJ}.",
+      "slot_types": [
+        "N",
+        "ADJ"
+      ],
+      "time": "habitual",
+      "mood": "description",
+      "grammar_focus": "stative_很",
+      "hsk_level_min": 1,
+      "complexity": 1
+    },
+    {
+      "id": "F-H2-01",
+      "zh": "昨天我{VO}了。",
+      "vi": "Hôm qua tôi đã {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "past",
+      "mood": "statement",
+      "grammar_focus": "aspect_了_past",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-02",
+      "zh": "我{VO}过。",
+      "vi": "Tôi đã từng {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "experiential",
+      "mood": "statement",
+      "grammar_focus": "aspect_过_experiential",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-03",
+      "zh": "我正在{VO}。",
+      "vi": "Tôi đang {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "now",
+      "mood": "progressive",
+      "grammar_focus": "aspect_正在",
+      "hsk_level_min": 2,
+      "complexity": 2,
+      "scenario_blacklist": [
+        "health"
+      ]
+    },
+    {
+      "id": "F-H2-04",
+      "zh": "我想{VO}。",
+      "vi": "Tôi muốn {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "wish",
+      "grammar_focus": "modal_想",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-05",
+      "zh": "我要{VO}。",
+      "vi": "Tôi định {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "intent",
+      "grammar_focus": "modal_要",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-06",
+      "zh": "我会{VO}。",
+      "vi": "Tôi biết {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "ability",
+      "mood": "ability",
+      "grammar_focus": "modal_会_ability",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-07",
+      "zh": "我可以{VO}吗？",
+      "vi": "Tôi có thể {VVO} không?",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "permission_q",
+      "grammar_focus": "modal_可以",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-08",
+      "zh": "我每天{VO}。",
+      "vi": "Tôi mỗi ngày {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "routine",
+      "grammar_focus": "frequency_每天",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-09",
+      "zh": "我没{VO}。",
+      "vi": "Tôi chưa {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "past",
+      "mood": "negation",
+      "grammar_focus": "negation_没",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-10",
+      "zh": "他也{VO}。",
+      "vi": "Anh ấy cũng {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "addition",
+      "grammar_focus": "adverb_也",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-11",
+      "zh": "我们一起{VO}吧。",
+      "vi": "Chúng ta cùng {VVO} nhé.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "suggestion",
+      "grammar_focus": "particle_吧_suggestion",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-12",
+      "zh": "你想{VO}吗？",
+      "vi": "Bạn muốn {VVO} không?",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "yes_no_q",
+      "grammar_focus": "modal_question",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-13",
+      "zh": "{N}比{N2}{ADJ}。",
+      "vi": "{VN} thì {VADJ} hơn {VN2}.",
+      "slot_types": [
+        "N",
+        "N2",
+        "ADJ"
+      ],
+      "time": "habitual",
+      "mood": "comparison",
+      "grammar_focus": "comparison_比",
+      "hsk_level_min": 2,
+      "complexity": 3
+    },
+    {
+      "id": "F-H2-14",
+      "zh": "她已经{VO}了。",
+      "vi": "Cô ấy đã {VVO} rồi.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "past",
+      "mood": "completion",
+      "grammar_focus": "adverb_已经",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H2-15",
+      "zh": "我应该{VO}。",
+      "vi": "Tôi nên {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "obligation",
+      "grammar_focus": "modal_应该",
+      "hsk_level_min": 2,
+      "complexity": 2
+    },
+    {
+      "id": "F-H3-01",
+      "zh": "如果有时间，我就{VO}。",
+      "vi": "Nếu có thời gian, tôi sẽ {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "conditional",
+      "mood": "hypothesis",
+      "grammar_focus": "conditional_如果_就",
+      "hsk_level_min": 3,
+      "complexity": 3
+    },
+    {
+      "id": "F-H3-02",
+      "zh": "我一边听音乐一边{VO}。",
+      "vi": "Tôi vừa nghe nhạc vừa {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "now",
+      "mood": "simultaneous",
+      "grammar_focus": "simultaneous_一边",
+      "hsk_level_min": 3,
+      "complexity": 3
+    },
+    {
+      "id": "F-H3-03",
+      "zh": "虽然很累，但是我还是{VO}了。",
+      "vi": "Mặc dù rất mệt, nhưng tôi vẫn {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "past",
+      "mood": "concession",
+      "grammar_focus": "concession_虽然_但是",
+      "hsk_level_min": 3,
+      "complexity": 4
+    },
+    {
+      "id": "F-H3-04",
+      "zh": "我必须{VO}。",
+      "vi": "Tôi phải {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "necessity",
+      "grammar_focus": "modal_必须",
+      "hsk_level_min": 3,
+      "complexity": 2
+    },
+    {
+      "id": "F-H3-05",
+      "zh": "我跟朋友一起{VO}。",
+      "vi": "Tôi cùng bạn {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "companion",
+      "grammar_focus": "preposition_跟",
+      "hsk_level_min": 3,
+      "complexity": 2
+    },
+    {
+      "id": "F-H3-06",
+      "zh": "我为了健康而{VO}。",
+      "vi": "Tôi {VVO} vì sức khỏe.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "purpose",
+      "grammar_focus": "purpose_为了_而",
+      "hsk_level_min": 3,
+      "complexity": 3
+    },
+    {
+      "id": "F-H3-07",
+      "zh": "我准备{VO}。",
+      "vi": "Tôi chuẩn bị {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "preparation",
+      "grammar_focus": "verb_chain_准备",
+      "hsk_level_min": 3,
+      "complexity": 2
+    },
+    {
+      "id": "F-H3-08",
+      "zh": "我决定{VO}。",
+      "vi": "Tôi quyết định {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "decision",
+      "grammar_focus": "verb_chain_决定",
+      "hsk_level_min": 3,
+      "complexity": 2
+    },
+    {
+      "id": "F-H3-09",
+      "zh": "他突然{VO}了。",
+      "vi": "Anh ấy đột nhiên {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "past",
+      "mood": "unexpected",
+      "grammar_focus": "adverb_突然",
+      "hsk_level_min": 3,
+      "complexity": 2
+    },
+    {
+      "id": "F-H3-10",
+      "zh": "{N}非常{ADJ}。",
+      "vi": "{VN} cực kỳ {VADJ}.",
+      "slot_types": [
+        "N",
+        "ADJ"
+      ],
+      "time": "habitual",
+      "mood": "emphasis",
+      "grammar_focus": "intensifier_非常",
+      "hsk_level_min": 3,
+      "complexity": 2
+    },
+    {
+      "id": "F-H4-01",
+      "zh": "我正在考虑{VO}的事。",
+      "vi": "Tôi đang cân nhắc việc {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "now",
+      "mood": "deliberation",
+      "grammar_focus": "nominalization_的事",
+      "hsk_level_min": 4,
+      "complexity": 4
+    },
+    {
+      "id": "F-H4-02",
+      "zh": "通过{VO}，我学到了很多。",
+      "vi": "Qua việc {VVO}, tôi học được nhiều điều.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "past",
+      "mood": "reflection",
+      "grammar_focus": "preposition_通过",
+      "hsk_level_min": 4,
+      "complexity": 4
+    },
+    {
+      "id": "F-H4-03",
+      "zh": "对于{N},我们要认真{V}。",
+      "vi": "Đối với {VN}, chúng ta phải {VV} một cách nghiêm túc.",
+      "slot_types": [
+        "N",
+        "V"
+      ],
+      "time": "habitual",
+      "mood": "principle",
+      "grammar_focus": "topic_对于",
+      "hsk_level_min": 4,
+      "complexity": 4
+    },
+    {
+      "id": "F-H4-04",
+      "zh": "随着时间的推移，我越来越{ADJ}。",
+      "vi": "Theo thời gian, tôi càng ngày càng {VADJ}.",
+      "slot_types": [
+        "ADJ"
+      ],
+      "time": "progressive",
+      "mood": "evolution",
+      "grammar_focus": "progressive_越来越",
+      "hsk_level_min": 4,
+      "complexity": 4
+    },
+    {
+      "id": "F-H4-05",
+      "zh": "无论如何，我都要{VO}。",
+      "vi": "Dù thế nào tôi cũng phải {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "determination",
+      "grammar_focus": "concession_无论_都",
+      "hsk_level_min": 4,
+      "complexity": 4
+    },
+    {
+      "id": "F-H4-06",
+      "zh": "我不仅{VO}，而且很认真。",
+      "vi": "Tôi không những {VVO}, mà còn rất nghiêm túc.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "addition_emphasis",
+      "grammar_focus": "addition_不仅_而且",
+      "hsk_level_min": 4,
+      "complexity": 4
+    },
+    {
+      "id": "F-H4-07",
+      "zh": "尽管很难，我还是{VO}了。",
+      "vi": "Mặc dù khó, tôi vẫn {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "past",
+      "mood": "concession",
+      "grammar_focus": "concession_尽管",
+      "hsk_level_min": 4,
+      "complexity": 4
+    },
+    {
+      "id": "F-H4-08",
+      "zh": "经过仔细考虑，我决定{VO}。",
+      "vi": "Sau khi cân nhắc kỹ, tôi quyết định {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "decision_after_thought",
+      "grammar_focus": "sequence_经过",
+      "hsk_level_min": 4,
+      "complexity": 4
+    },
+    {
+      "id": "F-H4-09",
+      "zh": "由于工作忙，我没有时间{VO}。",
+      "vi": "Do bận việc, tôi không có thời gian {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "habitual",
+      "mood": "explanation",
+      "grammar_focus": "causal_由于",
+      "hsk_level_min": 4,
+      "complexity": 4
+    },
+    {
+      "id": "F-H4-10",
+      "zh": "为了将来，我必须{VO}。",
+      "vi": "Vì tương lai, tôi phải {VVO}.",
+      "slot_types": [
+        "VO"
+      ],
+      "time": "future",
+      "mood": "purpose",
+      "grammar_focus": "purpose_为了",
+      "hsk_level_min": 4,
+      "complexity": 3
+    },
+    {
+      "id": "F-H4-11",
+      "zh": "{N}对身体非常{ADJ}。",
+      "vi": "{VN} rất {VADJ} cho sức khỏe.",
+      "slot_types": [
+        "N",
+        "ADJ"
+      ],
+      "time": "habitual",
+      "mood": "evaluation",
+      "grammar_focus": "preposition_对",
+      "hsk_level_min": 4,
+      "complexity": 3
+    },
+    {
+      "id": "F-H4-12",
+      "zh": "这件事跟{N}有关。",
+      "vi": "Việc này có liên quan đến {VN}.",
+      "slot_types": [
+        "N"
+      ],
+      "time": "habitual",
+      "mood": "connection",
+      "grammar_focus": "preposition_跟_有关",
+      "hsk_level_min": 4,
+      "complexity": 3
+    }
+  ]
+}
