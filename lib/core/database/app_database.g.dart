@@ -3,12 +3,12 @@
 part of 'app_database.dart';
 
 // ignore_for_file: type=lint
-class $VocabsTableTable extends VocabsTable
-    with TableInfo<$VocabsTableTable, VocabDbModel> {
+class $SrsCardsTableTable extends SrsCardsTable
+    with TableInfo<$SrsCardsTableTable, SrsCardDbModel> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
-  $VocabsTableTable(this.attachedDatabase, [this._alias]);
+  $SrsCardsTableTable(this.attachedDatabase, [this._alias]);
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
   late final GeneratedColumn<String> id = GeneratedColumn<String>(
@@ -18,217 +18,159 @@ class $VocabsTableTable extends VocabsTable
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _hanziMeta = const VerificationMeta('hanzi');
+  static const VerificationMeta _targetTypeMeta = const VerificationMeta(
+    'targetType',
+  );
   @override
-  late final GeneratedColumn<String> hanzi = GeneratedColumn<String>(
-    'hanzi',
+  late final GeneratedColumn<String> targetType = GeneratedColumn<String>(
+    'target_type',
     aliasedName,
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _pinyinMeta = const VerificationMeta('pinyin');
+  static const VerificationMeta _targetIdMeta = const VerificationMeta(
+    'targetId',
+  );
   @override
-  late final GeneratedColumn<String> pinyin = GeneratedColumn<String>(
-    'pinyin',
+  late final GeneratedColumn<String> targetId = GeneratedColumn<String>(
+    'target_id',
     aliasedName,
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _pinyinNormalizedMeta = const VerificationMeta(
-    'pinyinNormalized',
+  static const VerificationMeta _cardTypeMeta = const VerificationMeta(
+    'cardType',
   );
   @override
-  late final GeneratedColumn<String> pinyinNormalized = GeneratedColumn<String>(
-    'pinyin_normalized',
+  late final GeneratedColumn<String> cardType = GeneratedColumn<String>(
+    'card_type',
     aliasedName,
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _stateMeta = const VerificationMeta('state');
   @override
-  late final GeneratedColumnWithTypeConverter<List<String>, String> characters =
-      GeneratedColumn<String>(
-        'characters',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<List<String>>($VocabsTableTable.$convertercharacters);
-  @override
-  late final GeneratedColumnWithTypeConverter<List<Meaning>, String> meanings =
-      GeneratedColumn<String>(
-        'meanings',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<List<Meaning>>($VocabsTableTable.$convertermeanings);
-  @override
-  late final GeneratedColumnWithTypeConverter<List<ExampleSentence>, String>
-  exampleSentences =
-      GeneratedColumn<String>(
-        'example_sentences',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<List<ExampleSentence>>(
-        $VocabsTableTable.$converterexampleSentences,
-      );
-  static const VerificationMeta _levelMeta = const VerificationMeta('level');
-  @override
-  late final GeneratedColumn<int> level = GeneratedColumn<int>(
-    'level',
-    aliasedName,
-    false,
-    type: DriftSqlType.int,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _wordTypeMeta = const VerificationMeta(
-    'wordType',
-  );
-  @override
-  late final GeneratedColumn<String> wordType = GeneratedColumn<String>(
-    'word_type',
+  late final GeneratedColumn<String> state = GeneratedColumn<String>(
+    'state',
     aliasedName,
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _isBookmarkedMeta = const VerificationMeta(
-    'isBookmarked',
-  );
+  static const VerificationMeta _dueAtMeta = const VerificationMeta('dueAt');
   @override
-  late final GeneratedColumn<bool> isBookmarked = GeneratedColumn<bool>(
-    'is_bookmarked',
+  late final GeneratedColumn<DateTime> dueAt = GeneratedColumn<DateTime>(
+    'due_at',
     aliasedName,
-    false,
-    type: DriftSqlType.bool,
+    true,
+    type: DriftSqlType.dateTime,
     requiredDuringInsert: false,
-    defaultConstraints: GeneratedColumn.constraintIsAlways(
-      'CHECK ("is_bookmarked" IN (0, 1))',
-    ),
-    defaultValue: const Constant(false),
   );
-  static const VerificationMeta _isMasteredMeta = const VerificationMeta(
-    'isMastered',
+  static const VerificationMeta _stabilityMeta = const VerificationMeta(
+    'stability',
   );
   @override
-  late final GeneratedColumn<bool> isMastered = GeneratedColumn<bool>(
-    'is_mastered',
+  late final GeneratedColumn<double> stability = GeneratedColumn<double>(
+    'stability',
     aliasedName,
-    false,
-    type: DriftSqlType.bool,
-    requiredDuringInsert: false,
-    defaultConstraints: GeneratedColumn.constraintIsAlways(
-      'CHECK ("is_mastered" IN (0, 1))',
-    ),
-    defaultValue: const Constant(false),
-  );
-  static const VerificationMeta _repetitionsMeta = const VerificationMeta(
-    'repetitions',
-  );
-  @override
-  late final GeneratedColumn<int> repetitions = GeneratedColumn<int>(
-    'repetitions',
-    aliasedName,
-    false,
-    type: DriftSqlType.int,
-    requiredDuringInsert: false,
-    defaultValue: const Constant(0),
-  );
-  static const VerificationMeta _easeFactorMeta = const VerificationMeta(
-    'easeFactor',
-  );
-  @override
-  late final GeneratedColumn<double> easeFactor = GeneratedColumn<double>(
-    'ease_factor',
-    aliasedName,
-    false,
+    true,
     type: DriftSqlType.double,
     requiredDuringInsert: false,
-    defaultValue: const Constant(2.5),
   );
-  static const VerificationMeta _intervalMeta = const VerificationMeta(
-    'interval',
+  static const VerificationMeta _difficultyMeta = const VerificationMeta(
+    'difficulty',
   );
   @override
-  late final GeneratedColumn<int> interval = GeneratedColumn<int>(
-    'interval',
+  late final GeneratedColumn<double> difficulty = GeneratedColumn<double>(
+    'difficulty',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _elapsedDaysMeta = const VerificationMeta(
+    'elapsedDays',
+  );
+  @override
+  late final GeneratedColumn<int> elapsedDays = GeneratedColumn<int>(
+    'elapsed_days',
     aliasedName,
     false,
     type: DriftSqlType.int,
     requiredDuringInsert: false,
     defaultValue: const Constant(0),
   );
-  static const VerificationMeta _nextReviewMeta = const VerificationMeta(
-    'nextReview',
+  static const VerificationMeta _scheduledDaysMeta = const VerificationMeta(
+    'scheduledDays',
   );
   @override
-  late final GeneratedColumn<DateTime> nextReview = GeneratedColumn<DateTime>(
-    'next_review',
+  late final GeneratedColumn<int> scheduledDays = GeneratedColumn<int>(
+    'scheduled_days',
     aliasedName,
     false,
-    type: DriftSqlType.dateTime,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _needsSyncMeta = const VerificationMeta(
-    'needsSync',
-  );
-  @override
-  late final GeneratedColumn<bool> needsSync = GeneratedColumn<bool>(
-    'needs_sync',
-    aliasedName,
-    false,
-    type: DriftSqlType.bool,
+    type: DriftSqlType.int,
     requiredDuringInsert: false,
-    defaultConstraints: GeneratedColumn.constraintIsAlways(
-      'CHECK ("needs_sync" IN (0, 1))',
-    ),
-    defaultValue: const Constant(false),
+    defaultValue: const Constant(0),
   );
-  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
-    'updatedAt',
-  );
+  static const VerificationMeta _repsMeta = const VerificationMeta('reps');
   @override
-  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
-    'updated_at',
+  late final GeneratedColumn<int> reps = GeneratedColumn<int>(
+    'reps',
     aliasedName,
     false,
-    type: DriftSqlType.dateTime,
+    type: DriftSqlType.int,
     requiredDuringInsert: false,
-    defaultValue: currentDateAndTime,
+    defaultValue: const Constant(0),
   );
+  static const VerificationMeta _lapsesMeta = const VerificationMeta('lapses');
+  @override
+  late final GeneratedColumn<int> lapses = GeneratedColumn<int>(
+    'lapses',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _lastReviewedAtMeta = const VerificationMeta(
+    'lastReviewedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> lastReviewedAt =
+      GeneratedColumn<DateTime>(
+        'last_reviewed_at',
+        aliasedName,
+        true,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: false,
+      );
   @override
   List<GeneratedColumn> get $columns => [
     id,
-    hanzi,
-    pinyin,
-    pinyinNormalized,
-    characters,
-    meanings,
-    exampleSentences,
-    level,
-    wordType,
-    isBookmarked,
-    isMastered,
-    repetitions,
-    easeFactor,
-    interval,
-    nextReview,
-    needsSync,
-    updatedAt,
+    targetType,
+    targetId,
+    cardType,
+    state,
+    dueAt,
+    stability,
+    difficulty,
+    elapsedDays,
+    scheduledDays,
+    reps,
+    lapses,
+    lastReviewedAt,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
   String get actualTableName => $name;
-  static const String $name = 'vocabs_table';
+  static const String $name = 'srs_cards_table';
   @override
   VerificationContext validateIntegrity(
-    Insertable<VocabDbModel> instance, {
+    Insertable<SrsCardDbModel> instance, {
     bool isInserting = false,
   }) {
     final context = VerificationContext();
@@ -238,103 +180,93 @@ class $VocabsTableTable extends VocabsTable
     } else if (isInserting) {
       context.missing(_idMeta);
     }
-    if (data.containsKey('hanzi')) {
+    if (data.containsKey('target_type')) {
       context.handle(
-        _hanziMeta,
-        hanzi.isAcceptableOrUnknown(data['hanzi']!, _hanziMeta),
+        _targetTypeMeta,
+        targetType.isAcceptableOrUnknown(data['target_type']!, _targetTypeMeta),
       );
     } else if (isInserting) {
-      context.missing(_hanziMeta);
+      context.missing(_targetTypeMeta);
     }
-    if (data.containsKey('pinyin')) {
+    if (data.containsKey('target_id')) {
       context.handle(
-        _pinyinMeta,
-        pinyin.isAcceptableOrUnknown(data['pinyin']!, _pinyinMeta),
+        _targetIdMeta,
+        targetId.isAcceptableOrUnknown(data['target_id']!, _targetIdMeta),
       );
     } else if (isInserting) {
-      context.missing(_pinyinMeta);
+      context.missing(_targetIdMeta);
     }
-    if (data.containsKey('pinyin_normalized')) {
+    if (data.containsKey('card_type')) {
       context.handle(
-        _pinyinNormalizedMeta,
-        pinyinNormalized.isAcceptableOrUnknown(
-          data['pinyin_normalized']!,
-          _pinyinNormalizedMeta,
-        ),
+        _cardTypeMeta,
+        cardType.isAcceptableOrUnknown(data['card_type']!, _cardTypeMeta),
       );
     } else if (isInserting) {
-      context.missing(_pinyinNormalizedMeta);
+      context.missing(_cardTypeMeta);
     }
-    if (data.containsKey('level')) {
+    if (data.containsKey('state')) {
       context.handle(
-        _levelMeta,
-        level.isAcceptableOrUnknown(data['level']!, _levelMeta),
+        _stateMeta,
+        state.isAcceptableOrUnknown(data['state']!, _stateMeta),
       );
     } else if (isInserting) {
-      context.missing(_levelMeta);
+      context.missing(_stateMeta);
     }
-    if (data.containsKey('word_type')) {
+    if (data.containsKey('due_at')) {
       context.handle(
-        _wordTypeMeta,
-        wordType.isAcceptableOrUnknown(data['word_type']!, _wordTypeMeta),
-      );
-    } else if (isInserting) {
-      context.missing(_wordTypeMeta);
-    }
-    if (data.containsKey('is_bookmarked')) {
-      context.handle(
-        _isBookmarkedMeta,
-        isBookmarked.isAcceptableOrUnknown(
-          data['is_bookmarked']!,
-          _isBookmarkedMeta,
-        ),
+        _dueAtMeta,
+        dueAt.isAcceptableOrUnknown(data['due_at']!, _dueAtMeta),
       );
     }
-    if (data.containsKey('is_mastered')) {
+    if (data.containsKey('stability')) {
       context.handle(
-        _isMasteredMeta,
-        isMastered.isAcceptableOrUnknown(data['is_mastered']!, _isMasteredMeta),
+        _stabilityMeta,
+        stability.isAcceptableOrUnknown(data['stability']!, _stabilityMeta),
       );
     }
-    if (data.containsKey('repetitions')) {
+    if (data.containsKey('difficulty')) {
       context.handle(
-        _repetitionsMeta,
-        repetitions.isAcceptableOrUnknown(
-          data['repetitions']!,
-          _repetitionsMeta,
+        _difficultyMeta,
+        difficulty.isAcceptableOrUnknown(data['difficulty']!, _difficultyMeta),
+      );
+    }
+    if (data.containsKey('elapsed_days')) {
+      context.handle(
+        _elapsedDaysMeta,
+        elapsedDays.isAcceptableOrUnknown(
+          data['elapsed_days']!,
+          _elapsedDaysMeta,
         ),
       );
     }
-    if (data.containsKey('ease_factor')) {
+    if (data.containsKey('scheduled_days')) {
       context.handle(
-        _easeFactorMeta,
-        easeFactor.isAcceptableOrUnknown(data['ease_factor']!, _easeFactorMeta),
+        _scheduledDaysMeta,
+        scheduledDays.isAcceptableOrUnknown(
+          data['scheduled_days']!,
+          _scheduledDaysMeta,
+        ),
       );
     }
-    if (data.containsKey('interval')) {
+    if (data.containsKey('reps')) {
       context.handle(
-        _intervalMeta,
-        interval.isAcceptableOrUnknown(data['interval']!, _intervalMeta),
+        _repsMeta,
+        reps.isAcceptableOrUnknown(data['reps']!, _repsMeta),
       );
     }
-    if (data.containsKey('next_review')) {
+    if (data.containsKey('lapses')) {
       context.handle(
-        _nextReviewMeta,
-        nextReview.isAcceptableOrUnknown(data['next_review']!, _nextReviewMeta),
-      );
-    } else if (isInserting) {
-      context.missing(_nextReviewMeta);
-    }
-    if (data.containsKey('needs_sync')) {
-      context.handle(
-        _needsSyncMeta,
-        needsSync.isAcceptableOrUnknown(data['needs_sync']!, _needsSyncMeta),
+        _lapsesMeta,
+        lapses.isAcceptableOrUnknown(data['lapses']!, _lapsesMeta),
       );
     }
-    if (data.containsKey('updated_at')) {
+    if (data.containsKey('last_reviewed_at')) {
       context.handle(
-        _updatedAtMeta,
-        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+        _lastReviewedAtMeta,
+        lastReviewedAt.isAcceptableOrUnknown(
+          data['last_reviewed_at']!,
+          _lastReviewedAtMeta,
+        ),
       );
     }
     return context;
@@ -343,218 +275,171 @@ class $VocabsTableTable extends VocabsTable
   @override
   Set<GeneratedColumn> get $primaryKey => {id};
   @override
-  VocabDbModel map(Map<String, dynamic> data, {String? tablePrefix}) {
+  SrsCardDbModel map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
-    return VocabDbModel(
+    return SrsCardDbModel(
       id: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}id'],
       )!,
-      hanzi: attachedDatabase.typeMapping.read(
+      targetType: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
-        data['${effectivePrefix}hanzi'],
+        data['${effectivePrefix}target_type'],
       )!,
-      pinyin: attachedDatabase.typeMapping.read(
+      targetId: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
-        data['${effectivePrefix}pinyin'],
+        data['${effectivePrefix}target_id'],
       )!,
-      pinyinNormalized: attachedDatabase.typeMapping.read(
+      cardType: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
-        data['${effectivePrefix}pinyin_normalized'],
+        data['${effectivePrefix}card_type'],
       )!,
-      characters: $VocabsTableTable.$convertercharacters.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}characters'],
-        )!,
+      state: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}state'],
+      )!,
+      dueAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}due_at'],
       ),
-      meanings: $VocabsTableTable.$convertermeanings.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}meanings'],
-        )!,
-      ),
-      exampleSentences: $VocabsTableTable.$converterexampleSentences.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}example_sentences'],
-        )!,
-      ),
-      level: attachedDatabase.typeMapping.read(
-        DriftSqlType.int,
-        data['${effectivePrefix}level'],
-      )!,
-      wordType: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}word_type'],
-      )!,
-      isBookmarked: attachedDatabase.typeMapping.read(
-        DriftSqlType.bool,
-        data['${effectivePrefix}is_bookmarked'],
-      )!,
-      isMastered: attachedDatabase.typeMapping.read(
-        DriftSqlType.bool,
-        data['${effectivePrefix}is_mastered'],
-      )!,
-      repetitions: attachedDatabase.typeMapping.read(
-        DriftSqlType.int,
-        data['${effectivePrefix}repetitions'],
-      )!,
-      easeFactor: attachedDatabase.typeMapping.read(
+      stability: attachedDatabase.typeMapping.read(
         DriftSqlType.double,
-        data['${effectivePrefix}ease_factor'],
-      )!,
-      interval: attachedDatabase.typeMapping.read(
+        data['${effectivePrefix}stability'],
+      ),
+      difficulty: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}difficulty'],
+      ),
+      elapsedDays: attachedDatabase.typeMapping.read(
         DriftSqlType.int,
-        data['${effectivePrefix}interval'],
+        data['${effectivePrefix}elapsed_days'],
       )!,
-      nextReview: attachedDatabase.typeMapping.read(
+      scheduledDays: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}scheduled_days'],
+      )!,
+      reps: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}reps'],
+      )!,
+      lapses: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}lapses'],
+      )!,
+      lastReviewedAt: attachedDatabase.typeMapping.read(
         DriftSqlType.dateTime,
-        data['${effectivePrefix}next_review'],
-      )!,
-      needsSync: attachedDatabase.typeMapping.read(
-        DriftSqlType.bool,
-        data['${effectivePrefix}needs_sync'],
-      )!,
-      updatedAt: attachedDatabase.typeMapping.read(
-        DriftSqlType.dateTime,
-        data['${effectivePrefix}updated_at'],
-      )!,
+        data['${effectivePrefix}last_reviewed_at'],
+      ),
     );
   }
 
   @override
-  $VocabsTableTable createAlias(String alias) {
-    return $VocabsTableTable(attachedDatabase, alias);
+  $SrsCardsTableTable createAlias(String alias) {
+    return $SrsCardsTableTable(attachedDatabase, alias);
   }
-
-  static TypeConverter<List<String>, String> $convertercharacters =
-      const StringListConverter();
-  static TypeConverter<List<Meaning>, String> $convertermeanings =
-      const MeaningListConverter();
-  static TypeConverter<List<ExampleSentence>, String>
-  $converterexampleSentences = const ExampleListConverter();
 }
 
-class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
+class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
   final String id;
-  final String hanzi;
-  final String pinyin;
-  final String pinyinNormalized;
-  final List<String> characters;
-  final List<Meaning> meanings;
-  final List<ExampleSentence> exampleSentences;
-  final int level;
-  final String wordType;
-  final bool isBookmarked;
-  final bool isMastered;
-  final int repetitions;
-  final double easeFactor;
-  final int interval;
-  final DateTime nextReview;
-  final bool needsSync;
-  final DateTime updatedAt;
-  const VocabDbModel({
+  final String targetType;
+  final String targetId;
+  final String cardType;
+  final String state;
+  final DateTime? dueAt;
+  final double? stability;
+  final double? difficulty;
+  final int elapsedDays;
+  final int scheduledDays;
+  final int reps;
+  final int lapses;
+  final DateTime? lastReviewedAt;
+  const SrsCardDbModel({
     required this.id,
-    required this.hanzi,
-    required this.pinyin,
-    required this.pinyinNormalized,
-    required this.characters,
-    required this.meanings,
-    required this.exampleSentences,
-    required this.level,
-    required this.wordType,
-    required this.isBookmarked,
-    required this.isMastered,
-    required this.repetitions,
-    required this.easeFactor,
-    required this.interval,
-    required this.nextReview,
-    required this.needsSync,
-    required this.updatedAt,
+    required this.targetType,
+    required this.targetId,
+    required this.cardType,
+    required this.state,
+    this.dueAt,
+    this.stability,
+    this.difficulty,
+    required this.elapsedDays,
+    required this.scheduledDays,
+    required this.reps,
+    required this.lapses,
+    this.lastReviewedAt,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
     map['id'] = Variable<String>(id);
-    map['hanzi'] = Variable<String>(hanzi);
-    map['pinyin'] = Variable<String>(pinyin);
-    map['pinyin_normalized'] = Variable<String>(pinyinNormalized);
-    {
-      map['characters'] = Variable<String>(
-        $VocabsTableTable.$convertercharacters.toSql(characters),
-      );
+    map['target_type'] = Variable<String>(targetType);
+    map['target_id'] = Variable<String>(targetId);
+    map['card_type'] = Variable<String>(cardType);
+    map['state'] = Variable<String>(state);
+    if (!nullToAbsent || dueAt != null) {
+      map['due_at'] = Variable<DateTime>(dueAt);
     }
-    {
-      map['meanings'] = Variable<String>(
-        $VocabsTableTable.$convertermeanings.toSql(meanings),
-      );
+    if (!nullToAbsent || stability != null) {
+      map['stability'] = Variable<double>(stability);
     }
-    {
-      map['example_sentences'] = Variable<String>(
-        $VocabsTableTable.$converterexampleSentences.toSql(exampleSentences),
-      );
+    if (!nullToAbsent || difficulty != null) {
+      map['difficulty'] = Variable<double>(difficulty);
     }
-    map['level'] = Variable<int>(level);
-    map['word_type'] = Variable<String>(wordType);
-    map['is_bookmarked'] = Variable<bool>(isBookmarked);
-    map['is_mastered'] = Variable<bool>(isMastered);
-    map['repetitions'] = Variable<int>(repetitions);
-    map['ease_factor'] = Variable<double>(easeFactor);
-    map['interval'] = Variable<int>(interval);
-    map['next_review'] = Variable<DateTime>(nextReview);
-    map['needs_sync'] = Variable<bool>(needsSync);
-    map['updated_at'] = Variable<DateTime>(updatedAt);
+    map['elapsed_days'] = Variable<int>(elapsedDays);
+    map['scheduled_days'] = Variable<int>(scheduledDays);
+    map['reps'] = Variable<int>(reps);
+    map['lapses'] = Variable<int>(lapses);
+    if (!nullToAbsent || lastReviewedAt != null) {
+      map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt);
+    }
     return map;
   }
 
-  VocabsTableCompanion toCompanion(bool nullToAbsent) {
-    return VocabsTableCompanion(
+  SrsCardsTableCompanion toCompanion(bool nullToAbsent) {
+    return SrsCardsTableCompanion(
       id: Value(id),
-      hanzi: Value(hanzi),
-      pinyin: Value(pinyin),
-      pinyinNormalized: Value(pinyinNormalized),
-      characters: Value(characters),
-      meanings: Value(meanings),
-      exampleSentences: Value(exampleSentences),
-      level: Value(level),
-      wordType: Value(wordType),
-      isBookmarked: Value(isBookmarked),
-      isMastered: Value(isMastered),
-      repetitions: Value(repetitions),
-      easeFactor: Value(easeFactor),
-      interval: Value(interval),
-      nextReview: Value(nextReview),
-      needsSync: Value(needsSync),
-      updatedAt: Value(updatedAt),
+      targetType: Value(targetType),
+      targetId: Value(targetId),
+      cardType: Value(cardType),
+      state: Value(state),
+      dueAt: dueAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(dueAt),
+      stability: stability == null && nullToAbsent
+          ? const Value.absent()
+          : Value(stability),
+      difficulty: difficulty == null && nullToAbsent
+          ? const Value.absent()
+          : Value(difficulty),
+      elapsedDays: Value(elapsedDays),
+      scheduledDays: Value(scheduledDays),
+      reps: Value(reps),
+      lapses: Value(lapses),
+      lastReviewedAt: lastReviewedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(lastReviewedAt),
     );
   }
 
-  factory VocabDbModel.fromJson(
+  factory SrsCardDbModel.fromJson(
     Map<String, dynamic> json, {
     ValueSerializer? serializer,
   }) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
-    return VocabDbModel(
+    return SrsCardDbModel(
       id: serializer.fromJson<String>(json['id']),
-      hanzi: serializer.fromJson<String>(json['hanzi']),
-      pinyin: serializer.fromJson<String>(json['pinyin']),
-      pinyinNormalized: serializer.fromJson<String>(json['pinyinNormalized']),
-      characters: serializer.fromJson<List<String>>(json['characters']),
-      meanings: serializer.fromJson<List<Meaning>>(json['meanings']),
-      exampleSentences: serializer.fromJson<List<ExampleSentence>>(
-        json['exampleSentences'],
-      ),
-      level: serializer.fromJson<int>(json['level']),
-      wordType: serializer.fromJson<String>(json['wordType']),
-      isBookmarked: serializer.fromJson<bool>(json['isBookmarked']),
-      isMastered: serializer.fromJson<bool>(json['isMastered']),
-      repetitions: serializer.fromJson<int>(json['repetitions']),
-      easeFactor: serializer.fromJson<double>(json['easeFactor']),
-      interval: serializer.fromJson<int>(json['interval']),
-      nextReview: serializer.fromJson<DateTime>(json['nextReview']),
-      needsSync: serializer.fromJson<bool>(json['needsSync']),
-      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+      targetType: serializer.fromJson<String>(json['targetType']),
+      targetId: serializer.fromJson<String>(json['targetId']),
+      cardType: serializer.fromJson<String>(json['cardType']),
+      state: serializer.fromJson<String>(json['state']),
+      dueAt: serializer.fromJson<DateTime?>(json['dueAt']),
+      stability: serializer.fromJson<double?>(json['stability']),
+      difficulty: serializer.fromJson<double?>(json['difficulty']),
+      elapsedDays: serializer.fromJson<int>(json['elapsedDays']),
+      scheduledDays: serializer.fromJson<int>(json['scheduledDays']),
+      reps: serializer.fromJson<int>(json['reps']),
+      lapses: serializer.fromJson<int>(json['lapses']),
+      lastReviewedAt: serializer.fromJson<DateTime?>(json['lastReviewedAt']),
     );
   }
   @override
@@ -562,122 +447,96 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return <String, dynamic>{
       'id': serializer.toJson<String>(id),
-      'hanzi': serializer.toJson<String>(hanzi),
-      'pinyin': serializer.toJson<String>(pinyin),
-      'pinyinNormalized': serializer.toJson<String>(pinyinNormalized),
-      'characters': serializer.toJson<List<String>>(characters),
-      'meanings': serializer.toJson<List<Meaning>>(meanings),
-      'exampleSentences': serializer.toJson<List<ExampleSentence>>(
-        exampleSentences,
-      ),
-      'level': serializer.toJson<int>(level),
-      'wordType': serializer.toJson<String>(wordType),
-      'isBookmarked': serializer.toJson<bool>(isBookmarked),
-      'isMastered': serializer.toJson<bool>(isMastered),
-      'repetitions': serializer.toJson<int>(repetitions),
-      'easeFactor': serializer.toJson<double>(easeFactor),
-      'interval': serializer.toJson<int>(interval),
-      'nextReview': serializer.toJson<DateTime>(nextReview),
-      'needsSync': serializer.toJson<bool>(needsSync),
-      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+      'targetType': serializer.toJson<String>(targetType),
+      'targetId': serializer.toJson<String>(targetId),
+      'cardType': serializer.toJson<String>(cardType),
+      'state': serializer.toJson<String>(state),
+      'dueAt': serializer.toJson<DateTime?>(dueAt),
+      'stability': serializer.toJson<double?>(stability),
+      'difficulty': serializer.toJson<double?>(difficulty),
+      'elapsedDays': serializer.toJson<int>(elapsedDays),
+      'scheduledDays': serializer.toJson<int>(scheduledDays),
+      'reps': serializer.toJson<int>(reps),
+      'lapses': serializer.toJson<int>(lapses),
+      'lastReviewedAt': serializer.toJson<DateTime?>(lastReviewedAt),
     };
   }
 
-  VocabDbModel copyWith({
+  SrsCardDbModel copyWith({
     String? id,
-    String? hanzi,
-    String? pinyin,
-    String? pinyinNormalized,
-    List<String>? characters,
-    List<Meaning>? meanings,
-    List<ExampleSentence>? exampleSentences,
-    int? level,
-    String? wordType,
-    bool? isBookmarked,
-    bool? isMastered,
-    int? repetitions,
-    double? easeFactor,
-    int? interval,
-    DateTime? nextReview,
-    bool? needsSync,
-    DateTime? updatedAt,
-  }) => VocabDbModel(
+    String? targetType,
+    String? targetId,
+    String? cardType,
+    String? state,
+    Value<DateTime?> dueAt = const Value.absent(),
+    Value<double?> stability = const Value.absent(),
+    Value<double?> difficulty = const Value.absent(),
+    int? elapsedDays,
+    int? scheduledDays,
+    int? reps,
+    int? lapses,
+    Value<DateTime?> lastReviewedAt = const Value.absent(),
+  }) => SrsCardDbModel(
     id: id ?? this.id,
-    hanzi: hanzi ?? this.hanzi,
-    pinyin: pinyin ?? this.pinyin,
-    pinyinNormalized: pinyinNormalized ?? this.pinyinNormalized,
-    characters: characters ?? this.characters,
-    meanings: meanings ?? this.meanings,
-    exampleSentences: exampleSentences ?? this.exampleSentences,
-    level: level ?? this.level,
-    wordType: wordType ?? this.wordType,
-    isBookmarked: isBookmarked ?? this.isBookmarked,
-    isMastered: isMastered ?? this.isMastered,
-    repetitions: repetitions ?? this.repetitions,
-    easeFactor: easeFactor ?? this.easeFactor,
-    interval: interval ?? this.interval,
-    nextReview: nextReview ?? this.nextReview,
-    needsSync: needsSync ?? this.needsSync,
-    updatedAt: updatedAt ?? this.updatedAt,
+    targetType: targetType ?? this.targetType,
+    targetId: targetId ?? this.targetId,
+    cardType: cardType ?? this.cardType,
+    state: state ?? this.state,
+    dueAt: dueAt.present ? dueAt.value : this.dueAt,
+    stability: stability.present ? stability.value : this.stability,
+    difficulty: difficulty.present ? difficulty.value : this.difficulty,
+    elapsedDays: elapsedDays ?? this.elapsedDays,
+    scheduledDays: scheduledDays ?? this.scheduledDays,
+    reps: reps ?? this.reps,
+    lapses: lapses ?? this.lapses,
+    lastReviewedAt: lastReviewedAt.present
+        ? lastReviewedAt.value
+        : this.lastReviewedAt,
   );
-  VocabDbModel copyWithCompanion(VocabsTableCompanion data) {
-    return VocabDbModel(
+  SrsCardDbModel copyWithCompanion(SrsCardsTableCompanion data) {
+    return SrsCardDbModel(
       id: data.id.present ? data.id.value : this.id,
-      hanzi: data.hanzi.present ? data.hanzi.value : this.hanzi,
-      pinyin: data.pinyin.present ? data.pinyin.value : this.pinyin,
-      pinyinNormalized: data.pinyinNormalized.present
-          ? data.pinyinNormalized.value
-          : this.pinyinNormalized,
-      characters: data.characters.present
-          ? data.characters.value
-          : this.characters,
-      meanings: data.meanings.present ? data.meanings.value : this.meanings,
-      exampleSentences: data.exampleSentences.present
-          ? data.exampleSentences.value
-          : this.exampleSentences,
-      level: data.level.present ? data.level.value : this.level,
-      wordType: data.wordType.present ? data.wordType.value : this.wordType,
-      isBookmarked: data.isBookmarked.present
-          ? data.isBookmarked.value
-          : this.isBookmarked,
-      isMastered: data.isMastered.present
-          ? data.isMastered.value
-          : this.isMastered,
-      repetitions: data.repetitions.present
-          ? data.repetitions.value
-          : this.repetitions,
-      easeFactor: data.easeFactor.present
-          ? data.easeFactor.value
-          : this.easeFactor,
-      interval: data.interval.present ? data.interval.value : this.interval,
-      nextReview: data.nextReview.present
-          ? data.nextReview.value
-          : this.nextReview,
-      needsSync: data.needsSync.present ? data.needsSync.value : this.needsSync,
-      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      targetType: data.targetType.present
+          ? data.targetType.value
+          : this.targetType,
+      targetId: data.targetId.present ? data.targetId.value : this.targetId,
+      cardType: data.cardType.present ? data.cardType.value : this.cardType,
+      state: data.state.present ? data.state.value : this.state,
+      dueAt: data.dueAt.present ? data.dueAt.value : this.dueAt,
+      stability: data.stability.present ? data.stability.value : this.stability,
+      difficulty: data.difficulty.present
+          ? data.difficulty.value
+          : this.difficulty,
+      elapsedDays: data.elapsedDays.present
+          ? data.elapsedDays.value
+          : this.elapsedDays,
+      scheduledDays: data.scheduledDays.present
+          ? data.scheduledDays.value
+          : this.scheduledDays,
+      reps: data.reps.present ? data.reps.value : this.reps,
+      lapses: data.lapses.present ? data.lapses.value : this.lapses,
+      lastReviewedAt: data.lastReviewedAt.present
+          ? data.lastReviewedAt.value
+          : this.lastReviewedAt,
     );
   }
 
   @override
   String toString() {
-    return (StringBuffer('VocabDbModel(')
+    return (StringBuffer('SrsCardDbModel(')
           ..write('id: $id, ')
-          ..write('hanzi: $hanzi, ')
-          ..write('pinyin: $pinyin, ')
-          ..write('pinyinNormalized: $pinyinNormalized, ')
-          ..write('characters: $characters, ')
-          ..write('meanings: $meanings, ')
-          ..write('exampleSentences: $exampleSentences, ')
-          ..write('level: $level, ')
-          ..write('wordType: $wordType, ')
-          ..write('isBookmarked: $isBookmarked, ')
-          ..write('isMastered: $isMastered, ')
-          ..write('repetitions: $repetitions, ')
-          ..write('easeFactor: $easeFactor, ')
-          ..write('interval: $interval, ')
-          ..write('nextReview: $nextReview, ')
-          ..write('needsSync: $needsSync, ')
-          ..write('updatedAt: $updatedAt')
+          ..write('targetType: $targetType, ')
+          ..write('targetId: $targetId, ')
+          ..write('cardType: $cardType, ')
+          ..write('state: $state, ')
+          ..write('dueAt: $dueAt, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
+          ..write('elapsedDays: $elapsedDays, ')
+          ..write('scheduledDays: $scheduledDays, ')
+          ..write('reps: $reps, ')
+          ..write('lapses: $lapses, ')
+          ..write('lastReviewedAt: $lastReviewedAt')
           ..write(')'))
         .toString();
   }
@@ -685,194 +544,153 @@ class VocabDbModel extends DataClass implements Insertable<VocabDbModel> {
   @override
   int get hashCode => Object.hash(
     id,
-    hanzi,
-    pinyin,
-    pinyinNormalized,
-    characters,
-    meanings,
-    exampleSentences,
-    level,
-    wordType,
-    isBookmarked,
-    isMastered,
-    repetitions,
-    easeFactor,
-    interval,
-    nextReview,
-    needsSync,
-    updatedAt,
+    targetType,
+    targetId,
+    cardType,
+    state,
+    dueAt,
+    stability,
+    difficulty,
+    elapsedDays,
+    scheduledDays,
+    reps,
+    lapses,
+    lastReviewedAt,
   );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      (other is VocabDbModel &&
+      (other is SrsCardDbModel &&
           other.id == this.id &&
-          other.hanzi == this.hanzi &&
-          other.pinyin == this.pinyin &&
-          other.pinyinNormalized == this.pinyinNormalized &&
-          other.characters == this.characters &&
-          other.meanings == this.meanings &&
-          other.exampleSentences == this.exampleSentences &&
-          other.level == this.level &&
-          other.wordType == this.wordType &&
-          other.isBookmarked == this.isBookmarked &&
-          other.isMastered == this.isMastered &&
-          other.repetitions == this.repetitions &&
-          other.easeFactor == this.easeFactor &&
-          other.interval == this.interval &&
-          other.nextReview == this.nextReview &&
-          other.needsSync == this.needsSync &&
-          other.updatedAt == this.updatedAt);
+          other.targetType == this.targetType &&
+          other.targetId == this.targetId &&
+          other.cardType == this.cardType &&
+          other.state == this.state &&
+          other.dueAt == this.dueAt &&
+          other.stability == this.stability &&
+          other.difficulty == this.difficulty &&
+          other.elapsedDays == this.elapsedDays &&
+          other.scheduledDays == this.scheduledDays &&
+          other.reps == this.reps &&
+          other.lapses == this.lapses &&
+          other.lastReviewedAt == this.lastReviewedAt);
 }
 
-class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
+class SrsCardsTableCompanion extends UpdateCompanion<SrsCardDbModel> {
   final Value<String> id;
-  final Value<String> hanzi;
-  final Value<String> pinyin;
-  final Value<String> pinyinNormalized;
-  final Value<List<String>> characters;
-  final Value<List<Meaning>> meanings;
-  final Value<List<ExampleSentence>> exampleSentences;
-  final Value<int> level;
-  final Value<String> wordType;
-  final Value<bool> isBookmarked;
-  final Value<bool> isMastered;
-  final Value<int> repetitions;
-  final Value<double> easeFactor;
-  final Value<int> interval;
-  final Value<DateTime> nextReview;
-  final Value<bool> needsSync;
-  final Value<DateTime> updatedAt;
+  final Value<String> targetType;
+  final Value<String> targetId;
+  final Value<String> cardType;
+  final Value<String> state;
+  final Value<DateTime?> dueAt;
+  final Value<double?> stability;
+  final Value<double?> difficulty;
+  final Value<int> elapsedDays;
+  final Value<int> scheduledDays;
+  final Value<int> reps;
+  final Value<int> lapses;
+  final Value<DateTime?> lastReviewedAt;
   final Value<int> rowid;
-  const VocabsTableCompanion({
+  const SrsCardsTableCompanion({
     this.id = const Value.absent(),
-    this.hanzi = const Value.absent(),
-    this.pinyin = const Value.absent(),
-    this.pinyinNormalized = const Value.absent(),
-    this.characters = const Value.absent(),
-    this.meanings = const Value.absent(),
-    this.exampleSentences = const Value.absent(),
-    this.level = const Value.absent(),
-    this.wordType = const Value.absent(),
-    this.isBookmarked = const Value.absent(),
-    this.isMastered = const Value.absent(),
-    this.repetitions = const Value.absent(),
-    this.easeFactor = const Value.absent(),
-    this.interval = const Value.absent(),
-    this.nextReview = const Value.absent(),
-    this.needsSync = const Value.absent(),
-    this.updatedAt = const Value.absent(),
+    this.targetType = const Value.absent(),
+    this.targetId = const Value.absent(),
+    this.cardType = const Value.absent(),
+    this.state = const Value.absent(),
+    this.dueAt = const Value.absent(),
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
+    this.elapsedDays = const Value.absent(),
+    this.scheduledDays = const Value.absent(),
+    this.reps = const Value.absent(),
+    this.lapses = const Value.absent(),
+    this.lastReviewedAt = const Value.absent(),
     this.rowid = const Value.absent(),
   });
-  VocabsTableCompanion.insert({
+  SrsCardsTableCompanion.insert({
     required String id,
-    required String hanzi,
-    required String pinyin,
-    required String pinyinNormalized,
-    required List<String> characters,
-    required List<Meaning> meanings,
-    required List<ExampleSentence> exampleSentences,
-    required int level,
-    required String wordType,
-    this.isBookmarked = const Value.absent(),
-    this.isMastered = const Value.absent(),
-    this.repetitions = const Value.absent(),
-    this.easeFactor = const Value.absent(),
-    this.interval = const Value.absent(),
-    required DateTime nextReview,
-    this.needsSync = const Value.absent(),
-    this.updatedAt = const Value.absent(),
+    required String targetType,
+    required String targetId,
+    required String cardType,
+    required String state,
+    this.dueAt = const Value.absent(),
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
+    this.elapsedDays = const Value.absent(),
+    this.scheduledDays = const Value.absent(),
+    this.reps = const Value.absent(),
+    this.lapses = const Value.absent(),
+    this.lastReviewedAt = const Value.absent(),
     this.rowid = const Value.absent(),
   }) : id = Value(id),
-       hanzi = Value(hanzi),
-       pinyin = Value(pinyin),
-       pinyinNormalized = Value(pinyinNormalized),
-       characters = Value(characters),
-       meanings = Value(meanings),
-       exampleSentences = Value(exampleSentences),
-       level = Value(level),
-       wordType = Value(wordType),
-       nextReview = Value(nextReview);
-  static Insertable<VocabDbModel> custom({
+       targetType = Value(targetType),
+       targetId = Value(targetId),
+       cardType = Value(cardType),
+       state = Value(state);
+  static Insertable<SrsCardDbModel> custom({
     Expression<String>? id,
-    Expression<String>? hanzi,
-    Expression<String>? pinyin,
-    Expression<String>? pinyinNormalized,
-    Expression<String>? characters,
-    Expression<String>? meanings,
-    Expression<String>? exampleSentences,
-    Expression<int>? level,
-    Expression<String>? wordType,
-    Expression<bool>? isBookmarked,
-    Expression<bool>? isMastered,
-    Expression<int>? repetitions,
-    Expression<double>? easeFactor,
-    Expression<int>? interval,
-    Expression<DateTime>? nextReview,
-    Expression<bool>? needsSync,
-    Expression<DateTime>? updatedAt,
+    Expression<String>? targetType,
+    Expression<String>? targetId,
+    Expression<String>? cardType,
+    Expression<String>? state,
+    Expression<DateTime>? dueAt,
+    Expression<double>? stability,
+    Expression<double>? difficulty,
+    Expression<int>? elapsedDays,
+    Expression<int>? scheduledDays,
+    Expression<int>? reps,
+    Expression<int>? lapses,
+    Expression<DateTime>? lastReviewedAt,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
-      if (hanzi != null) 'hanzi': hanzi,
-      if (pinyin != null) 'pinyin': pinyin,
-      if (pinyinNormalized != null) 'pinyin_normalized': pinyinNormalized,
-      if (characters != null) 'characters': characters,
-      if (meanings != null) 'meanings': meanings,
-      if (exampleSentences != null) 'example_sentences': exampleSentences,
-      if (level != null) 'level': level,
-      if (wordType != null) 'word_type': wordType,
-      if (isBookmarked != null) 'is_bookmarked': isBookmarked,
-      if (isMastered != null) 'is_mastered': isMastered,
-      if (repetitions != null) 'repetitions': repetitions,
-      if (easeFactor != null) 'ease_factor': easeFactor,
-      if (interval != null) 'interval': interval,
-      if (nextReview != null) 'next_review': nextReview,
-      if (needsSync != null) 'needs_sync': needsSync,
-      if (updatedAt != null) 'updated_at': updatedAt,
+      if (targetType != null) 'target_type': targetType,
+      if (targetId != null) 'target_id': targetId,
+      if (cardType != null) 'card_type': cardType,
+      if (state != null) 'state': state,
+      if (dueAt != null) 'due_at': dueAt,
+      if (stability != null) 'stability': stability,
+      if (difficulty != null) 'difficulty': difficulty,
+      if (elapsedDays != null) 'elapsed_days': elapsedDays,
+      if (scheduledDays != null) 'scheduled_days': scheduledDays,
+      if (reps != null) 'reps': reps,
+      if (lapses != null) 'lapses': lapses,
+      if (lastReviewedAt != null) 'last_reviewed_at': lastReviewedAt,
       if (rowid != null) 'rowid': rowid,
     });
   }
 
-  VocabsTableCompanion copyWith({
+  SrsCardsTableCompanion copyWith({
     Value<String>? id,
-    Value<String>? hanzi,
-    Value<String>? pinyin,
-    Value<String>? pinyinNormalized,
-    Value<List<String>>? characters,
-    Value<List<Meaning>>? meanings,
-    Value<List<ExampleSentence>>? exampleSentences,
-    Value<int>? level,
-    Value<String>? wordType,
-    Value<bool>? isBookmarked,
-    Value<bool>? isMastered,
-    Value<int>? repetitions,
-    Value<double>? easeFactor,
-    Value<int>? interval,
-    Value<DateTime>? nextReview,
-    Value<bool>? needsSync,
-    Value<DateTime>? updatedAt,
+    Value<String>? targetType,
+    Value<String>? targetId,
+    Value<String>? cardType,
+    Value<String>? state,
+    Value<DateTime?>? dueAt,
+    Value<double?>? stability,
+    Value<double?>? difficulty,
+    Value<int>? elapsedDays,
+    Value<int>? scheduledDays,
+    Value<int>? reps,
+    Value<int>? lapses,
+    Value<DateTime?>? lastReviewedAt,
     Value<int>? rowid,
   }) {
-    return VocabsTableCompanion(
+    return SrsCardsTableCompanion(
       id: id ?? this.id,
-      hanzi: hanzi ?? this.hanzi,
-      pinyin: pinyin ?? this.pinyin,
-      pinyinNormalized: pinyinNormalized ?? this.pinyinNormalized,
-      characters: characters ?? this.characters,
-      meanings: meanings ?? this.meanings,
-      exampleSentences: exampleSentences ?? this.exampleSentences,
-      level: level ?? this.level,
-      wordType: wordType ?? this.wordType,
-      isBookmarked: isBookmarked ?? this.isBookmarked,
-      isMastered: isMastered ?? this.isMastered,
-      repetitions: repetitions ?? this.repetitions,
-      easeFactor: easeFactor ?? this.easeFactor,
-      interval: interval ?? this.interval,
-      nextReview: nextReview ?? this.nextReview,
-      needsSync: needsSync ?? this.needsSync,
-      updatedAt: updatedAt ?? this.updatedAt,
+      targetType: targetType ?? this.targetType,
+      targetId: targetId ?? this.targetId,
+      cardType: cardType ?? this.cardType,
+      state: state ?? this.state,
+      dueAt: dueAt ?? this.dueAt,
+      stability: stability ?? this.stability,
+      difficulty: difficulty ?? this.difficulty,
+      elapsedDays: elapsedDays ?? this.elapsedDays,
+      scheduledDays: scheduledDays ?? this.scheduledDays,
+      reps: reps ?? this.reps,
+      lapses: lapses ?? this.lapses,
+      lastReviewedAt: lastReviewedAt ?? this.lastReviewedAt,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -883,61 +701,41 @@ class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
     if (id.present) {
       map['id'] = Variable<String>(id.value);
     }
-    if (hanzi.present) {
-      map['hanzi'] = Variable<String>(hanzi.value);
+    if (targetType.present) {
+      map['target_type'] = Variable<String>(targetType.value);
     }
-    if (pinyin.present) {
-      map['pinyin'] = Variable<String>(pinyin.value);
+    if (targetId.present) {
+      map['target_id'] = Variable<String>(targetId.value);
     }
-    if (pinyinNormalized.present) {
-      map['pinyin_normalized'] = Variable<String>(pinyinNormalized.value);
+    if (cardType.present) {
+      map['card_type'] = Variable<String>(cardType.value);
     }
-    if (characters.present) {
-      map['characters'] = Variable<String>(
-        $VocabsTableTable.$convertercharacters.toSql(characters.value),
-      );
+    if (state.present) {
+      map['state'] = Variable<String>(state.value);
     }
-    if (meanings.present) {
-      map['meanings'] = Variable<String>(
-        $VocabsTableTable.$convertermeanings.toSql(meanings.value),
-      );
+    if (dueAt.present) {
+      map['due_at'] = Variable<DateTime>(dueAt.value);
     }
-    if (exampleSentences.present) {
-      map['example_sentences'] = Variable<String>(
-        $VocabsTableTable.$converterexampleSentences.toSql(
-          exampleSentences.value,
-        ),
-      );
+    if (stability.present) {
+      map['stability'] = Variable<double>(stability.value);
     }
-    if (level.present) {
-      map['level'] = Variable<int>(level.value);
+    if (difficulty.present) {
+      map['difficulty'] = Variable<double>(difficulty.value);
     }
-    if (wordType.present) {
-      map['word_type'] = Variable<String>(wordType.value);
+    if (elapsedDays.present) {
+      map['elapsed_days'] = Variable<int>(elapsedDays.value);
     }
-    if (isBookmarked.present) {
-      map['is_bookmarked'] = Variable<bool>(isBookmarked.value);
+    if (scheduledDays.present) {
+      map['scheduled_days'] = Variable<int>(scheduledDays.value);
     }
-    if (isMastered.present) {
-      map['is_mastered'] = Variable<bool>(isMastered.value);
+    if (reps.present) {
+      map['reps'] = Variable<int>(reps.value);
     }
-    if (repetitions.present) {
-      map['repetitions'] = Variable<int>(repetitions.value);
+    if (lapses.present) {
+      map['lapses'] = Variable<int>(lapses.value);
     }
-    if (easeFactor.present) {
-      map['ease_factor'] = Variable<double>(easeFactor.value);
-    }
-    if (interval.present) {
-      map['interval'] = Variable<int>(interval.value);
-    }
-    if (nextReview.present) {
-      map['next_review'] = Variable<DateTime>(nextReview.value);
-    }
-    if (needsSync.present) {
-      map['needs_sync'] = Variable<bool>(needsSync.value);
-    }
-    if (updatedAt.present) {
-      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    if (lastReviewedAt.present) {
+      map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt.value);
     }
     if (rowid.present) {
       map['rowid'] = Variable<int>(rowid.value);
@@ -947,902 +745,225 @@ class VocabsTableCompanion extends UpdateCompanion<VocabDbModel> {
 
   @override
   String toString() {
-    return (StringBuffer('VocabsTableCompanion(')
+    return (StringBuffer('SrsCardsTableCompanion(')
           ..write('id: $id, ')
-          ..write('hanzi: $hanzi, ')
-          ..write('pinyin: $pinyin, ')
-          ..write('pinyinNormalized: $pinyinNormalized, ')
-          ..write('characters: $characters, ')
-          ..write('meanings: $meanings, ')
-          ..write('exampleSentences: $exampleSentences, ')
-          ..write('level: $level, ')
-          ..write('wordType: $wordType, ')
-          ..write('isBookmarked: $isBookmarked, ')
-          ..write('isMastered: $isMastered, ')
-          ..write('repetitions: $repetitions, ')
-          ..write('easeFactor: $easeFactor, ')
-          ..write('interval: $interval, ')
-          ..write('nextReview: $nextReview, ')
-          ..write('needsSync: $needsSync, ')
-          ..write('updatedAt: $updatedAt, ')
+          ..write('targetType: $targetType, ')
+          ..write('targetId: $targetId, ')
+          ..write('cardType: $cardType, ')
+          ..write('state: $state, ')
+          ..write('dueAt: $dueAt, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
+          ..write('elapsedDays: $elapsedDays, ')
+          ..write('scheduledDays: $scheduledDays, ')
+          ..write('reps: $reps, ')
+          ..write('lapses: $lapses, ')
+          ..write('lastReviewedAt: $lastReviewedAt, ')
           ..write('rowid: $rowid')
           ..write(')'))
         .toString();
   }
 }
 
-class $CharactersTableTable extends CharactersTable
-    with TableInfo<$CharactersTableTable, CharacterDbModel> {
+class $SrsReviewLogsTableTable extends SrsReviewLogsTable
+    with TableInfo<$SrsReviewLogsTableTable, SrsReviewLogDbModel> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
-  $CharactersTableTable(this.attachedDatabase, [this._alias]);
-  static const VerificationMeta _charMeta = const VerificationMeta('char');
-  @override
-  late final GeneratedColumn<String> char = GeneratedColumn<String>(
-    'char',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  @override
-  late final GeneratedColumnWithTypeConverter<List<String>, String> strokes =
-      GeneratedColumn<String>(
-        'strokes',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<List<String>>($CharactersTableTable.$converterstrokes);
-  static const VerificationMeta _hskLevelMeta = const VerificationMeta(
-    'hskLevel',
-  );
-  @override
-  late final GeneratedColumn<int> hskLevel = GeneratedColumn<int>(
-    'hsk_level',
-    aliasedName,
-    true,
-    type: DriftSqlType.int,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _radicalMeta = const VerificationMeta(
-    'radical',
-  );
-  @override
-  late final GeneratedColumn<String> radical = GeneratedColumn<String>(
-    'radical',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _strokeCountMeta = const VerificationMeta(
-    'strokeCount',
-  );
-  @override
-  late final GeneratedColumn<int> strokeCount = GeneratedColumn<int>(
-    'stroke_count',
-    aliasedName,
-    true,
-    type: DriftSqlType.int,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _pinyinMeta = const VerificationMeta('pinyin');
-  @override
-  late final GeneratedColumn<String> pinyin = GeneratedColumn<String>(
-    'pinyin',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _pinyinNormalizedMeta = const VerificationMeta(
-    'pinyinNormalized',
-  );
-  @override
-  late final GeneratedColumn<String> pinyinNormalized = GeneratedColumn<String>(
-    'pinyin_normalized',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _definitionMeta = const VerificationMeta(
-    'definition',
-  );
-  @override
-  late final GeneratedColumn<String> definition = GeneratedColumn<String>(
-    'definition',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _definitionViMeta = const VerificationMeta(
-    'definitionVi',
-  );
-  @override
-  late final GeneratedColumn<String> definitionVi = GeneratedColumn<String>(
-    'definition_vi',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
-  @override
-  List<GeneratedColumn> get $columns => [
-    char,
-    strokes,
-    hskLevel,
-    radical,
-    strokeCount,
-    pinyin,
-    pinyinNormalized,
-    definition,
-    definitionVi,
-  ];
-  @override
-  String get aliasedName => _alias ?? actualTableName;
-  @override
-  String get actualTableName => $name;
-  static const String $name = 'characters_table';
-  @override
-  VerificationContext validateIntegrity(
-    Insertable<CharacterDbModel> instance, {
-    bool isInserting = false,
-  }) {
-    final context = VerificationContext();
-    final data = instance.toColumns(true);
-    if (data.containsKey('char')) {
-      context.handle(
-        _charMeta,
-        char.isAcceptableOrUnknown(data['char']!, _charMeta),
-      );
-    } else if (isInserting) {
-      context.missing(_charMeta);
-    }
-    if (data.containsKey('hsk_level')) {
-      context.handle(
-        _hskLevelMeta,
-        hskLevel.isAcceptableOrUnknown(data['hsk_level']!, _hskLevelMeta),
-      );
-    }
-    if (data.containsKey('radical')) {
-      context.handle(
-        _radicalMeta,
-        radical.isAcceptableOrUnknown(data['radical']!, _radicalMeta),
-      );
-    }
-    if (data.containsKey('stroke_count')) {
-      context.handle(
-        _strokeCountMeta,
-        strokeCount.isAcceptableOrUnknown(
-          data['stroke_count']!,
-          _strokeCountMeta,
-        ),
-      );
-    }
-    if (data.containsKey('pinyin')) {
-      context.handle(
-        _pinyinMeta,
-        pinyin.isAcceptableOrUnknown(data['pinyin']!, _pinyinMeta),
-      );
-    }
-    if (data.containsKey('pinyin_normalized')) {
-      context.handle(
-        _pinyinNormalizedMeta,
-        pinyinNormalized.isAcceptableOrUnknown(
-          data['pinyin_normalized']!,
-          _pinyinNormalizedMeta,
-        ),
-      );
-    }
-    if (data.containsKey('definition')) {
-      context.handle(
-        _definitionMeta,
-        definition.isAcceptableOrUnknown(data['definition']!, _definitionMeta),
-      );
-    }
-    if (data.containsKey('definition_vi')) {
-      context.handle(
-        _definitionViMeta,
-        definitionVi.isAcceptableOrUnknown(
-          data['definition_vi']!,
-          _definitionViMeta,
-        ),
-      );
-    }
-    return context;
-  }
-
-  @override
-  Set<GeneratedColumn> get $primaryKey => {char};
-  @override
-  CharacterDbModel map(Map<String, dynamic> data, {String? tablePrefix}) {
-    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
-    return CharacterDbModel(
-      char: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}char'],
-      )!,
-      strokes: $CharactersTableTable.$converterstrokes.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}strokes'],
-        )!,
-      ),
-      hskLevel: attachedDatabase.typeMapping.read(
-        DriftSqlType.int,
-        data['${effectivePrefix}hsk_level'],
-      ),
-      radical: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}radical'],
-      ),
-      strokeCount: attachedDatabase.typeMapping.read(
-        DriftSqlType.int,
-        data['${effectivePrefix}stroke_count'],
-      ),
-      pinyin: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}pinyin'],
-      ),
-      pinyinNormalized: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}pinyin_normalized'],
-      ),
-      definition: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}definition'],
-      ),
-      definitionVi: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}definition_vi'],
-      ),
-    );
-  }
-
-  @override
-  $CharactersTableTable createAlias(String alias) {
-    return $CharactersTableTable(attachedDatabase, alias);
-  }
-
-  static TypeConverter<List<String>, String> $converterstrokes =
-      const StringListConverter();
-}
-
-class CharacterDbModel extends DataClass
-    implements Insertable<CharacterDbModel> {
-  final String char;
-  final List<String> strokes;
-  final int? hskLevel;
-  final String? radical;
-  final int? strokeCount;
-  final String? pinyin;
-  final String? pinyinNormalized;
-  final String? definition;
-  final String? definitionVi;
-  const CharacterDbModel({
-    required this.char,
-    required this.strokes,
-    this.hskLevel,
-    this.radical,
-    this.strokeCount,
-    this.pinyin,
-    this.pinyinNormalized,
-    this.definition,
-    this.definitionVi,
-  });
-  @override
-  Map<String, Expression> toColumns(bool nullToAbsent) {
-    final map = <String, Expression>{};
-    map['char'] = Variable<String>(char);
-    {
-      map['strokes'] = Variable<String>(
-        $CharactersTableTable.$converterstrokes.toSql(strokes),
-      );
-    }
-    if (!nullToAbsent || hskLevel != null) {
-      map['hsk_level'] = Variable<int>(hskLevel);
-    }
-    if (!nullToAbsent || radical != null) {
-      map['radical'] = Variable<String>(radical);
-    }
-    if (!nullToAbsent || strokeCount != null) {
-      map['stroke_count'] = Variable<int>(strokeCount);
-    }
-    if (!nullToAbsent || pinyin != null) {
-      map['pinyin'] = Variable<String>(pinyin);
-    }
-    if (!nullToAbsent || pinyinNormalized != null) {
-      map['pinyin_normalized'] = Variable<String>(pinyinNormalized);
-    }
-    if (!nullToAbsent || definition != null) {
-      map['definition'] = Variable<String>(definition);
-    }
-    if (!nullToAbsent || definitionVi != null) {
-      map['definition_vi'] = Variable<String>(definitionVi);
-    }
-    return map;
-  }
-
-  CharactersTableCompanion toCompanion(bool nullToAbsent) {
-    return CharactersTableCompanion(
-      char: Value(char),
-      strokes: Value(strokes),
-      hskLevel: hskLevel == null && nullToAbsent
-          ? const Value.absent()
-          : Value(hskLevel),
-      radical: radical == null && nullToAbsent
-          ? const Value.absent()
-          : Value(radical),
-      strokeCount: strokeCount == null && nullToAbsent
-          ? const Value.absent()
-          : Value(strokeCount),
-      pinyin: pinyin == null && nullToAbsent
-          ? const Value.absent()
-          : Value(pinyin),
-      pinyinNormalized: pinyinNormalized == null && nullToAbsent
-          ? const Value.absent()
-          : Value(pinyinNormalized),
-      definition: definition == null && nullToAbsent
-          ? const Value.absent()
-          : Value(definition),
-      definitionVi: definitionVi == null && nullToAbsent
-          ? const Value.absent()
-          : Value(definitionVi),
-    );
-  }
-
-  factory CharacterDbModel.fromJson(
-    Map<String, dynamic> json, {
-    ValueSerializer? serializer,
-  }) {
-    serializer ??= driftRuntimeOptions.defaultSerializer;
-    return CharacterDbModel(
-      char: serializer.fromJson<String>(json['char']),
-      strokes: serializer.fromJson<List<String>>(json['strokes']),
-      hskLevel: serializer.fromJson<int?>(json['hskLevel']),
-      radical: serializer.fromJson<String?>(json['radical']),
-      strokeCount: serializer.fromJson<int?>(json['strokeCount']),
-      pinyin: serializer.fromJson<String?>(json['pinyin']),
-      pinyinNormalized: serializer.fromJson<String?>(json['pinyinNormalized']),
-      definition: serializer.fromJson<String?>(json['definition']),
-      definitionVi: serializer.fromJson<String?>(json['definitionVi']),
-    );
-  }
-  @override
-  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
-    serializer ??= driftRuntimeOptions.defaultSerializer;
-    return <String, dynamic>{
-      'char': serializer.toJson<String>(char),
-      'strokes': serializer.toJson<List<String>>(strokes),
-      'hskLevel': serializer.toJson<int?>(hskLevel),
-      'radical': serializer.toJson<String?>(radical),
-      'strokeCount': serializer.toJson<int?>(strokeCount),
-      'pinyin': serializer.toJson<String?>(pinyin),
-      'pinyinNormalized': serializer.toJson<String?>(pinyinNormalized),
-      'definition': serializer.toJson<String?>(definition),
-      'definitionVi': serializer.toJson<String?>(definitionVi),
-    };
-  }
-
-  CharacterDbModel copyWith({
-    String? char,
-    List<String>? strokes,
-    Value<int?> hskLevel = const Value.absent(),
-    Value<String?> radical = const Value.absent(),
-    Value<int?> strokeCount = const Value.absent(),
-    Value<String?> pinyin = const Value.absent(),
-    Value<String?> pinyinNormalized = const Value.absent(),
-    Value<String?> definition = const Value.absent(),
-    Value<String?> definitionVi = const Value.absent(),
-  }) => CharacterDbModel(
-    char: char ?? this.char,
-    strokes: strokes ?? this.strokes,
-    hskLevel: hskLevel.present ? hskLevel.value : this.hskLevel,
-    radical: radical.present ? radical.value : this.radical,
-    strokeCount: strokeCount.present ? strokeCount.value : this.strokeCount,
-    pinyin: pinyin.present ? pinyin.value : this.pinyin,
-    pinyinNormalized: pinyinNormalized.present
-        ? pinyinNormalized.value
-        : this.pinyinNormalized,
-    definition: definition.present ? definition.value : this.definition,
-    definitionVi: definitionVi.present ? definitionVi.value : this.definitionVi,
-  );
-  CharacterDbModel copyWithCompanion(CharactersTableCompanion data) {
-    return CharacterDbModel(
-      char: data.char.present ? data.char.value : this.char,
-      strokes: data.strokes.present ? data.strokes.value : this.strokes,
-      hskLevel: data.hskLevel.present ? data.hskLevel.value : this.hskLevel,
-      radical: data.radical.present ? data.radical.value : this.radical,
-      strokeCount: data.strokeCount.present
-          ? data.strokeCount.value
-          : this.strokeCount,
-      pinyin: data.pinyin.present ? data.pinyin.value : this.pinyin,
-      pinyinNormalized: data.pinyinNormalized.present
-          ? data.pinyinNormalized.value
-          : this.pinyinNormalized,
-      definition: data.definition.present
-          ? data.definition.value
-          : this.definition,
-      definitionVi: data.definitionVi.present
-          ? data.definitionVi.value
-          : this.definitionVi,
-    );
-  }
-
-  @override
-  String toString() {
-    return (StringBuffer('CharacterDbModel(')
-          ..write('char: $char, ')
-          ..write('strokes: $strokes, ')
-          ..write('hskLevel: $hskLevel, ')
-          ..write('radical: $radical, ')
-          ..write('strokeCount: $strokeCount, ')
-          ..write('pinyin: $pinyin, ')
-          ..write('pinyinNormalized: $pinyinNormalized, ')
-          ..write('definition: $definition, ')
-          ..write('definitionVi: $definitionVi')
-          ..write(')'))
-        .toString();
-  }
-
-  @override
-  int get hashCode => Object.hash(
-    char,
-    strokes,
-    hskLevel,
-    radical,
-    strokeCount,
-    pinyin,
-    pinyinNormalized,
-    definition,
-    definitionVi,
-  );
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      (other is CharacterDbModel &&
-          other.char == this.char &&
-          other.strokes == this.strokes &&
-          other.hskLevel == this.hskLevel &&
-          other.radical == this.radical &&
-          other.strokeCount == this.strokeCount &&
-          other.pinyin == this.pinyin &&
-          other.pinyinNormalized == this.pinyinNormalized &&
-          other.definition == this.definition &&
-          other.definitionVi == this.definitionVi);
-}
-
-class CharactersTableCompanion extends UpdateCompanion<CharacterDbModel> {
-  final Value<String> char;
-  final Value<List<String>> strokes;
-  final Value<int?> hskLevel;
-  final Value<String?> radical;
-  final Value<int?> strokeCount;
-  final Value<String?> pinyin;
-  final Value<String?> pinyinNormalized;
-  final Value<String?> definition;
-  final Value<String?> definitionVi;
-  final Value<int> rowid;
-  const CharactersTableCompanion({
-    this.char = const Value.absent(),
-    this.strokes = const Value.absent(),
-    this.hskLevel = const Value.absent(),
-    this.radical = const Value.absent(),
-    this.strokeCount = const Value.absent(),
-    this.pinyin = const Value.absent(),
-    this.pinyinNormalized = const Value.absent(),
-    this.definition = const Value.absent(),
-    this.definitionVi = const Value.absent(),
-    this.rowid = const Value.absent(),
-  });
-  CharactersTableCompanion.insert({
-    required String char,
-    required List<String> strokes,
-    this.hskLevel = const Value.absent(),
-    this.radical = const Value.absent(),
-    this.strokeCount = const Value.absent(),
-    this.pinyin = const Value.absent(),
-    this.pinyinNormalized = const Value.absent(),
-    this.definition = const Value.absent(),
-    this.definitionVi = const Value.absent(),
-    this.rowid = const Value.absent(),
-  }) : char = Value(char),
-       strokes = Value(strokes);
-  static Insertable<CharacterDbModel> custom({
-    Expression<String>? char,
-    Expression<String>? strokes,
-    Expression<int>? hskLevel,
-    Expression<String>? radical,
-    Expression<int>? strokeCount,
-    Expression<String>? pinyin,
-    Expression<String>? pinyinNormalized,
-    Expression<String>? definition,
-    Expression<String>? definitionVi,
-    Expression<int>? rowid,
-  }) {
-    return RawValuesInsertable({
-      if (char != null) 'char': char,
-      if (strokes != null) 'strokes': strokes,
-      if (hskLevel != null) 'hsk_level': hskLevel,
-      if (radical != null) 'radical': radical,
-      if (strokeCount != null) 'stroke_count': strokeCount,
-      if (pinyin != null) 'pinyin': pinyin,
-      if (pinyinNormalized != null) 'pinyin_normalized': pinyinNormalized,
-      if (definition != null) 'definition': definition,
-      if (definitionVi != null) 'definition_vi': definitionVi,
-      if (rowid != null) 'rowid': rowid,
-    });
-  }
-
-  CharactersTableCompanion copyWith({
-    Value<String>? char,
-    Value<List<String>>? strokes,
-    Value<int?>? hskLevel,
-    Value<String?>? radical,
-    Value<int?>? strokeCount,
-    Value<String?>? pinyin,
-    Value<String?>? pinyinNormalized,
-    Value<String?>? definition,
-    Value<String?>? definitionVi,
-    Value<int>? rowid,
-  }) {
-    return CharactersTableCompanion(
-      char: char ?? this.char,
-      strokes: strokes ?? this.strokes,
-      hskLevel: hskLevel ?? this.hskLevel,
-      radical: radical ?? this.radical,
-      strokeCount: strokeCount ?? this.strokeCount,
-      pinyin: pinyin ?? this.pinyin,
-      pinyinNormalized: pinyinNormalized ?? this.pinyinNormalized,
-      definition: definition ?? this.definition,
-      definitionVi: definitionVi ?? this.definitionVi,
-      rowid: rowid ?? this.rowid,
-    );
-  }
-
-  @override
-  Map<String, Expression> toColumns(bool nullToAbsent) {
-    final map = <String, Expression>{};
-    if (char.present) {
-      map['char'] = Variable<String>(char.value);
-    }
-    if (strokes.present) {
-      map['strokes'] = Variable<String>(
-        $CharactersTableTable.$converterstrokes.toSql(strokes.value),
-      );
-    }
-    if (hskLevel.present) {
-      map['hsk_level'] = Variable<int>(hskLevel.value);
-    }
-    if (radical.present) {
-      map['radical'] = Variable<String>(radical.value);
-    }
-    if (strokeCount.present) {
-      map['stroke_count'] = Variable<int>(strokeCount.value);
-    }
-    if (pinyin.present) {
-      map['pinyin'] = Variable<String>(pinyin.value);
-    }
-    if (pinyinNormalized.present) {
-      map['pinyin_normalized'] = Variable<String>(pinyinNormalized.value);
-    }
-    if (definition.present) {
-      map['definition'] = Variable<String>(definition.value);
-    }
-    if (definitionVi.present) {
-      map['definition_vi'] = Variable<String>(definitionVi.value);
-    }
-    if (rowid.present) {
-      map['rowid'] = Variable<int>(rowid.value);
-    }
-    return map;
-  }
-
-  @override
-  String toString() {
-    return (StringBuffer('CharactersTableCompanion(')
-          ..write('char: $char, ')
-          ..write('strokes: $strokes, ')
-          ..write('hskLevel: $hskLevel, ')
-          ..write('radical: $radical, ')
-          ..write('strokeCount: $strokeCount, ')
-          ..write('pinyin: $pinyin, ')
-          ..write('pinyinNormalized: $pinyinNormalized, ')
-          ..write('definition: $definition, ')
-          ..write('definitionVi: $definitionVi, ')
-          ..write('rowid: $rowid')
-          ..write(')'))
-        .toString();
-  }
-}
-
-class $GrammarPointsTableTable extends GrammarPointsTable
-    with TableInfo<$GrammarPointsTableTable, GrammarPointDbModel> {
-  @override
-  final GeneratedDatabase attachedDatabase;
-  final String? _alias;
-  $GrammarPointsTableTable(this.attachedDatabase, [this._alias]);
+  $SrsReviewLogsTableTable(this.attachedDatabase, [this._alias]);
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
-  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
     'id',
     aliasedName,
     false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _titleMeta = const VerificationMeta('title');
-  @override
-  late final GeneratedColumn<String> title = GeneratedColumn<String>(
-    'title',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _structureMeta = const VerificationMeta(
-    'structure',
-  );
-  @override
-  late final GeneratedColumn<String> structure = GeneratedColumn<String>(
-    'structure',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _explanationMeta = const VerificationMeta(
-    'explanation',
-  );
-  @override
-  late final GeneratedColumn<String> explanation = GeneratedColumn<String>(
-    'explanation',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _levelMeta = const VerificationMeta('level');
-  @override
-  late final GeneratedColumn<int> level = GeneratedColumn<int>(
-    'level',
-    aliasedName,
-    false,
+    hasAutoIncrement: true,
     type: DriftSqlType.int,
-    requiredDuringInsert: true,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
   );
-  static const VerificationMeta _categoryMeta = const VerificationMeta(
-    'category',
-  );
+  static const VerificationMeta _cardIdMeta = const VerificationMeta('cardId');
   @override
-  late final GeneratedColumn<String> category = GeneratedColumn<String>(
-    'category',
+  late final GeneratedColumn<String> cardId = GeneratedColumn<String>(
+    'card_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES srs_cards_table (id)',
+    ),
+  );
+  static const VerificationMeta _ratingMeta = const VerificationMeta('rating');
+  @override
+  late final GeneratedColumn<String> rating = GeneratedColumn<String>(
+    'rating',
     aliasedName,
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  @override
-  late final GeneratedColumnWithTypeConverter<List<GrammarExample>, String>
-  examples =
-      GeneratedColumn<String>(
-        'examples',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<List<GrammarExample>>(
-        $GrammarPointsTableTable.$converterexamples,
-      );
-  @override
-  late final GeneratedColumnWithTypeConverter<List<String>, String>
-  relatedGrammar =
-      GeneratedColumn<String>(
-        'related_grammar',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<List<String>>(
-        $GrammarPointsTableTable.$converterrelatedGrammar,
-      );
-  static const VerificationMeta _isBookmarkedMeta = const VerificationMeta(
-    'isBookmarked',
+  static const VerificationMeta _reviewedAtMeta = const VerificationMeta(
+    'reviewedAt',
   );
   @override
-  late final GeneratedColumn<bool> isBookmarked = GeneratedColumn<bool>(
-    'is_bookmarked',
-    aliasedName,
-    false,
-    type: DriftSqlType.bool,
-    requiredDuringInsert: false,
-    defaultConstraints: GeneratedColumn.constraintIsAlways(
-      'CHECK ("is_bookmarked" IN (0, 1))',
-    ),
-    defaultValue: const Constant(false),
-  );
-  static const VerificationMeta _isMasteredMeta = const VerificationMeta(
-    'isMastered',
-  );
-  @override
-  late final GeneratedColumn<bool> isMastered = GeneratedColumn<bool>(
-    'is_mastered',
-    aliasedName,
-    false,
-    type: DriftSqlType.bool,
-    requiredDuringInsert: false,
-    defaultConstraints: GeneratedColumn.constraintIsAlways(
-      'CHECK ("is_mastered" IN (0, 1))',
-    ),
-    defaultValue: const Constant(false),
-  );
-  @override
-  late final GeneratedColumnWithTypeConverter<List<FormulaPart>, String>
-  formulaParts =
-      GeneratedColumn<String>(
-        'formula_parts',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<List<FormulaPart>>(
-        $GrammarPointsTableTable.$converterformulaParts,
-      );
-  @override
-  late final GeneratedColumnWithTypeConverter<List<GrammarUsage>, String>
-  usages =
-      GeneratedColumn<String>(
-        'usages',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<List<GrammarUsage>>(
-        $GrammarPointsTableTable.$converterusages,
-      );
-  @override
-  late final GeneratedColumnWithTypeConverter<List<String>, String>
-  exampleTags = GeneratedColumn<String>(
-    'example_tags',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  ).withConverter<List<String>>($GrammarPointsTableTable.$converterexampleTags);
-  static const VerificationMeta _needsSyncMeta = const VerificationMeta(
-    'needsSync',
-  );
-  @override
-  late final GeneratedColumn<bool> needsSync = GeneratedColumn<bool>(
-    'needs_sync',
-    aliasedName,
-    false,
-    type: DriftSqlType.bool,
-    requiredDuringInsert: false,
-    defaultConstraints: GeneratedColumn.constraintIsAlways(
-      'CHECK ("needs_sync" IN (0, 1))',
-    ),
-    defaultValue: const Constant(false),
-  );
-  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
-    'updatedAt',
-  );
-  @override
-  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
-    'updated_at',
+  late final GeneratedColumn<DateTime> reviewedAt = GeneratedColumn<DateTime>(
+    'reviewed_at',
     aliasedName,
     false,
     type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _algorithmMeta = const VerificationMeta(
+    'algorithm',
+  );
+  @override
+  late final GeneratedColumn<String> algorithm = GeneratedColumn<String>(
+    'algorithm',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _stabilityBeforeMeta = const VerificationMeta(
+    'stabilityBefore',
+  );
+  @override
+  late final GeneratedColumn<double> stabilityBefore = GeneratedColumn<double>(
+    'stability_before',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
     requiredDuringInsert: false,
-    defaultValue: currentDateAndTime,
+  );
+  static const VerificationMeta _difficultyBeforeMeta = const VerificationMeta(
+    'difficultyBefore',
+  );
+  @override
+  late final GeneratedColumn<double> difficultyBefore = GeneratedColumn<double>(
+    'difficulty_before',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _stabilityAfterMeta = const VerificationMeta(
+    'stabilityAfter',
+  );
+  @override
+  late final GeneratedColumn<double> stabilityAfter = GeneratedColumn<double>(
+    'stability_after',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _difficultyAfterMeta = const VerificationMeta(
+    'difficultyAfter',
+  );
+  @override
+  late final GeneratedColumn<double> difficultyAfter = GeneratedColumn<double>(
+    'difficulty_after',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
   );
   @override
   List<GeneratedColumn> get $columns => [
     id,
-    title,
-    structure,
-    explanation,
-    level,
-    category,
-    examples,
-    relatedGrammar,
-    isBookmarked,
-    isMastered,
-    formulaParts,
-    usages,
-    exampleTags,
-    needsSync,
-    updatedAt,
+    cardId,
+    rating,
+    reviewedAt,
+    algorithm,
+    stabilityBefore,
+    difficultyBefore,
+    stabilityAfter,
+    difficultyAfter,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
   String get actualTableName => $name;
-  static const String $name = 'grammar_points_table';
+  static const String $name = 'srs_review_logs_table';
   @override
   VerificationContext validateIntegrity(
-    Insertable<GrammarPointDbModel> instance, {
+    Insertable<SrsReviewLogDbModel> instance, {
     bool isInserting = false,
   }) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
     if (data.containsKey('id')) {
       context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
-    } else if (isInserting) {
-      context.missing(_idMeta);
     }
-    if (data.containsKey('title')) {
+    if (data.containsKey('card_id')) {
       context.handle(
-        _titleMeta,
-        title.isAcceptableOrUnknown(data['title']!, _titleMeta),
+        _cardIdMeta,
+        cardId.isAcceptableOrUnknown(data['card_id']!, _cardIdMeta),
       );
     } else if (isInserting) {
-      context.missing(_titleMeta);
+      context.missing(_cardIdMeta);
     }
-    if (data.containsKey('structure')) {
+    if (data.containsKey('rating')) {
       context.handle(
-        _structureMeta,
-        structure.isAcceptableOrUnknown(data['structure']!, _structureMeta),
+        _ratingMeta,
+        rating.isAcceptableOrUnknown(data['rating']!, _ratingMeta),
       );
     } else if (isInserting) {
-      context.missing(_structureMeta);
+      context.missing(_ratingMeta);
     }
-    if (data.containsKey('explanation')) {
+    if (data.containsKey('reviewed_at')) {
       context.handle(
-        _explanationMeta,
-        explanation.isAcceptableOrUnknown(
-          data['explanation']!,
-          _explanationMeta,
-        ),
+        _reviewedAtMeta,
+        reviewedAt.isAcceptableOrUnknown(data['reviewed_at']!, _reviewedAtMeta),
       );
     } else if (isInserting) {
-      context.missing(_explanationMeta);
+      context.missing(_reviewedAtMeta);
     }
-    if (data.containsKey('level')) {
+    if (data.containsKey('algorithm')) {
       context.handle(
-        _levelMeta,
-        level.isAcceptableOrUnknown(data['level']!, _levelMeta),
+        _algorithmMeta,
+        algorithm.isAcceptableOrUnknown(data['algorithm']!, _algorithmMeta),
       );
     } else if (isInserting) {
-      context.missing(_levelMeta);
+      context.missing(_algorithmMeta);
     }
-    if (data.containsKey('category')) {
+    if (data.containsKey('stability_before')) {
       context.handle(
-        _categoryMeta,
-        category.isAcceptableOrUnknown(data['category']!, _categoryMeta),
-      );
-    } else if (isInserting) {
-      context.missing(_categoryMeta);
-    }
-    if (data.containsKey('is_bookmarked')) {
-      context.handle(
-        _isBookmarkedMeta,
-        isBookmarked.isAcceptableOrUnknown(
-          data['is_bookmarked']!,
-          _isBookmarkedMeta,
+        _stabilityBeforeMeta,
+        stabilityBefore.isAcceptableOrUnknown(
+          data['stability_before']!,
+          _stabilityBeforeMeta,
         ),
       );
     }
-    if (data.containsKey('is_mastered')) {
+    if (data.containsKey('difficulty_before')) {
       context.handle(
-        _isMasteredMeta,
-        isMastered.isAcceptableOrUnknown(data['is_mastered']!, _isMasteredMeta),
+        _difficultyBeforeMeta,
+        difficultyBefore.isAcceptableOrUnknown(
+          data['difficulty_before']!,
+          _difficultyBeforeMeta,
+        ),
       );
     }
-    if (data.containsKey('needs_sync')) {
+    if (data.containsKey('stability_after')) {
       context.handle(
-        _needsSyncMeta,
-        needsSync.isAcceptableOrUnknown(data['needs_sync']!, _needsSyncMeta),
+        _stabilityAfterMeta,
+        stabilityAfter.isAcceptableOrUnknown(
+          data['stability_after']!,
+          _stabilityAfterMeta,
+        ),
       );
     }
-    if (data.containsKey('updated_at')) {
+    if (data.containsKey('difficulty_after')) {
       context.handle(
-        _updatedAtMeta,
-        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+        _difficultyAfterMeta,
+        difficultyAfter.isAcceptableOrUnknown(
+          data['difficulty_after']!,
+          _difficultyAfterMeta,
+        ),
       );
     }
     return context;
@@ -1851,324 +972,219 @@ class $GrammarPointsTableTable extends GrammarPointsTable
   @override
   Set<GeneratedColumn> get $primaryKey => {id};
   @override
-  GrammarPointDbModel map(Map<String, dynamic> data, {String? tablePrefix}) {
+  SrsReviewLogDbModel map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
-    return GrammarPointDbModel(
+    return SrsReviewLogDbModel(
       id: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
+        DriftSqlType.int,
         data['${effectivePrefix}id'],
       )!,
-      title: attachedDatabase.typeMapping.read(
+      cardId: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
-        data['${effectivePrefix}title'],
+        data['${effectivePrefix}card_id'],
       )!,
-      structure: attachedDatabase.typeMapping.read(
+      rating: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
-        data['${effectivePrefix}structure'],
+        data['${effectivePrefix}rating'],
       )!,
-      explanation: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}explanation'],
-      )!,
-      level: attachedDatabase.typeMapping.read(
-        DriftSqlType.int,
-        data['${effectivePrefix}level'],
-      )!,
-      category: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}category'],
-      )!,
-      examples: $GrammarPointsTableTable.$converterexamples.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}examples'],
-        )!,
-      ),
-      relatedGrammar: $GrammarPointsTableTable.$converterrelatedGrammar.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}related_grammar'],
-        )!,
-      ),
-      isBookmarked: attachedDatabase.typeMapping.read(
-        DriftSqlType.bool,
-        data['${effectivePrefix}is_bookmarked'],
-      )!,
-      isMastered: attachedDatabase.typeMapping.read(
-        DriftSqlType.bool,
-        data['${effectivePrefix}is_mastered'],
-      )!,
-      formulaParts: $GrammarPointsTableTable.$converterformulaParts.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}formula_parts'],
-        )!,
-      ),
-      usages: $GrammarPointsTableTable.$converterusages.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}usages'],
-        )!,
-      ),
-      exampleTags: $GrammarPointsTableTable.$converterexampleTags.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}example_tags'],
-        )!,
-      ),
-      needsSync: attachedDatabase.typeMapping.read(
-        DriftSqlType.bool,
-        data['${effectivePrefix}needs_sync'],
-      )!,
-      updatedAt: attachedDatabase.typeMapping.read(
+      reviewedAt: attachedDatabase.typeMapping.read(
         DriftSqlType.dateTime,
-        data['${effectivePrefix}updated_at'],
+        data['${effectivePrefix}reviewed_at'],
       )!,
+      algorithm: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}algorithm'],
+      )!,
+      stabilityBefore: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}stability_before'],
+      ),
+      difficultyBefore: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}difficulty_before'],
+      ),
+      stabilityAfter: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}stability_after'],
+      ),
+      difficultyAfter: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}difficulty_after'],
+      ),
     );
   }
 
   @override
-  $GrammarPointsTableTable createAlias(String alias) {
-    return $GrammarPointsTableTable(attachedDatabase, alias);
+  $SrsReviewLogsTableTable createAlias(String alias) {
+    return $SrsReviewLogsTableTable(attachedDatabase, alias);
   }
-
-  static TypeConverter<List<GrammarExample>, String> $converterexamples =
-      const GrammarExampleListConverter();
-  static TypeConverter<List<String>, String> $converterrelatedGrammar =
-      const StringListConverter();
-  static TypeConverter<List<FormulaPart>, String> $converterformulaParts =
-      const FormulaPartListConverter();
-  static TypeConverter<List<GrammarUsage>, String> $converterusages =
-      const GrammarUsageListConverter();
-  static TypeConverter<List<String>, String> $converterexampleTags =
-      const StringListConverter();
 }
 
-class GrammarPointDbModel extends DataClass
-    implements Insertable<GrammarPointDbModel> {
-  final String id;
-  final String title;
-  final String structure;
-  final String explanation;
-  final int level;
-  final String category;
-  final List<GrammarExample> examples;
-  final List<String> relatedGrammar;
-  final bool isBookmarked;
-  final bool isMastered;
-  final List<FormulaPart> formulaParts;
-  final List<GrammarUsage> usages;
-  final List<String> exampleTags;
-  final bool needsSync;
-  final DateTime updatedAt;
-  const GrammarPointDbModel({
+class SrsReviewLogDbModel extends DataClass
+    implements Insertable<SrsReviewLogDbModel> {
+  final int id;
+  final String cardId;
+  final String rating;
+  final DateTime reviewedAt;
+  final String algorithm;
+  final double? stabilityBefore;
+  final double? difficultyBefore;
+  final double? stabilityAfter;
+  final double? difficultyAfter;
+  const SrsReviewLogDbModel({
     required this.id,
-    required this.title,
-    required this.structure,
-    required this.explanation,
-    required this.level,
-    required this.category,
-    required this.examples,
-    required this.relatedGrammar,
-    required this.isBookmarked,
-    required this.isMastered,
-    required this.formulaParts,
-    required this.usages,
-    required this.exampleTags,
-    required this.needsSync,
-    required this.updatedAt,
+    required this.cardId,
+    required this.rating,
+    required this.reviewedAt,
+    required this.algorithm,
+    this.stabilityBefore,
+    this.difficultyBefore,
+    this.stabilityAfter,
+    this.difficultyAfter,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
-    map['id'] = Variable<String>(id);
-    map['title'] = Variable<String>(title);
-    map['structure'] = Variable<String>(structure);
-    map['explanation'] = Variable<String>(explanation);
-    map['level'] = Variable<int>(level);
-    map['category'] = Variable<String>(category);
-    {
-      map['examples'] = Variable<String>(
-        $GrammarPointsTableTable.$converterexamples.toSql(examples),
-      );
+    map['id'] = Variable<int>(id);
+    map['card_id'] = Variable<String>(cardId);
+    map['rating'] = Variable<String>(rating);
+    map['reviewed_at'] = Variable<DateTime>(reviewedAt);
+    map['algorithm'] = Variable<String>(algorithm);
+    if (!nullToAbsent || stabilityBefore != null) {
+      map['stability_before'] = Variable<double>(stabilityBefore);
     }
-    {
-      map['related_grammar'] = Variable<String>(
-        $GrammarPointsTableTable.$converterrelatedGrammar.toSql(relatedGrammar),
-      );
+    if (!nullToAbsent || difficultyBefore != null) {
+      map['difficulty_before'] = Variable<double>(difficultyBefore);
     }
-    map['is_bookmarked'] = Variable<bool>(isBookmarked);
-    map['is_mastered'] = Variable<bool>(isMastered);
-    {
-      map['formula_parts'] = Variable<String>(
-        $GrammarPointsTableTable.$converterformulaParts.toSql(formulaParts),
-      );
+    if (!nullToAbsent || stabilityAfter != null) {
+      map['stability_after'] = Variable<double>(stabilityAfter);
     }
-    {
-      map['usages'] = Variable<String>(
-        $GrammarPointsTableTable.$converterusages.toSql(usages),
-      );
+    if (!nullToAbsent || difficultyAfter != null) {
+      map['difficulty_after'] = Variable<double>(difficultyAfter);
     }
-    {
-      map['example_tags'] = Variable<String>(
-        $GrammarPointsTableTable.$converterexampleTags.toSql(exampleTags),
-      );
-    }
-    map['needs_sync'] = Variable<bool>(needsSync);
-    map['updated_at'] = Variable<DateTime>(updatedAt);
     return map;
   }
 
-  GrammarPointsTableCompanion toCompanion(bool nullToAbsent) {
-    return GrammarPointsTableCompanion(
+  SrsReviewLogsTableCompanion toCompanion(bool nullToAbsent) {
+    return SrsReviewLogsTableCompanion(
       id: Value(id),
-      title: Value(title),
-      structure: Value(structure),
-      explanation: Value(explanation),
-      level: Value(level),
-      category: Value(category),
-      examples: Value(examples),
-      relatedGrammar: Value(relatedGrammar),
-      isBookmarked: Value(isBookmarked),
-      isMastered: Value(isMastered),
-      formulaParts: Value(formulaParts),
-      usages: Value(usages),
-      exampleTags: Value(exampleTags),
-      needsSync: Value(needsSync),
-      updatedAt: Value(updatedAt),
+      cardId: Value(cardId),
+      rating: Value(rating),
+      reviewedAt: Value(reviewedAt),
+      algorithm: Value(algorithm),
+      stabilityBefore: stabilityBefore == null && nullToAbsent
+          ? const Value.absent()
+          : Value(stabilityBefore),
+      difficultyBefore: difficultyBefore == null && nullToAbsent
+          ? const Value.absent()
+          : Value(difficultyBefore),
+      stabilityAfter: stabilityAfter == null && nullToAbsent
+          ? const Value.absent()
+          : Value(stabilityAfter),
+      difficultyAfter: difficultyAfter == null && nullToAbsent
+          ? const Value.absent()
+          : Value(difficultyAfter),
     );
   }
 
-  factory GrammarPointDbModel.fromJson(
+  factory SrsReviewLogDbModel.fromJson(
     Map<String, dynamic> json, {
     ValueSerializer? serializer,
   }) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
-    return GrammarPointDbModel(
-      id: serializer.fromJson<String>(json['id']),
-      title: serializer.fromJson<String>(json['title']),
-      structure: serializer.fromJson<String>(json['structure']),
-      explanation: serializer.fromJson<String>(json['explanation']),
-      level: serializer.fromJson<int>(json['level']),
-      category: serializer.fromJson<String>(json['category']),
-      examples: serializer.fromJson<List<GrammarExample>>(json['examples']),
-      relatedGrammar: serializer.fromJson<List<String>>(json['relatedGrammar']),
-      isBookmarked: serializer.fromJson<bool>(json['isBookmarked']),
-      isMastered: serializer.fromJson<bool>(json['isMastered']),
-      formulaParts: serializer.fromJson<List<FormulaPart>>(
-        json['formulaParts'],
-      ),
-      usages: serializer.fromJson<List<GrammarUsage>>(json['usages']),
-      exampleTags: serializer.fromJson<List<String>>(json['exampleTags']),
-      needsSync: serializer.fromJson<bool>(json['needsSync']),
-      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+    return SrsReviewLogDbModel(
+      id: serializer.fromJson<int>(json['id']),
+      cardId: serializer.fromJson<String>(json['cardId']),
+      rating: serializer.fromJson<String>(json['rating']),
+      reviewedAt: serializer.fromJson<DateTime>(json['reviewedAt']),
+      algorithm: serializer.fromJson<String>(json['algorithm']),
+      stabilityBefore: serializer.fromJson<double?>(json['stabilityBefore']),
+      difficultyBefore: serializer.fromJson<double?>(json['difficultyBefore']),
+      stabilityAfter: serializer.fromJson<double?>(json['stabilityAfter']),
+      difficultyAfter: serializer.fromJson<double?>(json['difficultyAfter']),
     );
   }
   @override
   Map<String, dynamic> toJson({ValueSerializer? serializer}) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return <String, dynamic>{
-      'id': serializer.toJson<String>(id),
-      'title': serializer.toJson<String>(title),
-      'structure': serializer.toJson<String>(structure),
-      'explanation': serializer.toJson<String>(explanation),
-      'level': serializer.toJson<int>(level),
-      'category': serializer.toJson<String>(category),
-      'examples': serializer.toJson<List<GrammarExample>>(examples),
-      'relatedGrammar': serializer.toJson<List<String>>(relatedGrammar),
-      'isBookmarked': serializer.toJson<bool>(isBookmarked),
-      'isMastered': serializer.toJson<bool>(isMastered),
-      'formulaParts': serializer.toJson<List<FormulaPart>>(formulaParts),
-      'usages': serializer.toJson<List<GrammarUsage>>(usages),
-      'exampleTags': serializer.toJson<List<String>>(exampleTags),
-      'needsSync': serializer.toJson<bool>(needsSync),
-      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+      'id': serializer.toJson<int>(id),
+      'cardId': serializer.toJson<String>(cardId),
+      'rating': serializer.toJson<String>(rating),
+      'reviewedAt': serializer.toJson<DateTime>(reviewedAt),
+      'algorithm': serializer.toJson<String>(algorithm),
+      'stabilityBefore': serializer.toJson<double?>(stabilityBefore),
+      'difficultyBefore': serializer.toJson<double?>(difficultyBefore),
+      'stabilityAfter': serializer.toJson<double?>(stabilityAfter),
+      'difficultyAfter': serializer.toJson<double?>(difficultyAfter),
     };
   }
 
-  GrammarPointDbModel copyWith({
-    String? id,
-    String? title,
-    String? structure,
-    String? explanation,
-    int? level,
-    String? category,
-    List<GrammarExample>? examples,
-    List<String>? relatedGrammar,
-    bool? isBookmarked,
-    bool? isMastered,
-    List<FormulaPart>? formulaParts,
-    List<GrammarUsage>? usages,
-    List<String>? exampleTags,
-    bool? needsSync,
-    DateTime? updatedAt,
-  }) => GrammarPointDbModel(
+  SrsReviewLogDbModel copyWith({
+    int? id,
+    String? cardId,
+    String? rating,
+    DateTime? reviewedAt,
+    String? algorithm,
+    Value<double?> stabilityBefore = const Value.absent(),
+    Value<double?> difficultyBefore = const Value.absent(),
+    Value<double?> stabilityAfter = const Value.absent(),
+    Value<double?> difficultyAfter = const Value.absent(),
+  }) => SrsReviewLogDbModel(
     id: id ?? this.id,
-    title: title ?? this.title,
-    structure: structure ?? this.structure,
-    explanation: explanation ?? this.explanation,
-    level: level ?? this.level,
-    category: category ?? this.category,
-    examples: examples ?? this.examples,
-    relatedGrammar: relatedGrammar ?? this.relatedGrammar,
-    isBookmarked: isBookmarked ?? this.isBookmarked,
-    isMastered: isMastered ?? this.isMastered,
-    formulaParts: formulaParts ?? this.formulaParts,
-    usages: usages ?? this.usages,
-    exampleTags: exampleTags ?? this.exampleTags,
-    needsSync: needsSync ?? this.needsSync,
-    updatedAt: updatedAt ?? this.updatedAt,
+    cardId: cardId ?? this.cardId,
+    rating: rating ?? this.rating,
+    reviewedAt: reviewedAt ?? this.reviewedAt,
+    algorithm: algorithm ?? this.algorithm,
+    stabilityBefore: stabilityBefore.present
+        ? stabilityBefore.value
+        : this.stabilityBefore,
+    difficultyBefore: difficultyBefore.present
+        ? difficultyBefore.value
+        : this.difficultyBefore,
+    stabilityAfter: stabilityAfter.present
+        ? stabilityAfter.value
+        : this.stabilityAfter,
+    difficultyAfter: difficultyAfter.present
+        ? difficultyAfter.value
+        : this.difficultyAfter,
   );
-  GrammarPointDbModel copyWithCompanion(GrammarPointsTableCompanion data) {
-    return GrammarPointDbModel(
+  SrsReviewLogDbModel copyWithCompanion(SrsReviewLogsTableCompanion data) {
+    return SrsReviewLogDbModel(
       id: data.id.present ? data.id.value : this.id,
-      title: data.title.present ? data.title.value : this.title,
-      structure: data.structure.present ? data.structure.value : this.structure,
-      explanation: data.explanation.present
-          ? data.explanation.value
-          : this.explanation,
-      level: data.level.present ? data.level.value : this.level,
-      category: data.category.present ? data.category.value : this.category,
-      examples: data.examples.present ? data.examples.value : this.examples,
-      relatedGrammar: data.relatedGrammar.present
-          ? data.relatedGrammar.value
-          : this.relatedGrammar,
-      isBookmarked: data.isBookmarked.present
-          ? data.isBookmarked.value
-          : this.isBookmarked,
-      isMastered: data.isMastered.present
-          ? data.isMastered.value
-          : this.isMastered,
-      formulaParts: data.formulaParts.present
-          ? data.formulaParts.value
-          : this.formulaParts,
-      usages: data.usages.present ? data.usages.value : this.usages,
-      exampleTags: data.exampleTags.present
-          ? data.exampleTags.value
-          : this.exampleTags,
-      needsSync: data.needsSync.present ? data.needsSync.value : this.needsSync,
-      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      cardId: data.cardId.present ? data.cardId.value : this.cardId,
+      rating: data.rating.present ? data.rating.value : this.rating,
+      reviewedAt: data.reviewedAt.present
+          ? data.reviewedAt.value
+          : this.reviewedAt,
+      algorithm: data.algorithm.present ? data.algorithm.value : this.algorithm,
+      stabilityBefore: data.stabilityBefore.present
+          ? data.stabilityBefore.value
+          : this.stabilityBefore,
+      difficultyBefore: data.difficultyBefore.present
+          ? data.difficultyBefore.value
+          : this.difficultyBefore,
+      stabilityAfter: data.stabilityAfter.present
+          ? data.stabilityAfter.value
+          : this.stabilityAfter,
+      difficultyAfter: data.difficultyAfter.present
+          ? data.difficultyAfter.value
+          : this.difficultyAfter,
     );
   }
 
   @override
   String toString() {
-    return (StringBuffer('GrammarPointDbModel(')
+    return (StringBuffer('SrsReviewLogDbModel(')
           ..write('id: $id, ')
-          ..write('title: $title, ')
-          ..write('structure: $structure, ')
-          ..write('explanation: $explanation, ')
-          ..write('level: $level, ')
-          ..write('category: $category, ')
-          ..write('examples: $examples, ')
-          ..write('relatedGrammar: $relatedGrammar, ')
-          ..write('isBookmarked: $isBookmarked, ')
-          ..write('isMastered: $isMastered, ')
-          ..write('formulaParts: $formulaParts, ')
-          ..write('usages: $usages, ')
-          ..write('exampleTags: $exampleTags, ')
-          ..write('needsSync: $needsSync, ')
-          ..write('updatedAt: $updatedAt')
+          ..write('cardId: $cardId, ')
+          ..write('rating: $rating, ')
+          ..write('reviewedAt: $reviewedAt, ')
+          ..write('algorithm: $algorithm, ')
+          ..write('stabilityBefore: $stabilityBefore, ')
+          ..write('difficultyBefore: $difficultyBefore, ')
+          ..write('stabilityAfter: $stabilityAfter, ')
+          ..write('difficultyAfter: $difficultyAfter')
           ..write(')'))
         .toString();
   }
@@ -2176,178 +1192,110 @@ class GrammarPointDbModel extends DataClass
   @override
   int get hashCode => Object.hash(
     id,
-    title,
-    structure,
-    explanation,
-    level,
-    category,
-    examples,
-    relatedGrammar,
-    isBookmarked,
-    isMastered,
-    formulaParts,
-    usages,
-    exampleTags,
-    needsSync,
-    updatedAt,
+    cardId,
+    rating,
+    reviewedAt,
+    algorithm,
+    stabilityBefore,
+    difficultyBefore,
+    stabilityAfter,
+    difficultyAfter,
   );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      (other is GrammarPointDbModel &&
+      (other is SrsReviewLogDbModel &&
           other.id == this.id &&
-          other.title == this.title &&
-          other.structure == this.structure &&
-          other.explanation == this.explanation &&
-          other.level == this.level &&
-          other.category == this.category &&
-          other.examples == this.examples &&
-          other.relatedGrammar == this.relatedGrammar &&
-          other.isBookmarked == this.isBookmarked &&
-          other.isMastered == this.isMastered &&
-          other.formulaParts == this.formulaParts &&
-          other.usages == this.usages &&
-          other.exampleTags == this.exampleTags &&
-          other.needsSync == this.needsSync &&
-          other.updatedAt == this.updatedAt);
+          other.cardId == this.cardId &&
+          other.rating == this.rating &&
+          other.reviewedAt == this.reviewedAt &&
+          other.algorithm == this.algorithm &&
+          other.stabilityBefore == this.stabilityBefore &&
+          other.difficultyBefore == this.difficultyBefore &&
+          other.stabilityAfter == this.stabilityAfter &&
+          other.difficultyAfter == this.difficultyAfter);
 }
 
-class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
-  final Value<String> id;
-  final Value<String> title;
-  final Value<String> structure;
-  final Value<String> explanation;
-  final Value<int> level;
-  final Value<String> category;
-  final Value<List<GrammarExample>> examples;
-  final Value<List<String>> relatedGrammar;
-  final Value<bool> isBookmarked;
-  final Value<bool> isMastered;
-  final Value<List<FormulaPart>> formulaParts;
-  final Value<List<GrammarUsage>> usages;
-  final Value<List<String>> exampleTags;
-  final Value<bool> needsSync;
-  final Value<DateTime> updatedAt;
-  final Value<int> rowid;
-  const GrammarPointsTableCompanion({
+class SrsReviewLogsTableCompanion extends UpdateCompanion<SrsReviewLogDbModel> {
+  final Value<int> id;
+  final Value<String> cardId;
+  final Value<String> rating;
+  final Value<DateTime> reviewedAt;
+  final Value<String> algorithm;
+  final Value<double?> stabilityBefore;
+  final Value<double?> difficultyBefore;
+  final Value<double?> stabilityAfter;
+  final Value<double?> difficultyAfter;
+  const SrsReviewLogsTableCompanion({
     this.id = const Value.absent(),
-    this.title = const Value.absent(),
-    this.structure = const Value.absent(),
-    this.explanation = const Value.absent(),
-    this.level = const Value.absent(),
-    this.category = const Value.absent(),
-    this.examples = const Value.absent(),
-    this.relatedGrammar = const Value.absent(),
-    this.isBookmarked = const Value.absent(),
-    this.isMastered = const Value.absent(),
-    this.formulaParts = const Value.absent(),
-    this.usages = const Value.absent(),
-    this.exampleTags = const Value.absent(),
-    this.needsSync = const Value.absent(),
-    this.updatedAt = const Value.absent(),
-    this.rowid = const Value.absent(),
+    this.cardId = const Value.absent(),
+    this.rating = const Value.absent(),
+    this.reviewedAt = const Value.absent(),
+    this.algorithm = const Value.absent(),
+    this.stabilityBefore = const Value.absent(),
+    this.difficultyBefore = const Value.absent(),
+    this.stabilityAfter = const Value.absent(),
+    this.difficultyAfter = const Value.absent(),
   });
-  GrammarPointsTableCompanion.insert({
-    required String id,
-    required String title,
-    required String structure,
-    required String explanation,
-    required int level,
-    required String category,
-    required List<GrammarExample> examples,
-    required List<String> relatedGrammar,
-    this.isBookmarked = const Value.absent(),
-    this.isMastered = const Value.absent(),
-    required List<FormulaPart> formulaParts,
-    required List<GrammarUsage> usages,
-    required List<String> exampleTags,
-    this.needsSync = const Value.absent(),
-    this.updatedAt = const Value.absent(),
-    this.rowid = const Value.absent(),
-  }) : id = Value(id),
-       title = Value(title),
-       structure = Value(structure),
-       explanation = Value(explanation),
-       level = Value(level),
-       category = Value(category),
-       examples = Value(examples),
-       relatedGrammar = Value(relatedGrammar),
-       formulaParts = Value(formulaParts),
-       usages = Value(usages),
-       exampleTags = Value(exampleTags);
-  static Insertable<GrammarPointDbModel> custom({
-    Expression<String>? id,
-    Expression<String>? title,
-    Expression<String>? structure,
-    Expression<String>? explanation,
-    Expression<int>? level,
-    Expression<String>? category,
-    Expression<String>? examples,
-    Expression<String>? relatedGrammar,
-    Expression<bool>? isBookmarked,
-    Expression<bool>? isMastered,
-    Expression<String>? formulaParts,
-    Expression<String>? usages,
-    Expression<String>? exampleTags,
-    Expression<bool>? needsSync,
-    Expression<DateTime>? updatedAt,
-    Expression<int>? rowid,
+  SrsReviewLogsTableCompanion.insert({
+    this.id = const Value.absent(),
+    required String cardId,
+    required String rating,
+    required DateTime reviewedAt,
+    required String algorithm,
+    this.stabilityBefore = const Value.absent(),
+    this.difficultyBefore = const Value.absent(),
+    this.stabilityAfter = const Value.absent(),
+    this.difficultyAfter = const Value.absent(),
+  }) : cardId = Value(cardId),
+       rating = Value(rating),
+       reviewedAt = Value(reviewedAt),
+       algorithm = Value(algorithm);
+  static Insertable<SrsReviewLogDbModel> custom({
+    Expression<int>? id,
+    Expression<String>? cardId,
+    Expression<String>? rating,
+    Expression<DateTime>? reviewedAt,
+    Expression<String>? algorithm,
+    Expression<double>? stabilityBefore,
+    Expression<double>? difficultyBefore,
+    Expression<double>? stabilityAfter,
+    Expression<double>? difficultyAfter,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
-      if (title != null) 'title': title,
-      if (structure != null) 'structure': structure,
-      if (explanation != null) 'explanation': explanation,
-      if (level != null) 'level': level,
-      if (category != null) 'category': category,
-      if (examples != null) 'examples': examples,
-      if (relatedGrammar != null) 'related_grammar': relatedGrammar,
-      if (isBookmarked != null) 'is_bookmarked': isBookmarked,
-      if (isMastered != null) 'is_mastered': isMastered,
-      if (formulaParts != null) 'formula_parts': formulaParts,
-      if (usages != null) 'usages': usages,
-      if (exampleTags != null) 'example_tags': exampleTags,
-      if (needsSync != null) 'needs_sync': needsSync,
-      if (updatedAt != null) 'updated_at': updatedAt,
-      if (rowid != null) 'rowid': rowid,
+      if (cardId != null) 'card_id': cardId,
+      if (rating != null) 'rating': rating,
+      if (reviewedAt != null) 'reviewed_at': reviewedAt,
+      if (algorithm != null) 'algorithm': algorithm,
+      if (stabilityBefore != null) 'stability_before': stabilityBefore,
+      if (difficultyBefore != null) 'difficulty_before': difficultyBefore,
+      if (stabilityAfter != null) 'stability_after': stabilityAfter,
+      if (difficultyAfter != null) 'difficulty_after': difficultyAfter,
     });
   }
 
-  GrammarPointsTableCompanion copyWith({
-    Value<String>? id,
-    Value<String>? title,
-    Value<String>? structure,
-    Value<String>? explanation,
-    Value<int>? level,
-    Value<String>? category,
-    Value<List<GrammarExample>>? examples,
-    Value<List<String>>? relatedGrammar,
-    Value<bool>? isBookmarked,
-    Value<bool>? isMastered,
-    Value<List<FormulaPart>>? formulaParts,
-    Value<List<GrammarUsage>>? usages,
-    Value<List<String>>? exampleTags,
-    Value<bool>? needsSync,
-    Value<DateTime>? updatedAt,
-    Value<int>? rowid,
+  SrsReviewLogsTableCompanion copyWith({
+    Value<int>? id,
+    Value<String>? cardId,
+    Value<String>? rating,
+    Value<DateTime>? reviewedAt,
+    Value<String>? algorithm,
+    Value<double?>? stabilityBefore,
+    Value<double?>? difficultyBefore,
+    Value<double?>? stabilityAfter,
+    Value<double?>? difficultyAfter,
   }) {
-    return GrammarPointsTableCompanion(
+    return SrsReviewLogsTableCompanion(
       id: id ?? this.id,
-      title: title ?? this.title,
-      structure: structure ?? this.structure,
-      explanation: explanation ?? this.explanation,
-      level: level ?? this.level,
-      category: category ?? this.category,
-      examples: examples ?? this.examples,
-      relatedGrammar: relatedGrammar ?? this.relatedGrammar,
-      isBookmarked: isBookmarked ?? this.isBookmarked,
-      isMastered: isMastered ?? this.isMastered,
-      formulaParts: formulaParts ?? this.formulaParts,
-      usages: usages ?? this.usages,
-      exampleTags: exampleTags ?? this.exampleTags,
-      needsSync: needsSync ?? this.needsSync,
-      updatedAt: updatedAt ?? this.updatedAt,
-      rowid: rowid ?? this.rowid,
+      cardId: cardId ?? this.cardId,
+      rating: rating ?? this.rating,
+      reviewedAt: reviewedAt ?? this.reviewedAt,
+      algorithm: algorithm ?? this.algorithm,
+      stabilityBefore: stabilityBefore ?? this.stabilityBefore,
+      difficultyBefore: difficultyBefore ?? this.difficultyBefore,
+      stabilityAfter: stabilityAfter ?? this.stabilityAfter,
+      difficultyAfter: difficultyAfter ?? this.difficultyAfter,
     );
   }
 
@@ -2355,882 +1303,578 @@ class GrammarPointsTableCompanion extends UpdateCompanion<GrammarPointDbModel> {
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
     if (id.present) {
-      map['id'] = Variable<String>(id.value);
+      map['id'] = Variable<int>(id.value);
     }
-    if (title.present) {
-      map['title'] = Variable<String>(title.value);
+    if (cardId.present) {
+      map['card_id'] = Variable<String>(cardId.value);
     }
-    if (structure.present) {
-      map['structure'] = Variable<String>(structure.value);
+    if (rating.present) {
+      map['rating'] = Variable<String>(rating.value);
     }
-    if (explanation.present) {
-      map['explanation'] = Variable<String>(explanation.value);
+    if (reviewedAt.present) {
+      map['reviewed_at'] = Variable<DateTime>(reviewedAt.value);
     }
-    if (level.present) {
-      map['level'] = Variable<int>(level.value);
+    if (algorithm.present) {
+      map['algorithm'] = Variable<String>(algorithm.value);
     }
-    if (category.present) {
-      map['category'] = Variable<String>(category.value);
+    if (stabilityBefore.present) {
+      map['stability_before'] = Variable<double>(stabilityBefore.value);
     }
-    if (examples.present) {
-      map['examples'] = Variable<String>(
-        $GrammarPointsTableTable.$converterexamples.toSql(examples.value),
-      );
+    if (difficultyBefore.present) {
+      map['difficulty_before'] = Variable<double>(difficultyBefore.value);
     }
-    if (relatedGrammar.present) {
-      map['related_grammar'] = Variable<String>(
-        $GrammarPointsTableTable.$converterrelatedGrammar.toSql(
-          relatedGrammar.value,
-        ),
-      );
+    if (stabilityAfter.present) {
+      map['stability_after'] = Variable<double>(stabilityAfter.value);
     }
-    if (isBookmarked.present) {
-      map['is_bookmarked'] = Variable<bool>(isBookmarked.value);
-    }
-    if (isMastered.present) {
-      map['is_mastered'] = Variable<bool>(isMastered.value);
-    }
-    if (formulaParts.present) {
-      map['formula_parts'] = Variable<String>(
-        $GrammarPointsTableTable.$converterformulaParts.toSql(
-          formulaParts.value,
-        ),
-      );
-    }
-    if (usages.present) {
-      map['usages'] = Variable<String>(
-        $GrammarPointsTableTable.$converterusages.toSql(usages.value),
-      );
-    }
-    if (exampleTags.present) {
-      map['example_tags'] = Variable<String>(
-        $GrammarPointsTableTable.$converterexampleTags.toSql(exampleTags.value),
-      );
-    }
-    if (needsSync.present) {
-      map['needs_sync'] = Variable<bool>(needsSync.value);
-    }
-    if (updatedAt.present) {
-      map['updated_at'] = Variable<DateTime>(updatedAt.value);
-    }
-    if (rowid.present) {
-      map['rowid'] = Variable<int>(rowid.value);
+    if (difficultyAfter.present) {
+      map['difficulty_after'] = Variable<double>(difficultyAfter.value);
     }
     return map;
   }
 
   @override
   String toString() {
-    return (StringBuffer('GrammarPointsTableCompanion(')
+    return (StringBuffer('SrsReviewLogsTableCompanion(')
           ..write('id: $id, ')
-          ..write('title: $title, ')
-          ..write('structure: $structure, ')
-          ..write('explanation: $explanation, ')
-          ..write('level: $level, ')
-          ..write('category: $category, ')
-          ..write('examples: $examples, ')
-          ..write('relatedGrammar: $relatedGrammar, ')
-          ..write('isBookmarked: $isBookmarked, ')
-          ..write('isMastered: $isMastered, ')
-          ..write('formulaParts: $formulaParts, ')
-          ..write('usages: $usages, ')
-          ..write('exampleTags: $exampleTags, ')
-          ..write('needsSync: $needsSync, ')
-          ..write('updatedAt: $updatedAt, ')
-          ..write('rowid: $rowid')
+          ..write('cardId: $cardId, ')
+          ..write('rating: $rating, ')
+          ..write('reviewedAt: $reviewedAt, ')
+          ..write('algorithm: $algorithm, ')
+          ..write('stabilityBefore: $stabilityBefore, ')
+          ..write('difficultyBefore: $difficultyBefore, ')
+          ..write('stabilityAfter: $stabilityAfter, ')
+          ..write('difficultyAfter: $difficultyAfter')
           ..write(')'))
         .toString();
   }
 }
 
-class $ConversationsTableTable extends ConversationsTable
-    with TableInfo<$ConversationsTableTable, ConversationDbModel> {
+class $LearningUnitProgressTableTable extends LearningUnitProgressTable
+    with
+        TableInfo<
+          $LearningUnitProgressTableTable,
+          LearningUnitProgressDbModel
+        > {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
-  $ConversationsTableTable(this.attachedDatabase, [this._alias]);
-  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  $LearningUnitProgressTableTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _unitIdMeta = const VerificationMeta('unitId');
   @override
-  late final GeneratedColumn<String> id = GeneratedColumn<String>(
-    'id',
+  late final GeneratedColumn<String> unitId = GeneratedColumn<String>(
+    'unit_id',
     aliasedName,
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _titleMeta = const VerificationMeta('title');
+  static const VerificationMeta _unitKindMeta = const VerificationMeta(
+    'unitKind',
+  );
   @override
-  late final GeneratedColumn<String> title = GeneratedColumn<String>(
-    'title',
+  late final GeneratedColumn<String> unitKind = GeneratedColumn<String>(
+    'unit_kind',
     aliasedName,
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _titleZhMeta = const VerificationMeta(
-    'titleZh',
+  static const VerificationMeta _stageIdMeta = const VerificationMeta(
+    'stageId',
   );
   @override
-  late final GeneratedColumn<String> titleZh = GeneratedColumn<String>(
-    'title_zh',
+  late final GeneratedColumn<String> stageId = GeneratedColumn<String>(
+    'stage_id',
     aliasedName,
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _titlePinyinMeta = const VerificationMeta(
-    'titlePinyin',
+  static const VerificationMeta _moduleIdMeta = const VerificationMeta(
+    'moduleId',
   );
   @override
-  late final GeneratedColumn<String> titlePinyin = GeneratedColumn<String>(
-    'title_pinyin',
+  late final GeneratedColumn<String> moduleId = GeneratedColumn<String>(
+    'module_id',
     aliasedName,
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _descriptionMeta = const VerificationMeta(
-    'description',
-  );
+  static const VerificationMeta _statusMeta = const VerificationMeta('status');
   @override
-  late final GeneratedColumn<String> description = GeneratedColumn<String>(
-    'description',
+  late final GeneratedColumn<String> status = GeneratedColumn<String>(
+    'status',
     aliasedName,
     false,
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _levelMeta = const VerificationMeta('level');
+  static const VerificationMeta _scoreMeta = const VerificationMeta('score');
   @override
-  late final GeneratedColumn<int> level = GeneratedColumn<int>(
-    'level',
+  late final GeneratedColumn<int> score = GeneratedColumn<int>(
+    'score',
     aliasedName,
-    false,
+    true,
     type: DriftSqlType.int,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _categoryMeta = const VerificationMeta(
-    'category',
-  );
-  @override
-  late final GeneratedColumn<String> category = GeneratedColumn<String>(
-    'category',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _iconMeta = const VerificationMeta('icon');
-  @override
-  late final GeneratedColumn<String> icon = GeneratedColumn<String>(
-    'icon',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  @override
-  late final GeneratedColumnWithTypeConverter<List<DialogueLine>, String>
-  lines = GeneratedColumn<String>(
-    'lines',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  ).withConverter<List<DialogueLine>>($ConversationsTableTable.$converterlines);
-  @override
-  late final GeneratedColumnWithTypeConverter<List<VocabInContext>, String>
-  vocabulary =
-      GeneratedColumn<String>(
-        'vocabulary',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<List<VocabInContext>>(
-        $ConversationsTableTable.$convertervocabulary,
-      );
-  @override
-  late final GeneratedColumnWithTypeConverter<List<SpeakerInfo>, String>
-  speakers =
-      GeneratedColumn<String>(
-        'speakers',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<List<SpeakerInfo>>(
-        $ConversationsTableTable.$converterspeakers,
-      );
-  @override
-  late final GeneratedColumnWithTypeConverter<List<String>, String>
-  relatedGrammar =
-      GeneratedColumn<String>(
-        'related_grammar',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<List<String>>(
-        $ConversationsTableTable.$converterrelatedGrammar,
-      );
-  static const VerificationMeta _cultureTipMeta = const VerificationMeta(
-    'cultureTip',
-  );
-  @override
-  late final GeneratedColumn<String> cultureTip = GeneratedColumn<String>(
-    'culture_tip',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _isBookmarkedMeta = const VerificationMeta(
-    'isBookmarked',
-  );
-  @override
-  late final GeneratedColumn<bool> isBookmarked = GeneratedColumn<bool>(
-    'is_bookmarked',
-    aliasedName,
-    false,
-    type: DriftSqlType.bool,
     requiredDuringInsert: false,
-    defaultConstraints: GeneratedColumn.constraintIsAlways(
-      'CHECK ("is_bookmarked" IN (0, 1))',
-    ),
-    defaultValue: const Constant(false),
   );
-  static const VerificationMeta _isMasteredMeta = const VerificationMeta(
-    'isMastered',
+  static const VerificationMeta _startedAtMeta = const VerificationMeta(
+    'startedAt',
   );
   @override
-  late final GeneratedColumn<bool> isMastered = GeneratedColumn<bool>(
-    'is_mastered',
+  late final GeneratedColumn<DateTime> startedAt = GeneratedColumn<DateTime>(
+    'started_at',
     aliasedName,
-    false,
-    type: DriftSqlType.bool,
+    true,
+    type: DriftSqlType.dateTime,
     requiredDuringInsert: false,
-    defaultConstraints: GeneratedColumn.constraintIsAlways(
-      'CHECK ("is_mastered" IN (0, 1))',
-    ),
-    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _completedAtMeta = const VerificationMeta(
+    'completedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> completedAt = GeneratedColumn<DateTime>(
+    'completed_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _lastOpenedAtMeta = const VerificationMeta(
+    'lastOpenedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> lastOpenedAt = GeneratedColumn<DateTime>(
+    'last_opened_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
   );
   @override
   List<GeneratedColumn> get $columns => [
-    id,
-    title,
-    titleZh,
-    titlePinyin,
-    description,
-    level,
-    category,
-    icon,
-    lines,
-    vocabulary,
-    speakers,
-    relatedGrammar,
-    cultureTip,
-    isBookmarked,
-    isMastered,
+    unitId,
+    unitKind,
+    stageId,
+    moduleId,
+    status,
+    score,
+    startedAt,
+    completedAt,
+    lastOpenedAt,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
   String get actualTableName => $name;
-  static const String $name = 'conversations_table';
+  static const String $name = 'learning_unit_progress_table';
   @override
   VerificationContext validateIntegrity(
-    Insertable<ConversationDbModel> instance, {
+    Insertable<LearningUnitProgressDbModel> instance, {
     bool isInserting = false,
   }) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
-    if (data.containsKey('id')) {
-      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
-    } else if (isInserting) {
-      context.missing(_idMeta);
-    }
-    if (data.containsKey('title')) {
+    if (data.containsKey('unit_id')) {
       context.handle(
-        _titleMeta,
-        title.isAcceptableOrUnknown(data['title']!, _titleMeta),
+        _unitIdMeta,
+        unitId.isAcceptableOrUnknown(data['unit_id']!, _unitIdMeta),
       );
     } else if (isInserting) {
-      context.missing(_titleMeta);
+      context.missing(_unitIdMeta);
     }
-    if (data.containsKey('title_zh')) {
+    if (data.containsKey('unit_kind')) {
       context.handle(
-        _titleZhMeta,
-        titleZh.isAcceptableOrUnknown(data['title_zh']!, _titleZhMeta),
+        _unitKindMeta,
+        unitKind.isAcceptableOrUnknown(data['unit_kind']!, _unitKindMeta),
       );
     } else if (isInserting) {
-      context.missing(_titleZhMeta);
+      context.missing(_unitKindMeta);
     }
-    if (data.containsKey('title_pinyin')) {
+    if (data.containsKey('stage_id')) {
       context.handle(
-        _titlePinyinMeta,
-        titlePinyin.isAcceptableOrUnknown(
-          data['title_pinyin']!,
-          _titlePinyinMeta,
-        ),
+        _stageIdMeta,
+        stageId.isAcceptableOrUnknown(data['stage_id']!, _stageIdMeta),
       );
     } else if (isInserting) {
-      context.missing(_titlePinyinMeta);
+      context.missing(_stageIdMeta);
     }
-    if (data.containsKey('description')) {
+    if (data.containsKey('module_id')) {
       context.handle(
-        _descriptionMeta,
-        description.isAcceptableOrUnknown(
-          data['description']!,
-          _descriptionMeta,
-        ),
+        _moduleIdMeta,
+        moduleId.isAcceptableOrUnknown(data['module_id']!, _moduleIdMeta),
       );
     } else if (isInserting) {
-      context.missing(_descriptionMeta);
+      context.missing(_moduleIdMeta);
     }
-    if (data.containsKey('level')) {
+    if (data.containsKey('status')) {
       context.handle(
-        _levelMeta,
-        level.isAcceptableOrUnknown(data['level']!, _levelMeta),
+        _statusMeta,
+        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
       );
     } else if (isInserting) {
-      context.missing(_levelMeta);
+      context.missing(_statusMeta);
     }
-    if (data.containsKey('category')) {
+    if (data.containsKey('score')) {
       context.handle(
-        _categoryMeta,
-        category.isAcceptableOrUnknown(data['category']!, _categoryMeta),
+        _scoreMeta,
+        score.isAcceptableOrUnknown(data['score']!, _scoreMeta),
       );
-    } else if (isInserting) {
-      context.missing(_categoryMeta);
     }
-    if (data.containsKey('icon')) {
+    if (data.containsKey('started_at')) {
       context.handle(
-        _iconMeta,
-        icon.isAcceptableOrUnknown(data['icon']!, _iconMeta),
+        _startedAtMeta,
+        startedAt.isAcceptableOrUnknown(data['started_at']!, _startedAtMeta),
       );
-    } else if (isInserting) {
-      context.missing(_iconMeta);
     }
-    if (data.containsKey('culture_tip')) {
+    if (data.containsKey('completed_at')) {
       context.handle(
-        _cultureTipMeta,
-        cultureTip.isAcceptableOrUnknown(data['culture_tip']!, _cultureTipMeta),
-      );
-    } else if (isInserting) {
-      context.missing(_cultureTipMeta);
-    }
-    if (data.containsKey('is_bookmarked')) {
-      context.handle(
-        _isBookmarkedMeta,
-        isBookmarked.isAcceptableOrUnknown(
-          data['is_bookmarked']!,
-          _isBookmarkedMeta,
+        _completedAtMeta,
+        completedAt.isAcceptableOrUnknown(
+          data['completed_at']!,
+          _completedAtMeta,
         ),
       );
     }
-    if (data.containsKey('is_mastered')) {
+    if (data.containsKey('last_opened_at')) {
       context.handle(
-        _isMasteredMeta,
-        isMastered.isAcceptableOrUnknown(data['is_mastered']!, _isMasteredMeta),
+        _lastOpenedAtMeta,
+        lastOpenedAt.isAcceptableOrUnknown(
+          data['last_opened_at']!,
+          _lastOpenedAtMeta,
+        ),
       );
     }
     return context;
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {id};
+  Set<GeneratedColumn> get $primaryKey => {unitId};
   @override
-  ConversationDbModel map(Map<String, dynamic> data, {String? tablePrefix}) {
+  LearningUnitProgressDbModel map(
+    Map<String, dynamic> data, {
+    String? tablePrefix,
+  }) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
-    return ConversationDbModel(
-      id: attachedDatabase.typeMapping.read(
+    return LearningUnitProgressDbModel(
+      unitId: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
-        data['${effectivePrefix}id'],
+        data['${effectivePrefix}unit_id'],
       )!,
-      title: attachedDatabase.typeMapping.read(
+      unitKind: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
-        data['${effectivePrefix}title'],
+        data['${effectivePrefix}unit_kind'],
       )!,
-      titleZh: attachedDatabase.typeMapping.read(
+      stageId: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
-        data['${effectivePrefix}title_zh'],
+        data['${effectivePrefix}stage_id'],
       )!,
-      titlePinyin: attachedDatabase.typeMapping.read(
+      moduleId: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
-        data['${effectivePrefix}title_pinyin'],
+        data['${effectivePrefix}module_id'],
       )!,
-      description: attachedDatabase.typeMapping.read(
+      status: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
-        data['${effectivePrefix}description'],
+        data['${effectivePrefix}status'],
       )!,
-      level: attachedDatabase.typeMapping.read(
+      score: attachedDatabase.typeMapping.read(
         DriftSqlType.int,
-        data['${effectivePrefix}level'],
-      )!,
-      category: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}category'],
-      )!,
-      icon: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}icon'],
-      )!,
-      lines: $ConversationsTableTable.$converterlines.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}lines'],
-        )!,
+        data['${effectivePrefix}score'],
       ),
-      vocabulary: $ConversationsTableTable.$convertervocabulary.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}vocabulary'],
-        )!,
+      startedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}started_at'],
       ),
-      speakers: $ConversationsTableTable.$converterspeakers.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}speakers'],
-        )!,
+      completedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}completed_at'],
       ),
-      relatedGrammar: $ConversationsTableTable.$converterrelatedGrammar.fromSql(
-        attachedDatabase.typeMapping.read(
-          DriftSqlType.string,
-          data['${effectivePrefix}related_grammar'],
-        )!,
+      lastOpenedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}last_opened_at'],
       ),
-      cultureTip: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}culture_tip'],
-      )!,
-      isBookmarked: attachedDatabase.typeMapping.read(
-        DriftSqlType.bool,
-        data['${effectivePrefix}is_bookmarked'],
-      )!,
-      isMastered: attachedDatabase.typeMapping.read(
-        DriftSqlType.bool,
-        data['${effectivePrefix}is_mastered'],
-      )!,
     );
   }
 
   @override
-  $ConversationsTableTable createAlias(String alias) {
-    return $ConversationsTableTable(attachedDatabase, alias);
+  $LearningUnitProgressTableTable createAlias(String alias) {
+    return $LearningUnitProgressTableTable(attachedDatabase, alias);
   }
-
-  static TypeConverter<List<DialogueLine>, String> $converterlines =
-      const DialogueLineListConverter();
-  static TypeConverter<List<VocabInContext>, String> $convertervocabulary =
-      const VocabInContextListConverter();
-  static TypeConverter<List<SpeakerInfo>, String> $converterspeakers =
-      const SpeakerInfoListConverter();
-  static TypeConverter<List<String>, String> $converterrelatedGrammar =
-      const StringListConverter();
 }
 
-class ConversationDbModel extends DataClass
-    implements Insertable<ConversationDbModel> {
-  final String id;
-  final String title;
-  final String titleZh;
-  final String titlePinyin;
-  final String description;
-  final int level;
-  final String category;
-  final String icon;
-  final List<DialogueLine> lines;
-  final List<VocabInContext> vocabulary;
-  final List<SpeakerInfo> speakers;
-  final List<String> relatedGrammar;
-  final String cultureTip;
-  final bool isBookmarked;
-  final bool isMastered;
-  const ConversationDbModel({
-    required this.id,
-    required this.title,
-    required this.titleZh,
-    required this.titlePinyin,
-    required this.description,
-    required this.level,
-    required this.category,
-    required this.icon,
-    required this.lines,
-    required this.vocabulary,
-    required this.speakers,
-    required this.relatedGrammar,
-    required this.cultureTip,
-    required this.isBookmarked,
-    required this.isMastered,
+class LearningUnitProgressDbModel extends DataClass
+    implements Insertable<LearningUnitProgressDbModel> {
+  final String unitId;
+  final String unitKind;
+  final String stageId;
+  final String moduleId;
+  final String status;
+  final int? score;
+  final DateTime? startedAt;
+  final DateTime? completedAt;
+  final DateTime? lastOpenedAt;
+  const LearningUnitProgressDbModel({
+    required this.unitId,
+    required this.unitKind,
+    required this.stageId,
+    required this.moduleId,
+    required this.status,
+    this.score,
+    this.startedAt,
+    this.completedAt,
+    this.lastOpenedAt,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
-    map['id'] = Variable<String>(id);
-    map['title'] = Variable<String>(title);
-    map['title_zh'] = Variable<String>(titleZh);
-    map['title_pinyin'] = Variable<String>(titlePinyin);
-    map['description'] = Variable<String>(description);
-    map['level'] = Variable<int>(level);
-    map['category'] = Variable<String>(category);
-    map['icon'] = Variable<String>(icon);
-    {
-      map['lines'] = Variable<String>(
-        $ConversationsTableTable.$converterlines.toSql(lines),
-      );
+    map['unit_id'] = Variable<String>(unitId);
+    map['unit_kind'] = Variable<String>(unitKind);
+    map['stage_id'] = Variable<String>(stageId);
+    map['module_id'] = Variable<String>(moduleId);
+    map['status'] = Variable<String>(status);
+    if (!nullToAbsent || score != null) {
+      map['score'] = Variable<int>(score);
     }
-    {
-      map['vocabulary'] = Variable<String>(
-        $ConversationsTableTable.$convertervocabulary.toSql(vocabulary),
-      );
+    if (!nullToAbsent || startedAt != null) {
+      map['started_at'] = Variable<DateTime>(startedAt);
     }
-    {
-      map['speakers'] = Variable<String>(
-        $ConversationsTableTable.$converterspeakers.toSql(speakers),
-      );
+    if (!nullToAbsent || completedAt != null) {
+      map['completed_at'] = Variable<DateTime>(completedAt);
     }
-    {
-      map['related_grammar'] = Variable<String>(
-        $ConversationsTableTable.$converterrelatedGrammar.toSql(relatedGrammar),
-      );
+    if (!nullToAbsent || lastOpenedAt != null) {
+      map['last_opened_at'] = Variable<DateTime>(lastOpenedAt);
     }
-    map['culture_tip'] = Variable<String>(cultureTip);
-    map['is_bookmarked'] = Variable<bool>(isBookmarked);
-    map['is_mastered'] = Variable<bool>(isMastered);
     return map;
   }
 
-  ConversationsTableCompanion toCompanion(bool nullToAbsent) {
-    return ConversationsTableCompanion(
-      id: Value(id),
-      title: Value(title),
-      titleZh: Value(titleZh),
-      titlePinyin: Value(titlePinyin),
-      description: Value(description),
-      level: Value(level),
-      category: Value(category),
-      icon: Value(icon),
-      lines: Value(lines),
-      vocabulary: Value(vocabulary),
-      speakers: Value(speakers),
-      relatedGrammar: Value(relatedGrammar),
-      cultureTip: Value(cultureTip),
-      isBookmarked: Value(isBookmarked),
-      isMastered: Value(isMastered),
+  LearningUnitProgressTableCompanion toCompanion(bool nullToAbsent) {
+    return LearningUnitProgressTableCompanion(
+      unitId: Value(unitId),
+      unitKind: Value(unitKind),
+      stageId: Value(stageId),
+      moduleId: Value(moduleId),
+      status: Value(status),
+      score: score == null && nullToAbsent
+          ? const Value.absent()
+          : Value(score),
+      startedAt: startedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(startedAt),
+      completedAt: completedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(completedAt),
+      lastOpenedAt: lastOpenedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(lastOpenedAt),
     );
   }
 
-  factory ConversationDbModel.fromJson(
+  factory LearningUnitProgressDbModel.fromJson(
     Map<String, dynamic> json, {
     ValueSerializer? serializer,
   }) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
-    return ConversationDbModel(
-      id: serializer.fromJson<String>(json['id']),
-      title: serializer.fromJson<String>(json['title']),
-      titleZh: serializer.fromJson<String>(json['titleZh']),
-      titlePinyin: serializer.fromJson<String>(json['titlePinyin']),
-      description: serializer.fromJson<String>(json['description']),
-      level: serializer.fromJson<int>(json['level']),
-      category: serializer.fromJson<String>(json['category']),
-      icon: serializer.fromJson<String>(json['icon']),
-      lines: serializer.fromJson<List<DialogueLine>>(json['lines']),
-      vocabulary: serializer.fromJson<List<VocabInContext>>(json['vocabulary']),
-      speakers: serializer.fromJson<List<SpeakerInfo>>(json['speakers']),
-      relatedGrammar: serializer.fromJson<List<String>>(json['relatedGrammar']),
-      cultureTip: serializer.fromJson<String>(json['cultureTip']),
-      isBookmarked: serializer.fromJson<bool>(json['isBookmarked']),
-      isMastered: serializer.fromJson<bool>(json['isMastered']),
+    return LearningUnitProgressDbModel(
+      unitId: serializer.fromJson<String>(json['unitId']),
+      unitKind: serializer.fromJson<String>(json['unitKind']),
+      stageId: serializer.fromJson<String>(json['stageId']),
+      moduleId: serializer.fromJson<String>(json['moduleId']),
+      status: serializer.fromJson<String>(json['status']),
+      score: serializer.fromJson<int?>(json['score']),
+      startedAt: serializer.fromJson<DateTime?>(json['startedAt']),
+      completedAt: serializer.fromJson<DateTime?>(json['completedAt']),
+      lastOpenedAt: serializer.fromJson<DateTime?>(json['lastOpenedAt']),
     );
   }
   @override
   Map<String, dynamic> toJson({ValueSerializer? serializer}) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return <String, dynamic>{
-      'id': serializer.toJson<String>(id),
-      'title': serializer.toJson<String>(title),
-      'titleZh': serializer.toJson<String>(titleZh),
-      'titlePinyin': serializer.toJson<String>(titlePinyin),
-      'description': serializer.toJson<String>(description),
-      'level': serializer.toJson<int>(level),
-      'category': serializer.toJson<String>(category),
-      'icon': serializer.toJson<String>(icon),
-      'lines': serializer.toJson<List<DialogueLine>>(lines),
-      'vocabulary': serializer.toJson<List<VocabInContext>>(vocabulary),
-      'speakers': serializer.toJson<List<SpeakerInfo>>(speakers),
-      'relatedGrammar': serializer.toJson<List<String>>(relatedGrammar),
-      'cultureTip': serializer.toJson<String>(cultureTip),
-      'isBookmarked': serializer.toJson<bool>(isBookmarked),
-      'isMastered': serializer.toJson<bool>(isMastered),
+      'unitId': serializer.toJson<String>(unitId),
+      'unitKind': serializer.toJson<String>(unitKind),
+      'stageId': serializer.toJson<String>(stageId),
+      'moduleId': serializer.toJson<String>(moduleId),
+      'status': serializer.toJson<String>(status),
+      'score': serializer.toJson<int?>(score),
+      'startedAt': serializer.toJson<DateTime?>(startedAt),
+      'completedAt': serializer.toJson<DateTime?>(completedAt),
+      'lastOpenedAt': serializer.toJson<DateTime?>(lastOpenedAt),
     };
   }
 
-  ConversationDbModel copyWith({
-    String? id,
-    String? title,
-    String? titleZh,
-    String? titlePinyin,
-    String? description,
-    int? level,
-    String? category,
-    String? icon,
-    List<DialogueLine>? lines,
-    List<VocabInContext>? vocabulary,
-    List<SpeakerInfo>? speakers,
-    List<String>? relatedGrammar,
-    String? cultureTip,
-    bool? isBookmarked,
-    bool? isMastered,
-  }) => ConversationDbModel(
-    id: id ?? this.id,
-    title: title ?? this.title,
-    titleZh: titleZh ?? this.titleZh,
-    titlePinyin: titlePinyin ?? this.titlePinyin,
-    description: description ?? this.description,
-    level: level ?? this.level,
-    category: category ?? this.category,
-    icon: icon ?? this.icon,
-    lines: lines ?? this.lines,
-    vocabulary: vocabulary ?? this.vocabulary,
-    speakers: speakers ?? this.speakers,
-    relatedGrammar: relatedGrammar ?? this.relatedGrammar,
-    cultureTip: cultureTip ?? this.cultureTip,
-    isBookmarked: isBookmarked ?? this.isBookmarked,
-    isMastered: isMastered ?? this.isMastered,
+  LearningUnitProgressDbModel copyWith({
+    String? unitId,
+    String? unitKind,
+    String? stageId,
+    String? moduleId,
+    String? status,
+    Value<int?> score = const Value.absent(),
+    Value<DateTime?> startedAt = const Value.absent(),
+    Value<DateTime?> completedAt = const Value.absent(),
+    Value<DateTime?> lastOpenedAt = const Value.absent(),
+  }) => LearningUnitProgressDbModel(
+    unitId: unitId ?? this.unitId,
+    unitKind: unitKind ?? this.unitKind,
+    stageId: stageId ?? this.stageId,
+    moduleId: moduleId ?? this.moduleId,
+    status: status ?? this.status,
+    score: score.present ? score.value : this.score,
+    startedAt: startedAt.present ? startedAt.value : this.startedAt,
+    completedAt: completedAt.present ? completedAt.value : this.completedAt,
+    lastOpenedAt: lastOpenedAt.present ? lastOpenedAt.value : this.lastOpenedAt,
   );
-  ConversationDbModel copyWithCompanion(ConversationsTableCompanion data) {
-    return ConversationDbModel(
-      id: data.id.present ? data.id.value : this.id,
-      title: data.title.present ? data.title.value : this.title,
-      titleZh: data.titleZh.present ? data.titleZh.value : this.titleZh,
-      titlePinyin: data.titlePinyin.present
-          ? data.titlePinyin.value
-          : this.titlePinyin,
-      description: data.description.present
-          ? data.description.value
-          : this.description,
-      level: data.level.present ? data.level.value : this.level,
-      category: data.category.present ? data.category.value : this.category,
-      icon: data.icon.present ? data.icon.value : this.icon,
-      lines: data.lines.present ? data.lines.value : this.lines,
-      vocabulary: data.vocabulary.present
-          ? data.vocabulary.value
-          : this.vocabulary,
-      speakers: data.speakers.present ? data.speakers.value : this.speakers,
-      relatedGrammar: data.relatedGrammar.present
-          ? data.relatedGrammar.value
-          : this.relatedGrammar,
-      cultureTip: data.cultureTip.present
-          ? data.cultureTip.value
-          : this.cultureTip,
-      isBookmarked: data.isBookmarked.present
-          ? data.isBookmarked.value
-          : this.isBookmarked,
-      isMastered: data.isMastered.present
-          ? data.isMastered.value
-          : this.isMastered,
+  LearningUnitProgressDbModel copyWithCompanion(
+    LearningUnitProgressTableCompanion data,
+  ) {
+    return LearningUnitProgressDbModel(
+      unitId: data.unitId.present ? data.unitId.value : this.unitId,
+      unitKind: data.unitKind.present ? data.unitKind.value : this.unitKind,
+      stageId: data.stageId.present ? data.stageId.value : this.stageId,
+      moduleId: data.moduleId.present ? data.moduleId.value : this.moduleId,
+      status: data.status.present ? data.status.value : this.status,
+      score: data.score.present ? data.score.value : this.score,
+      startedAt: data.startedAt.present ? data.startedAt.value : this.startedAt,
+      completedAt: data.completedAt.present
+          ? data.completedAt.value
+          : this.completedAt,
+      lastOpenedAt: data.lastOpenedAt.present
+          ? data.lastOpenedAt.value
+          : this.lastOpenedAt,
     );
   }
 
   @override
   String toString() {
-    return (StringBuffer('ConversationDbModel(')
-          ..write('id: $id, ')
-          ..write('title: $title, ')
-          ..write('titleZh: $titleZh, ')
-          ..write('titlePinyin: $titlePinyin, ')
-          ..write('description: $description, ')
-          ..write('level: $level, ')
-          ..write('category: $category, ')
-          ..write('icon: $icon, ')
-          ..write('lines: $lines, ')
-          ..write('vocabulary: $vocabulary, ')
-          ..write('speakers: $speakers, ')
-          ..write('relatedGrammar: $relatedGrammar, ')
-          ..write('cultureTip: $cultureTip, ')
-          ..write('isBookmarked: $isBookmarked, ')
-          ..write('isMastered: $isMastered')
+    return (StringBuffer('LearningUnitProgressDbModel(')
+          ..write('unitId: $unitId, ')
+          ..write('unitKind: $unitKind, ')
+          ..write('stageId: $stageId, ')
+          ..write('moduleId: $moduleId, ')
+          ..write('status: $status, ')
+          ..write('score: $score, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('completedAt: $completedAt, ')
+          ..write('lastOpenedAt: $lastOpenedAt')
           ..write(')'))
         .toString();
   }
 
   @override
   int get hashCode => Object.hash(
-    id,
-    title,
-    titleZh,
-    titlePinyin,
-    description,
-    level,
-    category,
-    icon,
-    lines,
-    vocabulary,
-    speakers,
-    relatedGrammar,
-    cultureTip,
-    isBookmarked,
-    isMastered,
+    unitId,
+    unitKind,
+    stageId,
+    moduleId,
+    status,
+    score,
+    startedAt,
+    completedAt,
+    lastOpenedAt,
   );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      (other is ConversationDbModel &&
-          other.id == this.id &&
-          other.title == this.title &&
-          other.titleZh == this.titleZh &&
-          other.titlePinyin == this.titlePinyin &&
-          other.description == this.description &&
-          other.level == this.level &&
-          other.category == this.category &&
-          other.icon == this.icon &&
-          other.lines == this.lines &&
-          other.vocabulary == this.vocabulary &&
-          other.speakers == this.speakers &&
-          other.relatedGrammar == this.relatedGrammar &&
-          other.cultureTip == this.cultureTip &&
-          other.isBookmarked == this.isBookmarked &&
-          other.isMastered == this.isMastered);
+      (other is LearningUnitProgressDbModel &&
+          other.unitId == this.unitId &&
+          other.unitKind == this.unitKind &&
+          other.stageId == this.stageId &&
+          other.moduleId == this.moduleId &&
+          other.status == this.status &&
+          other.score == this.score &&
+          other.startedAt == this.startedAt &&
+          other.completedAt == this.completedAt &&
+          other.lastOpenedAt == this.lastOpenedAt);
 }
 
-class ConversationsTableCompanion extends UpdateCompanion<ConversationDbModel> {
-  final Value<String> id;
-  final Value<String> title;
-  final Value<String> titleZh;
-  final Value<String> titlePinyin;
-  final Value<String> description;
-  final Value<int> level;
-  final Value<String> category;
-  final Value<String> icon;
-  final Value<List<DialogueLine>> lines;
-  final Value<List<VocabInContext>> vocabulary;
-  final Value<List<SpeakerInfo>> speakers;
-  final Value<List<String>> relatedGrammar;
-  final Value<String> cultureTip;
-  final Value<bool> isBookmarked;
-  final Value<bool> isMastered;
+class LearningUnitProgressTableCompanion
+    extends UpdateCompanion<LearningUnitProgressDbModel> {
+  final Value<String> unitId;
+  final Value<String> unitKind;
+  final Value<String> stageId;
+  final Value<String> moduleId;
+  final Value<String> status;
+  final Value<int?> score;
+  final Value<DateTime?> startedAt;
+  final Value<DateTime?> completedAt;
+  final Value<DateTime?> lastOpenedAt;
   final Value<int> rowid;
-  const ConversationsTableCompanion({
-    this.id = const Value.absent(),
-    this.title = const Value.absent(),
-    this.titleZh = const Value.absent(),
-    this.titlePinyin = const Value.absent(),
-    this.description = const Value.absent(),
-    this.level = const Value.absent(),
-    this.category = const Value.absent(),
-    this.icon = const Value.absent(),
-    this.lines = const Value.absent(),
-    this.vocabulary = const Value.absent(),
-    this.speakers = const Value.absent(),
-    this.relatedGrammar = const Value.absent(),
-    this.cultureTip = const Value.absent(),
-    this.isBookmarked = const Value.absent(),
-    this.isMastered = const Value.absent(),
+  const LearningUnitProgressTableCompanion({
+    this.unitId = const Value.absent(),
+    this.unitKind = const Value.absent(),
+    this.stageId = const Value.absent(),
+    this.moduleId = const Value.absent(),
+    this.status = const Value.absent(),
+    this.score = const Value.absent(),
+    this.startedAt = const Value.absent(),
+    this.completedAt = const Value.absent(),
+    this.lastOpenedAt = const Value.absent(),
     this.rowid = const Value.absent(),
   });
-  ConversationsTableCompanion.insert({
-    required String id,
-    required String title,
-    required String titleZh,
-    required String titlePinyin,
-    required String description,
-    required int level,
-    required String category,
-    required String icon,
-    required List<DialogueLine> lines,
-    required List<VocabInContext> vocabulary,
-    required List<SpeakerInfo> speakers,
-    required List<String> relatedGrammar,
-    required String cultureTip,
-    this.isBookmarked = const Value.absent(),
-    this.isMastered = const Value.absent(),
+  LearningUnitProgressTableCompanion.insert({
+    required String unitId,
+    required String unitKind,
+    required String stageId,
+    required String moduleId,
+    required String status,
+    this.score = const Value.absent(),
+    this.startedAt = const Value.absent(),
+    this.completedAt = const Value.absent(),
+    this.lastOpenedAt = const Value.absent(),
     this.rowid = const Value.absent(),
-  }) : id = Value(id),
-       title = Value(title),
-       titleZh = Value(titleZh),
-       titlePinyin = Value(titlePinyin),
-       description = Value(description),
-       level = Value(level),
-       category = Value(category),
-       icon = Value(icon),
-       lines = Value(lines),
-       vocabulary = Value(vocabulary),
-       speakers = Value(speakers),
-       relatedGrammar = Value(relatedGrammar),
-       cultureTip = Value(cultureTip);
-  static Insertable<ConversationDbModel> custom({
-    Expression<String>? id,
-    Expression<String>? title,
-    Expression<String>? titleZh,
-    Expression<String>? titlePinyin,
-    Expression<String>? description,
-    Expression<int>? level,
-    Expression<String>? category,
-    Expression<String>? icon,
-    Expression<String>? lines,
-    Expression<String>? vocabulary,
-    Expression<String>? speakers,
-    Expression<String>? relatedGrammar,
-    Expression<String>? cultureTip,
-    Expression<bool>? isBookmarked,
-    Expression<bool>? isMastered,
+  }) : unitId = Value(unitId),
+       unitKind = Value(unitKind),
+       stageId = Value(stageId),
+       moduleId = Value(moduleId),
+       status = Value(status);
+  static Insertable<LearningUnitProgressDbModel> custom({
+    Expression<String>? unitId,
+    Expression<String>? unitKind,
+    Expression<String>? stageId,
+    Expression<String>? moduleId,
+    Expression<String>? status,
+    Expression<int>? score,
+    Expression<DateTime>? startedAt,
+    Expression<DateTime>? completedAt,
+    Expression<DateTime>? lastOpenedAt,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
-      if (id != null) 'id': id,
-      if (title != null) 'title': title,
-      if (titleZh != null) 'title_zh': titleZh,
-      if (titlePinyin != null) 'title_pinyin': titlePinyin,
-      if (description != null) 'description': description,
-      if (level != null) 'level': level,
-      if (category != null) 'category': category,
-      if (icon != null) 'icon': icon,
-      if (lines != null) 'lines': lines,
-      if (vocabulary != null) 'vocabulary': vocabulary,
-      if (speakers != null) 'speakers': speakers,
-      if (relatedGrammar != null) 'related_grammar': relatedGrammar,
-      if (cultureTip != null) 'culture_tip': cultureTip,
-      if (isBookmarked != null) 'is_bookmarked': isBookmarked,
-      if (isMastered != null) 'is_mastered': isMastered,
+      if (unitId != null) 'unit_id': unitId,
+      if (unitKind != null) 'unit_kind': unitKind,
+      if (stageId != null) 'stage_id': stageId,
+      if (moduleId != null) 'module_id': moduleId,
+      if (status != null) 'status': status,
+      if (score != null) 'score': score,
+      if (startedAt != null) 'started_at': startedAt,
+      if (completedAt != null) 'completed_at': completedAt,
+      if (lastOpenedAt != null) 'last_opened_at': lastOpenedAt,
       if (rowid != null) 'rowid': rowid,
     });
   }
 
-  ConversationsTableCompanion copyWith({
-    Value<String>? id,
-    Value<String>? title,
-    Value<String>? titleZh,
-    Value<String>? titlePinyin,
-    Value<String>? description,
-    Value<int>? level,
-    Value<String>? category,
-    Value<String>? icon,
-    Value<List<DialogueLine>>? lines,
-    Value<List<VocabInContext>>? vocabulary,
-    Value<List<SpeakerInfo>>? speakers,
-    Value<List<String>>? relatedGrammar,
-    Value<String>? cultureTip,
-    Value<bool>? isBookmarked,
-    Value<bool>? isMastered,
+  LearningUnitProgressTableCompanion copyWith({
+    Value<String>? unitId,
+    Value<String>? unitKind,
+    Value<String>? stageId,
+    Value<String>? moduleId,
+    Value<String>? status,
+    Value<int?>? score,
+    Value<DateTime?>? startedAt,
+    Value<DateTime?>? completedAt,
+    Value<DateTime?>? lastOpenedAt,
     Value<int>? rowid,
   }) {
-    return ConversationsTableCompanion(
-      id: id ?? this.id,
-      title: title ?? this.title,
-      titleZh: titleZh ?? this.titleZh,
-      titlePinyin: titlePinyin ?? this.titlePinyin,
-      description: description ?? this.description,
-      level: level ?? this.level,
-      category: category ?? this.category,
-      icon: icon ?? this.icon,
-      lines: lines ?? this.lines,
-      vocabulary: vocabulary ?? this.vocabulary,
-      speakers: speakers ?? this.speakers,
-      relatedGrammar: relatedGrammar ?? this.relatedGrammar,
-      cultureTip: cultureTip ?? this.cultureTip,
-      isBookmarked: isBookmarked ?? this.isBookmarked,
-      isMastered: isMastered ?? this.isMastered,
+    return LearningUnitProgressTableCompanion(
+      unitId: unitId ?? this.unitId,
+      unitKind: unitKind ?? this.unitKind,
+      stageId: stageId ?? this.stageId,
+      moduleId: moduleId ?? this.moduleId,
+      status: status ?? this.status,
+      score: score ?? this.score,
+      startedAt: startedAt ?? this.startedAt,
+      completedAt: completedAt ?? this.completedAt,
+      lastOpenedAt: lastOpenedAt ?? this.lastOpenedAt,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -3238,60 +1882,32 @@ class ConversationsTableCompanion extends UpdateCompanion<ConversationDbModel> {
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
-    if (id.present) {
-      map['id'] = Variable<String>(id.value);
+    if (unitId.present) {
+      map['unit_id'] = Variable<String>(unitId.value);
     }
-    if (title.present) {
-      map['title'] = Variable<String>(title.value);
+    if (unitKind.present) {
+      map['unit_kind'] = Variable<String>(unitKind.value);
     }
-    if (titleZh.present) {
-      map['title_zh'] = Variable<String>(titleZh.value);
+    if (stageId.present) {
+      map['stage_id'] = Variable<String>(stageId.value);
     }
-    if (titlePinyin.present) {
-      map['title_pinyin'] = Variable<String>(titlePinyin.value);
+    if (moduleId.present) {
+      map['module_id'] = Variable<String>(moduleId.value);
     }
-    if (description.present) {
-      map['description'] = Variable<String>(description.value);
+    if (status.present) {
+      map['status'] = Variable<String>(status.value);
     }
-    if (level.present) {
-      map['level'] = Variable<int>(level.value);
+    if (score.present) {
+      map['score'] = Variable<int>(score.value);
     }
-    if (category.present) {
-      map['category'] = Variable<String>(category.value);
+    if (startedAt.present) {
+      map['started_at'] = Variable<DateTime>(startedAt.value);
     }
-    if (icon.present) {
-      map['icon'] = Variable<String>(icon.value);
+    if (completedAt.present) {
+      map['completed_at'] = Variable<DateTime>(completedAt.value);
     }
-    if (lines.present) {
-      map['lines'] = Variable<String>(
-        $ConversationsTableTable.$converterlines.toSql(lines.value),
-      );
-    }
-    if (vocabulary.present) {
-      map['vocabulary'] = Variable<String>(
-        $ConversationsTableTable.$convertervocabulary.toSql(vocabulary.value),
-      );
-    }
-    if (speakers.present) {
-      map['speakers'] = Variable<String>(
-        $ConversationsTableTable.$converterspeakers.toSql(speakers.value),
-      );
-    }
-    if (relatedGrammar.present) {
-      map['related_grammar'] = Variable<String>(
-        $ConversationsTableTable.$converterrelatedGrammar.toSql(
-          relatedGrammar.value,
-        ),
-      );
-    }
-    if (cultureTip.present) {
-      map['culture_tip'] = Variable<String>(cultureTip.value);
-    }
-    if (isBookmarked.present) {
-      map['is_bookmarked'] = Variable<bool>(isBookmarked.value);
-    }
-    if (isMastered.present) {
-      map['is_mastered'] = Variable<bool>(isMastered.value);
+    if (lastOpenedAt.present) {
+      map['last_opened_at'] = Variable<DateTime>(lastOpenedAt.value);
     }
     if (rowid.present) {
       map['rowid'] = Variable<int>(rowid.value);
@@ -3301,22 +1917,16 @@ class ConversationsTableCompanion extends UpdateCompanion<ConversationDbModel> {
 
   @override
   String toString() {
-    return (StringBuffer('ConversationsTableCompanion(')
-          ..write('id: $id, ')
-          ..write('title: $title, ')
-          ..write('titleZh: $titleZh, ')
-          ..write('titlePinyin: $titlePinyin, ')
-          ..write('description: $description, ')
-          ..write('level: $level, ')
-          ..write('category: $category, ')
-          ..write('icon: $icon, ')
-          ..write('lines: $lines, ')
-          ..write('vocabulary: $vocabulary, ')
-          ..write('speakers: $speakers, ')
-          ..write('relatedGrammar: $relatedGrammar, ')
-          ..write('cultureTip: $cultureTip, ')
-          ..write('isBookmarked: $isBookmarked, ')
-          ..write('isMastered: $isMastered, ')
+    return (StringBuffer('LearningUnitProgressTableCompanion(')
+          ..write('unitId: $unitId, ')
+          ..write('unitKind: $unitKind, ')
+          ..write('stageId: $stageId, ')
+          ..write('moduleId: $moduleId, ')
+          ..write('status: $status, ')
+          ..write('score: $score, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('completedAt: $completedAt, ')
+          ..write('lastOpenedAt: $lastOpenedAt, ')
           ..write('rowid: $rowid')
           ..write(')'))
         .toString();
@@ -3326,72 +1936,96 @@ class ConversationsTableCompanion extends UpdateCompanion<ConversationDbModel> {
 abstract class _$AppDatabase extends GeneratedDatabase {
   _$AppDatabase(QueryExecutor e) : super(e);
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
-  late final $VocabsTableTable vocabsTable = $VocabsTableTable(this);
-  late final $CharactersTableTable charactersTable = $CharactersTableTable(
-    this,
-  );
-  late final $GrammarPointsTableTable grammarPointsTable =
-      $GrammarPointsTableTable(this);
-  late final $ConversationsTableTable conversationsTable =
-      $ConversationsTableTable(this);
+  late final $SrsCardsTableTable srsCardsTable = $SrsCardsTableTable(this);
+  late final $SrsReviewLogsTableTable srsReviewLogsTable =
+      $SrsReviewLogsTableTable(this);
+  late final $LearningUnitProgressTableTable learningUnitProgressTable =
+      $LearningUnitProgressTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
   List<DatabaseSchemaEntity> get allSchemaEntities => [
-    vocabsTable,
-    charactersTable,
-    grammarPointsTable,
-    conversationsTable,
+    srsCardsTable,
+    srsReviewLogsTable,
+    learningUnitProgressTable,
   ];
 }
 
-typedef $$VocabsTableTableCreateCompanionBuilder =
-    VocabsTableCompanion Function({
+typedef $$SrsCardsTableTableCreateCompanionBuilder =
+    SrsCardsTableCompanion Function({
       required String id,
-      required String hanzi,
-      required String pinyin,
-      required String pinyinNormalized,
-      required List<String> characters,
-      required List<Meaning> meanings,
-      required List<ExampleSentence> exampleSentences,
-      required int level,
-      required String wordType,
-      Value<bool> isBookmarked,
-      Value<bool> isMastered,
-      Value<int> repetitions,
-      Value<double> easeFactor,
-      Value<int> interval,
-      required DateTime nextReview,
-      Value<bool> needsSync,
-      Value<DateTime> updatedAt,
+      required String targetType,
+      required String targetId,
+      required String cardType,
+      required String state,
+      Value<DateTime?> dueAt,
+      Value<double?> stability,
+      Value<double?> difficulty,
+      Value<int> elapsedDays,
+      Value<int> scheduledDays,
+      Value<int> reps,
+      Value<int> lapses,
+      Value<DateTime?> lastReviewedAt,
       Value<int> rowid,
     });
-typedef $$VocabsTableTableUpdateCompanionBuilder =
-    VocabsTableCompanion Function({
+typedef $$SrsCardsTableTableUpdateCompanionBuilder =
+    SrsCardsTableCompanion Function({
       Value<String> id,
-      Value<String> hanzi,
-      Value<String> pinyin,
-      Value<String> pinyinNormalized,
-      Value<List<String>> characters,
-      Value<List<Meaning>> meanings,
-      Value<List<ExampleSentence>> exampleSentences,
-      Value<int> level,
-      Value<String> wordType,
-      Value<bool> isBookmarked,
-      Value<bool> isMastered,
-      Value<int> repetitions,
-      Value<double> easeFactor,
-      Value<int> interval,
-      Value<DateTime> nextReview,
-      Value<bool> needsSync,
-      Value<DateTime> updatedAt,
+      Value<String> targetType,
+      Value<String> targetId,
+      Value<String> cardType,
+      Value<String> state,
+      Value<DateTime?> dueAt,
+      Value<double?> stability,
+      Value<double?> difficulty,
+      Value<int> elapsedDays,
+      Value<int> scheduledDays,
+      Value<int> reps,
+      Value<int> lapses,
+      Value<DateTime?> lastReviewedAt,
       Value<int> rowid,
     });
 
-class $$VocabsTableTableFilterComposer
-    extends Composer<_$AppDatabase, $VocabsTableTable> {
-  $$VocabsTableTableFilterComposer({
+final class $$SrsCardsTableTableReferences
+    extends BaseReferences<_$AppDatabase, $SrsCardsTableTable, SrsCardDbModel> {
+  $$SrsCardsTableTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static MultiTypedResultKey<
+    $SrsReviewLogsTableTable,
+    List<SrsReviewLogDbModel>
+  >
+  _srsReviewLogsTableRefsTable(_$AppDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.srsReviewLogsTable,
+        aliasName: $_aliasNameGenerator(
+          db.srsCardsTable.id,
+          db.srsReviewLogsTable.cardId,
+        ),
+      );
+
+  $$SrsReviewLogsTableTableProcessedTableManager get srsReviewLogsTableRefs {
+    final manager = $$SrsReviewLogsTableTableTableManager(
+      $_db,
+      $_db.srsReviewLogsTable,
+    ).filter((f) => f.cardId.id.sqlEquals($_itemColumn<String>('id')!));
+
+    final cache = $_typedResult.readTableOrNull(
+      _srsReviewLogsTableRefsTable($_db),
+    );
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+}
+
+class $$SrsCardsTableTableFilterComposer
+    extends Composer<_$AppDatabase, $SrsCardsTableTable> {
+  $$SrsCardsTableTableFilterComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -3403,97 +2037,95 @@ class $$VocabsTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get hanzi => $composableBuilder(
-    column: $table.hanzi,
+  ColumnFilters<String> get targetType => $composableBuilder(
+    column: $table.targetType,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get pinyin => $composableBuilder(
-    column: $table.pinyin,
+  ColumnFilters<String> get targetId => $composableBuilder(
+    column: $table.targetId,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get pinyinNormalized => $composableBuilder(
-    column: $table.pinyinNormalized,
+  ColumnFilters<String> get cardType => $composableBuilder(
+    column: $table.cardType,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<List<String>, List<String>, String>
-  get characters => $composableBuilder(
-    column: $table.characters,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnWithTypeConverterFilters<List<Meaning>, List<Meaning>, String>
-  get meanings => $composableBuilder(
-    column: $table.meanings,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnWithTypeConverterFilters<
-    List<ExampleSentence>,
-    List<ExampleSentence>,
-    String
-  >
-  get exampleSentences => $composableBuilder(
-    column: $table.exampleSentences,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnFilters<int> get level => $composableBuilder(
-    column: $table.level,
+  ColumnFilters<String> get state => $composableBuilder(
+    column: $table.state,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get wordType => $composableBuilder(
-    column: $table.wordType,
+  ColumnFilters<DateTime> get dueAt => $composableBuilder(
+    column: $table.dueAt,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<bool> get isBookmarked => $composableBuilder(
-    column: $table.isBookmarked,
+  ColumnFilters<double> get stability => $composableBuilder(
+    column: $table.stability,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<bool> get isMastered => $composableBuilder(
-    column: $table.isMastered,
+  ColumnFilters<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<int> get repetitions => $composableBuilder(
-    column: $table.repetitions,
+  ColumnFilters<int> get elapsedDays => $composableBuilder(
+    column: $table.elapsedDays,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<double> get easeFactor => $composableBuilder(
-    column: $table.easeFactor,
+  ColumnFilters<int> get scheduledDays => $composableBuilder(
+    column: $table.scheduledDays,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<int> get interval => $composableBuilder(
-    column: $table.interval,
+  ColumnFilters<int> get reps => $composableBuilder(
+    column: $table.reps,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<DateTime> get nextReview => $composableBuilder(
-    column: $table.nextReview,
+  ColumnFilters<int> get lapses => $composableBuilder(
+    column: $table.lapses,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<bool> get needsSync => $composableBuilder(
-    column: $table.needsSync,
+  ColumnFilters<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
-    builder: (column) => ColumnFilters(column),
-  );
+  Expression<bool> srsReviewLogsTableRefs(
+    Expression<bool> Function($$SrsReviewLogsTableTableFilterComposer f) f,
+  ) {
+    final $$SrsReviewLogsTableTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.id,
+      referencedTable: $db.srsReviewLogsTable,
+      getReferencedColumn: (t) => t.cardId,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$SrsReviewLogsTableTableFilterComposer(
+            $db: $db,
+            $table: $db.srsReviewLogsTable,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return f(composer);
+  }
 }
 
-class $$VocabsTableTableOrderingComposer
-    extends Composer<_$AppDatabase, $VocabsTableTable> {
-  $$VocabsTableTableOrderingComposer({
+class $$SrsCardsTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $SrsCardsTableTable> {
+  $$SrsCardsTableTableOrderingComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -3505,90 +2137,70 @@ class $$VocabsTableTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get hanzi => $composableBuilder(
-    column: $table.hanzi,
+  ColumnOrderings<String> get targetType => $composableBuilder(
+    column: $table.targetType,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get pinyin => $composableBuilder(
-    column: $table.pinyin,
+  ColumnOrderings<String> get targetId => $composableBuilder(
+    column: $table.targetId,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get pinyinNormalized => $composableBuilder(
-    column: $table.pinyinNormalized,
+  ColumnOrderings<String> get cardType => $composableBuilder(
+    column: $table.cardType,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get characters => $composableBuilder(
-    column: $table.characters,
+  ColumnOrderings<String> get state => $composableBuilder(
+    column: $table.state,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get meanings => $composableBuilder(
-    column: $table.meanings,
+  ColumnOrderings<DateTime> get dueAt => $composableBuilder(
+    column: $table.dueAt,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get exampleSentences => $composableBuilder(
-    column: $table.exampleSentences,
+  ColumnOrderings<double> get stability => $composableBuilder(
+    column: $table.stability,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<int> get level => $composableBuilder(
-    column: $table.level,
+  ColumnOrderings<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get wordType => $composableBuilder(
-    column: $table.wordType,
+  ColumnOrderings<int> get elapsedDays => $composableBuilder(
+    column: $table.elapsedDays,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<bool> get isBookmarked => $composableBuilder(
-    column: $table.isBookmarked,
+  ColumnOrderings<int> get scheduledDays => $composableBuilder(
+    column: $table.scheduledDays,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<bool> get isMastered => $composableBuilder(
-    column: $table.isMastered,
+  ColumnOrderings<int> get reps => $composableBuilder(
+    column: $table.reps,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<int> get repetitions => $composableBuilder(
-    column: $table.repetitions,
+  ColumnOrderings<int> get lapses => $composableBuilder(
+    column: $table.lapses,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<double> get easeFactor => $composableBuilder(
-    column: $table.easeFactor,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<int> get interval => $composableBuilder(
-    column: $table.interval,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<DateTime> get nextReview => $composableBuilder(
-    column: $table.nextReview,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<bool> get needsSync => $composableBuilder(
-    column: $table.needsSync,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
+  ColumnOrderings<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
     builder: (column) => ColumnOrderings(column),
   );
 }
 
-class $$VocabsTableTableAnnotationComposer
-    extends Composer<_$AppDatabase, $VocabsTableTable> {
-  $$VocabsTableTableAnnotationComposer({
+class $$SrsCardsTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $SrsCardsTableTable> {
+  $$SrsCardsTableTableAnnotationComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -3598,1322 +2210,910 @@ class $$VocabsTableTableAnnotationComposer
   GeneratedColumn<String> get id =>
       $composableBuilder(column: $table.id, builder: (column) => column);
 
-  GeneratedColumn<String> get hanzi =>
-      $composableBuilder(column: $table.hanzi, builder: (column) => column);
-
-  GeneratedColumn<String> get pinyin =>
-      $composableBuilder(column: $table.pinyin, builder: (column) => column);
-
-  GeneratedColumn<String> get pinyinNormalized => $composableBuilder(
-    column: $table.pinyinNormalized,
+  GeneratedColumn<String> get targetType => $composableBuilder(
+    column: $table.targetType,
     builder: (column) => column,
   );
 
-  GeneratedColumnWithTypeConverter<List<String>, String> get characters =>
-      $composableBuilder(
-        column: $table.characters,
-        builder: (column) => column,
-      );
+  GeneratedColumn<String> get targetId =>
+      $composableBuilder(column: $table.targetId, builder: (column) => column);
 
-  GeneratedColumnWithTypeConverter<List<Meaning>, String> get meanings =>
-      $composableBuilder(column: $table.meanings, builder: (column) => column);
+  GeneratedColumn<String> get cardType =>
+      $composableBuilder(column: $table.cardType, builder: (column) => column);
 
-  GeneratedColumnWithTypeConverter<List<ExampleSentence>, String>
-  get exampleSentences => $composableBuilder(
-    column: $table.exampleSentences,
+  GeneratedColumn<String> get state =>
+      $composableBuilder(column: $table.state, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get dueAt =>
+      $composableBuilder(column: $table.dueAt, builder: (column) => column);
+
+  GeneratedColumn<double> get stability =>
+      $composableBuilder(column: $table.stability, builder: (column) => column);
+
+  GeneratedColumn<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
     builder: (column) => column,
   );
 
-  GeneratedColumn<int> get level =>
-      $composableBuilder(column: $table.level, builder: (column) => column);
-
-  GeneratedColumn<String> get wordType =>
-      $composableBuilder(column: $table.wordType, builder: (column) => column);
-
-  GeneratedColumn<bool> get isBookmarked => $composableBuilder(
-    column: $table.isBookmarked,
+  GeneratedColumn<int> get elapsedDays => $composableBuilder(
+    column: $table.elapsedDays,
     builder: (column) => column,
   );
 
-  GeneratedColumn<bool> get isMastered => $composableBuilder(
-    column: $table.isMastered,
+  GeneratedColumn<int> get scheduledDays => $composableBuilder(
+    column: $table.scheduledDays,
     builder: (column) => column,
   );
 
-  GeneratedColumn<int> get repetitions => $composableBuilder(
-    column: $table.repetitions,
+  GeneratedColumn<int> get reps =>
+      $composableBuilder(column: $table.reps, builder: (column) => column);
+
+  GeneratedColumn<int> get lapses =>
+      $composableBuilder(column: $table.lapses, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
     builder: (column) => column,
   );
 
-  GeneratedColumn<double> get easeFactor => $composableBuilder(
-    column: $table.easeFactor,
-    builder: (column) => column,
-  );
-
-  GeneratedColumn<int> get interval =>
-      $composableBuilder(column: $table.interval, builder: (column) => column);
-
-  GeneratedColumn<DateTime> get nextReview => $composableBuilder(
-    column: $table.nextReview,
-    builder: (column) => column,
-  );
-
-  GeneratedColumn<bool> get needsSync =>
-      $composableBuilder(column: $table.needsSync, builder: (column) => column);
-
-  GeneratedColumn<DateTime> get updatedAt =>
-      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+  Expression<T> srsReviewLogsTableRefs<T extends Object>(
+    Expression<T> Function($$SrsReviewLogsTableTableAnnotationComposer a) f,
+  ) {
+    final $$SrsReviewLogsTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.srsReviewLogsTable,
+          getReferencedColumn: (t) => t.cardId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$SrsReviewLogsTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.srsReviewLogsTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
+    return f(composer);
+  }
 }
 
-class $$VocabsTableTableTableManager
+class $$SrsCardsTableTableTableManager
     extends
         RootTableManager<
           _$AppDatabase,
-          $VocabsTableTable,
-          VocabDbModel,
-          $$VocabsTableTableFilterComposer,
-          $$VocabsTableTableOrderingComposer,
-          $$VocabsTableTableAnnotationComposer,
-          $$VocabsTableTableCreateCompanionBuilder,
-          $$VocabsTableTableUpdateCompanionBuilder,
-          (
-            VocabDbModel,
-            BaseReferences<_$AppDatabase, $VocabsTableTable, VocabDbModel>,
-          ),
-          VocabDbModel,
-          PrefetchHooks Function()
+          $SrsCardsTableTable,
+          SrsCardDbModel,
+          $$SrsCardsTableTableFilterComposer,
+          $$SrsCardsTableTableOrderingComposer,
+          $$SrsCardsTableTableAnnotationComposer,
+          $$SrsCardsTableTableCreateCompanionBuilder,
+          $$SrsCardsTableTableUpdateCompanionBuilder,
+          (SrsCardDbModel, $$SrsCardsTableTableReferences),
+          SrsCardDbModel,
+          PrefetchHooks Function({bool srsReviewLogsTableRefs})
         > {
-  $$VocabsTableTableTableManager(_$AppDatabase db, $VocabsTableTable table)
+  $$SrsCardsTableTableTableManager(_$AppDatabase db, $SrsCardsTableTable table)
     : super(
         TableManagerState(
           db: db,
           table: table,
           createFilteringComposer: () =>
-              $$VocabsTableTableFilterComposer($db: db, $table: table),
+              $$SrsCardsTableTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
-              $$VocabsTableTableOrderingComposer($db: db, $table: table),
+              $$SrsCardsTableTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
-              $$VocabsTableTableAnnotationComposer($db: db, $table: table),
+              $$SrsCardsTableTableAnnotationComposer($db: db, $table: table),
           updateCompanionCallback:
               ({
                 Value<String> id = const Value.absent(),
-                Value<String> hanzi = const Value.absent(),
-                Value<String> pinyin = const Value.absent(),
-                Value<String> pinyinNormalized = const Value.absent(),
-                Value<List<String>> characters = const Value.absent(),
-                Value<List<Meaning>> meanings = const Value.absent(),
-                Value<List<ExampleSentence>> exampleSentences =
-                    const Value.absent(),
-                Value<int> level = const Value.absent(),
-                Value<String> wordType = const Value.absent(),
-                Value<bool> isBookmarked = const Value.absent(),
-                Value<bool> isMastered = const Value.absent(),
-                Value<int> repetitions = const Value.absent(),
-                Value<double> easeFactor = const Value.absent(),
-                Value<int> interval = const Value.absent(),
-                Value<DateTime> nextReview = const Value.absent(),
-                Value<bool> needsSync = const Value.absent(),
-                Value<DateTime> updatedAt = const Value.absent(),
+                Value<String> targetType = const Value.absent(),
+                Value<String> targetId = const Value.absent(),
+                Value<String> cardType = const Value.absent(),
+                Value<String> state = const Value.absent(),
+                Value<DateTime?> dueAt = const Value.absent(),
+                Value<double?> stability = const Value.absent(),
+                Value<double?> difficulty = const Value.absent(),
+                Value<int> elapsedDays = const Value.absent(),
+                Value<int> scheduledDays = const Value.absent(),
+                Value<int> reps = const Value.absent(),
+                Value<int> lapses = const Value.absent(),
+                Value<DateTime?> lastReviewedAt = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
-              }) => VocabsTableCompanion(
+              }) => SrsCardsTableCompanion(
                 id: id,
-                hanzi: hanzi,
-                pinyin: pinyin,
-                pinyinNormalized: pinyinNormalized,
-                characters: characters,
-                meanings: meanings,
-                exampleSentences: exampleSentences,
-                level: level,
-                wordType: wordType,
-                isBookmarked: isBookmarked,
-                isMastered: isMastered,
-                repetitions: repetitions,
-                easeFactor: easeFactor,
-                interval: interval,
-                nextReview: nextReview,
-                needsSync: needsSync,
-                updatedAt: updatedAt,
+                targetType: targetType,
+                targetId: targetId,
+                cardType: cardType,
+                state: state,
+                dueAt: dueAt,
+                stability: stability,
+                difficulty: difficulty,
+                elapsedDays: elapsedDays,
+                scheduledDays: scheduledDays,
+                reps: reps,
+                lapses: lapses,
+                lastReviewedAt: lastReviewedAt,
                 rowid: rowid,
               ),
           createCompanionCallback:
               ({
                 required String id,
-                required String hanzi,
-                required String pinyin,
-                required String pinyinNormalized,
-                required List<String> characters,
-                required List<Meaning> meanings,
-                required List<ExampleSentence> exampleSentences,
-                required int level,
-                required String wordType,
-                Value<bool> isBookmarked = const Value.absent(),
-                Value<bool> isMastered = const Value.absent(),
-                Value<int> repetitions = const Value.absent(),
-                Value<double> easeFactor = const Value.absent(),
-                Value<int> interval = const Value.absent(),
-                required DateTime nextReview,
-                Value<bool> needsSync = const Value.absent(),
-                Value<DateTime> updatedAt = const Value.absent(),
+                required String targetType,
+                required String targetId,
+                required String cardType,
+                required String state,
+                Value<DateTime?> dueAt = const Value.absent(),
+                Value<double?> stability = const Value.absent(),
+                Value<double?> difficulty = const Value.absent(),
+                Value<int> elapsedDays = const Value.absent(),
+                Value<int> scheduledDays = const Value.absent(),
+                Value<int> reps = const Value.absent(),
+                Value<int> lapses = const Value.absent(),
+                Value<DateTime?> lastReviewedAt = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
-              }) => VocabsTableCompanion.insert(
+              }) => SrsCardsTableCompanion.insert(
                 id: id,
-                hanzi: hanzi,
-                pinyin: pinyin,
-                pinyinNormalized: pinyinNormalized,
-                characters: characters,
-                meanings: meanings,
-                exampleSentences: exampleSentences,
-                level: level,
-                wordType: wordType,
-                isBookmarked: isBookmarked,
-                isMastered: isMastered,
-                repetitions: repetitions,
-                easeFactor: easeFactor,
-                interval: interval,
-                nextReview: nextReview,
-                needsSync: needsSync,
-                updatedAt: updatedAt,
+                targetType: targetType,
+                targetId: targetId,
+                cardType: cardType,
+                state: state,
+                dueAt: dueAt,
+                stability: stability,
+                difficulty: difficulty,
+                elapsedDays: elapsedDays,
+                scheduledDays: scheduledDays,
+                reps: reps,
+                lapses: lapses,
+                lastReviewedAt: lastReviewedAt,
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$SrsCardsTableTableReferences(db, table, e),
+                ),
+              )
               .toList(),
-          prefetchHooksCallback: null,
+          prefetchHooksCallback: ({srsReviewLogsTableRefs = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [
+                if (srsReviewLogsTableRefs) db.srsReviewLogsTable,
+              ],
+              addJoins: null,
+              getPrefetchedDataCallback: (items) async {
+                return [
+                  if (srsReviewLogsTableRefs)
+                    await $_getPrefetchedData<
+                      SrsCardDbModel,
+                      $SrsCardsTableTable,
+                      SrsReviewLogDbModel
+                    >(
+                      currentTable: table,
+                      referencedTable: $$SrsCardsTableTableReferences
+                          ._srsReviewLogsTableRefsTable(db),
+                      managerFromTypedResult: (p0) =>
+                          $$SrsCardsTableTableReferences(
+                            db,
+                            table,
+                            p0,
+                          ).srsReviewLogsTableRefs,
+                      referencedItemsForCurrentItem: (item, referencedItems) =>
+                          referencedItems.where((e) => e.cardId == item.id),
+                      typedResults: items,
+                    ),
+                ];
+              },
+            );
+          },
         ),
       );
 }
 
-typedef $$VocabsTableTableProcessedTableManager =
+typedef $$SrsCardsTableTableProcessedTableManager =
     ProcessedTableManager<
       _$AppDatabase,
-      $VocabsTableTable,
-      VocabDbModel,
-      $$VocabsTableTableFilterComposer,
-      $$VocabsTableTableOrderingComposer,
-      $$VocabsTableTableAnnotationComposer,
-      $$VocabsTableTableCreateCompanionBuilder,
-      $$VocabsTableTableUpdateCompanionBuilder,
-      (
-        VocabDbModel,
-        BaseReferences<_$AppDatabase, $VocabsTableTable, VocabDbModel>,
-      ),
-      VocabDbModel,
-      PrefetchHooks Function()
+      $SrsCardsTableTable,
+      SrsCardDbModel,
+      $$SrsCardsTableTableFilterComposer,
+      $$SrsCardsTableTableOrderingComposer,
+      $$SrsCardsTableTableAnnotationComposer,
+      $$SrsCardsTableTableCreateCompanionBuilder,
+      $$SrsCardsTableTableUpdateCompanionBuilder,
+      (SrsCardDbModel, $$SrsCardsTableTableReferences),
+      SrsCardDbModel,
+      PrefetchHooks Function({bool srsReviewLogsTableRefs})
     >;
-typedef $$CharactersTableTableCreateCompanionBuilder =
-    CharactersTableCompanion Function({
-      required String char,
-      required List<String> strokes,
-      Value<int?> hskLevel,
-      Value<String?> radical,
-      Value<int?> strokeCount,
-      Value<String?> pinyin,
-      Value<String?> pinyinNormalized,
-      Value<String?> definition,
-      Value<String?> definitionVi,
-      Value<int> rowid,
+typedef $$SrsReviewLogsTableTableCreateCompanionBuilder =
+    SrsReviewLogsTableCompanion Function({
+      Value<int> id,
+      required String cardId,
+      required String rating,
+      required DateTime reviewedAt,
+      required String algorithm,
+      Value<double?> stabilityBefore,
+      Value<double?> difficultyBefore,
+      Value<double?> stabilityAfter,
+      Value<double?> difficultyAfter,
     });
-typedef $$CharactersTableTableUpdateCompanionBuilder =
-    CharactersTableCompanion Function({
-      Value<String> char,
-      Value<List<String>> strokes,
-      Value<int?> hskLevel,
-      Value<String?> radical,
-      Value<int?> strokeCount,
-      Value<String?> pinyin,
-      Value<String?> pinyinNormalized,
-      Value<String?> definition,
-      Value<String?> definitionVi,
-      Value<int> rowid,
+typedef $$SrsReviewLogsTableTableUpdateCompanionBuilder =
+    SrsReviewLogsTableCompanion Function({
+      Value<int> id,
+      Value<String> cardId,
+      Value<String> rating,
+      Value<DateTime> reviewedAt,
+      Value<String> algorithm,
+      Value<double?> stabilityBefore,
+      Value<double?> difficultyBefore,
+      Value<double?> stabilityAfter,
+      Value<double?> difficultyAfter,
     });
 
-class $$CharactersTableTableFilterComposer
-    extends Composer<_$AppDatabase, $CharactersTableTable> {
-  $$CharactersTableTableFilterComposer({
-    required super.$db,
-    required super.$table,
-    super.joinBuilder,
-    super.$addJoinBuilderToRootComposer,
-    super.$removeJoinBuilderFromRootComposer,
-  });
-  ColumnFilters<String> get char => $composableBuilder(
-    column: $table.char,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnWithTypeConverterFilters<List<String>, List<String>, String>
-  get strokes => $composableBuilder(
-    column: $table.strokes,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnFilters<int> get hskLevel => $composableBuilder(
-    column: $table.hskLevel,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnFilters<String> get radical => $composableBuilder(
-    column: $table.radical,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnFilters<int> get strokeCount => $composableBuilder(
-    column: $table.strokeCount,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnFilters<String> get pinyin => $composableBuilder(
-    column: $table.pinyin,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnFilters<String> get pinyinNormalized => $composableBuilder(
-    column: $table.pinyinNormalized,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnFilters<String> get definition => $composableBuilder(
-    column: $table.definition,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnFilters<String> get definitionVi => $composableBuilder(
-    column: $table.definitionVi,
-    builder: (column) => ColumnFilters(column),
-  );
-}
-
-class $$CharactersTableTableOrderingComposer
-    extends Composer<_$AppDatabase, $CharactersTableTable> {
-  $$CharactersTableTableOrderingComposer({
-    required super.$db,
-    required super.$table,
-    super.joinBuilder,
-    super.$addJoinBuilderToRootComposer,
-    super.$removeJoinBuilderFromRootComposer,
-  });
-  ColumnOrderings<String> get char => $composableBuilder(
-    column: $table.char,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get strokes => $composableBuilder(
-    column: $table.strokes,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<int> get hskLevel => $composableBuilder(
-    column: $table.hskLevel,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get radical => $composableBuilder(
-    column: $table.radical,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<int> get strokeCount => $composableBuilder(
-    column: $table.strokeCount,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get pinyin => $composableBuilder(
-    column: $table.pinyin,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get pinyinNormalized => $composableBuilder(
-    column: $table.pinyinNormalized,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get definition => $composableBuilder(
-    column: $table.definition,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get definitionVi => $composableBuilder(
-    column: $table.definitionVi,
-    builder: (column) => ColumnOrderings(column),
-  );
-}
-
-class $$CharactersTableTableAnnotationComposer
-    extends Composer<_$AppDatabase, $CharactersTableTable> {
-  $$CharactersTableTableAnnotationComposer({
-    required super.$db,
-    required super.$table,
-    super.joinBuilder,
-    super.$addJoinBuilderToRootComposer,
-    super.$removeJoinBuilderFromRootComposer,
-  });
-  GeneratedColumn<String> get char =>
-      $composableBuilder(column: $table.char, builder: (column) => column);
-
-  GeneratedColumnWithTypeConverter<List<String>, String> get strokes =>
-      $composableBuilder(column: $table.strokes, builder: (column) => column);
-
-  GeneratedColumn<int> get hskLevel =>
-      $composableBuilder(column: $table.hskLevel, builder: (column) => column);
-
-  GeneratedColumn<String> get radical =>
-      $composableBuilder(column: $table.radical, builder: (column) => column);
-
-  GeneratedColumn<int> get strokeCount => $composableBuilder(
-    column: $table.strokeCount,
-    builder: (column) => column,
-  );
-
-  GeneratedColumn<String> get pinyin =>
-      $composableBuilder(column: $table.pinyin, builder: (column) => column);
-
-  GeneratedColumn<String> get pinyinNormalized => $composableBuilder(
-    column: $table.pinyinNormalized,
-    builder: (column) => column,
-  );
-
-  GeneratedColumn<String> get definition => $composableBuilder(
-    column: $table.definition,
-    builder: (column) => column,
-  );
-
-  GeneratedColumn<String> get definitionVi => $composableBuilder(
-    column: $table.definitionVi,
-    builder: (column) => column,
-  );
-}
-
-class $$CharactersTableTableTableManager
+final class $$SrsReviewLogsTableTableReferences
     extends
-        RootTableManager<
+        BaseReferences<
           _$AppDatabase,
-          $CharactersTableTable,
-          CharacterDbModel,
-          $$CharactersTableTableFilterComposer,
-          $$CharactersTableTableOrderingComposer,
-          $$CharactersTableTableAnnotationComposer,
-          $$CharactersTableTableCreateCompanionBuilder,
-          $$CharactersTableTableUpdateCompanionBuilder,
-          (
-            CharacterDbModel,
-            BaseReferences<
-              _$AppDatabase,
-              $CharactersTableTable,
-              CharacterDbModel
-            >,
-          ),
-          CharacterDbModel,
-          PrefetchHooks Function()
+          $SrsReviewLogsTableTable,
+          SrsReviewLogDbModel
         > {
-  $$CharactersTableTableTableManager(
-    _$AppDatabase db,
-    $CharactersTableTable table,
-  ) : super(
-        TableManagerState(
-          db: db,
-          table: table,
-          createFilteringComposer: () =>
-              $$CharactersTableTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () =>
-              $$CharactersTableTableOrderingComposer($db: db, $table: table),
-          createComputedFieldComposer: () =>
-              $$CharactersTableTableAnnotationComposer($db: db, $table: table),
-          updateCompanionCallback:
-              ({
-                Value<String> char = const Value.absent(),
-                Value<List<String>> strokes = const Value.absent(),
-                Value<int?> hskLevel = const Value.absent(),
-                Value<String?> radical = const Value.absent(),
-                Value<int?> strokeCount = const Value.absent(),
-                Value<String?> pinyin = const Value.absent(),
-                Value<String?> pinyinNormalized = const Value.absent(),
-                Value<String?> definition = const Value.absent(),
-                Value<String?> definitionVi = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => CharactersTableCompanion(
-                char: char,
-                strokes: strokes,
-                hskLevel: hskLevel,
-                radical: radical,
-                strokeCount: strokeCount,
-                pinyin: pinyin,
-                pinyinNormalized: pinyinNormalized,
-                definition: definition,
-                definitionVi: definitionVi,
-                rowid: rowid,
-              ),
-          createCompanionCallback:
-              ({
-                required String char,
-                required List<String> strokes,
-                Value<int?> hskLevel = const Value.absent(),
-                Value<String?> radical = const Value.absent(),
-                Value<int?> strokeCount = const Value.absent(),
-                Value<String?> pinyin = const Value.absent(),
-                Value<String?> pinyinNormalized = const Value.absent(),
-                Value<String?> definition = const Value.absent(),
-                Value<String?> definitionVi = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => CharactersTableCompanion.insert(
-                char: char,
-                strokes: strokes,
-                hskLevel: hskLevel,
-                radical: radical,
-                strokeCount: strokeCount,
-                pinyin: pinyin,
-                pinyinNormalized: pinyinNormalized,
-                definition: definition,
-                definitionVi: definitionVi,
-                rowid: rowid,
-              ),
-          withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
-              .toList(),
-          prefetchHooksCallback: null,
-        ),
+  $$SrsReviewLogsTableTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static $SrsCardsTableTable _cardIdTable(_$AppDatabase db) =>
+      db.srsCardsTable.createAlias(
+        $_aliasNameGenerator(db.srsReviewLogsTable.cardId, db.srsCardsTable.id),
       );
+
+  $$SrsCardsTableTableProcessedTableManager get cardId {
+    final $_column = $_itemColumn<String>('card_id')!;
+
+    final manager = $$SrsCardsTableTableTableManager(
+      $_db,
+      $_db.srsCardsTable,
+    ).filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_cardIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
 }
 
-typedef $$CharactersTableTableProcessedTableManager =
-    ProcessedTableManager<
-      _$AppDatabase,
-      $CharactersTableTable,
-      CharacterDbModel,
-      $$CharactersTableTableFilterComposer,
-      $$CharactersTableTableOrderingComposer,
-      $$CharactersTableTableAnnotationComposer,
-      $$CharactersTableTableCreateCompanionBuilder,
-      $$CharactersTableTableUpdateCompanionBuilder,
-      (
-        CharacterDbModel,
-        BaseReferences<_$AppDatabase, $CharactersTableTable, CharacterDbModel>,
-      ),
-      CharacterDbModel,
-      PrefetchHooks Function()
-    >;
-typedef $$GrammarPointsTableTableCreateCompanionBuilder =
-    GrammarPointsTableCompanion Function({
-      required String id,
-      required String title,
-      required String structure,
-      required String explanation,
-      required int level,
-      required String category,
-      required List<GrammarExample> examples,
-      required List<String> relatedGrammar,
-      Value<bool> isBookmarked,
-      Value<bool> isMastered,
-      required List<FormulaPart> formulaParts,
-      required List<GrammarUsage> usages,
-      required List<String> exampleTags,
-      Value<bool> needsSync,
-      Value<DateTime> updatedAt,
-      Value<int> rowid,
-    });
-typedef $$GrammarPointsTableTableUpdateCompanionBuilder =
-    GrammarPointsTableCompanion Function({
-      Value<String> id,
-      Value<String> title,
-      Value<String> structure,
-      Value<String> explanation,
-      Value<int> level,
-      Value<String> category,
-      Value<List<GrammarExample>> examples,
-      Value<List<String>> relatedGrammar,
-      Value<bool> isBookmarked,
-      Value<bool> isMastered,
-      Value<List<FormulaPart>> formulaParts,
-      Value<List<GrammarUsage>> usages,
-      Value<List<String>> exampleTags,
-      Value<bool> needsSync,
-      Value<DateTime> updatedAt,
-      Value<int> rowid,
-    });
-
-class $$GrammarPointsTableTableFilterComposer
-    extends Composer<_$AppDatabase, $GrammarPointsTableTable> {
-  $$GrammarPointsTableTableFilterComposer({
+class $$SrsReviewLogsTableTableFilterComposer
+    extends Composer<_$AppDatabase, $SrsReviewLogsTableTable> {
+  $$SrsReviewLogsTableTableFilterComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  ColumnFilters<String> get id => $composableBuilder(
+  ColumnFilters<int> get id => $composableBuilder(
     column: $table.id,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get title => $composableBuilder(
-    column: $table.title,
+  ColumnFilters<String> get rating => $composableBuilder(
+    column: $table.rating,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get structure => $composableBuilder(
-    column: $table.structure,
+  ColumnFilters<DateTime> get reviewedAt => $composableBuilder(
+    column: $table.reviewedAt,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get explanation => $composableBuilder(
-    column: $table.explanation,
+  ColumnFilters<String> get algorithm => $composableBuilder(
+    column: $table.algorithm,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<int> get level => $composableBuilder(
-    column: $table.level,
+  ColumnFilters<double> get stabilityBefore => $composableBuilder(
+    column: $table.stabilityBefore,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get category => $composableBuilder(
-    column: $table.category,
+  ColumnFilters<double> get difficultyBefore => $composableBuilder(
+    column: $table.difficultyBefore,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<
-    List<GrammarExample>,
-    List<GrammarExample>,
-    String
-  >
-  get examples => $composableBuilder(
-    column: $table.examples,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnWithTypeConverterFilters<List<String>, List<String>, String>
-  get relatedGrammar => $composableBuilder(
-    column: $table.relatedGrammar,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnFilters<bool> get isBookmarked => $composableBuilder(
-    column: $table.isBookmarked,
+  ColumnFilters<double> get stabilityAfter => $composableBuilder(
+    column: $table.stabilityAfter,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<bool> get isMastered => $composableBuilder(
-    column: $table.isMastered,
+  ColumnFilters<double> get difficultyAfter => $composableBuilder(
+    column: $table.difficultyAfter,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<List<FormulaPart>, List<FormulaPart>, String>
-  get formulaParts => $composableBuilder(
-    column: $table.formulaParts,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnWithTypeConverterFilters<List<GrammarUsage>, List<GrammarUsage>, String>
-  get usages => $composableBuilder(
-    column: $table.usages,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnWithTypeConverterFilters<List<String>, List<String>, String>
-  get exampleTags => $composableBuilder(
-    column: $table.exampleTags,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnFilters<bool> get needsSync => $composableBuilder(
-    column: $table.needsSync,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
-    builder: (column) => ColumnFilters(column),
-  );
+  $$SrsCardsTableTableFilterComposer get cardId {
+    final $$SrsCardsTableTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.cardId,
+      referencedTable: $db.srsCardsTable,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$SrsCardsTableTableFilterComposer(
+            $db: $db,
+            $table: $db.srsCardsTable,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
 }
 
-class $$GrammarPointsTableTableOrderingComposer
-    extends Composer<_$AppDatabase, $GrammarPointsTableTable> {
-  $$GrammarPointsTableTableOrderingComposer({
+class $$SrsReviewLogsTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $SrsReviewLogsTableTable> {
+  $$SrsReviewLogsTableTableOrderingComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  ColumnOrderings<String> get id => $composableBuilder(
+  ColumnOrderings<int> get id => $composableBuilder(
     column: $table.id,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get title => $composableBuilder(
-    column: $table.title,
+  ColumnOrderings<String> get rating => $composableBuilder(
+    column: $table.rating,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get structure => $composableBuilder(
-    column: $table.structure,
+  ColumnOrderings<DateTime> get reviewedAt => $composableBuilder(
+    column: $table.reviewedAt,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get explanation => $composableBuilder(
-    column: $table.explanation,
+  ColumnOrderings<String> get algorithm => $composableBuilder(
+    column: $table.algorithm,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<int> get level => $composableBuilder(
-    column: $table.level,
+  ColumnOrderings<double> get stabilityBefore => $composableBuilder(
+    column: $table.stabilityBefore,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get category => $composableBuilder(
-    column: $table.category,
+  ColumnOrderings<double> get difficultyBefore => $composableBuilder(
+    column: $table.difficultyBefore,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get examples => $composableBuilder(
-    column: $table.examples,
+  ColumnOrderings<double> get stabilityAfter => $composableBuilder(
+    column: $table.stabilityAfter,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get relatedGrammar => $composableBuilder(
-    column: $table.relatedGrammar,
+  ColumnOrderings<double> get difficultyAfter => $composableBuilder(
+    column: $table.difficultyAfter,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<bool> get isBookmarked => $composableBuilder(
-    column: $table.isBookmarked,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<bool> get isMastered => $composableBuilder(
-    column: $table.isMastered,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get formulaParts => $composableBuilder(
-    column: $table.formulaParts,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get usages => $composableBuilder(
-    column: $table.usages,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get exampleTags => $composableBuilder(
-    column: $table.exampleTags,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<bool> get needsSync => $composableBuilder(
-    column: $table.needsSync,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+  $$SrsCardsTableTableOrderingComposer get cardId {
+    final $$SrsCardsTableTableOrderingComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.cardId,
+      referencedTable: $db.srsCardsTable,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$SrsCardsTableTableOrderingComposer(
+            $db: $db,
+            $table: $db.srsCardsTable,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
 }
 
-class $$GrammarPointsTableTableAnnotationComposer
-    extends Composer<_$AppDatabase, $GrammarPointsTableTable> {
-  $$GrammarPointsTableTableAnnotationComposer({
+class $$SrsReviewLogsTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $SrsReviewLogsTableTable> {
+  $$SrsReviewLogsTableTableAnnotationComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<String> get id =>
+  GeneratedColumn<int> get id =>
       $composableBuilder(column: $table.id, builder: (column) => column);
 
-  GeneratedColumn<String> get title =>
-      $composableBuilder(column: $table.title, builder: (column) => column);
+  GeneratedColumn<String> get rating =>
+      $composableBuilder(column: $table.rating, builder: (column) => column);
 
-  GeneratedColumn<String> get structure =>
-      $composableBuilder(column: $table.structure, builder: (column) => column);
-
-  GeneratedColumn<String> get explanation => $composableBuilder(
-    column: $table.explanation,
+  GeneratedColumn<DateTime> get reviewedAt => $composableBuilder(
+    column: $table.reviewedAt,
     builder: (column) => column,
   );
 
-  GeneratedColumn<int> get level =>
-      $composableBuilder(column: $table.level, builder: (column) => column);
+  GeneratedColumn<String> get algorithm =>
+      $composableBuilder(column: $table.algorithm, builder: (column) => column);
 
-  GeneratedColumn<String> get category =>
-      $composableBuilder(column: $table.category, builder: (column) => column);
-
-  GeneratedColumnWithTypeConverter<List<GrammarExample>, String> get examples =>
-      $composableBuilder(column: $table.examples, builder: (column) => column);
-
-  GeneratedColumnWithTypeConverter<List<String>, String> get relatedGrammar =>
-      $composableBuilder(
-        column: $table.relatedGrammar,
-        builder: (column) => column,
-      );
-
-  GeneratedColumn<bool> get isBookmarked => $composableBuilder(
-    column: $table.isBookmarked,
+  GeneratedColumn<double> get stabilityBefore => $composableBuilder(
+    column: $table.stabilityBefore,
     builder: (column) => column,
   );
 
-  GeneratedColumn<bool> get isMastered => $composableBuilder(
-    column: $table.isMastered,
+  GeneratedColumn<double> get difficultyBefore => $composableBuilder(
+    column: $table.difficultyBefore,
     builder: (column) => column,
   );
 
-  GeneratedColumnWithTypeConverter<List<FormulaPart>, String>
-  get formulaParts => $composableBuilder(
-    column: $table.formulaParts,
+  GeneratedColumn<double> get stabilityAfter => $composableBuilder(
+    column: $table.stabilityAfter,
     builder: (column) => column,
   );
 
-  GeneratedColumnWithTypeConverter<List<GrammarUsage>, String> get usages =>
-      $composableBuilder(column: $table.usages, builder: (column) => column);
+  GeneratedColumn<double> get difficultyAfter => $composableBuilder(
+    column: $table.difficultyAfter,
+    builder: (column) => column,
+  );
 
-  GeneratedColumnWithTypeConverter<List<String>, String> get exampleTags =>
-      $composableBuilder(
-        column: $table.exampleTags,
-        builder: (column) => column,
-      );
-
-  GeneratedColumn<bool> get needsSync =>
-      $composableBuilder(column: $table.needsSync, builder: (column) => column);
-
-  GeneratedColumn<DateTime> get updatedAt =>
-      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+  $$SrsCardsTableTableAnnotationComposer get cardId {
+    final $$SrsCardsTableTableAnnotationComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.cardId,
+      referencedTable: $db.srsCardsTable,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$SrsCardsTableTableAnnotationComposer(
+            $db: $db,
+            $table: $db.srsCardsTable,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
 }
 
-class $$GrammarPointsTableTableTableManager
+class $$SrsReviewLogsTableTableTableManager
     extends
         RootTableManager<
           _$AppDatabase,
-          $GrammarPointsTableTable,
-          GrammarPointDbModel,
-          $$GrammarPointsTableTableFilterComposer,
-          $$GrammarPointsTableTableOrderingComposer,
-          $$GrammarPointsTableTableAnnotationComposer,
-          $$GrammarPointsTableTableCreateCompanionBuilder,
-          $$GrammarPointsTableTableUpdateCompanionBuilder,
-          (
-            GrammarPointDbModel,
-            BaseReferences<
-              _$AppDatabase,
-              $GrammarPointsTableTable,
-              GrammarPointDbModel
-            >,
-          ),
-          GrammarPointDbModel,
-          PrefetchHooks Function()
+          $SrsReviewLogsTableTable,
+          SrsReviewLogDbModel,
+          $$SrsReviewLogsTableTableFilterComposer,
+          $$SrsReviewLogsTableTableOrderingComposer,
+          $$SrsReviewLogsTableTableAnnotationComposer,
+          $$SrsReviewLogsTableTableCreateCompanionBuilder,
+          $$SrsReviewLogsTableTableUpdateCompanionBuilder,
+          (SrsReviewLogDbModel, $$SrsReviewLogsTableTableReferences),
+          SrsReviewLogDbModel,
+          PrefetchHooks Function({bool cardId})
         > {
-  $$GrammarPointsTableTableTableManager(
+  $$SrsReviewLogsTableTableTableManager(
     _$AppDatabase db,
-    $GrammarPointsTableTable table,
+    $SrsReviewLogsTableTable table,
   ) : super(
         TableManagerState(
           db: db,
           table: table,
           createFilteringComposer: () =>
-              $$GrammarPointsTableTableFilterComposer($db: db, $table: table),
+              $$SrsReviewLogsTableTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
-              $$GrammarPointsTableTableOrderingComposer($db: db, $table: table),
+              $$SrsReviewLogsTableTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
-              $$GrammarPointsTableTableAnnotationComposer(
+              $$SrsReviewLogsTableTableAnnotationComposer(
                 $db: db,
                 $table: table,
               ),
           updateCompanionCallback:
               ({
-                Value<String> id = const Value.absent(),
-                Value<String> title = const Value.absent(),
-                Value<String> structure = const Value.absent(),
-                Value<String> explanation = const Value.absent(),
-                Value<int> level = const Value.absent(),
-                Value<String> category = const Value.absent(),
-                Value<List<GrammarExample>> examples = const Value.absent(),
-                Value<List<String>> relatedGrammar = const Value.absent(),
-                Value<bool> isBookmarked = const Value.absent(),
-                Value<bool> isMastered = const Value.absent(),
-                Value<List<FormulaPart>> formulaParts = const Value.absent(),
-                Value<List<GrammarUsage>> usages = const Value.absent(),
-                Value<List<String>> exampleTags = const Value.absent(),
-                Value<bool> needsSync = const Value.absent(),
-                Value<DateTime> updatedAt = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => GrammarPointsTableCompanion(
+                Value<int> id = const Value.absent(),
+                Value<String> cardId = const Value.absent(),
+                Value<String> rating = const Value.absent(),
+                Value<DateTime> reviewedAt = const Value.absent(),
+                Value<String> algorithm = const Value.absent(),
+                Value<double?> stabilityBefore = const Value.absent(),
+                Value<double?> difficultyBefore = const Value.absent(),
+                Value<double?> stabilityAfter = const Value.absent(),
+                Value<double?> difficultyAfter = const Value.absent(),
+              }) => SrsReviewLogsTableCompanion(
                 id: id,
-                title: title,
-                structure: structure,
-                explanation: explanation,
-                level: level,
-                category: category,
-                examples: examples,
-                relatedGrammar: relatedGrammar,
-                isBookmarked: isBookmarked,
-                isMastered: isMastered,
-                formulaParts: formulaParts,
-                usages: usages,
-                exampleTags: exampleTags,
-                needsSync: needsSync,
-                updatedAt: updatedAt,
-                rowid: rowid,
+                cardId: cardId,
+                rating: rating,
+                reviewedAt: reviewedAt,
+                algorithm: algorithm,
+                stabilityBefore: stabilityBefore,
+                difficultyBefore: difficultyBefore,
+                stabilityAfter: stabilityAfter,
+                difficultyAfter: difficultyAfter,
               ),
           createCompanionCallback:
               ({
-                required String id,
-                required String title,
-                required String structure,
-                required String explanation,
-                required int level,
-                required String category,
-                required List<GrammarExample> examples,
-                required List<String> relatedGrammar,
-                Value<bool> isBookmarked = const Value.absent(),
-                Value<bool> isMastered = const Value.absent(),
-                required List<FormulaPart> formulaParts,
-                required List<GrammarUsage> usages,
-                required List<String> exampleTags,
-                Value<bool> needsSync = const Value.absent(),
-                Value<DateTime> updatedAt = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => GrammarPointsTableCompanion.insert(
+                Value<int> id = const Value.absent(),
+                required String cardId,
+                required String rating,
+                required DateTime reviewedAt,
+                required String algorithm,
+                Value<double?> stabilityBefore = const Value.absent(),
+                Value<double?> difficultyBefore = const Value.absent(),
+                Value<double?> stabilityAfter = const Value.absent(),
+                Value<double?> difficultyAfter = const Value.absent(),
+              }) => SrsReviewLogsTableCompanion.insert(
                 id: id,
-                title: title,
-                structure: structure,
-                explanation: explanation,
-                level: level,
-                category: category,
-                examples: examples,
-                relatedGrammar: relatedGrammar,
-                isBookmarked: isBookmarked,
-                isMastered: isMastered,
-                formulaParts: formulaParts,
-                usages: usages,
-                exampleTags: exampleTags,
-                needsSync: needsSync,
-                updatedAt: updatedAt,
-                rowid: rowid,
+                cardId: cardId,
+                rating: rating,
+                reviewedAt: reviewedAt,
+                algorithm: algorithm,
+                stabilityBefore: stabilityBefore,
+                difficultyBefore: difficultyBefore,
+                stabilityAfter: stabilityAfter,
+                difficultyAfter: difficultyAfter,
               ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$SrsReviewLogsTableTableReferences(db, table, e),
+                ),
+              )
               .toList(),
-          prefetchHooksCallback: null,
+          prefetchHooksCallback: ({cardId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (cardId) {
+                      state =
+                          state.withJoin(
+                                currentTable: table,
+                                currentColumn: table.cardId,
+                                referencedTable:
+                                    $$SrsReviewLogsTableTableReferences
+                                        ._cardIdTable(db),
+                                referencedColumn:
+                                    $$SrsReviewLogsTableTableReferences
+                                        ._cardIdTable(db)
+                                        .id,
+                              )
+                              as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
         ),
       );
 }
 
-typedef $$GrammarPointsTableTableProcessedTableManager =
+typedef $$SrsReviewLogsTableTableProcessedTableManager =
     ProcessedTableManager<
       _$AppDatabase,
-      $GrammarPointsTableTable,
-      GrammarPointDbModel,
-      $$GrammarPointsTableTableFilterComposer,
-      $$GrammarPointsTableTableOrderingComposer,
-      $$GrammarPointsTableTableAnnotationComposer,
-      $$GrammarPointsTableTableCreateCompanionBuilder,
-      $$GrammarPointsTableTableUpdateCompanionBuilder,
-      (
-        GrammarPointDbModel,
-        BaseReferences<
-          _$AppDatabase,
-          $GrammarPointsTableTable,
-          GrammarPointDbModel
-        >,
-      ),
-      GrammarPointDbModel,
-      PrefetchHooks Function()
+      $SrsReviewLogsTableTable,
+      SrsReviewLogDbModel,
+      $$SrsReviewLogsTableTableFilterComposer,
+      $$SrsReviewLogsTableTableOrderingComposer,
+      $$SrsReviewLogsTableTableAnnotationComposer,
+      $$SrsReviewLogsTableTableCreateCompanionBuilder,
+      $$SrsReviewLogsTableTableUpdateCompanionBuilder,
+      (SrsReviewLogDbModel, $$SrsReviewLogsTableTableReferences),
+      SrsReviewLogDbModel,
+      PrefetchHooks Function({bool cardId})
     >;
-typedef $$ConversationsTableTableCreateCompanionBuilder =
-    ConversationsTableCompanion Function({
-      required String id,
-      required String title,
-      required String titleZh,
-      required String titlePinyin,
-      required String description,
-      required int level,
-      required String category,
-      required String icon,
-      required List<DialogueLine> lines,
-      required List<VocabInContext> vocabulary,
-      required List<SpeakerInfo> speakers,
-      required List<String> relatedGrammar,
-      required String cultureTip,
-      Value<bool> isBookmarked,
-      Value<bool> isMastered,
+typedef $$LearningUnitProgressTableTableCreateCompanionBuilder =
+    LearningUnitProgressTableCompanion Function({
+      required String unitId,
+      required String unitKind,
+      required String stageId,
+      required String moduleId,
+      required String status,
+      Value<int?> score,
+      Value<DateTime?> startedAt,
+      Value<DateTime?> completedAt,
+      Value<DateTime?> lastOpenedAt,
       Value<int> rowid,
     });
-typedef $$ConversationsTableTableUpdateCompanionBuilder =
-    ConversationsTableCompanion Function({
-      Value<String> id,
-      Value<String> title,
-      Value<String> titleZh,
-      Value<String> titlePinyin,
-      Value<String> description,
-      Value<int> level,
-      Value<String> category,
-      Value<String> icon,
-      Value<List<DialogueLine>> lines,
-      Value<List<VocabInContext>> vocabulary,
-      Value<List<SpeakerInfo>> speakers,
-      Value<List<String>> relatedGrammar,
-      Value<String> cultureTip,
-      Value<bool> isBookmarked,
-      Value<bool> isMastered,
+typedef $$LearningUnitProgressTableTableUpdateCompanionBuilder =
+    LearningUnitProgressTableCompanion Function({
+      Value<String> unitId,
+      Value<String> unitKind,
+      Value<String> stageId,
+      Value<String> moduleId,
+      Value<String> status,
+      Value<int?> score,
+      Value<DateTime?> startedAt,
+      Value<DateTime?> completedAt,
+      Value<DateTime?> lastOpenedAt,
       Value<int> rowid,
     });
 
-class $$ConversationsTableTableFilterComposer
-    extends Composer<_$AppDatabase, $ConversationsTableTable> {
-  $$ConversationsTableTableFilterComposer({
+class $$LearningUnitProgressTableTableFilterComposer
+    extends Composer<_$AppDatabase, $LearningUnitProgressTableTable> {
+  $$LearningUnitProgressTableTableFilterComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  ColumnFilters<String> get id => $composableBuilder(
-    column: $table.id,
+  ColumnFilters<String> get unitId => $composableBuilder(
+    column: $table.unitId,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get title => $composableBuilder(
-    column: $table.title,
+  ColumnFilters<String> get unitKind => $composableBuilder(
+    column: $table.unitKind,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get titleZh => $composableBuilder(
-    column: $table.titleZh,
+  ColumnFilters<String> get stageId => $composableBuilder(
+    column: $table.stageId,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get titlePinyin => $composableBuilder(
-    column: $table.titlePinyin,
+  ColumnFilters<String> get moduleId => $composableBuilder(
+    column: $table.moduleId,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get description => $composableBuilder(
-    column: $table.description,
+  ColumnFilters<String> get status => $composableBuilder(
+    column: $table.status,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<int> get level => $composableBuilder(
-    column: $table.level,
+  ColumnFilters<int> get score => $composableBuilder(
+    column: $table.score,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get category => $composableBuilder(
-    column: $table.category,
+  ColumnFilters<DateTime> get startedAt => $composableBuilder(
+    column: $table.startedAt,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnFilters<String> get icon => $composableBuilder(
-    column: $table.icon,
+  ColumnFilters<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<List<DialogueLine>, List<DialogueLine>, String>
-  get lines => $composableBuilder(
-    column: $table.lines,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnWithTypeConverterFilters<
-    List<VocabInContext>,
-    List<VocabInContext>,
-    String
-  >
-  get vocabulary => $composableBuilder(
-    column: $table.vocabulary,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnWithTypeConverterFilters<List<SpeakerInfo>, List<SpeakerInfo>, String>
-  get speakers => $composableBuilder(
-    column: $table.speakers,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnWithTypeConverterFilters<List<String>, List<String>, String>
-  get relatedGrammar => $composableBuilder(
-    column: $table.relatedGrammar,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnFilters<String> get cultureTip => $composableBuilder(
-    column: $table.cultureTip,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnFilters<bool> get isBookmarked => $composableBuilder(
-    column: $table.isBookmarked,
-    builder: (column) => ColumnFilters(column),
-  );
-
-  ColumnFilters<bool> get isMastered => $composableBuilder(
-    column: $table.isMastered,
+  ColumnFilters<DateTime> get lastOpenedAt => $composableBuilder(
+    column: $table.lastOpenedAt,
     builder: (column) => ColumnFilters(column),
   );
 }
 
-class $$ConversationsTableTableOrderingComposer
-    extends Composer<_$AppDatabase, $ConversationsTableTable> {
-  $$ConversationsTableTableOrderingComposer({
+class $$LearningUnitProgressTableTableOrderingComposer
+    extends Composer<_$AppDatabase, $LearningUnitProgressTableTable> {
+  $$LearningUnitProgressTableTableOrderingComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  ColumnOrderings<String> get id => $composableBuilder(
-    column: $table.id,
+  ColumnOrderings<String> get unitId => $composableBuilder(
+    column: $table.unitId,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get title => $composableBuilder(
-    column: $table.title,
+  ColumnOrderings<String> get unitKind => $composableBuilder(
+    column: $table.unitKind,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get titleZh => $composableBuilder(
-    column: $table.titleZh,
+  ColumnOrderings<String> get stageId => $composableBuilder(
+    column: $table.stageId,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get titlePinyin => $composableBuilder(
-    column: $table.titlePinyin,
+  ColumnOrderings<String> get moduleId => $composableBuilder(
+    column: $table.moduleId,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get description => $composableBuilder(
-    column: $table.description,
+  ColumnOrderings<String> get status => $composableBuilder(
+    column: $table.status,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<int> get level => $composableBuilder(
-    column: $table.level,
+  ColumnOrderings<int> get score => $composableBuilder(
+    column: $table.score,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get category => $composableBuilder(
-    column: $table.category,
+  ColumnOrderings<DateTime> get startedAt => $composableBuilder(
+    column: $table.startedAt,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get icon => $composableBuilder(
-    column: $table.icon,
+  ColumnOrderings<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
     builder: (column) => ColumnOrderings(column),
   );
 
-  ColumnOrderings<String> get lines => $composableBuilder(
-    column: $table.lines,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get vocabulary => $composableBuilder(
-    column: $table.vocabulary,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get speakers => $composableBuilder(
-    column: $table.speakers,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get relatedGrammar => $composableBuilder(
-    column: $table.relatedGrammar,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<String> get cultureTip => $composableBuilder(
-    column: $table.cultureTip,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<bool> get isBookmarked => $composableBuilder(
-    column: $table.isBookmarked,
-    builder: (column) => ColumnOrderings(column),
-  );
-
-  ColumnOrderings<bool> get isMastered => $composableBuilder(
-    column: $table.isMastered,
+  ColumnOrderings<DateTime> get lastOpenedAt => $composableBuilder(
+    column: $table.lastOpenedAt,
     builder: (column) => ColumnOrderings(column),
   );
 }
 
-class $$ConversationsTableTableAnnotationComposer
-    extends Composer<_$AppDatabase, $ConversationsTableTable> {
-  $$ConversationsTableTableAnnotationComposer({
+class $$LearningUnitProgressTableTableAnnotationComposer
+    extends Composer<_$AppDatabase, $LearningUnitProgressTableTable> {
+  $$LearningUnitProgressTableTableAnnotationComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<String> get id =>
-      $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<String> get unitId =>
+      $composableBuilder(column: $table.unitId, builder: (column) => column);
 
-  GeneratedColumn<String> get title =>
-      $composableBuilder(column: $table.title, builder: (column) => column);
+  GeneratedColumn<String> get unitKind =>
+      $composableBuilder(column: $table.unitKind, builder: (column) => column);
 
-  GeneratedColumn<String> get titleZh =>
-      $composableBuilder(column: $table.titleZh, builder: (column) => column);
+  GeneratedColumn<String> get stageId =>
+      $composableBuilder(column: $table.stageId, builder: (column) => column);
 
-  GeneratedColumn<String> get titlePinyin => $composableBuilder(
-    column: $table.titlePinyin,
+  GeneratedColumn<String> get moduleId =>
+      $composableBuilder(column: $table.moduleId, builder: (column) => column);
+
+  GeneratedColumn<String> get status =>
+      $composableBuilder(column: $table.status, builder: (column) => column);
+
+  GeneratedColumn<int> get score =>
+      $composableBuilder(column: $table.score, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get startedAt =>
+      $composableBuilder(column: $table.startedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get completedAt => $composableBuilder(
+    column: $table.completedAt,
     builder: (column) => column,
   );
 
-  GeneratedColumn<String> get description => $composableBuilder(
-    column: $table.description,
-    builder: (column) => column,
-  );
-
-  GeneratedColumn<int> get level =>
-      $composableBuilder(column: $table.level, builder: (column) => column);
-
-  GeneratedColumn<String> get category =>
-      $composableBuilder(column: $table.category, builder: (column) => column);
-
-  GeneratedColumn<String> get icon =>
-      $composableBuilder(column: $table.icon, builder: (column) => column);
-
-  GeneratedColumnWithTypeConverter<List<DialogueLine>, String> get lines =>
-      $composableBuilder(column: $table.lines, builder: (column) => column);
-
-  GeneratedColumnWithTypeConverter<List<VocabInContext>, String>
-  get vocabulary => $composableBuilder(
-    column: $table.vocabulary,
-    builder: (column) => column,
-  );
-
-  GeneratedColumnWithTypeConverter<List<SpeakerInfo>, String> get speakers =>
-      $composableBuilder(column: $table.speakers, builder: (column) => column);
-
-  GeneratedColumnWithTypeConverter<List<String>, String> get relatedGrammar =>
-      $composableBuilder(
-        column: $table.relatedGrammar,
-        builder: (column) => column,
-      );
-
-  GeneratedColumn<String> get cultureTip => $composableBuilder(
-    column: $table.cultureTip,
-    builder: (column) => column,
-  );
-
-  GeneratedColumn<bool> get isBookmarked => $composableBuilder(
-    column: $table.isBookmarked,
-    builder: (column) => column,
-  );
-
-  GeneratedColumn<bool> get isMastered => $composableBuilder(
-    column: $table.isMastered,
+  GeneratedColumn<DateTime> get lastOpenedAt => $composableBuilder(
+    column: $table.lastOpenedAt,
     builder: (column) => column,
   );
 }
 
-class $$ConversationsTableTableTableManager
+class $$LearningUnitProgressTableTableTableManager
     extends
         RootTableManager<
           _$AppDatabase,
-          $ConversationsTableTable,
-          ConversationDbModel,
-          $$ConversationsTableTableFilterComposer,
-          $$ConversationsTableTableOrderingComposer,
-          $$ConversationsTableTableAnnotationComposer,
-          $$ConversationsTableTableCreateCompanionBuilder,
-          $$ConversationsTableTableUpdateCompanionBuilder,
+          $LearningUnitProgressTableTable,
+          LearningUnitProgressDbModel,
+          $$LearningUnitProgressTableTableFilterComposer,
+          $$LearningUnitProgressTableTableOrderingComposer,
+          $$LearningUnitProgressTableTableAnnotationComposer,
+          $$LearningUnitProgressTableTableCreateCompanionBuilder,
+          $$LearningUnitProgressTableTableUpdateCompanionBuilder,
           (
-            ConversationDbModel,
+            LearningUnitProgressDbModel,
             BaseReferences<
               _$AppDatabase,
-              $ConversationsTableTable,
-              ConversationDbModel
+              $LearningUnitProgressTableTable,
+              LearningUnitProgressDbModel
             >,
           ),
-          ConversationDbModel,
+          LearningUnitProgressDbModel,
           PrefetchHooks Function()
         > {
-  $$ConversationsTableTableTableManager(
+  $$LearningUnitProgressTableTableTableManager(
     _$AppDatabase db,
-    $ConversationsTableTable table,
+    $LearningUnitProgressTableTable table,
   ) : super(
         TableManagerState(
           db: db,
           table: table,
           createFilteringComposer: () =>
-              $$ConversationsTableTableFilterComposer($db: db, $table: table),
+              $$LearningUnitProgressTableTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
           createOrderingComposer: () =>
-              $$ConversationsTableTableOrderingComposer($db: db, $table: table),
+              $$LearningUnitProgressTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
           createComputedFieldComposer: () =>
-              $$ConversationsTableTableAnnotationComposer(
+              $$LearningUnitProgressTableTableAnnotationComposer(
                 $db: db,
                 $table: table,
               ),
           updateCompanionCallback:
               ({
-                Value<String> id = const Value.absent(),
-                Value<String> title = const Value.absent(),
-                Value<String> titleZh = const Value.absent(),
-                Value<String> titlePinyin = const Value.absent(),
-                Value<String> description = const Value.absent(),
-                Value<int> level = const Value.absent(),
-                Value<String> category = const Value.absent(),
-                Value<String> icon = const Value.absent(),
-                Value<List<DialogueLine>> lines = const Value.absent(),
-                Value<List<VocabInContext>> vocabulary = const Value.absent(),
-                Value<List<SpeakerInfo>> speakers = const Value.absent(),
-                Value<List<String>> relatedGrammar = const Value.absent(),
-                Value<String> cultureTip = const Value.absent(),
-                Value<bool> isBookmarked = const Value.absent(),
-                Value<bool> isMastered = const Value.absent(),
+                Value<String> unitId = const Value.absent(),
+                Value<String> unitKind = const Value.absent(),
+                Value<String> stageId = const Value.absent(),
+                Value<String> moduleId = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<int?> score = const Value.absent(),
+                Value<DateTime?> startedAt = const Value.absent(),
+                Value<DateTime?> completedAt = const Value.absent(),
+                Value<DateTime?> lastOpenedAt = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
-              }) => ConversationsTableCompanion(
-                id: id,
-                title: title,
-                titleZh: titleZh,
-                titlePinyin: titlePinyin,
-                description: description,
-                level: level,
-                category: category,
-                icon: icon,
-                lines: lines,
-                vocabulary: vocabulary,
-                speakers: speakers,
-                relatedGrammar: relatedGrammar,
-                cultureTip: cultureTip,
-                isBookmarked: isBookmarked,
-                isMastered: isMastered,
+              }) => LearningUnitProgressTableCompanion(
+                unitId: unitId,
+                unitKind: unitKind,
+                stageId: stageId,
+                moduleId: moduleId,
+                status: status,
+                score: score,
+                startedAt: startedAt,
+                completedAt: completedAt,
+                lastOpenedAt: lastOpenedAt,
                 rowid: rowid,
               ),
           createCompanionCallback:
               ({
-                required String id,
-                required String title,
-                required String titleZh,
-                required String titlePinyin,
-                required String description,
-                required int level,
-                required String category,
-                required String icon,
-                required List<DialogueLine> lines,
-                required List<VocabInContext> vocabulary,
-                required List<SpeakerInfo> speakers,
-                required List<String> relatedGrammar,
-                required String cultureTip,
-                Value<bool> isBookmarked = const Value.absent(),
-                Value<bool> isMastered = const Value.absent(),
+                required String unitId,
+                required String unitKind,
+                required String stageId,
+                required String moduleId,
+                required String status,
+                Value<int?> score = const Value.absent(),
+                Value<DateTime?> startedAt = const Value.absent(),
+                Value<DateTime?> completedAt = const Value.absent(),
+                Value<DateTime?> lastOpenedAt = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
-              }) => ConversationsTableCompanion.insert(
-                id: id,
-                title: title,
-                titleZh: titleZh,
-                titlePinyin: titlePinyin,
-                description: description,
-                level: level,
-                category: category,
-                icon: icon,
-                lines: lines,
-                vocabulary: vocabulary,
-                speakers: speakers,
-                relatedGrammar: relatedGrammar,
-                cultureTip: cultureTip,
-                isBookmarked: isBookmarked,
-                isMastered: isMastered,
+              }) => LearningUnitProgressTableCompanion.insert(
+                unitId: unitId,
+                unitKind: unitKind,
+                stageId: stageId,
+                moduleId: moduleId,
+                status: status,
+                score: score,
+                startedAt: startedAt,
+                completedAt: completedAt,
+                lastOpenedAt: lastOpenedAt,
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
@@ -4924,37 +3124,38 @@ class $$ConversationsTableTableTableManager
       );
 }
 
-typedef $$ConversationsTableTableProcessedTableManager =
+typedef $$LearningUnitProgressTableTableProcessedTableManager =
     ProcessedTableManager<
       _$AppDatabase,
-      $ConversationsTableTable,
-      ConversationDbModel,
-      $$ConversationsTableTableFilterComposer,
-      $$ConversationsTableTableOrderingComposer,
-      $$ConversationsTableTableAnnotationComposer,
-      $$ConversationsTableTableCreateCompanionBuilder,
-      $$ConversationsTableTableUpdateCompanionBuilder,
+      $LearningUnitProgressTableTable,
+      LearningUnitProgressDbModel,
+      $$LearningUnitProgressTableTableFilterComposer,
+      $$LearningUnitProgressTableTableOrderingComposer,
+      $$LearningUnitProgressTableTableAnnotationComposer,
+      $$LearningUnitProgressTableTableCreateCompanionBuilder,
+      $$LearningUnitProgressTableTableUpdateCompanionBuilder,
       (
-        ConversationDbModel,
+        LearningUnitProgressDbModel,
         BaseReferences<
           _$AppDatabase,
-          $ConversationsTableTable,
-          ConversationDbModel
+          $LearningUnitProgressTableTable,
+          LearningUnitProgressDbModel
         >,
       ),
-      ConversationDbModel,
+      LearningUnitProgressDbModel,
       PrefetchHooks Function()
     >;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;
   $AppDatabaseManager(this._db);
-  $$VocabsTableTableTableManager get vocabsTable =>
-      $$VocabsTableTableTableManager(_db, _db.vocabsTable);
-  $$CharactersTableTableTableManager get charactersTable =>
-      $$CharactersTableTableTableManager(_db, _db.charactersTable);
-  $$GrammarPointsTableTableTableManager get grammarPointsTable =>
-      $$GrammarPointsTableTableTableManager(_db, _db.grammarPointsTable);
-  $$ConversationsTableTableTableManager get conversationsTable =>
-      $$ConversationsTableTableTableManager(_db, _db.conversationsTable);
+  $$SrsCardsTableTableTableManager get srsCardsTable =>
+      $$SrsCardsTableTableTableManager(_db, _db.srsCardsTable);
+  $$SrsReviewLogsTableTableTableManager get srsReviewLogsTable =>
+      $$SrsReviewLogsTableTableTableManager(_db, _db.srsReviewLogsTable);
+  $$LearningUnitProgressTableTableTableManager get learningUnitProgressTable =>
+      $$LearningUnitProgressTableTableTableManager(
+        _db,
+        _db.learningUnitProgressTable,
+      );
 }
