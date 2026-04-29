@@ -13,10 +13,12 @@
 //   inverted/vocab_to_conv.json    — vocabId → [convId]
 //   inverted/vocab_to_sentence.json — vocabId → [sentenceId]
 //   inverted/conv_to_grammar.json  — convId → [grammarId]
-//   inverted/grammar_to_sentence.json — grammarId → [] (placeholder, needs P1.2)
+//   inverted/grammar_to_sentence.json — grammarId → [sentenceId]
 
 import 'dart:convert';
 import 'dart:io';
+
+const graphVersion = 1;
 
 // ── Paths ──────────────────────────────────────────────────────────────────
 
@@ -74,7 +76,7 @@ void main() async {
   final vocabToSentence = <String, Set<String>>{};
   // convId → [grammarId]
   final convToGrammar = <String, Set<String>>{};
-  // grammarId → [sentenceId] — placeholder, filled when P1.2 manual tags added
+  // grammarId → [sentenceId]
   final grammarToSentence = <String, Set<String>>{};
 
   int totalMatches = 0;
@@ -126,11 +128,19 @@ void main() async {
     }
   }
 
-  // Reverse grammar: grammarId → convIds (via convToGrammar)
+  // Grammar sentence refs come from manual tagging stored in grammar_hsk*.json.
+  for (final entry in grammarMap.entries) {
+    final sentenceRefs =
+        (entry.value['sentenceRefs'] as List? ?? []).cast<String>();
+    if (sentenceRefs.isEmpty) continue;
+    grammarToSentence.putIfAbsent(entry.key, () => {}).addAll(sentenceRefs);
+  }
+
+  // Keep deterministic empty keys for grammars referenced by conversations even
+  // when they do not have line-level refs yet.
   for (final entry in convToGrammar.entries) {
     for (final gId in entry.value) {
       grammarToSentence.putIfAbsent(gId, () => {});
-      // sentenceId placeholder — will be filled via P1.2 manual tags
     }
   }
 
@@ -185,11 +195,15 @@ void main() async {
   _writeJson('${graphDir.path}/nodes.json', nodes);
   _writeJson('${graphDir.path}/edges.json', edges);
   _writeJson('${graphDir.path}/meta.json', {
+    'graphVersion': graphVersion,
+    'dataHash': _computeDataHash(vocabMap, grammarMap, conversations),
     'generatedAt': DateTime.now().toIso8601String(),
-    'vocabCount': vocabMap.length,
-    'grammarCount': grammarMap.length,
-    'convCount': conversations.length,
-    'nodeCount': nodes.length,
+    'nodeCounts': {
+      'vocab': vocabMap.length,
+      'grammar': grammarMap.length,
+      'conversation': conversations.length,
+      'total': nodes.length,
+    },
     'edgeCount': edges.length,
     'tokenMatches': totalMatches,
     'tokenMisses': missedTokens,
@@ -290,6 +304,29 @@ String? _findVocabIdByHanzi(String hanzi, Map<String, Map<String, dynamic>> voca
     if (entry.value['hanzi'] == hanzi) return entry.key;
   }
   return null;
+}
+
+String _computeDataHash(
+  Map<String, Map<String, dynamic>> vocabMap,
+  Map<String, Map<String, dynamic>> grammarMap,
+  List<Map<String, dynamic>> conversations,
+) {
+  final buffer = StringBuffer()
+    ..writeAll(vocabMap.keys.toList()..sort(), '|')
+    ..write('::')
+    ..writeAll(grammarMap.keys.toList()..sort(), '|')
+    ..write('::')
+    ..writeAll(
+      conversations.map((conv) => conv['id'] as String).toList()..sort(),
+      '|',
+    );
+
+  var hash = 0xcbf29ce484222325;
+  for (final codeUnit in buffer.toString().codeUnits) {
+    hash ^= codeUnit;
+    hash = (hash * 0x100000001b3) & 0xFFFFFFFFFFFFFFFF;
+  }
+  return hash.toRadixString(16).padLeft(16, '0');
 }
 
 void _writeJson(String path, dynamic data) {
