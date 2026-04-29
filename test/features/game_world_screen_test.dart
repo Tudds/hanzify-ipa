@@ -118,18 +118,17 @@ void main() {
 
     expect(find.textContaining('HSK2'), findsWidgets);
     expect(find.textContaining('collocations'), findsOneWidget);
-    expect(find.text('Bài học mini-flow'), findsOneWidget);
-    expect(find.text('Bước 1/3 · Nghe hội thoại'), findsOneWidget);
-    expect(find.text('Hội thoại'), findsOneWidget);
+    expect(find.text('Bài học hội thoại'), findsOneWidget);
+    expect(find.text('Bước 1/2 · Mục tiêu bài'), findsOneWidget);
+    expect(find.text('Mục tiêu bài'), findsOneWidget);
     expect(find.text('你好'), findsNothing);
     expect(find.textContaining('0 reviews'), findsOneWidget);
 
+    await tester.ensureVisible(find.text('Tiếp tục'));
     await tester.tap(find.text('Tiếp tục'));
     await tester.pump();
-    expect(find.text('Bước 2/3 · Học từ khóa'), findsOneWidget);
-    await tester.tap(find.text('Tiếp tục'));
-    await tester.pump();
-    expect(find.text('Bước 3/3 · Nhìn mẫu câu'), findsOneWidget);
+    expect(find.text('Bước 2/2 · Hội thoại đầy đủ'), findsOneWidget);
+    await tester.ensureVisible(find.text('Bắt đầu quiz'));
     await tester.tap(find.text('Bắt đầu quiz'));
     await tester.pump();
 
@@ -169,17 +168,19 @@ void main() {
 
       await tester.pump();
 
-      expect(find.text('Hội thoại'), findsOneWidget);
+      expect(find.text('Mục tiêu bài'), findsOneWidget);
+      await tester.ensureVisible(find.text('Tiếp tục'));
+      await tester.tap(find.text('Tiếp tục'));
+      await tester.pump();
+      expect(find.text('Hội thoại đầy đủ'), findsOneWidget);
       expect(find.text('这个菜怎么样？'), findsOneWidget);
-      expect(find.text('Zhège cài zěnmeyàng?'), findsOneWidget);
       expect(find.text('Món này thế nào?'), findsWidgets);
       await tester.ensureVisible(find.text('Tiếp tục'));
       await tester.tap(find.text('Tiếp tục'));
       await tester.pump();
+      expect(find.text('Câu 1/1'), findsOneWidget);
+      expect(find.text('Zhège cài zěnmeyàng?'), findsOneWidget);
       expect(find.text('怎么样'), findsOneWidget);
-      await tester.ensureVisible(find.text('Tiếp tục'));
-      await tester.tap(find.text('Tiếp tục'));
-      await tester.pump();
       expect(find.text('怎么样 — thế nào?'), findsOneWidget);
       expect(find.text('g_zěnmeyàng'), findsNothing);
     },
@@ -252,10 +253,10 @@ void remediationFlowTest() {
     );
     await tester.pump();
 
+    await tester.ensureVisible(find.text('Tiếp tục'));
     await tester.tap(find.text('Tiếp tục'));
     await tester.pump();
-    await tester.tap(find.text('Tiếp tục'));
-    await tester.pump();
+    await tester.ensureVisible(find.text('Bắt đầu quiz'));
     await tester.tap(find.text('Bắt đầu quiz'));
     await tester.pump();
 

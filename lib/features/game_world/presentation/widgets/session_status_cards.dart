@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/audio/audio_play_button.dart';
+import '../../../../core/audio/audio_urls.dart';
+import '../../../../core/learning/collocation.dart';
 import '../../../../core/learning/lesson_context.dart';
 import '../../../../core/learning/learning_asset_repository.dart';
 import '../../../../core/learning/quiz_generator.dart';
 import '../../../../core/learning/study_session_controller.dart';
-import 'lesson_detail_card.dart';
 import '../../application/game_session_controller.dart';
 
 class SessionSummaryCard extends StatelessWidget {
@@ -160,16 +162,28 @@ class LessonIntroCard extends StatefulWidget {
 class _LessonIntroCardState extends State<LessonIntroCard> {
   var _step = 0;
 
-  static const _titles = ['Nghe hội thoại', 'Học từ khóa', 'Nhìn mẫu câu'];
-  static const _bodies = [
-    'Nghe từng dòng, đọc Hán tự - pinyin - nghĩa Việt.',
-    'Chỉ nhớ các từ chính của bài. Bấm loa nếu muốn nghe từ đơn.',
-    'Nhìn công thức và ý nghĩa, không cần nhớ mã kỹ thuật.',
-  ];
+  List<CollocationItem> get _conversationLines {
+    final conversationIds = widget.lessonContext?.conversationIds.toSet();
+    final lines = widget.session.collocations
+        .where((item) {
+          if (item.source != 'conversation_line') return false;
+          if (conversationIds == null || conversationIds.isEmpty) return true;
+          return item.conversationIds.any(conversationIds.contains);
+        })
+        .toList(growable: false);
+    return [...lines]..sort((a, b) {
+      final convCompare = _conversationId(a).compareTo(_conversationId(b));
+      if (convCompare != 0) return convCompare;
+      return _lineIndex(a).compareTo(_lineIndex(b));
+    });
+  }
+
+  int get _totalSteps => 2 + _conversationLines.length;
 
   @override
   Widget build(BuildContext context) {
-    final isLastStep = _step == _titles.length - 1;
+    final totalSteps = _totalSteps;
+    final isLastStep = _step == totalSteps - 1;
     return Card(
       color: Theme.of(
         context,
@@ -196,11 +210,11 @@ class _LessonIntroCardState extends State<LessonIntroCard> {
                       Text(
                         widget.isCheckpoint
                             ? 'Checkpoint'
-                            : 'Bài học mini-flow',
+                            : 'Bài học hội thoại',
                         style: Theme.of(context).textTheme.titleLarge,
                       ),
                       Text(
-                        'Bước ${_step + 1}/3 · ${_titles[_step]}',
+                        _stepLabel(totalSteps),
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
@@ -209,19 +223,11 @@ class _LessonIntroCardState extends State<LessonIntroCard> {
               ],
             ),
             const SizedBox(height: 12),
-            _StepProgress(currentStep: _step, totalSteps: _titles.length),
-            const SizedBox(height: 12),
-            _CurrentStepCopy(title: _titles[_step], body: _bodies[_step]),
+            _StepProgress(currentStep: _step, totalSteps: totalSteps),
             const SizedBox(height: 12),
             ConstrainedBox(
-              constraints: const BoxConstraints(maxHeight: 330),
-              child: SingleChildScrollView(
-                child: LessonDetailCard(
-                  session: widget.session,
-                  lessonContext: widget.lessonContext,
-                  step: _step,
-                ),
-              ),
+              constraints: const BoxConstraints(maxHeight: 390),
+              child: SingleChildScrollView(child: _buildStep(context)),
             ),
             const SizedBox(height: 16),
             Row(
@@ -251,6 +257,40 @@ class _LessonIntroCardState extends State<LessonIntroCard> {
         ),
       ),
     );
+  }
+
+  Widget _buildStep(BuildContext context) {
+    if (_step == 0) {
+      return _LessonGoalStep(
+        session: widget.session,
+        lessonContext: widget.lessonContext,
+      );
+    }
+    if (_step == 1) return _FullDialogueStep(lines: _conversationLines);
+    return _DialogueLineStep(
+      line: _conversationLines[_step - 2],
+      activeLevel: widget.session.activeLevel,
+      lineNumber: _step - 1,
+      totalLines: _conversationLines.length,
+      fallbackGrammarIds: widget.lessonContext?.grammarIds ?? const [],
+    );
+  }
+
+  String _stepLabel(int totalSteps) {
+    if (_step == 0) return 'Bước 1/$totalSteps · Mục tiêu bài';
+    if (_step == 1) return 'Bước 2/$totalSteps · Hội thoại đầy đủ';
+    return 'Câu ${_step - 1}/${_conversationLines.length} · từ vựng + mẫu câu';
+  }
+
+  String _conversationId(CollocationItem item) {
+    return item.conversationIds.isEmpty ? '' : item.conversationIds.first;
+  }
+
+  int _lineIndex(CollocationItem item) {
+    final audioUrl = item.audioUrl;
+    if (audioUrl == null) return 999;
+    final match = RegExp(r'_L(\d+)\.mp3$').firstMatch(audioUrl);
+    return int.tryParse(match?.group(1) ?? '') ?? 999;
   }
 }
 
@@ -284,23 +324,274 @@ class _StepProgress extends StatelessWidget {
   }
 }
 
-class _CurrentStepCopy extends StatelessWidget {
-  const _CurrentStepCopy({required this.title, required this.body});
+class _LessonGoalStep extends StatelessWidget {
+  const _LessonGoalStep({required this.session, required this.lessonContext});
 
-  final String title;
-  final String body;
+  final HskLearningSessionSeed session;
+  final LessonContext? lessonContext;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: Theme.of(context).textTheme.titleMedium),
-        const SizedBox(height: 4),
-        Text(body, style: Theme.of(context).textTheme.bodySmall),
+        Text('Mục tiêu bài', style: Theme.of(context).textTheme.titleMedium),
+        const SizedBox(height: 8),
+        Text(
+          'Hiểu hội thoại, nắm từ khóa trong từng câu, nhận ra mẫu câu chính, rồi mới làm quiz.',
+          style: Theme.of(context).textTheme.bodyMedium,
+        ),
+        const SizedBox(height: 12),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            Chip(label: Text('HSK${session.activeLevel}')),
+            if (lessonContext != null)
+              Chip(label: Text(lessonContext!.lessonUnitId)),
+            Chip(label: Text('${session.quizzes.length} quiz')),
+          ],
+        ),
+        const SizedBox(height: 12),
+        Text(
+          'Thứ tự học: hội thoại đầy đủ → tách từng câu → từ vựng từng câu → grammar từng câu.',
+          style: Theme.of(context).textTheme.bodySmall,
+        ),
       ],
     );
   }
+}
+
+class _FullDialogueStep extends StatelessWidget {
+  const _FullDialogueStep({required this.lines});
+
+  final List<CollocationItem> lines;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Hội thoại đầy đủ',
+          style: Theme.of(context).textTheme.titleMedium,
+        ),
+        const SizedBox(height: 8),
+        for (var index = 0; index < lines.length; index++)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '${index + 1}. ',
+                  style: Theme.of(context).textTheme.labelLarge,
+                ),
+                if (lines[index].audioUrl != null)
+                  Padding(
+                    padding: const EdgeInsets.only(right: 6),
+                    child: AudioPlayButton(
+                      url: lines[index].audioUrl!,
+                      size: 18,
+                      tooltip: 'Nghe câu ${index + 1}',
+                    ),
+                  ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(lines[index].textCn),
+                      if (lines[index].textVi.isNotEmpty)
+                        Text(
+                          lines[index].textVi,
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+      ],
+    );
+  }
+}
+
+class _DialogueLineStep extends StatelessWidget {
+  const _DialogueLineStep({
+    required this.line,
+    required this.activeLevel,
+    required this.lineNumber,
+    required this.totalLines,
+    required this.fallbackGrammarIds,
+  });
+
+  final CollocationItem line;
+  final int activeLevel;
+  final int lineNumber;
+  final int totalLines;
+  final List<String> fallbackGrammarIds;
+
+  @override
+  Widget build(BuildContext context) {
+    final vocab = _vocabForLine();
+    final grammar = line.targetGrammarIds.isEmpty
+        ? fallbackGrammarIds
+        : line.targetGrammarIds;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Câu $lineNumber/$totalLines',
+          style: Theme.of(context).textTheme.titleMedium,
+        ),
+        const SizedBox(height: 10),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            if (line.audioUrl != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 2, right: 8),
+                child: AudioPlayButton(
+                  url: line.audioUrl!,
+                  size: 24,
+                  tooltip: 'Nghe câu này',
+                ),
+              ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    line.textCn,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  if (line.pinyin.isNotEmpty) ...[
+                    const SizedBox(height: 4),
+                    Text(
+                      line.pinyin,
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                  ],
+                  if (line.textVi.isNotEmpty) ...[
+                    const SizedBox(height: 4),
+                    Text(
+                      line.textVi,
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 16),
+        Text(
+          'Từ vựng trong câu',
+          style: Theme.of(context).textTheme.labelLarge,
+        ),
+        const SizedBox(height: 6),
+        vocab.isEmpty
+            ? const Text('Không có từ khóa riêng cho câu này.')
+            : _VocabChips(items: vocab),
+        const SizedBox(height: 14),
+        Text(
+          'Grammar trong câu',
+          style: Theme.of(context).textTheme.labelLarge,
+        ),
+        const SizedBox(height: 6),
+        _GrammarChips(values: grammar),
+      ],
+    );
+  }
+
+  List<({String id, String label})> _vocabForLine() {
+    final values = <({String id, String label})>[];
+    final seen = <String>{};
+    for (final id in line.targetVocabIds) {
+      if (!id.startsWith('hsk${activeLevel}_')) continue;
+      final label = _idTail(id);
+      if (label.isEmpty || !seen.add(label)) continue;
+      values.add((id: id, label: label));
+    }
+    if (values.isNotEmpty) return values.take(6).toList(growable: false);
+    for (final id in line.targetVocabIds) {
+      final label = _idTail(id);
+      if (label.isEmpty || !seen.add(label)) continue;
+      values.add((id: id, label: label));
+    }
+    return values.take(6).toList(growable: false);
+  }
+}
+
+class _VocabChips extends StatelessWidget {
+  const _VocabChips({required this.items});
+
+  final List<({String id, String label})> items;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 6,
+      runSpacing: 6,
+      children: [
+        for (final item in items)
+          Chip(
+            visualDensity: VisualDensity.compact,
+            label: Text(item.label),
+            avatar: AudioPlayButton(
+              url: AudioUrls.forVocab(item.id),
+              size: 16,
+              tooltip: 'Phát âm ${item.label}',
+            ),
+          ),
+      ],
+    );
+  }
+}
+
+class _GrammarChips extends StatelessWidget {
+  const _GrammarChips({required this.values});
+
+  final List<String> values;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 6,
+      runSpacing: 6,
+      children: [
+        for (final value in values.take(4))
+          Chip(
+            visualDensity: VisualDensity.compact,
+            label: Text(_grammarLabel(value)),
+          ),
+      ],
+    );
+  }
+}
+
+String _idTail(String id) {
+  final separator = id.indexOf('_');
+  if (separator == -1 || separator == id.length - 1) return id;
+  return id.substring(separator + 1);
+}
+
+String _grammarLabel(String id) {
+  return switch (id) {
+    'g_zěnmeyàng' => '怎么样 — thế nào?',
+    'g_youdianr' => '有点儿 — hơi...',
+    'g_bi' => '比 — so sánh hơn',
+    'g_geng' => '更 — hơn nữa',
+    'g_zui' => '最 — nhất',
+    'g_mei_you' => '没有 — không bằng',
+    'g_you_you' => '又...又... — vừa...vừa...',
+    'g_de_attr' => '的 — bổ nghĩa danh từ',
+    'g_ma' => '吗 — câu hỏi yes/no',
+    'g_you' => '有 — có',
+    'g_neg_bu' => '不 — phủ định',
+    _ => id,
+  };
 }
 
 class _RemediationGroupTile extends StatelessWidget {
