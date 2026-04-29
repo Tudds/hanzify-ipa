@@ -11,7 +11,6 @@ import '../../../features/review_session/presentation/review_session_panel.dart'
 import '../../../rive/hanzify_rive_scene_controller.dart';
 import '../../../rive/rive_scene.dart';
 import '../application/game_session_controller.dart';
-import 'widgets/lesson_detail_card.dart';
 import 'widgets/session_status_cards.dart';
 
 class GameWorldScreen extends ConsumerStatefulWidget {
@@ -193,13 +192,12 @@ class _HskReviewCard extends StatelessWidget {
         else if (!introCompleted)
           LessonIntroCard(
             session: state.session,
+            lessonContext: lessonContext,
             isCheckpoint: isCheckpoint,
             onStart: onStart,
           )
         else
           ReviewSessionPanel(challenge: challenge, onChoice: onChoice),
-        const SizedBox(height: 12),
-        LessonDetailCard(session: state.session, lessonContext: lessonContext),
       ],
     );
   }

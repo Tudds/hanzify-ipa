@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/learning/lesson_context.dart';
 import '../../../../core/learning/learning_asset_repository.dart';
 import '../../../../core/learning/quiz_generator.dart';
 import '../../../../core/learning/study_session_controller.dart';
+import 'lesson_detail_card.dart';
 import '../../application/game_session_controller.dart';
 
 class SessionSummaryCard extends StatelessWidget {
@@ -141,11 +143,13 @@ class LessonIntroCard extends StatelessWidget {
   const LessonIntroCard({
     super.key,
     required this.session,
+    required this.lessonContext,
     required this.isCheckpoint,
     required this.onStart,
   });
 
   final HskLearningSessionSeed session;
+  final LessonContext? lessonContext;
   final bool isCheckpoint;
   final VoidCallback onStart;
 
@@ -161,24 +165,65 @@ class LessonIntroCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(
-              isCheckpoint ? Icons.flag_outlined : Icons.route_outlined,
-              size: 40,
+            Row(
+              children: [
+                Icon(
+                  isCheckpoint ? Icons.flag_outlined : Icons.route_outlined,
+                  size: 36,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        isCheckpoint ? 'Checkpoint' : 'Bắt đầu bài học',
+                        style: Theme.of(context).textTheme.titleLarge,
+                      ),
+                      Text(
+                        'Đi theo 4 bước từ trên xuống, rồi mới làm quiz.',
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 12),
-            Text(
-              isCheckpoint ? 'Checkpoint intro' : 'Lesson intro',
-              style: Theme.of(context).textTheme.titleLarge,
+            _IntroStep(
+              index: 1,
+              title: 'Nghe hội thoại',
+              body:
+                  'Đọc Hán tự, pinyin và nghĩa Việt từng dòng. Bấm loa ở từng dòng để nghe đúng audio.',
             ),
-            const SizedBox(height: 8),
-            Text(
-              'HSK${session.activeLevel} · ${session.quizzes.length} quiz · ${session.collocations.length} câu mẫu',
+            _IntroStep(
+              index: 2,
+              title: 'Nhìn từ khóa',
+              body:
+                  'Ưu tiên các từ HSK${session.activeLevel} trong bài; đây là từ sẽ xuất hiện trong quiz.',
             ),
-            const SizedBox(height: 8),
-            Text(
-              isCheckpoint
-                  ? 'Mục tiêu: vượt 70% để mở reward và tiếp tục learning path.'
-                  : 'Mục tiêu: làm quiz, tạo SRS card và xem recap sau bài.',
+            _IntroStep(
+              index: 3,
+              title: 'Nhận mẫu câu',
+              body:
+                  'Xem ý nghĩa grammar bằng tiếng Việt, không cần nhớ mã kỹ thuật.',
+            ),
+            _IntroStep(
+              index: 4,
+              title: isCheckpoint ? 'Vượt checkpoint' : 'Làm quiz',
+              body: isCheckpoint
+                  ? 'Đạt từ 70% để mở reward và tiếp tục learning path.'
+                  : 'Đạt từ 70% để lưu tiến độ và tạo thẻ ôn SRS.',
+            ),
+            const SizedBox(height: 16),
+            ConstrainedBox(
+              constraints: const BoxConstraints(maxHeight: 360),
+              child: SingleChildScrollView(
+                child: LessonDetailCard(
+                  session: session,
+                  lessonContext: lessonContext,
+                ),
+              ),
             ),
             const SizedBox(height: 16),
             SizedBox(
@@ -191,6 +236,47 @@ class LessonIntroCard extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class _IntroStep extends StatelessWidget {
+  const _IntroStep({
+    required this.index,
+    required this.title,
+    required this.body,
+  });
+
+  final int index;
+  final String title;
+  final String body;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    return Padding(
+      padding: const EdgeInsets.only(top: 10),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CircleAvatar(
+            radius: 13,
+            backgroundColor: colors.primary,
+            foregroundColor: colors.onPrimary,
+            child: Text('$index'),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(title, style: Theme.of(context).textTheme.labelLarge),
+                Text(body, style: Theme.of(context).textTheme.bodySmall),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

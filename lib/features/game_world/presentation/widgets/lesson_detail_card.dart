@@ -5,7 +5,6 @@ import '../../../../core/audio/audio_urls.dart';
 import '../../../../core/learning/collocation.dart';
 import '../../../../core/learning/learning_asset_repository.dart';
 import '../../../../core/learning/lesson_context.dart';
-import '../../../../core/learning/quiz_generator.dart';
 
 class LessonDetailCard extends StatelessWidget {
   const LessonDetailCard({
@@ -27,7 +26,6 @@ class LessonDetailCard extends StatelessWidget {
             .toList(growable: false);
     final vocab = _keyVocab(sampleItems);
     final grammar = _keyGrammar(sampleItems);
-    final sampleQuiz = session.quizzes.isEmpty ? null : session.quizzes.first;
 
     return Card(
       color: colorScheme.surface.withValues(alpha: 0.9),
@@ -38,70 +36,26 @@ class LessonDetailCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             _LessonHeader(title: _title, goal: _goal),
-            const SizedBox(height: 14),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                _LessonChip(
-                  icon: Icons.flag_outlined,
-                  label: 'HSK${session.activeLevel}',
-                ),
-                if (lessonContext != null)
-                  _LessonChip(
-                    icon: Icons.bookmark_outline,
-                    label: lessonContext!.lessonUnitId,
-                  ),
-                _LessonChip(
-                  icon: Icons.quiz_outlined,
-                  label: '${session.quizzes.length} quiz',
-                ),
-                _LessonChip(
-                  icon: Icons.library_books_outlined,
-                  label: '${session.collocations.length} examples',
-                ),
-              ],
-            ),
-            const SizedBox(height: 14),
-            _LessonSection(
-              icon: Icons.track_changes_outlined,
-              title: 'Goal / Can-do',
-              child: Text(_canDo, style: Theme.of(context).textTheme.bodySmall),
-            ),
             _LessonSection(
               icon: Icons.forum_outlined,
-              title: 'Full conversation',
+              title: '1. Hội thoại đầy đủ',
               child: conversationItems.isEmpty
                   ? _TokenWrap(values: _conversationTokens)
                   : _ConversationPreview(items: conversationItems),
             ),
             _LessonSection(
               icon: Icons.translate_outlined,
-              title: 'Key vocab',
+              title: '2. Từ khóa cần nhớ',
               child: vocab.isEmpty
                   ? const Text('Từ vựng sẽ xuất hiện trong quiz.')
                   : _VocabTokenWrap(items: vocab),
             ),
             _LessonSection(
               icon: Icons.account_tree_outlined,
-              title: 'Key grammar',
+              title: '3. Mẫu câu trọng tâm',
               child: grammar.isEmpty
                   ? const Text('Pattern được chọn từ câu luyện tập.')
                   : _GrammarTokenWrap(values: grammar),
-            ),
-            if (sampleQuiz != null)
-              _LessonSection(
-                icon: Icons.psychology_alt_outlined,
-                title: 'Practice quiz',
-                child: _PracticePreview(quiz: sampleQuiz),
-              ),
-            _LessonSection(
-              icon: Icons.summarize_outlined,
-              title: 'Summary',
-              child: Text(
-                'Hoàn thành bài với điểm từ 70% để mở khóa bước tiếp theo. Câu sai sẽ được gom vào phần luyện lại.',
-                style: Theme.of(context).textTheme.bodySmall,
-              ),
             ),
           ],
         ),
@@ -122,13 +76,6 @@ class LessonDetailCard extends StatelessWidget {
       return 'Build HSK2 recognition, recall, pinyin, and cloze accuracy.';
     }
     return 'Practice unlocked HSK${session.activeLevel} content with controlled examples.';
-  }
-
-  String get _canDo {
-    if (lessonContext == null) {
-      return 'Luyện nhận diện nghĩa, pinyin và điền từ trong câu theo dữ liệu đã kiểm định.';
-    }
-    return 'Học trong ${lessonContext!.moduleId}, tập trung ${_conversationTokens.join(', ')} và dùng đúng mẫu câu mục tiêu.';
   }
 
   List<String> get _conversationTokens {
@@ -234,22 +181,6 @@ class _LessonHeader extends StatelessWidget {
           ),
         ),
       ],
-    );
-  }
-}
-
-class _LessonChip extends StatelessWidget {
-  const _LessonChip({required this.icon, required this.label});
-
-  final IconData icon;
-  final String label;
-
-  @override
-  Widget build(BuildContext context) {
-    return Chip(
-      visualDensity: VisualDensity.compact,
-      avatar: Icon(icon, size: 16),
-      label: Text(label),
     );
   }
 }
@@ -415,60 +346,5 @@ class _VocabTokenWrap extends StatelessWidget {
           ),
       ],
     );
-  }
-}
-
-class _PracticePreview extends StatelessWidget {
-  const _PracticePreview({required this.quiz});
-
-  final LearningQuiz quiz;
-
-  @override
-  Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: colors.surfaceContainerHighest.withValues(alpha: 0.45),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            _quizTypeLabel(quiz.type),
-            style: Theme.of(context).textTheme.labelMedium,
-          ),
-          const SizedBox(height: 6),
-          Text(
-            'Ví dụ: ${quiz.prompt}',
-            style: Theme.of(context).textTheme.titleSmall,
-          ),
-          const SizedBox(height: 6),
-          Text(
-            'Đáp án mục tiêu: ${quiz.answer}',
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
-        ],
-      ),
-    );
-  }
-
-  String _quizTypeLabel(QuizType type) {
-    switch (type) {
-      case QuizType.vocabRecognition:
-        return 'Nhận diện nghĩa';
-      case QuizType.vocabRecall:
-        return 'Gợi nhớ từ';
-      case QuizType.pinyinChoice:
-        return 'Chọn pinyin';
-      case QuizType.grammarChoice:
-        return 'Chọn ngữ pháp';
-      case QuizType.sentenceOrder:
-        return 'Sắp xếp câu';
-      case QuizType.clozeCollocation:
-        return 'Điền từ vào câu';
-    }
   }
 }

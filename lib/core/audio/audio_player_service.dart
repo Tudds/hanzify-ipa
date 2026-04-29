@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
@@ -7,9 +9,16 @@ import 'package:just_audio/just_audio.dart';
 /// - Web: just_audio dùng Web Audio API + HTML5, browser tự cache theo header CDN
 /// - Native: just_audio buffer/stream, có thể tích hợp flutter_cache_manager nếu cần offline-first
 class AudioPlayerService {
-  AudioPlayerService() : _player = AudioPlayer();
+  AudioPlayerService() : _player = AudioPlayer() {
+    _stateSub = _player.playerStateStream.listen((state) {
+      if (state.processingState == ProcessingState.completed) {
+        unawaited(stop());
+      }
+    });
+  }
 
   final AudioPlayer _player;
+  StreamSubscription<PlayerState>? _stateSub;
   String? _currentUrl;
 
   /// Phát audio từ URL. Nếu đang phát URL khác sẽ stop và phát mới.
@@ -34,6 +43,7 @@ class AudioPlayerService {
   }
 
   Future<void> dispose() async {
+    await _stateSub?.cancel();
     await _player.dispose();
   }
 
