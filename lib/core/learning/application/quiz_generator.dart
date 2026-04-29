@@ -19,6 +19,7 @@ class LearningQuiz {
     required this.sourceCollocationId,
     this.targetGrammarIds = const [],
     this.targetId,
+    this.audioUrl,
   });
 
   final String id;
@@ -29,6 +30,7 @@ class LearningQuiz {
   final String sourceCollocationId;
   final List<String> targetGrammarIds;
   final String? targetId;
+  final String? audioUrl;
 }
 
 class QuizGenerator {
@@ -83,6 +85,7 @@ class QuizGenerator {
       sourceCollocationId: item.id,
       targetGrammarIds: item.targetGrammarIds,
       targetId: item.targetVocabIds.isEmpty ? null : item.targetVocabIds.first,
+      audioUrl: item.audioUrl,
     );
   }
 
@@ -105,6 +108,7 @@ class QuizGenerator {
       sourceCollocationId: item.id,
       targetGrammarIds: item.targetGrammarIds,
       targetId: item.targetVocabIds.isEmpty ? null : item.targetVocabIds.first,
+      audioUrl: item.audioUrl,
     );
   }
 
@@ -130,6 +134,7 @@ class QuizGenerator {
       sourceCollocationId: item.id,
       targetGrammarIds: item.targetGrammarIds,
       targetId: item.targetVocabIds.isEmpty ? null : item.targetVocabIds.first,
+      audioUrl: item.audioUrl,
     );
   }
 

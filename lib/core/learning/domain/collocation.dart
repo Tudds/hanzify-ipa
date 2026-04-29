@@ -11,6 +11,7 @@ class CollocationItem {
     required this.conversationIds,
     required this.tags,
     required this.difficulty,
+    this.audioUrl,
   });
 
   factory CollocationItem.fromJson(Map<String, dynamic> json) {
@@ -32,6 +33,7 @@ class CollocationItem {
       ),
       tags: List<String>.from(json['tags'] as List? ?? const []),
       difficulty: (json['difficulty'] as num).toDouble(),
+      audioUrl: json['audioUrl'] as String?,
     );
   }
 
@@ -46,4 +48,22 @@ class CollocationItem {
   final List<String> conversationIds;
   final List<String> tags;
   final double difficulty;
+  final String? audioUrl;
+
+  CollocationItem copyWith({String? audioUrl}) {
+    return CollocationItem(
+      id: id,
+      level: level,
+      source: source,
+      textCn: textCn,
+      pinyin: pinyin,
+      textVi: textVi,
+      targetVocabIds: targetVocabIds,
+      targetGrammarIds: targetGrammarIds,
+      conversationIds: conversationIds,
+      tags: tags,
+      difficulty: difficulty,
+      audioUrl: audioUrl ?? this.audioUrl,
+    );
+  }
 }

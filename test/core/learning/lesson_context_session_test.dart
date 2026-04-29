@@ -64,6 +64,7 @@ void main() {
             },
           ],
         }),
+        LearningAssetRepository.conversationAsset: jsonEncode([]),
       });
       final factory = HskLearningSessionFactory(
         repository: LearningAssetRepository(bundle: bundle),

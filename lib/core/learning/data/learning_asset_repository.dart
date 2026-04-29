@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/services.dart';
 
+import '../../audio/audio_urls.dart';
 import '../domain/collocation.dart';
 import '../domain/lesson_context.dart';
 import '../application/quiz_generator.dart';
@@ -10,6 +13,7 @@ class LearningAssetRepository {
 
   static const collocationPoolAsset =
       'assets/data/generated/collocation_pool_hsk1_4.json';
+  static const conversationAsset = 'assets/data/conversation.json';
   static const collocationsDbAsset =
       'assets/data/generated/collocations_db.json';
   static const framesBankAsset = 'assets/data/generated/frames_bank.json';
@@ -18,6 +22,19 @@ class LearningAssetRepository {
 
   Future<List<CollocationItem>> loadCollocationPool() async {
     final bundle = _bundle ?? rootBundle;
+    try {
+      final poolRaw = await bundle.loadString(collocationPoolAsset);
+      final conversationRaw = await bundle.loadString(conversationAsset);
+      final lineIndexes = _conversationLineIndexes(conversationRaw);
+      final pool = (jsonDecode(poolRaw) as List)
+          .cast<Map<String, dynamic>>()
+          .map(CollocationItem.fromJson)
+          .toList(growable: false);
+      return _withConversationAudio(pool, lineIndexes);
+    } catch (_) {
+      // Tests can provide only generator assets; keep the runtime fallback.
+    }
+
     final collocationsRaw = await bundle.loadString(collocationsDbAsset);
     final framesRaw = await bundle.loadString(framesBankAsset);
     final collocationsDb = await CollocationsDb.fromAsset(collocationsRaw);
@@ -34,6 +51,52 @@ class LearningAssetRepository {
       items.addAll(_generateLevelItems(collocationsDb, generator, level));
     }
     return items;
+  }
+
+  Map<String, Map<String, int>> _conversationLineIndexes(String raw) {
+    final conversations = (jsonDecode(raw) as List)
+        .cast<Map<String, dynamic>>();
+    final indexes = <String, Map<String, int>>{};
+    for (final conversation in conversations) {
+      final id = conversation['id'] as String?;
+      if (id == null) continue;
+      final lines = (conversation['lines'] as List? ?? const [])
+          .cast<Map<String, dynamic>>();
+      indexes[id] = {
+        for (var index = 0; index < lines.length; index++)
+          if (lines[index]['zh'] case final String zh) zh: index,
+      };
+    }
+    return indexes;
+  }
+
+  List<CollocationItem> _withConversationAudio(
+    List<CollocationItem> items,
+    Map<String, Map<String, int>> lineIndexes,
+  ) {
+    final result = <CollocationItem>[];
+
+    for (final item in items) {
+      if (item.source != 'conversation_line' ||
+          item.conversationIds.length != 1) {
+        result.add(item);
+        continue;
+      }
+
+      final conversationId = item.conversationIds.first;
+      final lineIndex = lineIndexes[conversationId]?[item.textCn];
+      if (lineIndex == null) {
+        result.add(item);
+        continue;
+      }
+      result.add(
+        item.copyWith(
+          audioUrl: AudioUrls.forConversationLine(conversationId, lineIndex),
+        ),
+      );
+    }
+
+    return result;
   }
 
   Map<String, VocabLite> _vocabIndexFor(CollocationsDb db) {
