@@ -49,6 +49,49 @@ class _FakeSessionFactory extends HskLearningSessionFactory {
   }
 }
 
+class _ConversationSessionFactory extends HskLearningSessionFactory {
+  const _ConversationSessionFactory();
+
+  @override
+  Future<HskLearningSessionSeed> createHsk2Session({
+    int quizLimit = 8,
+    LessonContext? lessonContext,
+  }) async {
+    return const HskLearningSessionSeed(
+      activeLevel: 2,
+      collocations: [
+        CollocationItem(
+          id: 'line1',
+          level: 2,
+          source: 'conversation_line',
+          textCn: '这个菜怎么样？',
+          pinyin: 'Zhège cài zěnmeyàng?',
+          textVi: 'Món này thế nào?',
+          targetVocabIds: ['hsk2_怎么样'],
+          targetGrammarIds: ['g_zěnmeyàng'],
+          conversationIds: ['conv_restaurant_02'],
+          tags: ['restaurant'],
+          difficulty: 2.3,
+          audioUrl: 'https://example.test/conv/conv_restaurant_02_L0.mp3',
+        ),
+      ],
+      quizzes: [
+        LearningQuiz(
+          id: 'q1',
+          type: QuizType.vocabRecognition,
+          prompt: '这个菜怎么样？',
+          answer: 'Món này thế nào?',
+          choices: ['Món này thế nào?', 'Tôi học tiếng Trung.'],
+          sourceCollocationId: 'line1',
+          targetId: 'hsk2_怎么样',
+          targetGrammarIds: ['g_zěnmeyàng'],
+          audioUrl: 'https://example.test/conv/conv_restaurant_02_L0.mp3',
+        ),
+      ],
+    );
+  }
+}
+
 void main() {
   setUp(() {
     SharedPreferences.setMockInitialValues({});
@@ -76,7 +119,7 @@ void main() {
     expect(find.textContaining('HSK2'), findsWidgets);
     expect(find.textContaining('collocations'), findsOneWidget);
     expect(find.text("Today's lesson"), findsOneWidget);
-    expect(find.text('Conversation context'), findsOneWidget);
+    expect(find.text('Full conversation'), findsOneWidget);
     expect(find.text('Key vocab'), findsOneWidget);
     expect(find.text('Key grammar'), findsOneWidget);
     expect(find.text('你好'), findsNothing);
@@ -95,6 +138,41 @@ void main() {
     expect(find.text('Session passed'), findsOneWidget);
     expect(find.text('Score: 100%'), findsOneWidget);
   });
+
+  testWidgets(
+    'lesson intro shows conversation, clear vocab and grammar labels',
+    (tester) async {
+      final preferences = await SharedPreferences.getInstance();
+      await tester.pumpWidget(
+        MaterialApp(
+          home: ProviderScope(
+            child: GameWorldScreen(
+              sessionFactory: const _ConversationSessionFactory(),
+              studySessionStore: StudySessionStore(preferences: preferences),
+              lessonContext: const LessonContext(
+                stageId: 'HSK2',
+                moduleId: 'H2-M1',
+                lessonUnitId: 'H2-M1-L1',
+                level: 2,
+                conversationIds: ['conv_restaurant_02'],
+                grammarIds: ['g_zěnmeyàng'],
+              ),
+            ),
+          ),
+        ),
+      );
+
+      await tester.pump();
+
+      expect(find.text('Full conversation'), findsOneWidget);
+      expect(find.text('这个菜怎么样？'), findsOneWidget);
+      expect(find.text('Zhège cài zěnmeyàng?'), findsOneWidget);
+      expect(find.text('Món này thế nào?'), findsWidgets);
+      expect(find.text('怎么样'), findsOneWidget);
+      expect(find.text('怎么样 — thế nào?'), findsOneWidget);
+      expect(find.text('g_zěnmeyàng'), findsNothing);
+    },
+  );
 }
 
 class _TwoQuizSessionFactory extends HskLearningSessionFactory {

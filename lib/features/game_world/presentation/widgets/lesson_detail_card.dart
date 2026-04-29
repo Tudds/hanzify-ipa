@@ -20,7 +20,11 @@ class LessonDetailCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final sampleItems = session.collocations.take(5).toList(growable: false);
+    final conversationItems = _conversationItems;
+    final sampleItems =
+        (conversationItems.isEmpty ? session.collocations : conversationItems)
+            .take(8)
+            .toList(growable: false);
     final vocab = _keyVocab(sampleItems);
     final grammar = _keyGrammar(sampleItems);
     final sampleQuiz = session.quizzes.isEmpty ? null : session.quizzes.first;
@@ -66,8 +70,10 @@ class LessonDetailCard extends StatelessWidget {
             ),
             _LessonSection(
               icon: Icons.forum_outlined,
-              title: 'Conversation context',
-              child: _TokenWrap(values: _conversationTokens),
+              title: 'Full conversation',
+              child: conversationItems.isEmpty
+                  ? _TokenWrap(values: _conversationTokens)
+                  : _ConversationPreview(items: conversationItems),
             ),
             _LessonSection(
               icon: Icons.translate_outlined,
@@ -81,7 +87,7 @@ class LessonDetailCard extends StatelessWidget {
               title: 'Key grammar',
               child: grammar.isEmpty
                   ? const Text('Pattern được chọn từ câu luyện tập.')
-                  : _TokenWrap(values: grammar),
+                  : _GrammarTokenWrap(values: grammar),
             ),
             if (sampleQuiz != null)
               _LessonSection(
@@ -131,9 +137,36 @@ class LessonDetailCard extends StatelessWidget {
     return conversations;
   }
 
+  List<CollocationItem> get _conversationItems {
+    final conversations =
+        lessonContext?.conversationIds.toSet() ?? const <String>{};
+    final items = session.collocations
+        .where((item) {
+          return item.source == 'conversation_line' &&
+              item.conversationIds.any(conversations.contains);
+        })
+        .toList(growable: false);
+    return [...items]..sort((a, b) {
+      final convCompare = _conversationId(a).compareTo(_conversationId(b));
+      if (convCompare != 0) return convCompare;
+      return _lineIndex(a).compareTo(_lineIndex(b));
+    });
+  }
+
   List<({String id, String label})> _keyVocab(List<CollocationItem> items) {
     final values = <({String id, String label})>[];
     final seen = <String>{};
+    for (final item in items) {
+      for (final id in item.targetVocabIds) {
+        if (!id.startsWith('hsk${session.activeLevel}_')) continue;
+        final text = _idTail(id);
+        if (text.isEmpty || seen.contains(text)) continue;
+        seen.add(text);
+        values.add((id: id, label: text));
+      }
+    }
+    if (values.isNotEmpty) return values.take(10).toList(growable: false);
+
     for (final item in items) {
       for (final id in item.targetVocabIds) {
         final text = _idTail(id);
@@ -142,7 +175,7 @@ class LessonDetailCard extends StatelessWidget {
         values.add((id: id, label: text));
       }
     }
-    return values.take(8).toList(growable: false);
+    return values.take(10).toList(growable: false);
   }
 
   List<String> _keyGrammar(List<CollocationItem> items) {
@@ -153,13 +186,24 @@ class LessonDetailCard extends StatelessWidget {
     ]) {
       if (id.isNotEmpty && !values.contains(id)) values.add(id);
     }
-    return values.take(6).toList(growable: false);
+    return values.take(8).toList(growable: false);
   }
 
   String _idTail(String id) {
     final separator = id.indexOf('_');
     if (separator == -1 || separator == id.length - 1) return id;
     return id.substring(separator + 1);
+  }
+
+  String _conversationId(CollocationItem item) {
+    return item.conversationIds.isEmpty ? '' : item.conversationIds.first;
+  }
+
+  int _lineIndex(CollocationItem item) {
+    final audioUrl = item.audioUrl;
+    if (audioUrl == null) return 999;
+    final match = RegExp(r'_L(\d+)\.mp3$').firstMatch(audioUrl);
+    return int.tryParse(match?.group(1) ?? '') ?? 999;
   }
 }
 
@@ -261,6 +305,90 @@ class _TokenWrap extends StatelessWidget {
           Chip(visualDensity: VisualDensity.compact, label: Text(value)),
       ],
     );
+  }
+}
+
+class _ConversationPreview extends StatelessWidget {
+  const _ConversationPreview({required this.items});
+
+  final List<CollocationItem> items;
+
+  @override
+  Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        for (final item in items.take(12))
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (item.audioUrl != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2, right: 6),
+                    child: AudioPlayButton(
+                      url: item.audioUrl!,
+                      size: 18,
+                      tooltip: 'Nghe dòng hội thoại',
+                    ),
+                  ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(item.textCn, style: textTheme.bodyMedium),
+                      if (item.pinyin.isNotEmpty)
+                        Text(item.pinyin, style: textTheme.bodySmall),
+                      if (item.textVi.isNotEmpty)
+                        Text(item.textVi, style: textTheme.bodySmall),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+      ],
+    );
+  }
+}
+
+class _GrammarTokenWrap extends StatelessWidget {
+  const _GrammarTokenWrap({required this.values});
+
+  final List<String> values;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 6,
+      runSpacing: 6,
+      children: [
+        for (final value in values)
+          Chip(
+            visualDensity: VisualDensity.compact,
+            label: Text(_grammarLabel(value)),
+          ),
+      ],
+    );
+  }
+
+  String _grammarLabel(String id) {
+    return switch (id) {
+      'g_zěnmeyàng' => '怎么样 — thế nào?',
+      'g_youdianr' => '有点儿 — hơi...',
+      'g_bi' => '比 — so sánh hơn',
+      'g_geng' => '更 — hơn nữa',
+      'g_zui' => '最 — nhất',
+      'g_mei_you' => '没有 — không bằng',
+      'g_you_you' => '又...又... — vừa...vừa...',
+      'g_de_attr' => '的 — bổ nghĩa danh từ',
+      'g_ma' => '吗 — câu hỏi yes/no',
+      'g_you' => '有 — có',
+      'g_neg_bu' => '不 — phủ định',
+      _ => id,
+    };
   }
 }
 
