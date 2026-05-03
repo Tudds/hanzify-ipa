@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/learning/fsrs.dart';
@@ -11,6 +12,7 @@ import '../../../core/learning_path/learning_path_repository.dart';
 import '../../../core/learning_path/learning_path_unlocks.dart';
 import '../../../core/learning_path/learning_progress.dart';
 import '../../../core/learning_path/learning_progress_store.dart';
+import '../../../core/motion/motion_tokens.dart';
 import '../../game_world/presentation/game_world_screen.dart';
 import '../../review_session/presentation/due_review_screen.dart';
 
@@ -482,7 +484,7 @@ class _ModuleCard extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
     final locked = state == LearningUnitStatus.locked;
 
-    return Card(
+    final card = Card(
       color: colors.surface.withValues(alpha: locked ? 0.45 : 0.9),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -538,6 +540,18 @@ class _ModuleCard extends StatelessWidget {
         ),
       ),
     );
+
+    if (locked) return card;
+
+    return card
+        .animate()
+        .fadeIn(duration: MotionTokens.fast)
+        .scale(
+          begin: const Offset(0.98, 0.98),
+          end: const Offset(1, 1),
+          duration: MotionTokens.medium,
+          curve: MotionTokens.feedbackCurve,
+        );
   }
 
   IconData _stateIcon() {
@@ -688,12 +702,9 @@ class _LessonPreview extends StatelessWidget {
           ListTile(
             dense: true,
             contentPadding: EdgeInsets.zero,
-            leading: CircleAvatar(
-              radius: 14,
-              child: Text(
-                '${entry.$2.index}',
-                style: Theme.of(context).textTheme.labelSmall,
-              ),
+            leading: _LessonNodeBadge(
+              index: entry.$2.index,
+              status: lessonStatuses[entry.$1],
             ),
             title: Text(entry.$2.title),
             subtitle: Text(entry.$2.type),
@@ -708,7 +719,7 @@ class _LessonPreview extends StatelessWidget {
     );
   }
 
-  IconData _lessonIcon(LearningUnitStatus status) {
+  static IconData _lessonIcon(LearningUnitStatus status) {
     switch (status) {
       case LearningUnitStatus.completed:
         return Icons.check_circle_outline;
@@ -720,5 +731,45 @@ class _LessonPreview extends StatelessWidget {
       case LearningUnitStatus.locked:
         return Icons.lock_outline;
     }
+  }
+}
+
+class _LessonNodeBadge extends StatelessWidget {
+  const _LessonNodeBadge({required this.index, required this.status});
+
+  final int index;
+  final LearningUnitStatus status;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    final isAvailable =
+        status == LearningUnitStatus.available ||
+        status == LearningUnitStatus.started;
+    final isCompleted = status == LearningUnitStatus.completed;
+
+    final badge = CircleAvatar(
+      radius: 14,
+      backgroundColor: isCompleted
+          ? colors.primary
+          : isAvailable
+          ? colors.primaryContainer
+          : null,
+      child: Text(
+        '$index',
+        style: Theme.of(context).textTheme.labelSmall?.copyWith(
+          color: isCompleted ? colors.onPrimary : null,
+        ),
+      ),
+    );
+
+    if (!isAvailable && !isCompleted) return badge;
+
+    return badge.animate().scale(
+      begin: const Offset(0.9, 0.9),
+      end: const Offset(1, 1),
+      duration: MotionTokens.medium,
+      curve: MotionTokens.feedbackCurve,
+    );
   }
 }

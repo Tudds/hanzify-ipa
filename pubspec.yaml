@@ -1,5 +1,5 @@
 name: hanzify
-description: "Flutter Web + Rive + Supabase language learning game."
+description: "Flutter Web + Supabase language learning game."
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -12,7 +12,6 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   flutter_riverpod: ^3.3.1
-  rive: ^0.13.20
   supabase_flutter: ^2.1.0
   shared_preferences: ^2.5.5
   drift: ^2.30.0
@@ -21,6 +20,9 @@ dependencies:
   path_provider: ^2.1.5
   path: ^1.9.1
   just_audio: ^0.10.4
+  flutter_animate: ^4.5.0
+  graphview: ^1.2.0
+  confetti: ^0.7.0
 
 dev_dependencies:
   flutter_test:
@@ -32,7 +34,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/rive/
     - assets/data/
     - assets/data/learning_path/
     - assets/data/generated/

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/config/supabase_config.dart';
 import '../../../core/learning/learning_asset_repository.dart';
 import '../../../core/learning/lesson_context.dart';
 import '../../../core/learning/study_session_store.dart';
+import '../../../core/motion/motion_tokens.dart';
 import '../../../features/review_session/domain/review_challenge.dart';
 import '../../../features/review_session/domain/review_challenge_mapper.dart';
 import '../../../features/review_session/presentation/review_session_panel.dart';
-import '../../../rive/hanzify_rive_scene_controller.dart';
-import '../../../rive/rive_scene.dart';
 import '../application/game_session_controller.dart';
 import 'widgets/session_status_cards.dart';
 
@@ -34,9 +34,9 @@ class GameWorldScreen extends ConsumerStatefulWidget {
 }
 
 class _GameWorldScreenState extends ConsumerState<GameWorldScreen> {
-  final _riveController = HanzifyRiveSceneController();
   late final GameSessionArgs _args;
   var _introCompleted = false;
+  bool? _feedbackIsCorrect;
 
   @override
   void initState() {
@@ -49,14 +49,7 @@ class _GameWorldScreenState extends ConsumerState<GameWorldScreen> {
   }
 
   void _handleAnswer(bool isCorrect) {
-    _riveController.fire(isCorrect ? 'correct' : 'wrong');
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(isCorrect ? 'Chính xác!' : 'Thử lại nhé.'),
-        behavior: SnackBarBehavior.floating,
-      ),
-    );
+    setState(() => _feedbackIsCorrect = isCorrect);
   }
 
   @override
@@ -67,12 +60,7 @@ class _GameWorldScreenState extends ConsumerState<GameWorldScreen> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          RiveScene(
-            asset: '',
-            stateMachineName: 'GameWorld',
-            controller: _riveController,
-            placeholder: const _WorldPlaceholder(),
-          ),
+          const _WorldPlaceholder(),
           SafeArea(
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(24),
@@ -109,6 +97,15 @@ class _GameWorldScreenState extends ConsumerState<GameWorldScreen> {
               ),
             ),
           ),
+          if (_feedbackIsCorrect != null)
+            _AnswerFeedbackOverlay(
+              isCorrect: _feedbackIsCorrect!,
+              onCompleted: () {
+                if (mounted) {
+                  setState(() => _feedbackIsCorrect = null);
+                }
+              },
+            ),
         ],
       ),
     );
@@ -138,6 +135,73 @@ class _GameWorldScreenState extends ConsumerState<GameWorldScreen> {
         .read(gameSessionControllerProvider(_args).notifier)
         .retryQuizIndexes(group.quizIndexes);
     setState(() => _introCompleted = true);
+  }
+}
+
+class _AnswerFeedbackOverlay extends StatelessWidget {
+  const _AnswerFeedbackOverlay({
+    required this.isCorrect,
+    required this.onCompleted,
+  });
+
+  final bool isCorrect;
+  final VoidCallback onCompleted;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    final color = isCorrect ? colors.primary : colors.error;
+
+    return IgnorePointer(
+          child: Center(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.92),
+                borderRadius: BorderRadius.circular(999),
+                boxShadow: [
+                  BoxShadow(
+                    color: color.withValues(alpha: 0.35),
+                    blurRadius: 28,
+                    spreadRadius: 4,
+                  ),
+                ],
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 14,
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      isCorrect
+                          ? Icons.check_circle_outline
+                          : Icons.replay_circle_filled_outlined,
+                      color: colors.onPrimary,
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      isCorrect ? 'Chính xác!' : 'Thử lại nhé',
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        color: colors.onPrimary,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        )
+        .animate(onComplete: (_) => onCompleted())
+        .fadeIn(duration: MotionTokens.fast)
+        .scale(
+          begin: const Offset(0.88, 0.88),
+          end: const Offset(1, 1),
+          duration: MotionTokens.medium,
+          curve: MotionTokens.feedbackCurve,
+        );
   }
 }
 

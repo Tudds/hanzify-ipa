@@ -87,7 +87,7 @@ void main() {
 
     expect(find.byType(CircularProgressIndicator), findsOneWidget);
 
-    await tester.pump();
+    await tester.pumpAndSettle();
 
     expect(find.text('Learning Path'), findsOneWidget);
     expect(find.textContaining('Current: HSK2'), findsOneWidget);

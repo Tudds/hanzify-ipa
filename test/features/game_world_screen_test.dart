@@ -135,7 +135,7 @@ void main() {
     expect(find.text('我学习中文。'), findsOneWidget);
 
     await tester.tap(find.text('Tôi học tiếng Trung.'));
-    await tester.pump();
+    await tester.pumpAndSettle();
 
     expect(find.textContaining('1 reviews'), findsOneWidget);
     expect(find.text('Last rating: Good'), findsOneWidget);
@@ -261,9 +261,9 @@ void remediationFlowTest() {
     await tester.pump();
 
     await tester.tap(find.text('Sai 1'));
-    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
     await tester.tap(find.text('Sai 2'));
-    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
 
     expect(find.text('Needs review'), findsOneWidget);
     expect(find.text('Score: 0%'), findsOneWidget);
