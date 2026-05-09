@@ -392,6 +392,19 @@ class DiversityReport {
   };
 }
 
+class RejectionStats {
+  int frameDisabled = 0;
+  int headSemantic = 0;
+  int partnerSemantic = 0;
+  int scenarioBlacklist = 0;
+  int targetInTemplate = 0;
+  int builtPostValidation = 0;
+  int diversityCollision = 0;
+  int frequencyFloor = 0;
+  int sourcesFloor = 0;
+  int levelDelta = 0;
+}
+
 // ============================================================================
 // GENERATOR
 // ============================================================================
@@ -480,9 +493,18 @@ class SentenceGenerator {
   ) {
     return partners.where((p) {
       final key = '$head|${p.objectHanzi}';
-      if (noisyBlacklist.contains(key)) return false;
+      if (!curatedPairAllowlist.contains(key) && noisyBlacklist.contains(key)) {
+        return false;
+      }
       if (p.objectHanzi.length > 4) return false;
       if ({'人', '事', '东西'}.contains(p.objectHanzi)) return false;
+      if (p.objectHanzi == head) return false;
+      if (p.objectHanzi.length == 1 && head.contains(p.objectHanzi)) {
+        return false;
+      }
+      if ({'了', '过', '着', '的', '个', '些'}.contains(p.objectHanzi)) {
+        return false;
+      }
       return true;
     }).toList();
   }
@@ -508,101 +530,64 @@ class SentenceGenerator {
     int count = 8,
     bool enforceDiversity = true,
   }) {
+    return generateWithStats(
+      targetWord: targetWord,
+      userHskLevel: userHskLevel,
+      count: count,
+      enforceDiversity: enforceDiversity,
+    ).sentences;
+  }
+
+  ({List<GeneratedSentence> sentences, RejectionStats stats})
+  generateWithStats({
+    required String targetWord,
+    int userHskLevel = 4,
+    int count = 8,
+    bool enforceDiversity = true,
+  }) {
+    final stats = RejectionStats();
     final vocab = vocabIndex[targetWord];
-    if (vocab == null) return [];
-
+    if (vocab == null) return (sentences: const [], stats: stats);
     final pos = vocab.pos;
+    final headEntry = _entryFor(targetWord, pos);
+    if (headEntry == null) return (sentences: const [], stats: stats);
+    final partners = _filterPartners(targetWord, headEntry.collocations)
+      ..shuffle(_random);
+    if (partners.isEmpty) return (sentences: const [], stats: stats);
 
-    // Get collocations
-    List<CollocationPartner> partners = [];
-    if (pos == 'v' && collocationsDb.verbObject.containsKey(targetWord)) {
-      partners = _filterPartners(
-        targetWord,
-        collocationsDb.verbObject[targetWord]!.collocations,
-      );
-    } else if (pos == 'adj' && collocationsDb.adjNoun.containsKey(targetWord)) {
-      partners = _filterPartners(
-        targetWord,
-        collocationsDb.adjNoun[targetWord]!.collocations,
-      );
-    }
-
-    if (partners.isEmpty) return [];
-
-    // Filter compatible frames
-    final compatible = framesBank.frames
-        .where((f) => f.hskLevelMin <= userHskLevel && f.acceptsTargetPos(pos))
-        .toList();
-
-    if (compatible.isEmpty) return [];
-
-    // Generate
+    final frames = framesBank.frames.toList()..shuffle(_random);
+    final combos = [
+      for (final frame in frames)
+        for (final partner in partners) (frame: frame, partner: partner),
+    ]..shuffle(_random);
     final output = <GeneratedSentence>[];
     final usedCombos = <String>{};
-    var attempts = 0;
-    final maxAttempts = count * 8;
 
-    while (output.length < count && attempts < maxAttempts) {
-      attempts++;
-      final frame = compatible[_random.nextInt(compatible.length)];
-      final partner = partners[_random.nextInt(partners.length)];
-
+    for (final combo in combos) {
+      if (output.length >= count) break;
+      final frame = combo.frame;
+      final partner = combo.partner;
+      if (!_frameAcceptsHead(frame, vocab, userHskLevel, stats)) continue;
+      if (!_frameAcceptsPartner(frame, partner, headEntry, stats)) continue;
       final comboKey =
           '${frame.id}|${partner.scenario}|${frame.time}|${frame.mood}';
-      if (enforceDiversity && usedCombos.contains(comboKey)) continue;
+      if (enforceDiversity && usedCombos.contains(comboKey)) {
+        stats.diversityCollision++;
+        continue;
+      }
       usedCombos.add(comboKey);
 
-      // Skip blacklisted scenarios for this frame
-      if (frame.scenarioBlacklist.contains(partner.scenario)) continue;
-
-      // Build sentence
-      var zh = frame.zhTemplate;
-      var vi = frame.viTemplate;
-
-      if (pos == 'v') {
-        if (frame.slotTypes.contains(SlotType.vo)) {
-          final chunk = _buildVoChunk(targetWord, partner);
-          zh = zh.replaceAll('{VO}', chunk.zh);
-          vi = vi.replaceAll('{VVO}', chunk.vi);
-        } else if (frame.slotTypes.contains(SlotType.v)) {
-          zh = zh.replaceAll('{V}', targetWord);
-          vi = vi.replaceAll('{VV}', _cleanVi(targetWord));
-          if (zh.contains('{N}')) {
-            zh = zh.replaceAll('{N}', partner.objectHanzi);
-            vi = vi.replaceAll('{VN}', _cleanVi(partner.objectHanzi));
-          }
-        }
-      } else if (pos == 'adj') {
-        if (frame.slotTypes.contains(SlotType.n) &&
-            frame.slotTypes.contains(SlotType.adj)) {
-          final n = partner.objectHanzi;
-          zh = zh.replaceFirst('{N}', n).replaceAll('{ADJ}', targetWord);
-          vi = vi
-              .replaceFirst('{VN}', _cleanVi(n))
-              .replaceAll('{VADJ}', _cleanVi(targetWord));
-          if (zh.contains('{N2}')) {
-            // Pick another common noun (not partner)
-            final pool = vocabIndex.values
-                .where((v) => v.pos == 'n' && v.level <= 2 && v.hanzi != n)
-                .toList();
-            if (pool.isEmpty) continue;
-            final n2 = pool[_random.nextInt(pool.length)].hanzi;
-            zh = zh.replaceAll('{N2}', n2);
-            vi = vi.replaceAll('{VN2}', _cleanVi(n2));
-          }
-        } else if (frame.slotTypes.contains(SlotType.adj)) {
-          zh = zh.replaceAll('{ADJ}', targetWord);
-          vi = vi.replaceAll('{VADJ}', _cleanVi(targetWord));
-        }
+      final built = _buildSentence(frame, vocab, partner);
+      if (built == null ||
+          !_validateBuiltSentence(frame, built.zh, built.vi, targetWord)) {
+        stats.builtPostValidation++;
+        continue;
       }
-
-      // Validate no leftover slots
-      if (zh.contains('{') || vi.contains('{')) continue;
 
       output.add(
         GeneratedSentence(
-          zh: zh,
-          vi: vi,
+          zh: built.zh,
+          vi: built.vi,
           frameId: frame.id,
           frameGrammar: frame.grammarFocus,
           time: frame.time,
@@ -619,7 +604,173 @@ class SentenceGenerator {
       );
     }
 
-    return output;
+    return (sentences: output, stats: stats);
+  }
+
+  CollocationEntry? _entryFor(String targetWord, String pos) {
+    if (pos == 'v') return collocationsDb.verbObject[targetWord];
+    if (pos == 'adj') return collocationsDb.adjNoun[targetWord];
+    return null;
+  }
+
+  bool _frameAcceptsHead(
+    SentenceFrame frame,
+    VocabLite head,
+    int userHskLevel,
+    RejectionStats stats,
+  ) {
+    if (!frame.generationEnabled) {
+      stats.frameDisabled++;
+      return false;
+    }
+    if (!frame.acceptsTargetPos(head.pos)) return false;
+    if (frame.hskLevelMin > userHskLevel) return false;
+    final tags = headSemantics[head.hanzi] ?? const <String>{};
+    if (frame.headSemanticWhitelist.isNotEmpty &&
+        !tags.any(frame.headSemanticWhitelist.contains)) {
+      stats.headSemantic++;
+      return false;
+    }
+    if (frame.headSemanticBlacklist.any(tags.contains)) {
+      stats.headSemantic++;
+      return false;
+    }
+    if (frame.forbidTargetInTemplate &&
+        head.hanzi.runes.length >= 2 &&
+        frame.zhTemplate.contains(head.hanzi)) {
+      stats.targetInTemplate++;
+      return false;
+    }
+    return true;
+  }
+
+  bool _frameAcceptsPartner(
+    SentenceFrame frame,
+    CollocationPartner partner,
+    CollocationEntry headEntry,
+    RejectionStats stats,
+  ) {
+    if (frame.partnerScenarioWhitelist.isNotEmpty &&
+        !frame.partnerScenarioWhitelist.contains(partner.scenario)) {
+      stats.scenarioBlacklist++;
+      return false;
+    }
+    if (frame.scenarioBlacklist.contains(partner.scenario)) {
+      stats.scenarioBlacklist++;
+      return false;
+    }
+    if (partner.frequency < frame.minPartnerFrequency) {
+      stats.frequencyFloor++;
+      return false;
+    }
+    if (frame.requiredPartnerSources.isNotEmpty &&
+        !partner.sources.any(frame.requiredPartnerSources.contains)) {
+      stats.sourcesFloor++;
+      return false;
+    }
+    if (frame.maxPartnerLevelDelta < 99 &&
+        partner.objectLevel - headEntry.headLevel >
+            frame.maxPartnerLevelDelta) {
+      stats.levelDelta++;
+      return false;
+    }
+    final tags = _resolvePartnerSemantics(partner);
+    if (frame.partnerSemanticWhitelist.isNotEmpty &&
+        !tags.any(frame.partnerSemanticWhitelist.contains)) {
+      stats.partnerSemantic++;
+      return false;
+    }
+    if (frame.partnerSemanticBlacklist.any(tags.contains)) {
+      stats.partnerSemantic++;
+      return false;
+    }
+    return true;
+  }
+
+  Set<String> _resolvePartnerSemantics(CollocationPartner partner) {
+    final explicit = partnerSemantics[partner.objectHanzi];
+    if (explicit != null && explicit.isNotEmpty) return explicit;
+    return _semanticsFromScenario(partner.scenario);
+  }
+
+  Set<String> _semanticsFromScenario(String scenario) {
+    return switch (scenario) {
+      'place' => {'noun.place'},
+      'food' => {'noun.food'},
+      'tech' => {'noun.tool'},
+      'transport' => {'noun.tool', 'noun.place'},
+      'study' => {'noun.abstract'},
+      'work' => {'noun.event', 'noun.abstract'},
+      'sports' => {'noun.event'},
+      'health' => {'noun.body_topic'},
+      'leisure' => {'noun.media', 'noun.event'},
+      _ => const <String>{},
+    };
+  }
+
+  ({String zh, String vi})? _buildSentence(
+    SentenceFrame frame,
+    VocabLite vocab,
+    CollocationPartner partner,
+  ) {
+    var zh = frame.zhTemplate;
+    var vi = frame.viTemplate;
+    final targetWord = vocab.hanzi;
+
+    if (vocab.pos == 'v') {
+      if (frame.slotTypes.contains(SlotType.vo)) {
+        final chunk = _buildVoChunk(targetWord, partner);
+        zh = zh.replaceAll('{VO}', chunk.zh);
+        vi = vi.replaceAll('{VVO}', chunk.vi);
+      } else if (frame.slotTypes.contains(SlotType.v)) {
+        zh = zh.replaceAll('{V}', targetWord);
+        vi = vi.replaceAll('{VV}', _cleanVi(targetWord));
+        if (zh.contains('{N}')) {
+          zh = zh.replaceAll('{N}', partner.objectHanzi);
+          vi = vi.replaceAll('{VN}', _cleanVi(partner.objectHanzi));
+        }
+      }
+    } else if (vocab.pos == 'adj') {
+      if (frame.slotTypes.contains(SlotType.n) &&
+          frame.slotTypes.contains(SlotType.adj)) {
+        final n = partner.objectHanzi;
+        zh = zh.replaceFirst('{N}', n).replaceAll('{ADJ}', targetWord);
+        vi = vi
+            .replaceFirst('{VN}', _cleanVi(n))
+            .replaceAll('{VADJ}', _cleanVi(targetWord));
+        if (zh.contains('{N2}')) {
+          final pool = vocabIndex.values
+              .where((v) => v.pos == 'n' && v.level <= 2 && v.hanzi != n)
+              .toList();
+          if (pool.isEmpty) return null;
+          final n2 = pool[_random.nextInt(pool.length)].hanzi;
+          zh = zh.replaceAll('{N2}', n2);
+          vi = vi.replaceAll('{VN2}', _cleanVi(n2));
+        }
+      } else if (frame.slotTypes.contains(SlotType.adj)) {
+        zh = zh.replaceAll('{ADJ}', targetWord);
+        vi = vi.replaceAll('{VADJ}', _cleanVi(targetWord));
+      }
+    }
+
+    return (zh: zh, vi: vi);
+  }
+
+  bool _validateBuiltSentence(
+    SentenceFrame frame,
+    String zh,
+    String vi,
+    String head,
+  ) {
+    if (zh.contains('{') || vi.contains('{')) return false;
+    if (head.runes.length >= 2 && zh.contains('$head$head')) return false;
+    for (final pattern in [
+      ...frame.forbiddenPatterns,
+      ...globalForbiddenPatterns,
+    ]) {
+      if (RegExp(pattern).hasMatch(zh)) return false;
+    }
+    return true;
   }
 
   /// Compute diversity metrics for a batch.

@@ -6,7 +6,7 @@ Source plan: `docs/PLAN_gene.md`
 
 - [x] B1 - Schema mới, T12, analyze
 - [x] B2 - Loader, wiring, empty assets
-- [ ] B3 - Validator pipeline, generateWithStats, T1-T11
+- [x] B3 - Validator pipeline, generateWithStats, T1-T11
 - [ ] B4 - Patch both frames_bank mirrors
 - [ ] B5 - Curate semantic JSON, pause for review
 - [ ] B6 - Fill sentence_quality_rules.json
