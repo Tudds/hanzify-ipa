@@ -195,6 +195,55 @@ void main() {
     expect(sentences, isEmpty);
   });
 
+  test('pair blacklist blocks formulaic 请问 fragments', () {
+    final generator = _generator(
+      head: _vocab('请问', vi: 'xin hỏi'),
+      partners: [_partner('厕所', scenario: 'place')],
+      frames: [_frame(id: 'basic', zh: '我{VO}。', vi: 'Tôi {VVO}.')],
+      noisyPairBlacklist: {'请问|厕所'},
+    );
+
+    final sentences = generator.generate(targetWord: '请问');
+
+    expect(sentences.map((s) => s.zh), isNot(contains('我请问厕所。')));
+    expect(sentences, isEmpty);
+  });
+
+  test('pair blacklist blocks preposition 对 as plain adjective', () {
+    final generator = _generator(
+      head: _vocab('对', pos: 'adj', vi: 'đúng'),
+      partners: [_partner('身体', scenario: 'health')],
+      frames: [
+        _frame(
+          id: 'adj-basic',
+          zh: '{N}很{ADJ}。',
+          vi: '{VN} rất {VADJ}.',
+          slots: ['N', 'ADJ'],
+        ),
+      ],
+      noisyPairBlacklist: {'对|身体'},
+    );
+
+    final sentences = generator.generate(targetWord: '对');
+
+    expect(sentences.map((s) => s.zh), isNot(contains('身体很对。')));
+    expect(sentences, isEmpty);
+  });
+
+  test('pair blacklist blocks noun-compound study fragments', () {
+    final generator = _generator(
+      head: _vocab('学习', vi: 'học'),
+      partners: [_partner('方法', scenario: 'study')],
+      frames: [_frame(id: 'basic', zh: '我{VO}。', vi: 'Tôi {VVO}.')],
+      noisyPairBlacklist: {'学习|方法'},
+    );
+
+    final sentences = generator.generate(targetWord: '学习');
+
+    expect(sentences.map((s) => s.zh), isNot(contains('我学习方法。')));
+    expect(sentences, isEmpty);
+  });
+
   test('T9 pair allowlist can keep a curated pair', () {
     final generator = _generator(
       head: _vocab('锻炼'),
