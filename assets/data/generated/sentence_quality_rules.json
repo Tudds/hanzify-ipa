@@ -1,0 +1,6 @@
+{
+  "version": "1.0",
+  "pair_blacklist": [],
+  "pair_allowlist": [],
+  "global_forbidden_patterns": []
+}

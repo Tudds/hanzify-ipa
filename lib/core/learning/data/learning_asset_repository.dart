@@ -17,6 +17,11 @@ class LearningAssetRepository {
   static const collocationsDbAsset =
       'assets/data/generated/collocations_db.json';
   static const framesBankAsset = 'assets/data/generated/frames_bank.json';
+  static const headSemanticsAsset = 'assets/data/generated/head_semantics.json';
+  static const partnerSemanticsAsset =
+      'assets/data/generated/partner_semantics.json';
+  static const qualityRulesAsset =
+      'assets/data/generated/sentence_quality_rules.json';
 
   final AssetBundle? _bundle;
 
@@ -35,14 +40,33 @@ class LearningAssetRepository {
       // Tests can provide only generator assets; keep the runtime fallback.
     }
 
+    return loadGeneratedCollocationPool();
+  }
+
+  Future<List<CollocationItem>> loadGeneratedCollocationPool() async {
+    final bundle = _bundle ?? rootBundle;
     final collocationsRaw = await bundle.loadString(collocationsDbAsset);
     final framesRaw = await bundle.loadString(framesBankAsset);
     final collocationsDb = await CollocationsDb.fromAsset(collocationsRaw);
     final framesBank = await FramesBank.fromAsset(framesRaw);
+    final headSemantics = _loadSemantics(
+      await _maybeLoad(bundle, headSemanticsAsset),
+      'heads',
+    );
+    final partnerSemantics = _loadSemantics(
+      await _maybeLoad(bundle, partnerSemanticsAsset),
+      'partners',
+    );
+    final rules = _loadRules(await _maybeLoad(bundle, qualityRulesAsset));
     final generator = SentenceGenerator(
       collocationsDb: collocationsDb,
       framesBank: framesBank,
       vocabIndex: _vocabIndexFor(collocationsDb),
+      headSemantics: headSemantics,
+      partnerSemantics: partnerSemantics,
+      noisyPairBlacklist: rules.pairBlacklist,
+      curatedPairAllowlist: rules.pairAllowlist,
+      globalForbiddenPatterns: rules.globalForbiddenPatterns,
       seed: 1,
     );
 
@@ -51,6 +75,39 @@ class LearningAssetRepository {
       items.addAll(_generateLevelItems(collocationsDb, generator, level));
     }
     return items;
+  }
+
+  Future<String?> _maybeLoad(AssetBundle bundle, String key) async {
+    try {
+      return await bundle.loadString(key);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  Map<String, Set<String>> _loadSemantics(String? raw, String key) {
+    if (raw == null) return const {};
+    final data = jsonDecode(raw) as Map<String, dynamic>;
+    final values = data[key] as Map<String, dynamic>? ?? const {};
+    return values.map(
+      (hanzi, tags) => MapEntry(hanzi, Set<String>.from(tags as List)),
+    );
+  }
+
+  SentenceQualityRules _loadRules(String? raw) {
+    if (raw == null) return const SentenceQualityRules();
+    final data = jsonDecode(raw) as Map<String, dynamic>;
+    return SentenceQualityRules(
+      pairBlacklist: Set<String>.from(
+        data['pair_blacklist'] as List? ?? const [],
+      ),
+      pairAllowlist: Set<String>.from(
+        data['pair_allowlist'] as List? ?? const [],
+      ),
+      globalForbiddenPatterns: List<String>.from(
+        data['global_forbidden_patterns'] as List? ?? const [],
+      ),
+    );
   }
 
   Map<String, Map<String, int>> _conversationLineIndexes(String raw) {
@@ -196,6 +253,18 @@ class HskLearningSessionSeed {
   final int activeLevel;
   final List<CollocationItem> collocations;
   final List<LearningQuiz> quizzes;
+}
+
+class SentenceQualityRules {
+  const SentenceQualityRules({
+    this.pairBlacklist = const {},
+    this.pairAllowlist = const {},
+    this.globalForbiddenPatterns = const [],
+  });
+
+  final Set<String> pairBlacklist;
+  final Set<String> pairAllowlist;
+  final List<String> globalForbiddenPatterns;
 }
 
 class HskLearningSessionFactory {

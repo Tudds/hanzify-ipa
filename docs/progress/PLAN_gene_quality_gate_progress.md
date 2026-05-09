@@ -5,7 +5,7 @@ Source plan: `docs/PLAN_gene.md`
 ## Checklist
 
 - [x] B1 - Schema mới, T12, analyze
-- [ ] B2 - Loader, wiring, empty assets
+- [x] B2 - Loader, wiring, empty assets
 - [ ] B3 - Validator pipeline, generateWithStats, T1-T11
 - [ ] B4 - Patch both frames_bank mirrors
 - [ ] B5 - Curate semantic JSON, pause for review

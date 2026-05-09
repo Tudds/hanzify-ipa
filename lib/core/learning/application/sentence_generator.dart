@@ -437,15 +437,26 @@ class SentenceGenerator {
   /// Blacklist các collocation pair noisy từ auto-mining.
   /// Format: "{head}|{partner}"
   final Set<String> noisyBlacklist;
+  final Set<String> curatedPairAllowlist;
+  final Map<String, Set<String>> headSemantics;
+  final Map<String, Set<String>> partnerSemantics;
+  final List<String> globalForbiddenPatterns;
 
   SentenceGenerator({
     required this.collocationsDb,
     required this.framesBank,
     required this.vocabIndex,
     Set<String>? noisyBlacklist,
+    Set<String>? noisyPairBlacklist,
+    Set<String>? curatedPairAllowlist,
+    this.headSemantics = const {},
+    this.partnerSemantics = const {},
+    this.globalForbiddenPatterns = const [],
     int? seed,
   }) : _random = seed != null ? Random(seed) : Random(),
+       curatedPairAllowlist = curatedPairAllowlist ?? const {},
        noisyBlacklist =
+           noisyPairBlacklist ??
            noisyBlacklist ??
            {'考虑|能不能', '解决|就业', '反映|社会', '丰富|日', '丰富|分钟', '丰富|日子', '看|医生'};
 
