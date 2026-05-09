@@ -181,6 +181,20 @@ void main() {
     expect(sentences, isEmpty);
   });
 
+  test('pair blacklist blocks intransitive 下雨 object output', () {
+    final generator = _generator(
+      head: _vocab('下雨', vi: 'mưa, rơi mưa'),
+      partners: [_partner('明天', scenario: 'time')],
+      frames: [_frame(id: 'like', zh: '我喜欢{VO}。', vi: 'Tôi thích {VVO}.')],
+      noisyPairBlacklist: {'下雨|明天'},
+    );
+
+    final sentences = generator.generate(targetWord: '下雨');
+
+    expect(sentences.map((s) => s.zh), isNot(contains('我喜欢下雨明天。')));
+    expect(sentences, isEmpty);
+  });
+
   test('T9 pair allowlist can keep a curated pair', () {
     final generator = _generator(
       head: _vocab('锻炼'),
