@@ -20,7 +20,9 @@
       "mood": "statement",
       "grammar_focus": "basic_SVO",
       "hsk_level_min": 1,
-      "complexity": 1
+      "complexity": 1,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H1-02",
@@ -33,7 +35,9 @@
       "mood": "statement",
       "grammar_focus": "basic_SVO_3rd",
       "hsk_level_min": 1,
-      "complexity": 1
+      "complexity": 1,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H1-03",
@@ -46,7 +50,9 @@
       "mood": "statement",
       "grammar_focus": "basic_SVO_plural",
       "hsk_level_min": 1,
-      "complexity": 1
+      "complexity": 1,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H1-04",
@@ -59,7 +65,9 @@
       "mood": "statement",
       "grammar_focus": "time_adverb_今天",
       "hsk_level_min": 1,
-      "complexity": 1
+      "complexity": 1,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H1-05",
@@ -72,7 +80,9 @@
       "mood": "statement",
       "grammar_focus": "time_adverb_明天",
       "hsk_level_min": 1,
-      "complexity": 1
+      "complexity": 1,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H1-06",
@@ -86,7 +96,9 @@
       "grammar_focus": "negation_不",
       "hsk_level_min": 1,
       "complexity": 1,
-      "scenario_blacklist": []
+      "scenario_blacklist": [],
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H1-07",
@@ -99,7 +111,9 @@
       "mood": "yes_no_q",
       "grammar_focus": "question_吗",
       "hsk_level_min": 1,
-      "complexity": 1
+      "complexity": 1,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H1-08",
@@ -112,7 +126,9 @@
       "mood": "preference",
       "grammar_focus": "verb_chain_喜欢",
       "hsk_level_min": 1,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H1-09",
@@ -125,7 +141,9 @@
       "mood": "identity",
       "grammar_focus": "copula_是",
       "hsk_level_min": 1,
-      "complexity": 1
+      "complexity": 1,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H1-10",
@@ -139,7 +157,9 @@
       "mood": "description",
       "grammar_focus": "stative_很",
       "hsk_level_min": 1,
-      "complexity": 1
+      "complexity": 1,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-01",
@@ -152,7 +172,9 @@
       "mood": "statement",
       "grammar_focus": "aspect_了_past",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-02",
@@ -165,7 +187,9 @@
       "mood": "statement",
       "grammar_focus": "aspect_过_experiential",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-03",
@@ -181,7 +205,9 @@
       "complexity": 2,
       "scenario_blacklist": [
         "health"
-      ]
+      ],
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-04",
@@ -194,7 +220,9 @@
       "mood": "wish",
       "grammar_focus": "modal_想",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-05",
@@ -207,7 +235,9 @@
       "mood": "intent",
       "grammar_focus": "modal_要",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-06",
@@ -220,7 +250,15 @@
       "mood": "ability",
       "grammar_focus": "modal_会_ability",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true,
+      "head_semantic_whitelist": [
+        "verb.skill"
+      ],
+      "partner_semantic_whitelist": [
+        "noun.skill_object"
+      ]
     },
     {
       "id": "F-H2-07",
@@ -233,7 +271,9 @@
       "mood": "permission_q",
       "grammar_focus": "modal_可以",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-08",
@@ -246,7 +286,9 @@
       "mood": "routine",
       "grammar_focus": "frequency_每天",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-09",
@@ -259,7 +301,9 @@
       "mood": "negation",
       "grammar_focus": "negation_没",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-10",
@@ -272,7 +316,9 @@
       "mood": "addition",
       "grammar_focus": "adverb_也",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-11",
@@ -285,7 +331,9 @@
       "mood": "suggestion",
       "grammar_focus": "particle_吧_suggestion",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-12",
@@ -298,7 +346,9 @@
       "mood": "yes_no_q",
       "grammar_focus": "modal_question",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-13",
@@ -313,7 +363,9 @@
       "mood": "comparison",
       "grammar_focus": "comparison_比",
       "hsk_level_min": 2,
-      "complexity": 3
+      "complexity": 3,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-14",
@@ -326,7 +378,9 @@
       "mood": "completion",
       "grammar_focus": "adverb_已经",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H2-15",
@@ -339,7 +393,9 @@
       "mood": "obligation",
       "grammar_focus": "modal_应该",
       "hsk_level_min": 2,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H3-01",
@@ -352,7 +408,9 @@
       "mood": "hypothesis",
       "grammar_focus": "conditional_如果_就",
       "hsk_level_min": 3,
-      "complexity": 3
+      "complexity": 3,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H3-02",
@@ -365,7 +423,9 @@
       "mood": "simultaneous",
       "grammar_focus": "simultaneous_一边",
       "hsk_level_min": 3,
-      "complexity": 3
+      "complexity": 3,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H3-03",
@@ -378,7 +438,9 @@
       "mood": "concession",
       "grammar_focus": "concession_虽然_但是",
       "hsk_level_min": 3,
-      "complexity": 4
+      "complexity": 4,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H3-04",
@@ -391,7 +453,9 @@
       "mood": "necessity",
       "grammar_focus": "modal_必须",
       "hsk_level_min": 3,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H3-05",
@@ -404,7 +468,9 @@
       "mood": "companion",
       "grammar_focus": "preposition_跟",
       "hsk_level_min": 3,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H3-06",
@@ -417,7 +483,17 @@
       "mood": "purpose",
       "grammar_focus": "purpose_为了_而",
       "hsk_level_min": 3,
-      "complexity": 3
+      "complexity": 3,
+      "generation_enabled": true,
+      "forbid_target_in_template": true,
+      "head_semantic_whitelist": [
+        "verb.healthy"
+      ],
+      "partner_scenario_whitelist": [
+        "health",
+        "sports",
+        "food"
+      ]
     },
     {
       "id": "F-H3-07",
@@ -430,7 +506,9 @@
       "mood": "preparation",
       "grammar_focus": "verb_chain_准备",
       "hsk_level_min": 3,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H3-08",
@@ -443,7 +521,9 @@
       "mood": "decision",
       "grammar_focus": "verb_chain_决定",
       "hsk_level_min": 3,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H3-09",
@@ -456,7 +536,9 @@
       "mood": "unexpected",
       "grammar_focus": "adverb_突然",
       "hsk_level_min": 3,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H3-10",
@@ -470,7 +552,15 @@
       "mood": "emphasis",
       "grammar_focus": "intensifier_非常",
       "hsk_level_min": 3,
-      "complexity": 2
+      "complexity": 2,
+      "generation_enabled": true,
+      "forbid_target_in_template": true,
+      "head_semantic_blacklist": [
+        "adj.gradable.person"
+      ],
+      "partner_semantic_blacklist": [
+        "noun.subject_only"
+      ]
     },
     {
       "id": "F-H4-01",
@@ -483,7 +573,12 @@
       "mood": "deliberation",
       "grammar_focus": "nominalization_的事",
       "hsk_level_min": 4,
-      "complexity": 4
+      "complexity": 4,
+      "generation_enabled": true,
+      "forbid_target_in_template": true,
+      "head_semantic_blacklist": [
+        "verb.cognition"
+      ]
     },
     {
       "id": "F-H4-02",
@@ -496,11 +591,13 @@
       "mood": "reflection",
       "grammar_focus": "preposition_通过",
       "hsk_level_min": 4,
-      "complexity": 4
+      "complexity": 4,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H4-03",
-      "zh": "对于{N},我们要认真{V}。",
+      "zh": "对于{N}，我们要认真{V}。",
       "vi": "Đối với {VN}, chúng ta phải {VV} một cách nghiêm túc.",
       "slot_types": [
         "N",
@@ -510,7 +607,18 @@
       "mood": "principle",
       "grammar_focus": "topic_对于",
       "hsk_level_min": 4,
-      "complexity": 4
+      "complexity": 4,
+      "generation_enabled": true,
+      "forbid_target_in_template": true,
+      "head_semantic_whitelist": [
+        "verb.cognition",
+        "verb.work_study",
+        "verb.communication"
+      ],
+      "partner_semantic_whitelist": [
+        "noun.abstract",
+        "noun.event"
+      ]
     },
     {
       "id": "F-H4-04",
@@ -523,7 +631,16 @@
       "mood": "evolution",
       "grammar_focus": "progressive_越来越",
       "hsk_level_min": 4,
-      "complexity": 4
+      "complexity": 4,
+      "generation_enabled": true,
+      "forbid_target_in_template": true,
+      "head_semantic_whitelist": [
+        "adj.gradable.person",
+        "adj.subjective"
+      ],
+      "head_semantic_blacklist": [
+        "adj.physical_property"
+      ]
     },
     {
       "id": "F-H4-05",
@@ -536,7 +653,9 @@
       "mood": "determination",
       "grammar_focus": "concession_无论_都",
       "hsk_level_min": 4,
-      "complexity": 4
+      "complexity": 4,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H4-06",
@@ -549,7 +668,9 @@
       "mood": "addition_emphasis",
       "grammar_focus": "addition_不仅_而且",
       "hsk_level_min": 4,
-      "complexity": 4
+      "complexity": 4,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H4-07",
@@ -562,7 +683,9 @@
       "mood": "concession",
       "grammar_focus": "concession_尽管",
       "hsk_level_min": 4,
-      "complexity": 4
+      "complexity": 4,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H4-08",
@@ -575,7 +698,17 @@
       "mood": "decision_after_thought",
       "grammar_focus": "sequence_经过",
       "hsk_level_min": 4,
-      "complexity": 4
+      "complexity": 4,
+      "generation_enabled": true,
+      "forbid_target_in_template": true,
+      "head_semantic_blacklist": [
+        "verb.cognition"
+      ],
+      "head_semantic_whitelist": [
+        "verb.preparable",
+        "verb.movement",
+        "verb.work_study"
+      ]
     },
     {
       "id": "F-H4-09",
@@ -588,7 +721,9 @@
       "mood": "explanation",
       "grammar_focus": "causal_由于",
       "hsk_level_min": 4,
-      "complexity": 4
+      "complexity": 4,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     },
     {
       "id": "F-H4-10",
@@ -601,7 +736,19 @@
       "mood": "purpose",
       "grammar_focus": "purpose_为了",
       "hsk_level_min": 4,
-      "complexity": 3
+      "complexity": 3,
+      "generation_enabled": true,
+      "forbid_target_in_template": true,
+      "head_semantic_whitelist": [
+        "verb.preparable",
+        "verb.work_study",
+        "verb.healthy"
+      ],
+      "min_partner_frequency": 2,
+      "required_partner_sources": [
+        "curated",
+        "example"
+      ]
     },
     {
       "id": "F-H4-11",
@@ -615,7 +762,16 @@
       "mood": "evaluation",
       "grammar_focus": "preposition_对",
       "hsk_level_min": 4,
-      "complexity": 3
+      "complexity": 3,
+      "generation_enabled": true,
+      "forbid_target_in_template": true,
+      "head_semantic_whitelist": [
+        "adj.evaluative.health"
+      ],
+      "partner_semantic_whitelist": [
+        "noun.body_topic",
+        "noun.food"
+      ]
     },
     {
       "id": "F-H4-12",
@@ -628,7 +784,9 @@
       "mood": "connection",
       "grammar_focus": "preposition_跟_有关",
       "hsk_level_min": 4,
-      "complexity": 3
+      "complexity": 3,
+      "generation_enabled": true,
+      "forbid_target_in_template": true
     }
   ]
 }
