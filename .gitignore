@@ -54,6 +54,7 @@ assets/data_backup_*/
 assets/data_backup_phaseB_*/
 assets/data_backup_phaseC_*.json
 test/core/widgets/failures/
+bin/audit_generated.dart
 
 # Audio TTS pipeline (sinh ra cục bộ, upload lên R2)
 audio_out/

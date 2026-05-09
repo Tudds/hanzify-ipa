@@ -10,7 +10,7 @@ Source plan: `docs/PLAN_gene.md`
 - [x] B4 - Patch both frames_bank mirrors
 - [x] B5 - Curate semantic JSON, pause for review
 - [x] B6 - Fill sentence_quality_rules.json
-- [ ] B7 - Smoke audit and ignore temporary audit script
+- [x] B7 - Smoke audit and ignore temporary audit script
 - [ ] B8 - Cleanup README, final tests, analyze
 
 ## Notes
