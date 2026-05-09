@@ -167,6 +167,20 @@ void main() {
     expect(sentences, isEmpty);
   });
 
+  test('pair blacklist blocks malformed 上中文 output', () {
+    final generator = _generator(
+      head: _vocab('上', vi: 'lên, trên, đi lên'),
+      partners: [_partner('中文', scenario: 'study')],
+      frames: [_frame(id: 'today', zh: '今天我{VO}。', vi: 'Hôm nay tôi {VVO}.')],
+      noisyPairBlacklist: {'上|中文'},
+    );
+
+    final sentences = generator.generate(targetWord: '上');
+
+    expect(sentences.map((s) => s.zh), isNot(contains('今天我上中文。')));
+    expect(sentences, isEmpty);
+  });
+
   test('T9 pair allowlist can keep a curated pair', () {
     final generator = _generator(
       head: _vocab('锻炼'),
