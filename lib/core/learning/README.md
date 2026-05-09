@@ -19,3 +19,10 @@ Clean architecture layout for the offline learning engine.
   - `study_session_store.dart`: SharedPreferences local persistence.
 
 Root files in `lib/core/learning/*.dart` are compatibility exports. New code can import `learning.dart` or the specific layer file.
+
+## Sentence Quality Gate
+
+`application/sentence_generator.dart` generates from `collocations_db.json` and
+`frames_bank.json`, then validates each candidate with semantic tags and rule
+assets under `assets/data/generated/`. The generator may return fewer than the
+requested count when the remaining candidates fail the quality gate.

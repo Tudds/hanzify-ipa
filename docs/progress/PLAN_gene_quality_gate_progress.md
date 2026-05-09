@@ -11,7 +11,7 @@ Source plan: `docs/PLAN_gene.md`
 - [x] B5 - Curate semantic JSON, pause for review
 - [x] B6 - Fill sentence_quality_rules.json
 - [x] B7 - Smoke audit and ignore temporary audit script
-- [ ] B8 - Cleanup README, final tests, analyze
+- [x] B8 - Cleanup README, final tests, analyze
 
 ## Notes
 

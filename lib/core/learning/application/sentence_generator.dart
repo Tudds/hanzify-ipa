@@ -459,7 +459,6 @@ class SentenceGenerator {
     required this.collocationsDb,
     required this.framesBank,
     required this.vocabIndex,
-    Set<String>? noisyBlacklist,
     Set<String>? noisyPairBlacklist,
     Set<String>? curatedPairAllowlist,
     this.headSemantics = const {},
@@ -468,10 +467,7 @@ class SentenceGenerator {
     int? seed,
   }) : _random = seed != null ? Random(seed) : Random(),
        curatedPairAllowlist = curatedPairAllowlist ?? const {},
-       noisyBlacklist =
-           noisyPairBlacklist ??
-           noisyBlacklist ??
-           {'考虑|能不能', '解决|就业', '反映|社会', '丰富|日', '丰富|分钟', '丰富|日子', '看|医生'};
+       noisyBlacklist = noisyPairBlacklist ?? const {};
 
   /// Lấy nghĩa Việt sạch (trước dấu phẩy đầu tiên).
   String _cleanVi(String hanzi) {
