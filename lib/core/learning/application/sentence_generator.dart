@@ -178,6 +178,17 @@ class SentenceFrame {
 
   /// Scenario combinations to skip (e.g., progressive + health = awkward)
   final List<String> scenarioBlacklist;
+  final bool generationEnabled;
+  final List<String> headSemanticWhitelist;
+  final List<String> headSemanticBlacklist;
+  final List<String> partnerSemanticWhitelist;
+  final List<String> partnerSemanticBlacklist;
+  final List<String> partnerScenarioWhitelist;
+  final bool forbidTargetInTemplate;
+  final List<String> forbiddenPatterns;
+  final int minPartnerFrequency;
+  final List<String> requiredPartnerSources;
+  final int maxPartnerLevelDelta;
 
   SentenceFrame({
     required this.id,
@@ -190,6 +201,17 @@ class SentenceFrame {
     required this.hskLevelMin,
     required this.complexity,
     this.scenarioBlacklist = const [],
+    this.generationEnabled = true,
+    this.headSemanticWhitelist = const [],
+    this.headSemanticBlacklist = const [],
+    this.partnerSemanticWhitelist = const [],
+    this.partnerSemanticBlacklist = const [],
+    this.partnerScenarioWhitelist = const [],
+    this.forbidTargetInTemplate = true,
+    this.forbiddenPatterns = const [],
+    this.minPartnerFrequency = 1,
+    this.requiredPartnerSources = const [],
+    this.maxPartnerLevelDelta = 99,
   });
 
   factory SentenceFrame.fromJson(Map<String, dynamic> json) {
@@ -208,6 +230,32 @@ class SentenceFrame {
       scenarioBlacklist: List<String>.from(
         json['scenario_blacklist'] as List? ?? const [],
       ),
+      generationEnabled: json['generation_enabled'] as bool? ?? true,
+      headSemanticWhitelist: List<String>.from(
+        json['head_semantic_whitelist'] as List? ?? const [],
+      ),
+      headSemanticBlacklist: List<String>.from(
+        json['head_semantic_blacklist'] as List? ?? const [],
+      ),
+      partnerSemanticWhitelist: List<String>.from(
+        json['partner_semantic_whitelist'] as List? ?? const [],
+      ),
+      partnerSemanticBlacklist: List<String>.from(
+        json['partner_semantic_blacklist'] as List? ?? const [],
+      ),
+      partnerScenarioWhitelist: List<String>.from(
+        json['partner_scenario_whitelist'] as List? ?? const [],
+      ),
+      forbidTargetInTemplate:
+          json['forbid_target_in_template'] as bool? ?? true,
+      forbiddenPatterns: List<String>.from(
+        json['forbidden_patterns'] as List? ?? const [],
+      ),
+      minPartnerFrequency: json['min_partner_frequency'] as int? ?? 1,
+      requiredPartnerSources: List<String>.from(
+        json['required_partner_sources'] as List? ?? const [],
+      ),
+      maxPartnerLevelDelta: json['max_partner_level_delta'] as int? ?? 99,
     );
   }
 
