@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/providers/user_profile_provider.dart';
 import '../../dictionary/application/library_state.dart';
 import '../../dictionary/domain/vocab_item.dart';
 
@@ -28,7 +29,11 @@ final quizPoolProvider = FutureProvider.autoDispose<QuizPool>((
 
 class QuizLevelNotifier extends Notifier<int> {
   @override
-  int build() => 2;
+  int build() {
+    return ref.watch(
+      userProfileProvider.select((profile) => profile.activeLevel),
+    );
+  }
 
   void set(int level) => state = level;
 }

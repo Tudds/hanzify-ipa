@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../core/learning/fsrs.dart';
 import '../../../core/learning/study_session_controller.dart';
 import '../../../core/learning/study_session_store.dart';
+import '../../../core/providers/user_profile_provider.dart';
 import '../../../core/theme/typography.dart';
 import '../../../core/widgets/sliver_page_scaffold.dart';
 
@@ -86,7 +87,16 @@ class _DueReviewScreenState extends ConsumerState<DueReviewScreen> {
           data.cards.values,
           DateTime.now(),
         );
-        if (dueCards.isEmpty) {
+        final sessionSize = ref.watch(
+          userProfileProvider.select((profile) => profile.sessionSize),
+        );
+        // Giới hạn phiên theo thời lượng học/ngày user đã chọn; phần còn lại
+        // vẫn đến hạn và hiện lại ở phiên kế tiếp.
+        final sessionRemaining = (sessionSize - _reviewed).clamp(
+          0,
+          dueCards.length,
+        );
+        if (dueCards.isEmpty || sessionRemaining == 0) {
           return SliverPageScaffold(
             title: 'Ôn tập',
             subtitle: 'FSRS review từ tiến độ local.',
@@ -102,13 +112,14 @@ class _DueReviewScreenState extends ConsumerState<DueReviewScreen> {
         final card = dueCards.first;
         return SliverPageScaffold(
           title: 'Ôn tập',
-          subtitle: '${dueCards.length} thẻ đang đến hạn.',
+          subtitle:
+              '${dueCards.length} thẻ đến hạn · phiên này $sessionRemaining thẻ.',
           headerAssetPath: 'assets/images/gen_header_review.svg',
           slivers: [
             SliverToBoxAdapter(
               child: _ReviewCard(
                 card: card,
-                remaining: dueCards.length,
+                remaining: sessionRemaining,
                 reviewed: _reviewed,
                 onRate: (rating) => _rate(data, card, rating),
               ),

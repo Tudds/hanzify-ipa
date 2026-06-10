@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'app/hanzify_app.dart';
 import 'core/config/supabase_config.dart';
+import 'core/providers/shared_preferences_provider.dart';
 import 'core/sync/learning_sync_service.dart';
 import 'core/sync/learning_sync_trigger.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
+  final prefs = await SharedPreferences.getInstance();
 
   if (SupabaseConfig.isConfigured) {
     await Supabase.initialize(
@@ -27,5 +30,10 @@ Future<void> main() async {
     LearningSyncTrigger.request();
   }
 
-  runApp(const ProviderScope(child: HanzifyApp()));
+  runApp(
+    ProviderScope(
+      overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
+      child: const HanzifyApp(),
+    ),
+  );
 }

@@ -1,6 +1,6 @@
 # Hanzify Code Map
 
-Bản đồ nhanh để đọc codebase. Cập nhật 2026-05-18.
+Bản đồ nhanh để đọc codebase. Cập nhật 2026-06-11.
 
 ---
 
@@ -8,9 +8,10 @@ Bản đồ nhanh để đọc codebase. Cập nhật 2026-05-18.
 
 ```
 lib/main.dart
-  └─ runApp(ProviderScope(HanzifyApp))
+  └─ runApp(ProviderScope(overrides: [sharedPreferencesProvider], HanzifyApp))
       └─ lib/app/hanzify_app.dart
-          └─ lib/app/app_router.dart
+          └─ lib/app/app_router.dart  ── appRouterProvider + onboarding redirect
+              ├─ OnboardingScreen (`/onboarding`, lần chạy đầu)
               └─ lib/core/widgets/root_scaffold.dart  ── 5-tab IndexedStack
                   ├─ ShortsFeedScreen  (tab 0, `/`)
                   ├─ DictionaryScreen  (tab 1, `/dictionary`)
@@ -20,9 +21,17 @@ lib/main.dart
 ```
 
 Khởi tạo phụ trong `main()`:
+- `SharedPreferences.getInstance()` được await trước `runApp` và override vào `sharedPreferencesProvider` để các provider đọc prefs đồng bộ.
 - Supabase chỉ init khi `SupabaseConfig.isConfigured`, tức là có `SUPABASE_URL` và `SUPABASE_ANON_KEY` qua `--dart-define`.
 - Khi Supabase đã init và có auth user, `LearningSyncTrigger` sync local progress/SRS với Supabase khi auth state đổi.
 - Bottom nav dùng `BottomTabBarWidget`, ẩn/hiện qua `navVisibilityProvider`.
+
+### User profile & onboarding
+
+- `lib/core/profile/user_profile.dart` — `UserProfile {activeLevel, dailyMinutes, priority, onboardingComplete}` + `LearningPriority`; `sessionSize` suy ra từ `dailyMinutes`.
+- `lib/core/providers/user_profile_provider.dart` — `Notifier<UserProfile>` đọc/ghi SharedPreferences (keys `profile_*`).
+- `lib/features/onboarding/presentation/onboarding_screen.dart` — flow 3 bước (trình độ / thời lượng / ưu tiên); `appRouterProvider` redirect tới đây khi `onboardingComplete == false`.
+- Consumers: Shorts loaders (`activeLevel`), `quizLevelProvider` (default level), `DueReviewScreen` (cap phiên theo `sessionSize`).
 
 ---
 
@@ -38,6 +47,7 @@ lib/
 │   ├── quiz/            ── active quiz launcher + drills
 │   ├── chat/            ── active local GenUI chat + responder interface
 │   ├── review_session/  ── active due review tab + reusable review panel
+│   ├── onboarding/      ── first-run welcome flow (level / daily time / priority)
 │   └── character/       ── stroke order widget used by vocab detail sheets
 └── main.dart
 ```

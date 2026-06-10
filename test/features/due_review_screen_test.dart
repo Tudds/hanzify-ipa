@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hanzify/core/learning/fsrs.dart';
 import 'package:hanzify/core/learning/study_session_controller.dart';
 import 'package:hanzify/core/learning/study_session_store.dart';
+import 'package:hanzify/core/providers/shared_preferences_provider.dart';
 import 'package:hanzify/features/review_session/presentation/due_review_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -39,7 +40,10 @@ void main() {
 
     await tester.pumpWidget(
       MaterialApp(
-        home: ProviderScope(child: DueReviewScreen(studySessionStore: store)),
+        home: ProviderScope(
+          overrides: [sharedPreferencesProvider.overrideWithValue(preferences)],
+          child: DueReviewScreen(studySessionStore: store),
+        ),
       ),
     );
     await tester.pumpAndSettle();

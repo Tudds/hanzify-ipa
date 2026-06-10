@@ -10,14 +10,17 @@ import 'package:hanzify/features/dictionary/presentation/widgets/vocab_detail_sh
 import 'package:hanzify/features/shorts/domain/short_feed_item.dart';
 import 'package:hanzify/features/shorts/domain/shorts_session.dart';
 import 'package:hanzify/features/shorts/presentation/shorts_feed_screen.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
+import '../support/profile_overrides.dart';
 
 Widget _wrap([
   ShortsSession session = _testSession,
   LibraryRepository? libraryRepository,
+  List<Override> overrides = const [],
 ]) {
   return ProviderScope(
     overrides: [
+      ...overrides,
       shortsSessionLoaderProvider.overrideWith((ref) async => session),
       if (libraryRepository != null)
         libraryRepositoryProvider.overrideWithValue(libraryRepository),
@@ -188,9 +191,11 @@ Future<void> _jumpToPage(WidgetTester tester, int page) async {
 
 void main() {
   testWidgets('shorts static collocation shows full pinyin', (tester) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap(_staticCollocationPinyinSession));
+    await tester.pumpWidget(
+      _wrap(_staticCollocationPinyinSession, null, overrides),
+    );
     await tester.pump();
     await _pumpUntilFound(tester, find.byType(PageView));
 
@@ -202,9 +207,11 @@ void main() {
   });
 
   testWidgets('shorts vocab CTA opens vocab detail sheet', (tester) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap(_testSession, _libraryRepository()));
+    await tester.pumpWidget(
+      _wrap(_testSession, _libraryRepository(), overrides),
+    );
     await tester.pump();
     await _pumpUntilFound(tester, find.byType(PageView));
 
@@ -218,9 +225,11 @@ void main() {
   });
 
   testWidgets('shorts grammar CTA opens grammar detail sheet', (tester) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap(_testSession, _libraryRepository()));
+    await tester.pumpWidget(
+      _wrap(_testSession, _libraryRepository(), overrides),
+    );
     await tester.pump();
     await _pumpUntilFound(tester, find.byType(PageView));
 
@@ -235,9 +244,9 @@ void main() {
   });
 
   testWidgets('shorts quiz has countdown and feedback popup', (tester) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap());
+    await tester.pumpWidget(_wrap(_testSession, null, overrides));
     await tester.pump();
     await _pumpUntilFound(tester, find.byType(PageView));
 
@@ -266,9 +275,9 @@ void main() {
   testWidgets('shorts dialogue hides pinyin and meaning behind toggles', (
     tester,
   ) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap());
+    await tester.pumpWidget(_wrap(_testSession, null, overrides));
     await tester.pump();
     await _pumpUntilFound(tester, find.byType(PageView));
 
@@ -292,9 +301,9 @@ void main() {
   testWidgets('shorts inserts generated remediation after a wrong answer', (
     tester,
   ) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap());
+    await tester.pumpWidget(_wrap(_testSession, null, overrides));
     await tester.pump();
     await _pumpUntilFound(tester, find.byType(PageView));
 
@@ -323,9 +332,9 @@ void main() {
   testWidgets('shorts renders grammar cards with formula and examples', (
     tester,
   ) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap());
+    await tester.pumpWidget(_wrap(_testSession, null, overrides));
     await tester.pump();
     await _pumpUntilFound(tester, find.byType(PageView));
 
@@ -341,9 +350,9 @@ void main() {
   testWidgets(
     'shorts shows a three-question mini test after 20 content cards',
     (tester) async {
-      SharedPreferences.setMockInitialValues({});
+      final overrides = await profileTestOverrides();
 
-      await tester.pumpWidget(_wrap(_miniTestSession));
+      await tester.pumpWidget(_wrap(_miniTestSession, null, overrides));
       await tester.pump();
       await _pumpUntilFound(tester, find.byType(PageView));
 

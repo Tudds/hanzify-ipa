@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/constants/hsk_levels.dart';
 import '../../../core/providers/performance_provider.dart';
+import '../../../core/providers/user_profile_provider.dart';
 import '../../../core/widgets/learning/learning_widgets.dart';
 import '../../dictionary/data/library_repository.dart';
 import '../../dictionary/domain/grammar_item.dart';
@@ -15,13 +16,15 @@ import '../domain/shorts_session.dart';
 import 'widgets/short_card.dart';
 
 final shortsSessionLoaderProvider = FutureProvider<ShortsSession>((ref) async {
-  const activeLevel = 2;
+  final activeLevel = ref.watch(
+    userProfileProvider.select((profile) => profile.activeLevel),
+  );
   final feed = await const ShortsFeedRepository().loadHskFeed(
     levels: [activeLevel],
     activeLevel: activeLevel,
     options: ShortsFeedLoadOptions.startup,
   );
-  return const ShortsSessionBuilder(
+  return ShortsSessionBuilder(
     activeLevel: activeLevel,
     initialContentCount: 12,
     sourceItemLimit: 72,
@@ -31,12 +34,14 @@ final shortsSessionLoaderProvider = FutureProvider<ShortsSession>((ref) async {
 final shortsHydratedSessionLoaderProvider = FutureProvider<ShortsSession>((
   ref,
 ) async {
-  const activeLevel = 2;
+  final activeLevel = ref.watch(
+    userProfileProvider.select((profile) => profile.activeLevel),
+  );
   final feed = await const ShortsFeedRepository().loadHskFeed(
     levels: kHskLevels,
     activeLevel: activeLevel,
   );
-  return const ShortsSessionBuilder(
+  return ShortsSessionBuilder(
     activeLevel: activeLevel,
   ).build(feed.items, remediationItems: feed.remediationItems);
 });

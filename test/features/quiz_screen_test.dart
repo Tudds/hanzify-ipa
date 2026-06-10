@@ -8,11 +8,13 @@ import 'package:hanzify/features/dictionary/data/library_repository.dart';
 import 'package:hanzify/features/quiz/presentation/drills/flashcard_drill_screen.dart';
 import 'package:hanzify/features/quiz/presentation/drills/multiple_choice_drill_screen.dart';
 import 'package:hanzify/features/quiz/presentation/quiz_screen.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-Widget _wrap(Widget child) {
+import '../support/profile_overrides.dart';
+
+Widget _wrap(Widget child, List<Override> overrides) {
   return ProviderScope(
     overrides: [
+      ...overrides,
       libraryRepositoryProvider.overrideWithValue(
         LibraryRepository(bundle: _FakeAssetBundle(_assets)),
       ),
@@ -23,9 +25,9 @@ Widget _wrap(Widget child) {
 
 void main() {
   testWidgets('quiz launcher renders five modes', (tester) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap(const QuizScreen()));
+    await tester.pumpWidget(_wrap(const QuizScreen(), overrides));
     await tester.pumpAndSettle();
 
     expect(find.text('Chọn từ'), findsOneWidget);
@@ -38,9 +40,11 @@ void main() {
   testWidgets('multiple choice scores answers and shows summary', (
     tester,
   ) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap(const MultipleChoiceDrillScreen(level: 2)));
+    await tester.pumpWidget(
+      _wrap(const MultipleChoiceDrillScreen(level: 2), overrides),
+    );
     await tester.pumpAndSettle();
 
     for (var i = 0; i < _answers.length; i++) {
@@ -61,18 +65,22 @@ void main() {
   });
 
   testWidgets('multiple choice shows empty data state', (tester) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap(const MultipleChoiceDrillScreen(level: 4)));
+    await tester.pumpWidget(
+      _wrap(const MultipleChoiceDrillScreen(level: 4), overrides),
+    );
     await tester.pumpAndSettle();
 
     expect(find.text('Không đủ dữ liệu để luyện.'), findsOneWidget);
   });
 
   testWidgets('flashcard flip reveals the back face', (tester) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap(const FlashcardDrillScreen(level: 2)));
+    await tester.pumpWidget(
+      _wrap(const FlashcardDrillScreen(level: 2), overrides),
+    );
     // The front face hint animates with `.repeat()`, so pumpAndSettle would
     // never settle — advance time with fixed pumps instead.
     await tester.pump();
