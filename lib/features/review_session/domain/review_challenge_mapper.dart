@@ -8,6 +8,9 @@ extension LearningQuizReviewChallengeMapper on LearningQuiz {
       answer: answer,
       choices: choices,
       audioUrl: audioUrl,
+      promptPinyin: promptPinyin,
+      promptMeaning: promptMeaning,
+      quizType: quizType ?? type.name,
     );
   }
 }

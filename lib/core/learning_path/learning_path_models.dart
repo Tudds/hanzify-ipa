@@ -1,5 +1,9 @@
 class HskLearningPath {
-  const HskLearningPath({required this.version, required this.title, required this.stages});
+  const HskLearningPath({
+    required this.version,
+    required this.title,
+    required this.stages,
+  });
 
   factory HskLearningPath.fromJson(Map<String, dynamic> json) {
     return HskLearningPath(
@@ -56,17 +60,67 @@ class LearningModule {
     required this.canDo,
     required this.sourceConversationIds,
     required this.primaryGrammarIds,
-    required this.lessons,
+    required this.phases,
   });
 
   factory LearningModule.fromJson(Map<String, dynamic> json) {
+    final phasesJson = json['phases'] as List<dynamic>?;
+    final lessonsJson = json['lessons'] as List<dynamic>? ?? const [];
     return LearningModule(
       id: json['id'] as String,
       title: json['title'] as String? ?? '',
       type: json['type'] as String? ?? '',
       canDo: json['canDo'] as String? ?? '',
-      sourceConversationIds: List<String>.from(json['sourceConversationIds'] as List? ?? const []),
-      primaryGrammarIds: List<String>.from(json['primaryGrammarIds'] as List? ?? const []),
+      sourceConversationIds: List<String>.from(
+        json['sourceConversationIds'] as List? ?? const [],
+      ),
+      primaryGrammarIds: List<String>.from(
+        json['primaryGrammarIds'] as List? ?? const [],
+      ),
+      phases: phasesJson == null
+          ? [
+              LearningPhase(
+                id: '${json['id'] as String}-P1',
+                title: 'Lessons',
+                type: 'legacy',
+                lessons: lessonsJson
+                    .cast<Map<String, dynamic>>()
+                    .map(LearningLesson.fromJson)
+                    .toList(growable: false),
+              ),
+            ]
+          : phasesJson
+                .cast<Map<String, dynamic>>()
+                .map(LearningPhase.fromJson)
+                .toList(growable: false),
+    );
+  }
+
+  final String id;
+  final String title;
+  final String type;
+  final String canDo;
+  final List<String> sourceConversationIds;
+  final List<String> primaryGrammarIds;
+  final List<LearningPhase> phases;
+
+  List<LearningLesson> get lessons =>
+      phases.expand((phase) => phase.lessons).toList(growable: false);
+}
+
+class LearningPhase {
+  const LearningPhase({
+    required this.id,
+    required this.title,
+    required this.type,
+    required this.lessons,
+  });
+
+  factory LearningPhase.fromJson(Map<String, dynamic> json) {
+    return LearningPhase(
+      id: json['id'] as String,
+      title: json['title'] as String? ?? '',
+      type: json['type'] as String? ?? '',
       lessons: (json['lessons'] as List<dynamic>? ?? const [])
           .cast<Map<String, dynamic>>()
           .map(LearningLesson.fromJson)
@@ -77,9 +131,6 @@ class LearningModule {
   final String id;
   final String title;
   final String type;
-  final String canDo;
-  final List<String> sourceConversationIds;
-  final List<String> primaryGrammarIds;
   final List<LearningLesson> lessons;
 }
 
@@ -97,8 +148,12 @@ class LearningLesson {
       index: json['index'] as int,
       type: json['type'] as String? ?? '',
       title: json['title'] as String? ?? '',
-      conversationIds: List<String>.from(json['conversationIds'] as List? ?? const []),
-      focusGrammarIds: List<String>.from(json['focusGrammarIds'] as List? ?? const []),
+      conversationIds: List<String>.from(
+        json['conversationIds'] as List? ?? const [],
+      ),
+      focusGrammarIds: List<String>.from(
+        json['focusGrammarIds'] as List? ?? const [],
+      ),
     );
   }
 
@@ -110,7 +165,11 @@ class LearningLesson {
 }
 
 class LearningCheckpoint {
-  const LearningCheckpoint({required this.id, required this.afterModule, required this.focus});
+  const LearningCheckpoint({
+    required this.id,
+    required this.afterModule,
+    required this.focus,
+  });
 
   factory LearningCheckpoint.fromJson(Map<String, dynamic> json) {
     return LearningCheckpoint(

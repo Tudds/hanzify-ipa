@@ -100,7 +100,19 @@ class _AudioPlayButtonState extends ConsumerState<AudioPlayButton> {
         message: widget.tooltip ?? 'Phát âm',
         child: Padding(
           padding: const EdgeInsets.all(4),
-          child: icon,
+          child: AnimatedSwitcher(
+            duration: const Duration(milliseconds: 160),
+            child: KeyedSubtree(
+              key: ValueKey(
+                _loading
+                    ? 'loading'
+                    : _isThisPlaying
+                    ? 'playing'
+                    : 'idle',
+              ),
+              child: icon,
+            ),
+          ),
         ),
       ),
     );

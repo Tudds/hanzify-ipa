@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../core/learning/fsrs.dart';
 import '../../../core/learning/study_session_controller.dart';
 import '../../../core/learning/study_session_store.dart';
+import '../../../core/theme/typography.dart';
+import '../../../core/widgets/sliver_page_scaffold.dart';
 
 final dueReviewSnapshotProvider = FutureProvider.autoDispose
     .family<StudySessionSnapshot, StudySessionStore>((ref, store) {
@@ -54,30 +57,65 @@ class _DueReviewScreenState extends ConsumerState<DueReviewScreen> {
       dueReviewSnapshotProvider(widget.studySessionStore),
     );
 
-    return Scaffold(
-      appBar: AppBar(title: const Text('FSRS Review')),
-      body: SafeArea(
-        child: snapshot.when(
-          loading: () => const Center(child: CircularProgressIndicator()),
-          error: (_, _) => const Center(child: Text('Không tải được review.')),
-          data: (data) {
-            final dueCards = widget.scheduler.dueCards(
-              data.cards.values,
-              DateTime.now(),
-            );
-            if (dueCards.isEmpty) {
-              return _ReviewDone(reviewed: _reviewed);
-            }
-            final card = dueCards.first;
-            return _ReviewCard(
-              card: card,
-              remaining: dueCards.length,
-              reviewed: _reviewed,
-              onRate: (rating) => _rate(data, card, rating),
-            );
-          },
-        ),
+    return snapshot.when(
+      loading: () => const SliverPageScaffold(
+        title: 'Ôn tập',
+        subtitle: 'FSRS review từ tiến độ local.',
+        headerAssetPath: 'assets/images/gen_header_review.svg',
+        slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Center(child: CircularProgressIndicator()),
+          ),
+        ],
       ),
+      error: (_, _) => const SliverPageScaffold(
+        title: 'Ôn tập',
+        subtitle: 'FSRS review từ tiến độ local.',
+        headerAssetPath: 'assets/images/gen_header_review.svg',
+        slivers: [
+          SliverStateMessage(
+            icon: Icons.error_outline_rounded,
+            title: 'Không tải được review',
+            message: 'Vui lòng thử lại sau.',
+          ),
+        ],
+      ),
+      data: (data) {
+        final dueCards = widget.scheduler.dueCards(
+          data.cards.values,
+          DateTime.now(),
+        );
+        if (dueCards.isEmpty) {
+          return SliverPageScaffold(
+            title: 'Ôn tập',
+            subtitle: 'FSRS review từ tiến độ local.',
+            headerAssetPath: 'assets/images/gen_header_review.svg',
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: _ReviewDone(reviewed: _reviewed),
+              ),
+            ],
+          );
+        }
+        final card = dueCards.first;
+        return SliverPageScaffold(
+          title: 'Ôn tập',
+          subtitle: '${dueCards.length} thẻ đang đến hạn.',
+          headerAssetPath: 'assets/images/gen_header_review.svg',
+          slivers: [
+            SliverToBoxAdapter(
+              child: _ReviewCard(
+                card: card,
+                remaining: dueCards.length,
+                reviewed: _reviewed,
+                onRate: (rating) => _rate(data, card, rating),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }
@@ -97,79 +135,146 @@ class _ReviewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     final targetText = _targetText(card.targetId);
-    return ListView(
-      padding: const EdgeInsets.all(24),
-      children: [
-        Text(
-          'Due reviews: $remaining · Reviewed: $reviewed',
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
-        const SizedBox(height: 16),
-        Card(
-          child: Padding(
-            padding: const EdgeInsets.all(24),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Text(
-                  _cardTypeLabel(card.cardType),
-                  style: Theme.of(context).textTheme.labelLarge,
-                  textAlign: TextAlign.center,
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 18, 20, 28),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Phiên ôn tập hôm nay',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: colors.onSurface,
+                        fontSize: 16,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      'Còn lại $remaining thẻ · Đã ôn $reviewed',
+                      style: TextStyle(
+                        color: colors.onSurfaceVariant,
+                        fontSize: 13,
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 12),
-                Text(
-                  targetText,
-                  style: Theme.of(context).textTheme.headlineMedium,
-                  textAlign: TextAlign.center,
+              ),
+              const SizedBox(width: 16),
+              SizedBox(
+                width: 44,
+                height: 44,
+                child: TweenAnimationBuilder<double>(
+                  tween: Tween<double>(
+                    begin: 0.0,
+                    end: (reviewed + remaining) == 0 ? 0.0 : reviewed / (reviewed + remaining),
+                  ),
+                  duration: const Duration(milliseconds: 600),
+                  curve: Curves.easeOutCubic,
+                  builder: (context, value, _) {
+                    return Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        CircularProgressIndicator(
+                          value: value,
+                          strokeWidth: 4.5,
+                          backgroundColor: colors.outlineVariant.withValues(alpha:0.24),
+                          color: colors.primary,
+                        ),
+                        Text(
+                          '${(value * 100).toInt()}%',
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
+                            color: colors.primary,
+                          ),
+                        ),
+                      ],
+                    );
+                  },
                 ),
-                const SizedBox(height: 16),
-                _ReviewInfoRow(label: 'ID', value: card.targetId),
-                _ReviewInfoRow(label: 'Target', value: card.targetType),
-                _ReviewInfoRow(label: 'Schedule', value: _scheduleLabel(card)),
-                _ReviewInfoRow(
-                  label: 'FSRS',
-                  value: 'Reps ${card.reps} · Lapses ${card.lapses}',
-                ),
-                const SizedBox(height: 12),
-                Text(
-                  _hintLabel(card.cardType),
-                  style: Theme.of(context).textTheme.bodySmall,
-                  textAlign: TextAlign.center,
-                ),
-              ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    _cardTypeLabel(card.cardType),
+                    style: Theme.of(context).textTheme.labelLarge,
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    targetText,
+                    style: AppTypography.hanziDisplay(
+                      size: 40,
+                      color: colors.onSurface,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 16),
+                  _ReviewInfoRow(label: 'ID', value: card.targetId),
+                  _ReviewInfoRow(label: 'Target', value: card.targetType),
+                  _ReviewInfoRow(
+                    label: 'Schedule',
+                    value: _scheduleLabel(card),
+                  ),
+                  _ReviewInfoRow(
+                    label: 'FSRS',
+                    value: 'Reps ${card.reps} · Lapses ${card.lapses}',
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    _hintLabel(card.cardType),
+                    style: Theme.of(context).textTheme.bodySmall,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-        const SizedBox(height: 16),
-        Text(
-          'Bạn nhớ tốt đến đâu?',
-          style: Theme.of(context).textTheme.titleSmall,
-        ),
-        const SizedBox(height: 8),
-        _RatingButton(
-          title: 'Again',
-          subtitle: 'Quên hoặc sai — ôn lại sớm.',
-          onPressed: () => onRate(SrsRating.again),
-        ),
-        _RatingButton(
-          title: 'Hard',
-          subtitle: 'Nhớ khó — kéo giãn ít.',
-          onPressed: () => onRate(SrsRating.hard),
-        ),
-        _RatingButton(
-          title: 'Good',
-          subtitle: 'Nhớ đúng — lịch ôn bình thường.',
-          filled: true,
-          onPressed: () => onRate(SrsRating.good),
-        ),
-        _RatingButton(
-          title: 'Easy',
-          subtitle: 'Rất dễ — kéo giãn nhiều hơn.',
-          filled: true,
-          onPressed: () => onRate(SrsRating.easy),
-        ),
-      ],
+          const SizedBox(height: 16),
+          Text(
+            'Bạn nhớ tốt đến đâu?',
+            style: Theme.of(context).textTheme.titleSmall,
+          ),
+          const SizedBox(height: 8),
+          _RatingButton(
+            title: 'Again',
+            subtitle: 'Quên hoặc sai — ôn lại sớm.',
+            onPressed: () => onRate(SrsRating.again),
+          ),
+          _RatingButton(
+            title: 'Hard',
+            subtitle: 'Nhớ khó — kéo giãn ít.',
+            onPressed: () => onRate(SrsRating.hard),
+          ),
+          _RatingButton(
+            title: 'Good',
+            subtitle: 'Nhớ đúng — lịch ôn bình thường.',
+            filled: true,
+            onPressed: () => onRate(SrsRating.good),
+          ),
+          _RatingButton(
+            title: 'Easy',
+            subtitle: 'Rất dễ — kéo giãn nhiều hơn.',
+            filled: true,
+            onPressed: () => onRate(SrsRating.easy),
+          ),
+        ],
+      ),
     );
   }
 
@@ -282,21 +387,35 @@ class _ReviewDone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Card(
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(Icons.check_circle_outline, size: 56),
-              const SizedBox(height: 12),
-              Text(
-                'Review complete',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const SizedBox(height: 8),
-              Text('Reviewed $reviewed cards'),
-            ],
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 420),
+        child: Card(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                AspectRatio(
+                  aspectRatio: 16 / 7,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(18),
+                    child: SvgPicture.asset(
+                      'assets/images/gen_review_complete.svg',
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                      excludeFromSemantics: true,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  'Review complete',
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                const SizedBox(height: 8),
+                Text('Reviewed $reviewed cards'),
+              ],
+            ),
           ),
         ),
       ),

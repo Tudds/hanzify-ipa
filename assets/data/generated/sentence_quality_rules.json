@@ -1,5 +1,18 @@
 {
   "version": "1.0",
+  "min_context_hanzi_length": 7,
+  "min_context_vi_word_count": 4,
+  "min_context_frame_complexity": 2,
+  "min_context_partner_frequency": 2,
+  "min_context_score": 18,
+  "context_denied_frame_ids": [
+    "F-H1-01",
+    "F-H1-02",
+    "F-H1-03",
+    "F-H1-07",
+    "F-H1-09",
+    "F-H1-10"
+  ],
   "pair_blacklist": [
     "考虑|能不能",
     "解决|就业",

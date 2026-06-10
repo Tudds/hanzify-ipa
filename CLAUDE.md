@@ -4,114 +4,114 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Hanzify is a Flutter app for learning Chinese (HSK vocabulary). Supports Web (WASM), Android, iOS, and Desktop. Offline-first: JSON seed data → local Drift/SQLite (native) or in-memory (web). Vietnamese is the primary UI language.
+Hanzify is a Flutter app for learning Chinese (HSK1–HSK4 vocabulary, characters, grammar). Web-first (Flutter Web WASM); also runs on Android, iOS, and Desktop. Offline-first: JSON seed data → local Drift/SQLite. Vietnamese is the primary UI language.
+
+The app is organized around **5 tabs**: `Shorts`, `Từ điển` (Dictionary), `Quiz`, `Chat` (local GenUI), and `Ôn tập` (FSRS review).
+
+> For a deeper, file-level map of the codebase, see `docs/code_map.md`. Keep it in sync when structure changes.
 
 ## Build & Development Commands
 
 ```bash
 flutter pub get                                              # Install dependencies
-dart run build_runner build --delete-conflicting-outputs    # Generate .g.dart files (Drift, Riverpod)
+dart run build_runner build --delete-conflicting-outputs    # Generate .g.dart files (Drift)
 dart run build_runner watch                                  # Watch mode for code generation
 flutter analyze                                              # Lint check
+flutter test                                                # Run test suite
 flutter run -d chrome                                        # Run on web
-flutter run -d <device>                                      # Run on device
+flutter build web                                            # Build for web (JS); WASM dry-run runs automatically
 flutter build web --wasm                                     # Build for web (WASM)
 flutter build apk                                            # Build for Android
-flutter build ios --no-codesign                              # Build iOS (unsigned)
 ```
 
-**After modifying any file with `part '*.g.dart'`**, re-run build_runner.
+**After modifying any file with `part '*.g.dart'`** (Drift tables), re-run build_runner.
 
 ## Architecture
 
-**Clean Architecture, feature-based:**
+**Feature-based, layered:**
 ```
-lib/core/           — shared: database, theme, navigation, platform, widgets, providers, utils
+lib/app/            — MaterialApp.router shell + GoRouter (hanzify_app.dart, app_router.dart)
+lib/core/           — shared infra: audio, config, constants, database, learning, learning_path,
+                      motion, providers, sync, theme, utils, widgets
 lib/features/
-  auth/             — Supabase login/signup + guest mode
-  vocab/            — vocabulary list, flashcard (SM-2), quiz
-  character/        — Hanzi character detail
-  grammar/          — grammar points
-  conversation/     — conversation scenarios
-  dashboard/        — home screen, progress screen
-  profile/          — user profile
+  shorts/           — vertical Shorts learning feed (vocab/grammar/dialogue/quiz cards + remediation)
+  dictionary/       — vocab/grammar search + detail sheets (the "library")
+  quiz/             — quiz launcher + drills (multiple choice, flashcard, cloze, word match, sentence arrange)
+  chat/             — local GenUI chat (renders UI blocks; no remote LLM wired yet)
+  review_session/   — FSRS due-card review tab + reusable review panel
+  character/        — Hanzi stroke-order widget used by dictionary detail sheets
+lib/main.dart       — bootstrap (URL strategy, optional Supabase init, runApp)
 ```
 
-Each feature layer: `data/` (datasources, repositories) → `domain/` (entities, interfaces) → `presentation/` (screens, providers).
+A feature may have `data/`, `domain/`, `application/`, `presentation/` — not all four are required.
 
-**No usecase layer.** Providers call repositories directly. Pure domain algorithms (SM-2 in `lib/features/vocab/domain/review_algorithm.dart`) are top-level functions, not classes.
+**No usecase layer.** Providers/controllers call repositories directly. Pure domain algorithms (e.g. FSRS in `lib/core/learning/domain/fsrs.dart`) are plain functions/classes.
+
+**Core learning engine** lives in `lib/core/learning/`:
+- `domain/` — pure models: collocation, dialogue_scene, fsrs, lesson_context
+- `application/` — quiz generation, sentence generation, session builder/controller
+- `data/` — JSON repositories, SRS serialization, web/native study-session stores
+- barrel files at the root re-export for compatibility
+
+## Navigation
+
+Uses **GoRouter** (`lib/app/app_router.dart`). The 5 tabs are an `AppTab` enum in `lib/core/providers/tab_provider.dart`, each mapped to a `GoRoute` whose builder returns `RootScaffold(tab: ...)`. `RootScaffold` (`lib/core/widgets/root_scaffold.dart`) hosts an `IndexedStack` of the 5 tab screens with a floating `BottomTabBarWidget`. The bottom nav auto-hides on scroll via `navVisibilityProvider`.
+
+Routes: `/` (shorts), `/dictionary`, `/quiz`, `/chat`, `/review`.
 
 ## State Management (Riverpod)
 
-- All long-lived providers use `@Riverpod(keepAlive: true)`.
-- Code-generated providers: annotate with `@riverpod`/`@Riverpod(keepAlive: true)`, then run `build_runner`. Provider class name → `<ClassName>Provider` / `<ClassName>Notifier`.
+- Riverpod v3 (`flutter_riverpod`). Long-lived providers use `keepAlive`.
 - Entity equality uses `Equatable`, never Freezed.
-- Async persistent state uses the `AsyncPrefsNotifier<T>` mixin (`lib/core/providers/async_prefs_notifier.dart`). Implement `prefsKey`, `defaultValue`, `fromPrefs()`, `toPrefs()`, `updateState()`. `initAsyncPrefs()` returns default immediately then loads async — no loading spinner. Used by `ThemeNotifier`, `GuestModeNotifier`, `PerformanceNotifier`.
 
 **Key core providers:**
 | Provider | Location | Purpose |
 |---|---|---|
-| `themeProvider` | `core/theme/theme_state.dart` | App theme (light/dark/sepia), persisted |
-| `navigationProvider` | `core/providers/navigation_provider.dart` | Screen stack (custom router) |
+| `tabProvider` / `AppTab` | `core/providers/tab_provider.dart` | Active tab + route paths |
 | `navVisibilityProvider` | `core/providers/nav_visibility_provider.dart` | Tab bar show/hide on scroll |
-| `authProvider` | `core/providers/auth_provider.dart` | Supabase auth stream |
-| `guestModeProvider` | `core/providers/guest_mode_provider.dart` | Allow use without login, persisted |
-| `performanceProvider` | `core/providers/performance_provider.dart` | Disable heavy animations, persisted |
-| `appDatabaseProvider` | `core/providers/database_provider.dart` | Drift AppDatabase instance (native only) |
-
-## Navigation
-
-Custom router — no GoRouter or Navigator 2.0. Route constants in `lib/core/navigation/app_routes.dart`.
-
-`NavigationNotifier` maintains a `_history` stack (`List<String>`). Methods: `navigate()`, `goBack()`, `navigateAndReplace()`, `goHome()`, `popUntil()`. Screens are wired in `main.dart`'s `buildScreen()` switch statement. Tab bar auto-hides on scroll via `NotificationListener<UserScrollNotification>`.
-
-## Web vs Native Conditional Import Pattern
-
-Three pairs of files, selected via `if (dart.library.io)` conditional imports:
-
-| Import site | Native file | Web file |
-|---|---|---|
-| `main.dart` | `platform_native.dart` | `platform_web.dart` |
-| `vocab_providers.dart` | `app_database.dart` | `app_database_stub.dart` |
-| `vocab_providers.dart` | `vocab_providers_native.dart` | `vocab_providers_web.dart` |
-
-On native, `appDatabaseProvider` is overridden in `ProviderScope` with a real `AppDatabase`. On web, `vocabLocalDataSourceProvider` is overridden with `VocabWebDataSourceImpl` (in-memory).
+| `performanceProvider` | `core/providers/performance_provider.dart` | Disable heavy animations/blur, persisted |
+| `dialogueSceneProvider` | `core/providers/dialogue_scene_provider.dart` | Dialogue scenes for chat/shorts |
+| `quizPoolProvider` | `features/quiz/application/quiz_pool.dart` | Vocab pool for quiz drills (from dictionary library) |
+| `vocabLibraryProvider` / `grammarLibraryProvider` | `features/dictionary/application/library_state.dart` | Loaded vocab/grammar from `libraryRepositoryProvider` |
 
 ## Database (Drift)
 
-Native only. Schema version managed manually in `app_database.dart`. `MigrationStrategy.onCreate` seeds all data on first run; `onUpgrade` drops tables and reseeds. `forceSeed()` reseeds both vocabs and characters.
+`lib/core/database/`. The connection is selected via conditional export in `database_connection.dart`: `database_connection_web.dart` (WASM sqlite) on web, `database_connection_io.dart` on native (`if (dart.library.io)`). `app_database_stub.dart` exists for platforms without a real DB.
 
-Complex types use custom `TypeConverter` subclasses (e.g., `MeaningListConverter`). When adding new JSON data files, update the seed file lists in both `app_database.dart` (`_seedVocabs`, `_seedCharacters`) and `vocab_web_datasource_impl.dart` (`_seedFromAssets`).
+Schema version is managed manually in `app_database.dart`. Complex columns use custom `TypeConverter` subclasses. When adding new JSON data files, update the relevant seed lists in the database layer.
 
-Pinyin normalization (strip tone marks + whitespace) lives only in `lib/core/utils/pinyin_utils.dart`.
+Pinyin normalization (strip tone marks + whitespace) lives in `lib/core/utils/` — keep it in one place.
 
-## Auth & Guest Mode
+## Sync (optional)
 
-`AppRoot` in `main.dart` gates all screens: if no Supabase session **and** `guestModeProvider == false` → shows `AuthScreen`. Guest mode persists across restarts; local progress is preserved and can be synced after login. Guest mode is disabled on explicit logout.
+`lib/core/sync/`. Supabase is only initialized when `SupabaseConfig.isConfigured` (i.e. `SUPABASE_URL` + `SUPABASE_ANON_KEY` passed via `--dart-define`). When configured and a user is signed in, `LearningSyncTrigger` debounces and `LearningSyncService` pulls remote → merges → pushes local progress/SRS on auth-state changes. Without those defines, the app runs fully local-only — there is no login/guest gate on the UI.
+
+## Web vs Native Conditional Import Pattern
+
+Selected via `if (dart.library.io)` conditional import. The main one is the database connection (`database_connection.dart` → web/io variants). Follow this same pattern if adding platform-specific implementations.
+
+## Content / Assets
+
+`assets/data/`: `hsk{1..4}.json`, `char_hsk{1..4}.json`, `grammar_hsk{1..4}.json`, `conversation.json`, plus `learning_path/`, `graph/`, `generated/` (LLM-generated collocations, sentence frames, quality rules), and `shorts/`. Audio is served as MP3 (TTS pipeline; see `docs/audio_setup.md`).
+
+Content/data generation scripts live in `tool/`. Normal feature work should **not** hand-edit `assets/data/generated/` unless the task is explicitly content/data maintenance.
 
 ## Design System
 
-**Tokens** in `lib/core/theme/`:
-- `typography.dart` — `AppSpacing`, `AppRadii`, `AppFontSizes`, `AppTypography` helper functions
-- `colors.dart` — `AppColors` (raw constants) + `AppThemeColors` (semantic tokens for light/dark/sepia)
-- `theme_state.dart` — `ThemeNotifier` produces `ThemeData`; exposes `AppThemeExtension` (accessed via `Theme.of(context).extension<AppThemeExtension>()?.colors`)
+**Single dark Material 3 theme** built by `AppTheme.dark` in `lib/core/theme/app_theme.dart` (no runtime light/dark/sepia switching).
+- `colors.dart` — `AppColors` raw color constants, wired into the `ColorScheme`.
+- `typography.dart` — `AppTypography` helpers and font fallbacks. Default UI font is **Manrope**; Hanzi uses Noto Sans/Serif SC fallbacks; `AppTypography.hanziDisplay(...)` for large Hanzi.
+- Read colors via `Theme.of(context).colorScheme`.
 
-**Font roles**: Inter/Manrope for Latin UI, Noto Sans SC for Hanzi (UI), Noto Serif SC for Hanzi (display/study card). Pinyin uses Inter w600.
+**Performance mode**: when `performanceProvider == true`, disable `BackdropFilter`, heavy `flutter_animate` effects, and blur. Animated widgets must check it (`readPerformance(ref)`) before applying expensive effects.
 
-**Performance mode**: `performanceProvider == true` disables `BackdropFilter`, heavy animations, and blur. All animated widgets must check this provider before applying expensive effects.
+Motion uses `flutter_animate` (short entrance/micro-interaction timings) and `lib/core/motion/`. Rive was removed in favor of Flutter-native motion.
 
-**Shared widgets** (`lib/core/widgets/`):
-- `HanzifyCard` — tap-scale micro-interaction, variants: `solid`/`glass`/`outlined`
-- `HanzifyFilterChip` — animated active state, tap scale
-- `HanzifyGradientFab` — tap scale, defaults to solid primary (gradient optional)
-- `HanzifyScreenHeader` — `SliverAppBar` with expand/collapse, variants: `primary`/`detail`
-- `HanzifyAppBar` — `PreferredSizeWidget`, variants: `standard`/`centered`/`backOnly`/`titleOnly`
-- `BottomTabBarWidget` — floating pill nav, no BackdropFilter, per-tab tap scale + AnimatedSwitcher icon
+**Shared widgets** (`lib/core/widgets/`): `root_scaffold.dart`, `bottom_tab_bar_widget.dart`, `sliver_page_scaffold.dart` (shared native-sliver scaffold for Dictionary/Quiz/Chat/Review; Shorts keeps its own vertical `PageView`), and `learning/` (e.g. `quiz_victory_celebration.dart`).
 
 ## Key Conventions
 
-- `analysis_options.yaml` excludes `**/*.g.dart` and `**/*.freezed.dart` from analysis.
-- Haptic feedback via `HanzifyHaptic` utility (wraps `HapticFeedback`).
-- Snackbars via `HanzifySnack.success()` / `.error()` (wraps `awesome_snackbar_content`).
-- HSK level colors and part-of-speech colors are defined in `AppThemeColors.hskColors` / `.posColors` — always use these, never hardcode.
-- `themeColorsOf(context)` helper in `lib/core/theme/app_theme_helper.dart` is the short form of `Theme.of(context).extension<AppThemeExtension>()!.colors`.
+- `analysis_options.yaml` excludes `**/*.g.dart` and `**/*.freezed.dart` from analysis. Use `.withValues(alpha: x)` (not the deprecated `.withOpacity`).
+- Haptic feedback via `HanzifyHaptic` utility (`lib/core/widgets/hanzify_haptic.dart`).
+- Color tokens come from `AppColors` / the `ColorScheme` — never hardcode hex in feature code.
+- Widget tests live under `test/features/` and `test/core/`; assert against the actual Vietnamese UI strings (they are the contract). `flutter test` should stay green.

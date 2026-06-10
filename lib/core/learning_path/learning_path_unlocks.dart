@@ -14,7 +14,9 @@ class LearningPathUnlocks {
     if (stage.level < activeLevel) return LearningUnitStatus.completed;
     if (stage.level > activeLevel) return LearningUnitStatus.locked;
     final module = stage.modules[moduleIndex];
-    if (_moduleCompleted(stage, module, progress)) return LearningUnitStatus.completed;
+    if (_moduleCompleted(stage, module, progress)) {
+      return LearningUnitStatus.completed;
+    }
     if (moduleIndex == 0) return LearningUnitStatus.available;
     final previous = stage.modules[moduleIndex - 1];
     return _moduleCompleted(stage, previous, progress)
@@ -31,9 +33,13 @@ class LearningPathUnlocks {
     final lesson = module.lessons[lessonIndex];
     final unitId = lessonUnitId(module, lesson);
     final saved = progress.unit(unitId);
-    if (saved?.status == LearningUnitStatus.completed) return LearningUnitStatus.completed;
+    if (saved?.status == LearningUnitStatus.completed) {
+      return LearningUnitStatus.completed;
+    }
     if (stage.level != activeLevel) {
-      return stage.level < activeLevel ? LearningUnitStatus.completed : LearningUnitStatus.locked;
+      return stage.level < activeLevel
+          ? LearningUnitStatus.completed
+          : LearningUnitStatus.locked;
     }
     if (lessonIndex == 0) return LearningUnitStatus.available;
     final previous = module.lessons[lessonIndex - 1];
@@ -43,15 +49,44 @@ class LearningPathUnlocks {
         : LearningUnitStatus.locked;
   }
 
+  LearningUnitStatus phaseStatus({
+    required LearningStage stage,
+    required LearningModule module,
+    required LearningPhase phase,
+    required LearningProgressSnapshot progress,
+  }) {
+    if (phase.lessons.isEmpty) return LearningUnitStatus.locked;
+    final allCompleted = phase.lessons.every((lesson) {
+      return progress.unit(lessonUnitId(module, lesson))?.status ==
+          LearningUnitStatus.completed;
+    });
+    if (allCompleted) return LearningUnitStatus.completed;
+
+    final firstLessonIndex = module.lessons.indexWhere(
+      (lesson) => lesson.index == phase.lessons.first.index,
+    );
+    if (firstLessonIndex < 0) return LearningUnitStatus.locked;
+    return lessonStatus(
+      stage: stage,
+      module: module,
+      lessonIndex: firstLessonIndex,
+      progress: progress,
+    );
+  }
+
   LearningUnitStatus checkpointStatus({
     required LearningStage stage,
     required LearningCheckpoint checkpoint,
     required LearningProgressSnapshot progress,
   }) {
     final saved = progress.unit(checkpointUnitId(checkpoint));
-    if (saved?.status == LearningUnitStatus.completed) return LearningUnitStatus.completed;
+    if (saved?.status == LearningUnitStatus.completed) {
+      return LearningUnitStatus.completed;
+    }
     if (stage.level != activeLevel) {
-      return stage.level < activeLevel ? LearningUnitStatus.completed : LearningUnitStatus.locked;
+      return stage.level < activeLevel
+          ? LearningUnitStatus.completed
+          : LearningUnitStatus.locked;
     }
     final module = _moduleById(stage, checkpoint.afterModule);
     if (module == null) return LearningUnitStatus.locked;
@@ -64,6 +99,10 @@ class LearningPathUnlocks {
     return '${module.id}-L${lesson.index}';
   }
 
+  String phaseUnitId(LearningModule module, LearningPhase phase) {
+    return '${module.id}-${phase.id}';
+  }
+
   String checkpointUnitId(LearningCheckpoint checkpoint) => checkpoint.id;
 
   bool _moduleCompleted(
@@ -74,17 +113,25 @@ class LearningPathUnlocks {
     if (!_moduleLessonsCompleted(module, progress)) return false;
     final checkpoint = _checkpointAfterModule(stage, module.id);
     if (checkpoint == null) return true;
-    return progress.unit(checkpointUnitId(checkpoint))?.status == LearningUnitStatus.completed;
+    return progress.unit(checkpointUnitId(checkpoint))?.status ==
+        LearningUnitStatus.completed;
   }
 
-  bool _moduleLessonsCompleted(LearningModule module, LearningProgressSnapshot progress) {
+  bool _moduleLessonsCompleted(
+    LearningModule module,
+    LearningProgressSnapshot progress,
+  ) {
     if (module.lessons.isEmpty) return false;
     return module.lessons.every((lesson) {
-      return progress.unit(lessonUnitId(module, lesson))?.status == LearningUnitStatus.completed;
+      return progress.unit(lessonUnitId(module, lesson))?.status ==
+          LearningUnitStatus.completed;
     });
   }
 
-  LearningCheckpoint? _checkpointAfterModule(LearningStage stage, String moduleId) {
+  LearningCheckpoint? _checkpointAfterModule(
+    LearningStage stage,
+    String moduleId,
+  ) {
     for (final checkpoint in stage.checkpoints) {
       if (checkpoint.afterModule == moduleId) return checkpoint;
     }

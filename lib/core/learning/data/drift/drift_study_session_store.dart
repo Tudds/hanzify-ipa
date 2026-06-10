@@ -28,6 +28,8 @@ class DriftStudySessionStore {
         reps: row.reps,
         lapses: row.lapses,
         lastReviewedAt: row.lastReviewedAt,
+        updatedAt: row.updatedAt,
+        syncPending: row.syncPending,
       );
       cards[card.id] = card;
     }
@@ -37,6 +39,7 @@ class DriftStudySessionStore {
         rating: SrsRating.values.byName(row.rating),
         reviewedAt: row.reviewedAt,
         algorithm: row.algorithm,
+        clientReviewId: row.clientReviewId,
         stabilityBefore: row.stabilityBefore,
         difficultyBefore: row.difficultyBefore,
         stabilityAfter: row.stabilityAfter,
@@ -51,6 +54,7 @@ class DriftStudySessionStore {
   }
 
   Future<void> save(StudySessionSnapshot snapshot) async {
+    final now = DateTime.now();
     await database.transaction(() async {
       await database.delete(database.srsReviewLogsTable).go();
       await database.delete(database.srsCardsTable).go();
@@ -72,6 +76,8 @@ class DriftStudySessionStore {
                 reps: Value(card.reps),
                 lapses: Value(card.lapses),
                 lastReviewedAt: Value(card.lastReviewedAt),
+                updatedAt: Value(card.updatedAt ?? now),
+                syncPending: Value(card.syncPending),
               ),
             );
       }
@@ -84,6 +90,7 @@ class DriftStudySessionStore {
                 rating: log.rating.name,
                 reviewedAt: log.reviewedAt,
                 algorithm: log.algorithm,
+                clientReviewId: Value(log.clientReviewId),
                 stabilityBefore: Value(log.stabilityBefore),
                 difficultyBefore: Value(log.difficultyBefore),
                 stabilityAfter: Value(log.stabilityAfter),
@@ -99,5 +106,13 @@ class DriftStudySessionStore {
       await database.delete(database.srsReviewLogsTable).go();
       await database.delete(database.srsCardsTable).go();
     });
+  }
+
+  Future<void> markSynced({required Iterable<String> cardIds}) async {
+    for (final id in cardIds) {
+      await (database.update(database.srsCardsTable)
+            ..where((table) => table.id.equals(id)))
+          .write(const SrsCardsTableCompanion(syncPending: Value(false)));
+    }
   }
 }

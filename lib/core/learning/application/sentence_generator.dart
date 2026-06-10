@@ -166,6 +166,7 @@ extension SlotTypeX on SlotType {
 class SentenceFrame {
   final String id;
   final String zhTemplate; // ví dụ: "今天我{VO}。"
+  final String pinyinTemplate; // ví dụ: "Jīntiān wǒ {PVO}."
   final String viTemplate; // ví dụ: "Hôm nay tôi {VVO}."
   final List<SlotType> slotTypes;
 
@@ -193,6 +194,7 @@ class SentenceFrame {
   SentenceFrame({
     required this.id,
     required this.zhTemplate,
+    this.pinyinTemplate = '',
     required this.viTemplate,
     required this.slotTypes,
     required this.time,
@@ -218,6 +220,7 @@ class SentenceFrame {
     return SentenceFrame(
       id: json['id'] as String,
       zhTemplate: json['zh'] as String,
+      pinyinTemplate: json['pinyin'] as String? ?? '',
       viTemplate: json['vi'] as String,
       slotTypes: (json['slot_types'] as List)
           .map((s) => SlotTypeX.fromString(s as String))
@@ -308,6 +311,7 @@ class FramesBank {
 /// Một câu được generate cùng metadata.
 class GeneratedSentence {
   final String zh;
+  final String pinyin;
   final String vi;
   final String frameId;
   final String frameGrammar;
@@ -323,9 +327,11 @@ class GeneratedSentence {
   final String partnerVi;
   final int partnerFrequency;
   final List<String> partnerSources;
+  final double qualityScore;
 
   GeneratedSentence({
     required this.zh,
+    this.pinyin = '',
     required this.vi,
     required this.frameId,
     required this.frameGrammar,
@@ -339,10 +345,12 @@ class GeneratedSentence {
     required this.partnerVi,
     required this.partnerFrequency,
     required this.partnerSources,
+    this.qualityScore = 0,
   });
 
   Map<String, dynamic> toJson() => {
     'zh': zh,
+    'pinyin': pinyin,
     'vi': vi,
     'frame_id': frameId,
     'frame_grammar': frameGrammar,
@@ -351,6 +359,7 @@ class GeneratedSentence {
     'scenario': scenario,
     'complexity': complexity,
     'hsk_level': hskLevel,
+    'quality_score': qualityScore,
     'collocation': {
       'head': headHanzi,
       'partner': partnerHanzi,
@@ -359,6 +368,27 @@ class GeneratedSentence {
       'sources': partnerSources,
     },
   };
+
+  GeneratedSentence withQualityScore(double score) {
+    return GeneratedSentence(
+      zh: zh,
+      pinyin: pinyin,
+      vi: vi,
+      frameId: frameId,
+      frameGrammar: frameGrammar,
+      time: time,
+      mood: mood,
+      scenario: scenario,
+      complexity: complexity,
+      hskLevel: hskLevel,
+      headHanzi: headHanzi,
+      partnerHanzi: partnerHanzi,
+      partnerVi: partnerVi,
+      partnerFrequency: partnerFrequency,
+      partnerSources: partnerSources,
+      qualityScore: score,
+    );
+  }
 }
 
 /// Diversity report cho một batch sentences.
@@ -403,6 +433,172 @@ class RejectionStats {
   int frequencyFloor = 0;
   int sourcesFloor = 0;
   int levelDelta = 0;
+  int qualityRejected = 0;
+}
+
+class SentenceQualityOptions {
+  const SentenceQualityOptions({
+    this.minHanziLength = 0,
+    this.minViWordCount = 0,
+    this.minFrameComplexity = 0,
+    this.minPartnerFrequency = 0,
+    this.minScore = 0,
+    this.rejectBareSvo = false,
+    this.deniedFrameIds = const {},
+  });
+
+  static const relaxed = SentenceQualityOptions();
+
+  static const contextual = SentenceQualityOptions(
+    minHanziLength: 7,
+    minViWordCount: 4,
+    minFrameComplexity: 2,
+    minPartnerFrequency: 2,
+    minScore: 18,
+    rejectBareSvo: true,
+  );
+
+  final int minHanziLength;
+  final int minViWordCount;
+  final int minFrameComplexity;
+  final int minPartnerFrequency;
+  final double minScore;
+  final bool rejectBareSvo;
+  final Set<String> deniedFrameIds;
+}
+
+class SentenceQualityScore {
+  const SentenceQualityScore({required this.accepted, required this.value});
+
+  final bool accepted;
+  final double value;
+}
+
+class SentenceQualityScorer {
+  const SentenceQualityScorer(this.options);
+
+  final SentenceQualityOptions options;
+
+  SentenceQualityScore score({
+    required GeneratedSentence sentence,
+    required SentenceFrame frame,
+    required Set<String> headTags,
+    required Set<String> partnerTags,
+  }) {
+    if (options.deniedFrameIds.contains(frame.id)) {
+      return const SentenceQualityScore(accepted: false, value: 0);
+    }
+    if (_hanziLength(sentence.zh) < options.minHanziLength) {
+      return const SentenceQualityScore(accepted: false, value: 0);
+    }
+    if (_viWordCount(sentence.vi) < options.minViWordCount) {
+      return const SentenceQualityScore(accepted: false, value: 0);
+    }
+    if (frame.complexity < options.minFrameComplexity) {
+      return const SentenceQualityScore(accepted: false, value: 0);
+    }
+    if (sentence.partnerFrequency < options.minPartnerFrequency) {
+      return const SentenceQualityScore(accepted: false, value: 0);
+    }
+    if (options.rejectBareSvo && _isBareSvoFrame(frame)) {
+      return const SentenceQualityScore(accepted: false, value: 0);
+    }
+
+    var value = 0.0;
+    value += min(sentence.partnerFrequency, 6) * 1.5;
+    value += frame.complexity * 4;
+    value += sentence.frameGrammar.isEmpty ? 0 : 2;
+    value += _contextCueScore(frame.zhTemplate);
+    value += min(max(_hanziLength(sentence.zh) - 4, 0), 8) * 0.8;
+    value += min(max(_viWordCount(sentence.vi) - 3, 0), 6) * 0.7;
+    value += sentence.scenario == 'general' ? -2 : 2;
+    value += _sourceScore(sentence.partnerSources);
+
+    if (frame.headSemanticWhitelist.isNotEmpty && headTags.isNotEmpty) {
+      value += 3;
+    }
+    if (frame.partnerSemanticWhitelist.isNotEmpty && partnerTags.isNotEmpty) {
+      value += 3;
+    }
+    if (_isBareSvoFrame(frame)) {
+      value -= 8;
+    }
+
+    return SentenceQualityScore(
+      accepted: value >= options.minScore,
+      value: value,
+    );
+  }
+
+  int _hanziLength(String value) {
+    return value.runes.where((rune) => rune >= 0x4E00 && rune <= 0x9FFF).length;
+  }
+
+  int _viWordCount(String value) {
+    final normalized = value.replaceAll(RegExp(r'[.,!?;:，。？！；：]'), ' ').trim();
+    if (normalized.isEmpty) return 0;
+    return normalized
+        .split(RegExp(r'\s+'))
+        .where((word) => word.isNotEmpty)
+        .length;
+  }
+
+  double _sourceScore(List<String> sources) {
+    if (sources.contains('curated')) return 6;
+    if (sources.contains('example') || sources.contains('test')) return 4;
+    if (sources.contains('mined')) return 1;
+    return 0;
+  }
+
+  double _contextCueScore(String template) {
+    const cues = [
+      '今天',
+      '明天',
+      '昨天',
+      '每天',
+      '正在',
+      '已经',
+      '如果',
+      '虽然',
+      '尽管',
+      '通过',
+      '对于',
+      '随着',
+      '无论',
+      '不仅',
+      '经过',
+      '由于',
+      '为了',
+      '跟朋友',
+      '一起',
+    ];
+    return cues.any(template.contains) ? 4 : 0;
+  }
+
+  bool _isBareSvoFrame(SentenceFrame frame) {
+    final compact = frame.zhTemplate.replaceAll(RegExp(r'\s+'), '');
+    return {
+      '我{VO}。',
+      '他{VO}。',
+      '她{VO}。',
+      '我们{VO}。',
+      '你{VO}吗？',
+      '{N}很{ADJ}。',
+      '他是{N}。',
+    }.contains(compact);
+  }
+}
+
+class _SentenceCandidate {
+  const _SentenceCandidate({
+    required this.sentence,
+    required this.diversityKey,
+    required this.order,
+  });
+
+  final GeneratedSentence sentence;
+  final String diversityKey;
+  final int order;
 }
 
 // ============================================================================
@@ -525,12 +721,14 @@ class SentenceGenerator {
     int userHskLevel = 4,
     int count = 8,
     bool enforceDiversity = true,
+    SentenceQualityOptions qualityOptions = SentenceQualityOptions.relaxed,
   }) {
     return generateWithStats(
       targetWord: targetWord,
       userHskLevel: userHskLevel,
       count: count,
       enforceDiversity: enforceDiversity,
+      qualityOptions: qualityOptions,
     ).sentences;
   }
 
@@ -540,6 +738,7 @@ class SentenceGenerator {
     int userHskLevel = 4,
     int count = 8,
     bool enforceDiversity = true,
+    SentenceQualityOptions qualityOptions = SentenceQualityOptions.relaxed,
   }) {
     final stats = RejectionStats();
     final vocab = vocabIndex[targetWord];
@@ -556,48 +755,83 @@ class SentenceGenerator {
       for (final frame in frames)
         for (final partner in partners) (frame: frame, partner: partner),
     ]..shuffle(_random);
-    final output = <GeneratedSentence>[];
-    final usedCombos = <String>{};
+    final candidates = <_SentenceCandidate>[];
+    final scorer = SentenceQualityScorer(qualityOptions);
+    final headTags = headSemantics[targetWord] ?? const <String>{};
+    var order = 0;
 
     for (final combo in combos) {
-      if (output.length >= count) break;
       final frame = combo.frame;
       final partner = combo.partner;
       if (!_frameAcceptsHead(frame, vocab, userHskLevel, stats)) continue;
       if (!_frameAcceptsPartner(frame, partner, headEntry, stats)) continue;
       final comboKey =
           '${frame.id}|${partner.scenario}|${frame.time}|${frame.mood}';
-      if (enforceDiversity && usedCombos.contains(comboKey)) {
-        stats.diversityCollision++;
-        continue;
-      }
-      usedCombos.add(comboKey);
 
       final built = _buildSentence(frame, vocab, partner);
       if (built == null ||
-          !_validateBuiltSentence(frame, built.zh, built.vi, targetWord)) {
+          !_validateBuiltSentence(
+            frame,
+            built.zh,
+            built.vi,
+            built.pinyin,
+            targetWord,
+          )) {
         stats.builtPostValidation++;
         continue;
       }
 
-      output.add(
-        GeneratedSentence(
-          zh: built.zh,
-          vi: built.vi,
-          frameId: frame.id,
-          frameGrammar: frame.grammarFocus,
-          time: frame.time,
-          mood: frame.mood,
-          scenario: partner.scenario,
-          complexity: frame.complexity,
-          hskLevel: frame.hskLevelMin,
-          headHanzi: targetWord,
-          partnerHanzi: partner.objectHanzi,
-          partnerVi: partner.objectVi,
-          partnerFrequency: partner.frequency,
-          partnerSources: partner.sources,
+      final sentence = GeneratedSentence(
+        zh: built.zh,
+        pinyin: built.pinyin,
+        vi: built.vi,
+        frameId: frame.id,
+        frameGrammar: frame.grammarFocus,
+        time: frame.time,
+        mood: frame.mood,
+        scenario: partner.scenario,
+        complexity: frame.complexity,
+        hskLevel: frame.hskLevelMin,
+        headHanzi: targetWord,
+        partnerHanzi: partner.objectHanzi,
+        partnerVi: partner.objectVi,
+        partnerFrequency: partner.frequency,
+        partnerSources: partner.sources,
+      );
+      final quality = scorer.score(
+        sentence: sentence,
+        frame: frame,
+        headTags: headTags,
+        partnerTags: _resolvePartnerSemantics(partner),
+      );
+      if (!quality.accepted) {
+        stats.qualityRejected++;
+        continue;
+      }
+      candidates.add(
+        _SentenceCandidate(
+          sentence: sentence.withQualityScore(quality.value),
+          diversityKey: comboKey,
+          order: order++,
         ),
       );
+    }
+
+    candidates.sort((a, b) {
+      final score = b.sentence.qualityScore.compareTo(a.sentence.qualityScore);
+      if (score != 0) return score;
+      return a.order.compareTo(b.order);
+    });
+
+    final output = <GeneratedSentence>[];
+    final usedCombos = <String>{};
+    for (final candidate in candidates) {
+      if (output.length >= count) break;
+      if (enforceDiversity && !usedCombos.add(candidate.diversityKey)) {
+        stats.diversityCollision++;
+        continue;
+      }
+      output.add(candidate.sentence);
     }
 
     return (sentences: output, stats: stats);
@@ -704,25 +938,34 @@ class SentenceGenerator {
     };
   }
 
-  ({String zh, String vi})? _buildSentence(
+  ({String zh, String pinyin, String vi})? _buildSentence(
     SentenceFrame frame,
     VocabLite vocab,
     CollocationPartner partner,
   ) {
     var zh = frame.zhTemplate;
+    var pinyin = frame.pinyinTemplate;
     var vi = frame.viTemplate;
     final targetWord = vocab.hanzi;
 
     if (vocab.pos == 'v') {
       if (frame.slotTypes.contains(SlotType.vo)) {
         final chunk = _buildVoChunk(targetWord, partner);
+        final voPinyin = _buildVoPinyin(vocab, partner);
         zh = zh.replaceAll('{VO}', chunk.zh);
+        pinyin = _replacePinyinSlot(pinyin, '{PVO}', voPinyin);
         vi = vi.replaceAll('{VVO}', chunk.vi);
       } else if (frame.slotTypes.contains(SlotType.v)) {
         zh = zh.replaceAll('{V}', targetWord);
+        pinyin = _replacePinyinSlot(pinyin, '{PV}', vocab.pinyin);
         vi = vi.replaceAll('{VV}', _cleanVi(targetWord));
         if (zh.contains('{N}')) {
           zh = zh.replaceAll('{N}', partner.objectHanzi);
+          pinyin = _replacePinyinSlot(
+            pinyin,
+            '{PN}',
+            _pinyinForPartner(partner),
+          );
           vi = vi.replaceAll('{VN}', _cleanVi(partner.objectHanzi));
         }
       }
@@ -731,6 +974,13 @@ class SentenceGenerator {
           frame.slotTypes.contains(SlotType.adj)) {
         final n = partner.objectHanzi;
         zh = zh.replaceFirst('{N}', n).replaceAll('{ADJ}', targetWord);
+        pinyin = pinyin
+            .replaceFirst('{PN}', _pinyinForPartner(partner))
+            .replaceAll('{PADJ}', vocab.pinyin);
+        if (frame.pinyinTemplate.isNotEmpty &&
+            (_pinyinForPartner(partner).isEmpty || vocab.pinyin.isEmpty)) {
+          pinyin = '';
+        }
         vi = vi
             .replaceFirst('{VN}', _cleanVi(n))
             .replaceAll('{VADJ}', _cleanVi(targetWord));
@@ -739,26 +989,49 @@ class SentenceGenerator {
               .where((v) => v.pos == 'n' && v.level <= 2 && v.hanzi != n)
               .toList();
           if (pool.isEmpty) return null;
-          final n2 = pool[_random.nextInt(pool.length)].hanzi;
+          final n2Vocab = pool[_random.nextInt(pool.length)];
+          final n2 = n2Vocab.hanzi;
           zh = zh.replaceAll('{N2}', n2);
+          pinyin = _replacePinyinSlot(pinyin, '{PN2}', n2Vocab.pinyin);
           vi = vi.replaceAll('{VN2}', _cleanVi(n2));
         }
       } else if (frame.slotTypes.contains(SlotType.adj)) {
         zh = zh.replaceAll('{ADJ}', targetWord);
+        pinyin = _replacePinyinSlot(pinyin, '{PADJ}', vocab.pinyin);
         vi = vi.replaceAll('{VADJ}', _cleanVi(targetWord));
       }
     }
 
-    return (zh: zh, vi: vi);
+    return (zh: zh, pinyin: pinyin, vi: vi);
+  }
+
+  String _buildVoPinyin(VocabLite vocab, CollocationPartner partner) {
+    final partnerPinyin = _pinyinForPartner(partner);
+    if (vocab.pinyin.isEmpty || partnerPinyin.isEmpty) return '';
+    return '${vocab.pinyin} $partnerPinyin'.trim();
+  }
+
+  String _pinyinForPartner(CollocationPartner partner) {
+    if (partner.objectPinyin.isNotEmpty) return partner.objectPinyin;
+    return vocabIndex[partner.objectHanzi]?.pinyin ?? '';
+  }
+
+  String _replacePinyinSlot(String template, String slot, String value) {
+    if (template.isEmpty) return '';
+    if (value.isEmpty) return '';
+    return template.replaceAll(slot, value);
   }
 
   bool _validateBuiltSentence(
     SentenceFrame frame,
     String zh,
     String vi,
+    String pinyin,
     String head,
   ) {
-    if (zh.contains('{') || vi.contains('{')) return false;
+    if (zh.contains('{') || vi.contains('{') || pinyin.contains('{')) {
+      return false;
+    }
     if (head.runes.length >= 2 && zh.contains('$head$head')) return false;
     for (final pattern in [
       ...frame.forbiddenPatterns,

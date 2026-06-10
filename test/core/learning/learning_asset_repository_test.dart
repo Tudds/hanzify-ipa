@@ -21,65 +21,22 @@ class _MemoryAssetBundle extends CachingAssetBundle {
 void main() {
   test('HSK2 session factory loads collocations and quizzes', () async {
     final bundle = _MemoryAssetBundle({
-      LearningAssetRepository.collocationsDbAsset: jsonEncode({
-        'version': '1.0',
-        'verb_object': {
-          '学习': {
-            'head_hanzi': '学习',
-            'head_pinyin': 'xuéxí',
-            'head_vi': 'học',
-            'head_level': 2,
-            'head_pos': 'v',
-            'collocations': [
-              {
-                'object_hanzi': '中文',
-                'object_pinyin': 'Zhōngwén',
-                'object_vi': 'tiếng Trung',
-                'object_level': 2,
-                'frequency': 3,
-                'sources': ['test'],
-                'scenario': 'study',
-              },
-            ],
-          },
-          '介绍': {
-            'head_hanzi': '介绍',
-            'head_pinyin': 'jièshào',
-            'head_vi': 'giới thiệu',
-            'head_level': 2,
-            'head_pos': 'v',
-            'collocations': [
-              {
-                'object_hanzi': '朋友',
-                'object_pinyin': 'péngyou',
-                'object_vi': 'bạn bè',
-                'object_level': 2,
-                'frequency': 2,
-                'sources': ['test'],
-                'scenario': 'social',
-              },
-            ],
-          },
-        },
-        'adj_noun': {},
-        'measure_noun': {},
-      }),
-      LearningAssetRepository.framesBankAsset: jsonEncode({
-        'version': '1.0',
-        'frames': [
-          {
-            'id': 'F-H2-test-1',
-            'zh': '我{VO}。',
-            'vi': 'Tôi {VVO}.',
-            'slot_types': ['VO'],
-            'time': 'habitual',
-            'mood': 'statement',
-            'grammar_focus': 'basic_SVO',
-            'hsk_level_min': 2,
-            'complexity': 1,
-          },
-        ],
-      }),
+      LearningAssetRepository.collocationPoolAsset: jsonEncode([
+        _collocation(
+          id: 'col_study',
+          textCn: '我学习中文。',
+          pinyin: 'Wǒ xuéxí Zhōngwén.',
+          textVi: 'Tôi học tiếng Trung.',
+          targetVocabId: 'hsk2_学习',
+        ),
+        _collocation(
+          id: 'col_intro',
+          textCn: '我介绍朋友。',
+          pinyin: 'Wǒ jièshào péngyou.',
+          textVi: 'Tôi giới thiệu bạn bè.',
+          targetVocabId: 'hsk2_介绍',
+        ),
+      ]),
       LearningAssetRepository.conversationAsset: jsonEncode([]),
     });
     final factory = HskLearningSessionFactory(
@@ -139,4 +96,27 @@ void main() {
       endsWith('/conv/conv_shopping_02_L0.mp3'),
     );
   });
+}
+
+Map<String, Object?> _collocation({
+  required String id,
+  required String textCn,
+  required String pinyin,
+  required String textVi,
+  required String targetVocabId,
+  List<String> targetGrammarIds = const ['basic_SVO'],
+}) {
+  return {
+    'id': id,
+    'level': 2,
+    'source': 'test',
+    'textCn': textCn,
+    'pinyin': pinyin,
+    'textVi': textVi,
+    'targetVocabIds': [targetVocabId],
+    'targetGrammarIds': targetGrammarIds,
+    'conversationIds': [],
+    'tags': ['test'],
+    'difficulty': 2,
+  };
 }

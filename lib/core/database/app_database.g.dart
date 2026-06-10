@@ -147,6 +147,32 @@ class $SrsCardsTableTable extends SrsCardsTable
         type: DriftSqlType.dateTime,
         requiredDuringInsert: false,
       );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _syncPendingMeta = const VerificationMeta(
+    'syncPending',
+  );
+  @override
+  late final GeneratedColumn<bool> syncPending = GeneratedColumn<bool>(
+    'sync_pending',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("sync_pending" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -162,6 +188,8 @@ class $SrsCardsTableTable extends SrsCardsTable
     reps,
     lapses,
     lastReviewedAt,
+    updatedAt,
+    syncPending,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -269,6 +297,21 @@ class $SrsCardsTableTable extends SrsCardsTable
         ),
       );
     }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    }
+    if (data.containsKey('sync_pending')) {
+      context.handle(
+        _syncPendingMeta,
+        syncPending.isAcceptableOrUnknown(
+          data['sync_pending']!,
+          _syncPendingMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -330,6 +373,14 @@ class $SrsCardsTableTable extends SrsCardsTable
         DriftSqlType.dateTime,
         data['${effectivePrefix}last_reviewed_at'],
       ),
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      ),
+      syncPending: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}sync_pending'],
+      )!,
     );
   }
 
@@ -353,6 +404,8 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
   final int reps;
   final int lapses;
   final DateTime? lastReviewedAt;
+  final DateTime? updatedAt;
+  final bool syncPending;
   const SrsCardDbModel({
     required this.id,
     required this.targetType,
@@ -367,6 +420,8 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
     required this.reps,
     required this.lapses,
     this.lastReviewedAt,
+    this.updatedAt,
+    required this.syncPending,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -392,6 +447,10 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
     if (!nullToAbsent || lastReviewedAt != null) {
       map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt);
     }
+    if (!nullToAbsent || updatedAt != null) {
+      map['updated_at'] = Variable<DateTime>(updatedAt);
+    }
+    map['sync_pending'] = Variable<bool>(syncPending);
     return map;
   }
 
@@ -418,6 +477,10 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
       lastReviewedAt: lastReviewedAt == null && nullToAbsent
           ? const Value.absent()
           : Value(lastReviewedAt),
+      updatedAt: updatedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(updatedAt),
+      syncPending: Value(syncPending),
     );
   }
 
@@ -440,6 +503,8 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
       reps: serializer.fromJson<int>(json['reps']),
       lapses: serializer.fromJson<int>(json['lapses']),
       lastReviewedAt: serializer.fromJson<DateTime?>(json['lastReviewedAt']),
+      updatedAt: serializer.fromJson<DateTime?>(json['updatedAt']),
+      syncPending: serializer.fromJson<bool>(json['syncPending']),
     );
   }
   @override
@@ -459,6 +524,8 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
       'reps': serializer.toJson<int>(reps),
       'lapses': serializer.toJson<int>(lapses),
       'lastReviewedAt': serializer.toJson<DateTime?>(lastReviewedAt),
+      'updatedAt': serializer.toJson<DateTime?>(updatedAt),
+      'syncPending': serializer.toJson<bool>(syncPending),
     };
   }
 
@@ -476,6 +543,8 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
     int? reps,
     int? lapses,
     Value<DateTime?> lastReviewedAt = const Value.absent(),
+    Value<DateTime?> updatedAt = const Value.absent(),
+    bool? syncPending,
   }) => SrsCardDbModel(
     id: id ?? this.id,
     targetType: targetType ?? this.targetType,
@@ -492,6 +561,8 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
     lastReviewedAt: lastReviewedAt.present
         ? lastReviewedAt.value
         : this.lastReviewedAt,
+    updatedAt: updatedAt.present ? updatedAt.value : this.updatedAt,
+    syncPending: syncPending ?? this.syncPending,
   );
   SrsCardDbModel copyWithCompanion(SrsCardsTableCompanion data) {
     return SrsCardDbModel(
@@ -518,6 +589,10 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
       lastReviewedAt: data.lastReviewedAt.present
           ? data.lastReviewedAt.value
           : this.lastReviewedAt,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      syncPending: data.syncPending.present
+          ? data.syncPending.value
+          : this.syncPending,
     );
   }
 
@@ -536,7 +611,9 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
           ..write('scheduledDays: $scheduledDays, ')
           ..write('reps: $reps, ')
           ..write('lapses: $lapses, ')
-          ..write('lastReviewedAt: $lastReviewedAt')
+          ..write('lastReviewedAt: $lastReviewedAt, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('syncPending: $syncPending')
           ..write(')'))
         .toString();
   }
@@ -556,6 +633,8 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
     reps,
     lapses,
     lastReviewedAt,
+    updatedAt,
+    syncPending,
   );
   @override
   bool operator ==(Object other) =>
@@ -573,7 +652,9 @@ class SrsCardDbModel extends DataClass implements Insertable<SrsCardDbModel> {
           other.scheduledDays == this.scheduledDays &&
           other.reps == this.reps &&
           other.lapses == this.lapses &&
-          other.lastReviewedAt == this.lastReviewedAt);
+          other.lastReviewedAt == this.lastReviewedAt &&
+          other.updatedAt == this.updatedAt &&
+          other.syncPending == this.syncPending);
 }
 
 class SrsCardsTableCompanion extends UpdateCompanion<SrsCardDbModel> {
@@ -590,6 +671,8 @@ class SrsCardsTableCompanion extends UpdateCompanion<SrsCardDbModel> {
   final Value<int> reps;
   final Value<int> lapses;
   final Value<DateTime?> lastReviewedAt;
+  final Value<DateTime?> updatedAt;
+  final Value<bool> syncPending;
   final Value<int> rowid;
   const SrsCardsTableCompanion({
     this.id = const Value.absent(),
@@ -605,6 +688,8 @@ class SrsCardsTableCompanion extends UpdateCompanion<SrsCardDbModel> {
     this.reps = const Value.absent(),
     this.lapses = const Value.absent(),
     this.lastReviewedAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.syncPending = const Value.absent(),
     this.rowid = const Value.absent(),
   });
   SrsCardsTableCompanion.insert({
@@ -621,6 +706,8 @@ class SrsCardsTableCompanion extends UpdateCompanion<SrsCardDbModel> {
     this.reps = const Value.absent(),
     this.lapses = const Value.absent(),
     this.lastReviewedAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.syncPending = const Value.absent(),
     this.rowid = const Value.absent(),
   }) : id = Value(id),
        targetType = Value(targetType),
@@ -641,6 +728,8 @@ class SrsCardsTableCompanion extends UpdateCompanion<SrsCardDbModel> {
     Expression<int>? reps,
     Expression<int>? lapses,
     Expression<DateTime>? lastReviewedAt,
+    Expression<DateTime>? updatedAt,
+    Expression<bool>? syncPending,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
@@ -657,6 +746,8 @@ class SrsCardsTableCompanion extends UpdateCompanion<SrsCardDbModel> {
       if (reps != null) 'reps': reps,
       if (lapses != null) 'lapses': lapses,
       if (lastReviewedAt != null) 'last_reviewed_at': lastReviewedAt,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (syncPending != null) 'sync_pending': syncPending,
       if (rowid != null) 'rowid': rowid,
     });
   }
@@ -675,6 +766,8 @@ class SrsCardsTableCompanion extends UpdateCompanion<SrsCardDbModel> {
     Value<int>? reps,
     Value<int>? lapses,
     Value<DateTime?>? lastReviewedAt,
+    Value<DateTime?>? updatedAt,
+    Value<bool>? syncPending,
     Value<int>? rowid,
   }) {
     return SrsCardsTableCompanion(
@@ -691,6 +784,8 @@ class SrsCardsTableCompanion extends UpdateCompanion<SrsCardDbModel> {
       reps: reps ?? this.reps,
       lapses: lapses ?? this.lapses,
       lastReviewedAt: lastReviewedAt ?? this.lastReviewedAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+      syncPending: syncPending ?? this.syncPending,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -737,6 +832,12 @@ class SrsCardsTableCompanion extends UpdateCompanion<SrsCardDbModel> {
     if (lastReviewedAt.present) {
       map['last_reviewed_at'] = Variable<DateTime>(lastReviewedAt.value);
     }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (syncPending.present) {
+      map['sync_pending'] = Variable<bool>(syncPending.value);
+    }
     if (rowid.present) {
       map['rowid'] = Variable<int>(rowid.value);
     }
@@ -759,6 +860,8 @@ class SrsCardsTableCompanion extends UpdateCompanion<SrsCardDbModel> {
           ..write('reps: $reps, ')
           ..write('lapses: $lapses, ')
           ..write('lastReviewedAt: $lastReviewedAt, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('syncPending: $syncPending, ')
           ..write('rowid: $rowid')
           ..write(')'))
         .toString();
@@ -827,6 +930,18 @@ class $SrsReviewLogsTableTable extends SrsReviewLogsTable
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _clientReviewIdMeta = const VerificationMeta(
+    'clientReviewId',
+  );
+  @override
+  late final GeneratedColumn<String> clientReviewId = GeneratedColumn<String>(
+    'client_review_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways('UNIQUE'),
+  );
   static const VerificationMeta _stabilityBeforeMeta = const VerificationMeta(
     'stabilityBefore',
   );
@@ -878,6 +993,7 @@ class $SrsReviewLogsTableTable extends SrsReviewLogsTable
     rating,
     reviewedAt,
     algorithm,
+    clientReviewId,
     stabilityBefore,
     difficultyBefore,
     stabilityAfter,
@@ -929,6 +1045,15 @@ class $SrsReviewLogsTableTable extends SrsReviewLogsTable
       );
     } else if (isInserting) {
       context.missing(_algorithmMeta);
+    }
+    if (data.containsKey('client_review_id')) {
+      context.handle(
+        _clientReviewIdMeta,
+        clientReviewId.isAcceptableOrUnknown(
+          data['client_review_id']!,
+          _clientReviewIdMeta,
+        ),
+      );
     }
     if (data.containsKey('stability_before')) {
       context.handle(
@@ -995,6 +1120,10 @@ class $SrsReviewLogsTableTable extends SrsReviewLogsTable
         DriftSqlType.string,
         data['${effectivePrefix}algorithm'],
       )!,
+      clientReviewId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}client_review_id'],
+      ),
       stabilityBefore: attachedDatabase.typeMapping.read(
         DriftSqlType.double,
         data['${effectivePrefix}stability_before'],
@@ -1027,6 +1156,7 @@ class SrsReviewLogDbModel extends DataClass
   final String rating;
   final DateTime reviewedAt;
   final String algorithm;
+  final String? clientReviewId;
   final double? stabilityBefore;
   final double? difficultyBefore;
   final double? stabilityAfter;
@@ -1037,6 +1167,7 @@ class SrsReviewLogDbModel extends DataClass
     required this.rating,
     required this.reviewedAt,
     required this.algorithm,
+    this.clientReviewId,
     this.stabilityBefore,
     this.difficultyBefore,
     this.stabilityAfter,
@@ -1050,6 +1181,9 @@ class SrsReviewLogDbModel extends DataClass
     map['rating'] = Variable<String>(rating);
     map['reviewed_at'] = Variable<DateTime>(reviewedAt);
     map['algorithm'] = Variable<String>(algorithm);
+    if (!nullToAbsent || clientReviewId != null) {
+      map['client_review_id'] = Variable<String>(clientReviewId);
+    }
     if (!nullToAbsent || stabilityBefore != null) {
       map['stability_before'] = Variable<double>(stabilityBefore);
     }
@@ -1072,6 +1206,9 @@ class SrsReviewLogDbModel extends DataClass
       rating: Value(rating),
       reviewedAt: Value(reviewedAt),
       algorithm: Value(algorithm),
+      clientReviewId: clientReviewId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(clientReviewId),
       stabilityBefore: stabilityBefore == null && nullToAbsent
           ? const Value.absent()
           : Value(stabilityBefore),
@@ -1098,6 +1235,7 @@ class SrsReviewLogDbModel extends DataClass
       rating: serializer.fromJson<String>(json['rating']),
       reviewedAt: serializer.fromJson<DateTime>(json['reviewedAt']),
       algorithm: serializer.fromJson<String>(json['algorithm']),
+      clientReviewId: serializer.fromJson<String?>(json['clientReviewId']),
       stabilityBefore: serializer.fromJson<double?>(json['stabilityBefore']),
       difficultyBefore: serializer.fromJson<double?>(json['difficultyBefore']),
       stabilityAfter: serializer.fromJson<double?>(json['stabilityAfter']),
@@ -1113,6 +1251,7 @@ class SrsReviewLogDbModel extends DataClass
       'rating': serializer.toJson<String>(rating),
       'reviewedAt': serializer.toJson<DateTime>(reviewedAt),
       'algorithm': serializer.toJson<String>(algorithm),
+      'clientReviewId': serializer.toJson<String?>(clientReviewId),
       'stabilityBefore': serializer.toJson<double?>(stabilityBefore),
       'difficultyBefore': serializer.toJson<double?>(difficultyBefore),
       'stabilityAfter': serializer.toJson<double?>(stabilityAfter),
@@ -1126,6 +1265,7 @@ class SrsReviewLogDbModel extends DataClass
     String? rating,
     DateTime? reviewedAt,
     String? algorithm,
+    Value<String?> clientReviewId = const Value.absent(),
     Value<double?> stabilityBefore = const Value.absent(),
     Value<double?> difficultyBefore = const Value.absent(),
     Value<double?> stabilityAfter = const Value.absent(),
@@ -1136,6 +1276,9 @@ class SrsReviewLogDbModel extends DataClass
     rating: rating ?? this.rating,
     reviewedAt: reviewedAt ?? this.reviewedAt,
     algorithm: algorithm ?? this.algorithm,
+    clientReviewId: clientReviewId.present
+        ? clientReviewId.value
+        : this.clientReviewId,
     stabilityBefore: stabilityBefore.present
         ? stabilityBefore.value
         : this.stabilityBefore,
@@ -1158,6 +1301,9 @@ class SrsReviewLogDbModel extends DataClass
           ? data.reviewedAt.value
           : this.reviewedAt,
       algorithm: data.algorithm.present ? data.algorithm.value : this.algorithm,
+      clientReviewId: data.clientReviewId.present
+          ? data.clientReviewId.value
+          : this.clientReviewId,
       stabilityBefore: data.stabilityBefore.present
           ? data.stabilityBefore.value
           : this.stabilityBefore,
@@ -1181,6 +1327,7 @@ class SrsReviewLogDbModel extends DataClass
           ..write('rating: $rating, ')
           ..write('reviewedAt: $reviewedAt, ')
           ..write('algorithm: $algorithm, ')
+          ..write('clientReviewId: $clientReviewId, ')
           ..write('stabilityBefore: $stabilityBefore, ')
           ..write('difficultyBefore: $difficultyBefore, ')
           ..write('stabilityAfter: $stabilityAfter, ')
@@ -1196,6 +1343,7 @@ class SrsReviewLogDbModel extends DataClass
     rating,
     reviewedAt,
     algorithm,
+    clientReviewId,
     stabilityBefore,
     difficultyBefore,
     stabilityAfter,
@@ -1210,6 +1358,7 @@ class SrsReviewLogDbModel extends DataClass
           other.rating == this.rating &&
           other.reviewedAt == this.reviewedAt &&
           other.algorithm == this.algorithm &&
+          other.clientReviewId == this.clientReviewId &&
           other.stabilityBefore == this.stabilityBefore &&
           other.difficultyBefore == this.difficultyBefore &&
           other.stabilityAfter == this.stabilityAfter &&
@@ -1222,6 +1371,7 @@ class SrsReviewLogsTableCompanion extends UpdateCompanion<SrsReviewLogDbModel> {
   final Value<String> rating;
   final Value<DateTime> reviewedAt;
   final Value<String> algorithm;
+  final Value<String?> clientReviewId;
   final Value<double?> stabilityBefore;
   final Value<double?> difficultyBefore;
   final Value<double?> stabilityAfter;
@@ -1232,6 +1382,7 @@ class SrsReviewLogsTableCompanion extends UpdateCompanion<SrsReviewLogDbModel> {
     this.rating = const Value.absent(),
     this.reviewedAt = const Value.absent(),
     this.algorithm = const Value.absent(),
+    this.clientReviewId = const Value.absent(),
     this.stabilityBefore = const Value.absent(),
     this.difficultyBefore = const Value.absent(),
     this.stabilityAfter = const Value.absent(),
@@ -1243,6 +1394,7 @@ class SrsReviewLogsTableCompanion extends UpdateCompanion<SrsReviewLogDbModel> {
     required String rating,
     required DateTime reviewedAt,
     required String algorithm,
+    this.clientReviewId = const Value.absent(),
     this.stabilityBefore = const Value.absent(),
     this.difficultyBefore = const Value.absent(),
     this.stabilityAfter = const Value.absent(),
@@ -1257,6 +1409,7 @@ class SrsReviewLogsTableCompanion extends UpdateCompanion<SrsReviewLogDbModel> {
     Expression<String>? rating,
     Expression<DateTime>? reviewedAt,
     Expression<String>? algorithm,
+    Expression<String>? clientReviewId,
     Expression<double>? stabilityBefore,
     Expression<double>? difficultyBefore,
     Expression<double>? stabilityAfter,
@@ -1268,6 +1421,7 @@ class SrsReviewLogsTableCompanion extends UpdateCompanion<SrsReviewLogDbModel> {
       if (rating != null) 'rating': rating,
       if (reviewedAt != null) 'reviewed_at': reviewedAt,
       if (algorithm != null) 'algorithm': algorithm,
+      if (clientReviewId != null) 'client_review_id': clientReviewId,
       if (stabilityBefore != null) 'stability_before': stabilityBefore,
       if (difficultyBefore != null) 'difficulty_before': difficultyBefore,
       if (stabilityAfter != null) 'stability_after': stabilityAfter,
@@ -1281,6 +1435,7 @@ class SrsReviewLogsTableCompanion extends UpdateCompanion<SrsReviewLogDbModel> {
     Value<String>? rating,
     Value<DateTime>? reviewedAt,
     Value<String>? algorithm,
+    Value<String?>? clientReviewId,
     Value<double?>? stabilityBefore,
     Value<double?>? difficultyBefore,
     Value<double?>? stabilityAfter,
@@ -1292,6 +1447,7 @@ class SrsReviewLogsTableCompanion extends UpdateCompanion<SrsReviewLogDbModel> {
       rating: rating ?? this.rating,
       reviewedAt: reviewedAt ?? this.reviewedAt,
       algorithm: algorithm ?? this.algorithm,
+      clientReviewId: clientReviewId ?? this.clientReviewId,
       stabilityBefore: stabilityBefore ?? this.stabilityBefore,
       difficultyBefore: difficultyBefore ?? this.difficultyBefore,
       stabilityAfter: stabilityAfter ?? this.stabilityAfter,
@@ -1317,6 +1473,9 @@ class SrsReviewLogsTableCompanion extends UpdateCompanion<SrsReviewLogDbModel> {
     if (algorithm.present) {
       map['algorithm'] = Variable<String>(algorithm.value);
     }
+    if (clientReviewId.present) {
+      map['client_review_id'] = Variable<String>(clientReviewId.value);
+    }
     if (stabilityBefore.present) {
       map['stability_before'] = Variable<double>(stabilityBefore.value);
     }
@@ -1340,6 +1499,7 @@ class SrsReviewLogsTableCompanion extends UpdateCompanion<SrsReviewLogDbModel> {
           ..write('rating: $rating, ')
           ..write('reviewedAt: $reviewedAt, ')
           ..write('algorithm: $algorithm, ')
+          ..write('clientReviewId: $clientReviewId, ')
           ..write('stabilityBefore: $stabilityBefore, ')
           ..write('difficultyBefore: $difficultyBefore, ')
           ..write('stabilityAfter: $stabilityAfter, ')
@@ -1452,6 +1612,32 @@ class $LearningUnitProgressTableTable extends LearningUnitProgressTable
     type: DriftSqlType.dateTime,
     requiredDuringInsert: false,
   );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _syncPendingMeta = const VerificationMeta(
+    'syncPending',
+  );
+  @override
+  late final GeneratedColumn<bool> syncPending = GeneratedColumn<bool>(
+    'sync_pending',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("sync_pending" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
   @override
   List<GeneratedColumn> get $columns => [
     unitId,
@@ -1463,6 +1649,8 @@ class $LearningUnitProgressTableTable extends LearningUnitProgressTable
     startedAt,
     completedAt,
     lastOpenedAt,
+    updatedAt,
+    syncPending,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -1546,6 +1734,21 @@ class $LearningUnitProgressTableTable extends LearningUnitProgressTable
         ),
       );
     }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    }
+    if (data.containsKey('sync_pending')) {
+      context.handle(
+        _syncPendingMeta,
+        syncPending.isAcceptableOrUnknown(
+          data['sync_pending']!,
+          _syncPendingMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -1594,6 +1797,14 @@ class $LearningUnitProgressTableTable extends LearningUnitProgressTable
         DriftSqlType.dateTime,
         data['${effectivePrefix}last_opened_at'],
       ),
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      ),
+      syncPending: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}sync_pending'],
+      )!,
     );
   }
 
@@ -1614,6 +1825,8 @@ class LearningUnitProgressDbModel extends DataClass
   final DateTime? startedAt;
   final DateTime? completedAt;
   final DateTime? lastOpenedAt;
+  final DateTime? updatedAt;
+  final bool syncPending;
   const LearningUnitProgressDbModel({
     required this.unitId,
     required this.unitKind,
@@ -1624,6 +1837,8 @@ class LearningUnitProgressDbModel extends DataClass
     this.startedAt,
     this.completedAt,
     this.lastOpenedAt,
+    this.updatedAt,
+    required this.syncPending,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -1645,6 +1860,10 @@ class LearningUnitProgressDbModel extends DataClass
     if (!nullToAbsent || lastOpenedAt != null) {
       map['last_opened_at'] = Variable<DateTime>(lastOpenedAt);
     }
+    if (!nullToAbsent || updatedAt != null) {
+      map['updated_at'] = Variable<DateTime>(updatedAt);
+    }
+    map['sync_pending'] = Variable<bool>(syncPending);
     return map;
   }
 
@@ -1667,6 +1886,10 @@ class LearningUnitProgressDbModel extends DataClass
       lastOpenedAt: lastOpenedAt == null && nullToAbsent
           ? const Value.absent()
           : Value(lastOpenedAt),
+      updatedAt: updatedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(updatedAt),
+      syncPending: Value(syncPending),
     );
   }
 
@@ -1685,6 +1908,8 @@ class LearningUnitProgressDbModel extends DataClass
       startedAt: serializer.fromJson<DateTime?>(json['startedAt']),
       completedAt: serializer.fromJson<DateTime?>(json['completedAt']),
       lastOpenedAt: serializer.fromJson<DateTime?>(json['lastOpenedAt']),
+      updatedAt: serializer.fromJson<DateTime?>(json['updatedAt']),
+      syncPending: serializer.fromJson<bool>(json['syncPending']),
     );
   }
   @override
@@ -1700,6 +1925,8 @@ class LearningUnitProgressDbModel extends DataClass
       'startedAt': serializer.toJson<DateTime?>(startedAt),
       'completedAt': serializer.toJson<DateTime?>(completedAt),
       'lastOpenedAt': serializer.toJson<DateTime?>(lastOpenedAt),
+      'updatedAt': serializer.toJson<DateTime?>(updatedAt),
+      'syncPending': serializer.toJson<bool>(syncPending),
     };
   }
 
@@ -1713,6 +1940,8 @@ class LearningUnitProgressDbModel extends DataClass
     Value<DateTime?> startedAt = const Value.absent(),
     Value<DateTime?> completedAt = const Value.absent(),
     Value<DateTime?> lastOpenedAt = const Value.absent(),
+    Value<DateTime?> updatedAt = const Value.absent(),
+    bool? syncPending,
   }) => LearningUnitProgressDbModel(
     unitId: unitId ?? this.unitId,
     unitKind: unitKind ?? this.unitKind,
@@ -1723,6 +1952,8 @@ class LearningUnitProgressDbModel extends DataClass
     startedAt: startedAt.present ? startedAt.value : this.startedAt,
     completedAt: completedAt.present ? completedAt.value : this.completedAt,
     lastOpenedAt: lastOpenedAt.present ? lastOpenedAt.value : this.lastOpenedAt,
+    updatedAt: updatedAt.present ? updatedAt.value : this.updatedAt,
+    syncPending: syncPending ?? this.syncPending,
   );
   LearningUnitProgressDbModel copyWithCompanion(
     LearningUnitProgressTableCompanion data,
@@ -1741,6 +1972,10 @@ class LearningUnitProgressDbModel extends DataClass
       lastOpenedAt: data.lastOpenedAt.present
           ? data.lastOpenedAt.value
           : this.lastOpenedAt,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      syncPending: data.syncPending.present
+          ? data.syncPending.value
+          : this.syncPending,
     );
   }
 
@@ -1755,7 +1990,9 @@ class LearningUnitProgressDbModel extends DataClass
           ..write('score: $score, ')
           ..write('startedAt: $startedAt, ')
           ..write('completedAt: $completedAt, ')
-          ..write('lastOpenedAt: $lastOpenedAt')
+          ..write('lastOpenedAt: $lastOpenedAt, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('syncPending: $syncPending')
           ..write(')'))
         .toString();
   }
@@ -1771,6 +2008,8 @@ class LearningUnitProgressDbModel extends DataClass
     startedAt,
     completedAt,
     lastOpenedAt,
+    updatedAt,
+    syncPending,
   );
   @override
   bool operator ==(Object other) =>
@@ -1784,7 +2023,9 @@ class LearningUnitProgressDbModel extends DataClass
           other.score == this.score &&
           other.startedAt == this.startedAt &&
           other.completedAt == this.completedAt &&
-          other.lastOpenedAt == this.lastOpenedAt);
+          other.lastOpenedAt == this.lastOpenedAt &&
+          other.updatedAt == this.updatedAt &&
+          other.syncPending == this.syncPending);
 }
 
 class LearningUnitProgressTableCompanion
@@ -1798,6 +2039,8 @@ class LearningUnitProgressTableCompanion
   final Value<DateTime?> startedAt;
   final Value<DateTime?> completedAt;
   final Value<DateTime?> lastOpenedAt;
+  final Value<DateTime?> updatedAt;
+  final Value<bool> syncPending;
   final Value<int> rowid;
   const LearningUnitProgressTableCompanion({
     this.unitId = const Value.absent(),
@@ -1809,6 +2052,8 @@ class LearningUnitProgressTableCompanion
     this.startedAt = const Value.absent(),
     this.completedAt = const Value.absent(),
     this.lastOpenedAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.syncPending = const Value.absent(),
     this.rowid = const Value.absent(),
   });
   LearningUnitProgressTableCompanion.insert({
@@ -1821,6 +2066,8 @@ class LearningUnitProgressTableCompanion
     this.startedAt = const Value.absent(),
     this.completedAt = const Value.absent(),
     this.lastOpenedAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.syncPending = const Value.absent(),
     this.rowid = const Value.absent(),
   }) : unitId = Value(unitId),
        unitKind = Value(unitKind),
@@ -1837,6 +2084,8 @@ class LearningUnitProgressTableCompanion
     Expression<DateTime>? startedAt,
     Expression<DateTime>? completedAt,
     Expression<DateTime>? lastOpenedAt,
+    Expression<DateTime>? updatedAt,
+    Expression<bool>? syncPending,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
@@ -1849,6 +2098,8 @@ class LearningUnitProgressTableCompanion
       if (startedAt != null) 'started_at': startedAt,
       if (completedAt != null) 'completed_at': completedAt,
       if (lastOpenedAt != null) 'last_opened_at': lastOpenedAt,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (syncPending != null) 'sync_pending': syncPending,
       if (rowid != null) 'rowid': rowid,
     });
   }
@@ -1863,6 +2114,8 @@ class LearningUnitProgressTableCompanion
     Value<DateTime?>? startedAt,
     Value<DateTime?>? completedAt,
     Value<DateTime?>? lastOpenedAt,
+    Value<DateTime?>? updatedAt,
+    Value<bool>? syncPending,
     Value<int>? rowid,
   }) {
     return LearningUnitProgressTableCompanion(
@@ -1875,6 +2128,8 @@ class LearningUnitProgressTableCompanion
       startedAt: startedAt ?? this.startedAt,
       completedAt: completedAt ?? this.completedAt,
       lastOpenedAt: lastOpenedAt ?? this.lastOpenedAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+      syncPending: syncPending ?? this.syncPending,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -1909,6 +2164,12 @@ class LearningUnitProgressTableCompanion
     if (lastOpenedAt.present) {
       map['last_opened_at'] = Variable<DateTime>(lastOpenedAt.value);
     }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (syncPending.present) {
+      map['sync_pending'] = Variable<bool>(syncPending.value);
+    }
     if (rowid.present) {
       map['rowid'] = Variable<int>(rowid.value);
     }
@@ -1927,6 +2188,8 @@ class LearningUnitProgressTableCompanion
           ..write('startedAt: $startedAt, ')
           ..write('completedAt: $completedAt, ')
           ..write('lastOpenedAt: $lastOpenedAt, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('syncPending: $syncPending, ')
           ..write('rowid: $rowid')
           ..write(')'))
         .toString();
@@ -1967,6 +2230,8 @@ typedef $$SrsCardsTableTableCreateCompanionBuilder =
       Value<int> reps,
       Value<int> lapses,
       Value<DateTime?> lastReviewedAt,
+      Value<DateTime?> updatedAt,
+      Value<bool> syncPending,
       Value<int> rowid,
     });
 typedef $$SrsCardsTableTableUpdateCompanionBuilder =
@@ -1984,6 +2249,8 @@ typedef $$SrsCardsTableTableUpdateCompanionBuilder =
       Value<int> reps,
       Value<int> lapses,
       Value<DateTime?> lastReviewedAt,
+      Value<DateTime?> updatedAt,
+      Value<bool> syncPending,
       Value<int> rowid,
     });
 
@@ -2097,6 +2364,16 @@ class $$SrsCardsTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get syncPending => $composableBuilder(
+    column: $table.syncPending,
+    builder: (column) => ColumnFilters(column),
+  );
+
   Expression<bool> srsReviewLogsTableRefs(
     Expression<bool> Function($$SrsReviewLogsTableTableFilterComposer f) f,
   ) {
@@ -2196,6 +2473,16 @@ class $$SrsCardsTableTableOrderingComposer
     column: $table.lastReviewedAt,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get syncPending => $composableBuilder(
+    column: $table.syncPending,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$SrsCardsTableTableAnnotationComposer
@@ -2253,6 +2540,14 @@ class $$SrsCardsTableTableAnnotationComposer
 
   GeneratedColumn<DateTime> get lastReviewedAt => $composableBuilder(
     column: $table.lastReviewedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  GeneratedColumn<bool> get syncPending => $composableBuilder(
+    column: $table.syncPending,
     builder: (column) => column,
   );
 
@@ -2324,6 +2619,8 @@ class $$SrsCardsTableTableTableManager
                 Value<int> reps = const Value.absent(),
                 Value<int> lapses = const Value.absent(),
                 Value<DateTime?> lastReviewedAt = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+                Value<bool> syncPending = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => SrsCardsTableCompanion(
                 id: id,
@@ -2339,6 +2636,8 @@ class $$SrsCardsTableTableTableManager
                 reps: reps,
                 lapses: lapses,
                 lastReviewedAt: lastReviewedAt,
+                updatedAt: updatedAt,
+                syncPending: syncPending,
                 rowid: rowid,
               ),
           createCompanionCallback:
@@ -2356,6 +2655,8 @@ class $$SrsCardsTableTableTableManager
                 Value<int> reps = const Value.absent(),
                 Value<int> lapses = const Value.absent(),
                 Value<DateTime?> lastReviewedAt = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+                Value<bool> syncPending = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => SrsCardsTableCompanion.insert(
                 id: id,
@@ -2371,6 +2672,8 @@ class $$SrsCardsTableTableTableManager
                 reps: reps,
                 lapses: lapses,
                 lastReviewedAt: lastReviewedAt,
+                updatedAt: updatedAt,
+                syncPending: syncPending,
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
@@ -2438,6 +2741,7 @@ typedef $$SrsReviewLogsTableTableCreateCompanionBuilder =
       required String rating,
       required DateTime reviewedAt,
       required String algorithm,
+      Value<String?> clientReviewId,
       Value<double?> stabilityBefore,
       Value<double?> difficultyBefore,
       Value<double?> stabilityAfter,
@@ -2450,6 +2754,7 @@ typedef $$SrsReviewLogsTableTableUpdateCompanionBuilder =
       Value<String> rating,
       Value<DateTime> reviewedAt,
       Value<String> algorithm,
+      Value<String?> clientReviewId,
       Value<double?> stabilityBefore,
       Value<double?> difficultyBefore,
       Value<double?> stabilityAfter,
@@ -2515,6 +2820,11 @@ class $$SrsReviewLogsTableTableFilterComposer
 
   ColumnFilters<String> get algorithm => $composableBuilder(
     column: $table.algorithm,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get clientReviewId => $composableBuilder(
+    column: $table.clientReviewId,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -2591,6 +2901,11 @@ class $$SrsReviewLogsTableTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get clientReviewId => $composableBuilder(
+    column: $table.clientReviewId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<double> get stabilityBefore => $composableBuilder(
     column: $table.stabilityBefore,
     builder: (column) => ColumnOrderings(column),
@@ -2657,6 +2972,11 @@ class $$SrsReviewLogsTableTableAnnotationComposer
 
   GeneratedColumn<String> get algorithm =>
       $composableBuilder(column: $table.algorithm, builder: (column) => column);
+
+  GeneratedColumn<String> get clientReviewId => $composableBuilder(
+    column: $table.clientReviewId,
+    builder: (column) => column,
+  );
 
   GeneratedColumn<double> get stabilityBefore => $composableBuilder(
     column: $table.stabilityBefore,
@@ -2740,6 +3060,7 @@ class $$SrsReviewLogsTableTableTableManager
                 Value<String> rating = const Value.absent(),
                 Value<DateTime> reviewedAt = const Value.absent(),
                 Value<String> algorithm = const Value.absent(),
+                Value<String?> clientReviewId = const Value.absent(),
                 Value<double?> stabilityBefore = const Value.absent(),
                 Value<double?> difficultyBefore = const Value.absent(),
                 Value<double?> stabilityAfter = const Value.absent(),
@@ -2750,6 +3071,7 @@ class $$SrsReviewLogsTableTableTableManager
                 rating: rating,
                 reviewedAt: reviewedAt,
                 algorithm: algorithm,
+                clientReviewId: clientReviewId,
                 stabilityBefore: stabilityBefore,
                 difficultyBefore: difficultyBefore,
                 stabilityAfter: stabilityAfter,
@@ -2762,6 +3084,7 @@ class $$SrsReviewLogsTableTableTableManager
                 required String rating,
                 required DateTime reviewedAt,
                 required String algorithm,
+                Value<String?> clientReviewId = const Value.absent(),
                 Value<double?> stabilityBefore = const Value.absent(),
                 Value<double?> difficultyBefore = const Value.absent(),
                 Value<double?> stabilityAfter = const Value.absent(),
@@ -2772,6 +3095,7 @@ class $$SrsReviewLogsTableTableTableManager
                 rating: rating,
                 reviewedAt: reviewedAt,
                 algorithm: algorithm,
+                clientReviewId: clientReviewId,
                 stabilityBefore: stabilityBefore,
                 difficultyBefore: difficultyBefore,
                 stabilityAfter: stabilityAfter,
@@ -2857,6 +3181,8 @@ typedef $$LearningUnitProgressTableTableCreateCompanionBuilder =
       Value<DateTime?> startedAt,
       Value<DateTime?> completedAt,
       Value<DateTime?> lastOpenedAt,
+      Value<DateTime?> updatedAt,
+      Value<bool> syncPending,
       Value<int> rowid,
     });
 typedef $$LearningUnitProgressTableTableUpdateCompanionBuilder =
@@ -2870,6 +3196,8 @@ typedef $$LearningUnitProgressTableTableUpdateCompanionBuilder =
       Value<DateTime?> startedAt,
       Value<DateTime?> completedAt,
       Value<DateTime?> lastOpenedAt,
+      Value<DateTime?> updatedAt,
+      Value<bool> syncPending,
       Value<int> rowid,
     });
 
@@ -2924,6 +3252,16 @@ class $$LearningUnitProgressTableTableFilterComposer
 
   ColumnFilters<DateTime> get lastOpenedAt => $composableBuilder(
     column: $table.lastOpenedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get syncPending => $composableBuilder(
+    column: $table.syncPending,
     builder: (column) => ColumnFilters(column),
   );
 }
@@ -2981,6 +3319,16 @@ class $$LearningUnitProgressTableTableOrderingComposer
     column: $table.lastOpenedAt,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get syncPending => $composableBuilder(
+    column: $table.syncPending,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$LearningUnitProgressTableTableAnnotationComposer
@@ -3020,6 +3368,14 @@ class $$LearningUnitProgressTableTableAnnotationComposer
 
   GeneratedColumn<DateTime> get lastOpenedAt => $composableBuilder(
     column: $table.lastOpenedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  GeneratedColumn<bool> get syncPending => $composableBuilder(
+    column: $table.syncPending,
     builder: (column) => column,
   );
 }
@@ -3079,6 +3435,8 @@ class $$LearningUnitProgressTableTableTableManager
                 Value<DateTime?> startedAt = const Value.absent(),
                 Value<DateTime?> completedAt = const Value.absent(),
                 Value<DateTime?> lastOpenedAt = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+                Value<bool> syncPending = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => LearningUnitProgressTableCompanion(
                 unitId: unitId,
@@ -3090,6 +3448,8 @@ class $$LearningUnitProgressTableTableTableManager
                 startedAt: startedAt,
                 completedAt: completedAt,
                 lastOpenedAt: lastOpenedAt,
+                updatedAt: updatedAt,
+                syncPending: syncPending,
                 rowid: rowid,
               ),
           createCompanionCallback:
@@ -3103,6 +3463,8 @@ class $$LearningUnitProgressTableTableTableManager
                 Value<DateTime?> startedAt = const Value.absent(),
                 Value<DateTime?> completedAt = const Value.absent(),
                 Value<DateTime?> lastOpenedAt = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+                Value<bool> syncPending = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => LearningUnitProgressTableCompanion.insert(
                 unitId: unitId,
@@ -3114,6 +3476,8 @@ class $$LearningUnitProgressTableTableTableManager
                 startedAt: startedAt,
                 completedAt: completedAt,
                 lastOpenedAt: lastOpenedAt,
+                updatedAt: updatedAt,
+                syncPending: syncPending,
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0

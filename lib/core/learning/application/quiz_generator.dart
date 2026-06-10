@@ -20,6 +20,9 @@ class LearningQuiz {
     this.targetGrammarIds = const [],
     this.targetId,
     this.audioUrl,
+    this.promptPinyin,
+    this.promptMeaning,
+    this.quizType,
   });
 
   final String id;
@@ -31,6 +34,9 @@ class LearningQuiz {
   final List<String> targetGrammarIds;
   final String? targetId;
   final String? audioUrl;
+  final String? promptPinyin;
+  final String? promptMeaning;
+  final String? quizType;
 }
 
 class QuizGenerator {
@@ -86,6 +92,9 @@ class QuizGenerator {
       targetGrammarIds: item.targetGrammarIds,
       targetId: item.targetVocabIds.isEmpty ? null : item.targetVocabIds.first,
       audioUrl: item.audioUrl,
+      promptPinyin: item.pinyin,
+      promptMeaning: item.textVi,
+      quizType: QuizType.vocabRecognition.name,
     );
   }
 
@@ -109,6 +118,9 @@ class QuizGenerator {
       targetGrammarIds: item.targetGrammarIds,
       targetId: item.targetVocabIds.isEmpty ? null : item.targetVocabIds.first,
       audioUrl: item.audioUrl,
+      promptPinyin: item.pinyin,
+      promptMeaning: item.textVi,
+      quizType: QuizType.pinyinChoice.name,
     );
   }
 
@@ -135,6 +147,9 @@ class QuizGenerator {
       targetGrammarIds: item.targetGrammarIds,
       targetId: item.targetVocabIds.isEmpty ? null : item.targetVocabIds.first,
       audioUrl: item.audioUrl,
+      promptPinyin: item.pinyin,
+      promptMeaning: item.textVi,
+      quizType: QuizType.clozeCollocation.name,
     );
   }
 

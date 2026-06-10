@@ -202,7 +202,7 @@ Flow:
 8. Unlock next lesson or checkpoint
 ```
 
-Giai đoạn đầu, nếu chưa có màn lesson riêng, `GameWorldScreen` có thể nhận selected lesson và render quiz tương ứng.
+`LessonSessionScreen` nhận selected lesson và render quiz tương ứng.
 
 ---
 

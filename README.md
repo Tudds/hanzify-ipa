@@ -1,79 +1,77 @@
-# 🏮 Hanzify
+# Hanzify
 
 [![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)](https://flutter.dev)
-[![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
-[![Claude AI](https://img.shields.io/badge/AI-Claude%203.5-7C3AED?style=for-the-badge)](https://anthropic.com)
+[![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge)](https://dart.dev)
 
-**Hanzify** là ứng dụng học tiếng Trung hiện đại, tập trung vào trải nghiệm người dùng cao cấp (Premium UX/UI) và tích hợp trí tuệ nhân tạo để tối ưu hóa việc học Hanzi, từ vựng và ngữ pháp.
-
----
-
-## ✨ Điểm nổi bật (Core Features)
-
-- 🧠 **Hệ thống SRS Thông minh**: Thuật toán Spaced Repetition (Lặp lại ngắt quãng) giúp ghi nhớ từ vựng HSK hiệu quả.
-- 🤖 **AI-Powered Learning**: Tích hợp Claude API để giải thích ngữ pháp và ví dụ ngữ cảnh chuyên sâu.
-- 🎨 **Vibrant Modernism Design**: Giao diện thiết kế theo phong cách hiện đại, màu sắc sống động, hỗ trợ Dynamic Dark Mode.
-- 📚 **Thư viện HSK Toàn diện**: Dữ liệu từ vựng HSK từ level 1 đến level 9 với đầy đủ Pinyin, Hán Việt và ví dụ.
-- 🌐 **Hỗ trợ Đa nền tảng**: Hoạt động mượt mà trên Mobile (iOS/Android) và Web (Wasm/Canvas).
-- 🇻🇳 **Bản dịch Tiếng Việt**: Nội dung được địa phương hóa hoàn toàn cho người học Việt Nam.
+**Hanzify** là ứng dụng học tiếng Trung web-first bằng Flutter. App hiện tại xoay quanh 5 tab chính: `Short`, `Từ điển`, `Quiz`, `Chat`, và `Ôn tập`, chạy offline-first với dữ liệu học local.
 
 ---
 
-## 🛠️ Công nghệ sử dụng (Tech Stack)
+## Tính năng hiện tại
 
-- **Framework**: [Flutter](https://flutter.dev)
-- **State Management**: [Riverpod](https://riverpod.dev) (Functional & Reactive)
-- **Database**: [Drift](https://drift.simonbinder.eu/) (SQLite) cho Local Persistence & Web Support.
-- **AI Engine**: [Claude AI (Anthropic)](https://www.anthropic.com/api)
-- **Typography**: Inter & Noto Sans SC (Google Fonts)
-- **Architecture**: Modular Clean Architecture.
-
----
-
-## 🚀 Bắt đầu
-
-### Yêu cầu hệ thống
-- Flutter SDK: `>=3.3.0`
-- Dart SDK: `>=3.0.0`
-
-### Cài đặt
-1. Clone repository:
-   ```bash
-   git clone https://github.com/your-username/hanzify.git
-   ```
-2. Cài đặt dependencies:
-   ```bash
-   flutter pub get
-   ```
-3. Chạy ứng dụng:
-   ```bash
-   flutter run
-   ```
+- **Shorts learning feed**: feed dọc với thẻ từ vựng, ngữ pháp, hội thoại, quiz nhanh, mini-test, và remediation sau câu sai.
+- **Từ điển HSK**: tìm từ vựng và ngữ pháp theo Hanzi, pinyin, nghĩa, kèm bộ lọc HSK.
+- **Chi tiết học liệu**: nghĩa tiếng Việt, pinyin, ví dụ, audio, công thức ngữ pháp, lỗi thường gặp, và stroke order khi có dữ liệu ký tự.
+- **Quiz**: launcher cho các mode chọn từ, flashcard, điền từ, nối từ, và sắp xếp câu.
+- **Chat GenUI local**: chat tương tác render block UI như bubble, vocab card, grammar card, quick quiz, sentence arrange, và suggestion actions. Hiện chưa gọi LLM thật.
+- **Ôn tập FSRS**: thẻ đến hạn được chấm `Again`, `Hard`, `Good`, `Easy` và lưu lịch ôn local.
+- **Offline-first**: local data và local study state là nguồn chính; Supabase chỉ dùng cho auth/sync khi được cấu hình.
+- **Nội dung hiện có**: asset học liệu hiện chủ yếu bao phủ HSK1-HSK4.
 
 ---
 
-## 🎨 Thiết kế (Design System)
+## Công nghệ
 
-Hanzify sử dụng hệ thống thiết kế **Global Design System (Vibrant Modernism)** với:
-- **Border Radius**: 24dp cho các card trung tâm.
-- **Typography**: Phân tầng rõ ràng giữa Hanzi (Noto Sans SC) và Latin (Inter).
-- **Animations**: Sử dụng Hero animations và haptic feedback để tăng cảm giác "Premium".
-
----
-
-## 📝 Roadmap
-
-- [x] Tích hợp Claude API cho giải thích từ vựng.
-- [x] Hệ thống Flashcard SRS cơ bản.
-- [ ] Chế độ luyện viết Hanzi (Stroke Order).
-- [ ] Cộng đồng chia sẻ lộ trình học.
-- [ ] Tích hợp Voice Recognition để luyện phát âm.
+- **Framework**: Flutter
+- **State management**: Riverpod
+- **Local persistence**: Drift, SQLite, SharedPreferences
+- **Sync optional**: Supabase Flutter, chỉ khởi tạo khi có Dart defines
+- **Audio/UI**: `just_audio`, `flutter_animate`, `flutter_svg`
+- **Routing**: GoRouter
 
 ---
 
-## 📄 Giấy phép
+## Chạy dự án
 
-Dự án này được cấp phép theo tiêu chuẩn MIT License.
+### Cài dependencies
+
+```bash
+flutter pub get
+```
+
+### Chạy web app
+
+```bash
+flutter run -d chrome
+```
+
+### Chạy với Supabase
+
+Supabase không tự bật nếu thiếu config. Truyền config bằng Dart defines:
+
+```bash
+flutter run -d chrome \
+  --dart-define=SUPABASE_URL=... \
+  --dart-define=SUPABASE_ANON_KEY=...
+```
+
+Nếu không truyền hai giá trị này, app vẫn chạy ở chế độ local/offline-first và bỏ qua `Supabase.initialize`.
 
 ---
-*Phát triển với ❤️ bởi Antigravity & Team.*
+
+## Kiểm tra
+
+```bash
+flutter analyze
+flutter test
+```
+
+Với thay đổi nhỏ, ưu tiên test tập trung theo feature trước khi chạy full suite.
+
+---
+
+## Ghi chú trạng thái
+
+- App chính hiện có năm tab: `Short`, `Từ điển`, `Quiz`, `Chat`, `Ôn tập`.
+- Legacy feature UI cũ như Home, Hub, Learning Path screen, Lesson Session, old Lookup, old Path tree, và Practice folder đã được gỡ khỏi `lib/features`.
+- Không có runtime Claude/AI/LLM API đang được wire trong app chính ở trạng thái hiện tại; Chat dùng local responder và chừa interface để cắm remote responder sau.

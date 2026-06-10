@@ -42,14 +42,15 @@ void main() {
         home: ProviderScope(child: DueReviewScreen(studySessionStore: store)),
       ),
     );
-    await tester.pump();
+    await tester.pumpAndSettle();
 
     expect(find.text('hsk2_中文'), findsOneWidget);
-    expect(find.textContaining('Due reviews: 1'), findsOneWidget);
+    expect(find.textContaining('Còn lại 1 thẻ'), findsOneWidget);
 
+    await tester.ensureVisible(find.text('Good'));
+    await tester.pump();
     await tester.tap(find.text('Good'));
-    await tester.pump();
-    await tester.pump();
+    await tester.pumpAndSettle();
 
     expect(find.text('Review complete'), findsOneWidget);
     final saved = await store.load();

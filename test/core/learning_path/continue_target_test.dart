@@ -25,14 +25,30 @@ void main() {
     canDo: 'Can do',
     sourceConversationIds: [],
     primaryGrammarIds: [],
-    lessons: [lesson1, lesson2],
+    phases: [
+      LearningPhase(
+        id: 'legacy',
+        title: 'Lessons',
+        type: 'legacy',
+        lessons: [lesson1, lesson2],
+      ),
+    ],
   );
-  const checkpoint = LearningCheckpoint(id: 'H2-C1', afterModule: 'H2-M1', focus: 'Focus');
+  const checkpoint = LearningCheckpoint(
+    id: 'H2-C1',
+    afterModule: 'H2-M1',
+    focus: 'Focus',
+  );
   const path = HskLearningPath(
     version: 'test',
     title: 'Path',
     stages: [
-      LearningStage(id: 'HSK2', goal: 'Goal', modules: [module], checkpoints: [checkpoint]),
+      LearningStage(
+        id: 'HSK2',
+        goal: 'Goal',
+        modules: [module],
+        checkpoints: [checkpoint],
+      ),
     ],
   );
   const resolver = ContinueTargetResolver();
@@ -49,7 +65,10 @@ void main() {
   });
 
   test('fresh progress continues to first lesson', () {
-    final target = resolver.resolve(path: path, progress: const LearningProgressSnapshot(units: {}));
+    final target = resolver.resolve(
+      path: path,
+      progress: const LearningProgressSnapshot(units: {}),
+    );
 
     expect(target, isA<LessonContinueTarget>());
     expect((target as LessonContinueTarget).lesson.index, 1);

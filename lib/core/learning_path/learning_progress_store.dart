@@ -1,8 +1,10 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../database/database_connection.dart';
+import '../sync/learning_sync_trigger.dart';
 import 'data/drift/drift_learning_progress_store.dart';
 import 'learning_progress.dart';
 
@@ -23,7 +25,8 @@ class LearningProgressStore {
     if (_preferences != null) return _loadSharedPreferences();
     try {
       return await _driftStore.load();
-    } catch (_) {
+    } catch (e) {
+      debugPrint('[ProgressStore] drift load failed, falling back to prefs: $e');
       return _loadSharedPreferences();
     }
   }
@@ -32,7 +35,9 @@ class LearningProgressStore {
     if (_preferences != null) return _saveSharedPreferences(snapshot);
     try {
       await _driftStore.save(snapshot);
-    } catch (_) {
+      LearningSyncTrigger.request();
+    } catch (e) {
+      debugPrint('[ProgressStore] drift save failed, falling back to prefs: $e');
       await _saveSharedPreferences(snapshot);
     }
   }
@@ -41,7 +46,9 @@ class LearningProgressStore {
     if (_preferences != null) return _upsertSharedPreferences(progress);
     try {
       await _driftStore.upsert(progress);
-    } catch (_) {
+      LearningSyncTrigger.request();
+    } catch (e) {
+      debugPrint('[ProgressStore] drift upsert failed, falling back to prefs: $e');
       await _upsertSharedPreferences(progress);
     }
   }
@@ -50,8 +57,18 @@ class LearningProgressStore {
     if (_preferences != null) return _clearSharedPreferences();
     try {
       await _driftStore.clear();
-    } catch (_) {
+    } catch (e) {
+      debugPrint('[ProgressStore] drift clear failed, falling back to prefs: $e');
       await _clearSharedPreferences();
+    }
+  }
+
+  Future<void> markSynced({required Iterable<String> unitIds}) async {
+    if (_preferences != null) return;
+    try {
+      await _driftStore.markSynced(unitIds: unitIds);
+    } catch (e) {
+      debugPrint('[ProgressStore] markSynced failed: $e');
     }
   }
 

@@ -324,6 +324,7 @@ void main() {
     });
 
     expect(frame.generationEnabled, isTrue);
+    expect(frame.pinyinTemplate, isEmpty);
     expect(frame.headSemanticWhitelist, isEmpty);
     expect(frame.headSemanticBlacklist, isEmpty);
     expect(frame.partnerSemanticWhitelist, isEmpty);
@@ -334,6 +335,201 @@ void main() {
     expect(frame.minPartnerFrequency, 1);
     expect(frame.requiredPartnerSources, isEmpty);
     expect(frame.maxPartnerLevelDelta, 99);
+  });
+
+  test('contextual quality rejects short bare SVO candidates', () {
+    final generator = _generator(
+      head: _vocab('学习', vi: 'học'),
+      partners: [
+        _partner('中文', scenario: 'study', frequency: 3, sources: ['curated']),
+      ],
+      frames: [_frame(id: 'basic', zh: '我{VO}。', vi: 'Tôi {VVO}.')],
+    );
+
+    final result = generator.generateWithStats(
+      targetWord: '学习',
+      qualityOptions: SentenceQualityOptions.contextual,
+    );
+
+    expect(result.sentences, isEmpty);
+    expect(result.stats.qualityRejected, 1);
+  });
+
+  test('contextual quality can deny noisy frame patterns by id', () {
+    final generator = _generator(
+      head: _vocab('学习', vi: 'học'),
+      partners: [
+        _partner('中文', scenario: 'study', frequency: 3, sources: ['curated']),
+      ],
+      frames: [
+        _frame(
+          id: 'denied',
+          zh: '如果有时间，我就{VO}。',
+          vi: 'Nếu có thời gian, tôi sẽ {VVO}.',
+          complexity: 3,
+        ),
+      ],
+    );
+
+    final result = generator.generateWithStats(
+      targetWord: '学习',
+      qualityOptions: const SentenceQualityOptions(
+        minHanziLength: 7,
+        minViWordCount: 4,
+        minFrameComplexity: 2,
+        minPartnerFrequency: 2,
+        minScore: 18,
+        rejectBareSvo: true,
+        deniedFrameIds: {'denied'},
+      ),
+    );
+
+    expect(result.sentences, isEmpty);
+    expect(result.stats.qualityRejected, 1);
+  });
+
+  test('quality scorer ranks richer contextual frames above bare SVO', () {
+    final generator = _generator(
+      head: _vocab('学习', vi: 'học'),
+      partners: [
+        _partner('中文', scenario: 'study', frequency: 3, sources: ['curated']),
+      ],
+      frames: [
+        _frame(id: 'basic', zh: '我{VO}。', vi: 'Tôi {VVO}.'),
+        _frame(
+          id: 'context',
+          zh: '如果有时间，我就{VO}。',
+          vi: 'Nếu có thời gian, tôi sẽ {VVO}.',
+          complexity: 3,
+        ),
+      ],
+    );
+
+    final sentences = generator.generate(targetWord: '学习', count: 1);
+
+    expect(sentences.single.frameId, 'context');
+    expect(sentences.single.zh, '如果有时间，我就学习中文。');
+    expect(sentences.single.qualityScore, greaterThan(0));
+  });
+
+  test('quality-ranked generation stays deterministic with seed', () {
+    final first =
+        _generator(
+          head: _vocab('学习', vi: 'học'),
+          partners: [
+            _partner(
+              '中文',
+              scenario: 'study',
+              frequency: 3,
+              sources: ['curated'],
+            ),
+            _partner(
+              '汉字',
+              scenario: 'culture',
+              frequency: 2,
+              sources: ['example'],
+            ),
+          ],
+          frames: [
+            _frame(
+              id: 'context-a',
+              zh: '如果有时间，我就{VO}。',
+              vi: 'Nếu có thời gian, tôi sẽ {VVO}.',
+              complexity: 3,
+            ),
+            _frame(
+              id: 'context-b',
+              zh: '今天我正在{VO}。',
+              vi: 'Hôm nay tôi đang {VVO}.',
+              complexity: 3,
+            ),
+          ],
+        ).generate(
+          targetWord: '学习',
+          count: 3,
+          qualityOptions: SentenceQualityOptions.contextual,
+        );
+    final second =
+        _generator(
+          head: _vocab('学习', vi: 'học'),
+          partners: [
+            _partner(
+              '中文',
+              scenario: 'study',
+              frequency: 3,
+              sources: ['curated'],
+            ),
+            _partner(
+              '汉字',
+              scenario: 'culture',
+              frequency: 2,
+              sources: ['example'],
+            ),
+          ],
+          frames: [
+            _frame(
+              id: 'context-a',
+              zh: '如果有时间，我就{VO}。',
+              vi: 'Nếu có thời gian, tôi sẽ {VVO}.',
+              complexity: 3,
+            ),
+            _frame(
+              id: 'context-b',
+              zh: '今天我正在{VO}。',
+              vi: 'Hôm nay tôi đang {VVO}.',
+              complexity: 3,
+            ),
+          ],
+        ).generate(
+          targetWord: '学习',
+          count: 3,
+          qualityOptions: SentenceQualityOptions.contextual,
+        );
+
+    expect(first.map((sentence) => sentence.zh), second.map((s) => s.zh));
+  });
+
+  test('builds full sentence pinyin from frame and collocation pinyin', () {
+    final generator = _generator(
+      head: _vocab('学习', pinyin: 'xuéxí', vi: 'học'),
+      partners: [
+        _partner('中文', pinyin: 'Zhōngwén', scenario: 'study', frequency: 3),
+      ],
+      frames: [
+        _frame(
+          id: 'context',
+          zh: '如果有时间，我就{VO}。',
+          pinyin: 'Rúguǒ yǒu shíjiān, wǒ jiù {PVO}.',
+          vi: 'Nếu có thời gian, tôi sẽ {VVO}.',
+          complexity: 3,
+        ),
+      ],
+    );
+
+    final sentence = generator.generate(targetWord: '学习').single;
+
+    expect(sentence.zh, '如果有时间，我就学习中文。');
+    expect(sentence.pinyin, 'Rúguǒ yǒu shíjiān, wǒ jiù xuéxí Zhōngwén.');
+  });
+
+  test('leaves generated pinyin empty when a pinyin part is missing', () {
+    final generator = _generator(
+      head: _vocab('学习', pinyin: 'xuéxí', vi: 'học'),
+      partners: [_partner('中文', pinyin: '', scenario: 'study', frequency: 3)],
+      frames: [
+        _frame(
+          id: 'context',
+          zh: '如果有时间，我就{VO}。',
+          pinyin: 'Rúguǒ yǒu shíjiān, wǒ jiù {PVO}.',
+          vi: 'Nếu có thời gian, tôi sẽ {VVO}.',
+          complexity: 3,
+        ),
+      ],
+    );
+
+    final sentence = generator.generate(targetWord: '学习').single;
+
+    expect(sentence.pinyin, isEmpty);
   });
 }
 
@@ -393,6 +589,7 @@ VocabLite _vocab(
 
 CollocationPartner _partner(
   String hanzi, {
+  String pinyin = '',
   String scenario = 'general',
   List<String> sources = const ['example'],
   int frequency = 1,
@@ -400,7 +597,7 @@ CollocationPartner _partner(
 }) {
   return CollocationPartner(
     objectHanzi: hanzi,
-    objectPinyin: '',
+    objectPinyin: pinyin,
     objectVi: hanzi,
     objectLevel: level,
     frequency: frequency,
@@ -412,8 +609,10 @@ CollocationPartner _partner(
 SentenceFrame _frame({
   required String id,
   required String zh,
+  String pinyin = '',
   required String vi,
   List<String> slots = const ['VO'],
+  int complexity = 1,
   bool generationEnabled = true,
   List<String> headSemanticWhitelist = const [],
   List<String> headSemanticBlacklist = const [],
@@ -425,13 +624,14 @@ SentenceFrame _frame({
   return SentenceFrame(
     id: id,
     zhTemplate: zh,
+    pinyinTemplate: pinyin,
     viTemplate: vi,
     slotTypes: slots.map(SlotTypeX.fromString).toList(),
     time: 'habitual',
     mood: 'statement',
     grammarFocus: 'test',
     hskLevelMin: 1,
-    complexity: 1,
+    complexity: complexity,
     generationEnabled: generationEnabled,
     headSemanticWhitelist: headSemanticWhitelist,
     headSemanticBlacklist: headSemanticBlacklist,

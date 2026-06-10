@@ -85,6 +85,18 @@ void main() {
       '老师': 'lǎoshī',
       '喝': 'hē',
     };
+    const meaningByHanzi = {
+      '学习': 'học',
+      '中文': 'tiếng Trung',
+      '老师': 'giáo viên',
+      '喝': 'uống',
+    };
+    const exampleByHanzi = {
+      '学习': '我学习中文。',
+      '中文': '我学习中文。',
+      '老师': '老师很好。',
+      '喝': '我喝水。',
+    };
     final frontHanzi = pinyinByHanzi.keys.firstWhere(
       (hanzi) => find.text(hanzi).evaluate().isNotEmpty,
     );
@@ -99,6 +111,9 @@ void main() {
 
     expect(find.text(pinyin), findsOneWidget);
     expect(find.text('Nhớ rõ'), findsOneWidget);
+    // The back face shows the meaning grouped by part of speech + an example.
+    expect(find.text(meaningByHanzi[frontHanzi]!), findsWidgets);
+    expect(find.text(exampleByHanzi[frontHanzi]!), findsWidgets);
   });
 }
 

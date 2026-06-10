@@ -8,9 +8,9 @@ import '../../../../core/audio/audio_play_button.dart';
 import '../../../../core/audio/audio_urls.dart';
 import '../../../../core/providers/performance_provider.dart';
 import '../../../../core/theme/typography.dart';
-import '../../../../core/utils/pos_label.dart';
 import '../../../../core/widgets/hanzify_haptic.dart';
 import '../../../dictionary/domain/vocab_item.dart';
+import '../../../dictionary/presentation/widgets/vocab_meaning_views.dart';
 import '../../application/quiz_pool.dart';
 import '../widgets/drill_scaffold.dart';
 
@@ -268,112 +268,90 @@ class _BackFace extends StatelessWidget {
     return Container(
       key: key,
       width: double.infinity,
-      padding: const EdgeInsets.all(28),
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: colors.surfaceContainerHigh,
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
-          color: colors.outlineVariant.withValues(alpha:0.35),
+          color: colors.outlineVariant.withValues(alpha: 0.35),
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha:0.18),
+            color: Colors.black.withValues(alpha: 0.18),
             blurRadius: 16,
             offset: const Offset(0, 8),
           ),
         ],
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            item.hanzi,
-            style: AppTypography.hanziDisplay(
-              size: 56,
-              color: colors.onSurface,
-            ),
-          ),
-          const SizedBox(height: 12),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                item.pinyin,
-                style: AppTypography.pinyin(
-                  size: 22,
-                  color: colors.primary,
-                  weight: FontWeight.w700,
-                ),
-              ),
-              const SizedBox(width: 8),
-              AudioPlayButton(url: AudioUrls.forVocab(item.id), size: 22),
-            ],
-          ),
-          const SizedBox(height: 16),
-          Wrap(
-            alignment: WrapAlignment.center,
-            spacing: 8,
-            runSpacing: 8,
-            children: [
-              for (final m in item.meanings.take(3))
-                _MeaningPill(meaning: m),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _MeaningPill extends StatelessWidget {
-  const _MeaningPill({required this.meaning});
-
-  final VocabMeaning meaning;
-
-  @override
-  Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
-    final tint = PosLabel.color(meaning.pos, scheme);
-    final hasPos = meaning.pos.isNotEmpty;
-    return Container(
-      padding: const EdgeInsets.fromLTRB(8, 6, 12, 6),
-      decoration: BoxDecoration(
-        color: tint.withValues(alpha: 0.12),
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: tint.withValues(alpha: 0.35), width: 1),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (hasPos) ...[
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-              decoration: BoxDecoration(
-                color: tint.withValues(alpha: 0.22),
-                borderRadius: BorderRadius.circular(6),
-              ),
-              child: Text(
-                PosLabel.short(meaning.pos),
-                style: TextStyle(
-                  color: tint,
-                  fontSize: 10.5,
-                  fontWeight: FontWeight.w700,
+      // Content can exceed the card when a word has several senses/examples, so
+      // it scrolls; ConstrainedBox keeps it vertically centred when it's short.
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          return SingleChildScrollView(
+            child: ConstrainedBox(
+              constraints: BoxConstraints(minHeight: constraints.maxHeight),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(22, 24, 22, 24),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Center(
+                      child: Text(
+                        item.hanzi,
+                        style: AppTypography.hanziDisplay(
+                          size: 48,
+                          color: colors.onSurface,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Flexible(
+                          child: Text(
+                            item.pinyin,
+                            textAlign: TextAlign.center,
+                            style: AppTypography.pinyin(
+                              size: 22,
+                              color: colors.primary,
+                              weight: FontWeight.w700,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        AudioPlayButton(
+                          url: AudioUrls.forVocab(item.id),
+                          size: 22,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 18),
+                    for (final group in groupMeaningsByPos(item.meanings))
+                      MeaningPosGroupView(pos: group.pos, items: group.items),
+                    if (item.examples.isNotEmpty) ...[
+                      const SizedBox(height: 4),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Ví dụ',
+                          style: Theme.of(context).textTheme.titleSmall,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      for (var i = 0; i < item.examples.length; i++)
+                        VocabExampleTile(
+                          example: item.examples[i],
+                          audioUrl: AudioUrls.forVocabExample(item.id, i),
+                        ),
+                    ],
+                  ],
                 ),
               ),
             ),
-            const SizedBox(width: 8),
-          ],
-          Flexible(
-            child: Text(
-              meaning.vi.isNotEmpty ? meaning.vi : meaning.en,
-              style: TextStyle(
-                color: scheme.onSurface,
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
-        ],
+          );
+        },
       ),
     );
   }

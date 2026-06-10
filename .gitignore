@@ -60,3 +60,9 @@ bin/audit_generated.dart
 audio_out/
 tool/.venv/
 tool/.r2.env
+
+# Local working archives / generated artifacts (không commit)
+*.tar.gz
+output/
+*.json.bak
+hanzify.code-workspace

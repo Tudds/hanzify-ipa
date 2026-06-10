@@ -24,6 +24,8 @@ class DriftLearningProgressStore {
         startedAt: row.startedAt,
         completedAt: row.completedAt,
         lastOpenedAt: row.lastOpenedAt,
+        updatedAt: row.updatedAt,
+        syncPending: row.syncPending,
       );
       units[progress.unitId] = progress;
     }
@@ -40,6 +42,7 @@ class DriftLearningProgressStore {
   }
 
   Future<void> upsert(LearningUnitProgress progress) async {
+    final now = DateTime.now();
     await database
         .into(database.learningUnitProgressTable)
         .insertOnConflictUpdate(
@@ -53,8 +56,20 @@ class DriftLearningProgressStore {
             startedAt: Value(progress.startedAt),
             completedAt: Value(progress.completedAt),
             lastOpenedAt: Value(progress.lastOpenedAt),
+            updatedAt: Value(progress.updatedAt ?? now),
+            syncPending: Value(progress.syncPending),
           ),
         );
+  }
+
+  Future<void> markSynced({required Iterable<String> unitIds}) async {
+    for (final unitId in unitIds) {
+      await (database.update(database.learningUnitProgressTable)
+            ..where((table) => table.unitId.equals(unitId)))
+          .write(
+            const LearningUnitProgressTableCompanion(syncPending: Value(false)),
+          );
+    }
   }
 
   Future<void> clear() async {

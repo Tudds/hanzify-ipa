@@ -12,6 +12,7 @@
     {
       "id": "F-H1-01",
       "zh": "我{VO}。",
+      "pinyin": "Wǒ {PVO}.",
       "vi": "Tôi {VVO}.",
       "slot_types": [
         "VO"
@@ -27,6 +28,7 @@
     {
       "id": "F-H1-02",
       "zh": "他{VO}。",
+      "pinyin": "Tā {PVO}.",
       "vi": "Anh ấy {VVO}.",
       "slot_types": [
         "VO"
@@ -42,6 +44,7 @@
     {
       "id": "F-H1-03",
       "zh": "我们{VO}。",
+      "pinyin": "Wǒmen {PVO}.",
       "vi": "Chúng tôi {VVO}.",
       "slot_types": [
         "VO"
@@ -57,6 +60,7 @@
     {
       "id": "F-H1-04",
       "zh": "今天我{VO}。",
+      "pinyin": "Jīntiān wǒ {PVO}.",
       "vi": "Hôm nay tôi {VVO}.",
       "slot_types": [
         "VO"
@@ -72,6 +76,7 @@
     {
       "id": "F-H1-05",
       "zh": "明天我{VO}。",
+      "pinyin": "Míngtiān wǒ {PVO}.",
       "vi": "Ngày mai tôi {VVO}.",
       "slot_types": [
         "VO"
@@ -87,6 +92,7 @@
     {
       "id": "F-H1-06",
       "zh": "我不{VO}。",
+      "pinyin": "Wǒ bù {PVO}.",
       "vi": "Tôi không {VVO}.",
       "slot_types": [
         "VO"
@@ -103,6 +109,7 @@
     {
       "id": "F-H1-07",
       "zh": "你{VO}吗？",
+      "pinyin": "Nǐ {PVO} ma?",
       "vi": "Bạn {VVO} không?",
       "slot_types": [
         "VO"
@@ -118,6 +125,7 @@
     {
       "id": "F-H1-08",
       "zh": "我喜欢{VO}。",
+      "pinyin": "Wǒ xǐhuan {PVO}.",
       "vi": "Tôi thích {VVO}.",
       "slot_types": [
         "VO"
@@ -133,6 +141,7 @@
     {
       "id": "F-H1-09",
       "zh": "他是{N}。",
+      "pinyin": "Tā shì {PN}.",
       "vi": "Anh ấy là {VN}.",
       "slot_types": [
         "N"
@@ -148,6 +157,7 @@
     {
       "id": "F-H1-10",
       "zh": "{N}很{ADJ}。",
+      "pinyin": "{PN} hěn {PADJ}.",
       "vi": "{VN} rất {VADJ}.",
       "slot_types": [
         "N",
@@ -164,6 +174,7 @@
     {
       "id": "F-H2-01",
       "zh": "昨天我{VO}了。",
+      "pinyin": "Zuótiān wǒ {PVO} le.",
       "vi": "Hôm qua tôi đã {VVO}.",
       "slot_types": [
         "VO"
@@ -179,6 +190,7 @@
     {
       "id": "F-H2-02",
       "zh": "我{VO}过。",
+      "pinyin": "Wǒ {PVO} guo.",
       "vi": "Tôi đã từng {VVO}.",
       "slot_types": [
         "VO"
@@ -194,6 +206,7 @@
     {
       "id": "F-H2-03",
       "zh": "我正在{VO}。",
+      "pinyin": "Wǒ zhèngzài {PVO}.",
       "vi": "Tôi đang {VVO}.",
       "slot_types": [
         "VO"
@@ -212,6 +225,7 @@
     {
       "id": "F-H2-04",
       "zh": "我想{VO}。",
+      "pinyin": "Wǒ xiǎng {PVO}.",
       "vi": "Tôi muốn {VVO}.",
       "slot_types": [
         "VO"
@@ -227,6 +241,7 @@
     {
       "id": "F-H2-05",
       "zh": "我要{VO}。",
+      "pinyin": "Wǒ yào {PVO}.",
       "vi": "Tôi định {VVO}.",
       "slot_types": [
         "VO"
@@ -242,6 +257,7 @@
     {
       "id": "F-H2-06",
       "zh": "我会{VO}。",
+      "pinyin": "Wǒ huì {PVO}.",
       "vi": "Tôi biết {VVO}.",
       "slot_types": [
         "VO"
@@ -263,6 +279,7 @@
     {
       "id": "F-H2-07",
       "zh": "我可以{VO}吗？",
+      "pinyin": "Wǒ kěyǐ {PVO} ma?",
       "vi": "Tôi có thể {VVO} không?",
       "slot_types": [
         "VO"
@@ -278,6 +295,7 @@
     {
       "id": "F-H2-08",
       "zh": "我每天{VO}。",
+      "pinyin": "Wǒ měitiān {PVO}.",
       "vi": "Tôi mỗi ngày {VVO}.",
       "slot_types": [
         "VO"
@@ -293,6 +311,7 @@
     {
       "id": "F-H2-09",
       "zh": "我没{VO}。",
+      "pinyin": "Wǒ méi {PVO}.",
       "vi": "Tôi chưa {VVO}.",
       "slot_types": [
         "VO"
@@ -308,6 +327,7 @@
     {
       "id": "F-H2-10",
       "zh": "他也{VO}。",
+      "pinyin": "Tā yě {PVO}.",
       "vi": "Anh ấy cũng {VVO}.",
       "slot_types": [
         "VO"
@@ -323,6 +343,7 @@
     {
       "id": "F-H2-11",
       "zh": "我们一起{VO}吧。",
+      "pinyin": "Wǒmen yìqǐ {PVO} ba.",
       "vi": "Chúng ta cùng {VVO} nhé.",
       "slot_types": [
         "VO"
@@ -338,6 +359,7 @@
     {
       "id": "F-H2-12",
       "zh": "你想{VO}吗？",
+      "pinyin": "Nǐ xiǎng {PVO} ma?",
       "vi": "Bạn muốn {VVO} không?",
       "slot_types": [
         "VO"
@@ -353,6 +375,7 @@
     {
       "id": "F-H2-13",
       "zh": "{N}比{N2}{ADJ}。",
+      "pinyin": "{PN} bǐ {PN2} {PADJ}.",
       "vi": "{VN} thì {VADJ} hơn {VN2}.",
       "slot_types": [
         "N",
@@ -370,6 +393,7 @@
     {
       "id": "F-H2-14",
       "zh": "她已经{VO}了。",
+      "pinyin": "Tā yǐjīng {PVO} le.",
       "vi": "Cô ấy đã {VVO} rồi.",
       "slot_types": [
         "VO"
@@ -385,6 +409,7 @@
     {
       "id": "F-H2-15",
       "zh": "我应该{VO}。",
+      "pinyin": "Wǒ yīnggāi {PVO}.",
       "vi": "Tôi nên {VVO}.",
       "slot_types": [
         "VO"
@@ -400,6 +425,7 @@
     {
       "id": "F-H3-01",
       "zh": "如果有时间，我就{VO}。",
+      "pinyin": "Rúguǒ yǒu shíjiān, wǒ jiù {PVO}.",
       "vi": "Nếu có thời gian, tôi sẽ {VVO}.",
       "slot_types": [
         "VO"
@@ -415,6 +441,7 @@
     {
       "id": "F-H3-02",
       "zh": "我一边听音乐一边{VO}。",
+      "pinyin": "Wǒ yìbiān tīng yīnyuè yìbiān {PVO}.",
       "vi": "Tôi vừa nghe nhạc vừa {VVO}.",
       "slot_types": [
         "VO"
@@ -430,6 +457,7 @@
     {
       "id": "F-H3-03",
       "zh": "虽然很累，但是我还是{VO}了。",
+      "pinyin": "Suīrán hěn lèi, dànshì wǒ háishì {PVO} le.",
       "vi": "Mặc dù rất mệt, nhưng tôi vẫn {VVO}.",
       "slot_types": [
         "VO"
@@ -445,6 +473,7 @@
     {
       "id": "F-H3-04",
       "zh": "我必须{VO}。",
+      "pinyin": "Wǒ bìxū {PVO}.",
       "vi": "Tôi phải {VVO}.",
       "slot_types": [
         "VO"
@@ -460,6 +489,7 @@
     {
       "id": "F-H3-05",
       "zh": "我跟朋友一起{VO}。",
+      "pinyin": "Wǒ gēn péngyou yìqǐ {PVO}.",
       "vi": "Tôi cùng bạn {VVO}.",
       "slot_types": [
         "VO"
@@ -475,6 +505,7 @@
     {
       "id": "F-H3-06",
       "zh": "我为了健康而{VO}。",
+      "pinyin": "Wǒ wèile jiànkāng ér {PVO}.",
       "vi": "Tôi {VVO} vì sức khỏe.",
       "slot_types": [
         "VO"
@@ -498,6 +529,7 @@
     {
       "id": "F-H3-07",
       "zh": "我准备{VO}。",
+      "pinyin": "Wǒ zhǔnbèi {PVO}.",
       "vi": "Tôi chuẩn bị {VVO}.",
       "slot_types": [
         "VO"
@@ -513,6 +545,7 @@
     {
       "id": "F-H3-08",
       "zh": "我决定{VO}。",
+      "pinyin": "Wǒ juédìng {PVO}.",
       "vi": "Tôi quyết định {VVO}.",
       "slot_types": [
         "VO"
@@ -528,6 +561,7 @@
     {
       "id": "F-H3-09",
       "zh": "他突然{VO}了。",
+      "pinyin": "Tā tūrán {PVO} le.",
       "vi": "Anh ấy đột nhiên {VVO}.",
       "slot_types": [
         "VO"
@@ -543,6 +577,7 @@
     {
       "id": "F-H3-10",
       "zh": "{N}非常{ADJ}。",
+      "pinyin": "{PN} fēicháng {PADJ}.",
       "vi": "{VN} cực kỳ {VADJ}.",
       "slot_types": [
         "N",
@@ -565,6 +600,7 @@
     {
       "id": "F-H4-01",
       "zh": "我正在考虑{VO}的事。",
+      "pinyin": "Wǒ zhèngzài kǎolǜ {PVO} de shì.",
       "vi": "Tôi đang cân nhắc việc {VVO}.",
       "slot_types": [
         "VO"
@@ -583,6 +619,7 @@
     {
       "id": "F-H4-02",
       "zh": "通过{VO}，我学到了很多。",
+      "pinyin": "Tōngguò {PVO}, wǒ xuédào le hěn duō.",
       "vi": "Qua việc {VVO}, tôi học được nhiều điều.",
       "slot_types": [
         "VO"
@@ -598,6 +635,7 @@
     {
       "id": "F-H4-03",
       "zh": "对于{N}，我们要认真{V}。",
+      "pinyin": "Duìyú {PN}, wǒmen yào rènzhēn {PV}.",
       "vi": "Đối với {VN}, chúng ta phải {VV} một cách nghiêm túc.",
       "slot_types": [
         "N",
@@ -623,6 +661,7 @@
     {
       "id": "F-H4-04",
       "zh": "随着时间的推移，我越来越{ADJ}。",
+      "pinyin": "Suízhe shíjiān de tuīyí, wǒ yuè lái yuè {PADJ}.",
       "vi": "Theo thời gian, tôi càng ngày càng {VADJ}.",
       "slot_types": [
         "ADJ"
@@ -645,6 +684,7 @@
     {
       "id": "F-H4-05",
       "zh": "无论如何，我都要{VO}。",
+      "pinyin": "Wúlùn rúhé, wǒ dōu yào {PVO}.",
       "vi": "Dù thế nào tôi cũng phải {VVO}.",
       "slot_types": [
         "VO"
@@ -660,6 +700,7 @@
     {
       "id": "F-H4-06",
       "zh": "我不仅{VO}，而且很认真。",
+      "pinyin": "Wǒ bùjǐn {PVO}, érqiě hěn rènzhēn.",
       "vi": "Tôi không những {VVO}, mà còn rất nghiêm túc.",
       "slot_types": [
         "VO"
@@ -675,6 +716,7 @@
     {
       "id": "F-H4-07",
       "zh": "尽管很难，我还是{VO}了。",
+      "pinyin": "Jǐnguǎn hěn nán, wǒ háishì {PVO} le.",
       "vi": "Mặc dù khó, tôi vẫn {VVO}.",
       "slot_types": [
         "VO"
@@ -690,6 +732,7 @@
     {
       "id": "F-H4-08",
       "zh": "经过仔细考虑，我决定{VO}。",
+      "pinyin": "Jīngguò zǐxì kǎolǜ, wǒ juédìng {PVO}.",
       "vi": "Sau khi cân nhắc kỹ, tôi quyết định {VVO}.",
       "slot_types": [
         "VO"
@@ -713,6 +756,7 @@
     {
       "id": "F-H4-09",
       "zh": "由于工作忙，我没有时间{VO}。",
+      "pinyin": "Yóuyú gōngzuò máng, wǒ méiyǒu shíjiān {PVO}.",
       "vi": "Do bận việc, tôi không có thời gian {VVO}.",
       "slot_types": [
         "VO"
@@ -728,6 +772,7 @@
     {
       "id": "F-H4-10",
       "zh": "为了将来，我必须{VO}。",
+      "pinyin": "Wèile jiānglái, wǒ bìxū {PVO}.",
       "vi": "Vì tương lai, tôi phải {VVO}.",
       "slot_types": [
         "VO"
@@ -753,6 +798,7 @@
     {
       "id": "F-H4-11",
       "zh": "{N}对身体非常{ADJ}。",
+      "pinyin": "{PN} duì shēntǐ fēicháng {PADJ}.",
       "vi": "{VN} rất {VADJ} cho sức khỏe.",
       "slot_types": [
         "N",
@@ -776,6 +822,7 @@
     {
       "id": "F-H4-12",
       "zh": "这件事跟{N}有关。",
+      "pinyin": "Zhè jiàn shì gēn {PN} yǒuguān.",
       "vi": "Việc này có liên quan đến {VN}.",
       "slot_types": [
         "N"

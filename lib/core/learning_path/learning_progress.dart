@@ -13,6 +13,8 @@ class LearningUnitProgress {
     this.startedAt,
     this.completedAt,
     this.lastOpenedAt,
+    this.updatedAt,
+    this.syncPending = true,
   });
 
   factory LearningUnitProgress.fromJson(Map<String, dynamic> json) {
@@ -26,6 +28,8 @@ class LearningUnitProgress {
       startedAt: _date(json['startedAt']),
       completedAt: _date(json['completedAt']),
       lastOpenedAt: _date(json['lastOpenedAt']),
+      updatedAt: _date(json['updatedAt']),
+      syncPending: json['syncPending'] as bool? ?? true,
     );
   }
 
@@ -38,6 +42,8 @@ class LearningUnitProgress {
   final DateTime? startedAt;
   final DateTime? completedAt;
   final DateTime? lastOpenedAt;
+  final DateTime? updatedAt;
+  final bool syncPending;
 
   Map<String, dynamic> toJson() {
     return {
@@ -50,6 +56,8 @@ class LearningUnitProgress {
       'startedAt': startedAt?.toIso8601String(),
       'completedAt': completedAt?.toIso8601String(),
       'lastOpenedAt': lastOpenedAt?.toIso8601String(),
+      'updatedAt': updatedAt?.toIso8601String(),
+      'syncPending': syncPending,
     };
   }
 
@@ -59,6 +67,8 @@ class LearningUnitProgress {
     DateTime? startedAt,
     DateTime? completedAt,
     DateTime? lastOpenedAt,
+    DateTime? updatedAt,
+    bool? syncPending,
   }) {
     return LearningUnitProgress(
       unitId: unitId,
@@ -70,6 +80,8 @@ class LearningUnitProgress {
       startedAt: startedAt ?? this.startedAt,
       completedAt: completedAt ?? this.completedAt,
       lastOpenedAt: lastOpenedAt ?? this.lastOpenedAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+      syncPending: syncPending ?? this.syncPending,
     );
   }
 }

@@ -6,6 +6,7 @@ class LessonContext {
     required this.level,
     required this.conversationIds,
     required this.grammarIds,
+    this.lessonType = '',
   });
 
   final String stageId;
@@ -14,4 +15,5 @@ class LessonContext {
   final int level;
   final List<String> conversationIds;
   final List<String> grammarIds;
+  final String lessonType;
 }

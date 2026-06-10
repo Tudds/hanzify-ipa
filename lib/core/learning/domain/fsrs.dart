@@ -19,6 +19,8 @@ class SrsCard {
     this.reps = 0,
     this.lapses = 0,
     this.lastReviewedAt,
+    this.updatedAt,
+    this.syncPending = true,
   });
 
   final String id;
@@ -34,6 +36,8 @@ class SrsCard {
   final int reps;
   final int lapses;
   final DateTime? lastReviewedAt;
+  final DateTime? updatedAt;
+  final bool syncPending;
 
   SrsCard copyWith({
     SrsCardState? state,
@@ -45,6 +49,8 @@ class SrsCard {
     int? reps,
     int? lapses,
     DateTime? lastReviewedAt,
+    DateTime? updatedAt,
+    bool? syncPending,
   }) {
     return SrsCard(
       id: id,
@@ -60,6 +66,8 @@ class SrsCard {
       reps: reps ?? this.reps,
       lapses: lapses ?? this.lapses,
       lastReviewedAt: lastReviewedAt ?? this.lastReviewedAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+      syncPending: syncPending ?? this.syncPending,
     );
   }
 }
@@ -70,6 +78,7 @@ class SrsReviewLog {
     required this.rating,
     required this.reviewedAt,
     required this.algorithm,
+    this.clientReviewId,
     this.stabilityBefore,
     this.difficultyBefore,
     this.stabilityAfter,
@@ -80,6 +89,7 @@ class SrsReviewLog {
   final SrsRating rating;
   final DateTime reviewedAt;
   final String algorithm;
+  final String? clientReviewId;
   final double? stabilityBefore;
   final double? difficultyBefore;
   final double? stabilityAfter;
@@ -136,6 +146,7 @@ class FsrsScheduler {
         rating: rating,
         reviewedAt: now,
         algorithm: algorithm,
+        clientReviewId: '${card.id}:${now.microsecondsSinceEpoch}',
         stabilityBefore: stabilityBefore,
         difficultyBefore: difficultyBefore,
         stabilityAfter: next.stability,

@@ -1,8 +1,10 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../database/database_connection.dart';
+import '../../sync/learning_sync_trigger.dart';
 import '../application/study_session_controller.dart';
 import '../domain/fsrs.dart';
 import 'drift/drift_study_session_store.dart';
@@ -27,7 +29,8 @@ class StudySessionStore {
     if (_preferences != null) return _loadSharedPreferences();
     try {
       return await _driftStore.load();
-    } catch (_) {
+    } catch (e) {
+      debugPrint('[StudyStore] drift load failed, falling back to prefs: $e');
       return _loadSharedPreferences();
     }
   }
@@ -36,7 +39,9 @@ class StudySessionStore {
     if (_preferences != null) return _saveSharedPreferences(snapshot);
     try {
       await _driftStore.save(snapshot);
-    } catch (_) {
+      LearningSyncTrigger.request();
+    } catch (e) {
+      debugPrint('[StudyStore] drift save failed, falling back to prefs: $e');
       await _saveSharedPreferences(snapshot);
     }
   }
@@ -45,8 +50,18 @@ class StudySessionStore {
     if (_preferences != null) return _clearSharedPreferences();
     try {
       await _driftStore.clear();
-    } catch (_) {
+    } catch (e) {
+      debugPrint('[StudyStore] drift clear failed, falling back to prefs: $e');
       await _clearSharedPreferences();
+    }
+  }
+
+  Future<void> markSynced({required Iterable<String> cardIds}) async {
+    if (_preferences != null) return;
+    try {
+      await _driftStore.markSynced(cardIds: cardIds);
+    } catch (e) {
+      debugPrint('[StudyStore] markSynced failed: $e');
     }
   }
 

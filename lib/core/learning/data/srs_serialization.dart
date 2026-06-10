@@ -16,6 +16,8 @@ extension SrsCardJson on SrsCard {
       'reps': reps,
       'lapses': lapses,
       'lastReviewedAt': lastReviewedAt?.toIso8601String(),
+      'updatedAt': updatedAt?.toIso8601String(),
+      'syncPending': syncPending,
     };
   }
 
@@ -34,6 +36,8 @@ extension SrsCardJson on SrsCard {
       reps: json['reps'] as int? ?? 0,
       lapses: json['lapses'] as int? ?? 0,
       lastReviewedAt: _date(json['lastReviewedAt']),
+      updatedAt: _date(json['updatedAt']),
+      syncPending: json['syncPending'] as bool? ?? true,
     );
   }
 }
@@ -45,6 +49,7 @@ extension SrsReviewLogJson on SrsReviewLog {
       'rating': rating.name,
       'reviewedAt': reviewedAt.toIso8601String(),
       'algorithm': algorithm,
+      'clientReviewId': clientReviewId,
       'stabilityBefore': stabilityBefore,
       'difficultyBefore': difficultyBefore,
       'stabilityAfter': stabilityAfter,
@@ -58,6 +63,7 @@ extension SrsReviewLogJson on SrsReviewLog {
       rating: SrsRating.values.byName(json['rating'] as String),
       reviewedAt: DateTime.parse(json['reviewedAt'] as String),
       algorithm: json['algorithm'] as String,
+      clientReviewId: json['clientReviewId'] as String?,
       stabilityBefore: (json['stabilityBefore'] as num?)?.toDouble(),
       difficultyBefore: (json['difficultyBefore'] as num?)?.toDouble(),
       stabilityAfter: (json['stabilityAfter'] as num?)?.toDouble(),

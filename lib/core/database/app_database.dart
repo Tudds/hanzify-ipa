@@ -17,6 +17,8 @@ class SrsCardsTable extends Table {
   IntColumn get reps => integer().withDefault(const Constant(0))();
   IntColumn get lapses => integer().withDefault(const Constant(0))();
   DateTimeColumn get lastReviewedAt => dateTime().nullable()();
+  DateTimeColumn get updatedAt => dateTime().nullable()();
+  BoolColumn get syncPending => boolean().withDefault(const Constant(true))();
 
   @override
   Set<Column<Object>> get primaryKey => {id};
@@ -29,6 +31,7 @@ class SrsReviewLogsTable extends Table {
   TextColumn get rating => text()();
   DateTimeColumn get reviewedAt => dateTime()();
   TextColumn get algorithm => text()();
+  TextColumn get clientReviewId => text().nullable().unique()();
   RealColumn get stabilityBefore => real().nullable()();
   RealColumn get difficultyBefore => real().nullable()();
   RealColumn get stabilityAfter => real().nullable()();
@@ -46,6 +49,8 @@ class LearningUnitProgressTable extends Table {
   DateTimeColumn get startedAt => dateTime().nullable()();
   DateTimeColumn get completedAt => dateTime().nullable()();
   DateTimeColumn get lastOpenedAt => dateTime().nullable()();
+  DateTimeColumn get updatedAt => dateTime().nullable()();
+  BoolColumn get syncPending => boolean().withDefault(const Constant(true))();
 
   @override
   Set<Column<Object>> get primaryKey => {unitId};
@@ -58,5 +63,27 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase(super.executor);
 
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 2;
+
+  @override
+  MigrationStrategy get migration => MigrationStrategy(
+    onUpgrade: (migrator, from, to) async {
+      if (from < 2) {
+        await migrator.addColumn(srsCardsTable, srsCardsTable.updatedAt);
+        await migrator.addColumn(srsCardsTable, srsCardsTable.syncPending);
+        await migrator.addColumn(
+          srsReviewLogsTable,
+          srsReviewLogsTable.clientReviewId,
+        );
+        await migrator.addColumn(
+          learningUnitProgressTable,
+          learningUnitProgressTable.updatedAt,
+        );
+        await migrator.addColumn(
+          learningUnitProgressTable,
+          learningUnitProgressTable.syncPending,
+        );
+      }
+    },
+  );
 }
