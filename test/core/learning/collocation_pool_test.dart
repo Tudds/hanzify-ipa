@@ -9,10 +9,13 @@ void main() {
   test(
     'generated collocation pool covers HSK1-HSK4 without duplicate text',
     () async {
-      final raw = await rootBundle.loadString(
-        'assets/data/generated/collocation_pool_hsk1_4.json',
-      );
-      final data = (jsonDecode(raw) as List).cast<Map<String, dynamic>>();
+      final data = <Map<String, dynamic>>[];
+      for (var level = 1; level <= 4; level++) {
+        final raw = await rootBundle.loadString(
+          'assets/data/generated/collocation_pool_hsk$level.json',
+        );
+        data.addAll((jsonDecode(raw) as List).cast<Map<String, dynamic>>());
+      }
       final texts = <String>{};
       final levels = <int>{};
 

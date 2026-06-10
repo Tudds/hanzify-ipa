@@ -11,8 +11,16 @@ import '../application/sentence_generator.dart';
 class LearningAssetRepository {
   const LearningAssetRepository({AssetBundle? bundle}) : _bundle = bundle;
 
+  /// Combined pool — kept only as a fallback for bundles that don't ship the
+  /// per-level files (e.g. test fixtures). Production loads per level.
   static const collocationPoolAsset =
       'assets/data/generated/collocation_pool_hsk1_4.json';
+  static const collocationPoolByLevel = <int, String>{
+    1: 'assets/data/generated/collocation_pool_hsk1.json',
+    2: 'assets/data/generated/collocation_pool_hsk2.json',
+    3: 'assets/data/generated/collocation_pool_hsk3.json',
+    4: 'assets/data/generated/collocation_pool_hsk4.json',
+  };
   static const conversationAsset = 'assets/data/conversation.json';
   static const collocationsDbAsset =
       'assets/data/generated/collocations_db.json';
@@ -22,20 +30,98 @@ class LearningAssetRepository {
       'assets/data/generated/partner_semantics.json';
   static const qualityRulesAsset =
       'assets/data/generated/sentence_quality_rules.json';
+  static const hskVocabAssets = [
+    'assets/data/hsk1.json',
+    'assets/data/hsk2.json',
+    'assets/data/hsk3.json',
+    'assets/data/hsk4.json',
+  ];
 
   final AssetBundle? _bundle;
 
-  Future<List<CollocationItem>> loadCollocationPool() async {
+  // Asset parsing is memoized per [AssetBundle] (rootBundle in production is a
+  // singleton, so this is effectively an app-wide cache; tests pass distinct
+  // fake bundles, so caches stay isolated per test). This keeps the ~1.9MB
+  // collocation pool from being re-decoded on every Shorts load + hydration +
+  // remediation, and lets the futures dedupe concurrent first loads.
+  static final Map<AssetBundle, Map<int, Future<List<CollocationItem>>>>
+      _poolLevelFutures = {};
+  static final Map<AssetBundle, Future<Map<String, Map<String, int>>>>
+      _conversationIndexFutures = {};
+  static final Map<AssetBundle, Future<List<CollocationItem>>>
+      _combinedPoolFutures = {};
+
+  /// Static collocation pool for a single HSK [level] — parses only that
+  /// level's file (~0.2–0.4MB) instead of the whole pool. Cached.
+  Future<List<CollocationItem>> loadStaticCollocationPoolForLevel(int level) {
     final bundle = _bundle ?? rootBundle;
-    try {
-      final poolRaw = await bundle.loadString(collocationPoolAsset);
-      final conversationRaw = await bundle.loadString(conversationAsset);
-      final lineIndexes = _conversationLineIndexes(conversationRaw);
-      final pool = (jsonDecode(poolRaw) as List)
+    final perLevel = _poolLevelFutures.putIfAbsent(bundle, () => {});
+    return perLevel.putIfAbsent(level, () => _doLoadPoolLevel(bundle, level));
+  }
+
+  /// Static collocation pool restricted to [levels]. The Shorts startup feed
+  /// only needs the active level, so this avoids decoding all four on the main
+  /// isolate before the first frame.
+  Future<List<CollocationItem>> loadStaticCollocationPoolForLevels(
+    List<int> levels,
+  ) async {
+    final result = <CollocationItem>[];
+    for (final level in levels) {
+      result.addAll(await loadStaticCollocationPoolForLevel(level));
+    }
+    return result;
+  }
+
+  Future<List<CollocationItem>> loadStaticCollocationPool() =>
+      loadStaticCollocationPoolForLevels(const [1, 2, 3, 4]);
+
+  Future<List<CollocationItem>> _doLoadPoolLevel(
+    AssetBundle bundle,
+    int level,
+  ) async {
+    final lineIndexes = await _conversationIndex(bundle);
+    final path = collocationPoolByLevel[level];
+    final raw = path == null ? null : await _maybeLoad(bundle, path);
+    final List<CollocationItem> items;
+    if (raw != null) {
+      items = (jsonDecode(raw) as List)
           .cast<Map<String, dynamic>>()
           .map(CollocationItem.fromJson)
           .toList(growable: false);
-      return _withConversationAudio(pool, lineIndexes);
+    } else {
+      // Fallback for bundles that only ship the combined file (test fixtures).
+      final combined = await _combinedPool(bundle);
+      items = combined
+          .where((item) => item.level == level)
+          .toList(growable: false);
+    }
+    return List<CollocationItem>.unmodifiable(
+      _withConversationAudio(items, lineIndexes),
+    );
+  }
+
+  Future<Map<String, Map<String, int>>> _conversationIndex(
+    AssetBundle bundle,
+  ) {
+    return _conversationIndexFutures.putIfAbsent(bundle, () async {
+      final raw = await bundle.loadString(conversationAsset);
+      return _conversationLineIndexes(raw);
+    });
+  }
+
+  Future<List<CollocationItem>> _combinedPool(AssetBundle bundle) {
+    return _combinedPoolFutures.putIfAbsent(bundle, () async {
+      final raw = await bundle.loadString(collocationPoolAsset);
+      return (jsonDecode(raw) as List)
+          .cast<Map<String, dynamic>>()
+          .map(CollocationItem.fromJson)
+          .toList(growable: false);
+    });
+  }
+
+  Future<List<CollocationItem>> loadCollocationPool() async {
+    try {
+      return await loadStaticCollocationPool();
     } catch (_) {
       // Tests can provide only generator assets; keep the runtime fallback.
     }
@@ -57,11 +143,12 @@ class LearningAssetRepository {
       await _maybeLoad(bundle, partnerSemanticsAsset),
       'partners',
     );
+    final vocabPinyinIndex = await _loadVocabPinyinIndex(bundle);
     final rules = _loadRules(await _maybeLoad(bundle, qualityRulesAsset));
     final generator = SentenceGenerator(
       collocationsDb: collocationsDb,
       framesBank: framesBank,
-      vocabIndex: _vocabIndexFor(collocationsDb),
+      vocabIndex: _vocabIndexFor(collocationsDb, vocabPinyinIndex),
       headSemantics: headSemantics,
       partnerSemantics: partnerSemantics,
       noisyPairBlacklist: rules.pairBlacklist,
@@ -72,7 +159,14 @@ class LearningAssetRepository {
 
     final items = <CollocationItem>[];
     for (var level = 1; level <= 4; level++) {
-      items.addAll(_generateLevelItems(collocationsDb, generator, level));
+      items.addAll(
+        _generateLevelItems(
+          collocationsDb,
+          generator,
+          level,
+          rules.contextOptions,
+        ),
+      );
     }
     return items;
   }
@@ -107,7 +201,41 @@ class LearningAssetRepository {
       globalForbiddenPatterns: List<String>.from(
         data['global_forbidden_patterns'] as List? ?? const [],
       ),
+      minContextHanziLength:
+          data['min_context_hanzi_length'] as int? ??
+          SentenceQualityOptions.contextual.minHanziLength,
+      minContextViWordCount:
+          data['min_context_vi_word_count'] as int? ??
+          SentenceQualityOptions.contextual.minViWordCount,
+      minContextFrameComplexity:
+          data['min_context_frame_complexity'] as int? ??
+          SentenceQualityOptions.contextual.minFrameComplexity,
+      minContextPartnerFrequency:
+          data['min_context_partner_frequency'] as int? ??
+          SentenceQualityOptions.contextual.minPartnerFrequency,
+      minContextScore:
+          (data['min_context_score'] as num?)?.toDouble() ??
+          SentenceQualityOptions.contextual.minScore,
+      contextDeniedFrameIds: Set<String>.from(
+        data['context_denied_frame_ids'] as List? ?? const [],
+      ),
     );
+  }
+
+  Future<Map<String, String>> _loadVocabPinyinIndex(AssetBundle bundle) async {
+    final result = <String, String>{};
+    for (final asset in hskVocabAssets) {
+      final raw = await _maybeLoad(bundle, asset);
+      if (raw == null) continue;
+      final items = (jsonDecode(raw) as List).cast<Map<String, dynamic>>();
+      for (final item in items) {
+        final hanzi = item['hanzi'] as String? ?? '';
+        final pinyin = item['pinyin'] as String? ?? '';
+        if (hanzi.isEmpty || pinyin.isEmpty) continue;
+        result.putIfAbsent(hanzi, () => pinyin);
+      }
+    }
+    return result;
   }
 
   Map<String, Map<String, int>> _conversationLineIndexes(String raw) {
@@ -156,7 +284,10 @@ class LearningAssetRepository {
     return result;
   }
 
-  Map<String, VocabLite> _vocabIndexFor(CollocationsDb db) {
+  Map<String, VocabLite> _vocabIndexFor(
+    CollocationsDb db,
+    Map<String, String> vocabPinyinIndex,
+  ) {
     final index = <String, VocabLite>{};
     for (final entry in [
       ...db.verbObject.values,
@@ -165,7 +296,11 @@ class LearningAssetRepository {
     ]) {
       index[entry.headHanzi] = VocabLite(
         hanzi: entry.headHanzi,
-        pinyin: entry.headPinyin,
+        pinyin: _resolvePinyin(
+          entry.headHanzi,
+          entry.headPinyin,
+          vocabPinyinIndex,
+        ),
         vi: entry.headVi,
         pos: entry.headPos,
         level: entry.headLevel,
@@ -175,7 +310,11 @@ class LearningAssetRepository {
           partner.objectHanzi,
           () => VocabLite(
             hanzi: partner.objectHanzi,
-            pinyin: partner.objectPinyin,
+            pinyin: _resolvePinyin(
+              partner.objectHanzi,
+              partner.objectPinyin,
+              vocabPinyinIndex,
+            ),
             vi: partner.objectVi,
             pos: 'n',
             level: partner.objectLevel,
@@ -186,10 +325,21 @@ class LearningAssetRepository {
     return index;
   }
 
+  String _resolvePinyin(
+    String hanzi,
+    String sourcePinyin,
+    Map<String, String> vocabPinyinIndex,
+  ) {
+    final trimmed = sourcePinyin.trim();
+    if (trimmed.isNotEmpty) return trimmed;
+    return vocabPinyinIndex[hanzi] ?? '';
+  }
+
   List<CollocationItem> _generateLevelItems(
     CollocationsDb db,
     SentenceGenerator generator,
     int level,
+    SentenceQualityOptions contextQualityOptions,
   ) {
     final heads =
         [
@@ -205,6 +355,7 @@ class LearningAssetRepository {
         targetWord: entry.headHanzi,
         userHskLevel: level,
         count: 4,
+        qualityOptions: contextQualityOptions,
       );
       for (final sentence in sentences) {
         if (!seenText.add(sentence.zh)) continue;
@@ -214,7 +365,7 @@ class LearningAssetRepository {
             level: level,
             source: 'on_demand_generator',
             textCn: sentence.zh,
-            pinyin: _generatedPinyin(entry, sentence.partnerHanzi),
+            pinyin: sentence.pinyin,
             textVi: sentence.vi,
             targetVocabIds: ['hsk${entry.headLevel}_${entry.headHanzi}'],
             targetGrammarIds: [sentence.frameGrammar],
@@ -226,20 +377,6 @@ class LearningAssetRepository {
       }
     }
     return items;
-  }
-
-  String _generatedPinyin(CollocationEntry entry, String partnerHanzi) {
-    CollocationPartner? partner;
-    for (final item in entry.collocations) {
-      if (item.objectHanzi == partnerHanzi) {
-        partner = item;
-        break;
-      }
-    }
-    if (partner == null || partner.objectPinyin.isEmpty) {
-      return entry.headPinyin;
-    }
-    return '${entry.headPinyin} ${partner.objectPinyin}'.trim();
   }
 }
 
@@ -260,11 +397,35 @@ class SentenceQualityRules {
     this.pairBlacklist = const {},
     this.pairAllowlist = const {},
     this.globalForbiddenPatterns = const [],
+    this.minContextHanziLength = 7,
+    this.minContextViWordCount = 4,
+    this.minContextFrameComplexity = 2,
+    this.minContextPartnerFrequency = 2,
+    this.minContextScore = 18,
+    this.contextDeniedFrameIds = const {},
   });
 
   final Set<String> pairBlacklist;
   final Set<String> pairAllowlist;
   final List<String> globalForbiddenPatterns;
+  final int minContextHanziLength;
+  final int minContextViWordCount;
+  final int minContextFrameComplexity;
+  final int minContextPartnerFrequency;
+  final double minContextScore;
+  final Set<String> contextDeniedFrameIds;
+
+  SentenceQualityOptions get contextOptions {
+    return SentenceQualityOptions(
+      minHanziLength: minContextHanziLength,
+      minViWordCount: minContextViWordCount,
+      minFrameComplexity: minContextFrameComplexity,
+      minPartnerFrequency: minContextPartnerFrequency,
+      minScore: minContextScore,
+      rejectBareSvo: true,
+      deniedFrameIds: contextDeniedFrameIds,
+    );
+  }
 }
 
 class HskLearningSessionFactory {
