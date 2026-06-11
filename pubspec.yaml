@@ -15,15 +15,17 @@ dependencies:
   flutter_riverpod: ^3.3.1
   supabase_flutter: ^2.1.0
   shared_preferences: ^2.5.5
-  drift: ^2.30.0
-  sqlite3: ^2.9.4
-  sqlite3_flutter_libs: ^0.5.42
+  drift: ^2.34.0
+  sqlite3: ^3.3.2
+  # 0.6.0+eol là gói rỗng: sqlite3 3.x tự bundle native libs; giữ dependency
+  # này chỉ để chặn script build cũ 0.5.x lọt vào dependency tree.
+  sqlite3_flutter_libs: ^0.6.0
   path_provider: ^2.1.5
   path: ^1.9.1
   just_audio: ^0.10.4
   flutter_animate: ^4.5.0
   flutter_svg: ^2.2.3
-  confetti: ^0.7.0
+  confetti: ^0.8.0
   go_router: ^17.2.3
 
 dev_dependencies:
@@ -31,7 +33,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^6.0.0
   build_runner: ^2.10.4
-  drift_dev: ^2.30.0
+  drift_dev: ^2.34.0
 
 flutter:
   uses-material-design: true

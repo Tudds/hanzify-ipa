@@ -54,10 +54,16 @@ void main() {
       final answer = _answers[prompt]!;
       await tester.tap(find.widgetWithText(FilledButton, answer));
       await tester.pumpAndSettle();
-      await tester.tap(
-        find.text(i == _answers.length - 1 ? 'Hoàn thành' : 'Tiếp theo'),
-      );
-      await tester.pumpAndSettle();
+      final isLast = i == _answers.length - 1;
+      await tester.tap(find.text(isLast ? 'Hoàn thành' : 'Tiếp theo'));
+      if (isLast) {
+        // Màn summary bắn confetti; từ confetti 0.8 ticker chạy liên tục nên
+        // pumpAndSettle không bao giờ settle — pump theo thời gian cố định.
+        await tester.pump();
+        await tester.pump(const Duration(seconds: 2));
+      } else {
+        await tester.pumpAndSettle();
+      }
     }
 
     expect(find.text('Xuất sắc!'), findsOneWidget);

@@ -2269,10 +2269,7 @@ final class $$SrsCardsTableTableReferences
   _srsReviewLogsTableRefsTable(_$AppDatabase db) =>
       MultiTypedResultKey.fromTable(
         db.srsReviewLogsTable,
-        aliasName: $_aliasNameGenerator(
-          db.srsCardsTable.id,
-          db.srsReviewLogsTable.cardId,
-        ),
+        aliasName: 'srs_cards_table__id__srs_review_logs_table__card_id',
       );
 
   $$SrsReviewLogsTableTableProcessedTableManager get srsReviewLogsTableRefs {
@@ -2774,10 +2771,8 @@ final class $$SrsReviewLogsTableTableReferences
     super.$_typedResult,
   );
 
-  static $SrsCardsTableTable _cardIdTable(_$AppDatabase db) =>
-      db.srsCardsTable.createAlias(
-        $_aliasNameGenerator(db.srsReviewLogsTable.cardId, db.srsCardsTable.id),
-      );
+  static $SrsCardsTableTable _cardIdTable(_$AppDatabase db) => db.srsCardsTable
+      .createAlias('srs_review_logs_table__card_id__srs_cards_table__id');
 
   $$SrsCardsTableTableProcessedTableManager get cardId {
     final $_column = $_itemColumn<String>('card_id')!;

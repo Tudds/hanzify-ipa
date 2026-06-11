@@ -18,7 +18,9 @@ Future<void> main() async {
   if (SupabaseConfig.isConfigured) {
     await Supabase.initialize(
       url: SupabaseConfig.url,
-      anonKey: SupabaseConfig.anonKey,
+      // supabase_flutter 2.14 đổi tên anonKey -> publishableKey; legacy anon
+      // key (JWT) vẫn dùng được qua tham số này.
+      publishableKey: SupabaseConfig.anonKey,
     );
     LearningSyncTrigger.configure(() async {
       if (Supabase.instance.client.auth.currentUser == null) return;
