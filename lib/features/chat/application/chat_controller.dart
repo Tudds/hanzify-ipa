@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/profile/user_profile.dart';
+import '../../../core/providers/user_profile_provider.dart';
 import '../domain/gen_ui_chat.dart';
 import 'gen_ui_chat_responder.dart';
 
@@ -39,30 +41,56 @@ class GenUiChatController extends AsyncNotifier<GenUiChatState> {
 
   @override
   Future<GenUiChatState> build() async {
+    final priority = ref.read(userProfileProvider).priority;
     return GenUiChatState(
       messages: [
         GenUiChatMessage(
           id: _id(),
           role: ChatMessageRole.assistant,
-          blocks: const [
-            ChatBubbleBlock(
-              'Chào bạn, mình là Chat GenUI local. Mình có thể tra từ, giải thích ngữ pháp và tạo quiz nhanh từ dữ liệu offline.',
+          blocks: [
+            const ChatBubbleBlock(
+              'Chào bạn, mình là Chat GenUI local. Mình có thể tra từ, giải thích ngữ pháp, tạo quiz và luyện nghe-viết chữ Hán từ dữ liệu offline.',
             ),
-            SuggestionActionsBlock([
-              GenUiSuggestionAction(label: 'Tra từ', prompt: 'Tra từ 学习'),
-              GenUiSuggestionAction(
-                label: 'Tạo quiz',
-                prompt: 'Tạo quiz HSK 2',
-              ),
-              GenUiSuggestionAction(
-                label: 'Hội thoại',
-                prompt: 'Cho mình hội thoại mẫu',
-              ),
-            ]),
+            SuggestionActionsBlock(_greetingActions(priority)),
           ],
         ),
       ],
     );
+  }
+
+  /// Chip ưu tiên từ onboarding đứng đầu danh sách gợi ý.
+  static List<GenUiSuggestionAction> _greetingActions(
+    LearningPriority priority,
+  ) {
+    const listen = GenUiSuggestionAction(
+      label: 'Luyện nghe',
+      prompt: 'Luyện nghe chép chính tả',
+    );
+    const translate = GenUiSuggestionAction(
+      label: 'Luyện dịch',
+      prompt: 'Luyện dịch Việt-Trung',
+    );
+    const lookup = GenUiSuggestionAction(label: 'Tra từ', prompt: 'Tra từ 学习');
+    const quiz = GenUiSuggestionAction(
+      label: 'Tạo quiz',
+      prompt: 'Tạo quiz HSK 2',
+    );
+    const dialogue = GenUiSuggestionAction(
+      label: 'Hội thoại',
+      prompt: 'Cho mình hội thoại mẫu',
+    );
+
+    final first = switch (priority) {
+      LearningPriority.listening => listen,
+      LearningPriority.writing => translate,
+      LearningPriority.conversation => dialogue,
+      LearningPriority.vocabulary => quiz,
+    };
+    return [
+      first,
+      for (final action in const [lookup, quiz, dialogue, listen, translate])
+        if (action != first) action,
+    ];
   }
 
   Future<void> sendPrompt(String prompt) async {

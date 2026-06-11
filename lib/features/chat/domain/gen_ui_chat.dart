@@ -1,3 +1,5 @@
+import 'dictation.dart';
+
 enum ChatMessageRole { user, assistant }
 
 class GenUiChatMessage {
@@ -80,6 +82,12 @@ final class SentenceArrangeBlock extends GenUiBlock {
   final String translation;
   final List<String> tokens;
   final String answer;
+}
+
+final class DictationBlock extends GenUiBlock {
+  const DictationBlock(this.exercise);
+
+  final DictationExercise exercise;
 }
 
 final class SuggestionActionsBlock extends GenUiBlock {

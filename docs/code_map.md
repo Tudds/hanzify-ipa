@@ -160,7 +160,16 @@ Rendered GenUI blocks:
 - `GrammarCardBlock`
 - `QuickQuizBlock`
 - `SentenceArrangeBlock`
+- `DictationBlock` — luyện nghe-viết / dịch Việt→Trung
 - `SuggestionActionsBlock`
+
+### Dictation (nghe viết / dịch)
+
+- `domain/dictation.dart` — `DictationMode {listen, readVi}` + `DictationExercise`.
+- `application/dictation_exercise_service.dart` — chọn câu từ collocation pool theo level (listen cần `audioUrl`, nguồn `conversation_line` có audio CDN thật); fallback ví dụ vocab (`vocab/{id}_E0.mp3`). Câu ≤ 16 chữ.
+- `presentation/widgets/dictation_block_view.dart` — TextField gõ tự do (IME hệ thống, không validate trong onChanged để an toàn composition trên web); nút Kiểm tra / Gợi ý pinyin / Hiện đáp án; chấm bằng `normalizeHanziAnswer` + `diffHanzi` (`lib/core/utils/hanzi_text_compare.dart`) hiển thị đối chiếu match/wrong/missing/extra.
+- Responder intent: "luyện nghe"/"chép chính tả"/"nghe viết" → listen; "luyện dịch"/"dịch việt"/"việt-trung" → readVi (check TRƯỚC quiz vì chứa từ khóa "luyện").
+- Greeting chips xếp theo `profile.priority`.
 
 No remote LLM call is wired. `GenUiChatResponder` is the extension point for a future remote responder.
 

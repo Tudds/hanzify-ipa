@@ -7,6 +7,7 @@ import '../../../core/widgets/hanzify_haptic.dart';
 import '../../../core/widgets/sliver_page_scaffold.dart';
 import '../application/chat_controller.dart';
 import '../domain/gen_ui_chat.dart';
+import 'widgets/dictation_block_view.dart';
 
 class ChatScreen extends ConsumerStatefulWidget {
   const ChatScreen({super.key});
@@ -125,6 +126,7 @@ class _BlockView extends StatelessWidget {
       SentenceArrangeBlock() => _SentenceArrangePrompt(
         block: block as SentenceArrangeBlock,
       ),
+      DictationBlock() => DictationBlockView(block: block as DictationBlock),
       SuggestionActionsBlock(:final actions) => _SuggestionActions(
         actions: actions,
         onSuggestion: onSuggestion,

@@ -2,10 +2,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/learning/data/dialogue_scene_repository.dart';
 import '../../../core/providers/dialogue_scene_provider.dart';
+import '../../../core/providers/user_profile_provider.dart';
 import '../../dictionary/data/library_repository.dart';
 import '../../dictionary/domain/grammar_item.dart';
 import '../../dictionary/domain/vocab_item.dart';
+import '../domain/dictation.dart';
 import '../domain/gen_ui_chat.dart';
+import 'dictation_exercise_service.dart';
 
 abstract class GenUiChatResponder {
   Future<List<GenUiBlock>> respond(String prompt);
@@ -15,15 +18,30 @@ class LocalGenUiChatResponder implements GenUiChatResponder {
   const LocalGenUiChatResponder({
     required LibraryRepository libraryRepository,
     required DialogueSceneRepository dialogueRepository,
+    required DictationExerciseService dictationService,
+    this.activeLevel = 2,
   }) : _libraryRepository = libraryRepository,
-       _dialogueRepository = dialogueRepository;
+       _dialogueRepository = dialogueRepository,
+       _dictationService = dictationService;
 
   final LibraryRepository _libraryRepository;
   final DialogueSceneRepository _dialogueRepository;
+  final DictationExerciseService _dictationService;
+  final int activeLevel;
 
   @override
   Future<List<GenUiBlock>> respond(String prompt) async {
     final normalized = prompt.trim().toLowerCase();
+
+    // Dictation phải check trước quiz: "luyện nghe"/"luyện dịch" chứa "luyện"
+    // nên sẽ bị _isQuizPrompt nuốt mất nếu để sau.
+    if (_isListenDictationPrompt(normalized)) {
+      return _dictationBlocks(DictationMode.listen);
+    }
+    if (_isTranslateDictationPrompt(normalized)) {
+      return _dictationBlocks(DictationMode.readVi);
+    }
+
     final vocab = await _libraryRepository.loadVocab();
     final grammar = await _libraryRepository.loadGrammar();
     final scenes = await _dialogueRepository.loadScenes();
@@ -103,6 +121,59 @@ class LocalGenUiChatResponder implements GenUiChatResponder {
       ]),
     );
     return blocks;
+  }
+
+  Future<List<GenUiBlock>> _dictationBlocks(DictationMode mode) async {
+    final exercise = await _dictationService.nextExercise(
+      mode: mode,
+      level: activeLevel,
+    );
+    final suggestions = SuggestionActionsBlock([
+      GenUiSuggestionAction(
+        label: 'Câu khác',
+        prompt: mode == DictationMode.listen
+            ? 'Luyện nghe chép chính tả'
+            : 'Luyện dịch Việt-Trung',
+      ),
+      GenUiSuggestionAction(
+        label: mode == DictationMode.listen ? 'Luyện dịch' : 'Luyện nghe',
+        prompt: mode == DictationMode.listen
+            ? 'Luyện dịch Việt-Trung'
+            : 'Luyện nghe chép chính tả',
+      ),
+    ]);
+    if (exercise == null) {
+      return [
+        ChatBubbleBlock('Chưa có câu luyện phù hợp cho HSK $activeLevel.'),
+        suggestions,
+      ];
+    }
+    return [
+      ChatBubbleBlock(
+        mode == DictationMode.listen
+            ? 'Nghe audio rồi gõ lại câu bằng chữ Hán nhé.'
+            : 'Dịch câu sau sang tiếng Trung nhé.',
+      ),
+      DictationBlock(exercise),
+      suggestions,
+    ];
+  }
+
+  bool _isListenDictationPrompt(String prompt) {
+    return prompt.contains('luyện nghe') ||
+        prompt.contains('chép chính tả') ||
+        prompt.contains('nghe viết') ||
+        prompt.contains('nghe gõ') ||
+        prompt.contains('nghe rồi viết') ||
+        prompt.contains('dictation');
+  }
+
+  bool _isTranslateDictationPrompt(String prompt) {
+    return prompt.contains('luyện dịch') ||
+        prompt.contains('dịch việt') ||
+        prompt.contains('dịch sang tiếng trung') ||
+        prompt.contains('việt-trung') ||
+        prompt.contains('việt trung');
   }
 
   bool _isQuizPrompt(String prompt) {
@@ -214,5 +285,9 @@ final genUiChatResponderProvider = Provider<GenUiChatResponder>((ref) {
   return LocalGenUiChatResponder(
     libraryRepository: ref.watch(libraryRepositoryProvider),
     dialogueRepository: ref.watch(dialogueSceneRepositoryProvider),
+    dictationService: ref.watch(dictationExerciseServiceProvider),
+    activeLevel: ref.watch(
+      userProfileProvider.select((profile) => profile.activeLevel),
+    ),
   );
 });
