@@ -13,6 +13,7 @@ class DrillScaffold extends ConsumerWidget {
     required this.score,
     required this.body,
     this.onQuit,
+    this.actions = const [],
   });
 
   final String title;
@@ -20,6 +21,9 @@ class DrillScaffold extends ConsumerWidget {
   final int score;
   final Widget body;
   final VoidCallback? onQuit;
+
+  /// Hiển thị trước badge điểm (ví dụ chip đổi cấp độ HSK).
+  final List<Widget> actions;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -46,6 +50,7 @@ class DrillScaffold extends ConsumerWidget {
           ),
         ),
         actions: [
+          ...actions,
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Center(

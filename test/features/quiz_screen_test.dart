@@ -8,6 +8,7 @@ import 'package:hanzify/features/dictionary/data/library_repository.dart';
 import 'package:hanzify/features/quiz/presentation/drills/flashcard_drill_screen.dart';
 import 'package:hanzify/features/quiz/presentation/drills/multiple_choice_drill_screen.dart';
 import 'package:hanzify/features/quiz/presentation/quiz_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../support/profile_overrides.dart';
 
@@ -128,6 +129,60 @@ void main() {
     // The back face shows the meaning grouped by part of speech + an example.
     expect(find.text(meaningByHanzi[frontHanzi]!), findsWidgets);
     expect(find.text(exampleByHanzi[frontHanzi]!), findsWidgets);
+  });
+
+  testWidgets('quiz level selection persists across rebuilds', (tester) async {
+    final overrides = await profileTestOverrides();
+
+    await tester.pumpWidget(_wrap(const QuizScreen(), overrides));
+    await tester.pumpAndSettle();
+
+    // Dropdown mặc định theo profile (activeLevel = 2). "HSK n" xuất hiện ở
+    // nhiều card chế độ nên phải nhắm đúng dropdown.
+    final dropdown = find.byType(DropdownButton<int>);
+    DropdownButton<int> dropdownWidget() =>
+        tester.widget<DropdownButton<int>>(dropdown);
+    expect(dropdownWidget().value, 2);
+
+    await tester.tap(dropdown);
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('HSK 3').last);
+    await tester.pumpAndSettle();
+
+    final prefs = await SharedPreferences.getInstance();
+    expect(prefs.getInt('quiz_level'), 3);
+
+    // Mount lại màn Quiz với cùng prefs → vẫn giữ HSK 3.
+    await tester.pumpWidget(_wrap(const QuizScreen(), overrides));
+    await tester.pumpAndSettle();
+    expect(dropdownWidget().value, 3);
+  });
+
+  testWidgets('flashcard level chip switches level and syncs quiz level', (
+    tester,
+  ) async {
+    final overrides = await profileTestOverrides();
+
+    await tester.pumpWidget(
+      _wrap(const FlashcardDrillScreen(level: 2), overrides),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
+
+    // Hint mặt trước flashcard lặp animation vô hạn nên không dùng
+    // pumpAndSettle được — pump theo thời gian cố định.
+    await tester.tap(find.text('HSK 2'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    await tester.tap(find.text('HSK 1').last);
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
+
+    // Fixture không có vocab HSK 1 → drill resample và báo thiếu dữ liệu,
+    // chứng tỏ level đã đổi thật.
+    expect(find.text('Chưa có từ vựng để luyện.'), findsOneWidget);
+    final prefs = await SharedPreferences.getInstance();
+    expect(prefs.getInt('quiz_level'), 1);
   });
 }
 

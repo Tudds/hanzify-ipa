@@ -122,6 +122,8 @@ DictionaryScreen
 
 `VocabDetailSheet` uses `StrokeOrderWidget` for character stroke data when available. Current learning data is primarily HSK1-HSK4.
 
+`libraryFilterProvider` mặc định lọc theo `profile.activeLevel` (dùng đường lazy `vocabLibraryForLevelProvider`); chip "Tất cả" bỏ lọc.
+
 ---
 
 ## 7. Quiz
@@ -137,6 +139,8 @@ QuizScreen
 ```
 
 Quiz uses local dictionary assets through `QuizPool`. It does not change FSRS persistence directly.
+
+Level: `quizLevelProvider` persist key `quiz_level` (SharedPreferences), fallback = `profile.activeLevel`. Flashcard drill có chip "HSK n" đổi level ngay trong drill (đồng bộ ngược về `quizLevelProvider`).
 
 ---
 

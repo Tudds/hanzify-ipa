@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/audio/audio_play_button.dart';
 import '../../../../core/audio/audio_urls.dart';
+import '../../../../core/constants/hsk_levels.dart';
 import '../../../../core/providers/performance_provider.dart';
 import '../../../../core/theme/typography.dart';
 import '../../../../core/widgets/hanzify_haptic.dart';
@@ -25,11 +26,27 @@ class FlashcardDrillScreen extends ConsumerStatefulWidget {
 }
 
 class _FlashcardDrillScreenState extends ConsumerState<FlashcardDrillScreen> {
+  late int _level = widget.level;
   List<VocabItem>? _cards;
   int _index = 0;
   int _score = 0;
   bool _flipped = false;
   bool _finished = false;
+
+  void _changeLevel(int level) {
+    if (level == _level) return;
+    HanzifyHaptic.selection();
+    // Đồng bộ lại level cho launcher Quiz (persist qua quizLevelProvider).
+    ref.read(quizLevelProvider.notifier).set(level);
+    setState(() {
+      _level = level;
+      _cards = null;
+      _index = 0;
+      _score = 0;
+      _flipped = false;
+      _finished = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +57,7 @@ class _FlashcardDrillScreenState extends ConsumerState<FlashcardDrillScreen> {
       ),
       error: (e, _) => Scaffold(body: Center(child: Text('Lỗi: $e'))),
       data: (pool) {
-        _cards ??= pool.sample(level: widget.level, count: 8).vocab;
+        _cards ??= pool.sample(level: _level, count: 8).vocab;
         final cards = _cards!;
         if (cards.isEmpty) {
           return _emptyScaffold();
@@ -52,7 +69,7 @@ class _FlashcardDrillScreenState extends ConsumerState<FlashcardDrillScreen> {
               total: cards.length,
               onRestart: () {
                 setState(() {
-                  _cards = pool.sample(level: widget.level, count: 8).vocab;
+                  _cards = pool.sample(level: _level, count: 8).vocab;
                   _index = 0;
                   _score = 0;
                   _flipped = false;
@@ -66,6 +83,9 @@ class _FlashcardDrillScreenState extends ConsumerState<FlashcardDrillScreen> {
           title: 'Flashcard',
           progress: _index / cards.length,
           score: _score,
+          actions: [
+            Center(child: _LevelChip(level: _level, onChanged: _changeLevel)),
+          ],
           body: _buildCard(cards[_index]),
         );
       },
@@ -212,6 +232,51 @@ class _FlashcardDrillScreenState extends ConsumerState<FlashcardDrillScreen> {
         _flipped = false;
       }
     });
+  }
+}
+
+class _LevelChip extends StatelessWidget {
+  const _LevelChip({required this.level, required this.onChanged});
+
+  final int level;
+  final ValueChanged<int> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    return PopupMenuButton<int>(
+      initialValue: level,
+      tooltip: 'Đổi cấp độ HSK',
+      onSelected: onChanged,
+      itemBuilder: (context) => [
+        for (final lv in kHskLevels)
+          PopupMenuItem(value: lv, child: Text('HSK $lv')),
+      ],
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        decoration: BoxDecoration(
+          color: colors.surfaceContainerHigh,
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'HSK $level',
+              style: const TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 13,
+              ),
+            ),
+            Icon(
+              Icons.arrow_drop_down_rounded,
+              size: 20,
+              color: colors.onSurfaceVariant,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 

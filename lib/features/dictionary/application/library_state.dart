@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/providers/user_profile_provider.dart';
 import '../data/library_repository.dart';
 import '../domain/grammar_item.dart';
 import '../domain/vocab_item.dart';
@@ -51,7 +52,15 @@ class LibraryFilter {
 
 class LibraryFilterNotifier extends Notifier<LibraryFilter> {
   @override
-  LibraryFilter build() => const LibraryFilter();
+  LibraryFilter build() {
+    // Mặc định lọc theo level của user (mở app là thấy đúng trình độ);
+    // chip "Tất cả" vẫn cho phép bỏ lọc (setLevel(null)).
+    return LibraryFilter(
+      level: ref.watch(
+        userProfileProvider.select((profile) => profile.activeLevel),
+      ),
+    );
+  }
 
   void setLevel(int? level) {
     state = state.copyWith(level: level);

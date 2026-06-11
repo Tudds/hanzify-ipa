@@ -1,7 +1,10 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/constants/hsk_levels.dart';
+import '../../../core/providers/shared_preferences_provider.dart';
 import '../../../core/providers/user_profile_provider.dart';
 import '../../dictionary/application/library_state.dart';
 import '../../dictionary/domain/vocab_item.dart';
@@ -28,14 +31,23 @@ final quizPoolProvider = FutureProvider.autoDispose<QuizPool>((
 });
 
 class QuizLevelNotifier extends Notifier<int> {
+  static const _key = 'quiz_level';
+
   @override
   int build() {
+    final saved = ref.watch(sharedPreferencesProvider).getInt(_key);
+    if (saved != null && saved >= kMinHskLevel && saved <= kMaxHskLevel) {
+      return saved;
+    }
     return ref.watch(
       userProfileProvider.select((profile) => profile.activeLevel),
     );
   }
 
-  void set(int level) => state = level;
+  void set(int level) {
+    state = level;
+    unawaited(ref.read(sharedPreferencesProvider).setInt(_key, level));
+  }
 }
 
 final quizLevelProvider = NotifierProvider<QuizLevelNotifier, int>(

@@ -8,11 +8,13 @@ import 'package:hanzify/features/dictionary/data/library_repository.dart';
 import 'package:hanzify/features/dictionary/presentation/dictionary_screen.dart';
 import 'package:hanzify/features/dictionary/presentation/widgets/grammar_detail_sheet.dart';
 import 'package:hanzify/features/dictionary/presentation/widgets/vocab_detail_sheet.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-Widget _wrap() {
+import '../support/profile_overrides.dart';
+
+Widget _wrap(List<Override> overrides) {
   return ProviderScope(
     overrides: [
+      ...overrides,
       libraryRepositoryProvider.overrideWithValue(
         LibraryRepository(bundle: _FakeAssetBundle(_assets)),
       ),
@@ -22,10 +24,19 @@ Widget _wrap() {
 }
 
 void main() {
-  testWidgets('dictionary searches and filters vocab', (tester) async {
-    SharedPreferences.setMockInitialValues({});
+  testWidgets('dictionary defaults to profile level and filters vocab', (
+    tester,
+  ) async {
+    // Profile mặc định activeLevel = 2 → mở từ điển là thấy filter HSK 2.
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap());
+    await tester.pumpWidget(_wrap(overrides));
+    await tester.pumpAndSettle();
+
+    expect(find.text('学习'), findsOneWidget);
+    expect(find.text('奶茶'), findsNothing);
+
+    await tester.tap(find.text('Tất cả'));
     await tester.pumpAndSettle();
 
     expect(find.text('奶茶'), findsOneWidget);
@@ -49,9 +60,12 @@ void main() {
   testWidgets('dictionary opens vocab and grammar detail sheets', (
     tester,
   ) async {
-    SharedPreferences.setMockInitialValues({});
+    final overrides = await profileTestOverrides();
 
-    await tester.pumpWidget(_wrap());
+    await tester.pumpWidget(_wrap(overrides));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Tất cả'));
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('奶茶'));
