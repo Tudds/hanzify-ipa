@@ -91,14 +91,19 @@ class SupabaseLearningSyncDataSource implements LearningSyncDataSource {
     );
   }
 
+  /// PK của user_sync_state là (user_id, device_id); chưa phân thiết bị nên
+  /// dùng một dòng cố định per user.
+  static const _deviceId = 'primary';
+
   @override
   Future<void> updateStatus(String status, String? error) async {
     await client.from('user_sync_state').upsert({
       'user_id': _userId,
+      'device_id': _deviceId,
       'sync_status': status,
       'last_error': error,
       'updated_at': DateTime.now().toUtc().toIso8601String(),
-    }, onConflict: 'user_id');
+    }, onConflict: 'user_id,device_id');
   }
 
   Map<String, dynamic> _progressToSupabase(LearningUnitProgress progress) {
