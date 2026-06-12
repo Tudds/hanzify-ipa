@@ -224,11 +224,10 @@ class FsrsScheduler {
   double _initStability(SrsRating rating) => _weights[rating.index];
 
   double _initDifficulty(SrsRating rating) {
-    return _clamp(
-      _weights[4] - math.exp((rating.index) * _weights[5]) + 1,
-      1,
-      10,
-    );
+    // FSRS v4: D0(G) = w4 − (G − 3)·w5 với G = rating.index + 1 (1..4).
+    // Bộ _weights ở trên là tham số v4 nên phải dùng dạng tuyến tính này;
+    // dạng mũ của FSRS-4.5 với weights v4 sẽ làm Good/Easy bị clamp về 1.0.
+    return _clamp(_weights[4] - (rating.index - 2) * _weights[5], 1, 10);
   }
 
   double _forgettingCurve(int elapsedDays, double stability) {

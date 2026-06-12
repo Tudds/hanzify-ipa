@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import '../domain/fsrs.dart';
 
 class LearningSession {
@@ -33,10 +35,22 @@ class SessionBuilder {
     required List<SrsCard> newCards,
   }) {
     final pauseNew = shouldPauseNewLessons(dueCards.length);
-    final reviewCount = pauseNew
+    var reviewCount = pauseNew
         ? sessionSize
         : (sessionSize * reviewRatio).floor();
-    final newCount = pauseNew ? 0 : sessionSize - reviewCount;
+    var newCount = pauseNew ? 0 : sessionSize - reviewCount;
+    // Backfill: nguồn nào thiếu thẻ thì nhường quota cho nguồn còn lại,
+    // để phiên luôn đầy khi tổng thẻ có sẵn còn đủ (ví dụ review-only).
+    if (newCards.length < newCount) {
+      reviewCount += newCount - newCards.length;
+      newCount = newCards.length;
+    }
+    if (dueCards.length < reviewCount) {
+      newCount = math.min(
+        newCards.length,
+        newCount + reviewCount - dueCards.length,
+      );
+    }
     return LearningSession(
       reviewCards: dueCards.take(reviewCount).toList(),
       newCards: newCards.take(newCount).toList(),

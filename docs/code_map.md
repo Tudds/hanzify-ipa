@@ -198,6 +198,11 @@ Main active paths:
 - Chat uses dictionary/grammar/dialogue assets for local GenUI blocks.
 - Review uses `FsrsScheduler`, `StudySessionStore`, and local SRS cards/logs.
 
+FSRS notes:
+- `FsrsScheduler` là FSRS v4 (weights mặc định, `_initDifficulty` dạng tuyến tính D0(G) = w4 − (G−3)·w5). `requestRetention` lấy từ `profile.targetRetention` (default 0.9, key `profile_target_retention`, chưa expose UI).
+- `SessionBuilder` 70/30 + pause-new + backfill (nguồn thiếu thẻ thì nhường quota); `DueReviewScreen` đưa thẻ đến hạn qua builder với `sessionSize` từ profile.
+- Regression pins: `test/core/learning/fsrs_reference_test.dart`; content QA: `test/core/learning/content_conventions_test.dart`; audio CDN spot-check (chạy tay): `tool/check_audio_urls.py`.
+
 ---
 
 ## 10. Learning path core status

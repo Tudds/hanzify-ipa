@@ -27,12 +27,16 @@ class UserProfile {
     this.dailyMinutes = 10,
     this.priority = LearningPriority.vocabulary,
     this.onboardingComplete = false,
+    this.targetRetention = 0.9,
   });
 
   final int activeLevel;
   final int dailyMinutes;
   final LearningPriority priority;
   final bool onboardingComplete;
+
+  /// Mục tiêu tỉ lệ nhớ của FSRS (0.7–0.97). Chưa expose UI — settings-ready.
+  final double targetRetention;
 
   /// Số thẻ mỗi phiên ôn tập, suy ra từ thời lượng học mỗi ngày.
   int get sessionSize => switch (dailyMinutes) {
@@ -46,6 +50,7 @@ class UserProfile {
     int? dailyMinutes,
     LearningPriority? priority,
     bool? onboardingComplete,
+    double? targetRetention,
   }) {
     return UserProfile(
       activeLevel: (activeLevel ?? this.activeLevel).clamp(
@@ -55,6 +60,10 @@ class UserProfile {
       dailyMinutes: dailyMinutes ?? this.dailyMinutes,
       priority: priority ?? this.priority,
       onboardingComplete: onboardingComplete ?? this.onboardingComplete,
+      targetRetention: (targetRetention ?? this.targetRetention).clamp(
+        0.7,
+        0.97,
+      ),
     );
   }
 
@@ -64,10 +73,16 @@ class UserProfile {
         other.activeLevel == activeLevel &&
         other.dailyMinutes == dailyMinutes &&
         other.priority == priority &&
-        other.onboardingComplete == onboardingComplete;
+        other.onboardingComplete == onboardingComplete &&
+        other.targetRetention == targetRetention;
   }
 
   @override
-  int get hashCode =>
-      Object.hash(activeLevel, dailyMinutes, priority, onboardingComplete);
+  int get hashCode => Object.hash(
+    activeLevel,
+    dailyMinutes,
+    priority,
+    onboardingComplete,
+    targetRetention,
+  );
 }

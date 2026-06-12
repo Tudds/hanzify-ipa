@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/audio/audio_urls.dart';
 import '../../../core/learning/data/learning_asset_repository.dart';
 import '../../dictionary/data/library_repository.dart';
+import '../../dictionary/domain/vocab_item.dart';
 import '../domain/dictation.dart';
 
 /// Chọn câu luyện nghe-viết / dịch từ data offline.
@@ -25,13 +26,17 @@ class DictationExerciseService {
   /// Câu quá dài gõ rất mệt trên mobile — giới hạn để bài luyện ngắn gọn.
   static const maxHanziLength = 16;
 
+  /// Dưới ngưỡng này thì bổ sung câu ví dụ vocab để user không xoay vòng
+  /// vài câu (HSK4 chỉ có 3 câu hội thoại đủ ngắn cho mode nghe).
+  static const minVariety = 10;
+
   Future<DictationExercise?> nextExercise({
     required DictationMode mode,
     required int level,
     Random? rng,
   }) async {
     final candidates = await _collocationCandidates(mode, level);
-    if (candidates.isEmpty) {
+    if (candidates.length < minVariety) {
       candidates.addAll(await _vocabExampleCandidates(mode, level));
     }
     if (candidates.isEmpty) return null;
@@ -65,7 +70,13 @@ class DictationExerciseService {
     DictationMode mode,
     int level,
   ) async {
-    final vocab = await libraryRepository.loadVocabLevel(level);
+    final List<VocabItem> vocab;
+    try {
+      vocab = await libraryRepository.loadVocabLevel(level);
+    } catch (_) {
+      // Bundle không có file vocab level này (test fixture) → bỏ fallback.
+      return const [];
+    }
     return [
       for (final item in vocab)
         if (item.examples.isNotEmpty &&

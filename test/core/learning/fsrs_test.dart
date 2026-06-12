@@ -92,8 +92,15 @@ void main() {
         dueCards: due.take(10).toList(),
         newCards: fresh,
       );
+      // Quota review là 14 nhưng chỉ có 10 thẻ đến hạn → backfill nhường
+      // 4 slot còn lại cho thẻ mới để phiên luôn đầy (10 + 10 = 20).
       expect(mixed.reviewCards.length, 10);
-      expect(mixed.newCards.length, 6);
+      expect(mixed.newCards.length, 10);
+
+      // Khi đủ cả hai nguồn, tỉ lệ 70/30 giữ nguyên.
+      final balanced = builder.build(dueCards: due.take(14).toList(), newCards: fresh);
+      expect(balanced.reviewCards.length, 14);
+      expect(balanced.newCards.length, 6);
     },
   );
 }

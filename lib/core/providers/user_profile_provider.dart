@@ -11,6 +11,7 @@ class UserProfileNotifier extends Notifier<UserProfile> {
   static const _dailyMinutesKey = 'profile_daily_minutes';
   static const _priorityKey = 'profile_priority';
   static const _onboardingCompleteKey = 'profile_onboarding_complete';
+  static const _targetRetentionKey = 'profile_target_retention';
 
   @override
   UserProfile build() {
@@ -23,7 +24,16 @@ class UserProfileNotifier extends Notifier<UserProfile> {
       dailyMinutes: prefs.getInt(_dailyMinutesKey) ?? 10,
       priority: LearningPriority.parse(prefs.getString(_priorityKey)),
       onboardingComplete: prefs.getBool(_onboardingCompleteKey) ?? false,
+      targetRetention: (prefs.getDouble(_targetRetentionKey) ?? 0.9).clamp(
+        0.7,
+        0.97,
+      ),
     );
+  }
+
+  void setTargetRetention(double retention) {
+    state = state.copyWith(targetRetention: retention);
+    _persist();
   }
 
   void setActiveLevel(int level) {
@@ -61,6 +71,7 @@ class UserProfileNotifier extends Notifier<UserProfile> {
     unawaited(prefs.setInt(_dailyMinutesKey, state.dailyMinutes));
     unawaited(prefs.setString(_priorityKey, state.priority.name));
     unawaited(prefs.setBool(_onboardingCompleteKey, state.onboardingComplete));
+    unawaited(prefs.setDouble(_targetRetentionKey, state.targetRetention));
   }
 }
 

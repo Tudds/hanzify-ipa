@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../core/config/supabase_config.dart';
 import '../../../core/learning/fsrs.dart';
+import '../../../core/learning/session_builder.dart';
 import '../../../core/learning/study_session_controller.dart';
 import '../../../core/learning/study_session_store.dart';
 import '../../../core/providers/user_profile_provider.dart';
@@ -20,11 +21,13 @@ class DueReviewScreen extends ConsumerStatefulWidget {
   const DueReviewScreen({
     super.key,
     this.studySessionStore = const StudySessionStore(),
-    this.scheduler = const FsrsScheduler(),
+    this.scheduler,
   });
 
   final StudySessionStore studySessionStore;
-  final FsrsScheduler scheduler;
+
+  /// Null → dùng scheduler theo `profile.targetRetention` (mặc định 0.9).
+  final FsrsScheduler? scheduler;
 
   @override
   ConsumerState<DueReviewScreen> createState() => _DueReviewScreenState();
@@ -32,6 +35,12 @@ class DueReviewScreen extends ConsumerStatefulWidget {
 
 class _DueReviewScreenState extends ConsumerState<DueReviewScreen> {
   var _reviewed = 0;
+
+  FsrsScheduler get _scheduler =>
+      widget.scheduler ??
+      FsrsScheduler(
+        requestRetention: ref.read(userProfileProvider).targetRetention,
+      );
 
   /// Icon tài khoản — sync sống ở tab Ôn tập vì tiến độ nằm ở đây.
   /// Ẩn hoàn toàn khi Supabase chưa cấu hình (app local-only).
@@ -49,7 +58,7 @@ class _DueReviewScreenState extends ConsumerState<DueReviewScreen> {
     SrsCard card,
     SrsRating rating,
   ) async {
-    final result = widget.scheduler.review(card, rating, DateTime.now());
+    final result = _scheduler.review(card, rating, DateTime.now());
     final cards = Map<String, SrsCard>.from(snapshot.cards);
     final logs = List<SrsReviewLog>.from(snapshot.logs);
     cards[result.card.id] = result.card;
@@ -98,16 +107,17 @@ class _DueReviewScreenState extends ConsumerState<DueReviewScreen> {
         ],
       ),
       data: (data) {
-        final dueCards = widget.scheduler.dueCards(
-          data.cards.values,
-          DateTime.now(),
-        );
+        final dueCards = _scheduler.dueCards(data.cards.values, DateTime.now());
         final sessionSize = ref.watch(
           userProfileProvider.select((profile) => profile.sessionSize),
         );
-        // Giới hạn phiên theo thời lượng học/ngày user đã chọn; phần còn lại
-        // vẫn đến hạn và hiện lại ở phiên kế tiếp.
-        final sessionRemaining = (sessionSize - _reviewed).clamp(
+        // Phiên đi qua SessionBuilder (70/30 + pause-new) — hiện chưa trộn
+        // thẻ mới nên backfill đưa toàn bộ quota cho review; phần thẻ vượt
+        // quota vẫn đến hạn và hiện lại ở phiên kế tiếp.
+        final session = SessionBuilder(
+          sessionSize: sessionSize,
+        ).build(dueCards: dueCards, newCards: const []);
+        final sessionRemaining = (session.cards.length - _reviewed).clamp(
           0,
           dueCards.length,
         );
