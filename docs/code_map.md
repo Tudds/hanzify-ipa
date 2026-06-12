@@ -94,6 +94,13 @@ lib/core/widgets/
 
 Motion uses `flutter_animate` with short entrance/micro-interaction timings and `performanceProvider` as a low-motion/performance escape hatch.
 
+### Theme (skill flutter-ui)
+
+- `lib/core/theme/app_theme.dart` — `AppTheme.dark`/`AppTheme.light` từ `ColorScheme.fromSeed(kSeedColor, fidelity)` + `UITokens` context extension (`context.colors/text/semantic/isDark`).
+- `lib/core/theme/colors.dart` — `kSeedColor` + `AppSemanticColors` ThemeExtension (fallback theo brightness khi theme không đăng ký extension — test pump MaterialApp trần vẫn chạy).
+- `lib/core/providers/theme_mode_provider.dart` — `themeModeProvider` persisted (key `theme_mode`), default dark.
+- Font UI: Inter self-host subset (đủ glyph Việt + pinyin tones); Manrope vẫn bundle nhưng không còn là default.
+
 ---
 
 ## 5. Shorts

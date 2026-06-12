@@ -5,6 +5,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/providers/performance_provider.dart';
+import '../../../../core/theme/app_theme.dart';
 import '../../../../core/widgets/hanzify_haptic.dart';
 import '../../../dictionary/domain/vocab_item.dart';
 import '../../application/quiz_pool.dart';
@@ -233,14 +234,16 @@ class _ChoiceButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+    final semantic = context.semantic;
     final background = switch (state) {
       _ChoiceState.idle => colors.surfaceContainerHigh,
-      _ChoiceState.correct => const Color(0xFF1B5E4B),
-      _ChoiceState.wrong => const Color(0xFF7B2434),
+      _ChoiceState.correct => semantic.success.withValues(alpha: 0.22),
+      _ChoiceState.wrong => semantic.danger.withValues(alpha: 0.22),
       _ChoiceState.dim => colors.surfaceContainerHigh.withValues(alpha: 0.45),
     };
     final foreground = switch (state) {
-      _ChoiceState.correct || _ChoiceState.wrong => Colors.white,
+      _ChoiceState.correct => semantic.success,
+      _ChoiceState.wrong => semantic.danger,
       _ => colors.onSurface,
     };
     return FilledButton(

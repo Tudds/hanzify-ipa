@@ -116,6 +116,12 @@ class _LearningDialogueAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Màu chữ tính theo độ sáng nền avatar (màu speaker là dữ liệu động,
+    // không có cặp on-color trong scheme).
+    final onAvatar =
+        ThemeData.estimateBrightnessForColor(color) == Brightness.dark
+        ? Theme.of(context).colorScheme.onInverseSurface
+        : Theme.of(context).colorScheme.inverseSurface;
     return Container(
       width: 32,
       height: 32,
@@ -123,8 +129,8 @@ class _LearningDialogueAvatar extends StatelessWidget {
       decoration: BoxDecoration(color: color, shape: BoxShape.circle),
       child: Text(
         initial,
-        style: const TextStyle(
-          color: Colors.white,
+        style: TextStyle(
+          color: onAvatar,
           fontWeight: FontWeight.w700,
           fontSize: 14,
         ),

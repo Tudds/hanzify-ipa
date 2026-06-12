@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../theme/app_theme.dart';
+
 enum LearningAnswerChoiceState { idle, correct, wrong, disabled }
 
 double _resolvedWidth(BuildContext context, BoxConstraints constraints) {
@@ -30,18 +32,21 @@ class LearningAnswerChoiceButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+    final semantic = context.semantic;
     final enabled =
         state == LearningAnswerChoiceState.idle && onPressed != null;
     final background = switch (state) {
       LearningAnswerChoiceState.idle => colors.surfaceContainerHighest,
-      LearningAnswerChoiceState.correct => const Color(0xFF1B5E4B),
-      LearningAnswerChoiceState.wrong => const Color(0xFF7B2434),
+      LearningAnswerChoiceState.correct =>
+        semantic.success.withValues(alpha: 0.22),
+      LearningAnswerChoiceState.wrong =>
+        semantic.danger.withValues(alpha: 0.22),
       LearningAnswerChoiceState.disabled =>
         colors.surfaceContainerHighest.withValues(alpha: 0.45),
     };
     final foreground = switch (state) {
-      LearningAnswerChoiceState.correct ||
-      LearningAnswerChoiceState.wrong => Colors.white,
+      LearningAnswerChoiceState.correct => semantic.success,
+      LearningAnswerChoiceState.wrong => semantic.danger,
       LearningAnswerChoiceState.disabled => colors.onSurfaceVariant,
       LearningAnswerChoiceState.idle => colors.onSurface,
     };

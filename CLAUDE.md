@@ -98,10 +98,10 @@ Content/data generation scripts live in `tool/`. Normal feature work should **no
 
 ## Design System
 
-**Single dark Material 3 theme** built by `AppTheme.dark` in `lib/core/theme/app_theme.dart` (no runtime light/dark/sepia switching).
-- `colors.dart` — `AppColors` raw color constants, wired into the `ColorScheme`.
-- `typography.dart` — `AppTypography` helpers and font fallbacks. Default UI font is **Manrope**; Hanzi uses Noto Sans/Serif SC fallbacks; `AppTypography.hanziDisplay(...)` for large Hanzi.
-- Read colors via `Theme.of(context).colorScheme`.
+Theo skill **`.claude/skills/flutter-ui`** (Premium Dark, M3 seed-based). `AppTheme.dark` / `AppTheme.light` trong `lib/core/theme/app_theme.dart` đều sinh từ `ColorScheme.fromSeed(kSeedColor, DynamicSchemeVariant.fidelity)`. Mặc định dark (`themeModeProvider`, persisted); light đã build sẵn nhưng chưa expose cho user đến khi audit xong từng màn hình.
+- `colors.dart` — `kSeedColor` (Royal Purple 0xFF7C5CFF) + `AppSemanticColors` ThemeExtension (success/warning/danger, dark+light). KHÔNG còn class AppColors.
+- `typography.dart` — `AppSpacing` (thang 4pt), `AppRadii` (chip 8 / button 12 / card 16 / sheet 24), `AppTypography` (type scale + `hanziDisplay`/`pinyin`). Default UI font là **Inter** (self-host subset, đủ glyph Việt + pinyin — không dùng google_fonts vì COEP); Hanzi dùng Noto Serif/Sans SC cục bộ.
+- Đọc token qua extension `UITokens` (`app_theme.dart`): `context.colors.*`, `context.text.*`, `context.semantic.success/warning/danger`. Không hardcode hex/`Colors.white/black` cho content (shadow/scrim đen được phép).
 
 **Performance mode**: when `performanceProvider == true`, disable `BackdropFilter`, heavy `flutter_animate` effects, and blur. Animated widgets must check it (`readPerformance(ref)`) before applying expensive effects.
 
