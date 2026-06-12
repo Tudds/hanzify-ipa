@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../core/config/supabase_config.dart';
 import '../../../core/learning/fsrs.dart';
 import '../../../core/learning/study_session_controller.dart';
 import '../../../core/learning/study_session_store.dart';
 import '../../../core/providers/user_profile_provider.dart';
 import '../../../core/theme/typography.dart';
 import '../../../core/widgets/sliver_page_scaffold.dart';
+import '../../account/presentation/account_sheet.dart';
 
 final dueReviewSnapshotProvider = FutureProvider.autoDispose
     .family<StudySessionSnapshot, StudySessionStore>((ref, store) {
@@ -30,6 +32,17 @@ class DueReviewScreen extends ConsumerStatefulWidget {
 
 class _DueReviewScreenState extends ConsumerState<DueReviewScreen> {
   var _reviewed = 0;
+
+  /// Icon tài khoản — sync sống ở tab Ôn tập vì tiến độ nằm ở đây.
+  /// Ẩn hoàn toàn khi Supabase chưa cấu hình (app local-only).
+  List<Widget> get _accountActions => [
+    if (SupabaseConfig.isConfigured)
+      IconButton(
+        tooltip: 'Tài khoản',
+        icon: const Icon(Icons.account_circle_outlined),
+        onPressed: () => showAccountSheet(context),
+      ),
+  ];
 
   Future<void> _rate(
     StudySessionSnapshot snapshot,
@@ -59,22 +72,24 @@ class _DueReviewScreenState extends ConsumerState<DueReviewScreen> {
     );
 
     return snapshot.when(
-      loading: () => const SliverPageScaffold(
+      loading: () => SliverPageScaffold(
         title: 'Ôn tập',
         subtitle: 'FSRS review từ tiến độ local.',
         headerAssetPath: 'assets/images/gen_header_review.svg',
-        slivers: [
+        actions: _accountActions,
+        slivers: const [
           SliverFillRemaining(
             hasScrollBody: false,
             child: Center(child: CircularProgressIndicator()),
           ),
         ],
       ),
-      error: (_, _) => const SliverPageScaffold(
+      error: (_, _) => SliverPageScaffold(
         title: 'Ôn tập',
         subtitle: 'FSRS review từ tiến độ local.',
         headerAssetPath: 'assets/images/gen_header_review.svg',
-        slivers: [
+        actions: _accountActions,
+        slivers: const [
           SliverStateMessage(
             icon: Icons.error_outline_rounded,
             title: 'Không tải được review',
@@ -101,6 +116,7 @@ class _DueReviewScreenState extends ConsumerState<DueReviewScreen> {
             title: 'Ôn tập',
             subtitle: 'FSRS review từ tiến độ local.',
             headerAssetPath: 'assets/images/gen_header_review.svg',
+            actions: _accountActions,
             slivers: [
               SliverFillRemaining(
                 hasScrollBody: false,
@@ -115,6 +131,7 @@ class _DueReviewScreenState extends ConsumerState<DueReviewScreen> {
           subtitle:
               '${dueCards.length} thẻ đến hạn · phiên này $sessionRemaining thẻ.',
           headerAssetPath: 'assets/images/gen_header_review.svg',
+          actions: _accountActions,
           slivers: [
             SliverToBoxAdapter(
               child: _ReviewCard(

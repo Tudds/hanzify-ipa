@@ -5,6 +5,10 @@ import '../learning_path/learning_progress.dart';
 import 'learning_sync_models.dart';
 
 abstract class LearningSyncDataSource {
+  /// Sync chỉ chạy khi đã đăng nhập — [LearningSyncService] kiểm tra cờ này
+  /// trước khi pull/push để không crash lúc chưa có user.
+  bool get hasUser;
+
   Future<LearningSyncSnapshot> pull();
   Future<void> pushProgress(List<LearningUnitProgress> units);
   Future<void> pushCards(List<SrsCard> cards);
@@ -17,7 +21,16 @@ class SupabaseLearningSyncDataSource implements LearningSyncDataSource {
 
   final SupabaseClient client;
 
-  String get _userId => client.auth.currentUser!.id;
+  @override
+  bool get hasUser => client.auth.currentUser != null;
+
+  String get _userId {
+    final user = client.auth.currentUser;
+    if (user == null) {
+      throw StateError('Sync requires a signed-in user');
+    }
+    return user.id;
+  }
 
   @override
   Future<LearningSyncSnapshot> pull() async {

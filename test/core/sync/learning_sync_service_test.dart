@@ -79,10 +79,67 @@ void main() {
 
     expect(dataSource.statuses, contains('error'));
   });
+
+  test('sync is a silent no-op when signed out', () async {
+    SharedPreferences.setMockInitialValues({});
+    final preferences = await SharedPreferences.getInstance();
+    final dataSource = _FakeLearningSyncDataSource(
+      remote: const LearningSyncSnapshot(
+        progressUnits: [],
+        srsCards: [],
+        reviewLogs: [],
+      ),
+      hasUser: false,
+    );
+    final phases = <LearningSyncPhase>[];
+
+    await LearningSyncService(
+      progressStore: LearningProgressStore(preferences: preferences),
+      studySessionStore: StudySessionStore(preferences: preferences),
+      dataSource: dataSource,
+      observer: (phase, {error}) => phases.add(phase),
+    ).sync();
+
+    expect(dataSource.pullCount, 0);
+    expect(dataSource.statuses, isEmpty);
+    expect(phases, isEmpty);
+  });
+
+  test('observer reports started then failed on pull error', () async {
+    SharedPreferences.setMockInitialValues({});
+    final preferences = await SharedPreferences.getInstance();
+    final dataSource = _FakeLearningSyncDataSource(
+      remote: const LearningSyncSnapshot(
+        progressUnits: [],
+        srsCards: [],
+        reviewLogs: [],
+      ),
+      failPull: true,
+    );
+    final phases = <LearningSyncPhase>[];
+    String? reportedError;
+
+    await LearningSyncService(
+      progressStore: LearningProgressStore(preferences: preferences),
+      studySessionStore: StudySessionStore(preferences: preferences),
+      dataSource: dataSource,
+      observer: (phase, {error}) {
+        phases.add(phase);
+        reportedError ??= error;
+      },
+    ).sync();
+
+    expect(phases, [LearningSyncPhase.started, LearningSyncPhase.failed]);
+    expect(reportedError, contains('offline'));
+  });
 }
 
 class _FakeLearningSyncDataSource implements LearningSyncDataSource {
-  _FakeLearningSyncDataSource({required this.remote, this.failPull = false});
+  _FakeLearningSyncDataSource({
+    required this.remote,
+    this.failPull = false,
+    this.hasUser = true,
+  });
 
   final LearningSyncSnapshot remote;
   final bool failPull;
@@ -92,7 +149,13 @@ class _FakeLearningSyncDataSource implements LearningSyncDataSource {
   final pushedLogs = <SrsReviewLog>[];
 
   @override
+  final bool hasUser;
+
+  var pullCount = 0;
+
+  @override
   Future<LearningSyncSnapshot> pull() async {
+    pullCount += 1;
     if (failPull) throw StateError('offline');
     return remote;
   }
