@@ -1,0 +1,28 @@
+<svg width="1024" height="512" viewBox="0 0 1024 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="512" fill="#101326"/>
+  <path d="M0 384C116 322 220 330 326 372C470 430 632 418 772 324C876 254 960 244 1040 272V512H0V384Z" fill="url(#chatWave)"/>
+  <circle cx="742" cy="178" r="170" fill="#47D7A0" opacity="0.13"/>
+  <g transform="translate(538 98)">
+    <rect x="0" y="46" width="314" height="170" rx="34" fill="#171B33" stroke="#7C5CFF" stroke-opacity="0.55" stroke-width="3"/>
+    <path d="M72 216L42 268L124 218" fill="#171B33" stroke="#7C5CFF" stroke-opacity="0.55" stroke-width="3"/>
+    <circle cx="78" cy="132" r="18" fill="#7C5CFF"/>
+    <circle cx="150" cy="132" r="18" fill="#47D7A0"/>
+    <circle cx="222" cy="132" r="18" fill="#F6C768"/>
+  </g>
+  <g transform="translate(284 146)" opacity="0.94">
+    <rect width="216" height="150" rx="30" fill="#202641" stroke="#47D7A0" stroke-opacity="0.52" stroke-width="3"/>
+    <path d="M162 150L196 200L114 152" fill="#202641" stroke="#47D7A0" stroke-opacity="0.52" stroke-width="3"/>
+    <rect x="40" y="46" width="118" height="14" rx="7" fill="#FFFFFF" opacity="0.2"/>
+    <rect x="40" y="78" width="144" height="14" rx="7" fill="#F6C768" opacity="0.7"/>
+    <rect x="40" y="110" width="92" height="14" rx="7" fill="#47D7A0" opacity="0.7"/>
+  </g>
+  <path d="M174 182C258 92 388 78 500 154" stroke="#7C5CFF" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 18"/>
+  <path d="M198 222L210 248L236 260L210 272L198 298L186 272L160 260L186 248L198 222Z" fill="#F6C768"/>
+  <defs>
+    <linearGradient id="chatWave" x1="0" y1="308" x2="1040" y2="492" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C5CFF" stop-opacity="0.25"/>
+      <stop offset="0.52" stop-color="#47D7A0" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#F6C768" stop-opacity="0.16"/>
+    </linearGradient>
+  </defs>
+</svg>

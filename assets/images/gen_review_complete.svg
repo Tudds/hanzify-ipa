@@ -1,0 +1,25 @@
+<svg width="1024" height="512" viewBox="0 0 1024 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="512" fill="#101326"/>
+  <circle cx="512" cy="238" r="176" fill="#47D7A0" opacity="0.13"/>
+  <circle cx="674" cy="184" r="118" fill="#F6C768" opacity="0.12"/>
+  <path d="M0 390C132 310 268 320 392 370C534 428 686 406 820 326C912 272 984 266 1040 294V512H0V390Z" fill="url(#doneWave)"/>
+  <g transform="translate(372 82)">
+    <path d="M84 44H260V160C260 250 204 310 172 328C140 310 84 250 84 160V44Z" fill="#202641" stroke="#7C5CFF" stroke-width="5"/>
+    <path d="M48 78H84V142C84 190 58 222 22 236C16 176 22 116 48 78Z" fill="#171B33" stroke="#F6C768" stroke-width="5"/>
+    <path d="M260 78H296C322 116 328 176 322 236C286 222 260 190 260 142V78Z" fill="#171B33" stroke="#F6C768" stroke-width="5"/>
+    <path d="M116 174L154 212L228 132" stroke="#47D7A0" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="134" y="328" width="76" height="48" rx="16" fill="#F6C768"/>
+    <rect x="90" y="376" width="164" height="34" rx="17" fill="#7C5CFF"/>
+  </g>
+  <g fill="#F6C768">
+    <path d="M262 154L274 180L300 192L274 204L262 230L250 204L224 192L250 180L262 154Z"/>
+    <circle cx="796" cy="164" r="10"/>
+  </g>
+  <defs>
+    <linearGradient id="doneWave" x1="0" y1="318" x2="1040" y2="486" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#47D7A0" stop-opacity="0.23"/>
+      <stop offset="0.54" stop-color="#7C5CFF" stop-opacity="0.23"/>
+      <stop offset="1" stop-color="#F6C768" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+</svg>

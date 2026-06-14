@@ -1,0 +1,403 @@
+{
+  "version": "1.0",
+  "heads": {
+    "主张": [
+      "verb.cognition",
+      "verb.communication"
+    ],
+    "举办": [
+      "verb.preparable",
+      "verb.work_study"
+    ],
+    "举行": [
+      "verb.preparable",
+      "verb.work_study"
+    ],
+    "乘坐": [
+      "verb.movement"
+    ],
+    "买": [
+      "verb.action.physical"
+    ],
+    "了解": [
+      "verb.cognition"
+    ],
+    "介绍": [
+      "verb.communication"
+    ],
+    "以为": [
+      "verb.cognition"
+    ],
+    "健康": [
+      "adj.evaluative.health"
+    ],
+    "先进": [
+      "adj.physical_property"
+    ],
+    "写": [
+      "verb.skill",
+      "verb.action.physical",
+      "verb.work_study"
+    ],
+    "决定": [
+      "verb.cognition",
+      "verb.preparable"
+    ],
+    "准备": [
+      "verb.preparable"
+    ],
+    "到": [
+      "verb.movement"
+    ],
+    "制作": [
+      "verb.action.physical",
+      "verb.work_study"
+    ],
+    "前往": [
+      "verb.movement"
+    ],
+    "勇敢": [
+      "adj.gradable.person"
+    ],
+    "卖": [
+      "verb.action.physical"
+    ],
+    "厚": [
+      "adj.physical_property"
+    ],
+    "去": [
+      "verb.movement"
+    ],
+    "参加": [
+      "verb.preparable",
+      "verb.communication"
+    ],
+    "反映": [
+      "verb.cognition",
+      "verb.communication"
+    ],
+    "发展": [
+      "verb.work_study"
+    ],
+    "发表": [
+      "verb.communication"
+    ],
+    "可怕": [
+      "adj.subjective"
+    ],
+    "吃": [
+      "verb.action.physical"
+    ],
+    "听": [
+      "verb.skill",
+      "verb.action.physical"
+    ],
+    "唱": [
+      "verb.skill",
+      "verb.action.physical"
+    ],
+    "喝": [
+      "verb.action.physical"
+    ],
+    "回到": [
+      "verb.movement"
+    ],
+    "坐": [
+      "verb.movement"
+    ],
+    "坚强": [
+      "adj.gradable.person"
+    ],
+    "培养": [
+      "verb.work_study"
+    ],
+    "复习": [
+      "verb.work_study"
+    ],
+    "大": [
+      "adj.physical_property"
+    ],
+    "好": [
+      "adj.evaluative.health"
+    ],
+    "学": [
+      "verb.work_study"
+    ],
+    "学习": [
+      "verb.work_study"
+    ],
+    "安排": [
+      "verb.preparable",
+      "verb.work_study"
+    ],
+    "安静": [
+      "adj.physical_property"
+    ],
+    "寒冷": [
+      "adj.physical_property"
+    ],
+    "小": [
+      "adj.physical_property"
+    ],
+    "工作": [
+      "verb.work_study"
+    ],
+    "希望": [
+      "verb.cognition"
+    ],
+    "干净": [
+      "adj.physical_property"
+    ],
+    "幸福": [
+      "adj.gradable.person",
+      "adj.subjective"
+    ],
+    "建立": [
+      "verb.work_study"
+    ],
+    "建议": [
+      "verb.cognition",
+      "verb.communication"
+    ],
+    "开心": [
+      "adj.gradable.person",
+      "adj.subjective"
+    ],
+    "快乐": [
+      "adj.gradable.person",
+      "adj.subjective"
+    ],
+    "怀念": [
+      "verb.cognition"
+    ],
+    "总结": [
+      "verb.work_study",
+      "verb.cognition"
+    ],
+    "想": [
+      "verb.cognition"
+    ],
+    "成熟": [
+      "adj.gradable.person"
+    ],
+    "戴": [
+      "verb.action.physical"
+    ],
+    "打": [
+      "verb.action.physical"
+    ],
+    "打印": [
+      "verb.action.physical",
+      "verb.work_study"
+    ],
+    "打扫": [
+      "verb.action.physical",
+      "verb.daily"
+    ],
+    "打算": [
+      "verb.cognition",
+      "verb.preparable"
+    ],
+    "报名": [
+      "verb.preparable"
+    ],
+    "报道": [
+      "verb.communication"
+    ],
+    "拿": [
+      "verb.action.physical"
+    ],
+    "提供": [
+      "verb.work_study"
+    ],
+    "搬": [
+      "verb.movement",
+      "verb.preparable"
+    ],
+    "操作": [
+      "verb.action.physical",
+      "verb.work_study"
+    ],
+    "支持": [
+      "verb.cognition",
+      "verb.communication"
+    ],
+    "放": [
+      "verb.action.physical"
+    ],
+    "整理": [
+      "verb.action.physical",
+      "verb.daily"
+    ],
+    "新": [
+      "adj.physical_property"
+    ],
+    "新鲜": [
+      "adj.physical_property"
+    ],
+    "旧": [
+      "adj.physical_property"
+    ],
+    "期待": [
+      "verb.cognition"
+    ],
+    "来": [
+      "verb.movement"
+    ],
+    "来到": [
+      "verb.movement"
+    ],
+    "欢迎": [
+      "verb.communication"
+    ],
+    "治疗": [
+      "verb.healthy"
+    ],
+    "注意": [
+      "verb.cognition"
+    ],
+    "漂亮": [
+      "adj.physical_property"
+    ],
+    "热心": [
+      "adj.gradable.person",
+      "adj.subjective"
+    ],
+    "照顾": [
+      "verb.daily",
+      "verb.action.physical"
+    ],
+    "用": [
+      "verb.skill",
+      "verb.action.physical"
+    ],
+    "申请": [
+      "verb.preparable",
+      "verb.work_study"
+    ],
+    "痛苦": [
+      "adj.subjective"
+    ],
+    "登": [
+      "verb.movement"
+    ],
+    "相信": [
+      "verb.cognition"
+    ],
+    "看": [
+      "verb.action.physical"
+    ],
+    "研究": [
+      "verb.work_study",
+      "verb.cognition"
+    ],
+    "穿": [
+      "verb.action.physical"
+    ],
+    "练": [
+      "verb.work_study"
+    ],
+    "练习": [
+      "verb.healthy",
+      "verb.daily",
+      "verb.work_study"
+    ],
+    "经过": [
+      "verb.movement",
+      "verb.cognition"
+    ],
+    "维护": [
+      "verb.work_study"
+    ],
+    "美丽": [
+      "adj.physical_property"
+    ],
+    "考察": [
+      "verb.work_study"
+    ],
+    "考虑": [
+      "verb.cognition"
+    ],
+    "聪明": [
+      "adj.gradable.person"
+    ],
+    "能干": [
+      "adj.gradable.person"
+    ],
+    "觉得": [
+      "verb.cognition"
+    ],
+    "解决": [
+      "verb.work_study",
+      "verb.cognition"
+    ],
+    "说": [
+      "verb.skill",
+      "verb.communication"
+    ],
+    "请问": [
+      "verb.communication"
+    ],
+    "读": [
+      "verb.skill",
+      "verb.work_study"
+    ],
+    "谢谢": [
+      "verb.communication"
+    ],
+    "走": [
+      "verb.movement"
+    ],
+    "赶": [
+      "verb.movement"
+    ],
+    "跑": [
+      "verb.movement",
+      "verb.healthy",
+      "verb.daily"
+    ],
+    "跳远": [
+      "verb.healthy",
+      "verb.daily"
+    ],
+    "辛苦": [
+      "adj.subjective"
+    ],
+    "过": [
+      "verb.movement"
+    ],
+    "进行": [
+      "verb.work_study"
+    ],
+    "通知": [
+      "verb.communication"
+    ],
+    "锻炼": [
+      "verb.healthy",
+      "verb.daily"
+    ],
+    "需要": [
+      "verb.cognition"
+    ],
+    "预测": [
+      "verb.cognition"
+    ],
+    "预计": [
+      "verb.cognition"
+    ],
+    "预防": [
+      "verb.healthy"
+    ],
+    "骑": [
+      "verb.skill",
+      "verb.movement"
+    ],
+    "高": [
+      "adj.physical_property"
+    ],
+    "高兴": [
+      "adj.gradable.person",
+      "adj.subjective"
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="frameStroke" x1="68" y1="54" x2="832" y2="1146" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8D7CFF"/>
+      <stop offset="0.48" stop-color="#47D7A0"/>
+      <stop offset="1" stop-color="#F6C768"/>
+    </linearGradient>
+  </defs>
+  <g id="outer-frame">
+    <rect x="38" y="38" width="824" height="1124" rx="58" stroke="url(#frameStroke)" stroke-width="4" stroke-opacity="0.42"/>
+    <rect x="58" y="58" width="784" height="1084" rx="44" stroke="#F5F1FF" stroke-width="2" stroke-opacity="0.08"/>
+  </g>
+  <g id="practice-grid" stroke-linecap="round">
+    <g stroke="#8D7CFF" stroke-width="2" stroke-opacity="0.08">
+      <path d="M112 142H382"/>
+      <path d="M112 190H382"/>
+      <path d="M112 238H382"/>
+      <path d="M112 286H382"/>
+      <path d="M112 334H382"/>
+      <path d="M112 382H382"/>
+      <path d="M112 142V382"/>
+      <path d="M166 142V382"/>
+      <path d="M220 142V382"/>
+      <path d="M274 142V382"/>
+      <path d="M328 142V382"/>
+      <path d="M382 142V382"/>
+    </g>
+    <g stroke="#47D7A0" stroke-width="2" stroke-opacity="0.07">
+      <path d="M518 818H788"/>
+      <path d="M518 866H788"/>
+      <path d="M518 914H788"/>
+      <path d="M518 962H788"/>
+      <path d="M518 1010H788"/>
+      <path d="M518 1058H788"/>
+      <path d="M518 818V1058"/>
+      <path d="M572 818V1058"/>
+      <path d="M626 818V1058"/>
+      <path d="M680 818V1058"/>
+      <path d="M734 818V1058"/>
+      <path d="M788 818V1058"/>
+    </g>
+  </g>
+  <g id="corner-ornaments" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M108 120C108 94 126 76 152 76H220" stroke="#8D7CFF" stroke-width="7" stroke-opacity="0.36"/>
+    <path d="M76 196V152C76 128 88 108 108 96" stroke="#47D7A0" stroke-width="5" stroke-opacity="0.28"/>
+    <path d="M792 120C792 94 774 76 748 76H680" stroke="#47D7A0" stroke-width="7" stroke-opacity="0.34"/>
+    <path d="M824 196V152C824 128 812 108 792 96" stroke="#F6C768" stroke-width="5" stroke-opacity="0.26"/>
+    <path d="M108 1080C108 1106 126 1124 152 1124H220" stroke="#F6C768" stroke-width="7" stroke-opacity="0.34"/>
+    <path d="M76 1004V1048C76 1072 88 1092 108 1104" stroke="#8D7CFF" stroke-width="5" stroke-opacity="0.26"/>
+    <path d="M792 1080C792 1106 774 1124 748 1124H680" stroke="#8D7CFF" stroke-width="7" stroke-opacity="0.34"/>
+    <path d="M824 1004V1048C824 1072 812 1092 792 1104" stroke="#47D7A0" stroke-width="5" stroke-opacity="0.28"/>
+  </g>
+  <g id="edge-accents" stroke-linecap="round">
+    <path d="M304 88H394" stroke="#F6C768" stroke-width="5" stroke-opacity="0.28"/>
+    <path d="M506 88H596" stroke="#47D7A0" stroke-width="5" stroke-opacity="0.24"/>
+    <path d="M304 1112H394" stroke="#47D7A0" stroke-width="5" stroke-opacity="0.24"/>
+    <path d="M506 1112H596" stroke="#F6C768" stroke-width="5" stroke-opacity="0.28"/>
+    <path d="M88 468V558" stroke="#8D7CFF" stroke-width="5" stroke-opacity="0.22"/>
+    <path d="M88 642V732" stroke="#47D7A0" stroke-width="5" stroke-opacity="0.2"/>
+    <path d="M812 468V558" stroke="#47D7A0" stroke-width="5" stroke-opacity="0.2"/>
+    <path d="M812 642V732" stroke="#8D7CFF" stroke-width="5" stroke-opacity="0.22"/>
+  </g>
+  <g id="study-strokes" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M642 214C676 196 718 198 754 220" stroke="#F6C768" stroke-width="8" stroke-opacity="0.15"/>
+    <path d="M626 268C678 282 724 276 774 248" stroke="#47D7A0" stroke-width="7" stroke-opacity="0.12"/>
+    <path d="M152 934C198 910 254 914 300 946" stroke="#8D7CFF" stroke-width="8" stroke-opacity="0.14"/>
+    <path d="M136 1000C194 1018 258 1012 316 974" stroke="#F6C768" stroke-width="7" stroke-opacity="0.12"/>
+  </g>
+  <g id="quiet-marks">
+    <path d="M438 76L448 100L472 110L448 120L438 144L428 120L404 110L428 100L438 76Z" fill="#8D7CFF" fill-opacity="0.18"/>
+    <path d="M462 1056L472 1080L496 1090L472 1100L462 1124L452 1100L428 1090L452 1080L462 1056Z" fill="#47D7A0" fill-opacity="0.16"/>
+    <rect x="122" y="520" width="14" height="14" rx="3" fill="#F6C768" fill-opacity="0.16"/>
+    <rect x="764" y="666" width="14" height="14" rx="3" fill="#F6C768" fill-opacity="0.16"/>
+    <rect x="152" y="690" width="10" height="10" rx="2" fill="#47D7A0" fill-opacity="0.14"/>
+    <rect x="738" y="492" width="10" height="10" rx="2" fill="#8D7CFF" fill-opacity="0.14"/>
+  </g>
+</svg>

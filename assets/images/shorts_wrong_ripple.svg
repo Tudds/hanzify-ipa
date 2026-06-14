@@ -1,0 +1,32 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="ripple-rings" stroke-linecap="round">
+    <circle cx="120" cy="120" r="82" stroke="#FF8A80" stroke-width="3" stroke-opacity="0.42" stroke-dasharray="38 18 10 20"/>
+    <circle cx="120" cy="120" r="66" stroke="#C78BFF" stroke-width="2" stroke-opacity="0.28" stroke-dasharray="26 16"/>
+    <circle cx="120" cy="120" r="50" stroke="#FFB1A8" stroke-width="2" stroke-opacity="0.24" stroke-dasharray="18 14"/>
+  </g>
+  <g id="soft-outline">
+    <circle cx="120" cy="120" r="54" fill="#3E1821" fill-opacity="0.74"/>
+    <circle cx="120" cy="120" r="46" fill="#7B2434" fill-opacity="0.82"/>
+    <circle cx="120" cy="120" r="46" stroke="#FFB1A8" stroke-width="3" stroke-opacity="0.48"/>
+  </g>
+  <g id="rounded-x" stroke="#FFF4F1" stroke-width="12" stroke-linecap="round">
+    <path d="M101 101L139 139"/>
+    <path d="M139 101L101 139"/>
+  </g>
+  <g id="quiet-particles">
+    <circle cx="55" cy="65" r="4" fill="#FF8A80" fill-opacity="0.62"/>
+    <circle cx="187" cy="62" r="5" fill="#C78BFF" fill-opacity="0.46"/>
+    <circle cx="202" cy="139" r="4" fill="#FF8A80" fill-opacity="0.5"/>
+    <circle cx="43" cy="150" r="5" fill="#FFB1A8" fill-opacity="0.46"/>
+    <circle cx="83" cy="204" r="4" fill="#C78BFF" fill-opacity="0.38"/>
+    <circle cx="164" cy="203" r="4" fill="#FFB1A8" fill-opacity="0.4"/>
+    <path d="M68 38L72 47L81 51L72 55L68 64L64 55L55 51L64 47L68 38Z" fill="#FFB1A8" fill-opacity="0.58"/>
+    <path d="M194 164L197 171L204 174L197 177L194 184L191 177L184 174L191 171L194 164Z" fill="#C78BFF" fill-opacity="0.42"/>
+  </g>
+  <g id="fading-breaks" stroke-linecap="round">
+    <path d="M48 106C55 93 65 83 77 75" stroke="#FFB1A8" stroke-width="5" stroke-opacity="0.28"/>
+    <path d="M164 74C177 82 187 94 193 108" stroke="#FFB1A8" stroke-width="5" stroke-opacity="0.24"/>
+    <path d="M192 133C187 148 177 161 164 169" stroke="#FF8A80" stroke-width="5" stroke-opacity="0.24"/>
+    <path d="M77 169C64 160 54 148 49 134" stroke="#FF8A80" stroke-width="5" stroke-opacity="0.22"/>
+  </g>
+</svg>

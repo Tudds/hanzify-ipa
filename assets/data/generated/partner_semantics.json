@@ -1,0 +1,272 @@
+{
+  "version": "1.0",
+  "partners": {
+    "中国": [
+      "noun.place"
+    ],
+    "中文": [
+      "noun.skill_object"
+    ],
+    "书": [
+      "noun.media"
+    ],
+    "事件": [
+      "noun.event"
+    ],
+    "会议": [
+      "noun.event"
+    ],
+    "信息": [
+      "noun.abstract"
+    ],
+    "公园": [
+      "noun.place"
+    ],
+    "内容": [
+      "noun.abstract"
+    ],
+    "准备": [
+      "noun.abstract"
+    ],
+    "北京": [
+      "noun.place"
+    ],
+    "医院": [
+      "noun.place"
+    ],
+    "原则": [
+      "noun.abstract"
+    ],
+    "原因": [
+      "noun.abstract"
+    ],
+    "咖啡": [
+      "noun.food"
+    ],
+    "天气": [
+      "noun.subject_only"
+    ],
+    "婚礼": [
+      "noun.event"
+    ],
+    "字": [
+      "noun.skill_object"
+    ],
+    "学校": [
+      "noun.place"
+    ],
+    "家": [
+      "noun.place"
+    ],
+    "将来": [
+      "noun.abstract"
+    ],
+    "工作": [
+      "noun.abstract"
+    ],
+    "情况": [
+      "noun.abstract"
+    ],
+    "想法": [
+      "noun.abstract"
+    ],
+    "意见": [
+      "noun.abstract"
+    ],
+    "感冒": [
+      "noun.body_topic"
+    ],
+    "房间": [
+      "noun.place"
+    ],
+    "手机": [
+      "noun.tool"
+    ],
+    "技术": [
+      "noun.abstract"
+    ],
+    "报纸": [
+      "noun.media"
+    ],
+    "文化": [
+      "noun.abstract"
+    ],
+    "新闻": [
+      "noun.media"
+    ],
+    "方法": [
+      "noun.abstract"
+    ],
+    "早饭": [
+      "noun.food"
+    ],
+    "时间": [
+      "noun.subject_only",
+      "noun.abstract"
+    ],
+    "普通话": [
+      "noun.skill_object"
+    ],
+    "未来": [
+      "noun.abstract"
+    ],
+    "机会": [
+      "noun.abstract"
+    ],
+    "机场": [
+      "noun.place"
+    ],
+    "条件": [
+      "noun.abstract"
+    ],
+    "果汁": [
+      "noun.food"
+    ],
+    "歌": [
+      "noun.skill_object"
+    ],
+    "比赛": [
+      "noun.event"
+    ],
+    "水果": [
+      "noun.body_topic",
+      "noun.food"
+    ],
+    "汉字": [
+      "noun.skill_object"
+    ],
+    "汉语": [
+      "noun.skill_object"
+    ],
+    "活动": [
+      "noun.event"
+    ],
+    "海鲜": [
+      "noun.food"
+    ],
+    "烟酒": [
+      "noun.body_topic"
+    ],
+    "牛奶": [
+      "noun.food"
+    ],
+    "现金": [
+      "noun.tool"
+    ],
+    "生日": [
+      "noun.event"
+    ],
+    "生活": [
+      "noun.abstract"
+    ],
+    "电影": [
+      "noun.media"
+    ],
+    "电脑": [
+      "noun.tool"
+    ],
+    "白菜": [
+      "noun.food"
+    ],
+    "目标": [
+      "noun.abstract"
+    ],
+    "看法": [
+      "noun.abstract"
+    ],
+    "知识": [
+      "noun.abstract"
+    ],
+    "答案": [
+      "noun.abstract"
+    ],
+    "筷子": [
+      "noun.tool"
+    ],
+    "米饭": [
+      "noun.food"
+    ],
+    "红茶": [
+      "noun.food"
+    ],
+    "经验": [
+      "noun.abstract"
+    ],
+    "结果": [
+      "noun.abstract"
+    ],
+    "绿茶": [
+      "noun.food"
+    ],
+    "考试": [
+      "noun.event"
+    ],
+    "能力": [
+      "noun.abstract"
+    ],
+    "自行车": [
+      "noun.tool"
+    ],
+    "英语": [
+      "noun.skill_object"
+    ],
+    "苹果": [
+      "noun.food"
+    ],
+    "茶": [
+      "noun.food"
+    ],
+    "蔬菜": [
+      "noun.body_topic",
+      "noun.food"
+    ],
+    "要求": [
+      "noun.abstract"
+    ],
+    "计划": [
+      "noun.abstract"
+    ],
+    "讲座": [
+      "noun.event"
+    ],
+    "课文": [
+      "noun.media"
+    ],
+    "身体": [
+      "noun.body_topic"
+    ],
+    "车": [
+      "noun.skill_object",
+      "noun.tool"
+    ],
+    "运动": [
+      "noun.body_topic"
+    ],
+    "运动会": [
+      "noun.event"
+    ],
+    "钢琴": [
+      "noun.skill_object"
+    ],
+    "问题": [
+      "noun.abstract"
+    ],
+    "面条": [
+      "noun.food"
+    ],
+    "音乐": [
+      "noun.media"
+    ],
+    "食品": [
+      "noun.body_topic",
+      "noun.food"
+    ],
+    "食物": [
+      "noun.body_topic",
+      "noun.food"
+    ],
+    "香蕉": [
+      "noun.food"
+    ]
+  }
+}
