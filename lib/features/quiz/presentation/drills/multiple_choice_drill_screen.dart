@@ -1,13 +1,17 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/audio/audio_play_button.dart';
+import '../../../../core/audio/audio_urls.dart';
 import '../../../../core/learning/application/study_session_recorder.dart';
 import '../../../../core/learning/domain/fsrs.dart';
 import '../../../../core/providers/performance_provider.dart';
 import '../../../../core/theme/app_theme.dart';
+import '../../../../core/theme/typography.dart';
 import '../../../../core/widgets/hanzify_haptic.dart';
 import '../../../dictionary/domain/vocab_item.dart';
 import '../../application/quiz_pool.dart';
@@ -46,6 +50,13 @@ class _MultipleChoiceDrillScreenState
   int _score = 0;
   String? _picked;
   bool _finished = false;
+  Timer? _advanceTimer;
+
+  @override
+  void dispose() {
+    _advanceTimer?.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -124,73 +135,96 @@ class _MultipleChoiceDrillScreenState
     final colors = Theme.of(context).colorScheme;
     final performance = readPerformance(ref);
     final picked = _picked;
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 24, 20, 28),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Container(
-            padding: const EdgeInsets.all(22),
-            decoration: BoxDecoration(
-              color: colors.surfaceContainerHigh,
-              borderRadius: BorderRadius.circular(22),
-              border: Border.all(
-                color: colors.outlineVariant.withValues(alpha: 0.45),
+    // Sau khi chọn, chạm bất kỳ đâu để chuyển ngay (bỏ qua timer tự chuyển).
+    return GestureDetector(
+      onTap: picked == null ? null : _next,
+      behavior: HitTestBehavior.opaque,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(
+          AppSpacing.lg,
+          AppSpacing.xl,
+          AppSpacing.lg,
+          AppSpacing.xl,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Prompt ở giữa: hán tự lớn + audio phát âm + pinyin.
+            Expanded(
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Flexible(
+                          child: Text(
+                            question.prompt,
+                            textAlign: TextAlign.center,
+                            style: AppTypography.hanziDisplay(
+                              size: 56,
+                              color: colors.onSurface,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: AppSpacing.sm),
+                        AudioPlayButton(
+                          url: AudioUrls.forVocab(question.vocabId),
+                          size: 28,
+                          tooltip: 'Nghe phát âm',
+                        ),
+                      ],
+                    ),
+                    if (question.pinyin.isNotEmpty) ...[
+                      const SizedBox(height: AppSpacing.sm),
+                      Text(
+                        question.pinyin,
+                        style: AppTypography.pinyin(
+                          size: 18,
+                          color: colors.primary,
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
               ),
             ),
-            child: Column(
+            // Đáp án 2×2.
+            GridView.count(
+              crossAxisCount: 2,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              childAspectRatio: 2.2,
+              crossAxisSpacing: AppSpacing.md,
+              mainAxisSpacing: AppSpacing.md,
               children: [
-                Text(
-                  question.prompt,
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-                if (question.pinyin.isNotEmpty) ...[
-                  const SizedBox(height: 8),
-                  Text(
-                    question.pinyin,
-                    style: TextStyle(
-                      color: colors.primary,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ],
+                for (var index = 0; index < question.choices.length; index++)
+                  _ChoiceButton(
+                    text: question.choices[index],
+                    state: _stateOf(question.choices[index], question.answer, picked),
+                    onTap: picked == null
+                        ? () => _pick(question.choices[index], question)
+                        : null,
+                  )
+                      .animate(autoPlay: !performance)
+                      .fadeIn(duration: 180.ms, delay: (index * 35).ms)
+                      .slideY(begin: 0.04, end: 0, duration: 220.ms),
               ],
             ),
-          ),
-          const SizedBox(height: 24),
-          Expanded(
-            child: ListView.separated(
-              itemCount: question.choices.length,
-              separatorBuilder: (_, _) => const SizedBox(height: 10),
-              itemBuilder: (context, index) {
-                final choice = question.choices[index];
-                return _ChoiceButton(
-                  text: choice,
-                  state: _stateOf(choice, question.answer, picked),
-                  onTap: picked == null
-                      ? () => _pick(choice, question)
-                      : null,
-                )
-                    .animate(autoPlay: !performance)
-                    .fadeIn(duration: 180.ms, delay: (index * 35).ms)
-                    .slideY(begin: 0.04, end: 0, duration: 220.ms);
-              },
-            ),
-          ),
-          if (picked != null)
-            FilledButton(
-              onPressed: _next,
-              style: FilledButton.styleFrom(
-                minimumSize: const Size.fromHeight(52),
+            if (picked != null) ...[
+              const SizedBox(height: AppSpacing.md),
+              Text(
+                'Chạm để tiếp tục',
+                textAlign: TextAlign.center,
+                style: context.text.labelSmall?.copyWith(
+                  color: colors.onSurfaceVariant,
+                ),
               ),
-              child: Text(
-                _index + 1 == _questions!.length ? 'Hoàn thành' : 'Tiếp theo',
-              ),
-            ),
-        ],
+            ],
+          ],
+        ),
       ),
     );
   }
@@ -220,9 +254,17 @@ class _MultipleChoiceDrillScreenState
       _picked = choice;
       if (correct) _score++;
     });
+    // Tự chuyển: đúng nhanh, sai chậm hơn để kịp xem đáp án đúng.
+    _advanceTimer?.cancel();
+    _advanceTimer = Timer(
+      Duration(milliseconds: correct ? 1200 : 2000),
+      _next,
+    );
   }
 
   void _next() {
+    _advanceTimer?.cancel();
+    if (!mounted) return;
     setState(() {
       if (_index + 1 >= _questions!.length) {
         _finished = true;

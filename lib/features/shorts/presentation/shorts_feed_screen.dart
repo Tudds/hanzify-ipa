@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/audio/audio_player_service.dart';
 import '../../../core/constants/hsk_levels.dart';
 import '../../../core/providers/performance_provider.dart';
 import '../../../core/providers/user_profile_provider.dart';
@@ -182,16 +183,6 @@ class _ShortsFeedScreenState extends ConsumerState<ShortsFeedScreen> {
             (state) => state.currentIndex,
           ),
         );
-        final correctCount = ref.watch(
-          _shortsSessionControllerProvider.select(
-            (state) => state.correctCount,
-          ),
-        );
-        final incorrectCount = ref.watch(
-          _shortsSessionControllerProvider.select(
-            (state) => state.incorrectCount,
-          ),
-        );
         final performance = readPerformance(ref);
         final visibleItems = items.isEmpty ? session.items : items;
         if (visibleItems.isEmpty) {
@@ -201,20 +192,19 @@ class _ShortsFeedScreenState extends ConsumerState<ShortsFeedScreen> {
         return PageView.builder(
           controller: _pageController,
           scrollDirection: Axis.vertical,
-          onPageChanged: ref
-              .read(_shortsSessionControllerProvider.notifier)
-              .goTo,
+          onPageChanged: (index) {
+            // Dừng sạch audio card cũ trước khi sang card mới (tránh race
+            // setUrl mới đè buffer cũ → bấm không phát).
+            ref.read(audioPlayerProvider).stop();
+            ref.read(_shortsSessionControllerProvider.notifier).goTo(index);
+          },
           itemBuilder: (context, index) {
             if (index >= visibleItems.length) {
               return const Center(child: CircularProgressIndicator());
             }
             return ShortCard(
               item: visibleItems[index],
-              index: index,
-              totalCount: visibleItems.length,
               selectedAnswers: selectedAnswers,
-              correctCount: correctCount,
-              incorrectCount: incorrectCount,
               active: index == currentIndex,
               controller: ref.read(_shortsSessionControllerProvider.notifier),
               performance: performance,

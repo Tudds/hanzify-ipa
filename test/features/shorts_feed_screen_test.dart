@@ -269,7 +269,8 @@ void main() {
     await tester.tap(find.text('Tiếp tục'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
-    expect(find.text('1'), findsWidgets);
+    // Bộ đếm Đúng/Sai và "#1/12" đã được gỡ khỏi giao diện Shorts.
+    expect(find.textContaining('/12'), findsNothing);
   });
 
   testWidgets('shorts dialogue hides pinyin and meaning behind toggles', (

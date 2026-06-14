@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/learning/application/study_session_recorder.dart';
 import '../../../../core/learning/domain/fsrs.dart';
 import '../../../../core/providers/performance_provider.dart';
+import '../../../../core/theme/typography.dart';
 import '../../../../core/widgets/hanzify_haptic.dart';
 import '../../../dictionary/domain/vocab_item.dart';
 import '../../application/quiz_pool.dart';
@@ -170,13 +171,33 @@ class _SentenceArrangeDrillScreenState
                 ),
           ),
           if (q.translation.isNotEmpty) ...[
-            const SizedBox(height: 8),
-            Text(
-              q.translation,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+            const SizedBox(height: AppSpacing.md),
+            // Câu hỏi (bản dịch) nổi bật để dễ tập trung.
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppSpacing.lg,
+                vertical: AppSpacing.md,
+              ),
+              decoration: BoxDecoration(
+                color: colors.primaryContainer.withValues(alpha: 0.4),
+                borderRadius: BorderRadius.circular(AppRadii.card),
+                border: Border.all(
+                  color: colors.primary.withValues(alpha: 0.35),
+                ),
+              ),
+              child: Text(
+                q.translation,
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w700,
+                  color: colors.onSurface,
+                  height: 1.35,
+                ),
+              ),
             ),
           ],
-          const SizedBox(height: 20),
+          const SizedBox(height: AppSpacing.xl),
           _SlotArea(
             tokens: q.tokens,
             placed: _placed,

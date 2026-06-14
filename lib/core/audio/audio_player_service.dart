@@ -12,7 +12,11 @@ class AudioPlayerService {
   AudioPlayerService() : _player = AudioPlayer() {
     _stateSub = _player.playerStateStream.listen((state) {
       if (state.processingState == ProcessingState.completed) {
-        unawaited(stop());
+        // Chỉ reset nếu không có play() mới hơn đang chạy (chống race khi
+        // cuộn nhanh / phát liên tiếp: completion của lần cũ không được đè
+        // lên lần phát mới).
+        _currentUrl = null;
+        unawaited(_player.stop());
       }
     });
   }
@@ -21,25 +25,29 @@ class AudioPlayerService {
   StreamSubscription<PlayerState>? _stateSub;
   String? _currentUrl;
 
-  /// Phát audio từ URL. Nếu đang phát URL khác sẽ stop và phát mới.
-  /// Nếu đang phát cùng URL thì replay từ đầu.
+  /// Token tăng dần mỗi lần play()/stop() — lần phát cũ tự bỏ qua khi đã có
+  /// lần mới hơn.
+  int _playToken = 0;
+
+  /// Phát audio từ URL. Luôn nạp lại URL (an toàn hơn dedupe seek, tránh kẹt
+  /// trạng thái sau nhiều lần cuộn).
   Future<void> play(String url) async {
+    final token = ++_playToken;
     try {
-      if (_currentUrl != url) {
-        await _player.setUrl(url);
-        _currentUrl = url;
-      } else {
-        await _player.seek(Duration.zero);
-      }
+      await _player.setUrl(url);
+      if (token != _playToken) return; // đã bị một play()/stop() mới thay
+      _currentUrl = url;
       await _player.play();
     } catch (e, st) {
+      if (token == _playToken) _currentUrl = null;
       debugPrint('AudioPlayer error for $url: $e\n$st');
     }
   }
 
   Future<void> stop() async {
-    await _player.stop();
+    _playToken++;
     _currentUrl = null;
+    await _player.stop();
   }
 
   Future<void> dispose() async {

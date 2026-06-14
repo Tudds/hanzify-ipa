@@ -48,18 +48,22 @@ void main() {
     );
     await tester.pumpAndSettle();
 
+    // Prompt có nút phát âm.
+    expect(find.byIcon(Icons.volume_up_rounded), findsWidgets);
+
     for (var i = 0; i < _answers.length; i++) {
       final prompt = _answers.keys.firstWhere(
         (hanzi) => find.text(hanzi).evaluate().isNotEmpty,
       );
       final answer = _answers[prompt]!;
       await tester.tap(find.widgetWithText(FilledButton, answer));
-      await tester.pumpAndSettle();
+      await tester.pump();
+      // Sau khi chọn, chạm để chuyển ngay (bỏ qua timer tự chuyển).
+      await tester.tap(find.text('Chạm để tiếp tục'));
       final isLast = i == _answers.length - 1;
-      await tester.tap(find.text(isLast ? 'Hoàn thành' : 'Tiếp theo'));
       if (isLast) {
-        // Màn summary bắn confetti; từ confetti 0.8 ticker chạy liên tục nên
-        // pumpAndSettle không bao giờ settle — pump theo thời gian cố định.
+        // Màn summary bắn confetti; ticker chạy liên tục nên pumpAndSettle
+        // không bao giờ settle — pump theo thời gian cố định.
         await tester.pump();
         await tester.pump(const Duration(seconds: 2));
       } else {

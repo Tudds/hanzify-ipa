@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -7,6 +8,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/learning/application/study_session_recorder.dart';
 import '../../../../core/learning/domain/fsrs.dart';
 import '../../../../core/providers/performance_provider.dart';
+import '../../../../core/theme/app_theme.dart';
+import '../../../../core/theme/typography.dart';
 import '../../../../core/widgets/hanzify_haptic.dart';
 import '../../../dictionary/domain/vocab_item.dart';
 import '../../application/quiz_pool.dart';
@@ -16,6 +19,7 @@ class _ClozeQuestion {
   const _ClozeQuestion({
     required this.vocabId,
     required this.fullSentence,
+    required this.pinyin,
     required this.answer,
     required this.choices,
     required this.translation,
@@ -23,6 +27,7 @@ class _ClozeQuestion {
 
   final String vocabId;
   final String fullSentence;
+  final String pinyin;
   final String answer;
   final List<String> choices;
   final String translation;
@@ -45,6 +50,14 @@ class _ClozeDrillScreenState extends ConsumerState<ClozeDrillScreen> {
   int _score = 0;
   String? _picked;
   bool _finished = false;
+  bool _showPinyin = false;
+  Timer? _advanceTimer;
+
+  @override
+  void dispose() {
+    _advanceTimer?.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -117,6 +130,7 @@ class _ClozeDrillScreenState extends ConsumerState<ClozeDrillScreen> {
         _ClozeQuestion(
           vocabId: v.id,
           fullSentence: example.cn,
+          pinyin: example.pinyin,
           answer: v.hanzi,
           choices: choices,
           translation: example.vi,
@@ -130,56 +144,49 @@ class _ClozeDrillScreenState extends ConsumerState<ClozeDrillScreen> {
     final colors = Theme.of(context).colorScheme;
     final performance = readPerformance(ref);
     final picked = _picked;
+    final answered = picked != null;
 
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 24, 20, 28),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Điền từ thích hợp',
-            style: Theme.of(
-              context,
-            ).textTheme.titleSmall?.copyWith(color: colors.onSurfaceVariant),
-          ),
-          const SizedBox(height: 16),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: colors.surfaceContainerHigh,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  q.prompt,
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w500,
-                    color: colors.onSurface,
-                    height: 1.4,
-                  ),
+    return GestureDetector(
+      onTap: answered ? () => _next(q) : null,
+      behavior: HitTestBehavior.opaque,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(
+          AppSpacing.lg,
+          AppSpacing.xl,
+          AppSpacing.lg,
+          AppSpacing.xl,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Câu hỏi ở trung tâm; sau khi trả lời đổi sang panel kết quả.
+            Expanded(
+              child: Center(
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 240),
+                  child: answered
+                      ? _ResultPanel(
+                          key: const ValueKey('result'),
+                          question: q,
+                          correct: picked == q.answer,
+                        )
+                      : _PromptPanel(
+                          key: const ValueKey('prompt'),
+                          question: q,
+                          showPinyin: _showPinyin,
+                          onTogglePinyin: () =>
+                              setState(() => _showPinyin = !_showPinyin),
+                        ),
                 ),
-                if (q.translation.isNotEmpty) ...[
-                  const SizedBox(height: 8),
-                  Text(
-                    q.translation,
-                    style: TextStyle(
-                      color: colors.onSurfaceVariant,
-                      fontSize: 14,
-                    ),
-                  ),
-                ],
-              ],
+              ),
             ),
-          ),
-          const SizedBox(height: 28),
-          Expanded(
-            child: GridView.count(
+            const SizedBox(height: AppSpacing.lg),
+            GridView.count(
               crossAxisCount: 2,
-              crossAxisSpacing: 12,
-              mainAxisSpacing: 12,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              crossAxisSpacing: AppSpacing.md,
+              mainAxisSpacing: AppSpacing.md,
               childAspectRatio: 2.4,
               children: [
                 for (final choice in q.choices)
@@ -190,18 +197,18 @@ class _ClozeDrillScreenState extends ConsumerState<ClozeDrillScreen> {
                   ).animate(autoPlay: !performance).fadeIn(duration: 220.ms),
               ],
             ),
-          ),
-          if (picked != null)
-            FilledButton(
-              onPressed: () => _next(q),
-              style: FilledButton.styleFrom(
-                minimumSize: const Size.fromHeight(52),
+            if (answered) ...[
+              const SizedBox(height: AppSpacing.md),
+              Text(
+                'Chạm để tiếp tục',
+                textAlign: TextAlign.center,
+                style: context.text.labelSmall?.copyWith(
+                  color: colors.onSurfaceVariant,
+                ),
               ),
-              child: Text(
-                _index + 1 == _questions!.length ? 'Hoàn thành' : 'Tiếp theo',
-              ),
-            ),
-        ],
+            ],
+          ],
+        ),
       ),
     );
   }
@@ -227,9 +234,13 @@ class _ClozeDrillScreenState extends ConsumerState<ClozeDrillScreen> {
       _picked = choice;
       if (correct) _score++;
     });
+    _advanceTimer?.cancel();
+    _advanceTimer = Timer(const Duration(milliseconds: 2500), () => _next(q));
   }
 
   void _next(_ClozeQuestion q) {
+    _advanceTimer?.cancel();
+    if (!mounted) return;
     final qs = _questions!;
     setState(() {
       if (_index + 1 >= qs.length) {
@@ -237,12 +248,155 @@ class _ClozeDrillScreenState extends ConsumerState<ClozeDrillScreen> {
       } else {
         _index++;
         _picked = null;
+        _showPinyin = false;
       }
     });
   }
 }
 
 enum _ChoiceState { idle, correct, wrong, dim }
+
+/// Câu hỏi (còn ____) ở trung tâm + toggle hiện/ẩn pinyin.
+class _PromptPanel extends StatelessWidget {
+  const _PromptPanel({
+    super.key,
+    required this.question,
+    required this.showPinyin,
+    required this.onTogglePinyin,
+  });
+
+  final _ClozeQuestion question;
+  final bool showPinyin;
+  final VoidCallback onTogglePinyin;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = context.colors;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(AppSpacing.xl),
+      decoration: BoxDecoration(
+        color: colors.surfaceContainerHigh,
+        borderRadius: BorderRadius.circular(AppRadii.card),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            question.prompt,
+            textAlign: TextAlign.center,
+            style: AppTypography.hanziDisplay(size: 30, color: colors.onSurface),
+          ),
+          if (showPinyin && question.pinyin.isNotEmpty) ...[
+            const SizedBox(height: AppSpacing.sm),
+            Text(
+              question.pinyin,
+              textAlign: TextAlign.center,
+              style: AppTypography.pinyin(size: 16, color: colors.primary),
+            ),
+          ],
+          if (question.translation.isNotEmpty) ...[
+            const SizedBox(height: AppSpacing.sm),
+            Text(
+              question.translation,
+              textAlign: TextAlign.center,
+              style: context.text.bodyMedium?.copyWith(
+                color: colors.onSurfaceVariant,
+              ),
+            ),
+          ],
+          const SizedBox(height: AppSpacing.md),
+          TextButton.icon(
+            onPressed: onTogglePinyin,
+            icon: Icon(
+              showPinyin
+                  ? Icons.visibility_off_rounded
+                  : Icons.visibility_rounded,
+              size: 18,
+            ),
+            label: Text(showPinyin ? 'Ẩn pinyin' : 'Hiện pinyin'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Sau khi chọn: câu đầy đủ (đã điền) + pinyin + dịch + dấu đúng/sai.
+class _ResultPanel extends StatelessWidget {
+  const _ResultPanel({
+    super.key,
+    required this.question,
+    required this.correct,
+  });
+
+  final _ClozeQuestion question;
+  final bool correct;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = context.colors;
+    final accent = correct ? context.semantic.success : context.semantic.danger;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(AppSpacing.xl),
+      decoration: BoxDecoration(
+        color: colors.surfaceContainerHigh,
+        borderRadius: BorderRadius.circular(AppRadii.card),
+        border: Border.all(color: accent.withValues(alpha: 0.6), width: 1.5),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                correct
+                    ? Icons.check_circle_rounded
+                    : Icons.cancel_rounded,
+                color: accent,
+                size: 20,
+              ),
+              const SizedBox(width: AppSpacing.xs),
+              Text(
+                correct ? 'Chính xác!' : 'Đáp án: ${question.answer}',
+                style: context.text.titleMedium?.copyWith(
+                  color: accent,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.md),
+          Text(
+            question.fullSentence,
+            textAlign: TextAlign.center,
+            style: AppTypography.hanziDisplay(size: 26, color: colors.onSurface),
+          ),
+          if (question.pinyin.isNotEmpty) ...[
+            const SizedBox(height: AppSpacing.sm),
+            Text(
+              question.pinyin,
+              textAlign: TextAlign.center,
+              style: AppTypography.pinyin(size: 15, color: colors.primary),
+            ),
+          ],
+          if (question.translation.isNotEmpty) ...[
+            const SizedBox(height: AppSpacing.xs),
+            Text(
+              question.translation,
+              textAlign: TextAlign.center,
+              style: context.text.bodyMedium?.copyWith(
+                color: colors.onSurfaceVariant,
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+}
 
 class _ChoiceTile extends StatelessWidget {
   const _ChoiceTile({

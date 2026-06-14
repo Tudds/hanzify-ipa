@@ -13,11 +13,7 @@ class ShortCard extends StatelessWidget {
   const ShortCard({
     super.key,
     required this.item,
-    required this.index,
-    required this.totalCount,
     required this.selectedAnswers,
-    required this.correctCount,
-    required this.incorrectCount,
     required this.active,
     required this.controller,
     required this.performance,
@@ -26,11 +22,7 @@ class ShortCard extends StatelessWidget {
   });
 
   final ShortFeedItem item;
-  final int index;
-  final int totalCount;
   final Map<String, String> selectedAnswers;
-  final int correctCount;
-  final int incorrectCount;
   final bool active;
   final ShortsSessionController controller;
   final bool performance;
@@ -75,35 +67,23 @@ class ShortCard extends StatelessWidget {
             child: Center(
               child: ConstrainedBox(
                 constraints: BoxConstraints(maxWidth: maxCardWidth),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _ProgressHeader(index: index, totalCount: totalCount, tags: item.tags),
-                    Expanded(
-                      child: Center(
-                        child: _CardBodyViewport(
-                          scrollable: _needsInnerScroll(item.payload),
-                          child: performance || !active
-                              ? body
-                              : body
-                                    .animate()
-                                    .fadeIn(
-                                      duration: MotionTokens.fast,
-                                      curve: Curves.easeOut,
-                                    )
-                                    .slideY(
-                                      begin: 0.04,
-                                      end: 0,
-                                      duration: MotionTokens.medium,
-                                    ),
-                        ),
-                      ),
-                    ),
-                    _ScoreFooter(
-                      correct: correctCount,
-                      incorrect: incorrectCount,
-                    ),
-                  ],
+                child: Center(
+                  child: _CardBodyViewport(
+                    scrollable: _needsInnerScroll(item.payload),
+                    child: performance || !active
+                        ? body
+                        : body
+                              .animate()
+                              .fadeIn(
+                                duration: MotionTokens.fast,
+                                curve: Curves.easeOut,
+                              )
+                              .slideY(
+                                begin: 0.04,
+                                end: 0,
+                                duration: MotionTokens.medium,
+                              ),
+                  ),
                 ),
               ),
             ),
@@ -132,80 +112,6 @@ class _CardBodyViewport extends StatelessWidget {
   Widget build(BuildContext context) {
     if (!scrollable) return child;
     return SingleChildScrollView(child: child);
-  }
-}
-
-class _ProgressHeader extends StatelessWidget {
-  const _ProgressHeader({
-    required this.index,
-    required this.totalCount,
-    required this.tags,
-  });
-
-  final int index;
-  final int totalCount;
-  final List<String> tags;
-
-  @override
-  Widget build(BuildContext context) {
-    final color = Theme.of(context).colorScheme;
-    final progress = totalCount > 0 ? (index + 1) / totalCount : 0.0;
-
-    return Row(
-      children: [
-        DecoratedBox(
-          decoration: BoxDecoration(
-            color: color.primaryContainer.withValues(alpha:0.7),
-            borderRadius: BorderRadius.circular(999),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            child: Text(
-              '#${index + 1}/$totalCount',
-              style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                color: color.onPrimaryContainer,
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-          ),
-        ),
-        const SizedBox(width: 10),
-        Expanded(
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(999),
-            child: SizedBox(
-              height: 6,
-              child: TweenAnimationBuilder<double>(
-                tween: Tween<double>(begin: 0, end: progress),
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeOutQuad,
-                builder: (context, value, _) {
-                  return LinearProgressIndicator(
-                    value: value,
-                    backgroundColor: color.primary.withValues(alpha:0.12),
-                    valueColor: AlwaysStoppedAnimation<Color>(color.primary),
-                  );
-                },
-              ),
-            ),
-          ),
-        ),
-        if (tags.isNotEmpty) ...[
-          const SizedBox(width: 10),
-          Flexible(
-            flex: 0,
-            child: Text(
-              tags.first,
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                color: color.onSurfaceVariant,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ),
-        ],
-      ],
-    );
   }
 }
 
@@ -326,28 +232,3 @@ class _SummaryView extends StatelessWidget {
   }
 }
 
-class _ScoreFooter extends StatelessWidget {
-  const _ScoreFooter({required this.correct, required this.incorrect});
-
-  final int correct;
-  final int incorrect;
-
-  @override
-  Widget build(BuildContext context) {
-    final color = Theme.of(context).colorScheme;
-    return Row(
-      children: [
-        Icon(Icons.check_circle_rounded, size: 20, color: color.primary),
-        const SizedBox(width: 6),
-        Text('$correct'),
-        const SizedBox(width: 18),
-        Icon(Icons.cancel_rounded, size: 20, color: color.error),
-        const SizedBox(width: 6),
-        Text('$incorrect'),
-        const Spacer(),
-        const Icon(Icons.keyboard_arrow_up_rounded),
-        const Icon(Icons.keyboard_arrow_down_rounded),
-      ],
-    );
-  }
-}
