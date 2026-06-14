@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/learning/application/study_session_recorder.dart';
+import '../../../../core/learning/domain/fsrs.dart';
 import '../../../../core/providers/performance_provider.dart';
 import '../../../../core/widgets/hanzify_haptic.dart';
 import '../../../dictionary/domain/vocab_item.dart';
@@ -12,10 +14,12 @@ import '../widgets/drill_scaffold.dart';
 
 class _ArrangeQuestion {
   _ArrangeQuestion({
+    required this.vocabId,
     required this.tokens,
     required this.translation,
   }) : answer = tokens.join();
 
+  final String vocabId;
   final List<String> tokens;
   final String answer;
   final String translation;
@@ -117,7 +121,11 @@ class _SentenceArrangeDrillScreenState
       final tokens = _tokenize(cn);
       if (tokens.length < 2 || tokens.length > 8) continue;
       out.add(
-        _ArrangeQuestion(tokens: tokens, translation: example.vi),
+        _ArrangeQuestion(
+          vocabId: v.id,
+          tokens: tokens,
+          translation: example.vi,
+        ),
       );
     }
     return out;
@@ -241,6 +249,13 @@ class _SentenceArrangeDrillScreenState
     } else {
       HanzifyHaptic.error();
     }
+    ref
+        .read(studySessionRecorderProvider)
+        .record(
+          targetType: 'vocab',
+          targetId: q.vocabId,
+          rating: correct ? SrsRating.good : SrsRating.again,
+        );
     setState(() {
       _checked = true;
       _correct = correct;

@@ -1,8 +1,26 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hanzify/core/learning/application/study_session_recorder.dart';
+import 'package:hanzify/core/learning/domain/fsrs.dart';
 import 'package:hanzify/features/shorts/application/shorts_session_controller.dart';
 import 'package:hanzify/features/shorts/domain/short_feed_item.dart';
 import 'package:hanzify/features/shorts/domain/shorts_session.dart';
+
+/// Recorder no-op để bài test logic feed không chạm Drift/prefs khi
+/// selectQuizAnswer ghi thẻ SRS.
+class _NoopRecorder implements StudySessionRecorder {
+  @override
+  Future<void> record({
+    required String targetType,
+    required String targetId,
+    String cardType = 'recognition',
+    required SrsRating rating,
+  }) async {}
+}
+
+final _recorderOverrides = [
+  studySessionRecorderProvider.overrideWithValue(_NoopRecorder()),
+];
 
 void main() {
   test('session builder keeps mixed rhythm and excludes summaries', () {
@@ -105,7 +123,7 @@ void main() {
         NotifierProvider<ShortsSessionController, ShortsSessionState>(
           ShortsSessionController.new,
         );
-    final container = ProviderContainer();
+    final container = ProviderContainer(overrides: _recorderOverrides);
     addTearDown(container.dispose);
     final session = const ShortsSessionBuilder(
       initialContentCount: 20,
@@ -130,7 +148,7 @@ void main() {
           NotifierProvider<ShortsSessionController, ShortsSessionState>(
             ShortsSessionController.new,
           );
-      final container = ProviderContainer();
+      final container = ProviderContainer(overrides: _recorderOverrides);
       addTearDown(container.dispose);
       final quizItem = _targetQuizItem('q1');
       final initialItems = [
@@ -180,7 +198,7 @@ void main() {
         NotifierProvider<ShortsSessionController, ShortsSessionState>(
           ShortsSessionController.new,
         );
-    final container = ProviderContainer();
+    final container = ProviderContainer(overrides: _recorderOverrides);
     addTearDown(container.dispose);
     final controller = container.read(provider.notifier)
       ..start(ShortsSession(items: [item]));
@@ -199,7 +217,7 @@ void main() {
         NotifierProvider<ShortsSessionController, ShortsSessionState>(
           ShortsSessionController.new,
         );
-    final container = ProviderContainer();
+    final container = ProviderContainer(overrides: _recorderOverrides);
     addTearDown(container.dispose);
     final quizItem = _targetQuizItem('q1');
     final controller = container.read(provider.notifier)
@@ -229,7 +247,7 @@ void main() {
         NotifierProvider<ShortsSessionController, ShortsSessionState>(
           ShortsSessionController.new,
         );
-    final container = ProviderContainer();
+    final container = ProviderContainer(overrides: _recorderOverrides);
     addTearDown(container.dispose);
     final quizItem = _targetQuizItem('q1');
     final quiz = quizItem.payload as ShortQuickQuiz;
@@ -266,7 +284,7 @@ void main() {
           NotifierProvider<ShortsSessionController, ShortsSessionState>(
             ShortsSessionController.new,
           );
-      final container = ProviderContainer();
+      final container = ProviderContainer(overrides: _recorderOverrides);
       addTearDown(container.dispose);
       final quizItem = _targetQuizItem('q1');
       final controller = container.read(provider.notifier)
@@ -289,7 +307,7 @@ void main() {
         NotifierProvider<ShortsSessionController, ShortsSessionState>(
           ShortsSessionController.new,
         );
-    final container = ProviderContainer();
+    final container = ProviderContainer(overrides: _recorderOverrides);
     addTearDown(container.dispose);
     final quizItem = _targetQuizItem('q1');
     final controller = container.read(provider.notifier)

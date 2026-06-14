@@ -203,6 +203,12 @@ FSRS notes:
 - `SessionBuilder` 70/30 + pause-new + backfill (nguồn thiếu thẻ thì nhường quota); `DueReviewScreen` đưa thẻ đến hạn qua builder với `sessionSize` từ profile.
 - Regression pins: `test/core/learning/fsrs_reference_test.dart`; content QA: `test/core/learning/content_conventions_test.dart`; audio CDN spot-check (chạy tay): `tool/check_audio_urls.py`.
 
+### Nguồn tạo thẻ SRS (vòng học khép kín)
+
+- `StudySessionController.recordAnswer({targetType, targetId, cardType='recognition', rating})` — tạo/cập nhật thẻ id `targetType:targetId:cardType` qua FSRS. `answer(LearningQuiz, choice)` gọi nội bộ.
+- `application/study_session_recorder.dart` — `StudySessionRecorder.record(...)`: **load snapshot → hydrate → recordAnswer → save** (vì `DriftStudySessionStore.save` full-replace, phải load-merge để không xóa thẻ tab Ôn tập); tuần tự hóa bằng `_lock`. Provider `studySessionRecorderProvider` (scheduler theo `profile.targetRetention`).
+- Wired: 5 quiz drill (`_pick`/`_grade`/`_check`/`_onPickVi`, dùng `vocab:{VocabItem.id}:recognition`; flashcard có 4 nút FSRS Quên/Khó/Được/Dễ) + `ShortsSessionController.selectQuizAnswer` (dùng `quiz.targetVocabId`). Đúng=Good, sai=Again. **Thẻ chung theo từ** nên mọi nguồn (Quiz/Shorts/Ôn tập) cùng đẩy một lịch FSRS.
+
 ---
 
 ## 10. Learning path core status

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/learning/application/study_session_recorder.dart';
+import '../../../../core/learning/domain/fsrs.dart';
 import '../../../../core/providers/performance_provider.dart';
 import '../../../../core/theme/typography.dart';
 import '../../../../core/widgets/hanzify_haptic.dart';
@@ -140,7 +142,15 @@ class _WordMatchDrillScreenState extends ConsumerState<WordMatchDrillScreen> {
       (v) => v.hanzi == selected,
       orElse: () => round.first,
     );
-    if (correctPair.viShort == vi) {
+    final isCorrect = correctPair.viShort == vi;
+    ref
+        .read(studySessionRecorderProvider)
+        .record(
+          targetType: 'vocab',
+          targetId: correctPair.id,
+          rating: isCorrect ? SrsRating.good : SrsRating.again,
+        );
+    if (isCorrect) {
       HanzifyHaptic.success();
       setState(() {
         _matched[selected] = vi;

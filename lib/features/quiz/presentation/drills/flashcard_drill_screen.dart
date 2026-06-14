@@ -7,7 +7,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/audio/audio_play_button.dart';
 import '../../../../core/audio/audio_urls.dart';
 import '../../../../core/constants/hsk_levels.dart';
+import '../../../../core/learning/application/study_session_recorder.dart';
+import '../../../../core/learning/domain/fsrs.dart';
 import '../../../../core/providers/performance_provider.dart';
+import '../../../../core/theme/app_theme.dart';
 import '../../../../core/theme/typography.dart';
 import '../../../../core/widgets/hanzify_haptic.dart';
 import '../../../dictionary/domain/vocab_item.dart';
@@ -170,27 +173,25 @@ class _FlashcardDrillScreenState extends ConsumerState<FlashcardDrillScreen> {
                 ? Row(
                     key: const ValueKey('grades'),
                     children: [
-                      Expanded(
-                        child: OutlinedButton.icon(
-                          onPressed: () => _grade(false),
-                          icon: const Icon(Icons.close_rounded),
-                          label: const Text('Chưa nhớ'),
-                          style: OutlinedButton.styleFrom(
-                            foregroundColor: colors.error,
-                            padding: const EdgeInsets.symmetric(vertical: 14),
-                          ),
-                        ),
+                      _GradeButton(
+                        label: 'Quên',
+                        color: context.semantic.danger,
+                        onTap: () => _grade(SrsRating.again),
                       ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: FilledButton.icon(
-                          onPressed: () => _grade(true),
-                          icon: const Icon(Icons.check_rounded),
-                          label: const Text('Nhớ rõ'),
-                          style: FilledButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(vertical: 14),
-                          ),
-                        ),
+                      _GradeButton(
+                        label: 'Khó',
+                        color: context.semantic.warning,
+                        onTap: () => _grade(SrsRating.hard),
+                      ),
+                      _GradeButton(
+                        label: 'Được',
+                        color: colors.primary,
+                        onTap: () => _grade(SrsRating.good),
+                      ),
+                      _GradeButton(
+                        label: 'Dễ',
+                        color: context.semantic.success,
+                        onTap: () => _grade(SrsRating.easy),
                       ),
                     ],
                   )
@@ -220,11 +221,15 @@ class _FlashcardDrillScreenState extends ConsumerState<FlashcardDrillScreen> {
     );
   }
 
-  void _grade(bool correct) {
+  void _grade(SrsRating rating) {
     HanzifyHaptic.selection();
     final cards = _cards!;
+    final item = cards[_index];
+    ref
+        .read(studySessionRecorderProvider)
+        .record(targetType: 'vocab', targetId: item.id, rating: rating);
     setState(() {
-      if (correct) _score++;
+      if (rating != SrsRating.again) _score++;
       if (_index + 1 >= cards.length) {
         _finished = true;
       } else {
@@ -232,6 +237,39 @@ class _FlashcardDrillScreenState extends ConsumerState<FlashcardDrillScreen> {
         _flipped = false;
       }
     });
+  }
+}
+
+class _GradeButton extends StatelessWidget {
+  const _GradeButton({
+    required this.label,
+    required this.color,
+    required this.onTap,
+  });
+
+  final String label;
+  final Color color;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        child: FilledButton.tonal(
+          onPressed: onTap,
+          style: FilledButton.styleFrom(
+            backgroundColor: color.withValues(alpha: 0.18),
+            foregroundColor: color,
+            padding: const EdgeInsets.symmetric(vertical: 14),
+          ),
+          child: Text(
+            label,
+            style: const TextStyle(fontWeight: FontWeight.w700),
+          ),
+        ),
+      ),
+    );
   }
 }
 

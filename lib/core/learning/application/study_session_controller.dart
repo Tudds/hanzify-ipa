@@ -50,17 +50,42 @@ class StudySessionController {
 
   StudyAnswerResult answer(LearningQuiz quiz, String selectedChoice) {
     final isCorrect = selectedChoice == quiz.answer;
-    final rating = isCorrect ? SrsRating.good : SrsRating.again;
+    return recordAnswer(
+      targetType: _targetTypeForQuiz(quiz),
+      targetId: quiz.targetId ?? quiz.sourceCollocationId,
+      cardType: _cardTypeForQuiz(quiz),
+      rating: isCorrect ? SrsRating.good : SrsRating.again,
+      isCorrect: isCorrect,
+    );
+  }
+
+  /// Ghi nhận một lần trả lời mà không cần dựng [LearningQuiz] — dùng cho các
+  /// drill Quiz (VocabItem) và quiz Shorts. Thẻ chung theo từ: id =
+  /// `targetType:targetId:cardType` nên mọi nguồn cùng đẩy một lịch FSRS.
+  StudyAnswerResult recordAnswer({
+    required String targetType,
+    required String targetId,
+    String cardType = 'recognition',
+    required SrsRating rating,
+    bool? isCorrect,
+  }) {
+    final id = '$targetType:$targetId:$cardType';
     final card = _cards.putIfAbsent(
-      _cardIdForQuiz(quiz),
-      () => _newCardForQuiz(quiz),
+      id,
+      () => SrsCard(
+        id: id,
+        targetType: targetType,
+        targetId: targetId,
+        cardType: cardType,
+        state: SrsCardState.newCard,
+      ),
     );
     final result = _scheduler.review(card, rating, _clock());
     _cards[result.card.id] = result.card;
     _logs.add(result.log);
 
     return StudyAnswerResult(
-      isCorrect: isCorrect,
+      isCorrect: isCorrect ?? (rating != SrsRating.again),
       rating: rating,
       reviewResult: result,
       reviewedCount: _logs.length,
@@ -72,23 +97,6 @@ class StudySessionController {
       cards: Map.unmodifiable(_cards),
       logs: List.unmodifiable(_logs),
       reviewedCount: _logs.length,
-    );
-  }
-
-  String _cardIdForQuiz(LearningQuiz quiz) {
-    final targetType = _targetTypeForQuiz(quiz);
-    final targetId = quiz.targetId ?? quiz.sourceCollocationId;
-    final cardType = _cardTypeForQuiz(quiz);
-    return '$targetType:$targetId:$cardType';
-  }
-
-  SrsCard _newCardForQuiz(LearningQuiz quiz) {
-    return SrsCard(
-      id: _cardIdForQuiz(quiz),
-      targetType: _targetTypeForQuiz(quiz),
-      targetId: quiz.targetId ?? quiz.sourceCollocationId,
-      cardType: _cardTypeForQuiz(quiz),
-      state: SrsCardState.newCard,
     );
   }
 

@@ -43,4 +43,43 @@ void main() {
     expect(snapshot.cards.keys.single, 'vocab:hsk2_中文:recognition');
     expect(snapshot.logs.single.rating, SrsRating.again);
   });
+
+  test('recordAnswer shares one card per word across answers', () {
+    final controller = StudySessionController(
+      clock: () => DateTime.utc(2026, 1, 1),
+    );
+
+    controller.recordAnswer(
+      targetType: 'vocab',
+      targetId: 'hsk2_学习',
+      rating: SrsRating.good,
+    );
+    controller.recordAnswer(
+      targetType: 'vocab',
+      targetId: 'hsk2_学习',
+      rating: SrsRating.easy,
+    );
+    final snapshot = controller.snapshot();
+
+    // Cùng từ → một thẻ duy nhất (id chung), reps cộng dồn.
+    expect(snapshot.cards.keys.single, 'vocab:hsk2_学习:recognition');
+    expect(snapshot.cards.values.single.reps, 2);
+    expect(snapshot.logs.length, 2);
+  });
+
+  test('recordAnswer hard/easy ratings flow through to the log', () {
+    final controller = StudySessionController(
+      clock: () => DateTime.utc(2026, 1, 1),
+    );
+
+    final result = controller.recordAnswer(
+      targetType: 'vocab',
+      targetId: 'hsk1_茶',
+      rating: SrsRating.hard,
+    );
+
+    expect(result.rating, SrsRating.hard);
+    expect(result.isCorrect, isTrue); // hard vẫn là nhớ được (không phải again)
+    expect(controller.snapshot().logs.single.rating, SrsRating.hard);
+  });
 }

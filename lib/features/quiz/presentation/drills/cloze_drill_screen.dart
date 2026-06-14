@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/learning/application/study_session_recorder.dart';
+import '../../../../core/learning/domain/fsrs.dart';
 import '../../../../core/providers/performance_provider.dart';
 import '../../../../core/widgets/hanzify_haptic.dart';
 import '../../../dictionary/domain/vocab_item.dart';
@@ -12,12 +14,14 @@ import '../widgets/drill_scaffold.dart';
 
 class _ClozeQuestion {
   const _ClozeQuestion({
+    required this.vocabId,
     required this.fullSentence,
     required this.answer,
     required this.choices,
     required this.translation,
   });
 
+  final String vocabId;
   final String fullSentence;
   final String answer;
   final List<String> choices;
@@ -111,6 +115,7 @@ class _ClozeDrillScreenState extends ConsumerState<ClozeDrillScreen> {
       if (choices.length < 4) continue;
       questions.add(
         _ClozeQuestion(
+          vocabId: v.id,
           fullSentence: example.cn,
           answer: v.hanzi,
           choices: choices,
@@ -210,9 +215,17 @@ class _ClozeDrillScreenState extends ConsumerState<ClozeDrillScreen> {
 
   void _pick(String choice, _ClozeQuestion q) {
     HanzifyHaptic.selection();
+    final correct = choice == q.answer;
+    ref
+        .read(studySessionRecorderProvider)
+        .record(
+          targetType: 'vocab',
+          targetId: q.vocabId,
+          rating: correct ? SrsRating.good : SrsRating.again,
+        );
     setState(() {
       _picked = choice;
-      if (choice == q.answer) _score++;
+      if (correct) _score++;
     });
   }
 

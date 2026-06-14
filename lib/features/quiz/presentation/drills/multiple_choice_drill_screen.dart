@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/learning/application/study_session_recorder.dart';
+import '../../../../core/learning/domain/fsrs.dart';
 import '../../../../core/providers/performance_provider.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/widgets/hanzify_haptic.dart';
@@ -13,12 +15,14 @@ import '../widgets/drill_scaffold.dart';
 
 class _ChoiceQuestion {
   const _ChoiceQuestion({
+    required this.vocabId,
     required this.prompt,
     required this.pinyin,
     required this.answer,
     required this.choices,
   });
 
+  final String vocabId;
   final String prompt;
   final String pinyin;
   final String answer;
@@ -105,6 +109,7 @@ class _MultipleChoiceDrillScreenState
       if (choices.length < 4) continue;
       questions.add(
         _ChoiceQuestion(
+          vocabId: item.id,
           prompt: item.hanzi,
           pinyin: item.pinyin,
           answer: item.viShort,
@@ -166,7 +171,7 @@ class _MultipleChoiceDrillScreenState
                   text: choice,
                   state: _stateOf(choice, question.answer, picked),
                   onTap: picked == null
-                      ? () => _pick(choice, question.answer)
+                      ? () => _pick(choice, question)
                       : null,
                 )
                     .animate(autoPlay: !performance)
@@ -197,13 +202,20 @@ class _MultipleChoiceDrillScreenState
     return _ChoiceState.dim;
   }
 
-  void _pick(String choice, String answer) {
-    final correct = choice == answer;
+  void _pick(String choice, _ChoiceQuestion question) {
+    final correct = choice == question.answer;
     if (correct) {
       HanzifyHaptic.success();
     } else {
       HanzifyHaptic.error();
     }
+    ref
+        .read(studySessionRecorderProvider)
+        .record(
+          targetType: 'vocab',
+          targetId: question.vocabId,
+          rating: correct ? SrsRating.good : SrsRating.again,
+        );
     setState(() {
       _picked = choice;
       if (correct) _score++;

@@ -1,5 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/learning/application/study_session_recorder.dart';
+import '../../../core/learning/domain/fsrs.dart';
 import '../domain/short_feed_item.dart';
 import '../domain/shorts_session.dart';
 
@@ -145,6 +147,17 @@ class ShortsSessionController extends Notifier<ShortsSessionState> {
     final selectedAnswers = Map<String, String>.from(state.selectedAnswers)
       ..[itemId] = answer;
     final isCorrect = answer == correctAnswer;
+    // Trả lời trống = hết giờ → bỏ qua (không phải lựa chọn của user).
+    final vocabId = quiz?.targetVocabId;
+    if (answer.isNotEmpty && vocabId != null && vocabId.isNotEmpty) {
+      ref
+          .read(studySessionRecorderProvider)
+          .record(
+            targetType: 'vocab',
+            targetId: vocabId,
+            rating: isCorrect ? SrsRating.good : SrsRating.again,
+          );
+    }
     var nextState = state.copyWith(
       selectedAnswers: selectedAnswers,
       correctCount: state.correctCount + (isCorrect ? 1 : 0),

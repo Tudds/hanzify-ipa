@@ -125,7 +125,9 @@ void main() {
     await tester.pump(const Duration(milliseconds: 600));
 
     expect(find.text(pinyin), findsOneWidget);
-    expect(find.text('Nhớ rõ'), findsOneWidget);
+    // 4 nút chấm FSRS xuất hiện sau khi lật.
+    expect(find.text('Được'), findsOneWidget);
+    expect(find.text('Quên'), findsOneWidget);
     // The back face shows the meaning grouped by part of speech + an example.
     expect(find.text(meaningByHanzi[frontHanzi]!), findsWidgets);
     expect(find.text(exampleByHanzi[frontHanzi]!), findsWidgets);
