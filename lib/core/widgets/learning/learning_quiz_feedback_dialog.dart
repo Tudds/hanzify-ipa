@@ -18,7 +18,8 @@ Future<void> showLearningQuizFeedbackDialog({
 }) {
   return showDialog<void>(
     context: context,
-    barrierDismissible: false,
+    // Nhấn bất kỳ đâu (cả ngoài popup) để tiếp tục.
+    barrierDismissible: true,
     useSafeArea: true,
     barrierColor: Colors.black.withValues(alpha: 0.32),
     builder: (context) => Dialog(
@@ -185,22 +186,31 @@ class LearningQuizFeedbackDialog extends StatelessWidget {
       ),
     );
 
-    if (performance) return content;
-    return content
-        .animate()
-        .fadeIn(duration: MotionTokens.fast)
-        .scale(
-          begin: const Offset(0.96, 0.96),
-          end: const Offset(1, 1),
-          duration: MotionTokens.medium,
-          curve: Curves.easeOutBack,
-        )
-        .slideY(
-          begin: 0.04,
-          end: 0,
-          duration: MotionTokens.medium,
-          curve: Curves.easeOutCubic,
-        );
+    final animated = performance
+        ? content
+        : content
+              .animate()
+              .fadeIn(duration: MotionTokens.fast)
+              .scale(
+                begin: const Offset(0.96, 0.96),
+                end: const Offset(1, 1),
+                duration: MotionTokens.medium,
+                curve: Curves.easeOutBack,
+              )
+              .slideY(
+                begin: 0.04,
+                end: 0,
+                duration: MotionTokens.medium,
+                curve: Curves.easeOutCubic,
+              );
+
+    // Chạm bất kỳ đâu trên popup cũng tiếp tục (nút "Tiếp tục" vẫn giữ).
+    // Cuộn nội dung vẫn được vì onTap chỉ bắt chạm, không nuốt thao tác kéo.
+    return GestureDetector(
+      onTap: () => Navigator.of(context).pop(),
+      behavior: HitTestBehavior.opaque,
+      child: animated,
+    );
   }
 }
 
