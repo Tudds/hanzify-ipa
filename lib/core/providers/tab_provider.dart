@@ -1,5 +1,3 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 enum AppTab { shorts, dictionary, quiz, chat, review }
 
 extension AppTabRoute on AppTab {
@@ -11,12 +9,3 @@ extension AppTabRoute on AppTab {
     AppTab.review => '/review',
   };
 }
-
-class TabNotifier extends Notifier<AppTab> {
-  @override
-  AppTab build() => AppTab.shorts;
-
-  void set(AppTab tab) => state = tab;
-}
-
-final tabProvider = NotifierProvider<TabNotifier, AppTab>(TabNotifier.new);

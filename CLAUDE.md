@@ -55,7 +55,7 @@ A feature may have `data/`, `domain/`, `application/`, `presentation/` — not a
 
 ## Navigation
 
-Uses **GoRouter** (`lib/app/app_router.dart`). The 5 tabs are an `AppTab` enum in `lib/core/providers/tab_provider.dart`, each mapped to a `GoRoute` whose builder returns `RootScaffold(tab: ...)`. `RootScaffold` (`lib/core/widgets/root_scaffold.dart`) hosts an `IndexedStack` of the 5 tab screens with a floating `BottomTabBarWidget`. The bottom nav auto-hides on scroll via `navVisibilityProvider`.
+Uses **GoRouter** (`lib/app/app_router.dart`). The 5 tabs are an `AppTab` enum in `lib/core/providers/tab_provider.dart` (path/order/labels). They live under a single **`StatefulShellRoute`** (one branch per tab) so the shell + bottom bar are built **once** — no rebuild/animation replay on tab switch. The shell's `navigatorContainerBuilder` returns `RootScaffold` (`lib/core/widgets/root_scaffold.dart`), which hosts the branch navigators in a **horizontal `PageView`** (swipe between tabs, content follows finger) with a floating `BottomTabBarWidget`. Tabs are lazily built on first visit then kept alive (`_activated` gate + `AutomaticKeepAliveClientMixin`), preserving the deferred-chunk loading. Bottom-bar taps / swipes both drive `navigationShell.goBranch`; the bottom bar shows the active tab as an icon+label pill and inactive tabs as icon-only. The bottom nav auto-hides on **vertical** content scroll via `navVisibilityProvider`.
 
 Routes: `/` (shorts), `/dictionary`, `/quiz`, `/chat`, `/review`.
 
@@ -67,7 +67,7 @@ Routes: `/` (shorts), `/dictionary`, `/quiz`, `/chat`, `/review`.
 **Key core providers:**
 | Provider | Location | Purpose |
 |---|---|---|
-| `tabProvider` / `AppTab` | `core/providers/tab_provider.dart` | Active tab + route paths |
+| `AppTab` enum | `core/providers/tab_provider.dart` | Tab order + route paths (active tab is owned by the shell's `StatefulNavigationShell`) |
 | `navVisibilityProvider` | `core/providers/nav_visibility_provider.dart` | Tab bar show/hide on scroll |
 | `performanceProvider` | `core/providers/performance_provider.dart` | Disable heavy animations/blur, persisted |
 | `dialogueSceneProvider` | `core/providers/dialogue_scene_provider.dart` | Dialogue scenes for chat/shorts |

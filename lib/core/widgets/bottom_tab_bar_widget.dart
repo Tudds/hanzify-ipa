@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 
 import '../providers/nav_visibility_provider.dart';
 import '../providers/performance_provider.dart';
-import '../providers/tab_provider.dart';
 import 'hanzify_haptic.dart';
 
 class BottomTabBarWidget extends ConsumerWidget {
-  const BottomTabBarWidget({super.key, required this.activeTab});
+  const BottomTabBarWidget({
+    super.key,
+    required this.activeIndex,
+    required this.onSelect,
+  });
 
-  final AppTab activeTab;
+  /// Index of the active tab — must match the branch order in [_items].
+  final int activeIndex;
+  final ValueChanged<int> onSelect;
 
   static const _items = <_TabItem>[
-    _TabItem(AppTab.shorts, Icons.smart_display_rounded, 'Short'),
-    _TabItem(AppTab.dictionary, Icons.manage_search_rounded, 'Từ điển'),
-    _TabItem(AppTab.quiz, Icons.quiz_rounded, 'Quiz'),
-    _TabItem(AppTab.chat, Icons.forum_rounded, 'Chat'),
-    _TabItem(AppTab.review, Icons.refresh_rounded, 'Ôn tập'),
+    _TabItem(Icons.smart_display_rounded, 'Short'),
+    _TabItem(Icons.manage_search_rounded, 'Từ điển'),
+    _TabItem(Icons.quiz_rounded, 'Quiz'),
+    _TabItem(Icons.forum_rounded, 'Chat'),
+    _TabItem(Icons.refresh_rounded, 'Ôn tập'),
   ];
 
   @override
@@ -54,24 +58,22 @@ class BottomTabBarWidget extends ConsumerWidget {
                 ),
               ),
               padding: EdgeInsets.symmetric(
-                horizontal: compact ? 6 : 12,
+                horizontal: compact ? 8 : 12,
                 vertical: compact ? 8 : 10,
               ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  for (final item in _items)
-                    Expanded(
-                      child: _TabButton(
-                        item: item,
-                        active: activeTab == item.tab,
-                        compact: compact,
-                        onTap: () {
-                          if (activeTab == item.tab) return;
-                          HanzifyHaptic.selection();
-                          context.go(item.tab.path);
-                        },
-                      ),
+                  for (var i = 0; i < _items.length; i++)
+                    _TabButton(
+                      item: _items[i],
+                      active: activeIndex == i,
+                      compact: compact,
+                      onTap: () {
+                        if (activeIndex == i) return;
+                        HanzifyHaptic.selection();
+                        onSelect(i);
+                      },
                     ),
                 ],
               ),
@@ -102,14 +104,13 @@ class BottomTabBarWidget extends ConsumerWidget {
 }
 
 class _TabItem {
-  const _TabItem(this.tab, this.icon, this.label);
+  const _TabItem(this.icon, this.label);
 
-  final AppTab tab;
   final IconData icon;
   final String label;
 }
 
-class _TabButton extends ConsumerStatefulWidget {
+class _TabButton extends StatefulWidget {
   const _TabButton({
     required this.item,
     required this.active,
@@ -123,10 +124,10 @@ class _TabButton extends ConsumerStatefulWidget {
   final VoidCallback onTap;
 
   @override
-  ConsumerState<_TabButton> createState() => _TabButtonState();
+  State<_TabButton> createState() => _TabButtonState();
 }
 
-class _TabButtonState extends ConsumerState<_TabButton> {
+class _TabButtonState extends State<_TabButton> {
   bool _pressed = false;
 
   @override
@@ -134,34 +135,12 @@ class _TabButtonState extends ConsumerState<_TabButton> {
     final colors = Theme.of(context).colorScheme;
     final activeColor = colors.primary;
     final inactiveColor = colors.onSurfaceVariant;
-    final icon = AnimatedSwitcher(
-      duration: const Duration(milliseconds: 240),
-      transitionBuilder: (child, anim) => FadeTransition(
-        opacity: anim,
-        child: ScaleTransition(scale: anim, child: child),
-      ),
-      child: Icon(
-        widget.item.icon,
-        key: ValueKey(widget.active),
-        color: widget.active ? activeColor : inactiveColor,
-        size: widget.compact
-            ? (widget.active ? 24 : 22)
-            : (widget.active ? 26 : 24),
-      ),
-    );
-    final label = AnimatedOpacity(
-      opacity: widget.active ? 1 : 0.72,
-      duration: const Duration(milliseconds: 180),
-      child: Text(
-        widget.item.label,
-        maxLines: 1,
-        overflow: TextOverflow.ellipsis,
-        style: TextStyle(
-          color: widget.active ? activeColor : inactiveColor,
-          fontSize: widget.compact ? 10 : 11,
-          fontWeight: widget.active ? FontWeight.w700 : FontWeight.w600,
-        ),
-      ),
+    final icon = Icon(
+      widget.item.icon,
+      color: widget.active ? activeColor : inactiveColor,
+      size: widget.compact
+          ? (widget.active ? 24 : 22)
+          : (widget.active ? 26 : 24),
     );
 
     return GestureDetector(
@@ -180,8 +159,8 @@ class _TabButtonState extends ConsumerState<_TabButton> {
           duration: const Duration(milliseconds: 240),
           curve: Curves.easeOutCubic,
           padding: EdgeInsets.symmetric(
-            horizontal: widget.compact ? 6 : (widget.active ? 10 : 8),
-            vertical: widget.compact ? 7 : 10,
+            horizontal: widget.active ? (widget.compact ? 12 : 14) : 10,
+            vertical: widget.compact ? 8 : 10,
           ),
           decoration: BoxDecoration(
             color: widget.active
@@ -189,23 +168,31 @@ class _TabButtonState extends ConsumerState<_TabButton> {
                 : Colors.transparent,
             borderRadius: BorderRadius.circular(widget.compact ? 16 : 20),
           ),
-          child: widget.compact
-              ? Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    icon,
-                    const SizedBox(height: 2),
-                    FittedBox(fit: BoxFit.scaleDown, child: label),
-                  ],
-                )
-              : Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    icon,
-                    const SizedBox(width: 6),
-                    Flexible(child: label),
-                  ],
-                ),
+          // AnimatedSize lets the pill grow/shrink as the label appears for the
+          // active tab and collapses to an icon-only chip for inactive tabs.
+          child: AnimatedSize(
+            duration: const Duration(milliseconds: 240),
+            curve: Curves.easeOutCubic,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                icon,
+                if (widget.active) ...[
+                  SizedBox(width: widget.compact ? 6 : 8),
+                  Text(
+                    widget.item.label,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: activeColor,
+                      fontSize: widget.compact ? 12 : 13,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
         ),
       ),
     );

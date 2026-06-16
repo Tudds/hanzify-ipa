@@ -12,7 +12,8 @@ lib/main.dart
       └─ lib/app/hanzify_app.dart
           └─ lib/app/app_router.dart  ── appRouterProvider + onboarding redirect
               ├─ OnboardingScreen (`/onboarding`, lần chạy đầu)
-              └─ lib/core/widgets/root_scaffold.dart  ── 5-tab IndexedStack
+              └─ StatefulShellRoute (5 branches) ─ deferred tab imports sống ở đây
+                  └─ lib/core/widgets/root_scaffold.dart  ── 5-tab PageView ngang (vuốt + keepAlive)
                   ├─ ShortsFeedScreen  (tab 0, `/`)
                   ├─ DictionaryScreen  (tab 1, `/dictionary`)
                   ├─ QuizScreen        (tab 2, `/quiz`)
@@ -107,13 +108,31 @@ Motion uses `flutter_animate` with short entrance/micro-interaction timings and 
 
 ```
 ShortsFeedScreen
-  → ShortsFeedRepository.loadHskFeed(...)
+  → ShortsFeedRepository.loadHskFeed(...)        (local HSK + RemoteShortsRepository khi includeRemote)
   → ShortsSessionBuilder.build(...)
   → PageView of ShortCard
-  → ShortQuizView / ShortVocabContextView / ShortGrammarContextView / ShortDialogueView
+  → ShortQuizView / ShortVocabContextView / ShortGrammarContextView
+    / ShortDialogueView / ShortSceneView / ShortReaderView
 ```
 
 Shorts CTAs open dictionary detail sheets via `features/dictionary` repository/widgets.
+
+### Nguồn nội dung "rich" (live, online-only)
+
+- `data/remote_shorts_repository.dart` — `RemoteShortsRepository.fetchRemote()` GET một `manifest.json`
+  trên CDN (R2, env `SHORTS_CONTENT_URL`) rồi parse `ShortFeedItem`. Resilient: lỗi/offline/parse hỏng → `[]`
+  (feed vẫn build từ HSK offline). Nhận `{items:[...]}` hoặc list trần.
+- `ShortsFeedRepository.loadHskFeed(options.includeRemote)` merge remote (lọc theo level). Startup = tắt
+  (offline-first/nhanh); `shortsHydratedSessionLoaderProvider` = bật.
+- Card type mới trong `domain/short_feed_item.dart`:
+  - `dialogue` nâng cấp: `audioUrl` track liền mạch + `startMs/endMs` mỗi dòng → `hasSyncedSubtitles`
+    (phụ đề chạy theo audio: `ShortDialogueView` nghe `AudioPlayerService.positionStream`, highlight + auto-scroll).
+  - `scene` (`ShortScene`): ảnh + caption Hán + nhãn từ vựng (`ShortSceneView`).
+  - `reader` (`ShortReader`, kind `story|article|poem`): văn bản song ngữ + glossary + sub sync tùy chọn
+    (`ShortReaderView`).
+- Pipeline biên soạn + schema mẫu: `tool/shorts_content/` (`sample_manifest.json` + `README.md`).
+  Media (audio/ảnh) host cùng bucket R2 audio → không vướng COEP, không cần proxy.
+  Podcast/tin tức bên thứ ba (cần Cloudflare Worker proxy) là phase sau.
 
 ---
 

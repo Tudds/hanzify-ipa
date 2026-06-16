@@ -1,34 +1,120 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../providers/nav_visibility_provider.dart';
-import '../providers/tab_provider.dart';
-// Shorts is the initial tab — keep it in the main bundle for instant first paint.
-import '../../features/shorts/presentation/shorts_feed_screen.dart';
-// The other four tabs are deferred: each becomes its own code chunk that is only
-// downloaded the first time the user opens that tab (see DeferredWidget).
-import '../../features/dictionary/presentation/dictionary_screen.dart'
-    deferred as dictionary;
-import '../../features/quiz/presentation/quiz_screen.dart' deferred as quiz;
-import '../../features/chat/presentation/chat_screen.dart' deferred as chat;
-import '../../features/review_session/presentation/due_review_screen.dart'
-    deferred as review;
 import 'bottom_tab_bar_widget.dart';
-import 'deferred_widget.dart';
 
-class RootScaffold extends ConsumerWidget {
-  const RootScaffold({super.key, required this.tab});
+/// Persistent shell for the 5 primary tabs.
+///
+/// Built once by the [StatefulShellRoute] container, so the bottom bar and its
+/// entrance animation no longer replay on every tab switch. The tab content is
+/// hosted in a horizontal [PageView] so the user can swipe between tabs with the
+/// content following their finger; the bottom bar drives the same branch.
+class RootScaffold extends ConsumerStatefulWidget {
+  const RootScaffold({
+    super.key,
+    required this.navigationShell,
+    required this.children,
+  });
 
-  final AppTab tab;
+  final StatefulNavigationShell navigationShell;
+
+  /// One widget per branch (the branch navigators), supplied by the shell.
+  final List<Widget> children;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final tabIndex = AppTab.values.indexOf(tab);
+  ConsumerState<RootScaffold> createState() => _RootScaffoldState();
+}
 
+class _RootScaffoldState extends ConsumerState<RootScaffold> {
+  late final PageController _pageController = PageController(
+    initialPage: widget.navigationShell.currentIndex,
+  );
+
+  // A branch is only built the first time it becomes visible (kept lazy so a
+  // tab's deferred chunk isn't downloaded until you swipe/tap toward it). Once
+  // activated it is kept alive so swiping away and back preserves its state.
+  late final List<bool> _activated = List<bool>.filled(
+    widget.children.length,
+    false,
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    _activated[widget.navigationShell.currentIndex] = true;
+    // While dragging, the neighbour the finger is heading toward becomes
+    // visible before the swipe settles — activate it so it isn't blank.
+    _pageController.addListener(_activateVisiblePages);
+  }
+
+  @override
+  void didUpdateWidget(covariant RootScaffold oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    final index = widget.navigationShell.currentIndex;
+    _activated[index] = true;
+    if (!_pageController.hasClients) return;
+    final current = _pageController.page?.round();
+    if (current == index) return;
+    // A bottom-bar tap (or deep link) changed the branch. Slide for an adjacent
+    // tab; jump for a distant one — animating across would fire onPageChanged
+    // for each page swept and churn goBranch (and build every tab in between).
+    if (current != null && (current - index).abs() == 1) {
+      _pageController.animateToPage(
+        index,
+        duration: const Duration(milliseconds: 320),
+        curve: Curves.easeOutCubic,
+      );
+    } else {
+      _pageController.jumpToPage(index);
+    }
+  }
+
+  @override
+  void dispose() {
+    _pageController.removeListener(_activateVisiblePages);
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  void _activateVisiblePages() {
+    final page = _pageController.page;
+    if (page == null) return;
+    final lower = page.floor();
+    final upper = page.ceil();
+    var changed = false;
+    for (final i in [lower, upper]) {
+      if (i >= 0 && i < _activated.length && !_activated[i]) {
+        _activated[i] = true;
+        changed = true;
+      }
+    }
+    if (changed && mounted) setState(() {});
+  }
+
+  void _onPageChanged(int index) {
+    if (index == widget.navigationShell.currentIndex) return;
+    widget.navigationShell.goBranch(index);
+  }
+
+  void _onSelectTab(int index) {
+    widget.navigationShell.goBranch(
+      index,
+      // Re-tapping the active tab returns it to its initial route.
+      initialLocation: index == widget.navigationShell.currentIndex,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: NotificationListener<UserScrollNotification>(
         onNotification: (notification) {
+          // Ignore the horizontal tab PageView — only content scroll (vertical)
+          // should hide/show the bottom bar.
+          if (notification.metrics.axis != Axis.vertical) return false;
           final notifier = ref.read(navVisibilityProvider.notifier);
           if (notification.direction == ScrollDirection.reverse) {
             notifier.hide();
@@ -40,22 +126,27 @@ class RootScaffold extends ConsumerWidget {
         child: Stack(
           children: [
             Positioned.fill(
-              child: _LazyIndexedStack(
-                index: tabIndex,
-                itemBuilders: const [
-                  _buildShorts,
-                  _buildDictionary,
-                  _buildQuiz,
-                  _buildChat,
-                  _buildReview,
-                ],
+              child: PageView.builder(
+                controller: _pageController,
+                scrollDirection: Axis.horizontal,
+                onPageChanged: _onPageChanged,
+                itemCount: widget.children.length,
+                itemBuilder: (context, index) {
+                  if (!_activated[index]) return const SizedBox.shrink();
+                  return _KeepAlivePage(child: widget.children[index]);
+                },
               ),
             ),
             Positioned(
               left: 0,
               right: 0,
               bottom: 0,
-              child: SafeArea(child: BottomTabBarWidget(activeTab: tab)),
+              child: SafeArea(
+                child: BottomTabBarWidget(
+                  activeIndex: widget.navigationShell.currentIndex,
+                  onSelect: _onSelectTab,
+                ),
+              ),
             ),
           ],
         ),
@@ -64,59 +155,25 @@ class RootScaffold extends ConsumerWidget {
   }
 }
 
-Widget _buildShorts(BuildContext _) => const ShortsFeedScreen();
-Widget _buildDictionary(BuildContext _) =>
-    DeferredWidget(dictionary.loadLibrary, () => dictionary.DictionaryScreen());
-Widget _buildQuiz(BuildContext _) =>
-    DeferredWidget(quiz.loadLibrary, () => quiz.QuizScreen());
-Widget _buildChat(BuildContext _) =>
-    DeferredWidget(chat.loadLibrary, () => chat.ChatScreen());
-Widget _buildReview(BuildContext _) =>
-    DeferredWidget(review.loadLibrary, () => review.DueReviewScreen());
+/// Keeps a [PageView] page (a branch navigator) alive once visited so swiping
+/// away and back preserves its scroll position and navigation stack.
+class _KeepAlivePage extends StatefulWidget {
+  const _KeepAlivePage({required this.child});
 
-/// An [IndexedStack] that only instantiates a tab the first time it becomes
-/// active, then keeps it alive (state preserved) like a normal IndexedStack.
-///
-/// This keeps cold-start work to just the initial tab instead of eagerly
-/// building all five screens on the first frame, while preserving the
-/// "switch tabs without losing scroll/state" behaviour.
-class _LazyIndexedStack extends StatefulWidget {
-  const _LazyIndexedStack({required this.index, required this.itemBuilders});
-
-  final int index;
-  final List<WidgetBuilder> itemBuilders;
+  final Widget child;
 
   @override
-  State<_LazyIndexedStack> createState() => _LazyIndexedStackState();
+  State<_KeepAlivePage> createState() => _KeepAlivePageState();
 }
 
-class _LazyIndexedStackState extends State<_LazyIndexedStack> {
-  late final List<bool> _activated =
-      List<bool>.filled(widget.itemBuilders.length, false);
-
+class _KeepAlivePageState extends State<_KeepAlivePage>
+    with AutomaticKeepAliveClientMixin {
   @override
-  void initState() {
-    super.initState();
-    _activated[widget.index] = true;
-  }
-
-  @override
-  void didUpdateWidget(covariant _LazyIndexedStack oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    _activated[widget.index] = true;
-  }
+  bool get wantKeepAlive => true;
 
   @override
   Widget build(BuildContext context) {
-    return IndexedStack(
-      index: widget.index,
-      children: [
-        for (var i = 0; i < widget.itemBuilders.length; i++)
-          if (_activated[i])
-            widget.itemBuilders[i](context)
-          else
-            const SizedBox.shrink(),
-      ],
-    );
+    super.build(context);
+    return widget.child;
   }
 }

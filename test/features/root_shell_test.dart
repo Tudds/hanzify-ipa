@@ -1,59 +1,81 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hanzify/core/providers/tab_provider.dart';
-import 'package:hanzify/core/widgets/root_scaffold.dart';
+import 'package:hanzify/app/app_router.dart';
+import 'package:hanzify/features/shorts/domain/shorts_session.dart';
+import 'package:hanzify/features/shorts/presentation/shorts_feed_screen.dart';
 
 import '../support/profile_overrides.dart';
 
-Widget _wrap(AppTab tab, List<Override> overrides) {
+Widget _wrap(List<Override> overrides) {
   return ProviderScope(
-    overrides: overrides,
-    child: MaterialApp(home: RootScaffold(tab: tab)),
+    overrides: [
+      // Shorts is the initial tab and stays alive in the shell's PageView. Its
+      // real feed spins up per-card countdown/reveal timers; an empty session
+      // keeps this shell test focused (and timer-free) while Shorts still
+      // renders inside the shell.
+      shortsSessionLoaderProvider.overrideWith(
+        (ref) async => const ShortsSession(items: []),
+      ),
+      ...overrides,
+    ],
+    child: Consumer(
+      builder: (context, ref, child) =>
+          MaterialApp.router(routerConfig: ref.watch(appRouterProvider)),
+    ),
   );
 }
 
-/// Pumps enough frames for a tab to settle. Dictionary/Quiz/Chat/Review are
-/// deferred-loaded (`loadLibrary`), so the final pump renders the screen after
-/// the deferred future completes and triggers a rebuild.
-Future<void> _showTab(
-  WidgetTester tester,
-  AppTab tab,
-  List<Override> overrides,
-) async {
-  await tester.pumpWidget(_wrap(tab, overrides));
+/// Pumps enough frames for the active tab to settle. Dictionary/Quiz/Chat/Review
+/// are deferred-loaded (`loadLibrary`), so the extra pumps render the screen
+/// after the deferred future completes and triggers a rebuild.
+Future<void> _settle(WidgetTester tester) async {
   await tester.pump(); // placeholder + kick off loadLibrary
   await tester.pump(const Duration(seconds: 1)); // deferred future completes
-  await tester.pump(); // rebuild mounts the real screen (flutter_animate starts)
-  await tester.pump(const Duration(seconds: 1)); // drain entrance-animation timers
+  await tester.pump(); // rebuild mounts the real screen
+  await tester.pump(const Duration(seconds: 1)); // drain entrance animations
+}
+
+/// Switches tabs the way a user would: tapping the bottom-bar icon. Inactive
+/// tabs are icon-only, so they're reliably found by their [IconData].
+Future<void> _tapTab(WidgetTester tester, IconData icon) async {
+  await tester.tap(find.byIcon(icon));
+  await _settle(tester);
 }
 
 void main() {
   testWidgets('root shell uses five primary tabs', (tester) async {
-    final overrides = await profileTestOverrides();
+    // performance_mode disables flutter_animate header entrances so the
+    // always-alive tabs don't leave animation timers pending at teardown.
+    final overrides = await profileTestOverrides(
+      prefs: {...onboardedPrefs(), 'performance_mode': true},
+    );
 
-    await _showTab(tester, AppTab.shorts, overrides);
+    await tester.pumpWidget(_wrap(overrides));
+    await _settle(tester);
+
+    // Initial tab is Shorts: its label is visible, the other four are icon-only.
     expect(find.text('Short'), findsWidgets);
     expect(find.byIcon(Icons.manage_search_rounded), findsOneWidget);
     expect(find.byIcon(Icons.quiz_rounded), findsOneWidget);
     expect(find.byIcon(Icons.forum_rounded), findsOneWidget);
     expect(find.byIcon(Icons.refresh_rounded), findsOneWidget);
 
-    await _showTab(tester, AppTab.dictionary, overrides);
+    await _tapTab(tester, Icons.manage_search_rounded);
     expect(find.text('Từ điển'), findsWidgets);
     expect(find.text('Từ vựng'), findsOneWidget);
     expect(find.text('Ngữ pháp'), findsOneWidget);
 
-    await _showTab(tester, AppTab.quiz, overrides);
+    await _tapTab(tester, Icons.quiz_rounded);
     expect(find.text('Quiz'), findsWidgets);
     expect(find.text('Chọn từ'), findsWidgets);
     expect(find.text('Sắp xếp'), findsWidgets);
 
-    await _showTab(tester, AppTab.chat, overrides);
+    await _tapTab(tester, Icons.forum_rounded);
     expect(find.text('Chat'), findsWidgets);
-    expect(find.textContaining('Chat GenUI local'), findsWidgets);
+    expect(find.textContaining('GenUI local'), findsWidgets);
 
-    await _showTab(tester, AppTab.review, overrides);
+    await _tapTab(tester, Icons.refresh_rounded);
     expect(find.text('Ôn tập'), findsWidgets);
   });
 }
