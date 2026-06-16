@@ -41,6 +41,7 @@ final shortsHydratedSessionLoaderProvider = FutureProvider<ShortsSession>((
   final feed = await const ShortsFeedRepository().loadHskFeed(
     levels: kHskLevels,
     activeLevel: activeLevel,
+    options: const ShortsFeedLoadOptions(includeRemote: true),
   );
   return ShortsSessionBuilder(
     activeLevel: activeLevel,

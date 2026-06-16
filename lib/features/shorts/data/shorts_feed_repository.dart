@@ -10,6 +10,7 @@ import '../../../core/learning/quiz_generator.dart';
 import '../domain/short_feed_item.dart';
 import 'hsk_grammar_asset_repository.dart';
 import 'hsk_vocab_asset_repository.dart';
+import 'remote_shorts_repository.dart';
 
 const _staticCollocationItemsPerLevel = 24;
 
@@ -19,6 +20,7 @@ class ShortsFeedLoadOptions {
     this.vocabItemsPerLevel,
     this.grammarItemsPerLevel,
     this.includeRemediation = true,
+    this.includeRemote = false,
   });
 
   static const startup = ShortsFeedLoadOptions(
@@ -26,12 +28,18 @@ class ShortsFeedLoadOptions {
     vocabItemsPerLevel: 32,
     grammarItemsPerLevel: 10,
     includeRemediation: false,
+    includeRemote: false,
   );
 
   final int staticItemsPerLevel;
   final int? vocabItemsPerLevel;
   final int? grammarItemsPerLevel;
   final bool includeRemediation;
+
+  /// Có kéo nội dung rich từ manifest CDN ([RemoteShortsRepository]) không.
+  /// Tắt cho lần load khởi động (giữ startup nhanh, offline-first); bật cho
+  /// lần hydrate đầy đủ.
+  final bool includeRemote;
 }
 
 class ShortsFeedSeed {
@@ -46,15 +54,18 @@ class ShortsFeedRepository {
     AssetBundle? bundle,
     HskVocabAssetRepository? vocabAssets,
     HskGrammarAssetRepository? grammarAssets,
+    RemoteShortsRepository? remoteShorts,
   }) : _bundle = bundle,
        _vocabAssets = vocabAssets,
-       _grammarAssets = grammarAssets;
+       _grammarAssets = grammarAssets,
+       _remoteShorts = remoteShorts;
 
   static const curatedHsk1Asset = 'assets/data/shorts/shorts_seed_hsk1.json';
 
   final AssetBundle? _bundle;
   final HskVocabAssetRepository? _vocabAssets;
   final HskGrammarAssetRepository? _grammarAssets;
+  final RemoteShortsRepository? _remoteShorts;
 
   Future<ShortsFeedSeed> loadHsk1Feed({int generatedLimit = 8}) {
     return loadHskFeed(levels: const [1], activeLevel: 1);
@@ -67,6 +78,7 @@ class ShortsFeedRepository {
   }) async {
     final orderedLevels = _orderedLevels(levels, activeLevel);
     final curated = await _loadCurated();
+    final remote = await _loadRemote(levels, enabled: options.includeRemote);
     final generated = [
       ...await _loadStaticCollocationShorts(
         orderedLevels,
@@ -83,7 +95,7 @@ class ShortsFeedRepository {
     ];
     final byId = <String, ShortFeedItem>{};
 
-    for (final item in [...generated, ...curated]) {
+    for (final item in [...generated, ...remote, ...curated]) {
       byId.putIfAbsent(item.id, () => item);
     }
 
@@ -108,6 +120,20 @@ class ShortsFeedRepository {
       if (!result.contains(level)) result.add(level);
     }
     return result;
+  }
+
+  Future<List<ShortFeedItem>> _loadRemote(
+    List<int> levels, {
+    required bool enabled,
+  }) async {
+    if (!enabled) return const [];
+    final repo = _remoteShorts ?? RemoteShortsRepository();
+    final items = await repo.fetchRemote();
+    if (items.isEmpty) return const [];
+    final levelSet = levels.toSet();
+    return items
+        .where((item) => levelSet.contains(item.level))
+        .toList(growable: false);
   }
 
   Future<List<ShortFeedItem>> _loadCurated() async {

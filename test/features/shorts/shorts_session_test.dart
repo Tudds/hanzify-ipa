@@ -435,6 +435,19 @@ ShortFeedItem _item(String id, ShortCardType type) {
       title: 'Tổng kết',
       message: 'Bạn vừa học xong.',
     ),
+    ShortCardType.scene => const ShortScene(
+      imageUrl: 'https://example.com/scene.webp',
+      captionHanzi: '这是茶。',
+      captionPinyin: 'zhè shì chá',
+      captionVi: 'Đây là trà.',
+    ),
+    ShortCardType.reader => const ShortReader(
+      kind: ShortReaderKind.story,
+      title: 'Truyện ngắn',
+      paragraphs: [
+        ReaderLine(zh: '我喝茶。', pinyin: 'wǒ hē chá', vi: 'Tôi uống trà.'),
+      ],
+    ),
   };
   return ShortFeedItem(
     id: id,
@@ -500,6 +513,19 @@ ShortFeedItem _targetedItem(
     ShortCardType.summary => const ShortSummary(
       title: 'Tổng kết',
       message: 'Bạn vừa học xong.',
+    ),
+    ShortCardType.scene => ShortScene(
+      imageUrl: 'https://example.com/scene_$target.webp',
+      captionHanzi: '这是$target。',
+      captionPinyin: 'zhè shì $target',
+      captionVi: 'Đây là $target.',
+    ),
+    ShortCardType.reader => ShortReader(
+      kind: ShortReaderKind.story,
+      title: 'Truyện $target',
+      paragraphs: [
+        ReaderLine(zh: '我喝水$target。', pinyin: 'wǒ hē shuǐ', vi: 'Câu $target.'),
+      ],
     ),
   };
   return ShortFeedItem(

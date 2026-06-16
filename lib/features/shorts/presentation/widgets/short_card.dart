@@ -8,6 +8,8 @@ import '../../domain/short_feed_item.dart';
 import 'short_context_cards.dart';
 import 'short_dialogue_card.dart';
 import 'short_quiz_cards.dart';
+import 'short_reader_card.dart';
+import 'short_scene_card.dart';
 
 class ShortCard extends StatelessWidget {
   const ShortCard({
@@ -98,7 +100,9 @@ class ShortCard extends StatelessWidget {
         payload is ShortQuickQuiz ||
         payload is ShortGrammarContext ||
         payload is ShortDialogue ||
-        payload is ShortMiniTest;
+        payload is ShortMiniTest ||
+        payload is ShortScene ||
+        payload is ShortReader;
   }
 }
 
@@ -169,6 +173,16 @@ class _CardBody extends StatelessWidget {
         payload: payload,
         active: active,
         performance: performance,
+      ),
+      ShortScene() => ShortSceneView(
+        payload: payload,
+        onShowVocabDetail: onShowVocabDetail,
+      ),
+      ShortReader() => ShortReaderView(
+        payload: payload,
+        active: active,
+        performance: performance,
+        onShowVocabDetail: onShowVocabDetail,
       ),
       ShortMiniTest() => ShortMiniTestView(
         itemId: item.id,

@@ -60,6 +60,9 @@ class AudioPlayerService {
   String? get currentUrl => _currentUrl;
 
   Stream<bool> get playingStream => _player.playingStream;
+
+  /// Vị trí phát hiện tại — dùng cho phụ đề đồng bộ theo audio (sub sync).
+  Stream<Duration> get positionStream => _player.positionStream;
 }
 
 /// Provider singleton — keepAlive vì player nặng.

@@ -198,9 +198,11 @@ class ShortsSessionBuilder {
     const pattern = <ShortCardType>[
       ShortCardType.vocabContext,
       ShortCardType.quickQuiz,
+      ShortCardType.scene,
       ShortCardType.grammarContext,
       ShortCardType.vocabContext,
       ShortCardType.dialogue,
+      ShortCardType.reader,
       ShortCardType.listening,
       ShortCardType.quickQuiz,
       ShortCardType.vocabContext,
@@ -224,6 +226,7 @@ class ShortsSessionBuilder {
   ) {
     final preferredBonus = type == preferredType ? 260.0 : 0.0;
     final scarcityBonus = switch (type) {
+      ShortCardType.scene || ShortCardType.reader => 36.0,
       ShortCardType.dialogue || ShortCardType.listening => 30.0,
       ShortCardType.grammarContext => 18.0,
       ShortCardType.quickQuiz => 12.0,
@@ -253,6 +256,10 @@ class ShortsSessionBuilder {
             payload.explanation.isNotEmpty &&
             payload.choices.length >= 2,
       ShortDialogue() => payload.title.isNotEmpty && payload.context.isNotEmpty,
+      ShortScene() =>
+        payload.imageUrl.isNotEmpty && payload.captionHanzi.isNotEmpty,
+      ShortReader() =>
+        payload.title.isNotEmpty && payload.paragraphs.isNotEmpty,
       ShortMiniTest() || ShortSummary() => false,
       _ => true,
     };

@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "rich_dialogue_cafe_hsk2",
+      "type": "dialogue",
+      "level": 2,
+      "tags": ["Hội thoại", "Đời thường"],
+      "payload": {
+        "title": "Ở quán cà phê",
+        "context": "Một đoạn thoại ngắn khi gọi đồ uống.",
+        "audioUrl": "https://pub-7d5fb452d3c14b469b1d630f885dfa87.r2.dev/shorts/audio/dialogue_cafe.mp3",
+        "lines": [
+          {
+            "speaker": "A",
+            "hanzi": "你要喝什么？",
+            "pinyin": "nǐ yào hē shénme",
+            "vi": "Bạn muốn uống gì?",
+            "startMs": 0,
+            "endMs": 1900
+          },
+          {
+            "speaker": "B",
+            "hanzi": "我要一杯咖啡。",
+            "pinyin": "wǒ yào yì bēi kāfēi",
+            "vi": "Tôi muốn một ly cà phê.",
+            "startMs": 1900,
+            "endMs": 4200
+          },
+          {
+            "speaker": "A",
+            "hanzi": "好的，请稍等。",
+            "pinyin": "hǎo de, qǐng shāoděng",
+            "vi": "Được, xin đợi một chút.",
+            "startMs": 4200,
+            "endMs": 6500
+          }
+        ]
+      }
+    },
+    {
+      "id": "rich_scene_market_hsk1",
+      "type": "scene",
+      "level": 1,
+      "tags": ["Hình ảnh", "Mua sắm"],
+      "payload": {
+        "imageUrl": "https://pub-7d5fb452d3c14b469b1d630f885dfa87.r2.dev/shorts/images/scene_market.webp",
+        "caption": {
+          "hanzi": "这是市场。",
+          "pinyin": "zhè shì shìchǎng",
+          "vi": "Đây là cái chợ."
+        },
+        "audioUrl": "https://pub-7d5fb452d3c14b469b1d630f885dfa87.r2.dev/shorts/audio/scene_market.mp3",
+        "labels": [
+          { "hanzi": "苹果", "pinyin": "píngguǒ", "vi": "táo", "targetVocabId": "hsk1_苹果" },
+          { "hanzi": "水", "pinyin": "shuǐ", "vi": "nước", "targetVocabId": "hsk1_水" }
+        ]
+      }
+    },
+    {
+      "id": "rich_reader_poem_hsk2",
+      "type": "reader",
+      "level": 2,
+      "tags": ["Bài thơ"],
+      "payload": {
+        "kind": "poem",
+        "titleZh": "静夜思",
+        "title": "Tĩnh dạ tứ (Cảm nghĩ đêm yên tĩnh)",
+        "audioUrl": "https://pub-7d5fb452d3c14b469b1d630f885dfa87.r2.dev/shorts/audio/poem_jingyesi.mp3",
+        "paragraphs": [
+          { "zh": "床前明月光，", "pinyin": "chuáng qián míng yuè guāng", "vi": "Đầu giường ánh trăng sáng,", "startMs": 0, "endMs": 2600 },
+          { "zh": "疑是地上霜。", "pinyin": "yí shì dì shàng shuāng", "vi": "Ngỡ là sương trên mặt đất.", "startMs": 2600, "endMs": 5200 },
+          { "zh": "举头望明月，", "pinyin": "jǔ tóu wàng míng yuè", "vi": "Ngẩng đầu nhìn trăng sáng,", "startMs": 5200, "endMs": 7800 },
+          { "zh": "低头思故乡。", "pinyin": "dī tóu sī gùxiāng", "vi": "Cúi đầu nhớ cố hương.", "startMs": 7800, "endMs": 10400 }
+        ],
+        "glossary": [
+          { "hanzi": "明月", "pinyin": "míngyuè", "vi": "trăng sáng" },
+          { "hanzi": "故乡", "pinyin": "gùxiāng", "vi": "quê hương" }
+        ],
+        "sourceName": "Lý Bạch (李白)"
+      }
+    }
+  ]
+}
